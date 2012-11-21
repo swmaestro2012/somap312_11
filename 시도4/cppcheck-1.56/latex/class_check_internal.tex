@@ -1,0 +1,124 @@
+\hypertarget{class_check_internal}{\section{Check\-Internal Class Reference}
+\label{class_check_internal}\index{Check\-Internal@{Check\-Internal}}
+}
+
+
+Check Internal cppcheck A\-P\-I usage  
+
+
+
+
+{\ttfamily \#include $<$checkinternal.\-h$>$}
+
+Inheritance diagram for Check\-Internal\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_check_internal}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_check_internal_ad362983e379a8c73cc55dfdd7b5df7c4}{Check\-Internal} ()
+\item 
+\hyperlink{class_check_internal_a0bffdfd26bab7fc3fc605b1ef9e83c9a}{Check\-Internal} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\item 
+void \hyperlink{class_check_internal_aa54976ec7aa482f66fa8582f6b06f60d}{run\-Simplified\-Checks} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\item 
+void \hyperlink{class_check_internal_aa7504dd922ef1acc2597efd0932ff5ad}{check\-Token\-Match\-Patterns} ()
+\begin{DoxyCompactList}\small\item\em Check if a simple pattern is used inside \hyperlink{class_token_a519623098bde6496825e49364575dadf}{Token\-::\-Match} or \hyperlink{class_token_a129738123e5ddc405eae3245a1c7d487}{Token\-::findmatch} \end{DoxyCompactList}\item 
+void \hyperlink{class_check_internal_a86f1888ad76d512afb784a685e660249}{check\-Token\-Simple\-Match\-Patterns} ()
+\begin{DoxyCompactList}\small\item\em Check if a complex pattern is used inside \hyperlink{class_token_a0f73cc13be77ebc806962972a8ae8092}{Token\-::simple\-Match} or \hyperlink{class_token_a0b7c3cba682eb1ec914935468d13f909}{Token\-::findsimplematch} \end{DoxyCompactList}\item 
+void \hyperlink{class_check_internal_aafa133c29593974908709d29b0fd5031}{check\-Missing\-Percent\-Character} ()
+\begin{DoxyCompactList}\small\item\em Check for missing \% end character in \hyperlink{class_token_a519623098bde6496825e49364575dadf}{Token\-::\-Match} pattern \end{DoxyCompactList}\item 
+void \hyperlink{class_check_internal_a444fbce5acde316b7aa6de776c84427d}{check\-Unknown\-Pattern} ()
+\begin{DoxyCompactList}\small\item\em Check for for unknown (invalid) complex patterns like \char`\"{}\%typ\%\char`\"{} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Check Internal cppcheck A\-P\-I usage 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_check_internal_ad362983e379a8c73cc55dfdd7b5df7c4}{\index{Check\-Internal@{Check\-Internal}!Check\-Internal@{Check\-Internal}}
+\index{Check\-Internal@{Check\-Internal}!CheckInternal@{Check\-Internal}}
+\subsubsection[{Check\-Internal}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Internal\-::\-Check\-Internal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_internal_ad362983e379a8c73cc55dfdd7b5df7c4}
+This constructor is used when registering the \hyperlink{class_check_class}{Check\-Class} \hypertarget{class_check_internal_a0bffdfd26bab7fc3fc605b1ef9e83c9a}{\index{Check\-Internal@{Check\-Internal}!Check\-Internal@{Check\-Internal}}
+\index{Check\-Internal@{Check\-Internal}!CheckInternal@{Check\-Internal}}
+\subsubsection[{Check\-Internal}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Internal\-::\-Check\-Internal (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_internal_a0bffdfd26bab7fc3fc605b1ef9e83c9a}
+This constructor is used when running checks. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_check_internal_aafa133c29593974908709d29b0fd5031}{\index{Check\-Internal@{Check\-Internal}!check\-Missing\-Percent\-Character@{check\-Missing\-Percent\-Character}}
+\index{check\-Missing\-Percent\-Character@{check\-Missing\-Percent\-Character}!CheckInternal@{Check\-Internal}}
+\subsubsection[{check\-Missing\-Percent\-Character}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Internal\-::check\-Missing\-Percent\-Character (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_internal_aafa133c29593974908709d29b0fd5031}
+
+
+Check for missing \% end character in \hyperlink{class_token_a519623098bde6496825e49364575dadf}{Token\-::\-Match} pattern 
+
+\hypertarget{class_check_internal_aa7504dd922ef1acc2597efd0932ff5ad}{\index{Check\-Internal@{Check\-Internal}!check\-Token\-Match\-Patterns@{check\-Token\-Match\-Patterns}}
+\index{check\-Token\-Match\-Patterns@{check\-Token\-Match\-Patterns}!CheckInternal@{Check\-Internal}}
+\subsubsection[{check\-Token\-Match\-Patterns}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Internal\-::check\-Token\-Match\-Patterns (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_internal_aa7504dd922ef1acc2597efd0932ff5ad}
+
+
+Check if a simple pattern is used inside \hyperlink{class_token_a519623098bde6496825e49364575dadf}{Token\-::\-Match} or \hyperlink{class_token_a129738123e5ddc405eae3245a1c7d487}{Token\-::findmatch} 
+
+\hypertarget{class_check_internal_a86f1888ad76d512afb784a685e660249}{\index{Check\-Internal@{Check\-Internal}!check\-Token\-Simple\-Match\-Patterns@{check\-Token\-Simple\-Match\-Patterns}}
+\index{check\-Token\-Simple\-Match\-Patterns@{check\-Token\-Simple\-Match\-Patterns}!CheckInternal@{Check\-Internal}}
+\subsubsection[{check\-Token\-Simple\-Match\-Patterns}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Internal\-::check\-Token\-Simple\-Match\-Patterns (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_internal_a86f1888ad76d512afb784a685e660249}
+
+
+Check if a complex pattern is used inside \hyperlink{class_token_a0f73cc13be77ebc806962972a8ae8092}{Token\-::simple\-Match} or \hyperlink{class_token_a0b7c3cba682eb1ec914935468d13f909}{Token\-::findsimplematch} 
+
+\hypertarget{class_check_internal_a444fbce5acde316b7aa6de776c84427d}{\index{Check\-Internal@{Check\-Internal}!check\-Unknown\-Pattern@{check\-Unknown\-Pattern}}
+\index{check\-Unknown\-Pattern@{check\-Unknown\-Pattern}!CheckInternal@{Check\-Internal}}
+\subsubsection[{check\-Unknown\-Pattern}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Internal\-::check\-Unknown\-Pattern (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_internal_a444fbce5acde316b7aa6de776c84427d}
+
+
+Check for for unknown (invalid) complex patterns like \char`\"{}\%typ\%\char`\"{} 
+
+\hypertarget{class_check_internal_aa54976ec7aa482f66fa8582f6b06f60d}{\index{Check\-Internal@{Check\-Internal}!run\-Simplified\-Checks@{run\-Simplified\-Checks}}
+\index{run\-Simplified\-Checks@{run\-Simplified\-Checks}!CheckInternal@{Check\-Internal}}
+\subsubsection[{run\-Simplified\-Checks}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Internal\-::run\-Simplified\-Checks (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_internal_aa54976ec7aa482f66fa8582f6b06f60d}
+Simplified checks. The token list is simplified. 
+
+Implements \hyperlink{class_check_a112445eed1625599b93c69aab4701e5e}{Check}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{checkinternal_8h}{checkinternal.\-h}\item 
+lib/\hyperlink{checkinternal_8cpp}{checkinternal.\-cpp}\end{DoxyCompactItemize}

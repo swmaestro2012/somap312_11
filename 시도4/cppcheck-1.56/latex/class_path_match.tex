@@ -1,0 +1,92 @@
+\hypertarget{class_path_match}{\section{Path\-Match Class Reference}
+\label{class_path_match}\index{Path\-Match@{Path\-Match}}
+}
+
+
+Simple path matching for ignoring paths in C\-L\-I.  
+
+
+
+
+{\ttfamily \#include $<$pathmatch.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_path_match_ace1680e3d07b51a6dc40f27a6e1eae04}{Path\-Match} (const std\-::vector$<$ std\-::string $>$ \&masks, bool case\-Sensitive=true)
+\item 
+bool \hyperlink{class_path_match_a2324c187442895aa2ac36eead340b75b}{Match} (const std\-::string \&path) const 
+\begin{DoxyCompactList}\small\item\em Match path against list of masks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{class_path_match_acc7b9a9e9efeb0c69ac3886ca8a1450a}{Remove\-Filename} (const std\-::string \&path)
+\begin{DoxyCompactList}\small\item\em Remove filename part from the path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simple path matching for ignoring paths in C\-L\-I. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_path_match_ace1680e3d07b51a6dc40f27a6e1eae04}{\index{Path\-Match@{Path\-Match}!Path\-Match@{Path\-Match}}
+\index{Path\-Match@{Path\-Match}!PathMatch@{Path\-Match}}
+\subsubsection[{Path\-Match}]{\setlength{\rightskip}{0pt plus 5cm}Path\-Match\-::\-Path\-Match (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ std\-::string $>$ \&}]{masks, }
+\item[{bool}]{case\-Sensitive = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{class_path_match_ace1680e3d07b51a6dc40f27a6e1eae04}
+The constructor. 
+\begin{DoxyParams}{Parameters}
+{\em masks} & List of masks. \\
+\hline
+{\em case\-Sensitive} & Match the case of the characters when matching paths? \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_path_match_a2324c187442895aa2ac36eead340b75b}{\index{Path\-Match@{Path\-Match}!Match@{Match}}
+\index{Match@{Match}!PathMatch@{Path\-Match}}
+\subsubsection[{Match}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\-Match\-::\-Match (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{path}
+\end{DoxyParamCaption}
+) const}}\label{class_path_match_a2324c187442895aa2ac36eead340b75b}
+
+
+Match path against list of masks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \hyperlink{class_path}{Path} to match. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if any of the masks match the path, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_path_match_acc7b9a9e9efeb0c69ac3886ca8a1450a}{\index{Path\-Match@{Path\-Match}!Remove\-Filename@{Remove\-Filename}}
+\index{Remove\-Filename@{Remove\-Filename}!PathMatch@{Path\-Match}}
+\subsubsection[{Remove\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Path\-Match\-::\-Remove\-Filename (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{class_path_match_acc7b9a9e9efeb0c69ac3886ca8a1450a}
+
+
+Remove filename part from the path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \hyperlink{class_path}{Path} to edit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+path without filename part. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+cli/\hyperlink{pathmatch_8h}{pathmatch.\-h}\item 
+cli/\hyperlink{pathmatch_8cpp}{pathmatch.\-cpp}\end{DoxyCompactItemize}

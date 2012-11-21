@@ -1,0 +1,74 @@
+\hypertarget{symboldatabase_8h}{\section{lib/symboldatabase.h File Reference}
+\label{symboldatabase_8h}\index{lib/symboldatabase.\-h@{lib/symboldatabase.\-h}}
+}
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$set$>$}\\*
+{\ttfamily \#include \char`\"{}config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}token.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}mathlib.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_dimension}{Dimension}
+\begin{DoxyCompactList}\small\item\em Array dimension information. \end{DoxyCompactList}\item 
+class \hyperlink{class_variable}{Variable}
+\begin{DoxyCompactList}\small\item\em Information about a member variable. \end{DoxyCompactList}\item 
+class \hyperlink{class_function}{Function}
+\item 
+class \hyperlink{class_scope}{Scope}
+\item 
+struct \hyperlink{struct_scope_1_1_base_info}{Scope\-::\-Base\-Info}
+\item 
+struct \hyperlink{struct_scope_1_1_friend_info}{Scope\-::\-Friend\-Info}
+\item 
+class \hyperlink{class_symbol_database}{Symbol\-Database}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9fa}{Access\-Control} \{ \\*
+\hyperlink{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faa2d47e20e63deb55d32228fde32f6b513}{Public}, 
+\hyperlink{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faa72414112a6a45ab0b4b73e8b83d0b0f5}{Protected}, 
+\hyperlink{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faaaa82165706f5dd0859648a09f1f64166}{Private}, 
+\hyperlink{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faa03ddcda8467f404189c984dc13409aa8}{Global}, 
+\\*
+\hyperlink{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faa3cf090162a7329f53526e583bb3b45e9}{Namespace}, 
+\hyperlink{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faa70233d844db3b67a9561a98ecf2c0eb2}{Argument}, 
+\hyperlink{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faad5ce4b23c6896e823b01b7598a1997b5}{Local}, 
+\hyperlink{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faa675a973cebdd2b8e81987fcf85c36ef7}{Throw}
+ \}
+\begin{DoxyCompactList}\small\item\em Access control enumerations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9fa}{\index{symboldatabase.\-h@{symboldatabase.\-h}!Access\-Control@{Access\-Control}}
+\index{Access\-Control@{Access\-Control}!symboldatabase.h@{symboldatabase.\-h}}
+\subsubsection[{Access\-Control}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Access\-Control}}}\label{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9fa}
+
+
+Access control enumerations. 
+
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{Public@{Public}!symboldatabase.\-h@{symboldatabase.\-h}}\index{symboldatabase.\-h@{symboldatabase.\-h}!Public@{Public}}\item[{\em 
+\hypertarget{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faa2d47e20e63deb55d32228fde32f6b513}{Public}\label{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faa2d47e20e63deb55d32228fde32f6b513}
+}]\index{Protected@{Protected}!symboldatabase.\-h@{symboldatabase.\-h}}\index{symboldatabase.\-h@{symboldatabase.\-h}!Protected@{Protected}}\item[{\em 
+\hypertarget{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faa72414112a6a45ab0b4b73e8b83d0b0f5}{Protected}\label{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faa72414112a6a45ab0b4b73e8b83d0b0f5}
+}]\index{Private@{Private}!symboldatabase.\-h@{symboldatabase.\-h}}\index{symboldatabase.\-h@{symboldatabase.\-h}!Private@{Private}}\item[{\em 
+\hypertarget{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faaaa82165706f5dd0859648a09f1f64166}{Private}\label{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faaaa82165706f5dd0859648a09f1f64166}
+}]\index{Global@{Global}!symboldatabase.\-h@{symboldatabase.\-h}}\index{symboldatabase.\-h@{symboldatabase.\-h}!Global@{Global}}\item[{\em 
+\hypertarget{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faa03ddcda8467f404189c984dc13409aa8}{Global}\label{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faa03ddcda8467f404189c984dc13409aa8}
+}]\index{Namespace@{Namespace}!symboldatabase.\-h@{symboldatabase.\-h}}\index{symboldatabase.\-h@{symboldatabase.\-h}!Namespace@{Namespace}}\item[{\em 
+\hypertarget{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faa3cf090162a7329f53526e583bb3b45e9}{Namespace}\label{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faa3cf090162a7329f53526e583bb3b45e9}
+}]\index{Argument@{Argument}!symboldatabase.\-h@{symboldatabase.\-h}}\index{symboldatabase.\-h@{symboldatabase.\-h}!Argument@{Argument}}\item[{\em 
+\hypertarget{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faa70233d844db3b67a9561a98ecf2c0eb2}{Argument}\label{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faa70233d844db3b67a9561a98ecf2c0eb2}
+}]\index{Local@{Local}!symboldatabase.\-h@{symboldatabase.\-h}}\index{symboldatabase.\-h@{symboldatabase.\-h}!Local@{Local}}\item[{\em 
+\hypertarget{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faad5ce4b23c6896e823b01b7598a1997b5}{Local}\label{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faad5ce4b23c6896e823b01b7598a1997b5}
+}]\index{Throw@{Throw}!symboldatabase.\-h@{symboldatabase.\-h}}\index{symboldatabase.\-h@{symboldatabase.\-h}!Throw@{Throw}}\item[{\em 
+\hypertarget{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faa675a973cebdd2b8e81987fcf85c36ef7}{Throw}\label{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9faa675a973cebdd2b8e81987fcf85c36ef7}
+}]\end{description}
+\end{Desc}
+

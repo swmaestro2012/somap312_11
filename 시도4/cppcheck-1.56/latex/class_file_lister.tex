@@ -1,0 +1,100 @@
+\hypertarget{class_file_lister}{\section{File\-Lister Class Reference}
+\label{class_file_lister}\index{File\-Lister@{File\-Lister}}
+}
+
+
+Cross-\/platform \hyperlink{class_file_lister}{File\-Lister}.  
+
+
+
+
+{\ttfamily \#include $<$filelister.\-h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_file_lister_aa728ecb07266786854ec816ea4b96b7b}{recursive\-Add\-Files} (std\-::map$<$ std\-::string, std\-::size\-\_\-t $>$ \&files, const std\-::string \&path)
+\begin{DoxyCompactList}\small\item\em Recursively add source files to a map. Add source files from given directory and all subdirectries to the given map. Only files with accepted extensions ($\ast$.c;$\ast$.cpp;$\ast$.cxx;$\ast$.c++;$\ast$.cc;$\ast$.txx) are added. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_file_lister_af88b22cd718521d7d26deb5898c6a14f}{is\-Directory} (const std\-::string \&path)
+\begin{DoxyCompactList}\small\item\em Is given path a directory? \end{DoxyCompactList}\item 
+static bool \hyperlink{class_file_lister_a13ce906aa6f5d1c627ddbdebc9831ee5}{file\-Exists} (const std\-::string \&path)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_check}{Check} if the given path is a file and if it exists? \end{DoxyCompactList}\item 
+static std\-::string \hyperlink{class_file_lister_a466807f8ef2c0dd41674d5a407ab1245}{get\-Absolute\-Path} (const std\-::string \&path)
+\item 
+static void \hyperlink{class_file_lister_a96314741dc696e8f0e424010dc848040}{recursive\-Add\-Files2} (std\-::set$<$ std\-::string $>$ \&seen\-\_\-paths, std\-::map$<$ std\-::string, std\-::size\-\_\-t $>$ \&files, const std\-::string \&path)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Cross-\/platform \hyperlink{class_file_lister}{File\-Lister}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_file_lister_a13ce906aa6f5d1c627ddbdebc9831ee5}{\index{File\-Lister@{File\-Lister}!file\-Exists@{file\-Exists}}
+\index{file\-Exists@{file\-Exists}!FileLister@{File\-Lister}}
+\subsubsection[{file\-Exists}]{\setlength{\rightskip}{0pt plus 5cm}bool File\-Lister\-::file\-Exists (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_file_lister_a13ce906aa6f5d1c627ddbdebc9831ee5}
+
+
+\hyperlink{class_check}{Check} if the given path is a file and if it exists? 
+
+\begin{DoxyReturn}{Returns}
+true if path points to file and the file exists. 
+\end{DoxyReturn}
+\hypertarget{class_file_lister_a466807f8ef2c0dd41674d5a407ab1245}{\index{File\-Lister@{File\-Lister}!get\-Absolute\-Path@{get\-Absolute\-Path}}
+\index{get\-Absolute\-Path@{get\-Absolute\-Path}!FileLister@{File\-Lister}}
+\subsubsection[{get\-Absolute\-Path}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string File\-Lister\-::get\-Absolute\-Path (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_file_lister_a466807f8ef2c0dd41674d5a407ab1245}
+\hypertarget{class_file_lister_af88b22cd718521d7d26deb5898c6a14f}{\index{File\-Lister@{File\-Lister}!is\-Directory@{is\-Directory}}
+\index{is\-Directory@{is\-Directory}!FileLister@{File\-Lister}}
+\subsubsection[{is\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}bool File\-Lister\-::is\-Directory (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_file_lister_af88b22cd718521d7d26deb5898c6a14f}
+
+
+Is given path a directory? 
+
+\begin{DoxyReturn}{Returns}
+returns true if the path is a directory 
+\end{DoxyReturn}
+\hypertarget{class_file_lister_aa728ecb07266786854ec816ea4b96b7b}{\index{File\-Lister@{File\-Lister}!recursive\-Add\-Files@{recursive\-Add\-Files}}
+\index{recursive\-Add\-Files@{recursive\-Add\-Files}!FileLister@{File\-Lister}}
+\subsubsection[{recursive\-Add\-Files}]{\setlength{\rightskip}{0pt plus 5cm}void File\-Lister\-::recursive\-Add\-Files (
+\begin{DoxyParamCaption}
+\item[{std\-::map$<$ std\-::string, std\-::size\-\_\-t $>$ \&}]{files, }
+\item[{const std\-::string \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_file_lister_aa728ecb07266786854ec816ea4b96b7b}
+
+
+Recursively add source files to a map. Add source files from given directory and all subdirectries to the given map. Only files with accepted extensions ($\ast$.c;$\ast$.cpp;$\ast$.cxx;$\ast$.c++;$\ast$.cc;$\ast$.txx) are added. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em files} & output map that associates the size of each file with its name \\
+\hline
+{\em path} & root path \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_file_lister_a96314741dc696e8f0e424010dc848040}{\index{File\-Lister@{File\-Lister}!recursive\-Add\-Files2@{recursive\-Add\-Files2}}
+\index{recursive\-Add\-Files2@{recursive\-Add\-Files2}!FileLister@{File\-Lister}}
+\subsubsection[{recursive\-Add\-Files2}]{\setlength{\rightskip}{0pt plus 5cm}void File\-Lister\-::recursive\-Add\-Files2 (
+\begin{DoxyParamCaption}
+\item[{std\-::set$<$ std\-::string $>$ \&}]{seen\-\_\-paths, }
+\item[{std\-::map$<$ std\-::string, std\-::size\-\_\-t $>$ \&}]{files, }
+\item[{const std\-::string \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_file_lister_a96314741dc696e8f0e424010dc848040}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+cli/\hyperlink{filelister_8h}{filelister.\-h}\item 
+cli/\hyperlink{filelister_8cpp}{filelister.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,103 @@
+\hypertarget{class_check_assign_if}{\section{Check\-Assign\-If Class Reference}
+\label{class_check_assign_if}\index{Check\-Assign\-If@{Check\-Assign\-If}}
+}
+
+
+\hyperlink{class_check}{Check} for assignment / condition mismatches.  
+
+
+
+
+{\ttfamily \#include $<$checkassignif.\-h$>$}
+
+Inheritance diagram for Check\-Assign\-If\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_check_assign_if}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_check_assign_if_ab183b18432bfaf364c8cc15898283ce4}{Check\-Assign\-If} ()
+\item 
+\hyperlink{class_check_assign_if_ab5cfb7f65863318f44e43f406a584748}{Check\-Assign\-If} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\item 
+void \hyperlink{class_check_assign_if_a9f01cfc5b830fd7439e0b83b0590f53c}{run\-Simplified\-Checks} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\begin{DoxyCompactList}\small\item\em Run checks against the simplified token list. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_assign_if_a8d44b6ba0552d39dc83f0a92eda3a6d1}{assign\-If} ()
+\item 
+void \hyperlink{class_check_assign_if_a43705ae6a98e3ad05592a66d4e7f40d4}{comparison} ()
+\item 
+void \hyperlink{class_check_assign_if_a82cfc674ce26af08bae2be56a18fb60b}{multi\-Condition} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_check}{Check} for assignment / condition mismatches. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_check_assign_if_ab183b18432bfaf364c8cc15898283ce4}{\index{Check\-Assign\-If@{Check\-Assign\-If}!Check\-Assign\-If@{Check\-Assign\-If}}
+\index{Check\-Assign\-If@{Check\-Assign\-If}!CheckAssignIf@{Check\-Assign\-If}}
+\subsubsection[{Check\-Assign\-If}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Assign\-If\-::\-Check\-Assign\-If (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_assign_if_ab183b18432bfaf364c8cc15898283ce4}
+This constructor is used when registering the \hyperlink{class_check_assign_if}{Check\-Assign\-If} \hypertarget{class_check_assign_if_ab5cfb7f65863318f44e43f406a584748}{\index{Check\-Assign\-If@{Check\-Assign\-If}!Check\-Assign\-If@{Check\-Assign\-If}}
+\index{Check\-Assign\-If@{Check\-Assign\-If}!CheckAssignIf@{Check\-Assign\-If}}
+\subsubsection[{Check\-Assign\-If}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Assign\-If\-::\-Check\-Assign\-If (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_assign_if_ab5cfb7f65863318f44e43f406a584748}
+This constructor is used when running checks. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_check_assign_if_a8d44b6ba0552d39dc83f0a92eda3a6d1}{\index{Check\-Assign\-If@{Check\-Assign\-If}!assign\-If@{assign\-If}}
+\index{assign\-If@{assign\-If}!CheckAssignIf@{Check\-Assign\-If}}
+\subsubsection[{assign\-If}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Assign\-If\-::assign\-If (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_assign_if_a8d44b6ba0552d39dc83f0a92eda3a6d1}
+mismatching assignment / comparison \hypertarget{class_check_assign_if_a43705ae6a98e3ad05592a66d4e7f40d4}{\index{Check\-Assign\-If@{Check\-Assign\-If}!comparison@{comparison}}
+\index{comparison@{comparison}!CheckAssignIf@{Check\-Assign\-If}}
+\subsubsection[{comparison}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Assign\-If\-::comparison (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_assign_if_a43705ae6a98e3ad05592a66d4e7f40d4}
+mismatching lhs and rhs in comparison \hypertarget{class_check_assign_if_a82cfc674ce26af08bae2be56a18fb60b}{\index{Check\-Assign\-If@{Check\-Assign\-If}!multi\-Condition@{multi\-Condition}}
+\index{multi\-Condition@{multi\-Condition}!CheckAssignIf@{Check\-Assign\-If}}
+\subsubsection[{multi\-Condition}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Assign\-If\-::multi\-Condition (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_assign_if_a82cfc674ce26af08bae2be56a18fb60b}
+match 'if' and 'else if' conditions \hypertarget{class_check_assign_if_a9f01cfc5b830fd7439e0b83b0590f53c}{\index{Check\-Assign\-If@{Check\-Assign\-If}!run\-Simplified\-Checks@{run\-Simplified\-Checks}}
+\index{run\-Simplified\-Checks@{run\-Simplified\-Checks}!CheckAssignIf@{Check\-Assign\-If}}
+\subsubsection[{run\-Simplified\-Checks}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Assign\-If\-::run\-Simplified\-Checks (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_assign_if_a9f01cfc5b830fd7439e0b83b0590f53c}
+
+
+Run checks against the simplified token list. 
+
+
+
+Implements \hyperlink{class_check_a112445eed1625599b93c69aab4701e5e}{Check}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{checkassignif_8h}{checkassignif.\-h}\item 
+lib/\hyperlink{checkassignif_8cpp}{checkassignif.\-cpp}\end{DoxyCompactItemize}

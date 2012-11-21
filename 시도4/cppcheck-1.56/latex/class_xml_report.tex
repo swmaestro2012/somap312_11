@@ -1,0 +1,130 @@
+\hypertarget{class_xml_report}{\section{Xml\-Report Class Reference}
+\label{class_xml_report}\index{Xml\-Report@{Xml\-Report}}
+}
+
+
+Base class for X\-M\-L report classes.  
+
+
+
+
+{\ttfamily \#include $<$xmlreport.\-h$>$}
+
+Inheritance diagram for Xml\-Report\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_xml_report}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_xml_report_aa8100fa163c4002f5c0902635f32a69b}{Xml\-Report} (const Q\-String \&filename, Q\-Object $\ast$parent=0)
+\item 
+virtual Q\-List$<$ \hyperlink{class_error_item}{Error\-Item} $>$ \hyperlink{class_xml_report_a2ee0964329a242d406c37a4bbb23fff0}{Read} ()=0
+\begin{DoxyCompactList}\small\item\em Read contents of the report file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Q\-String \hyperlink{class_xml_report_acac95416a1899aee3eda9432c72ce1b3}{quote\-Message} (const Q\-String \&message)
+\begin{DoxyCompactList}\small\item\em Quote the message. \end{DoxyCompactList}\item 
+static Q\-String \hyperlink{class_xml_report_ad2a585e12e35c8b10c371db170e6acbb}{unquote\-Message} (const Q\-String \&message)
+\begin{DoxyCompactList}\small\item\em Unquote the message. \end{DoxyCompactList}\item 
+static int \hyperlink{class_xml_report_afb9bec28c3de9d6911dba1c2392c6351}{determine\-Version} (const Q\-String \&filename)
+\begin{DoxyCompactList}\small\item\em Get the X\-M\-L report format version from the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Base class for X\-M\-L report classes. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_xml_report_aa8100fa163c4002f5c0902635f32a69b}{\index{Xml\-Report@{Xml\-Report}!Xml\-Report@{Xml\-Report}}
+\index{Xml\-Report@{Xml\-Report}!XmlReport@{Xml\-Report}}
+\subsubsection[{Xml\-Report}]{\setlength{\rightskip}{0pt plus 5cm}Xml\-Report\-::\-Xml\-Report (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{filename, }
+\item[{Q\-Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_xml_report_aa8100fa163c4002f5c0902635f32a69b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_xml_report_afb9bec28c3de9d6911dba1c2392c6351}{\index{Xml\-Report@{Xml\-Report}!determine\-Version@{determine\-Version}}
+\index{determine\-Version@{determine\-Version}!XmlReport@{Xml\-Report}}
+\subsubsection[{determine\-Version}]{\setlength{\rightskip}{0pt plus 5cm}int Xml\-Report\-::determine\-Version (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_xml_report_afb9bec28c3de9d6911dba1c2392c6351}
+
+
+Get the X\-M\-L report format version from the file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Filename of the report file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+X\-M\-L report format version or 0 if error happened. 
+\end{DoxyReturn}
+\hypertarget{class_xml_report_acac95416a1899aee3eda9432c72ce1b3}{\index{Xml\-Report@{Xml\-Report}!quote\-Message@{quote\-Message}}
+\index{quote\-Message@{quote\-Message}!XmlReport@{Xml\-Report}}
+\subsubsection[{quote\-Message}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Xml\-Report\-::quote\-Message (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_xml_report_acac95416a1899aee3eda9432c72ce1b3}
+
+
+Quote the message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to quote. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+quoted message. 
+\end{DoxyReturn}
+\hypertarget{class_xml_report_a2ee0964329a242d406c37a4bbb23fff0}{\index{Xml\-Report@{Xml\-Report}!Read@{Read}}
+\index{Read@{Read}!XmlReport@{Xml\-Report}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\-List$<${\bf Error\-Item}$>$ Xml\-Report\-::\-Read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_xml_report_a2ee0964329a242d406c37a4bbb23fff0}
+
+
+Read contents of the report file. 
+
+
+
+Implemented in \hyperlink{class_xml_report_v2_a98504e1389bba9a08f6e4a123093a02a}{Xml\-Report\-V2}, and \hyperlink{class_xml_report_v1_a409b4db53f957781a1ac63c98bfbf16a}{Xml\-Report\-V1}.
+
+\hypertarget{class_xml_report_ad2a585e12e35c8b10c371db170e6acbb}{\index{Xml\-Report@{Xml\-Report}!unquote\-Message@{unquote\-Message}}
+\index{unquote\-Message@{unquote\-Message}!XmlReport@{Xml\-Report}}
+\subsubsection[{unquote\-Message}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Xml\-Report\-::unquote\-Message (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_xml_report_ad2a585e12e35c8b10c371db170e6acbb}
+
+
+Unquote the message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to quote. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+quoted message. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{xmlreport_8h}{xmlreport.\-h}\item 
+gui/\hyperlink{xmlreport_8cpp}{xmlreport.\-cpp}\end{DoxyCompactItemize}

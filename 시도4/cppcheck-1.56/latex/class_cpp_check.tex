@@ -1,0 +1,250 @@
+\hypertarget{class_cpp_check}{\section{Cpp\-Check Class Reference}
+\label{class_cpp_check}\index{Cpp\-Check@{Cpp\-Check}}
+}
+
+
+This is the base class which will use other classes to do static code analysis for C and C++ code to find possible errors or places that could be improved. Usage\-: See \hyperlink{class_cpp_check_abc81dee40c7f0c5f5ef353c2e4e46729}{check()} for more info.  
+
+
+
+
+{\ttfamily \#include $<$cppcheck.\-h$>$}
+
+Inheritance diagram for Cpp\-Check\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cpp_check}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cpp_check_a1f1c8708f750b9fdd491bfbd114daf2e}{Cpp\-Check} (\hyperlink{class_error_logger}{Error\-Logger} \&error\-Logger, bool use\-Global\-Suppressions)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_cpp_check_a8a82788b37adfcf50c0a63c635816dce}{$\sim$\-Cpp\-Check} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_cpp_check_abc81dee40c7f0c5f5ef353c2e4e46729}{check} (const std\-::string \&path)
+\begin{DoxyCompactList}\small\item\em This starts the actual checking. Note that you must call parse\-From\-Args() or \hyperlink{class_cpp_check_a2bf1446c65d47ea68a86ddd34659216d}{settings()} and add\-File() before calling this. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_cpp_check_aeb20db74cf77fb492c2ac844fc0fe076}{check} (const std\-::string \&path, const std\-::string \&content)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_check}{Check} the file. This function checks one \char`\"{}virtual\char`\"{} file. The file is not read from the disk but the content is given in {\ttfamily content}. In errors the {\ttfamily path} is used as a filename. \end{DoxyCompactList}\item 
+void \hyperlink{class_cpp_check_a37e0ed9c61c737f2ac1dd08cc733573e}{check\-Function\-Usage} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_check}{Check} function usage. \end{DoxyCompactList}\item 
+\hyperlink{class_settings}{Settings} \& \hyperlink{class_cpp_check_a2bf1446c65d47ea68a86ddd34659216d}{settings} ()
+\begin{DoxyCompactList}\small\item\em Get reference to current settings. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_cpp_check_a2eef5d46d6a5429f894f99b376080857}{report\-Status} (unsigned int fileindex, unsigned int filecount, std\-::size\-\_\-t sizedone, std\-::size\-\_\-t sizetotal)
+\item 
+void \hyperlink{class_cpp_check_a07744b4ff60e30445c3ec1c40ab9c498}{terminate} ()
+\begin{DoxyCompactList}\small\item\em Terminate checking. The checking will be terminated as soon as possible. \end{DoxyCompactList}\item 
+void \hyperlink{class_cpp_check_ad1e2d0f1164013a0c9575100603dfc32}{get\-Error\-Messages} ()
+\begin{DoxyCompactList}\small\item\em Call all \char`\"{}get\-Error\-Messages\char`\"{} in all registered \hyperlink{class_check}{Check} classes. Also print out X\-M\-L header and footer. \end{DoxyCompactList}\item 
+void \hyperlink{class_cpp_check_ab101f0b89614e74fb573fe281c84b5d0}{analyse\-File} (std\-::istream \&\hyperlink{test_8cxx_ae8618ff1d2d0e398883406408a769cba}{f}, const std\-::string \&filename)
+\begin{DoxyCompactList}\small\item\em Analyse file -\/ It's public so unit tests can be written. \end{DoxyCompactList}\item 
+const std\-::set$<$ std\-::string $>$ \& \hyperlink{class_cpp_check_aa1c9b7a357b84bf62f1132a221b243a4}{dependencies} () const 
+\begin{DoxyCompactList}\small\item\em Get dependencies. Use this after calling 'check'. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_cpp_check_a98bfbe5bb2de1138b21d0a35721d70bd}{version} ()
+\begin{DoxyCompactList}\small\item\em Returns current version number as a string. \end{DoxyCompactList}\item 
+static const char $\ast$ \hyperlink{class_cpp_check_aff48d92876e9d2c8788485531b2aa04a}{extra\-Version} ()
+\begin{DoxyCompactList}\small\item\em Returns extra version info as a string. This is for returning extra version info, like Git commit id, build time/date etc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This is the base class which will use other classes to do static code analysis for C and C++ code to find possible errors or places that could be improved. Usage\-: See \hyperlink{class_cpp_check_abc81dee40c7f0c5f5ef353c2e4e46729}{check()} for more info. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_cpp_check_a1f1c8708f750b9fdd491bfbd114daf2e}{\index{Cpp\-Check@{Cpp\-Check}!Cpp\-Check@{Cpp\-Check}}
+\index{Cpp\-Check@{Cpp\-Check}!CppCheck@{Cpp\-Check}}
+\subsubsection[{Cpp\-Check}]{\setlength{\rightskip}{0pt plus 5cm}Cpp\-Check\-::\-Cpp\-Check (
+\begin{DoxyParamCaption}
+\item[{{\bf Error\-Logger} \&}]{error\-Logger, }
+\item[{bool}]{use\-Global\-Suppressions}
+\end{DoxyParamCaption}
+)}}\label{class_cpp_check_a1f1c8708f750b9fdd491bfbd114daf2e}
+
+
+Constructor. 
+
+\hypertarget{class_cpp_check_a8a82788b37adfcf50c0a63c635816dce}{\index{Cpp\-Check@{Cpp\-Check}!$\sim$\-Cpp\-Check@{$\sim$\-Cpp\-Check}}
+\index{$\sim$\-Cpp\-Check@{$\sim$\-Cpp\-Check}!CppCheck@{Cpp\-Check}}
+\subsubsection[{$\sim$\-Cpp\-Check}]{\setlength{\rightskip}{0pt plus 5cm}Cpp\-Check\-::$\sim$\-Cpp\-Check (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_cpp_check_a8a82788b37adfcf50c0a63c635816dce}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_cpp_check_ab101f0b89614e74fb573fe281c84b5d0}{\index{Cpp\-Check@{Cpp\-Check}!analyse\-File@{analyse\-File}}
+\index{analyse\-File@{analyse\-File}!CppCheck@{Cpp\-Check}}
+\subsubsection[{analyse\-File}]{\setlength{\rightskip}{0pt plus 5cm}void Cpp\-Check\-::analyse\-File (
+\begin{DoxyParamCaption}
+\item[{std\-::istream \&}]{f, }
+\item[{const std\-::string \&}]{filename}
+\end{DoxyParamCaption}
+)}}\label{class_cpp_check_ab101f0b89614e74fb573fe281c84b5d0}
+
+
+Analyse file -\/ It's public so unit tests can be written. 
+
+\hypertarget{class_cpp_check_abc81dee40c7f0c5f5ef353c2e4e46729}{\index{Cpp\-Check@{Cpp\-Check}!check@{check}}
+\index{check@{check}!CppCheck@{Cpp\-Check}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Cpp\-Check\-::check (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{path}
+\end{DoxyParamCaption}
+)}}\label{class_cpp_check_abc81dee40c7f0c5f5ef353c2e4e46729}
+
+
+This starts the actual checking. Note that you must call parse\-From\-Args() or \hyperlink{class_cpp_check_a2bf1446c65d47ea68a86ddd34659216d}{settings()} and add\-File() before calling this. 
+
+\begin{DoxyReturn}{Returns}
+amount of errors found or 0 if none were found. \hyperlink{class_check}{Check} the file. This function checks one given file for errors. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \hyperlink{class_path}{Path} to the file to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+amount of errors found or 0 if none were found. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+You must set settings before calling this function (by calling \hyperlink{class_cpp_check_a2bf1446c65d47ea68a86ddd34659216d}{settings()}). 
+\end{DoxyNote}
+\hypertarget{class_cpp_check_aeb20db74cf77fb492c2ac844fc0fe076}{\index{Cpp\-Check@{Cpp\-Check}!check@{check}}
+\index{check@{check}!CppCheck@{Cpp\-Check}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Cpp\-Check\-::check (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{path, }
+\item[{const std\-::string \&}]{content}
+\end{DoxyParamCaption}
+)}}\label{class_cpp_check_aeb20db74cf77fb492c2ac844fc0fe076}
+
+
+\hyperlink{class_check}{Check} the file. This function checks one \char`\"{}virtual\char`\"{} file. The file is not read from the disk but the content is given in {\ttfamily content}. In errors the {\ttfamily path} is used as a filename. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \hyperlink{class_path}{Path} to the file to check. \\
+\hline
+{\em content} & File content as a string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+amount of errors found or 0 if none were found. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+You must set settings before calling this function (by calling \hyperlink{class_cpp_check_a2bf1446c65d47ea68a86ddd34659216d}{settings()}). 
+\end{DoxyNote}
+\hypertarget{class_cpp_check_a37e0ed9c61c737f2ac1dd08cc733573e}{\index{Cpp\-Check@{Cpp\-Check}!check\-Function\-Usage@{check\-Function\-Usage}}
+\index{check\-Function\-Usage@{check\-Function\-Usage}!CppCheck@{Cpp\-Check}}
+\subsubsection[{check\-Function\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void Cpp\-Check\-::check\-Function\-Usage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_cpp_check_a37e0ed9c61c737f2ac1dd08cc733573e}
+
+
+\hyperlink{class_check}{Check} function usage. 
+
+\begin{DoxyNote}{Note}
+Call this after all files has been checked 
+\end{DoxyNote}
+\hypertarget{class_cpp_check_aa1c9b7a357b84bf62f1132a221b243a4}{\index{Cpp\-Check@{Cpp\-Check}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!CppCheck@{Cpp\-Check}}
+\subsubsection[{dependencies}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::set$<$std\-::string$>$\& Cpp\-Check\-::dependencies (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_cpp_check_aa1c9b7a357b84bf62f1132a221b243a4}
+
+
+Get dependencies. Use this after calling 'check'. 
+
+\hypertarget{class_cpp_check_aff48d92876e9d2c8788485531b2aa04a}{\index{Cpp\-Check@{Cpp\-Check}!extra\-Version@{extra\-Version}}
+\index{extra\-Version@{extra\-Version}!CppCheck@{Cpp\-Check}}
+\subsubsection[{extra\-Version}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Cpp\-Check\-::extra\-Version (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_cpp_check_aff48d92876e9d2c8788485531b2aa04a}
+
+
+Returns extra version info as a string. This is for returning extra version info, like Git commit id, build time/date etc. 
+
+\begin{DoxyReturn}{Returns}
+extra version info, e.\-g. \char`\"{}04d42151\char`\"{} (Git commit id). 
+\end{DoxyReturn}
+\hypertarget{class_cpp_check_ad1e2d0f1164013a0c9575100603dfc32}{\index{Cpp\-Check@{Cpp\-Check}!get\-Error\-Messages@{get\-Error\-Messages}}
+\index{get\-Error\-Messages@{get\-Error\-Messages}!CppCheck@{Cpp\-Check}}
+\subsubsection[{get\-Error\-Messages}]{\setlength{\rightskip}{0pt plus 5cm}void Cpp\-Check\-::get\-Error\-Messages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_cpp_check_ad1e2d0f1164013a0c9575100603dfc32}
+
+
+Call all \char`\"{}get\-Error\-Messages\char`\"{} in all registered \hyperlink{class_check}{Check} classes. Also print out X\-M\-L header and footer. 
+
+\hypertarget{class_cpp_check_a2eef5d46d6a5429f894f99b376080857}{\index{Cpp\-Check@{Cpp\-Check}!report\-Status@{report\-Status}}
+\index{report\-Status@{report\-Status}!CppCheck@{Cpp\-Check}}
+\subsubsection[{report\-Status}]{\setlength{\rightskip}{0pt plus 5cm}void Cpp\-Check\-::report\-Status (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{fileindex, }
+\item[{unsigned int}]{filecount, }
+\item[{std\-::size\-\_\-t}]{sizedone, }
+\item[{std\-::size\-\_\-t}]{sizetotal}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_cpp_check_a2eef5d46d6a5429f894f99b376080857}
+\hypertarget{class_cpp_check_a2bf1446c65d47ea68a86ddd34659216d}{\index{Cpp\-Check@{Cpp\-Check}!settings@{settings}}
+\index{settings@{settings}!CppCheck@{Cpp\-Check}}
+\subsubsection[{settings}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Settings} \& Cpp\-Check\-::settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_cpp_check_a2bf1446c65d47ea68a86ddd34659216d}
+
+
+Get reference to current settings. 
+
+\begin{DoxyReturn}{Returns}
+a reference to current settings 
+\end{DoxyReturn}
+\hypertarget{class_cpp_check_a07744b4ff60e30445c3ec1c40ab9c498}{\index{Cpp\-Check@{Cpp\-Check}!terminate@{terminate}}
+\index{terminate@{terminate}!CppCheck@{Cpp\-Check}}
+\subsubsection[{terminate}]{\setlength{\rightskip}{0pt plus 5cm}void Cpp\-Check\-::terminate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_cpp_check_a07744b4ff60e30445c3ec1c40ab9c498}
+
+
+Terminate checking. The checking will be terminated as soon as possible. 
+
+\hypertarget{class_cpp_check_a98bfbe5bb2de1138b21d0a35721d70bd}{\index{Cpp\-Check@{Cpp\-Check}!version@{version}}
+\index{version@{version}!CppCheck@{Cpp\-Check}}
+\subsubsection[{version}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Cpp\-Check\-::version (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_cpp_check_a98bfbe5bb2de1138b21d0a35721d70bd}
+
+
+Returns current version number as a string. 
+
+\begin{DoxyReturn}{Returns}
+version, e.\-g. \char`\"{}1.\-38\char`\"{} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{cppcheck_8h}{cppcheck.\-h}\item 
+lib/\hyperlink{cppcheck_8cpp}{cppcheck.\-cpp}\end{DoxyCompactItemize}

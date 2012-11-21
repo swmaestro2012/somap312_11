@@ -1,0 +1,169 @@
+\hypertarget{class_project}{\section{Project Class Reference}
+\label{class_project}\index{Project@{Project}}
+}
+
+
+A class that contains project data and manages projects. Currently only project file creation and editing is implemented.  
+
+
+
+
+{\ttfamily \#include $<$project.\-h$>$}
+
+Inheritance diagram for Project\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_project}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_project_ac74a7c157eca257948696824a2d22181}{Project} (Q\-Widget $\ast$parent=0)
+\item 
+\hyperlink{class_project_a96832b9b3e96cc567c85108e93f52f1c}{Project} (const Q\-String \&filename, Q\-Widget $\ast$parent=0)
+\item 
+\hyperlink{class_project_ad165d61b76ee86ee9c27fd987a2a7b9e}{$\sim$\-Project} ()
+\item 
+Q\-String \hyperlink{class_project_aed3d3572acf9a85315557b0f4272d0a9}{Filename} () const 
+\begin{DoxyCompactList}\small\item\em Return the filename of the project. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_a0a37303738a926439c222d12464e22f6}{Set\-Filename} (const Q\-String \&filename)
+\begin{DoxyCompactList}\small\item\em Set filename for the project file. \end{DoxyCompactList}\item 
+bool \hyperlink{class_project_ab4b7769f1efd249b8227606f71457df7}{Is\-Open} () const 
+\begin{DoxyCompactList}\small\item\em Is the project open? The project is considered to be open if it has an opened project file. \end{DoxyCompactList}\item 
+bool \hyperlink{class_project_a45bfe3647ba3320b3f67f4706e68aef5}{Open} ()
+\begin{DoxyCompactList}\small\item\em Open existing project file. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_a0fb2faa05da235c5cab9bc137a0c8855}{Edit} ()
+\begin{DoxyCompactList}\small\item\em Edit the project file. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_ad12f3f328253f1562d90318e908045d1}{Create} ()
+\begin{DoxyCompactList}\small\item\em Create new project file. \end{DoxyCompactList}\item 
+\hyperlink{class_project_file}{Project\-File} $\ast$ \hyperlink{class_project_a86c4eea4f5400e5f921c7f7cb812dfba}{Get\-Project\-File} () const 
+\begin{DoxyCompactList}\small\item\em Return current project file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that contains project data and manages projects. Currently only project file creation and editing is implemented. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_project_ac74a7c157eca257948696824a2d22181}{\index{Project@{Project}!Project@{Project}}
+\index{Project@{Project}!Project@{Project}}
+\subsubsection[{Project}]{\setlength{\rightskip}{0pt plus 5cm}Project\-::\-Project (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_project_ac74a7c157eca257948696824a2d22181}
+\hypertarget{class_project_a96832b9b3e96cc567c85108e93f52f1c}{\index{Project@{Project}!Project@{Project}}
+\index{Project@{Project}!Project@{Project}}
+\subsubsection[{Project}]{\setlength{\rightskip}{0pt plus 5cm}Project\-::\-Project (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{filename, }
+\item[{Q\-Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_project_a96832b9b3e96cc567c85108e93f52f1c}
+\hypertarget{class_project_ad165d61b76ee86ee9c27fd987a2a7b9e}{\index{Project@{Project}!$\sim$\-Project@{$\sim$\-Project}}
+\index{$\sim$\-Project@{$\sim$\-Project}!Project@{Project}}
+\subsubsection[{$\sim$\-Project}]{\setlength{\rightskip}{0pt plus 5cm}Project\-::$\sim$\-Project (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_project_ad165d61b76ee86ee9c27fd987a2a7b9e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_project_ad12f3f328253f1562d90318e908045d1}{\index{Project@{Project}!Create@{Create}}
+\index{Create@{Create}!Project@{Project}}
+\subsubsection[{Create}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-::\-Create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_project_ad12f3f328253f1562d90318e908045d1}
+
+
+Create new project file. 
+
+\hypertarget{class_project_a0fb2faa05da235c5cab9bc137a0c8855}{\index{Project@{Project}!Edit@{Edit}}
+\index{Edit@{Edit}!Project@{Project}}
+\subsubsection[{Edit}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-::\-Edit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_project_a0fb2faa05da235c5cab9bc137a0c8855}
+
+
+Edit the project file. 
+
+\hypertarget{class_project_aed3d3572acf9a85315557b0f4272d0a9}{\index{Project@{Project}!Filename@{Filename}}
+\index{Filename@{Filename}!Project@{Project}}
+\subsubsection[{Filename}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Project\-::\-Filename (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_project_aed3d3572acf9a85315557b0f4272d0a9}
+
+
+Return the filename of the project. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_project}{Project}'s filename. 
+\end{DoxyReturn}
+\hypertarget{class_project_a86c4eea4f5400e5f921c7f7cb812dfba}{\index{Project@{Project}!Get\-Project\-File@{Get\-Project\-File}}
+\index{Get\-Project\-File@{Get\-Project\-File}!Project@{Project}}
+\subsubsection[{Get\-Project\-File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Project\-File}$\ast$ Project\-::\-Get\-Project\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_project_a86c4eea4f5400e5f921c7f7cb812dfba}
+
+
+Return current project file. 
+
+\begin{DoxyReturn}{Returns}
+project file. 
+\end{DoxyReturn}
+\hypertarget{class_project_ab4b7769f1efd249b8227606f71457df7}{\index{Project@{Project}!Is\-Open@{Is\-Open}}
+\index{Is\-Open@{Is\-Open}!Project@{Project}}
+\subsubsection[{Is\-Open}]{\setlength{\rightskip}{0pt plus 5cm}bool Project\-::\-Is\-Open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_project_ab4b7769f1efd249b8227606f71457df7}
+
+
+Is the project open? The project is considered to be open if it has an opened project file. 
+
+\begin{DoxyReturn}{Returns}
+true if the project is open, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_project_a45bfe3647ba3320b3f67f4706e68aef5}{\index{Project@{Project}!Open@{Open}}
+\index{Open@{Open}!Project@{Project}}
+\subsubsection[{Open}]{\setlength{\rightskip}{0pt plus 5cm}bool Project\-::\-Open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_project_a45bfe3647ba3320b3f67f4706e68aef5}
+
+
+Open existing project file. 
+
+\hypertarget{class_project_a0a37303738a926439c222d12464e22f6}{\index{Project@{Project}!Set\-Filename@{Set\-Filename}}
+\index{Set\-Filename@{Set\-Filename}!Project@{Project}}
+\subsubsection[{Set\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-::\-Set\-Filename (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{filename}
+\end{DoxyParamCaption}
+)}}\label{class_project_a0a37303738a926439c222d12464e22f6}
+
+
+Set filename for the project file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Filename. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{project_8h}{project.\-h}\item 
+gui/\hyperlink{project_8cpp}{project.\-cpp}\end{DoxyCompactItemize}

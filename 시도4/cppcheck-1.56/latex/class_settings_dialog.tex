@@ -1,0 +1,434 @@
+\hypertarget{class_settings_dialog}{\section{Settings\-Dialog Class Reference}
+\label{class_settings_dialog}\index{Settings\-Dialog@{Settings\-Dialog}}
+}
+
+
+\hyperlink{class_settings}{Settings} dialog.  
+
+
+
+
+{\ttfamily \#include $<$settingsdialog.\-h$>$}
+
+Inheritance diagram for Settings\-Dialog\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_settings_dialog}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_settings_dialog_a8de59a6fa7e1f7e3ccdec8300271fff1}{Settings\-Dialog} (\hyperlink{class_application_list}{Application\-List} $\ast$list, \hyperlink{class_translation_handler}{Translation\-Handler} $\ast$translator, Q\-Widget $\ast$parent=0)
+\item 
+virtual \hyperlink{class_settings_dialog_ac48f54d4472902be0a3845a69167f068}{$\sim$\-Settings\-Dialog} ()
+\item 
+void \hyperlink{class_settings_dialog_a7bcb8c2fd3aace4e03d5a9449dbf03d8}{Save\-Setting\-Values} ()
+\begin{DoxyCompactList}\small\item\em Save all values to Q\-Settings. \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_dialog_a9320d2ea2aba1da144c36cc02fd7a68a}{Show\-Full\-Path} ()
+\begin{DoxyCompactList}\small\item\em Get checkbox value for m\-Show\-Full\-Path. \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_dialog_acc251fd3d12774ce3357851e2cd3cef9}{Save\-Full\-Path} ()
+\begin{DoxyCompactList}\small\item\em Get checkbox value for m\-Save\-Full\-Path. \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_dialog_a33a169deac9871227f0534c4c0a811d4}{Show\-No\-Errors\-Message} ()
+\begin{DoxyCompactList}\small\item\em Get checkbox value for m\-No\-Errors\-Message. \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_dialog_ad9d0973b9ea290296acecb41861d3bcf}{Save\-All\-Errors} ()
+\begin{DoxyCompactList}\small\item\em Get checkbox value for m\-Save\-All\-Errors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_settings_dialog_ab481df9973de4149948ab48fecdc72e6}{Ok} ()
+\begin{DoxyCompactList}\small\item\em Slot for clicking O\-K. \end{DoxyCompactList}\item 
+void \hyperlink{class_settings_dialog_a2e3bf4130866e8dc57132a57c8d32227}{Add\-Application} ()
+\begin{DoxyCompactList}\small\item\em Slot for adding a new application to the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_settings_dialog_ab24138c8115b9159d8514a43be4ee920}{Remove\-Application} ()
+\begin{DoxyCompactList}\small\item\em Slot for deleting an application from the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_settings_dialog_a35eba51f66d3c0ea0a80a8d2bcc96434}{Edit\-Application} ()
+\begin{DoxyCompactList}\small\item\em Slot for modifying an application in the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_settings_dialog_ac35bf4ace9640cbd6a9df49e0657ab2f}{Default\-Application} ()
+\begin{DoxyCompactList}\small\item\em Slot for making the selected application as the default (first) \end{DoxyCompactList}\item 
+void \hyperlink{class_settings_dialog_adc2f2cd8c389973e81d13a0f8b6c4b92}{Add\-Include\-Path} ()
+\begin{DoxyCompactList}\small\item\em Slot for adding new include path. \end{DoxyCompactList}\item 
+void \hyperlink{class_settings_dialog_a68389f7679644452940c5ff841bf7f57}{Remove\-Include\-Path} ()
+\begin{DoxyCompactList}\small\item\em Slot for removing an include path. \end{DoxyCompactList}\item 
+void \hyperlink{class_settings_dialog_ab285190d065c6fd6edceefa544ccc079}{Edit\-Include\-Path} ()
+\begin{DoxyCompactList}\small\item\em Slot for editing an include path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_settings_dialog_a9b965fd9f3f3ae9bea041b8bf1ed7c3b}{Add\-Include\-Path} (const Q\-String \&path)
+\begin{DoxyCompactList}\small\item\em Add new include path to the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_settings_dialog_a32b2150e9e1197b5f434240fa7743882}{Populate\-Application\-List} ()
+\begin{DoxyCompactList}\small\item\em Clear all applications from the list and re insert them from m\-Temp\-Applications. \end{DoxyCompactList}\item 
+void \hyperlink{class_settings_dialog_aa639a95d23ecfb472a79a618520b9708}{Save\-Settings} ()
+\begin{DoxyCompactList}\small\item\em Load saved values Loads dialog size and column widths. \end{DoxyCompactList}\item 
+void \hyperlink{class_settings_dialog_a548da4bbbb32120af8fa9aee8d9c485c}{Load\-Settings} ()
+\begin{DoxyCompactList}\small\item\em Save settings Save dialog size and column widths. \end{DoxyCompactList}\item 
+void \hyperlink{class_settings_dialog_a7b01f57123cd9beb90371bcab93ed62e}{Save\-Checkbox\-Value} (Q\-Settings $\ast$settings, Q\-Check\-Box $\ast$box, const Q\-String \&name)
+\begin{DoxyCompactList}\small\item\em Save a single checkboxes value. \end{DoxyCompactList}\item 
+Qt\-::\-Check\-State \hyperlink{class_settings_dialog_a2fff2c846ddfc3641f65222290c53cb2}{Bool\-To\-Check\-State} (bool yes) const 
+\begin{DoxyCompactList}\small\item\em Convert bool to Qt\-::\-Check\-State. \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_dialog_a482df58862f120ecb3790cd5f8743de4}{Check\-State\-To\-Bool} (Qt\-::\-Check\-State state) const 
+\begin{DoxyCompactList}\small\item\em Converts Qt\-::\-Check\-State to bool. \end{DoxyCompactList}\item 
+void \hyperlink{class_settings_dialog_a9ce011769d3926a2afe650b9e47ffbac}{Init\-Includepaths\-List} ()
+\begin{DoxyCompactList}\small\item\em Populate the include paths-\/list. \end{DoxyCompactList}\item 
+void \hyperlink{class_settings_dialog_ad017698e4b28b20ea4e143423b906aef}{Init\-Translations\-List} ()
+\begin{DoxyCompactList}\small\item\em Populate the translations list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_application_list}{Application\-List} $\ast$ \hyperlink{class_settings_dialog_aeac92444994de99cf7eb4fd11e0971aa}{m\-Applications}
+\begin{DoxyCompactList}\small\item\em List of applications user has specified. \end{DoxyCompactList}\item 
+\hyperlink{class_application_list}{Application\-List} $\ast$ \hyperlink{class_settings_dialog_a89e52a00a50a7ebabef52bc9d40be49e}{m\-Temp\-Applications}
+\begin{DoxyCompactList}\small\item\em Temporary list of applications This will be copied to actual list of applications (m\-Applications) when user clicks ok. \end{DoxyCompactList}\item 
+\hyperlink{class_translation_handler}{Translation\-Handler} $\ast$ \hyperlink{class_settings_dialog_a96aa44d2e7a49fb64141356b8945ed3f}{m\-Translator}
+\begin{DoxyCompactList}\small\item\em List of translations. \end{DoxyCompactList}\item 
+Ui\-::\-Settings \hyperlink{class_settings_dialog_af54179fb3fb2ace2ff4c6acc28a0efbf}{m\-U\-I}
+\begin{DoxyCompactList}\small\item\em Dialog from U\-I designer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_settings}{Settings} dialog. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_settings_dialog_a8de59a6fa7e1f7e3ccdec8300271fff1}{\index{Settings\-Dialog@{Settings\-Dialog}!Settings\-Dialog@{Settings\-Dialog}}
+\index{Settings\-Dialog@{Settings\-Dialog}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Settings\-Dialog}]{\setlength{\rightskip}{0pt plus 5cm}Settings\-Dialog\-::\-Settings\-Dialog (
+\begin{DoxyParamCaption}
+\item[{{\bf Application\-List} $\ast$}]{list, }
+\item[{{\bf Translation\-Handler} $\ast$}]{translator, }
+\item[{Q\-Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_settings_dialog_a8de59a6fa7e1f7e3ccdec8300271fff1}
+\hypertarget{class_settings_dialog_ac48f54d4472902be0a3845a69167f068}{\index{Settings\-Dialog@{Settings\-Dialog}!$\sim$\-Settings\-Dialog@{$\sim$\-Settings\-Dialog}}
+\index{$\sim$\-Settings\-Dialog@{$\sim$\-Settings\-Dialog}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{$\sim$\-Settings\-Dialog}]{\setlength{\rightskip}{0pt plus 5cm}Settings\-Dialog\-::$\sim$\-Settings\-Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_settings_dialog_ac48f54d4472902be0a3845a69167f068}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_settings_dialog_a2e3bf4130866e8dc57132a57c8d32227}{\index{Settings\-Dialog@{Settings\-Dialog}!Add\-Application@{Add\-Application}}
+\index{Add\-Application@{Add\-Application}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Add\-Application}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\-Dialog\-::\-Add\-Application (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_settings_dialog_a2e3bf4130866e8dc57132a57c8d32227}
+
+
+Slot for adding a new application to the list. 
+
+\hypertarget{class_settings_dialog_adc2f2cd8c389973e81d13a0f8b6c4b92}{\index{Settings\-Dialog@{Settings\-Dialog}!Add\-Include\-Path@{Add\-Include\-Path}}
+\index{Add\-Include\-Path@{Add\-Include\-Path}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Add\-Include\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\-Dialog\-::\-Add\-Include\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_settings_dialog_adc2f2cd8c389973e81d13a0f8b6c4b92}
+
+
+Slot for adding new include path. 
+
+\hypertarget{class_settings_dialog_a9b965fd9f3f3ae9bea041b8bf1ed7c3b}{\index{Settings\-Dialog@{Settings\-Dialog}!Add\-Include\-Path@{Add\-Include\-Path}}
+\index{Add\-Include\-Path@{Add\-Include\-Path}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Add\-Include\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\-Dialog\-::\-Add\-Include\-Path (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_settings_dialog_a9b965fd9f3f3ae9bea041b8bf1ed7c3b}
+
+
+Add new include path to the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \hyperlink{class_path}{Path} to add. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_settings_dialog_a2fff2c846ddfc3641f65222290c53cb2}{\index{Settings\-Dialog@{Settings\-Dialog}!Bool\-To\-Check\-State@{Bool\-To\-Check\-State}}
+\index{Bool\-To\-Check\-State@{Bool\-To\-Check\-State}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Bool\-To\-Check\-State}]{\setlength{\rightskip}{0pt plus 5cm}Qt\-::\-Check\-State Settings\-Dialog\-::\-Bool\-To\-Check\-State (
+\begin{DoxyParamCaption}
+\item[{bool}]{yes}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_settings_dialog_a2fff2c846ddfc3641f65222290c53cb2}
+
+
+Convert bool to Qt\-::\-Check\-State. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em yes} & value to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value converted to Qt\-::\-Check\-State 
+\end{DoxyReturn}
+\hypertarget{class_settings_dialog_a482df58862f120ecb3790cd5f8743de4}{\index{Settings\-Dialog@{Settings\-Dialog}!Check\-State\-To\-Bool@{Check\-State\-To\-Bool}}
+\index{Check\-State\-To\-Bool@{Check\-State\-To\-Bool}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Check\-State\-To\-Bool}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-Dialog\-::\-Check\-State\-To\-Bool (
+\begin{DoxyParamCaption}
+\item[{Qt\-::\-Check\-State}]{state}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_settings_dialog_a482df58862f120ecb3790cd5f8743de4}
+
+
+Converts Qt\-::\-Check\-State to bool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & Qt\-::\-Check\-State to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+converted value 
+\end{DoxyReturn}
+\hypertarget{class_settings_dialog_ac35bf4ace9640cbd6a9df49e0657ab2f}{\index{Settings\-Dialog@{Settings\-Dialog}!Default\-Application@{Default\-Application}}
+\index{Default\-Application@{Default\-Application}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Default\-Application}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\-Dialog\-::\-Default\-Application (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_settings_dialog_ac35bf4ace9640cbd6a9df49e0657ab2f}
+
+
+Slot for making the selected application as the default (first) 
+
+\hypertarget{class_settings_dialog_a35eba51f66d3c0ea0a80a8d2bcc96434}{\index{Settings\-Dialog@{Settings\-Dialog}!Edit\-Application@{Edit\-Application}}
+\index{Edit\-Application@{Edit\-Application}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Edit\-Application}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\-Dialog\-::\-Edit\-Application (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_settings_dialog_a35eba51f66d3c0ea0a80a8d2bcc96434}
+
+
+Slot for modifying an application in the list. 
+
+\hypertarget{class_settings_dialog_ab285190d065c6fd6edceefa544ccc079}{\index{Settings\-Dialog@{Settings\-Dialog}!Edit\-Include\-Path@{Edit\-Include\-Path}}
+\index{Edit\-Include\-Path@{Edit\-Include\-Path}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Edit\-Include\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\-Dialog\-::\-Edit\-Include\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_settings_dialog_ab285190d065c6fd6edceefa544ccc079}
+
+
+Slot for editing an include path. 
+
+\hypertarget{class_settings_dialog_a9ce011769d3926a2afe650b9e47ffbac}{\index{Settings\-Dialog@{Settings\-Dialog}!Init\-Includepaths\-List@{Init\-Includepaths\-List}}
+\index{Init\-Includepaths\-List@{Init\-Includepaths\-List}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Init\-Includepaths\-List}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\-Dialog\-::\-Init\-Includepaths\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_settings_dialog_a9ce011769d3926a2afe650b9e47ffbac}
+
+
+Populate the include paths-\/list. 
+
+\hypertarget{class_settings_dialog_ad017698e4b28b20ea4e143423b906aef}{\index{Settings\-Dialog@{Settings\-Dialog}!Init\-Translations\-List@{Init\-Translations\-List}}
+\index{Init\-Translations\-List@{Init\-Translations\-List}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Init\-Translations\-List}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\-Dialog\-::\-Init\-Translations\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_settings_dialog_ad017698e4b28b20ea4e143423b906aef}
+
+
+Populate the translations list. 
+
+\hypertarget{class_settings_dialog_a548da4bbbb32120af8fa9aee8d9c485c}{\index{Settings\-Dialog@{Settings\-Dialog}!Load\-Settings@{Load\-Settings}}
+\index{Load\-Settings@{Load\-Settings}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Load\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\-Dialog\-::\-Load\-Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_settings_dialog_a548da4bbbb32120af8fa9aee8d9c485c}
+
+
+Save settings Save dialog size and column widths. 
+
+\hypertarget{class_settings_dialog_ab481df9973de4149948ab48fecdc72e6}{\index{Settings\-Dialog@{Settings\-Dialog}!Ok@{Ok}}
+\index{Ok@{Ok}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Ok}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\-Dialog\-::\-Ok (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_settings_dialog_ab481df9973de4149948ab48fecdc72e6}
+
+
+Slot for clicking O\-K. 
+
+\hypertarget{class_settings_dialog_a32b2150e9e1197b5f434240fa7743882}{\index{Settings\-Dialog@{Settings\-Dialog}!Populate\-Application\-List@{Populate\-Application\-List}}
+\index{Populate\-Application\-List@{Populate\-Application\-List}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Populate\-Application\-List}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\-Dialog\-::\-Populate\-Application\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_settings_dialog_a32b2150e9e1197b5f434240fa7743882}
+
+
+Clear all applications from the list and re insert them from m\-Temp\-Applications. 
+
+\hypertarget{class_settings_dialog_ab24138c8115b9159d8514a43be4ee920}{\index{Settings\-Dialog@{Settings\-Dialog}!Remove\-Application@{Remove\-Application}}
+\index{Remove\-Application@{Remove\-Application}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Remove\-Application}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\-Dialog\-::\-Remove\-Application (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_settings_dialog_ab24138c8115b9159d8514a43be4ee920}
+
+
+Slot for deleting an application from the list. 
+
+\hypertarget{class_settings_dialog_a68389f7679644452940c5ff841bf7f57}{\index{Settings\-Dialog@{Settings\-Dialog}!Remove\-Include\-Path@{Remove\-Include\-Path}}
+\index{Remove\-Include\-Path@{Remove\-Include\-Path}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Remove\-Include\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\-Dialog\-::\-Remove\-Include\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_settings_dialog_a68389f7679644452940c5ff841bf7f57}
+
+
+Slot for removing an include path. 
+
+\hypertarget{class_settings_dialog_ad9d0973b9ea290296acecb41861d3bcf}{\index{Settings\-Dialog@{Settings\-Dialog}!Save\-All\-Errors@{Save\-All\-Errors}}
+\index{Save\-All\-Errors@{Save\-All\-Errors}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Save\-All\-Errors}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-Dialog\-::\-Save\-All\-Errors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_settings_dialog_ad9d0973b9ea290296acecb41861d3bcf}
+
+
+Get checkbox value for m\-Save\-All\-Errors. 
+
+\begin{DoxyReturn}{Returns}
+should all errors be saved to report 
+\end{DoxyReturn}
+\hypertarget{class_settings_dialog_a7b01f57123cd9beb90371bcab93ed62e}{\index{Settings\-Dialog@{Settings\-Dialog}!Save\-Checkbox\-Value@{Save\-Checkbox\-Value}}
+\index{Save\-Checkbox\-Value@{Save\-Checkbox\-Value}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Save\-Checkbox\-Value}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\-Dialog\-::\-Save\-Checkbox\-Value (
+\begin{DoxyParamCaption}
+\item[{Q\-Settings $\ast$}]{settings, }
+\item[{Q\-Check\-Box $\ast$}]{box, }
+\item[{const Q\-String \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_settings_dialog_a7b01f57123cd9beb90371bcab93ed62e}
+
+
+Save a single checkboxes value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & Pointer to \hyperlink{class_settings}{Settings}. \\
+\hline
+{\em box} & checkbox to save \\
+\hline
+{\em name} & name for Q\-Settings to store the value \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_settings_dialog_acc251fd3d12774ce3357851e2cd3cef9}{\index{Settings\-Dialog@{Settings\-Dialog}!Save\-Full\-Path@{Save\-Full\-Path}}
+\index{Save\-Full\-Path@{Save\-Full\-Path}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Save\-Full\-Path}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-Dialog\-::\-Save\-Full\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_settings_dialog_acc251fd3d12774ce3357851e2cd3cef9}
+
+
+Get checkbox value for m\-Save\-Full\-Path. 
+
+\begin{DoxyReturn}{Returns}
+should full path of files be saved when creating a report 
+\end{DoxyReturn}
+\hypertarget{class_settings_dialog_aa639a95d23ecfb472a79a618520b9708}{\index{Settings\-Dialog@{Settings\-Dialog}!Save\-Settings@{Save\-Settings}}
+\index{Save\-Settings@{Save\-Settings}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Save\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\-Dialog\-::\-Save\-Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_settings_dialog_aa639a95d23ecfb472a79a618520b9708}
+
+
+Load saved values Loads dialog size and column widths. 
+
+\hypertarget{class_settings_dialog_a7bcb8c2fd3aace4e03d5a9449dbf03d8}{\index{Settings\-Dialog@{Settings\-Dialog}!Save\-Setting\-Values@{Save\-Setting\-Values}}
+\index{Save\-Setting\-Values@{Save\-Setting\-Values}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Save\-Setting\-Values}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\-Dialog\-::\-Save\-Setting\-Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_settings_dialog_a7bcb8c2fd3aace4e03d5a9449dbf03d8}
+
+
+Save all values to Q\-Settings. 
+
+\hypertarget{class_settings_dialog_a9320d2ea2aba1da144c36cc02fd7a68a}{\index{Settings\-Dialog@{Settings\-Dialog}!Show\-Full\-Path@{Show\-Full\-Path}}
+\index{Show\-Full\-Path@{Show\-Full\-Path}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Show\-Full\-Path}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-Dialog\-::\-Show\-Full\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_settings_dialog_a9320d2ea2aba1da144c36cc02fd7a68a}
+
+
+Get checkbox value for m\-Show\-Full\-Path. 
+
+\begin{DoxyReturn}{Returns}
+should full path of errors be shown in the tree 
+\end{DoxyReturn}
+\hypertarget{class_settings_dialog_a33a169deac9871227f0534c4c0a811d4}{\index{Settings\-Dialog@{Settings\-Dialog}!Show\-No\-Errors\-Message@{Show\-No\-Errors\-Message}}
+\index{Show\-No\-Errors\-Message@{Show\-No\-Errors\-Message}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{Show\-No\-Errors\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-Dialog\-::\-Show\-No\-Errors\-Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_settings_dialog_a33a169deac9871227f0534c4c0a811d4}
+
+
+Get checkbox value for m\-No\-Errors\-Message. 
+
+\begin{DoxyReturn}{Returns}
+Should \char`\"{}no errors message\char`\"{} be hidden 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_settings_dialog_aeac92444994de99cf7eb4fd11e0971aa}{\index{Settings\-Dialog@{Settings\-Dialog}!m\-Applications@{m\-Applications}}
+\index{m\-Applications@{m\-Applications}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{m\-Applications}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Application\-List}$\ast$ Settings\-Dialog\-::m\-Applications\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_settings_dialog_aeac92444994de99cf7eb4fd11e0971aa}
+
+
+List of applications user has specified. 
+
+\hypertarget{class_settings_dialog_a89e52a00a50a7ebabef52bc9d40be49e}{\index{Settings\-Dialog@{Settings\-Dialog}!m\-Temp\-Applications@{m\-Temp\-Applications}}
+\index{m\-Temp\-Applications@{m\-Temp\-Applications}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{m\-Temp\-Applications}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Application\-List}$\ast$ Settings\-Dialog\-::m\-Temp\-Applications\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_settings_dialog_a89e52a00a50a7ebabef52bc9d40be49e}
+
+
+Temporary list of applications This will be copied to actual list of applications (m\-Applications) when user clicks ok. 
+
+\hypertarget{class_settings_dialog_a96aa44d2e7a49fb64141356b8945ed3f}{\index{Settings\-Dialog@{Settings\-Dialog}!m\-Translator@{m\-Translator}}
+\index{m\-Translator@{m\-Translator}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{m\-Translator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Translation\-Handler}$\ast$ Settings\-Dialog\-::m\-Translator\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_settings_dialog_a96aa44d2e7a49fb64141356b8945ed3f}
+
+
+List of translations. 
+
+\hypertarget{class_settings_dialog_af54179fb3fb2ace2ff4c6acc28a0efbf}{\index{Settings\-Dialog@{Settings\-Dialog}!m\-U\-I@{m\-U\-I}}
+\index{m\-U\-I@{m\-U\-I}!SettingsDialog@{Settings\-Dialog}}
+\subsubsection[{m\-U\-I}]{\setlength{\rightskip}{0pt plus 5cm}Ui\-::\-Settings Settings\-Dialog\-::m\-U\-I\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_settings_dialog_af54179fb3fb2ace2ff4c6acc28a0efbf}
+
+
+Dialog from U\-I designer. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{settingsdialog_8h}{settingsdialog.\-h}\item 
+gui/\hyperlink{settingsdialog_8cpp}{settingsdialog.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,236 @@
+\hypertarget{class_check_uninit_var}{\section{Check\-Uninit\-Var Class Reference}
+\label{class_check_uninit_var}\index{Check\-Uninit\-Var@{Check\-Uninit\-Var}}
+}
+
+
+Checking for uninitialized variables.  
+
+
+
+
+{\ttfamily \#include $<$checkuninitvar.\-h$>$}
+
+Inheritance diagram for Check\-Uninit\-Var\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_check_uninit_var}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_check_uninit_var_a5793c0925110603fc547570147c748a0}{Check\-Uninit\-Var} ()
+\begin{DoxyCompactList}\small\item\em This constructor is used when registering the \hyperlink{class_check_uninit_var}{Check\-Uninit\-Var}. \end{DoxyCompactList}\item 
+\hyperlink{class_check_uninit_var_ab4a2745df772d7c1df61b8f714250b94}{Check\-Uninit\-Var} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\begin{DoxyCompactList}\small\item\em This constructor is used when running checks. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_uninit_var_afc2d2c146e3c2048acb0fba3427e4dc1}{run\-Checks} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\begin{DoxyCompactList}\small\item\em Run checks against the normal token list. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_uninit_var_a4497e740ca408945fb0ef3f711cd5f43}{run\-Simplified\-Checks} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\begin{DoxyCompactList}\small\item\em Run checks against the simplified token list. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_uninit_var_a2ecdad32c82088a40e73b19bec5a7554}{check} ()
+\item 
+void \hyperlink{class_check_uninit_var_a7513784685282a7aeaacb3f4f89d61e4}{check\-Scope} (const \hyperlink{class_scope}{Scope} $\ast$scope)
+\item 
+bool \hyperlink{class_check_uninit_var_a6072d9110783ea28a440c40cc6c7215d}{check\-Scope\-For\-Variable} (const \hyperlink{class_token}{Token} $\ast$tok, const \hyperlink{class_variable}{Variable} \&var, bool $\ast$const possible\-Init)
+\item 
+bool \hyperlink{class_check_uninit_var_a5e57cafd2fbafbcddccf7029fedf522a}{check\-If\-For\-While\-Head} (const \hyperlink{class_token}{Token} $\ast$startparanthesis, const \hyperlink{class_variable}{Variable} \&var, bool suppress\-Errors, bool isuninit)
+\item 
+bool \hyperlink{class_check_uninit_var_a52bc7371eaf9efe9d185a346fed4215f}{is\-Variable\-Usage} (const \hyperlink{class_token}{Token} $\ast$vartok, bool ispointer) const 
+\item 
+void \hyperlink{class_check_uninit_var_a57e30f23713e232a5439af4c5935c50d}{analyse} (const \hyperlink{class_token}{Token} $\ast$tokens, std\-::set$<$ std\-::string $>$ \&func) const 
+\begin{DoxyCompactList}\small\item\em Uninitialized variables\-: analyse functions to see how they work with uninitialized variables. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_uninit_var_af8b793f3e2fec75185e7b5be9ada3a8b}{save\-Analysis\-Data} (const std\-::set$<$ std\-::string $>$ \&data) const 
+\item 
+void \hyperlink{class_check_uninit_var_a4de059d6df2efe1ac0811aa8c3541a6e}{execution\-Paths} ()
+\begin{DoxyCompactList}\small\item\em new type of check\-: check execution paths \end{DoxyCompactList}\item 
+void \hyperlink{class_check_uninit_var_add91262fdf6d9b3a66fa690d1f40d24c}{uninitstring\-Error} (const \hyperlink{class_token}{Token} $\ast$tok, const std\-::string \&varname, bool strncpy\-\_\-)
+\item 
+void \hyperlink{class_check_uninit_var_a4ffde982cfb9038e00df1c56a75d12f7}{uninitdata\-Error} (const \hyperlink{class_token}{Token} $\ast$tok, const std\-::string \&varname)
+\item 
+void \hyperlink{class_check_uninit_var_a3f08eeb8c4bfa55d946d1f5c5b4dc124}{uninitvar\-Error} (const \hyperlink{class_token}{Token} $\ast$tok, const std\-::string \&varname)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Checking for uninitialized variables. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_check_uninit_var_a5793c0925110603fc547570147c748a0}{\index{Check\-Uninit\-Var@{Check\-Uninit\-Var}!Check\-Uninit\-Var@{Check\-Uninit\-Var}}
+\index{Check\-Uninit\-Var@{Check\-Uninit\-Var}!CheckUninitVar@{Check\-Uninit\-Var}}
+\subsubsection[{Check\-Uninit\-Var}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Uninit\-Var\-::\-Check\-Uninit\-Var (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_uninit_var_a5793c0925110603fc547570147c748a0}
+
+
+This constructor is used when registering the \hyperlink{class_check_uninit_var}{Check\-Uninit\-Var}. 
+
+\hypertarget{class_check_uninit_var_ab4a2745df772d7c1df61b8f714250b94}{\index{Check\-Uninit\-Var@{Check\-Uninit\-Var}!Check\-Uninit\-Var@{Check\-Uninit\-Var}}
+\index{Check\-Uninit\-Var@{Check\-Uninit\-Var}!CheckUninitVar@{Check\-Uninit\-Var}}
+\subsubsection[{Check\-Uninit\-Var}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Uninit\-Var\-::\-Check\-Uninit\-Var (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_uninit_var_ab4a2745df772d7c1df61b8f714250b94}
+
+
+This constructor is used when running checks. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_check_uninit_var_a57e30f23713e232a5439af4c5935c50d}{\index{Check\-Uninit\-Var@{Check\-Uninit\-Var}!analyse@{analyse}}
+\index{analyse@{analyse}!CheckUninitVar@{Check\-Uninit\-Var}}
+\subsubsection[{analyse}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Uninit\-Var\-::analyse (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tokens, }
+\item[{std\-::set$<$ std\-::string $>$ \&}]{func}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_check_uninit_var_a57e30f23713e232a5439af4c5935c50d}
+
+
+Uninitialized variables\-: analyse functions to see how they work with uninitialized variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tokens} & \mbox{[}in\mbox{]} the token list \\
+\hline
+{\em func} & \mbox{[}out\mbox{]} names of functions that don't handle uninitialized variables well. the function names are added to the set. No clearing is made. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_check_a484897552dd5f9db7ce94fffa413baa4}{Check}.
+
+\hypertarget{class_check_uninit_var_a2ecdad32c82088a40e73b19bec5a7554}{\index{Check\-Uninit\-Var@{Check\-Uninit\-Var}!check@{check}}
+\index{check@{check}!CheckUninitVar@{Check\-Uninit\-Var}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Uninit\-Var\-::check (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_uninit_var_a2ecdad32c82088a40e73b19bec5a7554}
+\hyperlink{class_check}{Check} for uninitialized variables \hypertarget{class_check_uninit_var_a5e57cafd2fbafbcddccf7029fedf522a}{\index{Check\-Uninit\-Var@{Check\-Uninit\-Var}!check\-If\-For\-While\-Head@{check\-If\-For\-While\-Head}}
+\index{check\-If\-For\-While\-Head@{check\-If\-For\-While\-Head}!CheckUninitVar@{Check\-Uninit\-Var}}
+\subsubsection[{check\-If\-For\-While\-Head}]{\setlength{\rightskip}{0pt plus 5cm}bool Check\-Uninit\-Var\-::check\-If\-For\-While\-Head (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{startparanthesis, }
+\item[{const {\bf Variable} \&}]{var, }
+\item[{bool}]{suppress\-Errors, }
+\item[{bool}]{isuninit}
+\end{DoxyParamCaption}
+)}}\label{class_check_uninit_var_a5e57cafd2fbafbcddccf7029fedf522a}
+\hypertarget{class_check_uninit_var_a7513784685282a7aeaacb3f4f89d61e4}{\index{Check\-Uninit\-Var@{Check\-Uninit\-Var}!check\-Scope@{check\-Scope}}
+\index{check\-Scope@{check\-Scope}!CheckUninitVar@{Check\-Uninit\-Var}}
+\subsubsection[{check\-Scope}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Uninit\-Var\-::check\-Scope (
+\begin{DoxyParamCaption}
+\item[{const {\bf Scope} $\ast$}]{scope}
+\end{DoxyParamCaption}
+)}}\label{class_check_uninit_var_a7513784685282a7aeaacb3f4f89d61e4}
+\hypertarget{class_check_uninit_var_a6072d9110783ea28a440c40cc6c7215d}{\index{Check\-Uninit\-Var@{Check\-Uninit\-Var}!check\-Scope\-For\-Variable@{check\-Scope\-For\-Variable}}
+\index{check\-Scope\-For\-Variable@{check\-Scope\-For\-Variable}!CheckUninitVar@{Check\-Uninit\-Var}}
+\subsubsection[{check\-Scope\-For\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}bool Check\-Uninit\-Var\-::check\-Scope\-For\-Variable (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const {\bf Variable} \&}]{var, }
+\item[{bool $\ast$const}]{possible\-Init}
+\end{DoxyParamCaption}
+)}}\label{class_check_uninit_var_a6072d9110783ea28a440c40cc6c7215d}
+\hypertarget{class_check_uninit_var_a4de059d6df2efe1ac0811aa8c3541a6e}{\index{Check\-Uninit\-Var@{Check\-Uninit\-Var}!execution\-Paths@{execution\-Paths}}
+\index{execution\-Paths@{execution\-Paths}!CheckUninitVar@{Check\-Uninit\-Var}}
+\subsubsection[{execution\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Uninit\-Var\-::execution\-Paths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_uninit_var_a4de059d6df2efe1ac0811aa8c3541a6e}
+
+
+new type of check\-: check execution paths 
+
+\hypertarget{class_check_uninit_var_a52bc7371eaf9efe9d185a346fed4215f}{\index{Check\-Uninit\-Var@{Check\-Uninit\-Var}!is\-Variable\-Usage@{is\-Variable\-Usage}}
+\index{is\-Variable\-Usage@{is\-Variable\-Usage}!CheckUninitVar@{Check\-Uninit\-Var}}
+\subsubsection[{is\-Variable\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}bool Check\-Uninit\-Var\-::is\-Variable\-Usage (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{vartok, }
+\item[{bool}]{ispointer}
+\end{DoxyParamCaption}
+) const}}\label{class_check_uninit_var_a52bc7371eaf9efe9d185a346fed4215f}
+\hypertarget{class_check_uninit_var_afc2d2c146e3c2048acb0fba3427e4dc1}{\index{Check\-Uninit\-Var@{Check\-Uninit\-Var}!run\-Checks@{run\-Checks}}
+\index{run\-Checks@{run\-Checks}!CheckUninitVar@{Check\-Uninit\-Var}}
+\subsubsection[{run\-Checks}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Uninit\-Var\-::run\-Checks (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_uninit_var_afc2d2c146e3c2048acb0fba3427e4dc1}
+
+
+Run checks against the normal token list. 
+
+
+
+Reimplemented from \hyperlink{class_check_a939af1c75d133393021036e73ca57cc4}{Check}.
+
+\hypertarget{class_check_uninit_var_a4497e740ca408945fb0ef3f711cd5f43}{\index{Check\-Uninit\-Var@{Check\-Uninit\-Var}!run\-Simplified\-Checks@{run\-Simplified\-Checks}}
+\index{run\-Simplified\-Checks@{run\-Simplified\-Checks}!CheckUninitVar@{Check\-Uninit\-Var}}
+\subsubsection[{run\-Simplified\-Checks}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Uninit\-Var\-::run\-Simplified\-Checks (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_uninit_var_a4497e740ca408945fb0ef3f711cd5f43}
+
+
+Run checks against the simplified token list. 
+
+
+
+Implements \hyperlink{class_check_a112445eed1625599b93c69aab4701e5e}{Check}.
+
+\hypertarget{class_check_uninit_var_af8b793f3e2fec75185e7b5be9ada3a8b}{\index{Check\-Uninit\-Var@{Check\-Uninit\-Var}!save\-Analysis\-Data@{save\-Analysis\-Data}}
+\index{save\-Analysis\-Data@{save\-Analysis\-Data}!CheckUninitVar@{Check\-Uninit\-Var}}
+\subsubsection[{save\-Analysis\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Uninit\-Var\-::save\-Analysis\-Data (
+\begin{DoxyParamCaption}
+\item[{const std\-::set$<$ std\-::string $>$ \&}]{data}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_check_uninit_var_af8b793f3e2fec75185e7b5be9ada3a8b}
+Save analysis results 
+
+Reimplemented from \hyperlink{class_check_a9cd93e99992b89620ce2eadb54dd09f2}{Check}.
+
+\hypertarget{class_check_uninit_var_a4ffde982cfb9038e00df1c56a75d12f7}{\index{Check\-Uninit\-Var@{Check\-Uninit\-Var}!uninitdata\-Error@{uninitdata\-Error}}
+\index{uninitdata\-Error@{uninitdata\-Error}!CheckUninitVar@{Check\-Uninit\-Var}}
+\subsubsection[{uninitdata\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Uninit\-Var\-::uninitdata\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const std\-::string \&}]{varname}
+\end{DoxyParamCaption}
+)}}\label{class_check_uninit_var_a4ffde982cfb9038e00df1c56a75d12f7}
+\hypertarget{class_check_uninit_var_add91262fdf6d9b3a66fa690d1f40d24c}{\index{Check\-Uninit\-Var@{Check\-Uninit\-Var}!uninitstring\-Error@{uninitstring\-Error}}
+\index{uninitstring\-Error@{uninitstring\-Error}!CheckUninitVar@{Check\-Uninit\-Var}}
+\subsubsection[{uninitstring\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Uninit\-Var\-::uninitstring\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const std\-::string \&}]{varname, }
+\item[{bool}]{strncpy\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_check_uninit_var_add91262fdf6d9b3a66fa690d1f40d24c}
+\hypertarget{class_check_uninit_var_a3f08eeb8c4bfa55d946d1f5c5b4dc124}{\index{Check\-Uninit\-Var@{Check\-Uninit\-Var}!uninitvar\-Error@{uninitvar\-Error}}
+\index{uninitvar\-Error@{uninitvar\-Error}!CheckUninitVar@{Check\-Uninit\-Var}}
+\subsubsection[{uninitvar\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Uninit\-Var\-::uninitvar\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const std\-::string \&}]{varname}
+\end{DoxyParamCaption}
+)}}\label{class_check_uninit_var_a3f08eeb8c4bfa55d946d1f5c5b4dc124}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{checkuninitvar_8h}{checkuninitvar.\-h}\item 
+lib/\hyperlink{checkuninitvar_8cpp}{checkuninitvar.\-cpp}\end{DoxyCompactItemize}

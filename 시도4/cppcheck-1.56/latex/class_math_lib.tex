@@ -1,0 +1,293 @@
+\hypertarget{class_math_lib}{\section{Math\-Lib Class Reference}
+\label{class_math_lib}\index{Math\-Lib@{Math\-Lib}}
+}
+
+
+simple math functions that uses operands stored in std\-::string. useful when performing math on tokens.  
+
+
+
+
+{\ttfamily \#include $<$mathlib.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef long long \hyperlink{class_math_lib_aea370b3be964c5704b6244d757fcac99}{bigint}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_math_lib_aea370b3be964c5704b6244d757fcac99}{bigint} \hyperlink{class_math_lib_a9262074fa86e11ca5be7b95c0dec115a}{to\-Long\-Number} (const std\-::string \&str)
+\item 
+static double \hyperlink{class_math_lib_ac16cb112f944e792301b0e0f469b7aed}{to\-Double\-Number} (const std\-::string \&str)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static std\-::string \hyperlink{class_math_lib_af75d9066b83ccc19dfe49ab24fde205d}{to\-String} (const T \&d)
+\item 
+static bool \hyperlink{class_math_lib_ab723cea60e26a88a907593489716092d}{is\-Int} (const std\-::string \&str)
+\item 
+static bool \hyperlink{class_math_lib_a905dc4e23cb3699c57e6a955d91cc601}{is\-Float} (const std\-::string \&str)
+\item 
+static bool \hyperlink{class_math_lib_aa3ec1e567593dd04565c333f93f2af37}{is\-Negative} (const std\-::string \&str)
+\item 
+static bool \hyperlink{class_math_lib_acf933c4bf15ed7b4edcd69a62b91acf9}{is\-Hex} (const std\-::string \&str)
+\item 
+static bool \hyperlink{class_math_lib_a435b27de944ed1382ac812317e8775fb}{is\-Oct} (const std\-::string \&str)
+\item 
+static std\-::string \hyperlink{class_math_lib_a9e98cd7250bf39c135f1c077c15932fe}{add} (const std\-::string \&first, const std\-::string \&second)
+\item 
+static std\-::string \hyperlink{class_math_lib_a7a05912a9967367eab3dc08c22a1cf68}{subtract} (const std\-::string \&first, const std\-::string \&second)
+\item 
+static std\-::string \hyperlink{class_math_lib_ab9ab2c1e215fc1271713b0ccd7be05d3}{multiply} (const std\-::string \&first, const std\-::string \&second)
+\item 
+static std\-::string \hyperlink{class_math_lib_a2f951ffa2929db217c4debd529ec9357}{divide} (const std\-::string \&first, const std\-::string \&second)
+\item 
+static std\-::string \hyperlink{class_math_lib_a96054e8ef9c7b8f945054c2b18d8a40e}{mod} (const std\-::string \&first, const std\-::string \&second)
+\item 
+static std\-::string \hyperlink{class_math_lib_a80a5c6b58403d1f9212681eb6dbcbf54}{calculate} (const std\-::string \&first, const std\-::string \&second, char action)
+\item 
+static std\-::string \hyperlink{class_math_lib_a56d18be030e3890125af0f2745ff315a}{sin} (const std\-::string \&tok)
+\item 
+static std\-::string \hyperlink{class_math_lib_a8588739566b8edcb5d4f32e6722b6301}{cos} (const std\-::string \&tok)
+\item 
+static std\-::string \hyperlink{class_math_lib_aeed9f6330e3fa584bfd015472b51c72e}{tan} (const std\-::string \&tok)
+\item 
+static std\-::string \hyperlink{class_math_lib_aa3afbc6e3f1b363833f1e6fc07c68134}{abs} (const std\-::string \&tok)
+\item 
+static bool \hyperlink{class_math_lib_a54b7d8eb2cf2ae3271159a6a425bfb24}{is\-Equal} (const std\-::string \&first, const std\-::string \&second)
+\item 
+static bool \hyperlink{class_math_lib_a7439a0f485a2d6a9891b972ee6bff619}{is\-Not\-Equal} (const std\-::string \&first, const std\-::string \&second)
+\item 
+static bool \hyperlink{class_math_lib_a8ec17a671cf50fb7a1ab50ef72b570fd}{is\-Greater} (const std\-::string \&first, const std\-::string \&second)
+\item 
+static bool \hyperlink{class_math_lib_a628dcccf3f569468a31ef06f91b2affb}{is\-Greater\-Equal} (const std\-::string \&first, const std\-::string \&second)
+\item 
+static bool \hyperlink{class_math_lib_ab7f521c9fffe0becdc2839fb6af338db}{is\-Less} (const std\-::string \&first, const std\-::string \&second)
+\item 
+static bool \hyperlink{class_math_lib_a2d198d0a829da590b6fceb0e6c16df46}{is\-Less\-Equal} (const std\-::string \&first, const std\-::string \&second)
+\item 
+static bool \hyperlink{class_math_lib_a51944685df92dd1e3b77ec2e55e71cb3}{is\-Null\-Value} (const std\-::string \&tok)
+\item 
+static bool \hyperlink{class_math_lib_a729f86ba03f2ecf5ed8ea8746dca8387}{is\-Octal\-Digit} (char c)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+simple math functions that uses operands stored in std\-::string. useful when performing math on tokens. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_math_lib_aea370b3be964c5704b6244d757fcac99}{\index{Math\-Lib@{Math\-Lib}!bigint@{bigint}}
+\index{bigint@{bigint}!MathLib@{Math\-Lib}}
+\subsubsection[{bigint}]{\setlength{\rightskip}{0pt plus 5cm}typedef long long {\bf Math\-Lib\-::bigint}}}\label{class_math_lib_aea370b3be964c5704b6244d757fcac99}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_math_lib_aa3afbc6e3f1b363833f1e6fc07c68134}{\index{Math\-Lib@{Math\-Lib}!abs@{abs}}
+\index{abs@{abs}!MathLib@{Math\-Lib}}
+\subsubsection[{abs}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Math\-Lib\-::abs (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{tok}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_aa3afbc6e3f1b363833f1e6fc07c68134}
+\hypertarget{class_math_lib_a9e98cd7250bf39c135f1c077c15932fe}{\index{Math\-Lib@{Math\-Lib}!add@{add}}
+\index{add@{add}!MathLib@{Math\-Lib}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Math\-Lib\-::add (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{first, }
+\item[{const std\-::string \&}]{second}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_a9e98cd7250bf39c135f1c077c15932fe}
+\hypertarget{class_math_lib_a80a5c6b58403d1f9212681eb6dbcbf54}{\index{Math\-Lib@{Math\-Lib}!calculate@{calculate}}
+\index{calculate@{calculate}!MathLib@{Math\-Lib}}
+\subsubsection[{calculate}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Math\-Lib\-::calculate (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{first, }
+\item[{const std\-::string \&}]{second, }
+\item[{char}]{action}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_a80a5c6b58403d1f9212681eb6dbcbf54}
+\hypertarget{class_math_lib_a8588739566b8edcb5d4f32e6722b6301}{\index{Math\-Lib@{Math\-Lib}!cos@{cos}}
+\index{cos@{cos}!MathLib@{Math\-Lib}}
+\subsubsection[{cos}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Math\-Lib\-::cos (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{tok}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_a8588739566b8edcb5d4f32e6722b6301}
+\hypertarget{class_math_lib_a2f951ffa2929db217c4debd529ec9357}{\index{Math\-Lib@{Math\-Lib}!divide@{divide}}
+\index{divide@{divide}!MathLib@{Math\-Lib}}
+\subsubsection[{divide}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Math\-Lib\-::divide (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{first, }
+\item[{const std\-::string \&}]{second}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_a2f951ffa2929db217c4debd529ec9357}
+\hypertarget{class_math_lib_a54b7d8eb2cf2ae3271159a6a425bfb24}{\index{Math\-Lib@{Math\-Lib}!is\-Equal@{is\-Equal}}
+\index{is\-Equal@{is\-Equal}!MathLib@{Math\-Lib}}
+\subsubsection[{is\-Equal}]{\setlength{\rightskip}{0pt plus 5cm}bool Math\-Lib\-::is\-Equal (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{first, }
+\item[{const std\-::string \&}]{second}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_a54b7d8eb2cf2ae3271159a6a425bfb24}
+\hypertarget{class_math_lib_a905dc4e23cb3699c57e6a955d91cc601}{\index{Math\-Lib@{Math\-Lib}!is\-Float@{is\-Float}}
+\index{is\-Float@{is\-Float}!MathLib@{Math\-Lib}}
+\subsubsection[{is\-Float}]{\setlength{\rightskip}{0pt plus 5cm}bool Math\-Lib\-::is\-Float (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_a905dc4e23cb3699c57e6a955d91cc601}
+\hypertarget{class_math_lib_a8ec17a671cf50fb7a1ab50ef72b570fd}{\index{Math\-Lib@{Math\-Lib}!is\-Greater@{is\-Greater}}
+\index{is\-Greater@{is\-Greater}!MathLib@{Math\-Lib}}
+\subsubsection[{is\-Greater}]{\setlength{\rightskip}{0pt plus 5cm}bool Math\-Lib\-::is\-Greater (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{first, }
+\item[{const std\-::string \&}]{second}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_a8ec17a671cf50fb7a1ab50ef72b570fd}
+\hypertarget{class_math_lib_a628dcccf3f569468a31ef06f91b2affb}{\index{Math\-Lib@{Math\-Lib}!is\-Greater\-Equal@{is\-Greater\-Equal}}
+\index{is\-Greater\-Equal@{is\-Greater\-Equal}!MathLib@{Math\-Lib}}
+\subsubsection[{is\-Greater\-Equal}]{\setlength{\rightskip}{0pt plus 5cm}bool Math\-Lib\-::is\-Greater\-Equal (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{first, }
+\item[{const std\-::string \&}]{second}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_a628dcccf3f569468a31ef06f91b2affb}
+\hypertarget{class_math_lib_acf933c4bf15ed7b4edcd69a62b91acf9}{\index{Math\-Lib@{Math\-Lib}!is\-Hex@{is\-Hex}}
+\index{is\-Hex@{is\-Hex}!MathLib@{Math\-Lib}}
+\subsubsection[{is\-Hex}]{\setlength{\rightskip}{0pt plus 5cm}bool Math\-Lib\-::is\-Hex (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_acf933c4bf15ed7b4edcd69a62b91acf9}
+\hypertarget{class_math_lib_ab723cea60e26a88a907593489716092d}{\index{Math\-Lib@{Math\-Lib}!is\-Int@{is\-Int}}
+\index{is\-Int@{is\-Int}!MathLib@{Math\-Lib}}
+\subsubsection[{is\-Int}]{\setlength{\rightskip}{0pt plus 5cm}bool Math\-Lib\-::is\-Int (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_ab723cea60e26a88a907593489716092d}
+\hypertarget{class_math_lib_ab7f521c9fffe0becdc2839fb6af338db}{\index{Math\-Lib@{Math\-Lib}!is\-Less@{is\-Less}}
+\index{is\-Less@{is\-Less}!MathLib@{Math\-Lib}}
+\subsubsection[{is\-Less}]{\setlength{\rightskip}{0pt plus 5cm}bool Math\-Lib\-::is\-Less (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{first, }
+\item[{const std\-::string \&}]{second}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_ab7f521c9fffe0becdc2839fb6af338db}
+\hypertarget{class_math_lib_a2d198d0a829da590b6fceb0e6c16df46}{\index{Math\-Lib@{Math\-Lib}!is\-Less\-Equal@{is\-Less\-Equal}}
+\index{is\-Less\-Equal@{is\-Less\-Equal}!MathLib@{Math\-Lib}}
+\subsubsection[{is\-Less\-Equal}]{\setlength{\rightskip}{0pt plus 5cm}bool Math\-Lib\-::is\-Less\-Equal (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{first, }
+\item[{const std\-::string \&}]{second}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_a2d198d0a829da590b6fceb0e6c16df46}
+\hypertarget{class_math_lib_aa3ec1e567593dd04565c333f93f2af37}{\index{Math\-Lib@{Math\-Lib}!is\-Negative@{is\-Negative}}
+\index{is\-Negative@{is\-Negative}!MathLib@{Math\-Lib}}
+\subsubsection[{is\-Negative}]{\setlength{\rightskip}{0pt plus 5cm}bool Math\-Lib\-::is\-Negative (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_aa3ec1e567593dd04565c333f93f2af37}
+\hypertarget{class_math_lib_a7439a0f485a2d6a9891b972ee6bff619}{\index{Math\-Lib@{Math\-Lib}!is\-Not\-Equal@{is\-Not\-Equal}}
+\index{is\-Not\-Equal@{is\-Not\-Equal}!MathLib@{Math\-Lib}}
+\subsubsection[{is\-Not\-Equal}]{\setlength{\rightskip}{0pt plus 5cm}bool Math\-Lib\-::is\-Not\-Equal (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{first, }
+\item[{const std\-::string \&}]{second}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_a7439a0f485a2d6a9891b972ee6bff619}
+\hypertarget{class_math_lib_a51944685df92dd1e3b77ec2e55e71cb3}{\index{Math\-Lib@{Math\-Lib}!is\-Null\-Value@{is\-Null\-Value}}
+\index{is\-Null\-Value@{is\-Null\-Value}!MathLib@{Math\-Lib}}
+\subsubsection[{is\-Null\-Value}]{\setlength{\rightskip}{0pt plus 5cm}bool Math\-Lib\-::is\-Null\-Value (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{tok}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_a51944685df92dd1e3b77ec2e55e71cb3}
+\hypertarget{class_math_lib_a435b27de944ed1382ac812317e8775fb}{\index{Math\-Lib@{Math\-Lib}!is\-Oct@{is\-Oct}}
+\index{is\-Oct@{is\-Oct}!MathLib@{Math\-Lib}}
+\subsubsection[{is\-Oct}]{\setlength{\rightskip}{0pt plus 5cm}bool Math\-Lib\-::is\-Oct (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_a435b27de944ed1382ac812317e8775fb}
+\hypertarget{class_math_lib_a729f86ba03f2ecf5ed8ea8746dca8387}{\index{Math\-Lib@{Math\-Lib}!is\-Octal\-Digit@{is\-Octal\-Digit}}
+\index{is\-Octal\-Digit@{is\-Octal\-Digit}!MathLib@{Math\-Lib}}
+\subsubsection[{is\-Octal\-Digit}]{\setlength{\rightskip}{0pt plus 5cm}bool Math\-Lib\-::is\-Octal\-Digit (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_a729f86ba03f2ecf5ed8ea8746dca8387}
+Return true if given character is 0,1,2,3,4,5,6 or 7. 
+\begin{DoxyParams}{Parameters}
+{\em c} & The character to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if given character is octal digit. 
+\end{DoxyReturn}
+\hypertarget{class_math_lib_a96054e8ef9c7b8f945054c2b18d8a40e}{\index{Math\-Lib@{Math\-Lib}!mod@{mod}}
+\index{mod@{mod}!MathLib@{Math\-Lib}}
+\subsubsection[{mod}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Math\-Lib\-::mod (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{first, }
+\item[{const std\-::string \&}]{second}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_a96054e8ef9c7b8f945054c2b18d8a40e}
+\hypertarget{class_math_lib_ab9ab2c1e215fc1271713b0ccd7be05d3}{\index{Math\-Lib@{Math\-Lib}!multiply@{multiply}}
+\index{multiply@{multiply}!MathLib@{Math\-Lib}}
+\subsubsection[{multiply}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Math\-Lib\-::multiply (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{first, }
+\item[{const std\-::string \&}]{second}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_ab9ab2c1e215fc1271713b0ccd7be05d3}
+\hypertarget{class_math_lib_a56d18be030e3890125af0f2745ff315a}{\index{Math\-Lib@{Math\-Lib}!sin@{sin}}
+\index{sin@{sin}!MathLib@{Math\-Lib}}
+\subsubsection[{sin}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Math\-Lib\-::sin (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{tok}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_a56d18be030e3890125af0f2745ff315a}
+\hypertarget{class_math_lib_a7a05912a9967367eab3dc08c22a1cf68}{\index{Math\-Lib@{Math\-Lib}!subtract@{subtract}}
+\index{subtract@{subtract}!MathLib@{Math\-Lib}}
+\subsubsection[{subtract}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Math\-Lib\-::subtract (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{first, }
+\item[{const std\-::string \&}]{second}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_a7a05912a9967367eab3dc08c22a1cf68}
+\hypertarget{class_math_lib_aeed9f6330e3fa584bfd015472b51c72e}{\index{Math\-Lib@{Math\-Lib}!tan@{tan}}
+\index{tan@{tan}!MathLib@{Math\-Lib}}
+\subsubsection[{tan}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Math\-Lib\-::tan (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{tok}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_aeed9f6330e3fa584bfd015472b51c72e}
+\hypertarget{class_math_lib_ac16cb112f944e792301b0e0f469b7aed}{\index{Math\-Lib@{Math\-Lib}!to\-Double\-Number@{to\-Double\-Number}}
+\index{to\-Double\-Number@{to\-Double\-Number}!MathLib@{Math\-Lib}}
+\subsubsection[{to\-Double\-Number}]{\setlength{\rightskip}{0pt plus 5cm}double Math\-Lib\-::to\-Double\-Number (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_ac16cb112f944e792301b0e0f469b7aed}
+\hypertarget{class_math_lib_a9262074fa86e11ca5be7b95c0dec115a}{\index{Math\-Lib@{Math\-Lib}!to\-Long\-Number@{to\-Long\-Number}}
+\index{to\-Long\-Number@{to\-Long\-Number}!MathLib@{Math\-Lib}}
+\subsubsection[{to\-Long\-Number}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Math\-Lib\-::bigint} Math\-Lib\-::to\-Long\-Number (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_math_lib_a9262074fa86e11ca5be7b95c0dec115a}
+\hypertarget{class_math_lib_af75d9066b83ccc19dfe49ab24fde205d}{\index{Math\-Lib@{Math\-Lib}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!MathLib@{Math\-Lib}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ static std\-::string Math\-Lib\-::to\-String (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_math_lib_af75d9066b83ccc19dfe49ab24fde205d}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{mathlib_8h}{mathlib.\-h}\item 
+lib/\hyperlink{mathlib_8cpp}{mathlib.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,338 @@
+\hypertarget{class_check_memory_leak}{\section{Check\-Memory\-Leak Class Reference}
+\label{class_check_memory_leak}\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}}
+}
+
+
+Base class for memory leaks checking.  
+
+
+
+
+{\ttfamily \#include $<$checkmemoryleak.\-h$>$}
+
+Inheritance diagram for Check\-Memory\-Leak\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.346154cm]{class_check_memory_leak}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51ede}{Alloc\-Type} \{ \\*
+\hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edea23f0a641cae8638af7f50f1703d72340}{No}, 
+\hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edea078630047e34386181488f4864ba118a}{Malloc}, 
+\hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edeae86983884c9f5137c9de5ee9fce4f4ce}{g\-Malloc}, 
+\hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edea09084d7a0f5320b3b11eb0a46e430b3c}{New}, 
+\\*
+\hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edeab10b75ee48eb15d87596f37b0d269710}{New\-Array}, 
+\hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edea1f9debdf7f36c72b83a65aef1423811b}{File}, 
+\hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edea2e25bac29724b337c5c94211468f0a15}{Fd}, 
+\hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edeaaeeb0c5de167985238b16952bce610c1}{Pipe}, 
+\\*
+\hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edea0e29fce072eff370c3c5613e6401e1b4}{Dir}, 
+\hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edeaee3352d96ca8a614e7ea1c3785482894}{Many}
+ \}
+\begin{DoxyCompactList}\small\item\em What type of allocation are used.. the \char`\"{}\-Many\char`\"{} means that several types of allocation and deallocation are used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_check_memory_leak_a467ffa1c6f2af4bf3716676822a6de6b}{Check\-Memory\-Leak} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$t, \hyperlink{class_error_logger}{Error\-Logger} $\ast$e, const \hyperlink{struct_standards}{Standards} \&s)
+\item 
+void \hyperlink{class_check_memory_leak_ab4732d28de9c3966fc375eed62c8591c}{memory\-Leak} (const \hyperlink{class_token}{Token} $\ast$tok, const std\-::string \&varname, \hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51ede}{Alloc\-Type} alloctype)
+\item 
+\hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51ede}{Alloc\-Type} \hyperlink{class_check_memory_leak_a37a76dfae7bcd1dbfdabab8e4a317d02}{get\-Deallocation\-Type} (const \hyperlink{class_token}{Token} $\ast$tok, const std\-::string \&varname) const 
+\begin{DoxyCompactList}\small\item\em Get type of deallocation at given position. \end{DoxyCompactList}\item 
+\hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51ede}{Alloc\-Type} \hyperlink{class_check_memory_leak_a4daae2120488a92dc755fc6301c49259}{get\-Deallocation\-Type} (const \hyperlink{class_token}{Token} $\ast$tok, unsigned int varid) const 
+\begin{DoxyCompactList}\small\item\em Get type of deallocation at given position. \end{DoxyCompactList}\item 
+\hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51ede}{Alloc\-Type} \hyperlink{class_check_memory_leak_a2ae803e3009d4e5e1b2228aec2431a35}{get\-Allocation\-Type} (const \hyperlink{class_token}{Token} $\ast$tok2, unsigned int varid, std\-::list$<$ const \hyperlink{class_token}{Token} $\ast$ $>$ $\ast$callstack=N\-U\-L\-L) const 
+\begin{DoxyCompactList}\small\item\em Get type of allocation at given position. \end{DoxyCompactList}\item 
+\hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51ede}{Alloc\-Type} \hyperlink{class_check_memory_leak_aa5d014eb05226fbea2e70583c9e67863}{get\-Reallocation\-Type} (const \hyperlink{class_token}{Token} $\ast$tok2, unsigned int varid) const 
+\begin{DoxyCompactList}\small\item\em Get type of reallocation at given position. \end{DoxyCompactList}\item 
+bool \hyperlink{class_check_memory_leak_a74c651646a8d740d6ac10a75a55de9a6}{isclass} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$\-\_\-tokenizer, const \hyperlink{class_token}{Token} $\ast$tok, unsigned int varid) const 
+\begin{DoxyCompactList}\small\item\em Is a typename the name of a class? \end{DoxyCompactList}\item 
+void \hyperlink{class_check_memory_leak_ab9f5beb9562d47131857c991944a720a}{memleak\-Error} (const \hyperlink{class_token}{Token} $\ast$tok, const std\-::string \&varname) const 
+\item 
+void \hyperlink{class_check_memory_leak_af4d07dcfedefd99351e18218bba6cced}{resource\-Leak\-Error} (const \hyperlink{class_token}{Token} $\ast$tok, const std\-::string \&varname) const 
+\item 
+void \hyperlink{class_check_memory_leak_a8d3693e3e6347cf64f1319d3ee5f87a4}{dealloc\-Dealloc\-Error} (const \hyperlink{class_token}{Token} $\ast$tok, const std\-::string \&varname) const 
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_report}{Report} error\-: deallocating a deallocated pointer. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_memory_leak_a28f02ba8bbf84a8f3948b3d8ef0b0932}{deallocuse\-Error} (const \hyperlink{class_token}{Token} $\ast$tok, const std\-::string \&varname) const 
+\item 
+void \hyperlink{class_check_memory_leak_a1e4a44523791b11ad75136637907a080}{mismatch\-Size\-Error} (const \hyperlink{class_token}{Token} $\ast$tok, const std\-::string \&sz) const 
+\item 
+void \hyperlink{class_check_memory_leak_a73776869e3e2109ead4e82f7c64d6fdf}{mismatch\-Alloc\-Dealloc} (const std\-::list$<$ const \hyperlink{class_token}{Token} $\ast$ $>$ \&callstack, const std\-::string \&varname) const 
+\item 
+void \hyperlink{class_check_memory_leak_a2a9de66deb676bc72cb6fb0a4c7b1ba1}{memleak\-Upon\-Realloc\-Failure\-Error} (const \hyperlink{class_token}{Token} $\ast$tok, const std\-::string \&varname) const 
+\item 
+\hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51ede}{Alloc\-Type} \hyperlink{class_check_memory_leak_a2cb65cb702db8349ea60a626f6e876a2}{function\-Return\-Type} (const \hyperlink{class_token}{Token} $\ast$tok, std\-::list$<$ const \hyperlink{class_token}{Token} $\ast$ $>$ $\ast$callstack=N\-U\-L\-L) const 
+\item 
+const char $\ast$ \hyperlink{class_check_memory_leak_a74bcbc735491d28711922c7d822c5b68}{function\-Arg\-Alloc} (const \hyperlink{class_function}{Function} $\ast$func, unsigned int targetpar, \hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51ede}{Alloc\-Type} \&alloc\-Type) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for memory leaks checking. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51ede}{\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!Alloc\-Type@{Alloc\-Type}}
+\index{Alloc\-Type@{Alloc\-Type}!CheckMemoryLeak@{Check\-Memory\-Leak}}
+\subsubsection[{Alloc\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Check\-Memory\-Leak\-::\-Alloc\-Type}}}\label{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51ede}
+
+
+What type of allocation are used.. the \char`\"{}\-Many\char`\"{} means that several types of allocation and deallocation are used. 
+
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{No@{No}!Check\-Memory\-Leak@{Check\-Memory\-Leak}}\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!No@{No}}\item[{\em 
+\hypertarget{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edea23f0a641cae8638af7f50f1703d72340}{No}\label{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edea23f0a641cae8638af7f50f1703d72340}
+}]\index{Malloc@{Malloc}!Check\-Memory\-Leak@{Check\-Memory\-Leak}}\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!Malloc@{Malloc}}\item[{\em 
+\hypertarget{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edea078630047e34386181488f4864ba118a}{Malloc}\label{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edea078630047e34386181488f4864ba118a}
+}]\index{g\-Malloc@{g\-Malloc}!Check\-Memory\-Leak@{Check\-Memory\-Leak}}\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!g\-Malloc@{g\-Malloc}}\item[{\em 
+\hypertarget{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edeae86983884c9f5137c9de5ee9fce4f4ce}{g\-Malloc}\label{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edeae86983884c9f5137c9de5ee9fce4f4ce}
+}]\index{New@{New}!Check\-Memory\-Leak@{Check\-Memory\-Leak}}\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!New@{New}}\item[{\em 
+\hypertarget{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edea09084d7a0f5320b3b11eb0a46e430b3c}{New}\label{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edea09084d7a0f5320b3b11eb0a46e430b3c}
+}]\index{New\-Array@{New\-Array}!Check\-Memory\-Leak@{Check\-Memory\-Leak}}\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!New\-Array@{New\-Array}}\item[{\em 
+\hypertarget{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edeab10b75ee48eb15d87596f37b0d269710}{New\-Array}\label{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edeab10b75ee48eb15d87596f37b0d269710}
+}]\index{File@{File}!Check\-Memory\-Leak@{Check\-Memory\-Leak}}\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!File@{File}}\item[{\em 
+\hypertarget{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edea1f9debdf7f36c72b83a65aef1423811b}{File}\label{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edea1f9debdf7f36c72b83a65aef1423811b}
+}]\index{Fd@{Fd}!Check\-Memory\-Leak@{Check\-Memory\-Leak}}\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!Fd@{Fd}}\item[{\em 
+\hypertarget{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edea2e25bac29724b337c5c94211468f0a15}{Fd}\label{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edea2e25bac29724b337c5c94211468f0a15}
+}]\index{Pipe@{Pipe}!Check\-Memory\-Leak@{Check\-Memory\-Leak}}\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!Pipe@{Pipe}}\item[{\em 
+\hypertarget{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edeaaeeb0c5de167985238b16952bce610c1}{Pipe}\label{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edeaaeeb0c5de167985238b16952bce610c1}
+}]\index{Dir@{Dir}!Check\-Memory\-Leak@{Check\-Memory\-Leak}}\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!Dir@{Dir}}\item[{\em 
+\hypertarget{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edea0e29fce072eff370c3c5613e6401e1b4}{Dir}\label{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edea0e29fce072eff370c3c5613e6401e1b4}
+}]\index{Many@{Many}!Check\-Memory\-Leak@{Check\-Memory\-Leak}}\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!Many@{Many}}\item[{\em 
+\hypertarget{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edeaee3352d96ca8a614e7ea1c3785482894}{Many}\label{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51edeaee3352d96ca8a614e7ea1c3785482894}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_check_memory_leak_a467ffa1c6f2af4bf3716676822a6de6b}{\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!Check\-Memory\-Leak@{Check\-Memory\-Leak}}
+\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!CheckMemoryLeak@{Check\-Memory\-Leak}}
+\subsubsection[{Check\-Memory\-Leak}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Memory\-Leak\-::\-Check\-Memory\-Leak (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{t, }
+\item[{{\bf Error\-Logger} $\ast$}]{e, }
+\item[{const {\bf Standards} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_memory_leak_a467ffa1c6f2af4bf3716676822a6de6b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_check_memory_leak_a8d3693e3e6347cf64f1319d3ee5f87a4}{\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!dealloc\-Dealloc\-Error@{dealloc\-Dealloc\-Error}}
+\index{dealloc\-Dealloc\-Error@{dealloc\-Dealloc\-Error}!CheckMemoryLeak@{Check\-Memory\-Leak}}
+\subsubsection[{dealloc\-Dealloc\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Memory\-Leak\-::dealloc\-Dealloc\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const std\-::string \&}]{varname}
+\end{DoxyParamCaption}
+) const}}\label{class_check_memory_leak_a8d3693e3e6347cf64f1319d3ee5f87a4}
+
+
+\hyperlink{class_report}{Report} error\-: deallocating a deallocated pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tok} & token where error occurs \\
+\hline
+{\em varname} & name of variable \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_check_memory_leak_a28f02ba8bbf84a8f3948b3d8ef0b0932}{\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!deallocuse\-Error@{deallocuse\-Error}}
+\index{deallocuse\-Error@{deallocuse\-Error}!CheckMemoryLeak@{Check\-Memory\-Leak}}
+\subsubsection[{deallocuse\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Memory\-Leak\-::deallocuse\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const std\-::string \&}]{varname}
+\end{DoxyParamCaption}
+) const}}\label{class_check_memory_leak_a28f02ba8bbf84a8f3948b3d8ef0b0932}
+\hypertarget{class_check_memory_leak_a74bcbc735491d28711922c7d822c5b68}{\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!function\-Arg\-Alloc@{function\-Arg\-Alloc}}
+\index{function\-Arg\-Alloc@{function\-Arg\-Alloc}!CheckMemoryLeak@{Check\-Memory\-Leak}}
+\subsubsection[{function\-Arg\-Alloc}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Check\-Memory\-Leak\-::function\-Arg\-Alloc (
+\begin{DoxyParamCaption}
+\item[{const {\bf Function} $\ast$}]{func, }
+\item[{unsigned int}]{targetpar, }
+\item[{{\bf Alloc\-Type} \&}]{alloc\-Type}
+\end{DoxyParamCaption}
+) const}}\label{class_check_memory_leak_a74bcbc735491d28711922c7d822c5b68}
+\hyperlink{class_function}{Function} allocates pointed-\/to argument (a la asprintf)? \hypertarget{class_check_memory_leak_a2cb65cb702db8349ea60a626f6e876a2}{\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!function\-Return\-Type@{function\-Return\-Type}}
+\index{function\-Return\-Type@{function\-Return\-Type}!CheckMemoryLeak@{Check\-Memory\-Leak}}
+\subsubsection[{function\-Return\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Check\-Memory\-Leak\-::\-Alloc\-Type} Check\-Memory\-Leak\-::function\-Return\-Type (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{std\-::list$<$ const {\bf Token} $\ast$ $>$ $\ast$}]{callstack = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+) const}}\label{class_check_memory_leak_a2cb65cb702db8349ea60a626f6e876a2}
+What type of allocated memory does the given function return? \hypertarget{class_check_memory_leak_a2ae803e3009d4e5e1b2228aec2431a35}{\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!get\-Allocation\-Type@{get\-Allocation\-Type}}
+\index{get\-Allocation\-Type@{get\-Allocation\-Type}!CheckMemoryLeak@{Check\-Memory\-Leak}}
+\subsubsection[{get\-Allocation\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Check\-Memory\-Leak\-::\-Alloc\-Type} Check\-Memory\-Leak\-::get\-Allocation\-Type (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok2, }
+\item[{unsigned int}]{varid, }
+\item[{std\-::list$<$ const {\bf Token} $\ast$ $>$ $\ast$}]{callstack = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+) const}}\label{class_check_memory_leak_a2ae803e3009d4e5e1b2228aec2431a35}
+
+
+Get type of allocation at given position. 
+
+\hypertarget{class_check_memory_leak_a37a76dfae7bcd1dbfdabab8e4a317d02}{\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!get\-Deallocation\-Type@{get\-Deallocation\-Type}}
+\index{get\-Deallocation\-Type@{get\-Deallocation\-Type}!CheckMemoryLeak@{Check\-Memory\-Leak}}
+\subsubsection[{get\-Deallocation\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Check\-Memory\-Leak\-::\-Alloc\-Type} Check\-Memory\-Leak\-::get\-Deallocation\-Type (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const std\-::string \&}]{varname}
+\end{DoxyParamCaption}
+) const}}\label{class_check_memory_leak_a37a76dfae7bcd1dbfdabab8e4a317d02}
+
+
+Get type of deallocation at given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tok} & position \\
+\hline
+{\em varname} & variable name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type of deallocation 
+\end{DoxyReturn}
+\hypertarget{class_check_memory_leak_a4daae2120488a92dc755fc6301c49259}{\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!get\-Deallocation\-Type@{get\-Deallocation\-Type}}
+\index{get\-Deallocation\-Type@{get\-Deallocation\-Type}!CheckMemoryLeak@{Check\-Memory\-Leak}}
+\subsubsection[{get\-Deallocation\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Check\-Memory\-Leak\-::\-Alloc\-Type} Check\-Memory\-Leak\-::get\-Deallocation\-Type (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+) const}}\label{class_check_memory_leak_a4daae2120488a92dc755fc6301c49259}
+
+
+Get type of deallocation at given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tok} & position \\
+\hline
+{\em varid} & variable id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type of deallocation 
+\end{DoxyReturn}
+\hypertarget{class_check_memory_leak_aa5d014eb05226fbea2e70583c9e67863}{\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!get\-Reallocation\-Type@{get\-Reallocation\-Type}}
+\index{get\-Reallocation\-Type@{get\-Reallocation\-Type}!CheckMemoryLeak@{Check\-Memory\-Leak}}
+\subsubsection[{get\-Reallocation\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Check\-Memory\-Leak\-::\-Alloc\-Type} Check\-Memory\-Leak\-::get\-Reallocation\-Type (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok2, }
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+) const}}\label{class_check_memory_leak_aa5d014eb05226fbea2e70583c9e67863}
+
+
+Get type of reallocation at given position. 
+
+\hypertarget{class_check_memory_leak_a74c651646a8d740d6ac10a75a55de9a6}{\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!isclass@{isclass}}
+\index{isclass@{isclass}!CheckMemoryLeak@{Check\-Memory\-Leak}}
+\subsubsection[{isclass}]{\setlength{\rightskip}{0pt plus 5cm}bool Check\-Memory\-Leak\-::isclass (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{\-\_\-tokenizer, }
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+) const}}\label{class_check_memory_leak_a74c651646a8d740d6ac10a75a55de9a6}
+
+
+Is a typename the name of a class? 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-tokenizer} & tokenizer \\
+\hline
+{\em tok} & type token \\
+\hline
+{\em varid} & variable id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the type name is the name of a class 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000038}{Todo}]false negative\-: check base class for side effects \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000039}{Todo}]false negative\-: check constructors for side effects \end{DoxyRefDesc}
+\hypertarget{class_check_memory_leak_ab9f5beb9562d47131857c991944a720a}{\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!memleak\-Error@{memleak\-Error}}
+\index{memleak\-Error@{memleak\-Error}!CheckMemoryLeak@{Check\-Memory\-Leak}}
+\subsubsection[{memleak\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Memory\-Leak\-::memleak\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const std\-::string \&}]{varname}
+\end{DoxyParamCaption}
+) const}}\label{class_check_memory_leak_ab9f5beb9562d47131857c991944a720a}
+\hyperlink{class_report}{Report} that there is a memory leak (new/malloc/etc) 
+\begin{DoxyParams}{Parameters}
+{\em tok} & token where memory is leaked \\
+\hline
+{\em varname} & name of variable \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_check_memory_leak_a2a9de66deb676bc72cb6fb0a4c7b1ba1}{\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!memleak\-Upon\-Realloc\-Failure\-Error@{memleak\-Upon\-Realloc\-Failure\-Error}}
+\index{memleak\-Upon\-Realloc\-Failure\-Error@{memleak\-Upon\-Realloc\-Failure\-Error}!CheckMemoryLeak@{Check\-Memory\-Leak}}
+\subsubsection[{memleak\-Upon\-Realloc\-Failure\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Memory\-Leak\-::memleak\-Upon\-Realloc\-Failure\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const std\-::string \&}]{varname}
+\end{DoxyParamCaption}
+) const}}\label{class_check_memory_leak_a2a9de66deb676bc72cb6fb0a4c7b1ba1}
+\hypertarget{class_check_memory_leak_ab4732d28de9c3966fc375eed62c8591c}{\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!memory\-Leak@{memory\-Leak}}
+\index{memory\-Leak@{memory\-Leak}!CheckMemoryLeak@{Check\-Memory\-Leak}}
+\subsubsection[{memory\-Leak}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Memory\-Leak\-::memory\-Leak (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const std\-::string \&}]{varname, }
+\item[{{\bf Alloc\-Type}}]{alloctype}
+\end{DoxyParamCaption}
+)}}\label{class_check_memory_leak_ab4732d28de9c3966fc375eed62c8591c}
+\hypertarget{class_check_memory_leak_a73776869e3e2109ead4e82f7c64d6fdf}{\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!mismatch\-Alloc\-Dealloc@{mismatch\-Alloc\-Dealloc}}
+\index{mismatch\-Alloc\-Dealloc@{mismatch\-Alloc\-Dealloc}!CheckMemoryLeak@{Check\-Memory\-Leak}}
+\subsubsection[{mismatch\-Alloc\-Dealloc}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Memory\-Leak\-::mismatch\-Alloc\-Dealloc (
+\begin{DoxyParamCaption}
+\item[{const std\-::list$<$ const {\bf Token} $\ast$ $>$ \&}]{callstack, }
+\item[{const std\-::string \&}]{varname}
+\end{DoxyParamCaption}
+) const}}\label{class_check_memory_leak_a73776869e3e2109ead4e82f7c64d6fdf}
+\hypertarget{class_check_memory_leak_a1e4a44523791b11ad75136637907a080}{\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!mismatch\-Size\-Error@{mismatch\-Size\-Error}}
+\index{mismatch\-Size\-Error@{mismatch\-Size\-Error}!CheckMemoryLeak@{Check\-Memory\-Leak}}
+\subsubsection[{mismatch\-Size\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Memory\-Leak\-::mismatch\-Size\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const std\-::string \&}]{sz}
+\end{DoxyParamCaption}
+) const}}\label{class_check_memory_leak_a1e4a44523791b11ad75136637907a080}
+\hypertarget{class_check_memory_leak_af4d07dcfedefd99351e18218bba6cced}{\index{Check\-Memory\-Leak@{Check\-Memory\-Leak}!resource\-Leak\-Error@{resource\-Leak\-Error}}
+\index{resource\-Leak\-Error@{resource\-Leak\-Error}!CheckMemoryLeak@{Check\-Memory\-Leak}}
+\subsubsection[{resource\-Leak\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Memory\-Leak\-::resource\-Leak\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const std\-::string \&}]{varname}
+\end{DoxyParamCaption}
+) const}}\label{class_check_memory_leak_af4d07dcfedefd99351e18218bba6cced}
+\hyperlink{class_report}{Report} that there is a resource leak (fopen/popen/etc) 
+\begin{DoxyParams}{Parameters}
+{\em tok} & token where resource is leaked \\
+\hline
+{\em varname} & name of variable \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{checkmemoryleak_8h}{checkmemoryleak.\-h}\item 
+lib/\hyperlink{checkmemoryleak_8cpp}{checkmemoryleak.\-cpp}\end{DoxyCompactItemize}

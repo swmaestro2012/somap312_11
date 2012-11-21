@@ -1,0 +1,114 @@
+\hypertarget{struct_var_info}{\section{Var\-Info Class Reference}
+\label{struct_var_info}\index{Var\-Info@{Var\-Info}}
+}
+
+
+{\ttfamily \#include $<$checkleakautovar.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{struct_var_info_a3701bf050dde0d35152d6c3289d7e11b}{clear} ()
+\item 
+void \hyperlink{struct_var_info_a36794477ee2794cf360e0ef84944c787}{erase} (unsigned int varid)
+\item 
+void \hyperlink{struct_var_info_a73a909a1ef8aa7ebfa0df40e276570cd}{swap} (\hyperlink{struct_var_info}{Var\-Info} \&other)
+\item 
+void \hyperlink{struct_var_info_a06af2ee4f70d1d94eb4edfaac8f10dac}{possible\-Usage\-All} (const std\-::string \&function\-Name)
+\item 
+void \hyperlink{struct_var_info_a331135fef9dccf939ebe5a8aed3eb2bd}{print} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_var_info_a3db362566db570920c38c1bc9be249e0}{Var\-Info} (const \hyperlink{class_variable}{Variable} $\ast$\-\_\-var, const \hyperlink{class_token}{Token} $\ast$\-\_\-tok)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{class_variable}{Variable} $\ast$ \hyperlink{struct_var_info_a68f990f51837a325f0bfd4f5a3949544}{var}
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{struct_var_info_a456137087f9faf26f7b341d62ad750fe}{tok}
+\item 
+std\-::map$<$ unsigned int, \\*
+std\-::string $>$ \hyperlink{struct_var_info_ab6d199ca44022965783d21f23f42fd2d}{alloctype}
+\item 
+std\-::map$<$ unsigned int, \\*
+std\-::string $>$ \hyperlink{struct_var_info_a1a9a7e930ba84c3b398df50094126689}{possible\-Usage}
+\item 
+std\-::set$<$ unsigned int $>$ \hyperlink{struct_var_info_ab482810e8ba232b2e40899e128cfdc98}{conditional\-Alloc}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{struct_var_info_a3db362566db570920c38c1bc9be249e0}{\index{Var\-Info@{Var\-Info}!Var\-Info@{Var\-Info}}
+\index{Var\-Info@{Var\-Info}!VarInfo@{Var\-Info}}
+\subsubsection[{Var\-Info}]{\setlength{\rightskip}{0pt plus 5cm}Var\-Info\-::\-Var\-Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Variable} $\ast$}]{\-\_\-var, }
+\item[{const {\bf Token} $\ast$}]{\-\_\-tok}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{struct_var_info_a3db362566db570920c38c1bc9be249e0}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_var_info_a3701bf050dde0d35152d6c3289d7e11b}{\index{Var\-Info@{Var\-Info}!clear@{clear}}
+\index{clear@{clear}!VarInfo@{Var\-Info}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Var\-Info\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_var_info_a3701bf050dde0d35152d6c3289d7e11b}
+\hypertarget{struct_var_info_a36794477ee2794cf360e0ef84944c787}{\index{Var\-Info@{Var\-Info}!erase@{erase}}
+\index{erase@{erase}!VarInfo@{Var\-Info}}
+\subsubsection[{erase}]{\setlength{\rightskip}{0pt plus 5cm}void Var\-Info\-::erase (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_var_info_a36794477ee2794cf360e0ef84944c787}
+\hypertarget{struct_var_info_a06af2ee4f70d1d94eb4edfaac8f10dac}{\index{Var\-Info@{Var\-Info}!possible\-Usage\-All@{possible\-Usage\-All}}
+\index{possible\-Usage\-All@{possible\-Usage\-All}!VarInfo@{Var\-Info}}
+\subsubsection[{possible\-Usage\-All}]{\setlength{\rightskip}{0pt plus 5cm}void Var\-Info\-::possible\-Usage\-All (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{function\-Name}
+\end{DoxyParamCaption}
+)}}\label{struct_var_info_a06af2ee4f70d1d94eb4edfaac8f10dac}
+set possible usage for all variables \hypertarget{struct_var_info_a331135fef9dccf939ebe5a8aed3eb2bd}{\index{Var\-Info@{Var\-Info}!print@{print}}
+\index{print@{print}!VarInfo@{Var\-Info}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void Var\-Info\-::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{struct_var_info_a331135fef9dccf939ebe5a8aed3eb2bd}
+\hypertarget{struct_var_info_a73a909a1ef8aa7ebfa0df40e276570cd}{\index{Var\-Info@{Var\-Info}!swap@{swap}}
+\index{swap@{swap}!VarInfo@{Var\-Info}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}void Var\-Info\-::swap (
+\begin{DoxyParamCaption}
+\item[{{\bf Var\-Info} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_var_info_a73a909a1ef8aa7ebfa0df40e276570cd}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_var_info_ab6d199ca44022965783d21f23f42fd2d}{\index{Var\-Info@{Var\-Info}!alloctype@{alloctype}}
+\index{alloctype@{alloctype}!VarInfo@{Var\-Info}}
+\subsubsection[{alloctype}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$unsigned int, std\-::string$>$ Var\-Info\-::alloctype}}\label{struct_var_info_ab6d199ca44022965783d21f23f42fd2d}
+\hypertarget{struct_var_info_ab482810e8ba232b2e40899e128cfdc98}{\index{Var\-Info@{Var\-Info}!conditional\-Alloc@{conditional\-Alloc}}
+\index{conditional\-Alloc@{conditional\-Alloc}!VarInfo@{Var\-Info}}
+\subsubsection[{conditional\-Alloc}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<$unsigned int$>$ Var\-Info\-::conditional\-Alloc}}\label{struct_var_info_ab482810e8ba232b2e40899e128cfdc98}
+\hypertarget{struct_var_info_a1a9a7e930ba84c3b398df50094126689}{\index{Var\-Info@{Var\-Info}!possible\-Usage@{possible\-Usage}}
+\index{possible\-Usage@{possible\-Usage}!VarInfo@{Var\-Info}}
+\subsubsection[{possible\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}std\-::map$<$unsigned int, std\-::string$>$ Var\-Info\-::possible\-Usage}}\label{struct_var_info_a1a9a7e930ba84c3b398df50094126689}
+\hypertarget{struct_var_info_a456137087f9faf26f7b341d62ad750fe}{\index{Var\-Info@{Var\-Info}!tok@{tok}}
+\index{tok@{tok}!VarInfo@{Var\-Info}}
+\subsubsection[{tok}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token}$\ast$ Var\-Info\-::tok}}\label{struct_var_info_a456137087f9faf26f7b341d62ad750fe}
+\hypertarget{struct_var_info_a68f990f51837a325f0bfd4f5a3949544}{\index{Var\-Info@{Var\-Info}!var@{var}}
+\index{var@{var}!VarInfo@{Var\-Info}}
+\subsubsection[{var}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Variable}$\ast$ Var\-Info\-::var}}\label{struct_var_info_a68f990f51837a325f0bfd4f5a3949544}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{checkclass_8cpp}{checkclass.\-cpp}\item 
+lib/\hyperlink{checkleakautovar_8h}{checkleakautovar.\-h}\item 
+lib/\hyperlink{checkleakautovar_8cpp}{checkleakautovar.\-cpp}\end{DoxyCompactItemize}

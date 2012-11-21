@@ -1,0 +1,93 @@
+\hypertarget{class_cppcheck_executor}{\section{Cppcheck\-Executor Class Reference}
+\label{class_cppcheck_executor}\index{Cppcheck\-Executor@{Cppcheck\-Executor}}
+}
+Inheritance diagram for Cppcheck\-Executor\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cppcheck_executor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cppcheck_executor_a702ea74b242d40038faa46fd34f7d3bc}{Cppcheck\-Executor} ()
+\item 
+void \hyperlink{class_cppcheck_executor_a805c605caabefc5823f2e86f5594ee51}{run} (const char code\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{class_cppcheck_executor_a6d3d218c53b1224d9380d4297bb17899}{report\-Out} (const std\-::string \&outmsg)
+\item 
+void \hyperlink{class_cppcheck_executor_a0328176cbfc486c9371525ad744492a3}{report\-Err} (const \hyperlink{class_error_logger_1_1_error_message}{Error\-Logger\-::\-Error\-Message} \&msg)
+\item 
+void \hyperlink{class_cppcheck_executor_a04f3aad2025fc7e9c11f1815e6a3b563}{report\-Progress} (const std\-::string \&filename, const char stage\mbox{[}$\,$\mbox{]}, const unsigned int value)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_cppcheck_executor_a702ea74b242d40038faa46fd34f7d3bc}{\index{Cppcheck\-Executor@{Cppcheck\-Executor}!Cppcheck\-Executor@{Cppcheck\-Executor}}
+\index{Cppcheck\-Executor@{Cppcheck\-Executor}!CppcheckExecutor@{Cppcheck\-Executor}}
+\subsubsection[{Cppcheck\-Executor}]{\setlength{\rightskip}{0pt plus 5cm}Cppcheck\-Executor\-::\-Cppcheck\-Executor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_cppcheck_executor_a702ea74b242d40038faa46fd34f7d3bc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_cppcheck_executor_a0328176cbfc486c9371525ad744492a3}{\index{Cppcheck\-Executor@{Cppcheck\-Executor}!report\-Err@{report\-Err}}
+\index{report\-Err@{report\-Err}!CppcheckExecutor@{Cppcheck\-Executor}}
+\subsubsection[{report\-Err}]{\setlength{\rightskip}{0pt plus 5cm}void Cppcheck\-Executor\-::report\-Err (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\-Logger\-::\-Error\-Message} \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_cppcheck_executor_a0328176cbfc486c9371525ad744492a3}
+Information about found errors and warnings is directed here. Override this to receive the errormessages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Location and other information about the found error. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_error_logger_aea56e01f24c0d8ecaa5498ae4eba1739}{Error\-Logger}.
+
+\hypertarget{class_cppcheck_executor_a6d3d218c53b1224d9380d4297bb17899}{\index{Cppcheck\-Executor@{Cppcheck\-Executor}!report\-Out@{report\-Out}}
+\index{report\-Out@{report\-Out}!CppcheckExecutor@{Cppcheck\-Executor}}
+\subsubsection[{report\-Out}]{\setlength{\rightskip}{0pt plus 5cm}void Cppcheck\-Executor\-::report\-Out (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{outmsg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_cppcheck_executor_a6d3d218c53b1224d9380d4297bb17899}
+Information about progress is directed here. Override this to receive the progress messages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em outmsg} & Message to show e.\-g. \char`\"{}\-Checking main.\-cpp...\char`\"{} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_error_logger_aeb9c56add35e46cd83e9b7e92e5e110c}{Error\-Logger}.
+
+\hypertarget{class_cppcheck_executor_a04f3aad2025fc7e9c11f1815e6a3b563}{\index{Cppcheck\-Executor@{Cppcheck\-Executor}!report\-Progress@{report\-Progress}}
+\index{report\-Progress@{report\-Progress}!CppcheckExecutor@{Cppcheck\-Executor}}
+\subsubsection[{report\-Progress}]{\setlength{\rightskip}{0pt plus 5cm}void Cppcheck\-Executor\-::report\-Progress (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename, }
+\item[{const char}]{stage\mbox{[}$\,$\mbox{]}, }
+\item[{const unsigned int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_cppcheck_executor_a04f3aad2025fc7e9c11f1815e6a3b563}
+\hypertarget{class_cppcheck_executor_a805c605caabefc5823f2e86f5594ee51}{\index{Cppcheck\-Executor@{Cppcheck\-Executor}!run@{run}}
+\index{run@{run}!CppcheckExecutor@{Cppcheck\-Executor}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Cppcheck\-Executor\-::run (
+\begin{DoxyParamCaption}
+\item[{const char}]{code\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_cppcheck_executor_a805c605caabefc5823f2e86f5594ee51}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+democlient/\hyperlink{democlient_8cpp}{democlient.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,726 @@
+\hypertarget{class_check_other}{\section{Check\-Other Class Reference}
+\label{class_check_other}\index{Check\-Other@{Check\-Other}}
+}
+
+
+Various small checks.  
+
+
+
+
+{\ttfamily \#include $<$checkother.\-h$>$}
+
+Inheritance diagram for Check\-Other\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_check_other}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_check_other_aa65180181ae5b00c8bf49a6557dd5153}{Check\-Other} ()
+\begin{DoxyCompactList}\small\item\em This constructor is used when registering the \hyperlink{class_check_class}{Check\-Class}. \end{DoxyCompactList}\item 
+\hyperlink{class_check_other_a4b02d656949fd5d999473a461c3cad97}{Check\-Other} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\begin{DoxyCompactList}\small\item\em This constructor is used when running checks. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a15ba42e338f836e56693f9f9ffedd573}{run\-Checks} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\begin{DoxyCompactList}\small\item\em Run checks against the normal token list. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_ab228c1811e7cdacca4a561aa36d00bd5}{run\-Simplified\-Checks} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\begin{DoxyCompactList}\small\item\em Run checks against the simplified token list. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_af4322175f29f614cb5d85ce4c8cafc8e}{clarify\-Calculation} ()
+\begin{DoxyCompactList}\small\item\em Clarify calculation for \char`\"{}.. a $\ast$ b ? ..\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a8a7e69ff8cb300d671f32fe37f3b1ed3}{clarify\-Condition} ()
+\begin{DoxyCompactList}\small\item\em Suspicious condition (assignment+comparison) \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_acdbde1dcc6f04f5b5a7d0e0675881f1d}{clarify\-Statement} ()
+\begin{DoxyCompactList}\small\item\em Suspicious statement like '$\ast$\-A++;'. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a27b6a1d09101569f2c4596560654e72f}{warning\-Old\-Style\-Pointer\-Cast} ()
+\begin{DoxyCompactList}\small\item\em Are there C-\/style pointer casts in a c++ file? \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_aebf615c9ae7404446033ab23e6739feb}{invalid\-Pointer\-Cast} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_check}{Check} for pointer casts to a type with an incompatible binary data representation. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_aefaa2b1fde574dcbccb891aa1d16410a}{invalid\-Function\-Usage} ()
+\begin{DoxyCompactList}\small\item\em Invalid function usage (invalid radix / overlapping data) \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_ae81aa092848dcafc4cf43d8567339f8f}{check\-Unsigned\-Division} ()
+\begin{DoxyCompactList}\small\item\em Check for unsigned division \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a121c1461b4f0ccb530f128f1c9cb69e3}{check\-Variable\-Scope} ()
+\begin{DoxyCompactList}\small\item\em Check scope of variables \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a50fc19b30e6c5f7d5a4e5f203b97e688}{lookup\-Var} (const \hyperlink{class_token}{Token} $\ast$tok, const \hyperlink{class_variable}{Variable} $\ast$var)
+\item 
+void \hyperlink{class_check_other_a2ffbb4ce325c32ceb796265af482af62}{check\-Constant\-Function\-Parameter} ()
+\begin{DoxyCompactList}\small\item\em Check for constant function parameter \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a424f217967119a37985df2615e2f2616}{check\-Char\-Variable} ()
+\begin{DoxyCompactList}\small\item\em Using char variable as array index / as operand in bit operation. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_af9be20e48c0915b8c9a5fe2c47e9a905}{check\-Incomplete\-Statement} ()
+\begin{DoxyCompactList}\small\item\em Incomplete statement. A statement that only contains a constant or variable. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a61bef9a40729ca203432a5c243de6c3f}{str\-Plus\-Char} ()
+\begin{DoxyCompactList}\small\item\em str plus char (unusual pointer arithmetic) \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a9e3e6d91a89fb71585872113b0ccece5}{check\-Zero\-Division} ()
+\begin{DoxyCompactList}\small\item\em Check zero division \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a958ebb704a55a5bf3017df17cb8e9f0b}{check\-Math\-Functions} ()
+\begin{DoxyCompactList}\small\item\em Check for parameters given to math function that do not make sense \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_aabef02da314ed9a7fda6d423c99da8f1}{check\-C\-C\-Type\-Functions} ()
+\begin{DoxyCompactList}\small\item\em Check for parameters given to cctype function that do make error \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a43253706e9282c135b4815a93b5f3f45}{sizeofsizeof} ()
+\begin{DoxyCompactList}\small\item\em Check for 'sizeof sizeof ..' \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_aad93a233f3e599fcc7f030db215ffc83}{sizeof\-Calculation} ()
+\begin{DoxyCompactList}\small\item\em Check for calculations inside sizeof \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a15b114bb105bf01cba4df80146f91476}{check\-Redundant\-Assignment\-In\-Switch} ()
+\begin{DoxyCompactList}\small\item\em Check for assigning to the same variable twice in a switch statement \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a5a8c638b4a5d613de40b3d47234df3ac}{check\-Switch\-Case\-Fall\-Through} ()
+\begin{DoxyCompactList}\small\item\em Check for switch case fall through without comment \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a38d9fbfda11fc8d94f60224c3bd2258c}{check\-Self\-Assignment} ()
+\begin{DoxyCompactList}\small\item\em Check for assigning a variable to itself \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_ac72e91303e4d2e4a0b5c14c490092d06}{check\-Assignment\-In\-Assert} ()
+\begin{DoxyCompactList}\small\item\em Check for assignment to a variable in an assert test \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a39f8ca7f072b2edbf76d83ee4642bf67}{check\-Incorrect\-Logic\-Operator} ()
+\begin{DoxyCompactList}\small\item\em Check for testing for mutual exclusion over $|$$|$ \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_adfbde85a587e0da9ad55909f9b7351fe}{check\-Misused\-Scoped\-Object} ()
+\begin{DoxyCompactList}\small\item\em Check for objects that are destroyed immediately \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a96c2f87cfb86f2fe4b54797b12c5d1ac}{check\-Memset\-Zero\-Bytes} ()
+\begin{DoxyCompactList}\small\item\em Check for filling zero bytes with memset() \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a57bb9236b24dfe177c5c2fa2d4aaf334}{check\-Sizeof\-For\-Array\-Parameter} ()
+\begin{DoxyCompactList}\small\item\em Check for using sizeof with array given as function argument \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a9845494a7f1adf15cfc72c3155dfb281}{check\-Sizeof\-For\-Pointer\-Size} ()
+\begin{DoxyCompactList}\small\item\em Check for using sizeof of a variable when allocating it \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a25e206a096e671b00ce75e26a6fd8810}{check\-Sizeof\-For\-Numeric\-Parameter} ()
+\begin{DoxyCompactList}\small\item\em Check for using sizeof with numeric given as function argument \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a8653c3f990e15c739cd9198082892f6b}{check\-Incorrect\-String\-Compare} ()
+\begin{DoxyCompactList}\small\item\em Check for using bad usage of strncmp and substr \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a7bba4f179cf90a3468a97dc2da10f47a}{check\-Suspicious\-String\-Compare} ()
+\begin{DoxyCompactList}\small\item\em Check for comparison of a string literal with a char$\ast$ variable \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a88bbdbc115e7052f4f1e50ea8f353337}{check\-Increment\-Boolean} ()
+\begin{DoxyCompactList}\small\item\em Check for using postfix increment on bool \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_aafe90e2c6e77a85d2887ebe93c8402cb}{check\-Comparison\-Of\-Bool\-With\-Int} ()
+\begin{DoxyCompactList}\small\item\em Check for suspicious comparison of a bool and a non-\/zero (and non-\/one) value (e.\-g. \char`\"{}if (!x==4)\char`\"{}) \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a8355a63bd745abe6b41967e818516305}{check\-Duplicate\-If} ()
+\begin{DoxyCompactList}\small\item\em Check for suspicious code where multiple if have the same expression (e.\-g \char`\"{}if (a) \{ \} else if (a) \{ \}\char`\"{}) \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a9a39143088d45e4b6643c00155510781}{check\-Duplicate\-Branch} ()
+\begin{DoxyCompactList}\small\item\em Check for suspicious code where if and else branch are the same (e.\-g \char`\"{}if (a) b = true; else b = true;\char`\"{}) \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a314eb94047312b3247328279226b818a}{check\-Duplicate\-Expression} ()
+\begin{DoxyCompactList}\small\item\em Check for suspicious code with the same expression on both sides of operator (e.\-g \char`\"{}if (a \&\& a)\char`\"{}) \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a5dfa3ce6a66aca17ee369d4c7ab5d5e7}{check\-Always\-True\-Or\-False\-String\-Compare} ()
+\begin{DoxyCompactList}\small\item\em Check for suspicious code that compares string literals for equality \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_afc2eba35a2d41de3ffbafc6bc5915b15}{check\-Modulo\-Always\-True\-False} ()
+\begin{DoxyCompactList}\small\item\em Check for suspicious usage of modulo (e.\-g. \char`\"{}if(var \% 4 == 4)\char`\"{}) \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a93ea6c116fd55f6da83c3e5b143ac46a}{check\-Unreachable\-Code} ()
+\begin{DoxyCompactList}\small\item\em Check for code that gets never executed, such as duplicate break statements \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a1065f2d88d606adf8c8f084962843574}{check\-Assign\-Bool\-To\-Pointer} ()
+\begin{DoxyCompactList}\small\item\em assigning bool to pointer \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_abd9524c5229935fcc89558554cff065d}{check\-Sign\-Of\-Unsigned\-Variable} ()
+\begin{DoxyCompactList}\small\item\em Check for testing sign of unsigned variable \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a81e2f14a1a0b235a5f99b70bdebb45da}{check\-Bitwise\-On\-Boolean} ()
+\begin{DoxyCompactList}\small\item\em Check for using bool in bitwise expression \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a85a61547fb688c8bf64ce67cf4d18da2}{check\-Comparison\-Of\-Bool\-Expression\-With\-Int} ()
+\begin{DoxyCompactList}\small\item\em Check for comparing a bool expression with an integer other than 0 or 1 \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a6fc42aee5f8cb713dca62ac55ce87f0b}{check\-Suspicious\-Semicolon} ()
+\begin{DoxyCompactList}\small\item\em Check for suspicious use of semicolon \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a84d361852605fd3f8793aa2cadf8707b}{check\-Double\-Free} ()
+\begin{DoxyCompactList}\small\item\em Check for double free or double close operations \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_a68584128f46848a31b7bacd7a154d969}{double\-Free\-Error} (const \hyperlink{class_token}{Token} $\ast$tok, const std\-::string \&varname)
+\item 
+void \hyperlink{class_check_other_ab38394c43aeb36835bc0677ac2e4bdaa}{check\-Redundant\-Copy} ()
+\begin{DoxyCompactList}\small\item\em Check for code creating redundant copies \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_ab3b4d65cfdc8e5bd0068c412ca0f2938}{check\-Negative\-Bitwise\-Shift} ()
+\begin{DoxyCompactList}\small\item\em Check for bitwise operation with negative right operand \end{DoxyCompactList}\item 
+void \hyperlink{class_check_other_aa2fc29a029d812b89e4ac8d350b5559c}{check\-Incomplete\-Array\-Fill} ()
+\begin{DoxyCompactList}\small\item\em Check for buffers that are filled incompletely with memset and similar functions \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Various small checks. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_check_other_aa65180181ae5b00c8bf49a6557dd5153}{\index{Check\-Other@{Check\-Other}!Check\-Other@{Check\-Other}}
+\index{Check\-Other@{Check\-Other}!CheckOther@{Check\-Other}}
+\subsubsection[{Check\-Other}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Other\-::\-Check\-Other (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_other_aa65180181ae5b00c8bf49a6557dd5153}
+
+
+This constructor is used when registering the \hyperlink{class_check_class}{Check\-Class}. 
+
+\hypertarget{class_check_other_a4b02d656949fd5d999473a461c3cad97}{\index{Check\-Other@{Check\-Other}!Check\-Other@{Check\-Other}}
+\index{Check\-Other@{Check\-Other}!CheckOther@{Check\-Other}}
+\subsubsection[{Check\-Other}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Other\-::\-Check\-Other (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_other_a4b02d656949fd5d999473a461c3cad97}
+
+
+This constructor is used when running checks. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_check_other_a5dfa3ce6a66aca17ee369d4c7ab5d5e7}{\index{Check\-Other@{Check\-Other}!check\-Always\-True\-Or\-False\-String\-Compare@{check\-Always\-True\-Or\-False\-String\-Compare}}
+\index{check\-Always\-True\-Or\-False\-String\-Compare@{check\-Always\-True\-Or\-False\-String\-Compare}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Always\-True\-Or\-False\-String\-Compare}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Always\-True\-Or\-False\-String\-Compare (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a5dfa3ce6a66aca17ee369d4c7ab5d5e7}
+
+
+Check for suspicious code that compares string literals for equality 
+
+\hypertarget{class_check_other_a1065f2d88d606adf8c8f084962843574}{\index{Check\-Other@{Check\-Other}!check\-Assign\-Bool\-To\-Pointer@{check\-Assign\-Bool\-To\-Pointer}}
+\index{check\-Assign\-Bool\-To\-Pointer@{check\-Assign\-Bool\-To\-Pointer}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Assign\-Bool\-To\-Pointer}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Assign\-Bool\-To\-Pointer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a1065f2d88d606adf8c8f084962843574}
+
+
+assigning bool to pointer 
+
+\hypertarget{class_check_other_ac72e91303e4d2e4a0b5c14c490092d06}{\index{Check\-Other@{Check\-Other}!check\-Assignment\-In\-Assert@{check\-Assignment\-In\-Assert}}
+\index{check\-Assignment\-In\-Assert@{check\-Assignment\-In\-Assert}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Assignment\-In\-Assert}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Assignment\-In\-Assert (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_ac72e91303e4d2e4a0b5c14c490092d06}
+
+
+Check for assignment to a variable in an assert test 
+
+\hypertarget{class_check_other_a81e2f14a1a0b235a5f99b70bdebb45da}{\index{Check\-Other@{Check\-Other}!check\-Bitwise\-On\-Boolean@{check\-Bitwise\-On\-Boolean}}
+\index{check\-Bitwise\-On\-Boolean@{check\-Bitwise\-On\-Boolean}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Bitwise\-On\-Boolean}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Bitwise\-On\-Boolean (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a81e2f14a1a0b235a5f99b70bdebb45da}
+
+
+Check for using bool in bitwise expression 
+
+\hypertarget{class_check_other_aabef02da314ed9a7fda6d423c99da8f1}{\index{Check\-Other@{Check\-Other}!check\-C\-C\-Type\-Functions@{check\-C\-C\-Type\-Functions}}
+\index{check\-C\-C\-Type\-Functions@{check\-C\-C\-Type\-Functions}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-C\-C\-Type\-Functions}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-C\-C\-Type\-Functions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_aabef02da314ed9a7fda6d423c99da8f1}
+
+
+Check for parameters given to cctype function that do make error 
+
+\hypertarget{class_check_other_a424f217967119a37985df2615e2f2616}{\index{Check\-Other@{Check\-Other}!check\-Char\-Variable@{check\-Char\-Variable}}
+\index{check\-Char\-Variable@{check\-Char\-Variable}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Char\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Char\-Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a424f217967119a37985df2615e2f2616}
+
+
+Using char variable as array index / as operand in bit operation. 
+
+\hypertarget{class_check_other_a85a61547fb688c8bf64ce67cf4d18da2}{\index{Check\-Other@{Check\-Other}!check\-Comparison\-Of\-Bool\-Expression\-With\-Int@{check\-Comparison\-Of\-Bool\-Expression\-With\-Int}}
+\index{check\-Comparison\-Of\-Bool\-Expression\-With\-Int@{check\-Comparison\-Of\-Bool\-Expression\-With\-Int}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Comparison\-Of\-Bool\-Expression\-With\-Int}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Comparison\-Of\-Bool\-Expression\-With\-Int (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a85a61547fb688c8bf64ce67cf4d18da2}
+
+
+Check for comparing a bool expression with an integer other than 0 or 1 
+
+\hypertarget{class_check_other_aafe90e2c6e77a85d2887ebe93c8402cb}{\index{Check\-Other@{Check\-Other}!check\-Comparison\-Of\-Bool\-With\-Int@{check\-Comparison\-Of\-Bool\-With\-Int}}
+\index{check\-Comparison\-Of\-Bool\-With\-Int@{check\-Comparison\-Of\-Bool\-With\-Int}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Comparison\-Of\-Bool\-With\-Int}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Comparison\-Of\-Bool\-With\-Int (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_aafe90e2c6e77a85d2887ebe93c8402cb}
+
+
+Check for suspicious comparison of a bool and a non-\/zero (and non-\/one) value (e.\-g. \char`\"{}if (!x==4)\char`\"{}) 
+
+\hypertarget{class_check_other_a2ffbb4ce325c32ceb796265af482af62}{\index{Check\-Other@{Check\-Other}!check\-Constant\-Function\-Parameter@{check\-Constant\-Function\-Parameter}}
+\index{check\-Constant\-Function\-Parameter@{check\-Constant\-Function\-Parameter}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Constant\-Function\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Constant\-Function\-Parameter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a2ffbb4ce325c32ceb796265af482af62}
+
+
+Check for constant function parameter 
+
+\hypertarget{class_check_other_a84d361852605fd3f8793aa2cadf8707b}{\index{Check\-Other@{Check\-Other}!check\-Double\-Free@{check\-Double\-Free}}
+\index{check\-Double\-Free@{check\-Double\-Free}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Double\-Free}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Double\-Free (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a84d361852605fd3f8793aa2cadf8707b}
+
+
+Check for double free or double close operations 
+
+\hypertarget{class_check_other_a9a39143088d45e4b6643c00155510781}{\index{Check\-Other@{Check\-Other}!check\-Duplicate\-Branch@{check\-Duplicate\-Branch}}
+\index{check\-Duplicate\-Branch@{check\-Duplicate\-Branch}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Duplicate\-Branch}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Duplicate\-Branch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a9a39143088d45e4b6643c00155510781}
+
+
+Check for suspicious code where if and else branch are the same (e.\-g \char`\"{}if (a) b = true; else b = true;\char`\"{}) 
+
+\hypertarget{class_check_other_a314eb94047312b3247328279226b818a}{\index{Check\-Other@{Check\-Other}!check\-Duplicate\-Expression@{check\-Duplicate\-Expression}}
+\index{check\-Duplicate\-Expression@{check\-Duplicate\-Expression}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Duplicate\-Expression}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Duplicate\-Expression (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a314eb94047312b3247328279226b818a}
+
+
+Check for suspicious code with the same expression on both sides of operator (e.\-g \char`\"{}if (a \&\& a)\char`\"{}) 
+
+\hypertarget{class_check_other_a8355a63bd745abe6b41967e818516305}{\index{Check\-Other@{Check\-Other}!check\-Duplicate\-If@{check\-Duplicate\-If}}
+\index{check\-Duplicate\-If@{check\-Duplicate\-If}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Duplicate\-If}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Duplicate\-If (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a8355a63bd745abe6b41967e818516305}
+
+
+Check for suspicious code where multiple if have the same expression (e.\-g \char`\"{}if (a) \{ \} else if (a) \{ \}\char`\"{}) 
+
+\hypertarget{class_check_other_aa2fc29a029d812b89e4ac8d350b5559c}{\index{Check\-Other@{Check\-Other}!check\-Incomplete\-Array\-Fill@{check\-Incomplete\-Array\-Fill}}
+\index{check\-Incomplete\-Array\-Fill@{check\-Incomplete\-Array\-Fill}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Incomplete\-Array\-Fill}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Incomplete\-Array\-Fill (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_aa2fc29a029d812b89e4ac8d350b5559c}
+
+
+Check for buffers that are filled incompletely with memset and similar functions 
+
+\hypertarget{class_check_other_af9be20e48c0915b8c9a5fe2c47e9a905}{\index{Check\-Other@{Check\-Other}!check\-Incomplete\-Statement@{check\-Incomplete\-Statement}}
+\index{check\-Incomplete\-Statement@{check\-Incomplete\-Statement}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Incomplete\-Statement}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Incomplete\-Statement (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_af9be20e48c0915b8c9a5fe2c47e9a905}
+
+
+Incomplete statement. A statement that only contains a constant or variable. 
+
+\hypertarget{class_check_other_a39f8ca7f072b2edbf76d83ee4642bf67}{\index{Check\-Other@{Check\-Other}!check\-Incorrect\-Logic\-Operator@{check\-Incorrect\-Logic\-Operator}}
+\index{check\-Incorrect\-Logic\-Operator@{check\-Incorrect\-Logic\-Operator}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Incorrect\-Logic\-Operator}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Incorrect\-Logic\-Operator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a39f8ca7f072b2edbf76d83ee4642bf67}
+
+
+Check for testing for mutual exclusion over $|$$|$ 
+
+\hypertarget{class_check_other_a8653c3f990e15c739cd9198082892f6b}{\index{Check\-Other@{Check\-Other}!check\-Incorrect\-String\-Compare@{check\-Incorrect\-String\-Compare}}
+\index{check\-Incorrect\-String\-Compare@{check\-Incorrect\-String\-Compare}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Incorrect\-String\-Compare}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Incorrect\-String\-Compare (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a8653c3f990e15c739cd9198082892f6b}
+
+
+Check for using bad usage of strncmp and substr 
+
+\hypertarget{class_check_other_a88bbdbc115e7052f4f1e50ea8f353337}{\index{Check\-Other@{Check\-Other}!check\-Increment\-Boolean@{check\-Increment\-Boolean}}
+\index{check\-Increment\-Boolean@{check\-Increment\-Boolean}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Increment\-Boolean}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Increment\-Boolean (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a88bbdbc115e7052f4f1e50ea8f353337}
+
+
+Check for using postfix increment on bool 
+
+\hypertarget{class_check_other_a958ebb704a55a5bf3017df17cb8e9f0b}{\index{Check\-Other@{Check\-Other}!check\-Math\-Functions@{check\-Math\-Functions}}
+\index{check\-Math\-Functions@{check\-Math\-Functions}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Math\-Functions}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Math\-Functions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a958ebb704a55a5bf3017df17cb8e9f0b}
+
+
+Check for parameters given to math function that do not make sense 
+
+\hypertarget{class_check_other_a96c2f87cfb86f2fe4b54797b12c5d1ac}{\index{Check\-Other@{Check\-Other}!check\-Memset\-Zero\-Bytes@{check\-Memset\-Zero\-Bytes}}
+\index{check\-Memset\-Zero\-Bytes@{check\-Memset\-Zero\-Bytes}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Memset\-Zero\-Bytes}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Memset\-Zero\-Bytes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a96c2f87cfb86f2fe4b54797b12c5d1ac}
+
+
+Check for filling zero bytes with memset() 
+
+\hypertarget{class_check_other_adfbde85a587e0da9ad55909f9b7351fe}{\index{Check\-Other@{Check\-Other}!check\-Misused\-Scoped\-Object@{check\-Misused\-Scoped\-Object}}
+\index{check\-Misused\-Scoped\-Object@{check\-Misused\-Scoped\-Object}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Misused\-Scoped\-Object}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Misused\-Scoped\-Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_adfbde85a587e0da9ad55909f9b7351fe}
+
+
+Check for objects that are destroyed immediately 
+
+\hypertarget{class_check_other_afc2eba35a2d41de3ffbafc6bc5915b15}{\index{Check\-Other@{Check\-Other}!check\-Modulo\-Always\-True\-False@{check\-Modulo\-Always\-True\-False}}
+\index{check\-Modulo\-Always\-True\-False@{check\-Modulo\-Always\-True\-False}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Modulo\-Always\-True\-False}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Modulo\-Always\-True\-False (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_afc2eba35a2d41de3ffbafc6bc5915b15}
+
+
+Check for suspicious usage of modulo (e.\-g. \char`\"{}if(var \% 4 == 4)\char`\"{}) 
+
+\hypertarget{class_check_other_ab3b4d65cfdc8e5bd0068c412ca0f2938}{\index{Check\-Other@{Check\-Other}!check\-Negative\-Bitwise\-Shift@{check\-Negative\-Bitwise\-Shift}}
+\index{check\-Negative\-Bitwise\-Shift@{check\-Negative\-Bitwise\-Shift}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Negative\-Bitwise\-Shift}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Negative\-Bitwise\-Shift (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_ab3b4d65cfdc8e5bd0068c412ca0f2938}
+
+
+Check for bitwise operation with negative right operand 
+
+\hypertarget{class_check_other_a15b114bb105bf01cba4df80146f91476}{\index{Check\-Other@{Check\-Other}!check\-Redundant\-Assignment\-In\-Switch@{check\-Redundant\-Assignment\-In\-Switch}}
+\index{check\-Redundant\-Assignment\-In\-Switch@{check\-Redundant\-Assignment\-In\-Switch}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Redundant\-Assignment\-In\-Switch}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Redundant\-Assignment\-In\-Switch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a15b114bb105bf01cba4df80146f91476}
+
+
+Check for assigning to the same variable twice in a switch statement 
+
+A separate map for variables with post/pre increment/decrement has been kept since C\-A\-S\-E 1(Reduntant)\-: C\-A\-S\-E 2(N\-O\-T Reduntant)\-: C\-A\-S\-E 3(N\-O\-T Reduntant)\-: ret++; ret = 3; ret++; ret = 2; ret++; ret++;\hypertarget{class_check_other_ab38394c43aeb36835bc0677ac2e4bdaa}{\index{Check\-Other@{Check\-Other}!check\-Redundant\-Copy@{check\-Redundant\-Copy}}
+\index{check\-Redundant\-Copy@{check\-Redundant\-Copy}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Redundant\-Copy}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Redundant\-Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_ab38394c43aeb36835bc0677ac2e4bdaa}
+
+
+Check for code creating redundant copies 
+
+\hypertarget{class_check_other_a38d9fbfda11fc8d94f60224c3bd2258c}{\index{Check\-Other@{Check\-Other}!check\-Self\-Assignment@{check\-Self\-Assignment}}
+\index{check\-Self\-Assignment@{check\-Self\-Assignment}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Self\-Assignment}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Self\-Assignment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a38d9fbfda11fc8d94f60224c3bd2258c}
+
+
+Check for assigning a variable to itself 
+
+\hypertarget{class_check_other_abd9524c5229935fcc89558554cff065d}{\index{Check\-Other@{Check\-Other}!check\-Sign\-Of\-Unsigned\-Variable@{check\-Sign\-Of\-Unsigned\-Variable}}
+\index{check\-Sign\-Of\-Unsigned\-Variable@{check\-Sign\-Of\-Unsigned\-Variable}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Sign\-Of\-Unsigned\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Sign\-Of\-Unsigned\-Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_abd9524c5229935fcc89558554cff065d}
+
+
+Check for testing sign of unsigned variable 
+
+\hypertarget{class_check_other_a57bb9236b24dfe177c5c2fa2d4aaf334}{\index{Check\-Other@{Check\-Other}!check\-Sizeof\-For\-Array\-Parameter@{check\-Sizeof\-For\-Array\-Parameter}}
+\index{check\-Sizeof\-For\-Array\-Parameter@{check\-Sizeof\-For\-Array\-Parameter}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Sizeof\-For\-Array\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Sizeof\-For\-Array\-Parameter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a57bb9236b24dfe177c5c2fa2d4aaf334}
+
+
+Check for using sizeof with array given as function argument 
+
+\hypertarget{class_check_other_a25e206a096e671b00ce75e26a6fd8810}{\index{Check\-Other@{Check\-Other}!check\-Sizeof\-For\-Numeric\-Parameter@{check\-Sizeof\-For\-Numeric\-Parameter}}
+\index{check\-Sizeof\-For\-Numeric\-Parameter@{check\-Sizeof\-For\-Numeric\-Parameter}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Sizeof\-For\-Numeric\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Sizeof\-For\-Numeric\-Parameter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a25e206a096e671b00ce75e26a6fd8810}
+
+
+Check for using sizeof with numeric given as function argument 
+
+\hypertarget{class_check_other_a9845494a7f1adf15cfc72c3155dfb281}{\index{Check\-Other@{Check\-Other}!check\-Sizeof\-For\-Pointer\-Size@{check\-Sizeof\-For\-Pointer\-Size}}
+\index{check\-Sizeof\-For\-Pointer\-Size@{check\-Sizeof\-For\-Pointer\-Size}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Sizeof\-For\-Pointer\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Sizeof\-For\-Pointer\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a9845494a7f1adf15cfc72c3155dfb281}
+
+
+Check for using sizeof of a variable when allocating it 
+
+\hypertarget{class_check_other_a6fc42aee5f8cb713dca62ac55ce87f0b}{\index{Check\-Other@{Check\-Other}!check\-Suspicious\-Semicolon@{check\-Suspicious\-Semicolon}}
+\index{check\-Suspicious\-Semicolon@{check\-Suspicious\-Semicolon}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Suspicious\-Semicolon}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Suspicious\-Semicolon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a6fc42aee5f8cb713dca62ac55ce87f0b}
+
+
+Check for suspicious use of semicolon 
+
+\hypertarget{class_check_other_a7bba4f179cf90a3468a97dc2da10f47a}{\index{Check\-Other@{Check\-Other}!check\-Suspicious\-String\-Compare@{check\-Suspicious\-String\-Compare}}
+\index{check\-Suspicious\-String\-Compare@{check\-Suspicious\-String\-Compare}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Suspicious\-String\-Compare}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Suspicious\-String\-Compare (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a7bba4f179cf90a3468a97dc2da10f47a}
+
+
+Check for comparison of a string literal with a char$\ast$ variable 
+
+\hypertarget{class_check_other_a5a8c638b4a5d613de40b3d47234df3ac}{\index{Check\-Other@{Check\-Other}!check\-Switch\-Case\-Fall\-Through@{check\-Switch\-Case\-Fall\-Through}}
+\index{check\-Switch\-Case\-Fall\-Through@{check\-Switch\-Case\-Fall\-Through}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Switch\-Case\-Fall\-Through}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Switch\-Case\-Fall\-Through (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a5a8c638b4a5d613de40b3d47234df3ac}
+
+
+Check for switch case fall through without comment 
+
+\hypertarget{class_check_other_a93ea6c116fd55f6da83c3e5b143ac46a}{\index{Check\-Other@{Check\-Other}!check\-Unreachable\-Code@{check\-Unreachable\-Code}}
+\index{check\-Unreachable\-Code@{check\-Unreachable\-Code}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Unreachable\-Code}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Unreachable\-Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a93ea6c116fd55f6da83c3e5b143ac46a}
+
+
+Check for code that gets never executed, such as duplicate break statements 
+
+\hypertarget{class_check_other_ae81aa092848dcafc4cf43d8567339f8f}{\index{Check\-Other@{Check\-Other}!check\-Unsigned\-Division@{check\-Unsigned\-Division}}
+\index{check\-Unsigned\-Division@{check\-Unsigned\-Division}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Unsigned\-Division}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Unsigned\-Division (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_ae81aa092848dcafc4cf43d8567339f8f}
+
+
+Check for unsigned division 
+
+\hypertarget{class_check_other_a121c1461b4f0ccb530f128f1c9cb69e3}{\index{Check\-Other@{Check\-Other}!check\-Variable\-Scope@{check\-Variable\-Scope}}
+\index{check\-Variable\-Scope@{check\-Variable\-Scope}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Variable\-Scope}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Variable\-Scope (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a121c1461b4f0ccb530f128f1c9cb69e3}
+
+
+Check scope of variables 
+
+\hypertarget{class_check_other_a9e3e6d91a89fb71585872113b0ccece5}{\index{Check\-Other@{Check\-Other}!check\-Zero\-Division@{check\-Zero\-Division}}
+\index{check\-Zero\-Division@{check\-Zero\-Division}!CheckOther@{Check\-Other}}
+\subsubsection[{check\-Zero\-Division}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::check\-Zero\-Division (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a9e3e6d91a89fb71585872113b0ccece5}
+
+
+Check zero division 
+
+\hypertarget{class_check_other_af4322175f29f614cb5d85ce4c8cafc8e}{\index{Check\-Other@{Check\-Other}!clarify\-Calculation@{clarify\-Calculation}}
+\index{clarify\-Calculation@{clarify\-Calculation}!CheckOther@{Check\-Other}}
+\subsubsection[{clarify\-Calculation}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::clarify\-Calculation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_af4322175f29f614cb5d85ce4c8cafc8e}
+
+
+Clarify calculation for \char`\"{}.. a $\ast$ b ? ..\char`\"{}. 
+
+\hypertarget{class_check_other_a8a7e69ff8cb300d671f32fe37f3b1ed3}{\index{Check\-Other@{Check\-Other}!clarify\-Condition@{clarify\-Condition}}
+\index{clarify\-Condition@{clarify\-Condition}!CheckOther@{Check\-Other}}
+\subsubsection[{clarify\-Condition}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::clarify\-Condition (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a8a7e69ff8cb300d671f32fe37f3b1ed3}
+
+
+Suspicious condition (assignment+comparison) 
+
+\hypertarget{class_check_other_acdbde1dcc6f04f5b5a7d0e0675881f1d}{\index{Check\-Other@{Check\-Other}!clarify\-Statement@{clarify\-Statement}}
+\index{clarify\-Statement@{clarify\-Statement}!CheckOther@{Check\-Other}}
+\subsubsection[{clarify\-Statement}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::clarify\-Statement (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_acdbde1dcc6f04f5b5a7d0e0675881f1d}
+
+
+Suspicious statement like '$\ast$\-A++;'. 
+
+\hypertarget{class_check_other_a68584128f46848a31b7bacd7a154d969}{\index{Check\-Other@{Check\-Other}!double\-Free\-Error@{double\-Free\-Error}}
+\index{double\-Free\-Error@{double\-Free\-Error}!CheckOther@{Check\-Other}}
+\subsubsection[{double\-Free\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::double\-Free\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const std\-::string \&}]{varname}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a68584128f46848a31b7bacd7a154d969}
+\hypertarget{class_check_other_aefaa2b1fde574dcbccb891aa1d16410a}{\index{Check\-Other@{Check\-Other}!invalid\-Function\-Usage@{invalid\-Function\-Usage}}
+\index{invalid\-Function\-Usage@{invalid\-Function\-Usage}!CheckOther@{Check\-Other}}
+\subsubsection[{invalid\-Function\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::invalid\-Function\-Usage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_aefaa2b1fde574dcbccb891aa1d16410a}
+
+
+Invalid function usage (invalid radix / overlapping data) 
+
+Check that given function parameters are valid according to the standard
+\begin{DoxyItemize}
+\item wrong radix given for strtol/strtoul
+\item overlapping data when using sprintf/snprintf 
+\end{DoxyItemize}\hypertarget{class_check_other_aebf615c9ae7404446033ab23e6739feb}{\index{Check\-Other@{Check\-Other}!invalid\-Pointer\-Cast@{invalid\-Pointer\-Cast}}
+\index{invalid\-Pointer\-Cast@{invalid\-Pointer\-Cast}!CheckOther@{Check\-Other}}
+\subsubsection[{invalid\-Pointer\-Cast}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::invalid\-Pointer\-Cast (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_aebf615c9ae7404446033ab23e6739feb}
+
+
+\hyperlink{class_check}{Check} for pointer casts to a type with an incompatible binary data representation. 
+
+\hypertarget{class_check_other_a50fc19b30e6c5f7d5a4e5f203b97e688}{\index{Check\-Other@{Check\-Other}!lookup\-Var@{lookup\-Var}}
+\index{lookup\-Var@{lookup\-Var}!CheckOther@{Check\-Other}}
+\subsubsection[{lookup\-Var}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::lookup\-Var (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const {\bf Variable} $\ast$}]{var}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a50fc19b30e6c5f7d5a4e5f203b97e688}
+\hypertarget{class_check_other_a15ba42e338f836e56693f9f9ffedd573}{\index{Check\-Other@{Check\-Other}!run\-Checks@{run\-Checks}}
+\index{run\-Checks@{run\-Checks}!CheckOther@{Check\-Other}}
+\subsubsection[{run\-Checks}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::run\-Checks (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_other_a15ba42e338f836e56693f9f9ffedd573}
+
+
+Run checks against the normal token list. 
+
+
+
+Reimplemented from \hyperlink{class_check_a939af1c75d133393021036e73ca57cc4}{Check}.
+
+\hypertarget{class_check_other_ab228c1811e7cdacca4a561aa36d00bd5}{\index{Check\-Other@{Check\-Other}!run\-Simplified\-Checks@{run\-Simplified\-Checks}}
+\index{run\-Simplified\-Checks@{run\-Simplified\-Checks}!CheckOther@{Check\-Other}}
+\subsubsection[{run\-Simplified\-Checks}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::run\-Simplified\-Checks (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_other_ab228c1811e7cdacca4a561aa36d00bd5}
+
+
+Run checks against the simplified token list. 
+
+
+
+Implements \hyperlink{class_check_a112445eed1625599b93c69aab4701e5e}{Check}.
+
+\hypertarget{class_check_other_aad93a233f3e599fcc7f030db215ffc83}{\index{Check\-Other@{Check\-Other}!sizeof\-Calculation@{sizeof\-Calculation}}
+\index{sizeof\-Calculation@{sizeof\-Calculation}!CheckOther@{Check\-Other}}
+\subsubsection[{sizeof\-Calculation}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::sizeof\-Calculation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_aad93a233f3e599fcc7f030db215ffc83}
+
+
+Check for calculations inside sizeof 
+
+\hypertarget{class_check_other_a43253706e9282c135b4815a93b5f3f45}{\index{Check\-Other@{Check\-Other}!sizeofsizeof@{sizeofsizeof}}
+\index{sizeofsizeof@{sizeofsizeof}!CheckOther@{Check\-Other}}
+\subsubsection[{sizeofsizeof}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::sizeofsizeof (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a43253706e9282c135b4815a93b5f3f45}
+
+
+Check for 'sizeof sizeof ..' 
+
+\hypertarget{class_check_other_a61bef9a40729ca203432a5c243de6c3f}{\index{Check\-Other@{Check\-Other}!str\-Plus\-Char@{str\-Plus\-Char}}
+\index{str\-Plus\-Char@{str\-Plus\-Char}!CheckOther@{Check\-Other}}
+\subsubsection[{str\-Plus\-Char}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::str\-Plus\-Char (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a61bef9a40729ca203432a5c243de6c3f}
+
+
+str plus char (unusual pointer arithmetic) 
+
+\hypertarget{class_check_other_a27b6a1d09101569f2c4596560654e72f}{\index{Check\-Other@{Check\-Other}!warning\-Old\-Style\-Pointer\-Cast@{warning\-Old\-Style\-Pointer\-Cast}}
+\index{warning\-Old\-Style\-Pointer\-Cast@{warning\-Old\-Style\-Pointer\-Cast}!CheckOther@{Check\-Other}}
+\subsubsection[{warning\-Old\-Style\-Pointer\-Cast}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Other\-::warning\-Old\-Style\-Pointer\-Cast (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_other_a27b6a1d09101569f2c4596560654e72f}
+
+
+Are there C-\/style pointer casts in a c++ file? 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{checkother_8h}{checkother.\-h}\item 
+gui/test/data/benchmark/\hyperlink{simple_8cpp}{simple.\-cpp}\item 
+lib/\hyperlink{checkother_8cpp}{checkother.\-cpp}\end{DoxyCompactItemize}

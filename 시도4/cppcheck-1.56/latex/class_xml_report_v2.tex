@@ -1,0 +1,187 @@
+\hypertarget{class_xml_report_v2}{\section{Xml\-Report\-V2 Class Reference}
+\label{class_xml_report_v2}\index{Xml\-Report\-V2@{Xml\-Report\-V2}}
+}
+
+
+X\-M\-L file report version 2. This report outputs X\-M\-L-\/formatted report. The X\-M\-L format must match command line version's X\-M\-L output.  
+
+
+
+
+{\ttfamily \#include $<$xmlreportv2.\-h$>$}
+
+Inheritance diagram for Xml\-Report\-V2\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_xml_report_v2}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_xml_report_v2_a6d62f9aba9d9d7dc86ba332958c00791}{Xml\-Report\-V2} (const Q\-String \&filename, Q\-Object $\ast$parent=0)
+\item 
+virtual \hyperlink{class_xml_report_v2_a83baaf942f9aea714936bd78dc0653de}{$\sim$\-Xml\-Report\-V2} ()
+\item 
+virtual bool \hyperlink{class_xml_report_v2_aa111ee5e6d9eed7c8ef3ea981170ad00}{Create} ()
+\begin{DoxyCompactList}\small\item\em Create the report (file). \end{DoxyCompactList}\item 
+bool \hyperlink{class_xml_report_v2_a2d85311ff62d2ae9b60b95ffc549c438}{Open} ()
+\begin{DoxyCompactList}\small\item\em Open existing report file. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_xml_report_v2_ab1ab90f787ce58301c956e69d375b312}{Write\-Header} ()
+\begin{DoxyCompactList}\small\item\em Write report header. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_xml_report_v2_adb5ae38ea29c981a5b23526c41b60c57}{Write\-Footer} ()
+\begin{DoxyCompactList}\small\item\em Write report footer. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_xml_report_v2_a4fb22a648c9b703b9d134eb36e47547c}{Write\-Error} (const \hyperlink{class_error_item}{Error\-Item} \&error)
+\begin{DoxyCompactList}\small\item\em Write error to report. \end{DoxyCompactList}\item 
+virtual Q\-List$<$ \hyperlink{class_error_item}{Error\-Item} $>$ \hyperlink{class_xml_report_v2_a98504e1389bba9a08f6e4a123093a02a}{Read} ()
+\begin{DoxyCompactList}\small\item\em Read contents of the report file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_error_item}{Error\-Item} \hyperlink{class_xml_report_v2_ad1e228ee7b1cf24ece626bebb5378b15}{Read\-Error} (Q\-Xml\-Stream\-Reader $\ast$reader)
+\begin{DoxyCompactList}\small\item\em Read and parse error item from X\-M\-L stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+X\-M\-L file report version 2. This report outputs X\-M\-L-\/formatted report. The X\-M\-L format must match command line version's X\-M\-L output. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_xml_report_v2_a6d62f9aba9d9d7dc86ba332958c00791}{\index{Xml\-Report\-V2@{Xml\-Report\-V2}!Xml\-Report\-V2@{Xml\-Report\-V2}}
+\index{Xml\-Report\-V2@{Xml\-Report\-V2}!XmlReportV2@{Xml\-Report\-V2}}
+\subsubsection[{Xml\-Report\-V2}]{\setlength{\rightskip}{0pt plus 5cm}Xml\-Report\-V2\-::\-Xml\-Report\-V2 (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{filename, }
+\item[{Q\-Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_xml_report_v2_a6d62f9aba9d9d7dc86ba332958c00791}
+\hypertarget{class_xml_report_v2_a83baaf942f9aea714936bd78dc0653de}{\index{Xml\-Report\-V2@{Xml\-Report\-V2}!$\sim$\-Xml\-Report\-V2@{$\sim$\-Xml\-Report\-V2}}
+\index{$\sim$\-Xml\-Report\-V2@{$\sim$\-Xml\-Report\-V2}!XmlReportV2@{Xml\-Report\-V2}}
+\subsubsection[{$\sim$\-Xml\-Report\-V2}]{\setlength{\rightskip}{0pt plus 5cm}Xml\-Report\-V2\-::$\sim$\-Xml\-Report\-V2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_xml_report_v2_a83baaf942f9aea714936bd78dc0653de}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_xml_report_v2_aa111ee5e6d9eed7c8ef3ea981170ad00}{\index{Xml\-Report\-V2@{Xml\-Report\-V2}!Create@{Create}}
+\index{Create@{Create}!XmlReportV2@{Xml\-Report\-V2}}
+\subsubsection[{Create}]{\setlength{\rightskip}{0pt plus 5cm}bool Xml\-Report\-V2\-::\-Create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_xml_report_v2_aa111ee5e6d9eed7c8ef3ea981170ad00}
+
+
+Create the report (file). 
+
+\begin{DoxyReturn}{Returns}
+true if succeeded, false if file could not be created. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_report_a88760dc5f1c98b8c32ffc41c3591bb46}{Report}.
+
+\hypertarget{class_xml_report_v2_a2d85311ff62d2ae9b60b95ffc549c438}{\index{Xml\-Report\-V2@{Xml\-Report\-V2}!Open@{Open}}
+\index{Open@{Open}!XmlReportV2@{Xml\-Report\-V2}}
+\subsubsection[{Open}]{\setlength{\rightskip}{0pt plus 5cm}bool Xml\-Report\-V2\-::\-Open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_xml_report_v2_a2d85311ff62d2ae9b60b95ffc549c438}
+
+
+Open existing report file. 
+
+
+
+Reimplemented from \hyperlink{class_report_a58abe284bf88f1ac50a8d4a08991a383}{Report}.
+
+\hypertarget{class_xml_report_v2_a98504e1389bba9a08f6e4a123093a02a}{\index{Xml\-Report\-V2@{Xml\-Report\-V2}!Read@{Read}}
+\index{Read@{Read}!XmlReportV2@{Xml\-Report\-V2}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<$ {\bf Error\-Item} $>$ Xml\-Report\-V2\-::\-Read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_xml_report_v2_a98504e1389bba9a08f6e4a123093a02a}
+
+
+Read contents of the report file. 
+
+
+
+Implements \hyperlink{class_xml_report_a2ee0964329a242d406c37a4bbb23fff0}{Xml\-Report}.
+
+\hypertarget{class_xml_report_v2_ad1e228ee7b1cf24ece626bebb5378b15}{\index{Xml\-Report\-V2@{Xml\-Report\-V2}!Read\-Error@{Read\-Error}}
+\index{Read\-Error@{Read\-Error}!XmlReportV2@{Xml\-Report\-V2}}
+\subsubsection[{Read\-Error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\-Item} Xml\-Report\-V2\-::\-Read\-Error (
+\begin{DoxyParamCaption}
+\item[{Q\-Xml\-Stream\-Reader $\ast$}]{reader}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_xml_report_v2_ad1e228ee7b1cf24ece626bebb5378b15}
+
+
+Read and parse error item from X\-M\-L stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & X\-M\-L stream reader to use. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_xml_report_v2_a4fb22a648c9b703b9d134eb36e47547c}{\index{Xml\-Report\-V2@{Xml\-Report\-V2}!Write\-Error@{Write\-Error}}
+\index{Write\-Error@{Write\-Error}!XmlReportV2@{Xml\-Report\-V2}}
+\subsubsection[{Write\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Xml\-Report\-V2\-::\-Write\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\-Item} \&}]{error}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_xml_report_v2_a4fb22a648c9b703b9d134eb36e47547c}
+
+
+Write error to report. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & Error data. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_report_adcef6595b7f9c402ba9f23b9c1a1559f}{Report}.
+
+\hypertarget{class_xml_report_v2_adb5ae38ea29c981a5b23526c41b60c57}{\index{Xml\-Report\-V2@{Xml\-Report\-V2}!Write\-Footer@{Write\-Footer}}
+\index{Write\-Footer@{Write\-Footer}!XmlReportV2@{Xml\-Report\-V2}}
+\subsubsection[{Write\-Footer}]{\setlength{\rightskip}{0pt plus 5cm}void Xml\-Report\-V2\-::\-Write\-Footer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_xml_report_v2_adb5ae38ea29c981a5b23526c41b60c57}
+
+
+Write report footer. 
+
+
+
+Implements \hyperlink{class_report_a9c0d8bf828c36444c2b464f2227005c6}{Report}.
+
+\hypertarget{class_xml_report_v2_ab1ab90f787ce58301c956e69d375b312}{\index{Xml\-Report\-V2@{Xml\-Report\-V2}!Write\-Header@{Write\-Header}}
+\index{Write\-Header@{Write\-Header}!XmlReportV2@{Xml\-Report\-V2}}
+\subsubsection[{Write\-Header}]{\setlength{\rightskip}{0pt plus 5cm}void Xml\-Report\-V2\-::\-Write\-Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_xml_report_v2_ab1ab90f787ce58301c956e69d375b312}
+
+
+Write report header. 
+
+
+
+Implements \hyperlink{class_report_abff44ec133e16b06ee1d4232f1142d0a}{Report}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{xmlreportv2_8h}{xmlreportv2.\-h}\item 
+gui/\hyperlink{xmlreportv2_8cpp}{xmlreportv2.\-cpp}\end{DoxyCompactItemize}

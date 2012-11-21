@@ -1,0 +1,148 @@
+\hypertarget{class_variables_1_1_variable_usage}{\section{Variables\-:\-:Variable\-Usage Class Reference}
+\label{class_variables_1_1_variable_usage}\index{Variables\-::\-Variable\-Usage@{Variables\-::\-Variable\-Usage}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_variables_1_1_variable_usage_a831e53f8072ab16f48c5c3805a9cd721}{Variable\-Usage} (const \hyperlink{class_token}{Token} $\ast$name=0, \hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6}{Variable\-Type} type=\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa34a76d3845e9a44b518da0d2026adc3}{standard}, \hyperlink{class_scope_info}{Scope\-Info} $\ast$scope=N\-U\-L\-L, bool \hyperlink{class_variables_ab88a423ae0e238a45ecbdf6f2f21f524}{read}=false, bool \hyperlink{class_variables_a8998a3dfc5cd4e073b67b314c92f59f3}{write}=false, bool \hyperlink{class_variables_a1c4d49dba6f320283d1b068daad65ba2}{modified}=false, bool \hyperlink{class_variables_a5a93b5a3558b8f65747ff749c633a757}{allocate\-Memory}=false)
+\item 
+void \hyperlink{class_variables_1_1_variable_usage_a16a66659070f51af3a0c58ea42e4e6ea}{use} ()
+\item 
+bool \hyperlink{class_variables_1_1_variable_usage_a19efa9be3996f8fbac3e3053704d519b}{unused} () const 
+\item 
+\hyperlink{class_variables_1_1_variable_usage_ae35ef17af78b6c94d73c74866b06fdc6}{Variable\-Usage} (const \hyperlink{class_token}{Token} $\ast$name=0, \hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6}{Variable\-Type} type=\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa34a76d3845e9a44b518da0d2026adc3}{standard}, const \hyperlink{class_scope}{Scope} $\ast$scope=N\-U\-L\-L, bool \hyperlink{class_variables_ab88a423ae0e238a45ecbdf6f2f21f524}{read}=false, bool \hyperlink{class_variables_a8998a3dfc5cd4e073b67b314c92f59f3}{write}=false, bool \hyperlink{class_variables_a1c4d49dba6f320283d1b068daad65ba2}{modified}=false, bool \hyperlink{class_variables_a5a93b5a3558b8f65747ff749c633a757}{allocate\-Memory}=false)
+\item 
+void \hyperlink{class_variables_1_1_variable_usage_a16a66659070f51af3a0c58ea42e4e6ea}{use} ()
+\item 
+bool \hyperlink{class_variables_1_1_variable_usage_a19efa9be3996f8fbac3e3053704d519b}{unused} () const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_variables_1_1_variable_usage_ab8194156ce508b6246c4aab32d0eb568}{\-\_\-name}
+\item 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6}{Variable\-Type} \hyperlink{class_variables_1_1_variable_usage_a0a62412f6544ea9bc298eec96e04fe30}{\-\_\-type}
+\item 
+\hyperlink{class_scope_info}{Scope\-Info} $\ast$ \hyperlink{class_variables_1_1_variable_usage_a8c816e5988dcdf7aca3909ec7772cf43}{\-\_\-scope}
+\item 
+bool \hyperlink{class_variables_1_1_variable_usage_acc9633f1a38a4196f1b824fb5cde94bd}{\-\_\-read}
+\item 
+bool \hyperlink{class_variables_1_1_variable_usage_a5e3ffabcd11826559744904877088aad}{\-\_\-write}
+\item 
+bool \hyperlink{class_variables_1_1_variable_usage_ace627987ffa49dd9a7db0471d057abe4}{\-\_\-modified}
+\item 
+bool \hyperlink{class_variables_1_1_variable_usage_a5741213a6dd74bcd1358b288c86bd455}{\-\_\-allocate\-Memory}
+\item 
+std\-::set$<$ unsigned int $>$ \hyperlink{class_variables_1_1_variable_usage_affb574d671d4bd26157faac587931e3c}{\-\_\-aliases}
+\item 
+std\-::set$<$ \hyperlink{class_scope_info}{Scope\-Info} $\ast$ $>$ \hyperlink{class_variables_1_1_variable_usage_ab8ea544aaf7d6bcb483064da497002f0}{\-\_\-assignments}
+\item 
+std\-::set$<$ const \hyperlink{class_scope}{Scope} $\ast$ $>$ \hyperlink{class_variables_1_1_variable_usage_afa7089f2e61d22540f2337033ff80ece}{\-\_\-assignments}
+\item 
+const \hyperlink{class_scope}{Scope} $\ast$ \hyperlink{class_variables_1_1_variable_usage_a5aeafaa3bb6cdc2afac0d117b0f416b3}{\-\_\-scope}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Store information about variable usage 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_variables_1_1_variable_usage_a831e53f8072ab16f48c5c3805a9cd721}{\index{Variables\-::\-Variable\-Usage@{Variables\-::\-Variable\-Usage}!Variable\-Usage@{Variable\-Usage}}
+\index{Variable\-Usage@{Variable\-Usage}!Variables::VariableUsage@{Variables\-::\-Variable\-Usage}}
+\subsubsection[{Variable\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}Variables\-::\-Variable\-Usage\-::\-Variable\-Usage (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{name = {\ttfamily 0}, }
+\item[{{\bf Variable\-Type}}]{type = {\ttfamily {\bf standard}}, }
+\item[{{\bf Scope\-Info} $\ast$}]{scope = {\ttfamily NULL}, }
+\item[{bool}]{read = {\ttfamily false}, }
+\item[{bool}]{write = {\ttfamily false}, }
+\item[{bool}]{modified = {\ttfamily false}, }
+\item[{bool}]{allocate\-Memory = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variables_1_1_variable_usage_a831e53f8072ab16f48c5c3805a9cd721}
+\hypertarget{class_variables_1_1_variable_usage_ae35ef17af78b6c94d73c74866b06fdc6}{\index{Variables\-::\-Variable\-Usage@{Variables\-::\-Variable\-Usage}!Variable\-Usage@{Variable\-Usage}}
+\index{Variable\-Usage@{Variable\-Usage}!Variables::VariableUsage@{Variables\-::\-Variable\-Usage}}
+\subsubsection[{Variable\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}Variables\-::\-Variable\-Usage\-::\-Variable\-Usage (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{name = {\ttfamily 0}, }
+\item[{{\bf Variable\-Type}}]{type = {\ttfamily {\bf standard}}, }
+\item[{const {\bf Scope} $\ast$}]{scope = {\ttfamily NULL}, }
+\item[{bool}]{read = {\ttfamily false}, }
+\item[{bool}]{write = {\ttfamily false}, }
+\item[{bool}]{modified = {\ttfamily false}, }
+\item[{bool}]{allocate\-Memory = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variables_1_1_variable_usage_ae35ef17af78b6c94d73c74866b06fdc6}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_variables_1_1_variable_usage_a19efa9be3996f8fbac3e3053704d519b}{\index{Variables\-::\-Variable\-Usage@{Variables\-::\-Variable\-Usage}!unused@{unused}}
+\index{unused@{unused}!Variables::VariableUsage@{Variables\-::\-Variable\-Usage}}
+\subsubsection[{unused}]{\setlength{\rightskip}{0pt plus 5cm}bool Variables\-::\-Variable\-Usage\-::unused (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variables_1_1_variable_usage_a19efa9be3996f8fbac3e3053704d519b}
+is variable unused? \hypertarget{class_variables_1_1_variable_usage_a19efa9be3996f8fbac3e3053704d519b}{\index{Variables\-::\-Variable\-Usage@{Variables\-::\-Variable\-Usage}!unused@{unused}}
+\index{unused@{unused}!Variables::VariableUsage@{Variables\-::\-Variable\-Usage}}
+\subsubsection[{unused}]{\setlength{\rightskip}{0pt plus 5cm}bool Variables\-::\-Variable\-Usage\-::unused (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variables_1_1_variable_usage_a19efa9be3996f8fbac3e3053704d519b}
+is variable unused? \hypertarget{class_variables_1_1_variable_usage_a16a66659070f51af3a0c58ea42e4e6ea}{\index{Variables\-::\-Variable\-Usage@{Variables\-::\-Variable\-Usage}!use@{use}}
+\index{use@{use}!Variables::VariableUsage@{Variables\-::\-Variable\-Usage}}
+\subsubsection[{use}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::\-Variable\-Usage\-::use (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variables_1_1_variable_usage_a16a66659070f51af3a0c58ea42e4e6ea}
+variable is used.. set both read+write \hypertarget{class_variables_1_1_variable_usage_a16a66659070f51af3a0c58ea42e4e6ea}{\index{Variables\-::\-Variable\-Usage@{Variables\-::\-Variable\-Usage}!use@{use}}
+\index{use@{use}!Variables::VariableUsage@{Variables\-::\-Variable\-Usage}}
+\subsubsection[{use}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::\-Variable\-Usage\-::use (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variables_1_1_variable_usage_a16a66659070f51af3a0c58ea42e4e6ea}
+variable is used.. set both read+write 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_variables_1_1_variable_usage_affb574d671d4bd26157faac587931e3c}{\index{Variables\-::\-Variable\-Usage@{Variables\-::\-Variable\-Usage}!\-\_\-aliases@{\-\_\-aliases}}
+\index{\-\_\-aliases@{\-\_\-aliases}!Variables::VariableUsage@{Variables\-::\-Variable\-Usage}}
+\subsubsection[{\-\_\-aliases}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<$ unsigned int $>$ Variables\-::\-Variable\-Usage\-::\-\_\-aliases}}\label{class_variables_1_1_variable_usage_affb574d671d4bd26157faac587931e3c}
+\hypertarget{class_variables_1_1_variable_usage_a5741213a6dd74bcd1358b288c86bd455}{\index{Variables\-::\-Variable\-Usage@{Variables\-::\-Variable\-Usage}!\-\_\-allocate\-Memory@{\-\_\-allocate\-Memory}}
+\index{\-\_\-allocate\-Memory@{\-\_\-allocate\-Memory}!Variables::VariableUsage@{Variables\-::\-Variable\-Usage}}
+\subsubsection[{\-\_\-allocate\-Memory}]{\setlength{\rightskip}{0pt plus 5cm}bool Variables\-::\-Variable\-Usage\-::\-\_\-allocate\-Memory}}\label{class_variables_1_1_variable_usage_a5741213a6dd74bcd1358b288c86bd455}
+\hypertarget{class_variables_1_1_variable_usage_afa7089f2e61d22540f2337033ff80ece}{\index{Variables\-::\-Variable\-Usage@{Variables\-::\-Variable\-Usage}!\-\_\-assignments@{\-\_\-assignments}}
+\index{\-\_\-assignments@{\-\_\-assignments}!Variables::VariableUsage@{Variables\-::\-Variable\-Usage}}
+\subsubsection[{\-\_\-assignments}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<$const {\bf Scope}$\ast$$>$ Variables\-::\-Variable\-Usage\-::\-\_\-assignments}}\label{class_variables_1_1_variable_usage_afa7089f2e61d22540f2337033ff80ece}
+\hypertarget{class_variables_1_1_variable_usage_ab8ea544aaf7d6bcb483064da497002f0}{\index{Variables\-::\-Variable\-Usage@{Variables\-::\-Variable\-Usage}!\-\_\-assignments@{\-\_\-assignments}}
+\index{\-\_\-assignments@{\-\_\-assignments}!Variables::VariableUsage@{Variables\-::\-Variable\-Usage}}
+\subsubsection[{\-\_\-assignments}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<${\bf Scope\-Info} $\ast$$>$ Variables\-::\-Variable\-Usage\-::\-\_\-assignments}}\label{class_variables_1_1_variable_usage_ab8ea544aaf7d6bcb483064da497002f0}
+\hypertarget{class_variables_1_1_variable_usage_ace627987ffa49dd9a7db0471d057abe4}{\index{Variables\-::\-Variable\-Usage@{Variables\-::\-Variable\-Usage}!\-\_\-modified@{\-\_\-modified}}
+\index{\-\_\-modified@{\-\_\-modified}!Variables::VariableUsage@{Variables\-::\-Variable\-Usage}}
+\subsubsection[{\-\_\-modified}]{\setlength{\rightskip}{0pt plus 5cm}bool Variables\-::\-Variable\-Usage\-::\-\_\-modified}}\label{class_variables_1_1_variable_usage_ace627987ffa49dd9a7db0471d057abe4}
+\hypertarget{class_variables_1_1_variable_usage_ab8194156ce508b6246c4aab32d0eb568}{\index{Variables\-::\-Variable\-Usage@{Variables\-::\-Variable\-Usage}!\-\_\-name@{\-\_\-name}}
+\index{\-\_\-name@{\-\_\-name}!Variables::VariableUsage@{Variables\-::\-Variable\-Usage}}
+\subsubsection[{\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token} $\ast$ Variables\-::\-Variable\-Usage\-::\-\_\-name}}\label{class_variables_1_1_variable_usage_ab8194156ce508b6246c4aab32d0eb568}
+\hypertarget{class_variables_1_1_variable_usage_acc9633f1a38a4196f1b824fb5cde94bd}{\index{Variables\-::\-Variable\-Usage@{Variables\-::\-Variable\-Usage}!\-\_\-read@{\-\_\-read}}
+\index{\-\_\-read@{\-\_\-read}!Variables::VariableUsage@{Variables\-::\-Variable\-Usage}}
+\subsubsection[{\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}bool Variables\-::\-Variable\-Usage\-::\-\_\-read}}\label{class_variables_1_1_variable_usage_acc9633f1a38a4196f1b824fb5cde94bd}
+\hypertarget{class_variables_1_1_variable_usage_a5aeafaa3bb6cdc2afac0d117b0f416b3}{\index{Variables\-::\-Variable\-Usage@{Variables\-::\-Variable\-Usage}!\-\_\-scope@{\-\_\-scope}}
+\index{\-\_\-scope@{\-\_\-scope}!Variables::VariableUsage@{Variables\-::\-Variable\-Usage}}
+\subsubsection[{\-\_\-scope}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Scope}$\ast$ Variables\-::\-Variable\-Usage\-::\-\_\-scope}}\label{class_variables_1_1_variable_usage_a5aeafaa3bb6cdc2afac0d117b0f416b3}
+\hypertarget{class_variables_1_1_variable_usage_a8c816e5988dcdf7aca3909ec7772cf43}{\index{Variables\-::\-Variable\-Usage@{Variables\-::\-Variable\-Usage}!\-\_\-scope@{\-\_\-scope}}
+\index{\-\_\-scope@{\-\_\-scope}!Variables::VariableUsage@{Variables\-::\-Variable\-Usage}}
+\subsubsection[{\-\_\-scope}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scope\-Info}$\ast$ Variables\-::\-Variable\-Usage\-::\-\_\-scope}}\label{class_variables_1_1_variable_usage_a8c816e5988dcdf7aca3909ec7772cf43}
+\hypertarget{class_variables_1_1_variable_usage_a0a62412f6544ea9bc298eec96e04fe30}{\index{Variables\-::\-Variable\-Usage@{Variables\-::\-Variable\-Usage}!\-\_\-type@{\-\_\-type}}
+\index{\-\_\-type@{\-\_\-type}!Variables::VariableUsage@{Variables\-::\-Variable\-Usage}}
+\subsubsection[{\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable\-Type} Variables\-::\-Variable\-Usage\-::\-\_\-type}}\label{class_variables_1_1_variable_usage_a0a62412f6544ea9bc298eec96e04fe30}
+\hypertarget{class_variables_1_1_variable_usage_a5e3ffabcd11826559744904877088aad}{\index{Variables\-::\-Variable\-Usage@{Variables\-::\-Variable\-Usage}!\-\_\-write@{\-\_\-write}}
+\index{\-\_\-write@{\-\_\-write}!Variables::VariableUsage@{Variables\-::\-Variable\-Usage}}
+\subsubsection[{\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}bool Variables\-::\-Variable\-Usage\-::\-\_\-write}}\label{class_variables_1_1_variable_usage_a5e3ffabcd11826559744904877088aad}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/test/data/benchmark/\hyperlink{simple_8cpp}{simple.\-cpp}\item 
+lib/\hyperlink{checkunusedvar_8cpp}{checkunusedvar.\-cpp}\end{DoxyCompactItemize}

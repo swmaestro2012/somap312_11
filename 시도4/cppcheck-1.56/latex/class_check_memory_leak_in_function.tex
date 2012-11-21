@@ -1,0 +1,320 @@
+\hypertarget{class_check_memory_leak_in_function}{\section{Check\-Memory\-Leak\-In\-Function Class Reference}
+\label{class_check_memory_leak_in_function}\index{Check\-Memory\-Leak\-In\-Function@{Check\-Memory\-Leak\-In\-Function}}
+}
+
+
+Check\-Memory\-Leak\-In\-Function detects when a function variable is allocated but not deallocated properly.  
+
+
+
+
+{\ttfamily \#include $<$checkmemoryleak.\-h$>$}
+
+Inheritance diagram for Check\-Memory\-Leak\-In\-Function\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_check_memory_leak_in_function}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_check_memory_leak_in_function_a1430a34dbf750b3515b28924c1c5b288}{Check\-Memory\-Leak\-In\-Function} ()
+\begin{DoxyCompactList}\small\item\em This constructor is used when registering this class. \end{DoxyCompactList}\item 
+\hyperlink{class_check_memory_leak_in_function_aeb98724805ffb0a866283d2749b771c0}{Check\-Memory\-Leak\-In\-Function} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizr, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$err\-Log)
+\begin{DoxyCompactList}\small\item\em This constructor is used when running checks. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_memory_leak_in_function_a3796e71d1d94ba6e8440561f30c9116c}{run\-Simplified\-Checks} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizr, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$err\-Log)
+\begin{DoxyCompactList}\small\item\em run all simplified checks \end{DoxyCompactList}\item 
+void \hyperlink{class_check_memory_leak_in_function_a765744d86a1643b51f89145fa5cd2b80}{check} ()
+\begin{DoxyCompactList}\small\item\em Perform checking. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_memory_leak_in_function_a3b23fe4d9c6aeeffd3700dde5fe8d837}{check\-Realloc\-Usage} ()
+\item 
+bool \hyperlink{class_check_memory_leak_in_function_a5a82b2db092deb642b887fd24f4cad8f}{notvar} (const \hyperlink{class_token}{Token} $\ast$tok, unsigned int varid, bool endpar=false) const 
+\begin{DoxyCompactList}\small\item\em Check if there is a \char`\"{}!var\char`\"{} match inside a condition \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_check_memory_leak_in_function_ad5de6453dc31ac22af41b26369bfdce9}{call\-\_\-func} (const \hyperlink{class_token}{Token} $\ast$tok, std\-::list$<$ const \hyperlink{class_token}{Token} $\ast$ $>$ callstack, const unsigned int varid, \hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51ede}{Alloc\-Type} \&alloctype, \hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51ede}{Alloc\-Type} \&dealloctype, bool \&allocpar, unsigned int sz)
+\item 
+\hyperlink{class_token}{Token} $\ast$ \hyperlink{class_check_memory_leak_in_function_a801919f8ba79b1ce5d384ba1c2c877b7}{getcode} (const \hyperlink{class_token}{Token} $\ast$tok, std\-::list$<$ const \hyperlink{class_token}{Token} $\ast$ $>$ callstack, const unsigned int varid, \hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51ede}{Alloc\-Type} \&alloctype, \hyperlink{class_check_memory_leak_ada9e7f7d0af2d8ba771a42d427f51ede}{Alloc\-Type} \&dealloctype, bool classmember, unsigned int sz)
+\item 
+void \hyperlink{class_check_memory_leak_in_function_a0a8ea7cea5f1e0bc1f6857c7348c61c9}{simplifycode} (\hyperlink{class_token}{Token} $\ast$tok) const 
+\item 
+void \hyperlink{class_check_memory_leak_in_function_a4eefe783ba9711813f40557c3a5d36dd}{check\-Scope} (const \hyperlink{class_token}{Token} $\ast$Tok1, const std\-::string \&varname, unsigned int varid, bool classmember, unsigned int sz)
+\item 
+void \hyperlink{class_check_memory_leak_in_function_a7145c33cb87130c9cb4d622f6c7b5321}{parse\-\_\-noreturn} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_check_memory_leak_in_function_ae1337569b44179a2e7f46a4ad9a84738}{test\-\_\-white\-\_\-list} (const std\-::string \&funcname)
+\begin{DoxyCompactList}\small\item\em Unit testing \-: testing the white list. \end{DoxyCompactList}\item 
+static const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_check_memory_leak_in_function_a13b0f525339e1b1e4136ffef20ae9eb6}{findleak} (const \hyperlink{class_token}{Token} $\ast$tokens)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Check\-Memory\-Leak\-In\-Function detects when a function variable is allocated but not deallocated properly. 
+
+The checking is done by looking at each function variable separately. By repeating these 4 steps over and over\-:
+\begin{DoxyEnumerate}
+\item locate a function variable
+\item create a simple token list that describes the usage of the function variable.
+\item simplify the token list.
+\item finally, check if the simplified token list contain any leaks. 
+\end{DoxyEnumerate}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_check_memory_leak_in_function_a1430a34dbf750b3515b28924c1c5b288}{\index{Check\-Memory\-Leak\-In\-Function@{Check\-Memory\-Leak\-In\-Function}!Check\-Memory\-Leak\-In\-Function@{Check\-Memory\-Leak\-In\-Function}}
+\index{Check\-Memory\-Leak\-In\-Function@{Check\-Memory\-Leak\-In\-Function}!CheckMemoryLeakInFunction@{Check\-Memory\-Leak\-In\-Function}}
+\subsubsection[{Check\-Memory\-Leak\-In\-Function}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Memory\-Leak\-In\-Function\-::\-Check\-Memory\-Leak\-In\-Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_memory_leak_in_function_a1430a34dbf750b3515b28924c1c5b288}
+
+
+This constructor is used when registering this class. 
+
+\hypertarget{class_check_memory_leak_in_function_aeb98724805ffb0a866283d2749b771c0}{\index{Check\-Memory\-Leak\-In\-Function@{Check\-Memory\-Leak\-In\-Function}!Check\-Memory\-Leak\-In\-Function@{Check\-Memory\-Leak\-In\-Function}}
+\index{Check\-Memory\-Leak\-In\-Function@{Check\-Memory\-Leak\-In\-Function}!CheckMemoryLeakInFunction@{Check\-Memory\-Leak\-In\-Function}}
+\subsubsection[{Check\-Memory\-Leak\-In\-Function}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Memory\-Leak\-In\-Function\-::\-Check\-Memory\-Leak\-In\-Function (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizr, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{err\-Log}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_memory_leak_in_function_aeb98724805ffb0a866283d2749b771c0}
+
+
+This constructor is used when running checks. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_check_memory_leak_in_function_ad5de6453dc31ac22af41b26369bfdce9}{\index{Check\-Memory\-Leak\-In\-Function@{Check\-Memory\-Leak\-In\-Function}!call\-\_\-func@{call\-\_\-func}}
+\index{call\-\_\-func@{call\-\_\-func}!CheckMemoryLeakInFunction@{Check\-Memory\-Leak\-In\-Function}}
+\subsubsection[{call\-\_\-func}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ Check\-Memory\-Leak\-In\-Function\-::call\-\_\-func (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{std\-::list$<$ const {\bf Token} $\ast$ $>$}]{callstack, }
+\item[{const unsigned int}]{varid, }
+\item[{{\bf Alloc\-Type} \&}]{alloctype, }
+\item[{{\bf Alloc\-Type} \&}]{dealloctype, }
+\item[{bool \&}]{allocpar, }
+\item[{unsigned int}]{sz}
+\end{DoxyParamCaption}
+)}}\label{class_check_memory_leak_in_function_ad5de6453dc31ac22af41b26369bfdce9}
+Inspect a function call. the call\-\_\-func and getcode are recursive 
+\begin{DoxyParams}{Parameters}
+{\em tok} & token where the function call occurs \\
+\hline
+{\em callstack} & callstack \\
+\hline
+{\em varid} & variable id to check \\
+\hline
+{\em alloctype} & if memory is allocated, this indicates the type of allocation \\
+\hline
+{\em dealloctype} & if memory is deallocated, this indicates the type of deallocation \\
+\hline
+{\em allocpar} & if function allocates varid parameter \\
+\hline
+{\em sz} & not used by call\-\_\-func -\/ see getcode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+These are the possible return values\-:
+\begin{DoxyItemize}
+\item N\-U\-L\-L \-: no significant code
+\item \char`\"{}recursive\char`\"{} \-: recursive function
+\item \char`\"{}alloc\char`\"{} \-: the function returns allocated memory
+\item \char`\"{}dealloc\char`\"{} \-: the function deallocates the variable
+\item \char`\"{}dealloc\-\_\-\char`\"{}
+\item \char`\"{}use\char`\"{} \-: the variable is used (unknown usage of the variable =$>$ the checking bails out)
+\item \char`\"{}callfunc\char`\"{} \-: a function call with unknown side effects
+\item \char`\"{}\&use\char`\"{} 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000040}{Todo}]handle \char`\"{}goto\char`\"{} \end{DoxyRefDesc}
+\hypertarget{class_check_memory_leak_in_function_a765744d86a1643b51f89145fa5cd2b80}{\index{Check\-Memory\-Leak\-In\-Function@{Check\-Memory\-Leak\-In\-Function}!check@{check}}
+\index{check@{check}!CheckMemoryLeakInFunction@{Check\-Memory\-Leak\-In\-Function}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Memory\-Leak\-In\-Function\-::check (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_memory_leak_in_function_a765744d86a1643b51f89145fa5cd2b80}
+
+
+Perform checking. 
+
+\hypertarget{class_check_memory_leak_in_function_a3b23fe4d9c6aeeffd3700dde5fe8d837}{\index{Check\-Memory\-Leak\-In\-Function@{Check\-Memory\-Leak\-In\-Function}!check\-Realloc\-Usage@{check\-Realloc\-Usage}}
+\index{check\-Realloc\-Usage@{check\-Realloc\-Usage}!CheckMemoryLeakInFunction@{Check\-Memory\-Leak\-In\-Function}}
+\subsubsection[{check\-Realloc\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Memory\-Leak\-In\-Function\-::check\-Realloc\-Usage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_memory_leak_in_function_a3b23fe4d9c6aeeffd3700dde5fe8d837}
+Checking for a memory leak caused by improper realloc usage. \hypertarget{class_check_memory_leak_in_function_a4eefe783ba9711813f40557c3a5d36dd}{\index{Check\-Memory\-Leak\-In\-Function@{Check\-Memory\-Leak\-In\-Function}!check\-Scope@{check\-Scope}}
+\index{check\-Scope@{check\-Scope}!CheckMemoryLeakInFunction@{Check\-Memory\-Leak\-In\-Function}}
+\subsubsection[{check\-Scope}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Memory\-Leak\-In\-Function\-::check\-Scope (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{Tok1, }
+\item[{const std\-::string \&}]{varname, }
+\item[{unsigned int}]{varid, }
+\item[{bool}]{classmember, }
+\item[{unsigned int}]{sz}
+\end{DoxyParamCaption}
+)}}\label{class_check_memory_leak_in_function_a4eefe783ba9711813f40557c3a5d36dd}
+Checking the variable varname 
+\begin{DoxyParams}{Parameters}
+{\em Tok1} & start token \\
+\hline
+{\em varname} & name of variable (for error messages) \\
+\hline
+{\em varid} & variable id \\
+\hline
+{\em classmember} & is the scope inside a class member function \\
+\hline
+{\em sz} & size of type.. if the variable is a \char`\"{}int $\ast$\char`\"{} then sz should be \char`\"{}sizeof(int)\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000042}{Todo}]handle \char`\"{}goto\char`\"{} \end{DoxyRefDesc}
+\hypertarget{class_check_memory_leak_in_function_a13b0f525339e1b1e4136ffef20ae9eb6}{\index{Check\-Memory\-Leak\-In\-Function@{Check\-Memory\-Leak\-In\-Function}!findleak@{findleak}}
+\index{findleak@{findleak}!CheckMemoryLeakInFunction@{Check\-Memory\-Leak\-In\-Function}}
+\subsubsection[{findleak}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token} $\ast$ Check\-Memory\-Leak\-In\-Function\-::findleak (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tokens}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_check_memory_leak_in_function_a13b0f525339e1b1e4136ffef20ae9eb6}
+\hypertarget{class_check_memory_leak_in_function_a801919f8ba79b1ce5d384ba1c2c877b7}{\index{Check\-Memory\-Leak\-In\-Function@{Check\-Memory\-Leak\-In\-Function}!getcode@{getcode}}
+\index{getcode@{getcode}!CheckMemoryLeakInFunction@{Check\-Memory\-Leak\-In\-Function}}
+\subsubsection[{getcode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Token} $\ast$ Check\-Memory\-Leak\-In\-Function\-::getcode (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{std\-::list$<$ const {\bf Token} $\ast$ $>$}]{callstack, }
+\item[{const unsigned int}]{varid, }
+\item[{{\bf Check\-Memory\-Leak\-::\-Alloc\-Type} \&}]{alloctype, }
+\item[{{\bf Check\-Memory\-Leak\-::\-Alloc\-Type} \&}]{dealloctype, }
+\item[{bool}]{classmember, }
+\item[{unsigned int}]{sz}
+\end{DoxyParamCaption}
+)}}\label{class_check_memory_leak_in_function_a801919f8ba79b1ce5d384ba1c2c877b7}
+Extract a new tokens list that is easier to parse than the \char`\"{}\-\_\-tokenizer-\/$>$tokens()\char`\"{}, the extracted tokens list describes how the given variable is used. The getcode and call\-\_\-func are recursive 
+\begin{DoxyParams}{Parameters}
+{\em tok} & start parse token \\
+\hline
+{\em callstack} & callstack \\
+\hline
+{\em varid} & variable id \\
+\hline
+{\em alloctype} & keep track of what type of allocation is used \\
+\hline
+{\em dealloctype} & keeps track of what type of deallocation is used \\
+\hline
+{\em classmember} & should be set if the inspected function is a class member \\
+\hline
+{\em sz} & size of type, used to check for mismatching size of allocation. for example \char`\"{}int $\ast$a;\char`\"{} =$>$ the sz is \char`\"{}sizeof(int)\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Newly allocated token array. Caller needs to release reserved memory by calling Token\-List\-::delete\-Tokens(return\-Value); Returned tokens\-:
+\begin{DoxyItemize}
+\item \char`\"{}alloc\char`\"{} \-: the variable is allocated
+\item \char`\"{}assign\char`\"{} \-: the variable is assigned a new value
+\item \char`\"{}break\char`\"{} \-: corresponds to \char`\"{}break\char`\"{}
+\item \char`\"{}callfunc\char`\"{} \-: a function call with unknown side effects
+\item \char`\"{}continue\char`\"{} \-: corresponds to \char`\"{}continue\char`\"{}
+\item \char`\"{}dealloc\char`\"{} \-: the variable is deallocated
+\item \char`\"{}goto\char`\"{} \-: corresponds to a \char`\"{}goto\char`\"{}
+\item \char`\"{}if\char`\"{} \-: there is an \char`\"{}if\char`\"{}
+\item \char`\"{}if(var)\char`\"{} \-: corresponds with \char`\"{}if ( var != 0 )\char`\"{}
+\item \char`\"{}if(!var)\char`\"{} \-: corresponds with \char`\"{}if ( var == 0 )\char`\"{}
+\item \char`\"{}ifv\char`\"{} \-: the variable is used in some way in a \char`\"{}if\char`\"{}
+\item \char`\"{}loop\char`\"{} \-: corresponds to either a \char`\"{}for\char`\"{} or a \char`\"{}while\char`\"{}
+\item \char`\"{}realloc\char`\"{} \-: the variable is reallocated
+\item \char`\"{}return\char`\"{} \-: corresponds to a \char`\"{}return\char`\"{}
+\item \char`\"{}use\char`\"{} \-: unknown usage -\/$>$ bail out checking of this execution path
+\item \char`\"{}\&use\char`\"{} \-: the address of the variable is taken
+\item \char`\"{}\-::use\char`\"{} \-: calling member function of class 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\hypertarget{class_check_memory_leak_in_function_a5a82b2db092deb642b887fd24f4cad8f}{\index{Check\-Memory\-Leak\-In\-Function@{Check\-Memory\-Leak\-In\-Function}!notvar@{notvar}}
+\index{notvar@{notvar}!CheckMemoryLeakInFunction@{Check\-Memory\-Leak\-In\-Function}}
+\subsubsection[{notvar}]{\setlength{\rightskip}{0pt plus 5cm}bool Check\-Memory\-Leak\-In\-Function\-::notvar (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{unsigned int}]{varid, }
+\item[{bool}]{endpar = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}}\label{class_check_memory_leak_in_function_a5a82b2db092deb642b887fd24f4cad8f}
+
+
+Check if there is a \char`\"{}!var\char`\"{} match inside a condition 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tok} & first token to match \\
+\hline
+{\em varid} & variabla id \\
+\hline
+{\em endpar} & if this is true the \char`\"{}!var\char`\"{} must be followed by \char`\"{})\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if match 
+\end{DoxyReturn}
+\hypertarget{class_check_memory_leak_in_function_a7145c33cb87130c9cb4d622f6c7b5321}{\index{Check\-Memory\-Leak\-In\-Function@{Check\-Memory\-Leak\-In\-Function}!parse\-\_\-noreturn@{parse\-\_\-noreturn}}
+\index{parse\-\_\-noreturn@{parse\-\_\-noreturn}!CheckMemoryLeakInFunction@{Check\-Memory\-Leak\-In\-Function}}
+\subsubsection[{parse\-\_\-noreturn}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Memory\-Leak\-In\-Function\-::parse\-\_\-noreturn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_memory_leak_in_function_a7145c33cb87130c9cb4d622f6c7b5321}
+parse tokens to see what functions are \char`\"{}noreturn\char`\"{} \hypertarget{class_check_memory_leak_in_function_a3796e71d1d94ba6e8440561f30c9116c}{\index{Check\-Memory\-Leak\-In\-Function@{Check\-Memory\-Leak\-In\-Function}!run\-Simplified\-Checks@{run\-Simplified\-Checks}}
+\index{run\-Simplified\-Checks@{run\-Simplified\-Checks}!CheckMemoryLeakInFunction@{Check\-Memory\-Leak\-In\-Function}}
+\subsubsection[{run\-Simplified\-Checks}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Memory\-Leak\-In\-Function\-::run\-Simplified\-Checks (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizr, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{err\-Log}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_memory_leak_in_function_a3796e71d1d94ba6e8440561f30c9116c}
+
+
+run all simplified checks 
+
+
+
+Implements \hyperlink{class_check_a112445eed1625599b93c69aab4701e5e}{Check}.
+
+\hypertarget{class_check_memory_leak_in_function_a0a8ea7cea5f1e0bc1f6857c7348c61c9}{\index{Check\-Memory\-Leak\-In\-Function@{Check\-Memory\-Leak\-In\-Function}!simplifycode@{simplifycode}}
+\index{simplifycode@{simplifycode}!CheckMemoryLeakInFunction@{Check\-Memory\-Leak\-In\-Function}}
+\subsubsection[{simplifycode}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Memory\-Leak\-In\-Function\-::simplifycode (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$}]{tok}
+\end{DoxyParamCaption}
+) const}}\label{class_check_memory_leak_in_function_a0a8ea7cea5f1e0bc1f6857c7348c61c9}
+Simplify code e.\-g. by replacing empty \char`\"{}\{ \}\char`\"{} with \char`\"{};\char`\"{} 
+\begin{DoxyParams}{Parameters}
+{\em tok} & first token. The tokens list can be modified. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000041}{Todo}]If the loop \char`\"{}do \{ alloc ; \}\char`\"{} can be executed twice, reduce it to \char`\"{}loop alloc ;\char`\"{} \end{DoxyRefDesc}
+\hypertarget{class_check_memory_leak_in_function_ae1337569b44179a2e7f46a4ad9a84738}{\index{Check\-Memory\-Leak\-In\-Function@{Check\-Memory\-Leak\-In\-Function}!test\-\_\-white\-\_\-list@{test\-\_\-white\-\_\-list}}
+\index{test\-\_\-white\-\_\-list@{test\-\_\-white\-\_\-list}!CheckMemoryLeakInFunction@{Check\-Memory\-Leak\-In\-Function}}
+\subsubsection[{test\-\_\-white\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}bool Check\-Memory\-Leak\-In\-Function\-::test\-\_\-white\-\_\-list (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{funcname}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_check_memory_leak_in_function_ae1337569b44179a2e7f46a4ad9a84738}
+
+
+Unit testing \-: testing the white list. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{checkmemoryleak_8h}{checkmemoryleak.\-h}\item 
+lib/\hyperlink{checkmemoryleak_8cpp}{checkmemoryleak.\-cpp}\end{DoxyCompactItemize}

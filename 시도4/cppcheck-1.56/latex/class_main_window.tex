@@ -1,0 +1,1056 @@
+\hypertarget{class_main_window}{\section{Main\-Window Class Reference}
+\label{class_main_window}\index{Main\-Window@{Main\-Window}}
+}
+
+
+Main window for cppcheck-\/gui.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\-h$>$}
+
+Inheritance diagram for Main\-Window\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_window}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{class_main_window_a97b4dedaa96eb7c2b44ac65d9396f058a18568d93004c241de47517836fe361a2}{Max\-Recent\-Projects} = 5
+ \}
+\begin{DoxyCompactList}\small\item\em Maximum number of M\-R\-U project items in File-\/menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_main_window_a958b9066965b41c2fd6c0cfb9f4df2d7}{Check\-Files} ()
+\begin{DoxyCompactList}\small\item\em Slot for check files menu item. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_afb8056a0506f4d04dfd9ab1a28b168df}{Re\-Check} ()
+\begin{DoxyCompactList}\small\item\em Slot to recheck files. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a1a68d1a4326ed87c37d40e7e56a96643}{Clear\-Results} ()
+\begin{DoxyCompactList}\small\item\em Slot to clear all search results. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a37dbc2a8ee1528106f38492d652b60df}{Open\-X\-M\-L} ()
+\begin{DoxyCompactList}\small\item\em Slot to open X\-M\-L report file. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a578966abbeaa3d35c5f9cbcc43e31b08}{Show\-Style} (bool checked)
+\begin{DoxyCompactList}\small\item\em Show errors with type \char`\"{}style\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_ab8865aea8651614b30f816feef2bd9d4}{Show\-Errors} (bool checked)
+\begin{DoxyCompactList}\small\item\em Show errors with type \char`\"{}error\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a6e6e6545e4199f1280e4ce5da6c9a226}{Show\-Warnings} (bool checked)
+\begin{DoxyCompactList}\small\item\em Show errors with type \char`\"{}warning\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_aa649c6776f31c90f143ef78f99fbfebf}{Show\-Portability} (bool checked)
+\begin{DoxyCompactList}\small\item\em Show errors with type \char`\"{}portability\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a7ae044bfd0a5782bf9815b7280e00fdd}{Show\-Performance} (bool checked)
+\begin{DoxyCompactList}\small\item\em Show errors with type \char`\"{}performance\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a4f579c723aeb56a1d7cf98741b3655a6}{Show\-Information} (bool checked)
+\begin{DoxyCompactList}\small\item\em Show errors with type \char`\"{}information\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_af1056385bc7552d006ef22753feba76f}{Check\-All} ()
+\begin{DoxyCompactList}\small\item\em Slot to check all \char`\"{}\-Show errors\char`\"{} menu items. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_abed24502778dad5e5e31db4d0b8a9722}{Uncheck\-All} ()
+\begin{DoxyCompactList}\small\item\em Slot to uncheck all \char`\"{}\-Show errors\char`\"{} menu items. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_aa20cd54c6e7727c16c6cbdb864ebcada}{Check\-Directory} ()
+\begin{DoxyCompactList}\small\item\em Slot for check directory menu item. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a0b66ee6ff62e63b0e6896656d6fb532f}{Program\-Settings} ()
+\begin{DoxyCompactList}\small\item\em Slot to open program's settings dialog. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_acb789dac6a35383ad1d7bb6f652c7cee}{About} ()
+\begin{DoxyCompactList}\small\item\em Slot to open program's about dialog. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a09e054caab170ae90c452914c5c79be3}{Show\-License} ()
+\begin{DoxyCompactList}\small\item\em Slot to to show license text. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a03c505f24fe4bc85c17311ff41a38683}{Show\-Authors} ()
+\begin{DoxyCompactList}\small\item\em Slot to to show authors list. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_aaa627b5bef0df35b757441ba3a527440}{Save} ()
+\begin{DoxyCompactList}\small\item\em Slot to stop processing files. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_ab06dc13e63044e3374dc5ee6bbcf6b6a}{Check\-Project} (\hyperlink{class_project}{Project} $\ast$project)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_check}{Check} the project. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a215e21551a3e062c255a9d5260922d45}{New\-Project\-File} ()
+\begin{DoxyCompactList}\small\item\em Slot to create new project file.. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a1b6775cd6947c567505ebd66fc1896e8}{Open\-Project\-File} ()
+\begin{DoxyCompactList}\small\item\em Slot to open project file and start checking contained paths. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a6790ce8739be0afcc9220e1490bac1f9}{Close\-Project\-File} ()
+\begin{DoxyCompactList}\small\item\em Slot to close open project file. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a9d05a202c12fadbd15da95dd45facb32}{Edit\-Project\-File} ()
+\begin{DoxyCompactList}\small\item\em Slot to edit project file. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a93661619d9347814e64ebeaf32fba77f}{Show\-Log\-View} ()
+\begin{DoxyCompactList}\small\item\em Slot for showing the log view. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_aa9b20782ed01d86b78d6b995531c06a5}{Show\-Statistics} ()
+\begin{DoxyCompactList}\small\item\em Slot for showing the scan and project statistics. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_main_window_a34c4b4207b46d11a4100c9b19f0e81bb}{Main\-Window} ()
+\item 
+virtual \hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\-Main\-Window} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_platforms}{Platforms} \hyperlink{class_main_window_a8bd97f168e4c804cfe770af7ddf3faf1}{m\-Platforms}
+\end{DoxyCompactItemize}
+\subsection*{Protected Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_main_window_ae967843e31f2ab881a6cd154f73cceae}{Check\-Done} ()
+\begin{DoxyCompactList}\small\item\em Slot for checkthread's done signal. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a971e5daaad4651953853f1f2fe09573b}{Check\-Lock\-Down\-U\-I} ()
+\begin{DoxyCompactList}\small\item\em Lock down U\-I while checking. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_ad3d3acaafb9b3bc793b438a026878e53}{Results\-Added} ()
+\begin{DoxyCompactList}\small\item\em Slot for enabling save and clear button. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_aebc0fc2ed8aeb50e3f05e1fe7a8bc64f}{Toggle\-Main\-Tool\-Bar} ()
+\begin{DoxyCompactList}\small\item\em Slot for showing/hiding standard toolbar. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a6ea89ff7dc3fee9cd6a80f17fc7f3d5c}{Toggle\-View\-Tool\-Bar} ()
+\begin{DoxyCompactList}\small\item\em Slot for showing/hiding Categories toolbar. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a5fb4fd8b2d8ecf6e1bc960ed96653990}{Toggle\-Filter\-Tool\-Bar} ()
+\begin{DoxyCompactList}\small\item\em Slot for showing/hiding Filter toolbar. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a6f0b577a6dc2835c4448e0de660a800e}{About\-To\-Show\-View\-Menu} ()
+\begin{DoxyCompactList}\small\item\em Slot for updating View-\/menu before it is shown. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a61bdc8577d17ce192d3c26491969b696}{Stop\-Checking} ()
+\begin{DoxyCompactList}\small\item\em Slot when stop checking button is pressed. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_aca4de833364c04e55f7f91665ce0419f}{Open\-Help\-Contents} ()
+\begin{DoxyCompactList}\small\item\em Open help file contents. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a7fa9f77e7f1f31c52fea5f0a1f6925a1}{Log} (const Q\-String \&logline)
+\begin{DoxyCompactList}\small\item\em Add new line to log. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_aa96831c3b89377c6a18b5d5fcf47e26b}{Debug\-Error} (const \hyperlink{class_error_item}{Error\-Item} \&item)
+\begin{DoxyCompactList}\small\item\em Handle new debug error. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a4d837365e6c9179bd88209d5fa995b3a}{Filter\-Results} ()
+\begin{DoxyCompactList}\small\item\em Filters the results in the result list. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a35429dc03b779e45d234ffdf81ffb731}{Open\-Recent\-Project} ()
+\begin{DoxyCompactList}\small\item\em Opens recently opened project file. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_adfee537ccbb34d30001954e9332a63b2}{Select\-Platform} ()
+\begin{DoxyCompactList}\small\item\em Selects the platform as checked platform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_main_window_a846bd27baa737bd0e8177a24293bab9a}{Set\-Language} (const Q\-String \&code)
+\begin{DoxyCompactList}\small\item\em Set current language. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_main_window_a4e20a4a065fbb0e4d3532a45a0a91425}{close\-Event} (Q\-Close\-Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Event coming when application is about to close. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a12ee09e9651f5733477179ed47a35aa0}{Toggle\-All\-Checked} (bool checked)
+\begin{DoxyCompactList}\small\item\em Helper function to toggle all show error menu items. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_ac5c5446a85f04c3fefa23381b70ccf1a}{Enable\-Check\-Buttons} (bool enable)
+\begin{DoxyCompactList}\small\item\em Helper function to enable/disable all check,recheck buttons. \end{DoxyCompactList}\item 
+Q\-String\-List \hyperlink{class_main_window_afd62a69e2fd5374680c79c3088ab75ee}{Select\-Files\-To\-Check} (Q\-File\-Dialog\-::\-File\-Mode mode)
+\begin{DoxyCompactList}\small\item\em Select files/or directory to check. Helper function to open a dialog to ask user to select files or directory to check. Use native dialogs instead of Q\-T\-:s own dialogs. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a15ea3f6407afe4ba11986cb71c3d9901}{Do\-Check\-Files} (const Q\-String\-List \&files)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_check}{Check} all files specified in parameter files. \end{DoxyCompactList}\item 
+\hyperlink{class_settings}{Settings} \hyperlink{class_main_window_a480919da65f763252bce15d2b216bab8}{Get\-Cppcheck\-Settings} ()
+\begin{DoxyCompactList}\small\item\em Get our default cppcheck settings and read project file. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a441f3ca9b506380fe4f8d8fe37e23ec8}{Load\-Settings} ()
+\begin{DoxyCompactList}\small\item\em Load program settings. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a892aa0e1c246711d3008408313e9d08d}{Save\-Settings} ()
+\begin{DoxyCompactList}\small\item\em Save program settings. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a734cd099d2287bcdb2d1f7de062ec1e4}{Format\-And\-Set\-Title} (const Q\-String \&text=Q\-String())
+\begin{DoxyCompactList}\small\item\em Format main window title. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_ae14c878212f07e64b4fcfd5c40eb5a67}{Open\-Online\-Help} ()
+\begin{DoxyCompactList}\small\item\em Show help contents. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_af82abb3175a1787ec1f0d5b389dd4ab9}{Enable\-Project\-Actions} (bool enable)
+\begin{DoxyCompactList}\small\item\em Enable or disable project file actions. \hyperlink{class_project}{Project} editing and closing actions should be only enabled when project is open and we are not checking files. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a70b6dfd00c947fe2f813caf8a6bf0658}{Enable\-Project\-Open\-Actions} (bool enable)
+\begin{DoxyCompactList}\small\item\em Enable or disable project file actions. \hyperlink{class_project}{Project} opening and creating actions should be disabled when checking. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a090ac31d07b69f8d735a01e887871940}{Add\-Include\-Dirs} (const Q\-String\-List \&include\-Dirs, \hyperlink{class_settings}{Settings} \&result)
+\begin{DoxyCompactList}\small\item\em Add include directories. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a4f20cd0ca7d94d434037943eaec75d4e}{Handle\-C\-L\-I\-Params} (const Q\-String\-List \&params)
+\begin{DoxyCompactList}\small\item\em Handle command line parameters given to G\-U\-I. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a0a639aa8f8c7bdba260bac6e3f9c8a05}{Load\-Project\-File} (const Q\-String \&file\-Path)
+\begin{DoxyCompactList}\small\item\em Load project file to the G\-U\-I. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_af1a057f4c085cde46431ae2fbee994b3}{Update\-M\-R\-U\-Menu\-Items} ()
+\begin{DoxyCompactList}\small\item\em Update project M\-R\-U items in File-\/menu. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_ae83ba434084a03088d3328043d1fbd74}{Add\-Project\-M\-R\-U} (const Q\-String \&project)
+\begin{DoxyCompactList}\small\item\em Add project file (path) to the M\-R\-U list. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_aa70f49df9259d6a068757b54b44b4701}{Remove\-Project\-M\-R\-U} (const Q\-String \&project)
+\begin{DoxyCompactList}\small\item\em Remove project file (path) from the M\-R\-U list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\-Settings $\ast$ \hyperlink{class_main_window_ac842753fda612bfd6f9b60b07f71acc2}{m\-Settings}
+\begin{DoxyCompactList}\small\item\em Program settings. \end{DoxyCompactList}\item 
+\hyperlink{class_thread_handler}{Thread\-Handler} $\ast$ \hyperlink{class_main_window_a139aa6f8e80e8cef62a0eb72aa1c4071}{m\-Thread}
+\begin{DoxyCompactList}\small\item\em Thread to check files. \end{DoxyCompactList}\item 
+\hyperlink{class_application_list}{Application\-List} $\ast$ \hyperlink{class_main_window_a917ee334c1141d4f04bd1b242904a85e}{m\-Applications}
+\begin{DoxyCompactList}\small\item\em List of user defined applications to open errors with. \end{DoxyCompactList}\item 
+\hyperlink{class_translation_handler}{Translation\-Handler} $\ast$ \hyperlink{class_main_window_aba23fb4a828abca9434df9ce0e2419a7}{m\-Translation}
+\begin{DoxyCompactList}\small\item\em Class to handle translation changes. \end{DoxyCompactList}\item 
+Ui\-::\-Main\-Window \hyperlink{class_main_window_a03f313abfd5dc1ae549448b80093d480}{m\-U\-I}
+\begin{DoxyCompactList}\small\item\em Class holding all U\-I components. \end{DoxyCompactList}\item 
+Q\-String \hyperlink{class_main_window_ac43e5a474fe32ed819b1b7e2ca49e311}{m\-Current\-Directory}
+\begin{DoxyCompactList}\small\item\em Current checked directory. \end{DoxyCompactList}\item 
+\hyperlink{class_log_view}{Log\-View} $\ast$ \hyperlink{class_main_window_ad374532b6d59f49e92083d75a6d8c12c}{m\-Log\-View}
+\begin{DoxyCompactList}\small\item\em Log view. \end{DoxyCompactList}\item 
+\hyperlink{class_project}{Project} $\ast$ \hyperlink{class_main_window_a556c03edd946d60bc426f184d2604678}{m\-Project}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_project}{Project} (file). \end{DoxyCompactList}\item 
+Q\-Line\-Edit $\ast$ \hyperlink{class_main_window_a87a6c80c7093eb0ddc41d70fea129b18}{m\-Line\-Edit\-Filter}
+\begin{DoxyCompactList}\small\item\em Filter field in the Filter toolbar. \end{DoxyCompactList}\item 
+Q\-Timer $\ast$ \hyperlink{class_main_window_a727873c771d824448c4b28e0a362ac4e}{m\-Filter\-Timer}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_timer}{Timer} to delay filtering while typing. \end{DoxyCompactList}\item 
+Q\-Action\-Group $\ast$ \hyperlink{class_main_window_ac66bc9bf2832c507bb49e07c7b8a2dd1}{m\-Platform\-Actions}
+\begin{DoxyCompactList}\small\item\em G\-U\-I actions for selecting the checked platform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main window for cppcheck-\/gui. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_main_window_a97b4dedaa96eb7c2b44ac65d9396f058}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{class_main_window_a97b4dedaa96eb7c2b44ac65d9396f058}
+
+
+Maximum number of M\-R\-U project items in File-\/menu. 
+
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{Max\-Recent\-Projects@{Max\-Recent\-Projects}!Main\-Window@{Main\-Window}}\index{Main\-Window@{Main\-Window}!Max\-Recent\-Projects@{Max\-Recent\-Projects}}\item[{\em 
+\hypertarget{class_main_window_a97b4dedaa96eb7c2b44ac65d9396f058a18568d93004c241de47517836fe361a2}{Max\-Recent\-Projects}\label{class_main_window_a97b4dedaa96eb7c2b44ac65d9396f058a18568d93004c241de47517836fe361a2}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_main_window_a34c4b4207b46d11a4100c9b19f0e81bb}{\index{Main\-Window@{Main\-Window}!Main\-Window@{Main\-Window}}
+\index{Main\-Window@{Main\-Window}!MainWindow@{Main\-Window}}
+\subsubsection[{Main\-Window}]{\setlength{\rightskip}{0pt plus 5cm}Main\-Window\-::\-Main\-Window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_main_window_a34c4b4207b46d11a4100c9b19f0e81bb}
+\hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\index{Main\-Window@{Main\-Window}!$\sim$\-Main\-Window@{$\sim$\-Main\-Window}}
+\index{$\sim$\-Main\-Window@{$\sim$\-Main\-Window}!MainWindow@{Main\-Window}}
+\subsubsection[{$\sim$\-Main\-Window}]{\setlength{\rightskip}{0pt plus 5cm}Main\-Window\-::$\sim$\-Main\-Window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_main_window_acb789dac6a35383ad1d7bb6f652c7cee}{\index{Main\-Window@{Main\-Window}!About@{About}}
+\index{About@{About}!MainWindow@{Main\-Window}}
+\subsubsection[{About}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-About (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_acb789dac6a35383ad1d7bb6f652c7cee}
+
+
+Slot to open program's about dialog. 
+
+\hypertarget{class_main_window_a6f0b577a6dc2835c4448e0de660a800e}{\index{Main\-Window@{Main\-Window}!About\-To\-Show\-View\-Menu@{About\-To\-Show\-View\-Menu}}
+\index{About\-To\-Show\-View\-Menu@{About\-To\-Show\-View\-Menu}!MainWindow@{Main\-Window}}
+\subsubsection[{About\-To\-Show\-View\-Menu}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-About\-To\-Show\-View\-Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_main_window_a6f0b577a6dc2835c4448e0de660a800e}
+
+
+Slot for updating View-\/menu before it is shown. 
+
+\hypertarget{class_main_window_a090ac31d07b69f8d735a01e887871940}{\index{Main\-Window@{Main\-Window}!Add\-Include\-Dirs@{Add\-Include\-Dirs}}
+\index{Add\-Include\-Dirs@{Add\-Include\-Dirs}!MainWindow@{Main\-Window}}
+\subsubsection[{Add\-Include\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Add\-Include\-Dirs (
+\begin{DoxyParamCaption}
+\item[{const Q\-String\-List \&}]{include\-Dirs, }
+\item[{{\bf Settings} \&}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a090ac31d07b69f8d735a01e887871940}
+
+
+Add include directories. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em include\-Dirs} & List of include directories to add. \\
+\hline
+{\em result} & \hyperlink{class_settings}{Settings} class where include directories are added. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_ae83ba434084a03088d3328043d1fbd74}{\index{Main\-Window@{Main\-Window}!Add\-Project\-M\-R\-U@{Add\-Project\-M\-R\-U}}
+\index{Add\-Project\-M\-R\-U@{Add\-Project\-M\-R\-U}!MainWindow@{Main\-Window}}
+\subsubsection[{Add\-Project\-M\-R\-U}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Add\-Project\-M\-R\-U (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{project}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_ae83ba434084a03088d3328043d1fbd74}
+
+
+Add project file (path) to the M\-R\-U list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em project} & Full path to the project file to add. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_af1056385bc7552d006ef22753feba76f}{\index{Main\-Window@{Main\-Window}!Check\-All@{Check\-All}}
+\index{Check\-All@{Check\-All}!MainWindow@{Main\-Window}}
+\subsubsection[{Check\-All}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Check\-All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_af1056385bc7552d006ef22753feba76f}
+
+
+Slot to check all \char`\"{}\-Show errors\char`\"{} menu items. 
+
+\hypertarget{class_main_window_aa20cd54c6e7727c16c6cbdb864ebcada}{\index{Main\-Window@{Main\-Window}!Check\-Directory@{Check\-Directory}}
+\index{Check\-Directory@{Check\-Directory}!MainWindow@{Main\-Window}}
+\subsubsection[{Check\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Check\-Directory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_aa20cd54c6e7727c16c6cbdb864ebcada}
+
+
+Slot for check directory menu item. 
+
+\hypertarget{class_main_window_ae967843e31f2ab881a6cd154f73cceae}{\index{Main\-Window@{Main\-Window}!Check\-Done@{Check\-Done}}
+\index{Check\-Done@{Check\-Done}!MainWindow@{Main\-Window}}
+\subsubsection[{Check\-Done}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Check\-Done (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_main_window_ae967843e31f2ab881a6cd154f73cceae}
+
+
+Slot for checkthread's done signal. 
+
+\hypertarget{class_main_window_a958b9066965b41c2fd6c0cfb9f4df2d7}{\index{Main\-Window@{Main\-Window}!Check\-Files@{Check\-Files}}
+\index{Check\-Files@{Check\-Files}!MainWindow@{Main\-Window}}
+\subsubsection[{Check\-Files}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Check\-Files (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a958b9066965b41c2fd6c0cfb9f4df2d7}
+
+
+Slot for check files menu item. 
+
+\hypertarget{class_main_window_a971e5daaad4651953853f1f2fe09573b}{\index{Main\-Window@{Main\-Window}!Check\-Lock\-Down\-U\-I@{Check\-Lock\-Down\-U\-I}}
+\index{Check\-Lock\-Down\-U\-I@{Check\-Lock\-Down\-U\-I}!MainWindow@{Main\-Window}}
+\subsubsection[{Check\-Lock\-Down\-U\-I}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Check\-Lock\-Down\-U\-I (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_main_window_a971e5daaad4651953853f1f2fe09573b}
+
+
+Lock down U\-I while checking. 
+
+\hypertarget{class_main_window_ab06dc13e63044e3374dc5ee6bbcf6b6a}{\index{Main\-Window@{Main\-Window}!Check\-Project@{Check\-Project}}
+\index{Check\-Project@{Check\-Project}!MainWindow@{Main\-Window}}
+\subsubsection[{Check\-Project}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Check\-Project (
+\begin{DoxyParamCaption}
+\item[{{\bf Project} $\ast$}]{project}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_ab06dc13e63044e3374dc5ee6bbcf6b6a}
+
+
+\hyperlink{class_check}{Check} the project. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em project} & Pointer to the project to check. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_a1a68d1a4326ed87c37d40e7e56a96643}{\index{Main\-Window@{Main\-Window}!Clear\-Results@{Clear\-Results}}
+\index{Clear\-Results@{Clear\-Results}!MainWindow@{Main\-Window}}
+\subsubsection[{Clear\-Results}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Clear\-Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a1a68d1a4326ed87c37d40e7e56a96643}
+
+
+Slot to clear all search results. 
+
+\hypertarget{class_main_window_a4e20a4a065fbb0e4d3532a45a0a91425}{\index{Main\-Window@{Main\-Window}!close\-Event@{close\-Event}}
+\index{close\-Event@{close\-Event}!MainWindow@{Main\-Window}}
+\subsubsection[{close\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::close\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Close\-Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_main_window_a4e20a4a065fbb0e4d3532a45a0a91425}
+
+
+Event coming when application is about to close. 
+
+\hypertarget{class_main_window_a6790ce8739be0afcc9220e1490bac1f9}{\index{Main\-Window@{Main\-Window}!Close\-Project\-File@{Close\-Project\-File}}
+\index{Close\-Project\-File@{Close\-Project\-File}!MainWindow@{Main\-Window}}
+\subsubsection[{Close\-Project\-File}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Close\-Project\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a6790ce8739be0afcc9220e1490bac1f9}
+
+
+Slot to close open project file. 
+
+\hypertarget{class_main_window_aa96831c3b89377c6a18b5d5fcf47e26b}{\index{Main\-Window@{Main\-Window}!Debug\-Error@{Debug\-Error}}
+\index{Debug\-Error@{Debug\-Error}!MainWindow@{Main\-Window}}
+\subsubsection[{Debug\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Debug\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\-Item} \&}]{item}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_main_window_aa96831c3b89377c6a18b5d5fcf47e26b}
+
+
+Handle new debug error. 
+
+\hypertarget{class_main_window_a15ea3f6407afe4ba11986cb71c3d9901}{\index{Main\-Window@{Main\-Window}!Do\-Check\-Files@{Do\-Check\-Files}}
+\index{Do\-Check\-Files@{Do\-Check\-Files}!MainWindow@{Main\-Window}}
+\subsubsection[{Do\-Check\-Files}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Do\-Check\-Files (
+\begin{DoxyParamCaption}
+\item[{const Q\-String\-List \&}]{files}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a15ea3f6407afe4ba11986cb71c3d9901}
+
+
+\hyperlink{class_check}{Check} all files specified in parameter files. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em files} & List of files and/or directories to check \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_a9d05a202c12fadbd15da95dd45facb32}{\index{Main\-Window@{Main\-Window}!Edit\-Project\-File@{Edit\-Project\-File}}
+\index{Edit\-Project\-File@{Edit\-Project\-File}!MainWindow@{Main\-Window}}
+\subsubsection[{Edit\-Project\-File}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Edit\-Project\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a9d05a202c12fadbd15da95dd45facb32}
+
+
+Slot to edit project file. 
+
+\hypertarget{class_main_window_ac5c5446a85f04c3fefa23381b70ccf1a}{\index{Main\-Window@{Main\-Window}!Enable\-Check\-Buttons@{Enable\-Check\-Buttons}}
+\index{Enable\-Check\-Buttons@{Enable\-Check\-Buttons}!MainWindow@{Main\-Window}}
+\subsubsection[{Enable\-Check\-Buttons}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Enable\-Check\-Buttons (
+\begin{DoxyParamCaption}
+\item[{bool}]{enable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_ac5c5446a85f04c3fefa23381b70ccf1a}
+
+
+Helper function to enable/disable all check,recheck buttons. 
+
+\hypertarget{class_main_window_af82abb3175a1787ec1f0d5b389dd4ab9}{\index{Main\-Window@{Main\-Window}!Enable\-Project\-Actions@{Enable\-Project\-Actions}}
+\index{Enable\-Project\-Actions@{Enable\-Project\-Actions}!MainWindow@{Main\-Window}}
+\subsubsection[{Enable\-Project\-Actions}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Enable\-Project\-Actions (
+\begin{DoxyParamCaption}
+\item[{bool}]{enable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_af82abb3175a1787ec1f0d5b389dd4ab9}
+
+
+Enable or disable project file actions. \hyperlink{class_project}{Project} editing and closing actions should be only enabled when project is open and we are not checking files. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & If true then actions are enabled. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_a70b6dfd00c947fe2f813caf8a6bf0658}{\index{Main\-Window@{Main\-Window}!Enable\-Project\-Open\-Actions@{Enable\-Project\-Open\-Actions}}
+\index{Enable\-Project\-Open\-Actions@{Enable\-Project\-Open\-Actions}!MainWindow@{Main\-Window}}
+\subsubsection[{Enable\-Project\-Open\-Actions}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Enable\-Project\-Open\-Actions (
+\begin{DoxyParamCaption}
+\item[{bool}]{enable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a70b6dfd00c947fe2f813caf8a6bf0658}
+
+
+Enable or disable project file actions. \hyperlink{class_project}{Project} opening and creating actions should be disabled when checking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & If true then actions are enabled. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_a4d837365e6c9179bd88209d5fa995b3a}{\index{Main\-Window@{Main\-Window}!Filter\-Results@{Filter\-Results}}
+\index{Filter\-Results@{Filter\-Results}!MainWindow@{Main\-Window}}
+\subsubsection[{Filter\-Results}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Filter\-Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_main_window_a4d837365e6c9179bd88209d5fa995b3a}
+
+
+Filters the results in the result list. 
+
+\hypertarget{class_main_window_a734cd099d2287bcdb2d1f7de062ec1e4}{\index{Main\-Window@{Main\-Window}!Format\-And\-Set\-Title@{Format\-And\-Set\-Title}}
+\index{Format\-And\-Set\-Title@{Format\-And\-Set\-Title}!MainWindow@{Main\-Window}}
+\subsubsection[{Format\-And\-Set\-Title}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Format\-And\-Set\-Title (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{text = {\ttfamily QString()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a734cd099d2287bcdb2d1f7de062ec1e4}
+
+
+Format main window title. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Text added to end of the title. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_a480919da65f763252bce15d2b216bab8}{\index{Main\-Window@{Main\-Window}!Get\-Cppcheck\-Settings@{Get\-Cppcheck\-Settings}}
+\index{Get\-Cppcheck\-Settings@{Get\-Cppcheck\-Settings}!MainWindow@{Main\-Window}}
+\subsubsection[{Get\-Cppcheck\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Settings} Main\-Window\-::\-Get\-Cppcheck\-Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a480919da65f763252bce15d2b216bab8}
+
+
+Get our default cppcheck settings and read project file. 
+
+\begin{DoxyReturn}{Returns}
+Default cppcheck settings 
+\end{DoxyReturn}
+\hypertarget{class_main_window_a4f20cd0ca7d94d434037943eaec75d4e}{\index{Main\-Window@{Main\-Window}!Handle\-C\-L\-I\-Params@{Handle\-C\-L\-I\-Params}}
+\index{Handle\-C\-L\-I\-Params@{Handle\-C\-L\-I\-Params}!MainWindow@{Main\-Window}}
+\subsubsection[{Handle\-C\-L\-I\-Params}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Handle\-C\-L\-I\-Params (
+\begin{DoxyParamCaption}
+\item[{const Q\-String\-List \&}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a4f20cd0ca7d94d434037943eaec75d4e}
+
+
+Handle command line parameters given to G\-U\-I. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & List of string given to command line. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_a0a639aa8f8c7bdba260bac6e3f9c8a05}{\index{Main\-Window@{Main\-Window}!Load\-Project\-File@{Load\-Project\-File}}
+\index{Load\-Project\-File@{Load\-Project\-File}!MainWindow@{Main\-Window}}
+\subsubsection[{Load\-Project\-File}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Load\-Project\-File (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{file\-Path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a0a639aa8f8c7bdba260bac6e3f9c8a05}
+
+
+Load project file to the G\-U\-I. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\-Path} & Filename (inc. path) of project file to load. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_a441f3ca9b506380fe4f8d8fe37e23ec8}{\index{Main\-Window@{Main\-Window}!Load\-Settings@{Load\-Settings}}
+\index{Load\-Settings@{Load\-Settings}!MainWindow@{Main\-Window}}
+\subsubsection[{Load\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Load\-Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a441f3ca9b506380fe4f8d8fe37e23ec8}
+
+
+Load program settings. 
+
+\hypertarget{class_main_window_a7fa9f77e7f1f31c52fea5f0a1f6925a1}{\index{Main\-Window@{Main\-Window}!Log@{Log}}
+\index{Log@{Log}!MainWindow@{Main\-Window}}
+\subsubsection[{Log}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Log (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{logline}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_main_window_a7fa9f77e7f1f31c52fea5f0a1f6925a1}
+
+
+Add new line to log. 
+
+\hypertarget{class_main_window_a215e21551a3e062c255a9d5260922d45}{\index{Main\-Window@{Main\-Window}!New\-Project\-File@{New\-Project\-File}}
+\index{New\-Project\-File@{New\-Project\-File}!MainWindow@{Main\-Window}}
+\subsubsection[{New\-Project\-File}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-New\-Project\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a215e21551a3e062c255a9d5260922d45}
+
+
+Slot to create new project file.. 
+
+\hypertarget{class_main_window_aca4de833364c04e55f7f91665ce0419f}{\index{Main\-Window@{Main\-Window}!Open\-Help\-Contents@{Open\-Help\-Contents}}
+\index{Open\-Help\-Contents@{Open\-Help\-Contents}!MainWindow@{Main\-Window}}
+\subsubsection[{Open\-Help\-Contents}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Open\-Help\-Contents (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_main_window_aca4de833364c04e55f7f91665ce0419f}
+
+
+Open help file contents. 
+
+\hypertarget{class_main_window_ae14c878212f07e64b4fcfd5c40eb5a67}{\index{Main\-Window@{Main\-Window}!Open\-Online\-Help@{Open\-Online\-Help}}
+\index{Open\-Online\-Help@{Open\-Online\-Help}!MainWindow@{Main\-Window}}
+\subsubsection[{Open\-Online\-Help}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Open\-Online\-Help (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_ae14c878212f07e64b4fcfd5c40eb5a67}
+
+
+Show help contents. 
+
+\hypertarget{class_main_window_a1b6775cd6947c567505ebd66fc1896e8}{\index{Main\-Window@{Main\-Window}!Open\-Project\-File@{Open\-Project\-File}}
+\index{Open\-Project\-File@{Open\-Project\-File}!MainWindow@{Main\-Window}}
+\subsubsection[{Open\-Project\-File}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Open\-Project\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a1b6775cd6947c567505ebd66fc1896e8}
+
+
+Slot to open project file and start checking contained paths. 
+
+\hypertarget{class_main_window_a35429dc03b779e45d234ffdf81ffb731}{\index{Main\-Window@{Main\-Window}!Open\-Recent\-Project@{Open\-Recent\-Project}}
+\index{Open\-Recent\-Project@{Open\-Recent\-Project}!MainWindow@{Main\-Window}}
+\subsubsection[{Open\-Recent\-Project}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Open\-Recent\-Project (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_main_window_a35429dc03b779e45d234ffdf81ffb731}
+
+
+Opens recently opened project file. 
+
+\hypertarget{class_main_window_a37dbc2a8ee1528106f38492d652b60df}{\index{Main\-Window@{Main\-Window}!Open\-X\-M\-L@{Open\-X\-M\-L}}
+\index{Open\-X\-M\-L@{Open\-X\-M\-L}!MainWindow@{Main\-Window}}
+\subsubsection[{Open\-X\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Open\-X\-M\-L (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a37dbc2a8ee1528106f38492d652b60df}
+
+
+Slot to open X\-M\-L report file. 
+
+\hypertarget{class_main_window_a0b66ee6ff62e63b0e6896656d6fb532f}{\index{Main\-Window@{Main\-Window}!Program\-Settings@{Program\-Settings}}
+\index{Program\-Settings@{Program\-Settings}!MainWindow@{Main\-Window}}
+\subsubsection[{Program\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Program\-Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a0b66ee6ff62e63b0e6896656d6fb532f}
+
+
+Slot to open program's settings dialog. 
+
+\hypertarget{class_main_window_afb8056a0506f4d04dfd9ab1a28b168df}{\index{Main\-Window@{Main\-Window}!Re\-Check@{Re\-Check}}
+\index{Re\-Check@{Re\-Check}!MainWindow@{Main\-Window}}
+\subsubsection[{Re\-Check}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Re\-Check (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_afb8056a0506f4d04dfd9ab1a28b168df}
+
+
+Slot to recheck files. 
+
+\hypertarget{class_main_window_aa70f49df9259d6a068757b54b44b4701}{\index{Main\-Window@{Main\-Window}!Remove\-Project\-M\-R\-U@{Remove\-Project\-M\-R\-U}}
+\index{Remove\-Project\-M\-R\-U@{Remove\-Project\-M\-R\-U}!MainWindow@{Main\-Window}}
+\subsubsection[{Remove\-Project\-M\-R\-U}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Remove\-Project\-M\-R\-U (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{project}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_aa70f49df9259d6a068757b54b44b4701}
+
+
+Remove project file (path) from the M\-R\-U list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em project} & Full path of the project file to remove. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_ad3d3acaafb9b3bc793b438a026878e53}{\index{Main\-Window@{Main\-Window}!Results\-Added@{Results\-Added}}
+\index{Results\-Added@{Results\-Added}!MainWindow@{Main\-Window}}
+\subsubsection[{Results\-Added}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Results\-Added (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_main_window_ad3d3acaafb9b3bc793b438a026878e53}
+
+
+Slot for enabling save and clear button. 
+
+\hypertarget{class_main_window_aaa627b5bef0df35b757441ba3a527440}{\index{Main\-Window@{Main\-Window}!Save@{Save}}
+\index{Save@{Save}!MainWindow@{Main\-Window}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_aaa627b5bef0df35b757441ba3a527440}
+
+
+Slot to stop processing files. 
+
+\hypertarget{class_main_window_a892aa0e1c246711d3008408313e9d08d}{\index{Main\-Window@{Main\-Window}!Save\-Settings@{Save\-Settings}}
+\index{Save\-Settings@{Save\-Settings}!MainWindow@{Main\-Window}}
+\subsubsection[{Save\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Save\-Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a892aa0e1c246711d3008408313e9d08d}
+
+
+Save program settings. 
+
+\hypertarget{class_main_window_afd62a69e2fd5374680c79c3088ab75ee}{\index{Main\-Window@{Main\-Window}!Select\-Files\-To\-Check@{Select\-Files\-To\-Check}}
+\index{Select\-Files\-To\-Check@{Select\-Files\-To\-Check}!MainWindow@{Main\-Window}}
+\subsubsection[{Select\-Files\-To\-Check}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String\-List Main\-Window\-::\-Select\-Files\-To\-Check (
+\begin{DoxyParamCaption}
+\item[{Q\-File\-Dialog\-::\-File\-Mode}]{mode}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_afd62a69e2fd5374680c79c3088ab75ee}
+
+
+Select files/or directory to check. Helper function to open a dialog to ask user to select files or directory to check. Use native dialogs instead of Q\-T\-:s own dialogs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Dialog open mode (files or directories) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Q\-String\-List of files or directories that were selected to check 
+\end{DoxyReturn}
+\hypertarget{class_main_window_adfee537ccbb34d30001954e9332a63b2}{\index{Main\-Window@{Main\-Window}!Select\-Platform@{Select\-Platform}}
+\index{Select\-Platform@{Select\-Platform}!MainWindow@{Main\-Window}}
+\subsubsection[{Select\-Platform}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Select\-Platform (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_main_window_adfee537ccbb34d30001954e9332a63b2}
+
+
+Selects the platform as checked platform. 
+
+\hypertarget{class_main_window_a846bd27baa737bd0e8177a24293bab9a}{\index{Main\-Window@{Main\-Window}!Set\-Language@{Set\-Language}}
+\index{Set\-Language@{Set\-Language}!MainWindow@{Main\-Window}}
+\subsubsection[{Set\-Language}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Set\-Language (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a846bd27baa737bd0e8177a24293bab9a}
+
+
+Set current language. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & Language code of the language to set (e.\-g. \char`\"{}en\char`\"{}). \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_a03c505f24fe4bc85c17311ff41a38683}{\index{Main\-Window@{Main\-Window}!Show\-Authors@{Show\-Authors}}
+\index{Show\-Authors@{Show\-Authors}!MainWindow@{Main\-Window}}
+\subsubsection[{Show\-Authors}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Show\-Authors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a03c505f24fe4bc85c17311ff41a38683}
+
+
+Slot to to show authors list. 
+
+\hypertarget{class_main_window_ab8865aea8651614b30f816feef2bd9d4}{\index{Main\-Window@{Main\-Window}!Show\-Errors@{Show\-Errors}}
+\index{Show\-Errors@{Show\-Errors}!MainWindow@{Main\-Window}}
+\subsubsection[{Show\-Errors}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Show\-Errors (
+\begin{DoxyParamCaption}
+\item[{bool}]{checked}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_ab8865aea8651614b30f816feef2bd9d4}
+
+
+Show errors with type \char`\"{}error\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checked} & Should errors be shown (true) or hidden (false) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_a4f579c723aeb56a1d7cf98741b3655a6}{\index{Main\-Window@{Main\-Window}!Show\-Information@{Show\-Information}}
+\index{Show\-Information@{Show\-Information}!MainWindow@{Main\-Window}}
+\subsubsection[{Show\-Information}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Show\-Information (
+\begin{DoxyParamCaption}
+\item[{bool}]{checked}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a4f579c723aeb56a1d7cf98741b3655a6}
+
+
+Show errors with type \char`\"{}information\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checked} & Should errors be shown (true) or hidden (false) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_a09e054caab170ae90c452914c5c79be3}{\index{Main\-Window@{Main\-Window}!Show\-License@{Show\-License}}
+\index{Show\-License@{Show\-License}!MainWindow@{Main\-Window}}
+\subsubsection[{Show\-License}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Show\-License (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a09e054caab170ae90c452914c5c79be3}
+
+
+Slot to to show license text. 
+
+\hypertarget{class_main_window_a93661619d9347814e64ebeaf32fba77f}{\index{Main\-Window@{Main\-Window}!Show\-Log\-View@{Show\-Log\-View}}
+\index{Show\-Log\-View@{Show\-Log\-View}!MainWindow@{Main\-Window}}
+\subsubsection[{Show\-Log\-View}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Show\-Log\-View (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a93661619d9347814e64ebeaf32fba77f}
+
+
+Slot for showing the log view. 
+
+\hypertarget{class_main_window_a7ae044bfd0a5782bf9815b7280e00fdd}{\index{Main\-Window@{Main\-Window}!Show\-Performance@{Show\-Performance}}
+\index{Show\-Performance@{Show\-Performance}!MainWindow@{Main\-Window}}
+\subsubsection[{Show\-Performance}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Show\-Performance (
+\begin{DoxyParamCaption}
+\item[{bool}]{checked}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a7ae044bfd0a5782bf9815b7280e00fdd}
+
+
+Show errors with type \char`\"{}performance\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checked} & Should errors be shown (true) or hidden (false) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_aa649c6776f31c90f143ef78f99fbfebf}{\index{Main\-Window@{Main\-Window}!Show\-Portability@{Show\-Portability}}
+\index{Show\-Portability@{Show\-Portability}!MainWindow@{Main\-Window}}
+\subsubsection[{Show\-Portability}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Show\-Portability (
+\begin{DoxyParamCaption}
+\item[{bool}]{checked}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_aa649c6776f31c90f143ef78f99fbfebf}
+
+
+Show errors with type \char`\"{}portability\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checked} & Should errors be shown (true) or hidden (false) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_aa9b20782ed01d86b78d6b995531c06a5}{\index{Main\-Window@{Main\-Window}!Show\-Statistics@{Show\-Statistics}}
+\index{Show\-Statistics@{Show\-Statistics}!MainWindow@{Main\-Window}}
+\subsubsection[{Show\-Statistics}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Show\-Statistics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_aa9b20782ed01d86b78d6b995531c06a5}
+
+
+Slot for showing the scan and project statistics. 
+
+\hypertarget{class_main_window_a578966abbeaa3d35c5f9cbcc43e31b08}{\index{Main\-Window@{Main\-Window}!Show\-Style@{Show\-Style}}
+\index{Show\-Style@{Show\-Style}!MainWindow@{Main\-Window}}
+\subsubsection[{Show\-Style}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Show\-Style (
+\begin{DoxyParamCaption}
+\item[{bool}]{checked}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a578966abbeaa3d35c5f9cbcc43e31b08}
+
+
+Show errors with type \char`\"{}style\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checked} & Should errors be shown (true) or hidden (false) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_a6e6e6545e4199f1280e4ce5da6c9a226}{\index{Main\-Window@{Main\-Window}!Show\-Warnings@{Show\-Warnings}}
+\index{Show\-Warnings@{Show\-Warnings}!MainWindow@{Main\-Window}}
+\subsubsection[{Show\-Warnings}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Show\-Warnings (
+\begin{DoxyParamCaption}
+\item[{bool}]{checked}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_a6e6e6545e4199f1280e4ce5da6c9a226}
+
+
+Show errors with type \char`\"{}warning\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checked} & Should errors be shown (true) or hidden (false) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_a61bdc8577d17ce192d3c26491969b696}{\index{Main\-Window@{Main\-Window}!Stop\-Checking@{Stop\-Checking}}
+\index{Stop\-Checking@{Stop\-Checking}!MainWindow@{Main\-Window}}
+\subsubsection[{Stop\-Checking}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Stop\-Checking (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_main_window_a61bdc8577d17ce192d3c26491969b696}
+
+
+Slot when stop checking button is pressed. 
+
+\hypertarget{class_main_window_a12ee09e9651f5733477179ed47a35aa0}{\index{Main\-Window@{Main\-Window}!Toggle\-All\-Checked@{Toggle\-All\-Checked}}
+\index{Toggle\-All\-Checked@{Toggle\-All\-Checked}!MainWindow@{Main\-Window}}
+\subsubsection[{Toggle\-All\-Checked}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Toggle\-All\-Checked (
+\begin{DoxyParamCaption}
+\item[{bool}]{checked}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a12ee09e9651f5733477179ed47a35aa0}
+
+
+Helper function to toggle all show error menu items. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em checked} & Should all errors be shown (true) or hidden (false) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_main_window_a5fb4fd8b2d8ecf6e1bc960ed96653990}{\index{Main\-Window@{Main\-Window}!Toggle\-Filter\-Tool\-Bar@{Toggle\-Filter\-Tool\-Bar}}
+\index{Toggle\-Filter\-Tool\-Bar@{Toggle\-Filter\-Tool\-Bar}!MainWindow@{Main\-Window}}
+\subsubsection[{Toggle\-Filter\-Tool\-Bar}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Toggle\-Filter\-Tool\-Bar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_main_window_a5fb4fd8b2d8ecf6e1bc960ed96653990}
+
+
+Slot for showing/hiding Filter toolbar. 
+
+\hypertarget{class_main_window_aebc0fc2ed8aeb50e3f05e1fe7a8bc64f}{\index{Main\-Window@{Main\-Window}!Toggle\-Main\-Tool\-Bar@{Toggle\-Main\-Tool\-Bar}}
+\index{Toggle\-Main\-Tool\-Bar@{Toggle\-Main\-Tool\-Bar}!MainWindow@{Main\-Window}}
+\subsubsection[{Toggle\-Main\-Tool\-Bar}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Toggle\-Main\-Tool\-Bar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_main_window_aebc0fc2ed8aeb50e3f05e1fe7a8bc64f}
+
+
+Slot for showing/hiding standard toolbar. 
+
+\hypertarget{class_main_window_a6ea89ff7dc3fee9cd6a80f17fc7f3d5c}{\index{Main\-Window@{Main\-Window}!Toggle\-View\-Tool\-Bar@{Toggle\-View\-Tool\-Bar}}
+\index{Toggle\-View\-Tool\-Bar@{Toggle\-View\-Tool\-Bar}!MainWindow@{Main\-Window}}
+\subsubsection[{Toggle\-View\-Tool\-Bar}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Toggle\-View\-Tool\-Bar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_main_window_a6ea89ff7dc3fee9cd6a80f17fc7f3d5c}
+
+
+Slot for showing/hiding Categories toolbar. 
+
+\hypertarget{class_main_window_abed24502778dad5e5e31db4d0b8a9722}{\index{Main\-Window@{Main\-Window}!Uncheck\-All@{Uncheck\-All}}
+\index{Uncheck\-All@{Uncheck\-All}!MainWindow@{Main\-Window}}
+\subsubsection[{Uncheck\-All}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Uncheck\-All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_main_window_abed24502778dad5e5e31db4d0b8a9722}
+
+
+Slot to uncheck all \char`\"{}\-Show errors\char`\"{} menu items. 
+
+\hypertarget{class_main_window_af1a057f4c085cde46431ae2fbee994b3}{\index{Main\-Window@{Main\-Window}!Update\-M\-R\-U\-Menu\-Items@{Update\-M\-R\-U\-Menu\-Items}}
+\index{Update\-M\-R\-U\-Menu\-Items@{Update\-M\-R\-U\-Menu\-Items}!MainWindow@{Main\-Window}}
+\subsubsection[{Update\-M\-R\-U\-Menu\-Items}]{\setlength{\rightskip}{0pt plus 5cm}void Main\-Window\-::\-Update\-M\-R\-U\-Menu\-Items (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_af1a057f4c085cde46431ae2fbee994b3}
+
+
+Update project M\-R\-U items in File-\/menu. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_main_window_a917ee334c1141d4f04bd1b242904a85e}{\index{Main\-Window@{Main\-Window}!m\-Applications@{m\-Applications}}
+\index{m\-Applications@{m\-Applications}!MainWindow@{Main\-Window}}
+\subsubsection[{m\-Applications}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Application\-List}$\ast$ Main\-Window\-::m\-Applications\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a917ee334c1141d4f04bd1b242904a85e}
+
+
+List of user defined applications to open errors with. 
+
+\hypertarget{class_main_window_ac43e5a474fe32ed819b1b7e2ca49e311}{\index{Main\-Window@{Main\-Window}!m\-Current\-Directory@{m\-Current\-Directory}}
+\index{m\-Current\-Directory@{m\-Current\-Directory}!MainWindow@{Main\-Window}}
+\subsubsection[{m\-Current\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Main\-Window\-::m\-Current\-Directory\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_ac43e5a474fe32ed819b1b7e2ca49e311}
+
+
+Current checked directory. 
+
+\hypertarget{class_main_window_a727873c771d824448c4b28e0a362ac4e}{\index{Main\-Window@{Main\-Window}!m\-Filter\-Timer@{m\-Filter\-Timer}}
+\index{m\-Filter\-Timer@{m\-Filter\-Timer}!MainWindow@{Main\-Window}}
+\subsubsection[{m\-Filter\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Timer$\ast$ Main\-Window\-::m\-Filter\-Timer\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a727873c771d824448c4b28e0a362ac4e}
+
+
+\hyperlink{class_timer}{Timer} to delay filtering while typing. 
+
+\hypertarget{class_main_window_a87a6c80c7093eb0ddc41d70fea129b18}{\index{Main\-Window@{Main\-Window}!m\-Line\-Edit\-Filter@{m\-Line\-Edit\-Filter}}
+\index{m\-Line\-Edit\-Filter@{m\-Line\-Edit\-Filter}!MainWindow@{Main\-Window}}
+\subsubsection[{m\-Line\-Edit\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Line\-Edit$\ast$ Main\-Window\-::m\-Line\-Edit\-Filter\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a87a6c80c7093eb0ddc41d70fea129b18}
+
+
+Filter field in the Filter toolbar. 
+
+\hypertarget{class_main_window_ad374532b6d59f49e92083d75a6d8c12c}{\index{Main\-Window@{Main\-Window}!m\-Log\-View@{m\-Log\-View}}
+\index{m\-Log\-View@{m\-Log\-View}!MainWindow@{Main\-Window}}
+\subsubsection[{m\-Log\-View}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Log\-View}$\ast$ Main\-Window\-::m\-Log\-View\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_ad374532b6d59f49e92083d75a6d8c12c}
+
+
+Log view. 
+
+\hypertarget{class_main_window_ac66bc9bf2832c507bb49e07c7b8a2dd1}{\index{Main\-Window@{Main\-Window}!m\-Platform\-Actions@{m\-Platform\-Actions}}
+\index{m\-Platform\-Actions@{m\-Platform\-Actions}!MainWindow@{Main\-Window}}
+\subsubsection[{m\-Platform\-Actions}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Action\-Group$\ast$ Main\-Window\-::m\-Platform\-Actions\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_ac66bc9bf2832c507bb49e07c7b8a2dd1}
+
+
+G\-U\-I actions for selecting the checked platform. 
+
+\hypertarget{class_main_window_a8bd97f168e4c804cfe770af7ddf3faf1}{\index{Main\-Window@{Main\-Window}!m\-Platforms@{m\-Platforms}}
+\index{m\-Platforms@{m\-Platforms}!MainWindow@{Main\-Window}}
+\subsubsection[{m\-Platforms}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Platforms} Main\-Window\-::m\-Platforms}}\label{class_main_window_a8bd97f168e4c804cfe770af7ddf3faf1}
+List of checked platforms. \hypertarget{class_main_window_a556c03edd946d60bc426f184d2604678}{\index{Main\-Window@{Main\-Window}!m\-Project@{m\-Project}}
+\index{m\-Project@{m\-Project}!MainWindow@{Main\-Window}}
+\subsubsection[{m\-Project}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Project}$\ast$ Main\-Window\-::m\-Project\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a556c03edd946d60bc426f184d2604678}
+
+
+\hyperlink{class_project}{Project} (file). 
+
+\hypertarget{class_main_window_ac842753fda612bfd6f9b60b07f71acc2}{\index{Main\-Window@{Main\-Window}!m\-Settings@{m\-Settings}}
+\index{m\-Settings@{m\-Settings}!MainWindow@{Main\-Window}}
+\subsubsection[{m\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Settings$\ast$ Main\-Window\-::m\-Settings\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_ac842753fda612bfd6f9b60b07f71acc2}
+
+
+Program settings. 
+
+\hypertarget{class_main_window_a139aa6f8e80e8cef62a0eb72aa1c4071}{\index{Main\-Window@{Main\-Window}!m\-Thread@{m\-Thread}}
+\index{m\-Thread@{m\-Thread}!MainWindow@{Main\-Window}}
+\subsubsection[{m\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Thread\-Handler}$\ast$ Main\-Window\-::m\-Thread\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a139aa6f8e80e8cef62a0eb72aa1c4071}
+
+
+Thread to check files. 
+
+\hypertarget{class_main_window_aba23fb4a828abca9434df9ce0e2419a7}{\index{Main\-Window@{Main\-Window}!m\-Translation@{m\-Translation}}
+\index{m\-Translation@{m\-Translation}!MainWindow@{Main\-Window}}
+\subsubsection[{m\-Translation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Translation\-Handler}$\ast$ Main\-Window\-::m\-Translation\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_aba23fb4a828abca9434df9ce0e2419a7}
+
+
+Class to handle translation changes. 
+
+\hypertarget{class_main_window_a03f313abfd5dc1ae549448b80093d480}{\index{Main\-Window@{Main\-Window}!m\-U\-I@{m\-U\-I}}
+\index{m\-U\-I@{m\-U\-I}!MainWindow@{Main\-Window}}
+\subsubsection[{m\-U\-I}]{\setlength{\rightskip}{0pt plus 5cm}Ui\-::\-Main\-Window Main\-Window\-::m\-U\-I\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_main_window_a03f313abfd5dc1ae549448b80093d480}
+
+
+Class holding all U\-I components. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{mainwindow_8h}{mainwindow.\-h}\item 
+gui/\hyperlink{mainwindow_8cpp}{mainwindow.\-cpp}\end{DoxyCompactItemize}

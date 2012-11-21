@@ -1,0 +1,510 @@
+\hypertarget{class_results_view}{\section{Results\-View Class Reference}
+\label{class_results_view}\index{Results\-View@{Results\-View}}
+}
+
+
+Widget to show cppcheck progressbar and result.  
+
+
+
+
+{\ttfamily \#include $<$resultsview.\-h$>$}
+
+Inheritance diagram for Results\-View\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_results_view}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_results_view_ad92c730f371f275de4bd36ecc12d6a03}{Progress} (int value, const Q\-String \&description)
+\begin{DoxyCompactList}\small\item\em Slot for updating the checking progress. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_view_aa6a89e6137b3c3a2a1ed29bbf7fd960e}{Error} (const \hyperlink{class_error_item}{Error\-Item} \&item)
+\begin{DoxyCompactList}\small\item\em Slot for new error to be displayed. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_view_a850bf055fef28532438263444e6da9d0}{Collapse\-All\-Results} ()
+\begin{DoxyCompactList}\small\item\em Collapse all results in the result list. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_view_afe12d62e0af8147a0124bb412991065d}{Expand\-All\-Results} ()
+\begin{DoxyCompactList}\small\item\em Expand all results in the result list. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_view_ae36303c44a0b2974f23cf50fa221468b}{Filter\-Results} (const Q\-String \&filter)
+\begin{DoxyCompactList}\small\item\em Filters the results in the result list. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_view_aa324fbb7e39a5123469026aaf80ee76d}{Show\-Hidden\-Results} ()
+\begin{DoxyCompactList}\small\item\em Show hidden results in the result list. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_view_a62e9f2ce85be2636154fcfcc805ba321}{Update\-Details} (const Q\-Model\-Index \&index)
+\begin{DoxyCompactList}\small\item\em Update detailed message when selected item is changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_results_view_a53719e5868f7668b0098ac55878116d0}{Got\-Results} ()
+\begin{DoxyCompactList}\small\item\em Signal to be emitted when we have results. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_view_a6653b210708d25ee8e84c9b2cacbb18a}{Results\-Hidden} (bool hidden)
+\begin{DoxyCompactList}\small\item\em Signal that results have been hidden or shown. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_results_view_a73b0bdb3daef4f9b199627c89637c353}{Results\-View} (Q\-Widget $\ast$parent=0)
+\item 
+void \hyperlink{class_results_view_a41ed150cc2f5ba3cd7417a862a0bb481}{Initialize} (Q\-Settings $\ast$settings, \hyperlink{class_application_list}{Application\-List} $\ast$list)
+\item 
+virtual \hyperlink{class_results_view_af9caa8995848c6e05e8486ad1aac8856}{$\sim$\-Results\-View} ()
+\item 
+void \hyperlink{class_results_view_a1d8fbf9d78611154ac5cb3ea6e921b0f}{Show\-Results} (\hyperlink{class_show_types_a92c368f2a33741268265ac2d931eae3f}{Show\-Types\-::\-Show\-Type} type, bool show)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_function}{Function} to show/hide certain type of errors Refreshes the tree. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_view_a71e7b659154c0e1d30089c1cdcfa1dbb}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Clear results. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_view_aced7249d384605f171774b868771d2ec}{Clear} (const Q\-String \&filename)
+\begin{DoxyCompactList}\small\item\em Clear results for a specific file. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_view_a7883371e521591a9a0eb3dccbcbf6e38}{Save} (const Q\-String \&filename, \hyperlink{class_report_a7849fcf198f06b2f94420312e43ec10c}{Report\-::\-Type} type)
+\begin{DoxyCompactList}\small\item\em Save results to a file. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_view_ade996d48f9c5a82ae8839445336120ba}{Update\-Settings} (bool show\-Full\-Path, bool save\-Full\-Path, bool save\-All\-Errors, bool show\-No\-Errors\-Message)
+\begin{DoxyCompactList}\small\item\em Update tree settings. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_view_af53a1c22bc91f599caac36a7cedc03c9}{Set\-Check\-Directory} (const Q\-String \&dir)
+\begin{DoxyCompactList}\small\item\em Set the directory we are checking. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_view_aa06e2aea2f5a97cd0ae1a9be4035b7c1}{Checking\-Started} (int count)
+\begin{DoxyCompactList}\small\item\em Inform the view that checking has started. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_view_a1b1c6e3a6d14640201617ae0f8a82bd3}{Checking\-Finished} ()
+\begin{DoxyCompactList}\small\item\em Inform the view that checking finished. \end{DoxyCompactList}\item 
+bool \hyperlink{class_results_view_ad433507e2d387b2e3b9d23df9d288e5e}{Has\-Visible\-Results} () const 
+\begin{DoxyCompactList}\small\item\em Do we have visible results to show? \end{DoxyCompactList}\item 
+bool \hyperlink{class_results_view_a819b5d859e6f4e372fc2ffdbe001861c}{Has\-Results} () const 
+\begin{DoxyCompactList}\small\item\em Do we have results from check? \end{DoxyCompactList}\item 
+void \hyperlink{class_results_view_aa32b8312612f137e50a292d60919017c}{Save\-Settings} (Q\-Settings $\ast$settings)
+\begin{DoxyCompactList}\small\item\em Save View's settings. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_view_ab4c1e0ca655a011941778dd2a53d8c0f}{Translate} ()
+\begin{DoxyCompactList}\small\item\em Translate this view. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_view_aa9086cbea992f9ffe4f091946cc7bbf0}{Disable\-Progressbar} ()
+\item 
+void \hyperlink{class_results_view_ac4686086f3f04b293b219dd62955795c}{Read\-Errors\-Xml} (const Q\-String \&filename)
+\begin{DoxyCompactList}\small\item\em Read errors from report X\-M\-L file. \end{DoxyCompactList}\item 
+\hyperlink{class_check_statistics}{Check\-Statistics} $\ast$ \hyperlink{class_results_view_a35663429f191af1dafa821cff520e17f}{Get\-Statistics} () const 
+\begin{DoxyCompactList}\small\item\em Return checking statistics. \end{DoxyCompactList}\item 
+\hyperlink{class_show_types}{Show\-Types} $\ast$ \hyperlink{class_results_view_ab78a5b9a06d8000e4edd0239a2402654}{Get\-Show\-Types} () const 
+\begin{DoxyCompactList}\small\item\em Return Showtypes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_results_view_afbb19855b2d5c8607e94abafef54d0df}{m\-Errors\-Found}
+\begin{DoxyCompactList}\small\item\em Have any errors been found. \end{DoxyCompactList}\item 
+bool \hyperlink{class_results_view_a51d04dc3d41eccb2185d9ab040ec60a0}{m\-Show\-No\-Errors\-Message}
+\begin{DoxyCompactList}\small\item\em Should we show a \char`\"{}\-No errors found dialog\char`\"{} every time no errors were found? \end{DoxyCompactList}\item 
+Ui\-::\-Results\-View \hyperlink{class_results_view_a69707109fdfa05850933fac204462c6e}{m\-U\-I}
+\item 
+\hyperlink{class_check_statistics}{Check\-Statistics} $\ast$ \hyperlink{class_results_view_a8435cbf011fd46daa4173a05c98af4e5}{m\-Statistics}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Widget to show cppcheck progressbar and result. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_results_view_a73b0bdb3daef4f9b199627c89637c353}{\index{Results\-View@{Results\-View}!Results\-View@{Results\-View}}
+\index{Results\-View@{Results\-View}!ResultsView@{Results\-View}}
+\subsubsection[{Results\-View}]{\setlength{\rightskip}{0pt plus 5cm}Results\-View\-::\-Results\-View (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_results_view_a73b0bdb3daef4f9b199627c89637c353}
+\hypertarget{class_results_view_af9caa8995848c6e05e8486ad1aac8856}{\index{Results\-View@{Results\-View}!$\sim$\-Results\-View@{$\sim$\-Results\-View}}
+\index{$\sim$\-Results\-View@{$\sim$\-Results\-View}!ResultsView@{Results\-View}}
+\subsubsection[{$\sim$\-Results\-View}]{\setlength{\rightskip}{0pt plus 5cm}Results\-View\-::$\sim$\-Results\-View (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_results_view_af9caa8995848c6e05e8486ad1aac8856}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_results_view_a1b1c6e3a6d14640201617ae0f8a82bd3}{\index{Results\-View@{Results\-View}!Checking\-Finished@{Checking\-Finished}}
+\index{Checking\-Finished@{Checking\-Finished}!ResultsView@{Results\-View}}
+\subsubsection[{Checking\-Finished}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Checking\-Finished (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_results_view_a1b1c6e3a6d14640201617ae0f8a82bd3}
+
+
+Inform the view that checking finished. 
+
+\hypertarget{class_results_view_aa06e2aea2f5a97cd0ae1a9be4035b7c1}{\index{Results\-View@{Results\-View}!Checking\-Started@{Checking\-Started}}
+\index{Checking\-Started@{Checking\-Started}!ResultsView@{Results\-View}}
+\subsubsection[{Checking\-Started}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Checking\-Started (
+\begin{DoxyParamCaption}
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}}\label{class_results_view_aa06e2aea2f5a97cd0ae1a9be4035b7c1}
+
+
+Inform the view that checking has started. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & Count of files to be checked. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_view_a71e7b659154c0e1d30089c1cdcfa1dbb}{\index{Results\-View@{Results\-View}!Clear@{Clear}}
+\index{Clear@{Clear}!ResultsView@{Results\-View}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_results_view_a71e7b659154c0e1d30089c1cdcfa1dbb}
+
+
+Clear results. 
+
+\hypertarget{class_results_view_aced7249d384605f171774b868771d2ec}{\index{Results\-View@{Results\-View}!Clear@{Clear}}
+\index{Clear@{Clear}!ResultsView@{Results\-View}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{filename}
+\end{DoxyParamCaption}
+)}}\label{class_results_view_aced7249d384605f171774b868771d2ec}
+
+
+Clear results for a specific file. 
+
+\hypertarget{class_results_view_a850bf055fef28532438263444e6da9d0}{\index{Results\-View@{Results\-View}!Collapse\-All\-Results@{Collapse\-All\-Results}}
+\index{Collapse\-All\-Results@{Collapse\-All\-Results}!ResultsView@{Results\-View}}
+\subsubsection[{Collapse\-All\-Results}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Collapse\-All\-Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_results_view_a850bf055fef28532438263444e6da9d0}
+
+
+Collapse all results in the result list. 
+
+\hypertarget{class_results_view_aa9086cbea992f9ffe4f091946cc7bbf0}{\index{Results\-View@{Results\-View}!Disable\-Progressbar@{Disable\-Progressbar}}
+\index{Disable\-Progressbar@{Disable\-Progressbar}!ResultsView@{Results\-View}}
+\subsubsection[{Disable\-Progressbar}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Disable\-Progressbar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_results_view_aa9086cbea992f9ffe4f091946cc7bbf0}
+\hypertarget{class_results_view_aa6a89e6137b3c3a2a1ed29bbf7fd960e}{\index{Results\-View@{Results\-View}!Error@{Error}}
+\index{Error@{Error}!ResultsView@{Results\-View}}
+\subsubsection[{Error}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\-Item} \&}]{item}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_results_view_aa6a89e6137b3c3a2a1ed29bbf7fd960e}
+
+
+Slot for new error to be displayed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Error data \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_view_afe12d62e0af8147a0124bb412991065d}{\index{Results\-View@{Results\-View}!Expand\-All\-Results@{Expand\-All\-Results}}
+\index{Expand\-All\-Results@{Expand\-All\-Results}!ResultsView@{Results\-View}}
+\subsubsection[{Expand\-All\-Results}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Expand\-All\-Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_results_view_afe12d62e0af8147a0124bb412991065d}
+
+
+Expand all results in the result list. 
+
+\hypertarget{class_results_view_ae36303c44a0b2974f23cf50fa221468b}{\index{Results\-View@{Results\-View}!Filter\-Results@{Filter\-Results}}
+\index{Filter\-Results@{Filter\-Results}!ResultsView@{Results\-View}}
+\subsubsection[{Filter\-Results}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Filter\-Results (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{filter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_results_view_ae36303c44a0b2974f23cf50fa221468b}
+
+
+Filters the results in the result list. 
+
+\hypertarget{class_results_view_ab78a5b9a06d8000e4edd0239a2402654}{\index{Results\-View@{Results\-View}!Get\-Show\-Types@{Get\-Show\-Types}}
+\index{Get\-Show\-Types@{Get\-Show\-Types}!ResultsView@{Results\-View}}
+\subsubsection[{Get\-Show\-Types}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Show\-Types}$\ast$ Results\-View\-::\-Get\-Show\-Types (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_results_view_ab78a5b9a06d8000e4edd0239a2402654}
+
+
+Return Showtypes. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to Showtypes. 
+\end{DoxyReturn}
+\hypertarget{class_results_view_a35663429f191af1dafa821cff520e17f}{\index{Results\-View@{Results\-View}!Get\-Statistics@{Get\-Statistics}}
+\index{Get\-Statistics@{Get\-Statistics}!ResultsView@{Results\-View}}
+\subsubsection[{Get\-Statistics}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Check\-Statistics}$\ast$ Results\-View\-::\-Get\-Statistics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_results_view_a35663429f191af1dafa821cff520e17f}
+
+
+Return checking statistics. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to checking statistics. 
+\end{DoxyReturn}
+\hypertarget{class_results_view_a53719e5868f7668b0098ac55878116d0}{\index{Results\-View@{Results\-View}!Got\-Results@{Got\-Results}}
+\index{Got\-Results@{Got\-Results}!ResultsView@{Results\-View}}
+\subsubsection[{Got\-Results}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Got\-Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_results_view_a53719e5868f7668b0098ac55878116d0}
+
+
+Signal to be emitted when we have results. 
+
+\hypertarget{class_results_view_a819b5d859e6f4e372fc2ffdbe001861c}{\index{Results\-View@{Results\-View}!Has\-Results@{Has\-Results}}
+\index{Has\-Results@{Has\-Results}!ResultsView@{Results\-View}}
+\subsubsection[{Has\-Results}]{\setlength{\rightskip}{0pt plus 5cm}bool Results\-View\-::\-Has\-Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_results_view_a819b5d859e6f4e372fc2ffdbe001861c}
+
+
+Do we have results from check? 
+
+\begin{DoxyReturn}{Returns}
+true if there is at least one warning/error, hidden or visible. 
+\end{DoxyReturn}
+\hypertarget{class_results_view_ad433507e2d387b2e3b9d23df9d288e5e}{\index{Results\-View@{Results\-View}!Has\-Visible\-Results@{Has\-Visible\-Results}}
+\index{Has\-Visible\-Results@{Has\-Visible\-Results}!ResultsView@{Results\-View}}
+\subsubsection[{Has\-Visible\-Results}]{\setlength{\rightskip}{0pt plus 5cm}bool Results\-View\-::\-Has\-Visible\-Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_results_view_ad433507e2d387b2e3b9d23df9d288e5e}
+
+
+Do we have visible results to show? 
+
+\begin{DoxyReturn}{Returns}
+true if there is at least one warning/error to show. 
+\end{DoxyReturn}
+\hypertarget{class_results_view_a41ed150cc2f5ba3cd7417a862a0bb481}{\index{Results\-View@{Results\-View}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!ResultsView@{Results\-View}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Initialize (
+\begin{DoxyParamCaption}
+\item[{Q\-Settings $\ast$}]{settings, }
+\item[{{\bf Application\-List} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{class_results_view_a41ed150cc2f5ba3cd7417a862a0bb481}
+\hypertarget{class_results_view_ad92c730f371f275de4bd36ecc12d6a03}{\index{Results\-View@{Results\-View}!Progress@{Progress}}
+\index{Progress@{Progress}!ResultsView@{Results\-View}}
+\subsubsection[{Progress}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Progress (
+\begin{DoxyParamCaption}
+\item[{int}]{value, }
+\item[{const Q\-String \&}]{description}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_results_view_ad92c730f371f275de4bd36ecc12d6a03}
+
+
+Slot for updating the checking progress. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Current progress value \\
+\hline
+{\em description} & Description to accompany the progress \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_view_ac4686086f3f04b293b219dd62955795c}{\index{Results\-View@{Results\-View}!Read\-Errors\-Xml@{Read\-Errors\-Xml}}
+\index{Read\-Errors\-Xml@{Read\-Errors\-Xml}!ResultsView@{Results\-View}}
+\subsubsection[{Read\-Errors\-Xml}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Read\-Errors\-Xml (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{filename}
+\end{DoxyParamCaption}
+)}}\label{class_results_view_ac4686086f3f04b293b219dd62955795c}
+
+
+Read errors from report X\-M\-L file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \hyperlink{class_report}{Report} file to read. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_view_a6653b210708d25ee8e84c9b2cacbb18a}{\index{Results\-View@{Results\-View}!Results\-Hidden@{Results\-Hidden}}
+\index{Results\-Hidden@{Results\-Hidden}!ResultsView@{Results\-View}}
+\subsubsection[{Results\-Hidden}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Results\-Hidden (
+\begin{DoxyParamCaption}
+\item[{bool}]{hidden}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_results_view_a6653b210708d25ee8e84c9b2cacbb18a}
+
+
+Signal that results have been hidden or shown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hidden} & true if there are some hidden results, or false if there are not \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_view_a7883371e521591a9a0eb3dccbcbf6e38}{\index{Results\-View@{Results\-View}!Save@{Save}}
+\index{Save@{Save}!ResultsView@{Results\-View}}
+\subsubsection[{Save}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Save (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{filename, }
+\item[{{\bf Report\-::\-Type}}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_results_view_a7883371e521591a9a0eb3dccbcbf6e38}
+
+
+Save results to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Filename to save results to \\
+\hline
+{\em type} & Type of the report. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_view_aa32b8312612f137e50a292d60919017c}{\index{Results\-View@{Results\-View}!Save\-Settings@{Save\-Settings}}
+\index{Save\-Settings@{Save\-Settings}!ResultsView@{Results\-View}}
+\subsubsection[{Save\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Save\-Settings (
+\begin{DoxyParamCaption}
+\item[{Q\-Settings $\ast$}]{settings}
+\end{DoxyParamCaption}
+)}}\label{class_results_view_aa32b8312612f137e50a292d60919017c}
+
+
+Save View's settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & program settings. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_view_af53a1c22bc91f599caac36a7cedc03c9}{\index{Results\-View@{Results\-View}!Set\-Check\-Directory@{Set\-Check\-Directory}}
+\index{Set\-Check\-Directory@{Set\-Check\-Directory}!ResultsView@{Results\-View}}
+\subsubsection[{Set\-Check\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Set\-Check\-Directory (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{dir}
+\end{DoxyParamCaption}
+)}}\label{class_results_view_af53a1c22bc91f599caac36a7cedc03c9}
+
+
+Set the directory we are checking. 
+
+This is used to split error file path to relative if necessary 
+\begin{DoxyParams}{Parameters}
+{\em dir} & Directory we are checking \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_view_aa324fbb7e39a5123469026aaf80ee76d}{\index{Results\-View@{Results\-View}!Show\-Hidden\-Results@{Show\-Hidden\-Results}}
+\index{Show\-Hidden\-Results@{Show\-Hidden\-Results}!ResultsView@{Results\-View}}
+\subsubsection[{Show\-Hidden\-Results}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Show\-Hidden\-Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_results_view_aa324fbb7e39a5123469026aaf80ee76d}
+
+
+Show hidden results in the result list. 
+
+\hypertarget{class_results_view_a1d8fbf9d78611154ac5cb3ea6e921b0f}{\index{Results\-View@{Results\-View}!Show\-Results@{Show\-Results}}
+\index{Show\-Results@{Show\-Results}!ResultsView@{Results\-View}}
+\subsubsection[{Show\-Results}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Show\-Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Show\-Types\-::\-Show\-Type}}]{type, }
+\item[{bool}]{show}
+\end{DoxyParamCaption}
+)}}\label{class_results_view_a1d8fbf9d78611154ac5cb3ea6e921b0f}
+
+
+\hyperlink{class_function}{Function} to show/hide certain type of errors Refreshes the tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of error to show/hide \\
+\hline
+{\em show} & Should specified errors be shown (true) or hidden (false) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_view_ab4c1e0ca655a011941778dd2a53d8c0f}{\index{Results\-View@{Results\-View}!Translate@{Translate}}
+\index{Translate@{Translate}!ResultsView@{Results\-View}}
+\subsubsection[{Translate}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Translate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_results_view_ab4c1e0ca655a011941778dd2a53d8c0f}
+
+
+Translate this view. 
+
+\hypertarget{class_results_view_a62e9f2ce85be2636154fcfcc805ba321}{\index{Results\-View@{Results\-View}!Update\-Details@{Update\-Details}}
+\index{Update\-Details@{Update\-Details}!ResultsView@{Results\-View}}
+\subsubsection[{Update\-Details}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Update\-Details (
+\begin{DoxyParamCaption}
+\item[{const Q\-Model\-Index \&}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_results_view_a62e9f2ce85be2636154fcfcc805ba321}
+
+
+Update detailed message when selected item is changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Position of new selected item. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_view_ade996d48f9c5a82ae8839445336120ba}{\index{Results\-View@{Results\-View}!Update\-Settings@{Update\-Settings}}
+\index{Update\-Settings@{Update\-Settings}!ResultsView@{Results\-View}}
+\subsubsection[{Update\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-View\-::\-Update\-Settings (
+\begin{DoxyParamCaption}
+\item[{bool}]{show\-Full\-Path, }
+\item[{bool}]{save\-Full\-Path, }
+\item[{bool}]{save\-All\-Errors, }
+\item[{bool}]{show\-No\-Errors\-Message}
+\end{DoxyParamCaption}
+)}}\label{class_results_view_ade996d48f9c5a82ae8839445336120ba}
+
+
+Update tree settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em show\-Full\-Path} & Show full path of files in the tree \\
+\hline
+{\em save\-Full\-Path} & Save full path of files in reports \\
+\hline
+{\em save\-All\-Errors} & Save all visible errors \\
+\hline
+{\em show\-No\-Errors\-Message} & Show \char`\"{}no errors\char`\"{}? \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_results_view_afbb19855b2d5c8607e94abafef54d0df}{\index{Results\-View@{Results\-View}!m\-Errors\-Found@{m\-Errors\-Found}}
+\index{m\-Errors\-Found@{m\-Errors\-Found}!ResultsView@{Results\-View}}
+\subsubsection[{m\-Errors\-Found}]{\setlength{\rightskip}{0pt plus 5cm}bool Results\-View\-::m\-Errors\-Found\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_view_afbb19855b2d5c8607e94abafef54d0df}
+
+
+Have any errors been found. 
+
+\hypertarget{class_results_view_a51d04dc3d41eccb2185d9ab040ec60a0}{\index{Results\-View@{Results\-View}!m\-Show\-No\-Errors\-Message@{m\-Show\-No\-Errors\-Message}}
+\index{m\-Show\-No\-Errors\-Message@{m\-Show\-No\-Errors\-Message}!ResultsView@{Results\-View}}
+\subsubsection[{m\-Show\-No\-Errors\-Message}]{\setlength{\rightskip}{0pt plus 5cm}bool Results\-View\-::m\-Show\-No\-Errors\-Message\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_view_a51d04dc3d41eccb2185d9ab040ec60a0}
+
+
+Should we show a \char`\"{}\-No errors found dialog\char`\"{} every time no errors were found? 
+
+\hypertarget{class_results_view_a8435cbf011fd46daa4173a05c98af4e5}{\index{Results\-View@{Results\-View}!m\-Statistics@{m\-Statistics}}
+\index{m\-Statistics@{m\-Statistics}!ResultsView@{Results\-View}}
+\subsubsection[{m\-Statistics}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Check\-Statistics}$\ast$ Results\-View\-::m\-Statistics\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_view_a8435cbf011fd46daa4173a05c98af4e5}
+\hypertarget{class_results_view_a69707109fdfa05850933fac204462c6e}{\index{Results\-View@{Results\-View}!m\-U\-I@{m\-U\-I}}
+\index{m\-U\-I@{m\-U\-I}!ResultsView@{Results\-View}}
+\subsubsection[{m\-U\-I}]{\setlength{\rightskip}{0pt plus 5cm}Ui\-::\-Results\-View Results\-View\-::m\-U\-I\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_view_a69707109fdfa05850933fac204462c6e}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{resultsview_8h}{resultsview.\-h}\item 
+gui/\hyperlink{resultsview_8cpp}{resultsview.\-cpp}\end{DoxyCompactItemize}

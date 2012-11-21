@@ -1,0 +1,315 @@
+\hypertarget{geshi_8php}{\section{htdocs/site/geshi/geshi.php File Reference}
+\label{geshi_8php}\index{htdocs/site/geshi/geshi.\-php@{htdocs/site/geshi/geshi.\-php}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_ge_s_hi}{Ge\-S\-Hi}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacegeshi}{geshi}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{geshi_8php_ad1ea05c1a2b4ad5c5f0f45d4e4a63366}{G\-E\-S\-H\-I\-\_\-\-V\-E\-R\-S\-I\-O\-N} '1.\-0.\-8.\-10'
+\item 
+const \hyperlink{geshi_8php_a9771b008486bce86bfb0f9e943d2e5dc}{G\-E\-S\-H\-I\-\_\-\-L\-A\-N\-G\-\_\-\-R\-O\-O\-T} (!defined('G\-E\-S\-H\-I\-\_\-\-R\-O\-O\-T')) G\-E\-S\-H\-I\-\_\-\-R\-O\-O\-T . 'geshi' . D\-I\-R\-E\-C\-T\-O\-R\-Y\-\_\-\-S\-E\-P\-A\-R\-A\-T\-O\-R
+\item 
+const \hyperlink{geshi_8php_a1fe21885ebfc0b528b68b49fe6ab3733}{G\-E\-S\-H\-I\-\_\-\-N\-O\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S} (!defined('G\-E\-S\-H\-I\-\_\-\-S\-E\-C\-U\-R\-I\-T\-Y\-\_\-\-P\-A\-R\-A\-N\-O\-I\-D')) 0
+\item 
+const \hyperlink{geshi_8php_ab1dda8d09574432f161e371a5b546eed}{G\-E\-S\-H\-I\-\_\-\-N\-O\-R\-M\-A\-L\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S} 1
+\item 
+const \hyperlink{geshi_8php_ad705070ddd8a239290d108e9216b83c5}{G\-E\-S\-H\-I\-\_\-\-F\-A\-N\-C\-Y\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S} 2
+\item 
+const \hyperlink{geshi_8php_a7a7da92dd3c2b88d57c9e500da2d7d48}{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-N\-O\-N\-E} 0
+\item 
+const \hyperlink{geshi_8php_aaf89a0cee502125f533c73fc882c187d}{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-D\-I\-V} 1
+\item 
+const \hyperlink{geshi_8php_ae6e4b0569a0794d3a19b018f7d0a9b4c}{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E} 2
+\item 
+const \hyperlink{geshi_8php_a420a1caf47363654a1490d32b632df2b}{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E\-\_\-\-V\-A\-L\-I\-D} 3
+\item 
+const \hyperlink{geshi_8php_a17d7284d6735bd6e83c08da290120429}{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E\-\_\-\-T\-A\-B\-L\-E} 4
+\item 
+const \hyperlink{geshi_8php_a40b50be2e6b442c4fc83b917690ee4fc}{G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-N\-O\-\_\-\-C\-H\-A\-N\-G\-E} 0
+\item 
+const \hyperlink{geshi_8php_afa69823ba88fb942e2deb2b7a737df11}{G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-U\-P\-P\-E\-R} 1
+\item 
+const \hyperlink{geshi_8php_ae577346259dbdde6a7a0496bb5506a1f}{G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-L\-O\-W\-E\-R} 2
+\item 
+const \hyperlink{geshi_8php_a331e5dc0cf2a33efd061f37c52a8f1b1}{G\-E\-S\-H\-I\-\_\-\-L\-I\-N\-K} 0
+\item 
+const \hyperlink{geshi_8php_a0ef9109598d2979e6e86b9745b6df378}{G\-E\-S\-H\-I\-\_\-\-H\-O\-V\-E\-R} 1
+\item 
+const \hyperlink{geshi_8php_a4d7a4c7dd9b37d0ad87e7f608aceb730}{G\-E\-S\-H\-I\-\_\-\-A\-C\-T\-I\-V\-E} 2
+\item 
+const \hyperlink{geshi_8php_a1e565db022fc06a7a9dac10bc247a309}{G\-E\-S\-H\-I\-\_\-\-V\-I\-S\-I\-T\-E\-D} 3
+\item 
+const \hyperlink{geshi_8php_ae681952f8490031cff157153f965cbaf}{G\-E\-S\-H\-I\-\_\-\-S\-T\-A\-R\-T\-\_\-\-I\-M\-P\-O\-R\-T\-A\-N\-T} '$<$B\-E\-G\-I\-N \hyperlink{class_ge_s_hi}{Ge\-S\-Hi}$>$'
+\item 
+const \hyperlink{geshi_8php_af04ae98a020cfe3d18ff0fdae552b240}{G\-E\-S\-H\-I\-\_\-\-E\-N\-D\-\_\-\-I\-M\-P\-O\-R\-T\-A\-N\-T} '$<$E\-N\-D \hyperlink{class_ge_s_hi}{Ge\-S\-Hi}$>$'
+\item 
+const \hyperlink{geshi_8php_ae8d10560a1521054157078b7c900bac5}{G\-E\-S\-H\-I\-\_\-\-N\-E\-V\-E\-R} 0
+\item 
+const \hyperlink{geshi_8php_a080daa0b765d40f4278400ec7ee5516f}{G\-E\-S\-H\-I\-\_\-\-M\-A\-Y\-B\-E} 1
+\item 
+const \hyperlink{geshi_8php_ac99f8d1c5e483d980b3a5898e63c5ece}{G\-E\-S\-H\-I\-\_\-\-A\-L\-W\-A\-Y\-S} 2
+\item 
+const \hyperlink{geshi_8php_a600cf0cefcaff88611c607804fa92d9b}{G\-E\-S\-H\-I\-\_\-\-S\-E\-A\-R\-C\-H} 0
+\item 
+const \hyperlink{geshi_8php_accd34e52b0bbc2beff3cf62e33d24f6c}{G\-E\-S\-H\-I\-\_\-\-R\-E\-P\-L\-A\-C\-E} 1
+\item 
+const \hyperlink{geshi_8php_af36b35daee7f0a188ebd83f81d93d7cb}{G\-E\-S\-H\-I\-\_\-\-M\-O\-D\-I\-F\-I\-E\-R\-S} 2
+\item 
+const \hyperlink{geshi_8php_a4dcf8c272993a68180bc10566741f88b}{G\-E\-S\-H\-I\-\_\-\-B\-E\-F\-O\-R\-E} 3
+\item 
+const \hyperlink{geshi_8php_a9af1ed4c363ea643560ad9151f54d569}{G\-E\-S\-H\-I\-\_\-\-A\-F\-T\-E\-R} 4
+\item 
+const \hyperlink{geshi_8php_a7b8964b344b8b529501174b021e3141c}{G\-E\-S\-H\-I\-\_\-\-C\-L\-A\-S\-S} 5
+\item 
+const \hyperlink{geshi_8php_ae73b5cf829176b7683fc7bd21312e301}{G\-E\-S\-H\-I\-\_\-\-C\-O\-M\-M\-E\-N\-T\-S} 0
+\item 
+const \hyperlink{geshi_8php_abb000b37c91b5b05b426aecabddbe3a5}{G\-E\-S\-H\-I\-\_\-\-P\-H\-P\-\_\-\-P\-R\-E\-\_\-433} !(version\-\_\-compare(P\-H\-P\-\_\-\-V\-E\-R\-S\-I\-O\-N, '4.\-3.\-3') === 1)
+\item 
+const \hyperlink{geshi_8php_a06b303abd49f800f6b8a853ccdb578aa}{G\-E\-S\-H\-I\-\_\-\-M\-A\-X\-\_\-\-P\-C\-R\-E\-\_\-\-S\-U\-B\-P\-A\-T\-T\-E\-R\-N\-S} (!function\-\_\-exists('stripos')) 500
+\item 
+const \hyperlink{geshi_8php_aed8e5439df210544cf31a28d2c2e9e77}{G\-E\-S\-H\-I\-\_\-\-M\-A\-X\-\_\-\-P\-C\-R\-E\-\_\-\-L\-E\-N\-G\-T\-H} 12288
+\item 
+const \hyperlink{geshi_8php_a02faeead91ea284c9e543b42d17c27b1}{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-I\-N\-T\-\_\-\-B\-A\-S\-I\-C} 1
+\item 
+const \hyperlink{geshi_8php_a35ca0577d96258e4a733dacefcaa1c5d}{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-I\-N\-T\-\_\-\-C\-S\-T\-Y\-L\-E} 2
+\item 
+const \hyperlink{geshi_8php_a6034fccce93bc6fddb7cd6697bd0392b}{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-S\-U\-F\-F\-I\-X} 16
+\item 
+const \hyperlink{geshi_8php_a1b84efb492bbcc75223877bd4def00c2}{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-P\-E\-R\-C\-E\-N\-T} 32
+\item 
+const \hyperlink{geshi_8php_a4c428c7fc449c1c4cd21cfd7fb2edd7a}{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-0\-B} 64
+\item 
+const \hyperlink{geshi_8php_a558a29a94472d0414f9888cb5adfa656}{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X} 256
+\item 
+const \hyperlink{geshi_8php_a21059f992b0d80358e79516fb73d3657}{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-0\-O} 512
+\item 
+const \hyperlink{geshi_8php_a59c0b6e00cc6e108f6142b40b90a8bac}{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-A\-T} 1024
+\item 
+const \hyperlink{geshi_8php_a6ae313a6370f813f1dbe9b6e969285e2}{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-S\-U\-F\-F\-I\-X} 2048
+\item 
+const \hyperlink{geshi_8php_a7ee428a986fb6775e78f4b31829923c9}{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-P\-R\-E\-F\-I\-X} 4096
+\item 
+const \hyperlink{geshi_8php_a8b7bf2192ca0cb217bb5cd5b1d753f5c}{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-D\-O\-L\-L\-A\-R} 8192
+\item 
+const \hyperlink{geshi_8php_a5eeeb7f820cfcfd4c6f4e8f5a97ba9a2}{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-S\-U\-F\-F\-I\-X} 16384
+\item 
+const \hyperlink{geshi_8php_a21afc55328f79867223e3ed43e80500f}{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-N\-O\-N\-S\-C\-I} 65536
+\item 
+const \hyperlink{geshi_8php_a3440420334947a07e80ae297abb35a7a}{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-N\-O\-N\-S\-C\-I\-\_\-\-F} 131072
+\item 
+const \hyperlink{geshi_8php_aee41e7c8932536abbd4eeca50d36505f}{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-S\-C\-I\-\_\-\-S\-H\-O\-R\-T} 262144
+\item 
+const \hyperlink{geshi_8php_ab172e320c7be8763d038e8cb7aa70b04}{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-S\-C\-I\-\_\-\-Z\-E\-R\-O} 524288
+\item 
+const \hyperlink{geshi_8php_afac1ba98f806fc7daf63745da607b670}{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-\_\-\-I\-N\-P\-U\-T} 1
+\item 
+const \hyperlink{geshi_8php_ade94b7289ca209f2232ba54fbed45d7a}{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-\_\-\-S\-U\-C\-H\-\_\-\-L\-A\-N\-G} 2
+\item 
+const \hyperlink{geshi_8php_ab26c550d73280280d4cad465b245102f}{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-F\-I\-L\-E\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-A\-B\-L\-E} 3
+\item 
+const \hyperlink{geshi_8php_a532ae6b6ae831f9d4a53dd325eafb799}{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-T\-Y\-P\-E} 4
+\item 
+const \hyperlink{geshi_8php_ade87771c2127b62786b36d1c206d5eac}{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-T\-Y\-P\-E} 5
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{geshi_8php_a4d7a4c7dd9b37d0ad87e7f608aceb730}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-A\-C\-T\-I\-V\-E@{G\-E\-S\-H\-I\-\_\-\-A\-C\-T\-I\-V\-E}}
+\index{G\-E\-S\-H\-I\-\_\-\-A\-C\-T\-I\-V\-E@{G\-E\-S\-H\-I\-\_\-\-A\-C\-T\-I\-V\-E}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-A\-C\-T\-I\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-A\-C\-T\-I\-V\-E 2}}\label{geshi_8php_a4d7a4c7dd9b37d0ad87e7f608aceb730}
+Links in the source in the \-:active state \hypertarget{geshi_8php_a9af1ed4c363ea643560ad9151f54d569}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-A\-F\-T\-E\-R@{G\-E\-S\-H\-I\-\_\-\-A\-F\-T\-E\-R}}
+\index{G\-E\-S\-H\-I\-\_\-\-A\-F\-T\-E\-R@{G\-E\-S\-H\-I\-\_\-\-A\-F\-T\-E\-R}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-A\-F\-T\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-A\-F\-T\-E\-R 4}}\label{geshi_8php_a9af1ed4c363ea643560ad9151f54d569}
+The key of the regex array defining what bracket group in a matched search to put after the replacement \hypertarget{geshi_8php_ac99f8d1c5e483d980b3a5898e63c5ece}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-A\-L\-W\-A\-Y\-S@{G\-E\-S\-H\-I\-\_\-\-A\-L\-W\-A\-Y\-S}}
+\index{G\-E\-S\-H\-I\-\_\-\-A\-L\-W\-A\-Y\-S@{G\-E\-S\-H\-I\-\_\-\-A\-L\-W\-A\-Y\-S}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-A\-L\-W\-A\-Y\-S}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-A\-L\-W\-A\-Y\-S 2}}\label{geshi_8php_ac99f8d1c5e483d980b3a5898e63c5ece}
+Strict mode always applies \hypertarget{geshi_8php_a4dcf8c272993a68180bc10566741f88b}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-B\-E\-F\-O\-R\-E@{G\-E\-S\-H\-I\-\_\-\-B\-E\-F\-O\-R\-E}}
+\index{G\-E\-S\-H\-I\-\_\-\-B\-E\-F\-O\-R\-E@{G\-E\-S\-H\-I\-\_\-\-B\-E\-F\-O\-R\-E}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-B\-E\-F\-O\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-B\-E\-F\-O\-R\-E 3}}\label{geshi_8php_a4dcf8c272993a68180bc10566741f88b}
+The key of the regex array defining what bracket group in a matched search to put before the replacement \hypertarget{geshi_8php_ae577346259dbdde6a7a0496bb5506a1f}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-L\-O\-W\-E\-R@{G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-L\-O\-W\-E\-R}}
+\index{G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-L\-O\-W\-E\-R@{G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-L\-O\-W\-E\-R}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-L\-O\-W\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-L\-O\-W\-E\-R 2}}\label{geshi_8php_ae577346259dbdde6a7a0496bb5506a1f}
+Leave keywords found as the case that they are \hypertarget{geshi_8php_a40b50be2e6b442c4fc83b917690ee4fc}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-N\-O\-\_\-\-C\-H\-A\-N\-G\-E@{G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-N\-O\-\_\-\-C\-H\-A\-N\-G\-E}}
+\index{G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-N\-O\-\_\-\-C\-H\-A\-N\-G\-E@{G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-N\-O\-\_\-\-C\-H\-A\-N\-G\-E}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-N\-O\-\_\-\-C\-H\-A\-N\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-N\-O\-\_\-\-C\-H\-A\-N\-G\-E 0}}\label{geshi_8php_a40b50be2e6b442c4fc83b917690ee4fc}
+Lowercase keywords found \hypertarget{geshi_8php_afa69823ba88fb942e2deb2b7a737df11}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-U\-P\-P\-E\-R@{G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-U\-P\-P\-E\-R}}
+\index{G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-U\-P\-P\-E\-R@{G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-U\-P\-P\-E\-R}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-U\-P\-P\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-C\-A\-P\-S\-\_\-\-U\-P\-P\-E\-R 1}}\label{geshi_8php_afa69823ba88fb942e2deb2b7a737df11}
+Uppercase keywords found \hypertarget{geshi_8php_a7b8964b344b8b529501174b021e3141c}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-C\-L\-A\-S\-S@{G\-E\-S\-H\-I\-\_\-\-C\-L\-A\-S\-S}}
+\index{G\-E\-S\-H\-I\-\_\-\-C\-L\-A\-S\-S@{G\-E\-S\-H\-I\-\_\-\-C\-L\-A\-S\-S}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-C\-L\-A\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-C\-L\-A\-S\-S 5}}\label{geshi_8php_a7b8964b344b8b529501174b021e3141c}
+The key of the regex array defining a custom keyword to use for this regexp's html tag class \hypertarget{geshi_8php_ae73b5cf829176b7683fc7bd21312e301}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-C\-O\-M\-M\-E\-N\-T\-S@{G\-E\-S\-H\-I\-\_\-\-C\-O\-M\-M\-E\-N\-T\-S}}
+\index{G\-E\-S\-H\-I\-\_\-\-C\-O\-M\-M\-E\-N\-T\-S@{G\-E\-S\-H\-I\-\_\-\-C\-O\-M\-M\-E\-N\-T\-S}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-C\-O\-M\-M\-E\-N\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-C\-O\-M\-M\-E\-N\-T\-S 0}}\label{geshi_8php_ae73b5cf829176b7683fc7bd21312e301}
+Used in language files to mark comments \hypertarget{geshi_8php_af04ae98a020cfe3d18ff0fdae552b240}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-E\-N\-D\-\_\-\-I\-M\-P\-O\-R\-T\-A\-N\-T@{G\-E\-S\-H\-I\-\_\-\-E\-N\-D\-\_\-\-I\-M\-P\-O\-R\-T\-A\-N\-T}}
+\index{G\-E\-S\-H\-I\-\_\-\-E\-N\-D\-\_\-\-I\-M\-P\-O\-R\-T\-A\-N\-T@{G\-E\-S\-H\-I\-\_\-\-E\-N\-D\-\_\-\-I\-M\-P\-O\-R\-T\-A\-N\-T}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-E\-N\-D\-\_\-\-I\-M\-P\-O\-R\-T\-A\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-E\-N\-D\-\_\-\-I\-M\-P\-O\-R\-T\-A\-N\-T '$<$E\-N\-D {\bf Ge\-S\-Hi}$>$'}}\label{geshi_8php_af04ae98a020cfe3d18ff0fdae552b240}
+The ender for important parts of the source \hypertarget{geshi_8php_ab26c550d73280280d4cad465b245102f}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-F\-I\-L\-E\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-A\-B\-L\-E@{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-F\-I\-L\-E\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-A\-B\-L\-E}}
+\index{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-F\-I\-L\-E\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-A\-B\-L\-E@{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-F\-I\-L\-E\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-A\-B\-L\-E}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-F\-I\-L\-E\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-F\-I\-L\-E\-\_\-\-N\-O\-T\-\_\-\-R\-E\-A\-D\-A\-B\-L\-E 3}}\label{geshi_8php_ab26c550d73280280d4cad465b245102f}
+\hyperlink{class_ge_s_hi}{Ge\-S\-Hi} could not open a file for reading (generally a language file) \hypertarget{geshi_8php_a532ae6b6ae831f9d4a53dd325eafb799}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-T\-Y\-P\-E@{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-T\-Y\-P\-E}}
+\index{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-T\-Y\-P\-E@{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-T\-Y\-P\-E}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-T\-Y\-P\-E 4}}\label{geshi_8php_a532ae6b6ae831f9d4a53dd325eafb799}
+The header type passed to \hyperlink{}{Ge\-S\-Hi-\/$>$set\-\_\-header\-\_\-type()} was invalid \hypertarget{geshi_8php_ade87771c2127b62786b36d1c206d5eac}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-T\-Y\-P\-E@{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-T\-Y\-P\-E}}
+\index{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-T\-Y\-P\-E@{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-T\-Y\-P\-E}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-T\-Y\-P\-E 5}}\label{geshi_8php_ade87771c2127b62786b36d1c206d5eac}
+The line number type passed to \hyperlink{}{Ge\-S\-Hi-\/$>$enable\-\_\-line\-\_\-numbers()} was invalid \hypertarget{geshi_8php_afac1ba98f806fc7daf63745da607b670}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-\_\-\-I\-N\-P\-U\-T@{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-\_\-\-I\-N\-P\-U\-T}}
+\index{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-\_\-\-I\-N\-P\-U\-T@{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-\_\-\-I\-N\-P\-U\-T}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-\_\-\-I\-N\-P\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-\_\-\-I\-N\-P\-U\-T 1}}\label{geshi_8php_afac1ba98f806fc7daf63745da607b670}
+No sourcecode to highlight was specified \begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000007}{Deprecated}]\end{DoxyRefDesc}
+\hypertarget{geshi_8php_ade94b7289ca209f2232ba54fbed45d7a}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-\_\-\-S\-U\-C\-H\-\_\-\-L\-A\-N\-G@{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-\_\-\-S\-U\-C\-H\-\_\-\-L\-A\-N\-G}}
+\index{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-\_\-\-S\-U\-C\-H\-\_\-\-L\-A\-N\-G@{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-\_\-\-S\-U\-C\-H\-\_\-\-L\-A\-N\-G}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-\_\-\-S\-U\-C\-H\-\_\-\-L\-A\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-E\-R\-R\-O\-R\-\_\-\-N\-O\-\_\-\-S\-U\-C\-H\-\_\-\-L\-A\-N\-G 2}}\label{geshi_8php_ade94b7289ca209f2232ba54fbed45d7a}
+The language specified does not exist \hypertarget{geshi_8php_ad705070ddd8a239290d108e9216b83c5}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-F\-A\-N\-C\-Y\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S@{G\-E\-S\-H\-I\-\_\-\-F\-A\-N\-C\-Y\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S}}
+\index{G\-E\-S\-H\-I\-\_\-\-F\-A\-N\-C\-Y\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S@{G\-E\-S\-H\-I\-\_\-\-F\-A\-N\-C\-Y\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-F\-A\-N\-C\-Y\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-F\-A\-N\-C\-Y\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S 2}}\label{geshi_8php_ad705070ddd8a239290d108e9216b83c5}
+Use fancy line numbers when building the result \hypertarget{geshi_8php_aaf89a0cee502125f533c73fc882c187d}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-D\-I\-V@{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-D\-I\-V}}
+\index{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-D\-I\-V@{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-D\-I\-V}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-D\-I\-V}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-D\-I\-V 1}}\label{geshi_8php_aaf89a0cee502125f533c73fc882c187d}
+Use a \char`\"{}div\char`\"{} to surround the source \hypertarget{geshi_8php_a7a7da92dd3c2b88d57c9e500da2d7d48}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-N\-O\-N\-E@{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-N\-O\-N\-E}}
+\index{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-N\-O\-N\-E@{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-N\-O\-N\-E}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-N\-O\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-N\-O\-N\-E 0}}\label{geshi_8php_a7a7da92dd3c2b88d57c9e500da2d7d48}
+Use nothing to surround the source \hypertarget{geshi_8php_ae6e4b0569a0794d3a19b018f7d0a9b4c}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E@{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E}}
+\index{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E@{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E 2}}\label{geshi_8php_ae6e4b0569a0794d3a19b018f7d0a9b4c}
+Use a \char`\"{}pre\char`\"{} to surround the source \hypertarget{geshi_8php_a17d7284d6735bd6e83c08da290120429}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E\-\_\-\-T\-A\-B\-L\-E@{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E\-\_\-\-T\-A\-B\-L\-E}}
+\index{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E\-\_\-\-T\-A\-B\-L\-E@{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E\-\_\-\-T\-A\-B\-L\-E}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E\-\_\-\-T\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E\-\_\-\-T\-A\-B\-L\-E 4}}\label{geshi_8php_a17d7284d6735bd6e83c08da290120429}
+Use a \char`\"{}table\char`\"{} to surround the source\-:
+
+\begin{TabularC}{0}
+\hline
+\end{TabularC}
+
+
+\$header$<$/thead$>$ $<$tbody$>$
+
+
+\begin{DoxyPre}$linenumbers\end{DoxyPre}
+
+
+
+\begin{DoxyPre}$code>\end{DoxyPre}
+$<$/tbody$>$ $<$tfooter$>$
+
+\$footer$<$/tfoot$>$ 
+
+this is essentially only a workaround for Firefox, see sf\#1651996 or take a look at \href{https://bugzilla.mozilla.org/show_bug.cgi?id=365805}{\tt https\-://bugzilla.\-mozilla.\-org/show\-\_\-bug.\-cgi?id=365805} \begin{DoxyNote}{Note}
+when linenumbers are disabled this is essentially the same as G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E 
+\end{DoxyNote}
+\hypertarget{geshi_8php_a420a1caf47363654a1490d32b632df2b}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E\-\_\-\-V\-A\-L\-I\-D@{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E\-\_\-\-V\-A\-L\-I\-D}}
+\index{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E\-\_\-\-V\-A\-L\-I\-D@{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E\-\_\-\-V\-A\-L\-I\-D}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E\-\_\-\-V\-A\-L\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-P\-R\-E\-\_\-\-V\-A\-L\-I\-D 3}}\label{geshi_8php_a420a1caf47363654a1490d32b632df2b}
+Use a pre to wrap lines when line numbers are enabled or to wrap the whole code. \hypertarget{geshi_8php_a0ef9109598d2979e6e86b9745b6df378}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-H\-O\-V\-E\-R@{G\-E\-S\-H\-I\-\_\-\-H\-O\-V\-E\-R}}
+\index{G\-E\-S\-H\-I\-\_\-\-H\-O\-V\-E\-R@{G\-E\-S\-H\-I\-\_\-\-H\-O\-V\-E\-R}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-H\-O\-V\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-H\-O\-V\-E\-R 1}}\label{geshi_8php_a0ef9109598d2979e6e86b9745b6df378}
+Links in the source in the \-:hover state \hypertarget{geshi_8php_a9771b008486bce86bfb0f9e943d2e5dc}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-L\-A\-N\-G\-\_\-\-R\-O\-O\-T@{G\-E\-S\-H\-I\-\_\-\-L\-A\-N\-G\-\_\-\-R\-O\-O\-T}}
+\index{G\-E\-S\-H\-I\-\_\-\-L\-A\-N\-G\-\_\-\-R\-O\-O\-T@{G\-E\-S\-H\-I\-\_\-\-L\-A\-N\-G\-\_\-\-R\-O\-O\-T}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-L\-A\-N\-G\-\_\-\-R\-O\-O\-T}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-L\-A\-N\-G\-\_\-\-R\-O\-O\-T(!defined('G\-E\-S\-H\-I\-\_\-\-R\-O\-O\-T')) G\-E\-S\-H\-I\-\_\-\-R\-O\-O\-T . 'geshi' . D\-I\-R\-E\-C\-T\-O\-R\-Y\-\_\-\-S\-E\-P\-A\-R\-A\-T\-O\-R}}\label{geshi_8php_a9771b008486bce86bfb0f9e943d2e5dc}
+The language file directory for \hyperlink{class_ge_s_hi}{Ge\-S\-Hi}  private \hypertarget{geshi_8php_a331e5dc0cf2a33efd061f37c52a8f1b1}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-L\-I\-N\-K@{G\-E\-S\-H\-I\-\_\-\-L\-I\-N\-K}}
+\index{G\-E\-S\-H\-I\-\_\-\-L\-I\-N\-K@{G\-E\-S\-H\-I\-\_\-\-L\-I\-N\-K}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-L\-I\-N\-K}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-L\-I\-N\-K 0}}\label{geshi_8php_a331e5dc0cf2a33efd061f37c52a8f1b1}
+Links in the source in the \-:link state \hypertarget{geshi_8php_aed8e5439df210544cf31a28d2c2e9e77}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-M\-A\-X\-\_\-\-P\-C\-R\-E\-\_\-\-L\-E\-N\-G\-T\-H@{G\-E\-S\-H\-I\-\_\-\-M\-A\-X\-\_\-\-P\-C\-R\-E\-\_\-\-L\-E\-N\-G\-T\-H}}
+\index{G\-E\-S\-H\-I\-\_\-\-M\-A\-X\-\_\-\-P\-C\-R\-E\-\_\-\-L\-E\-N\-G\-T\-H@{G\-E\-S\-H\-I\-\_\-\-M\-A\-X\-\_\-\-P\-C\-R\-E\-\_\-\-L\-E\-N\-G\-T\-H}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-M\-A\-X\-\_\-\-P\-C\-R\-E\-\_\-\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-M\-A\-X\-\_\-\-P\-C\-R\-E\-\_\-\-L\-E\-N\-G\-T\-H 12288}}\label{geshi_8php_aed8e5439df210544cf31a28d2c2e9e77}
+it's also important not to generate too long regular expressions be generous here... but keep in mind, that when reaching this limit we still have to close open patterns. 12k should do just fine on a 16k limit. \begin{DoxySeeAlso}{See Also}
+Ge\-S\-Hi-\/$>$optimize\-\_\-regexp\-\_\-list() 
+\end{DoxySeeAlso}
+\hypertarget{geshi_8php_a06b303abd49f800f6b8a853ccdb578aa}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-M\-A\-X\-\_\-\-P\-C\-R\-E\-\_\-\-S\-U\-B\-P\-A\-T\-T\-E\-R\-N\-S@{G\-E\-S\-H\-I\-\_\-\-M\-A\-X\-\_\-\-P\-C\-R\-E\-\_\-\-S\-U\-B\-P\-A\-T\-T\-E\-R\-N\-S}}
+\index{G\-E\-S\-H\-I\-\_\-\-M\-A\-X\-\_\-\-P\-C\-R\-E\-\_\-\-S\-U\-B\-P\-A\-T\-T\-E\-R\-N\-S@{G\-E\-S\-H\-I\-\_\-\-M\-A\-X\-\_\-\-P\-C\-R\-E\-\_\-\-S\-U\-B\-P\-A\-T\-T\-E\-R\-N\-S}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-M\-A\-X\-\_\-\-P\-C\-R\-E\-\_\-\-S\-U\-B\-P\-A\-T\-T\-E\-R\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-M\-A\-X\-\_\-\-P\-C\-R\-E\-\_\-\-S\-U\-B\-P\-A\-T\-T\-E\-R\-N\-S(!function\-\_\-exists('stripos')) 500}}\label{geshi_8php_a06b303abd49f800f6b8a853ccdb578aa}
+make sure we can call stripossome old P\-H\-P / P\-C\-R\-E subpatterns only support up to xxx subpatterns in regular expressions. Set this to false if your P\-C\-R\-E lib is up to date \begin{DoxySeeAlso}{See Also}
+Ge\-S\-Hi-\/$>$optimize\-\_\-regexp\-\_\-list() 
+\end{DoxySeeAlso}
+\hypertarget{geshi_8php_a080daa0b765d40f4278400ec7ee5516f}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-M\-A\-Y\-B\-E@{G\-E\-S\-H\-I\-\_\-\-M\-A\-Y\-B\-E}}
+\index{G\-E\-S\-H\-I\-\_\-\-M\-A\-Y\-B\-E@{G\-E\-S\-H\-I\-\_\-\-M\-A\-Y\-B\-E}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-M\-A\-Y\-B\-E}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-M\-A\-Y\-B\-E 1}}\label{geshi_8php_a080daa0b765d40f4278400ec7ee5516f}
+Strict mode {\itshape might} apply, and can be enabled or disabled by \hyperlink{}{Ge\-S\-Hi-\/$>$enable\-\_\-strict\-\_\-mode()} \hypertarget{geshi_8php_af36b35daee7f0a188ebd83f81d93d7cb}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-M\-O\-D\-I\-F\-I\-E\-R\-S@{G\-E\-S\-H\-I\-\_\-\-M\-O\-D\-I\-F\-I\-E\-R\-S}}
+\index{G\-E\-S\-H\-I\-\_\-\-M\-O\-D\-I\-F\-I\-E\-R\-S@{G\-E\-S\-H\-I\-\_\-\-M\-O\-D\-I\-F\-I\-E\-R\-S}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-M\-O\-D\-I\-F\-I\-E\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-M\-O\-D\-I\-F\-I\-E\-R\-S 2}}\label{geshi_8php_af36b35daee7f0a188ebd83f81d93d7cb}
+The key of the regex array defining any modifiers to the regular expression \hypertarget{geshi_8php_ae8d10560a1521054157078b7c900bac5}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-E\-V\-E\-R@{G\-E\-S\-H\-I\-\_\-\-N\-E\-V\-E\-R}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-E\-V\-E\-R@{G\-E\-S\-H\-I\-\_\-\-N\-E\-V\-E\-R}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-E\-V\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-E\-V\-E\-R 0}}\label{geshi_8php_ae8d10560a1521054157078b7c900bac5}
+\#@+  private\-Strict mode never applies (this is the most common) \hypertarget{geshi_8php_a1fe21885ebfc0b528b68b49fe6ab3733}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-O\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S@{G\-E\-S\-H\-I\-\_\-\-N\-O\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-O\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S@{G\-E\-S\-H\-I\-\_\-\-N\-O\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-O\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-O\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S(!defined('G\-E\-S\-H\-I\-\_\-\-S\-E\-C\-U\-R\-I\-T\-Y\-\_\-\-P\-A\-R\-A\-N\-O\-I\-D')) 0}}\label{geshi_8php_a1fe21885ebfc0b528b68b49fe6ab3733}
+Use no line numbers when building the result \hypertarget{geshi_8php_ab1dda8d09574432f161e371a5b546eed}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-O\-R\-M\-A\-L\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S@{G\-E\-S\-H\-I\-\_\-\-N\-O\-R\-M\-A\-L\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-O\-R\-M\-A\-L\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S@{G\-E\-S\-H\-I\-\_\-\-N\-O\-R\-M\-A\-L\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-O\-R\-M\-A\-L\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-O\-R\-M\-A\-L\-\_\-\-L\-I\-N\-E\-\_\-\-N\-U\-M\-B\-E\-R\-S 1}}\label{geshi_8php_ab1dda8d09574432f161e371a5b546eed}
+Use normal line numbers when building the result \hypertarget{geshi_8php_a4c428c7fc449c1c4cd21cfd7fb2edd7a}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-0\-B@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-0\-B}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-0\-B@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-0\-B}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-0\-B}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-0\-B 64}}\label{geshi_8php_a4c428c7fc449c1c4cd21cfd7fb2edd7a}
+Number format to highlight binary numbers with a prefix 0b (C) \hypertarget{geshi_8php_a1b84efb492bbcc75223877bd4def00c2}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-P\-E\-R\-C\-E\-N\-T@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-P\-E\-R\-C\-E\-N\-T}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-P\-E\-R\-C\-E\-N\-T@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-P\-E\-R\-C\-E\-N\-T}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-P\-E\-R\-C\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-P\-E\-R\-C\-E\-N\-T 32}}\label{geshi_8php_a1b84efb492bbcc75223877bd4def00c2}
+Number format to highlight binary numbers with a prefix \% \hypertarget{geshi_8php_a6034fccce93bc6fddb7cd6697bd0392b}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-S\-U\-F\-F\-I\-X@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-S\-U\-F\-F\-I\-X}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-S\-U\-F\-F\-I\-X@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-S\-U\-F\-F\-I\-X}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-S\-U\-F\-F\-I\-X}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-B\-I\-N\-\_\-\-S\-U\-F\-F\-I\-X 16}}\label{geshi_8php_a6034fccce93bc6fddb7cd6697bd0392b}
+Number format to highlight binary numbers with a suffix \char`\"{}b\char`\"{} \hypertarget{geshi_8php_a21afc55328f79867223e3ed43e80500f}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-N\-O\-N\-S\-C\-I@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-N\-O\-N\-S\-C\-I}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-N\-O\-N\-S\-C\-I@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-N\-O\-N\-S\-C\-I}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-N\-O\-N\-S\-C\-I}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-N\-O\-N\-S\-C\-I 65536}}\label{geshi_8php_a21afc55328f79867223e3ed43e80500f}
+Number format to highlight floating-\/point numbers without support for scientific notation \hypertarget{geshi_8php_a3440420334947a07e80ae297abb35a7a}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-N\-O\-N\-S\-C\-I\-\_\-\-F@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-N\-O\-N\-S\-C\-I\-\_\-\-F}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-N\-O\-N\-S\-C\-I\-\_\-\-F@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-N\-O\-N\-S\-C\-I\-\_\-\-F}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-N\-O\-N\-S\-C\-I\-\_\-\-F}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-N\-O\-N\-S\-C\-I\-\_\-\-F 131072}}\label{geshi_8php_a3440420334947a07e80ae297abb35a7a}
+Number format to highlight floating-\/point numbers without support for scientific notation \hypertarget{geshi_8php_aee41e7c8932536abbd4eeca50d36505f}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-S\-C\-I\-\_\-\-S\-H\-O\-R\-T@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-S\-C\-I\-\_\-\-S\-H\-O\-R\-T}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-S\-C\-I\-\_\-\-S\-H\-O\-R\-T@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-S\-C\-I\-\_\-\-S\-H\-O\-R\-T}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-S\-C\-I\-\_\-\-S\-H\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-S\-C\-I\-\_\-\-S\-H\-O\-R\-T 262144}}\label{geshi_8php_aee41e7c8932536abbd4eeca50d36505f}
+Number format to highlight floating-\/point numbers with support for scientific notation (E) and optional leading zero \hypertarget{geshi_8php_ab172e320c7be8763d038e8cb7aa70b04}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-S\-C\-I\-\_\-\-Z\-E\-R\-O@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-S\-C\-I\-\_\-\-Z\-E\-R\-O}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-S\-C\-I\-\_\-\-Z\-E\-R\-O@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-S\-C\-I\-\_\-\-Z\-E\-R\-O}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-S\-C\-I\-\_\-\-Z\-E\-R\-O}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-F\-L\-T\-\_\-\-S\-C\-I\-\_\-\-Z\-E\-R\-O 524288}}\label{geshi_8php_ab172e320c7be8763d038e8cb7aa70b04}
+Number format to highlight floating-\/point numbers with support for scientific notation (E) and required leading digit \hypertarget{geshi_8php_a7ee428a986fb6775e78f4b31829923c9}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-P\-R\-E\-F\-I\-X@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-P\-R\-E\-F\-I\-X}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-P\-R\-E\-F\-I\-X@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-P\-R\-E\-F\-I\-X}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-P\-R\-E\-F\-I\-X}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-P\-R\-E\-F\-I\-X 4096}}\label{geshi_8php_a7ee428a986fb6775e78f4b31829923c9}
+Number format to highlight hex numbers with a prefix 0x \hypertarget{geshi_8php_a8b7bf2192ca0cb217bb5cd5b1d753f5c}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-D\-O\-L\-L\-A\-R@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-D\-O\-L\-L\-A\-R}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-D\-O\-L\-L\-A\-R@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-D\-O\-L\-L\-A\-R}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-D\-O\-L\-L\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-D\-O\-L\-L\-A\-R 8192}}\label{geshi_8php_a8b7bf2192ca0cb217bb5cd5b1d753f5c}
+Number format to highlight hex numbers with a prefix \$ \hypertarget{geshi_8php_a5eeeb7f820cfcfd4c6f4e8f5a97ba9a2}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-S\-U\-F\-F\-I\-X@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-S\-U\-F\-F\-I\-X}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-S\-U\-F\-F\-I\-X@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-S\-U\-F\-F\-I\-X}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-S\-U\-F\-F\-I\-X}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-H\-E\-X\-\_\-\-S\-U\-F\-F\-I\-X 16384}}\label{geshi_8php_a5eeeb7f820cfcfd4c6f4e8f5a97ba9a2}
+Number format to highlight hex numbers with a suffix of h \hypertarget{geshi_8php_a02faeead91ea284c9e543b42d17c27b1}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-I\-N\-T\-\_\-\-B\-A\-S\-I\-C@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-I\-N\-T\-\_\-\-B\-A\-S\-I\-C}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-I\-N\-T\-\_\-\-B\-A\-S\-I\-C@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-I\-N\-T\-\_\-\-B\-A\-S\-I\-C}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-I\-N\-T\-\_\-\-B\-A\-S\-I\-C}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-I\-N\-T\-\_\-\-B\-A\-S\-I\-C 1}}\label{geshi_8php_a02faeead91ea284c9e543b42d17c27b1}
+Basic number format for integers \hypertarget{geshi_8php_a35ca0577d96258e4a733dacefcaa1c5d}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-I\-N\-T\-\_\-\-C\-S\-T\-Y\-L\-E@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-I\-N\-T\-\_\-\-C\-S\-T\-Y\-L\-E}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-I\-N\-T\-\_\-\-C\-S\-T\-Y\-L\-E@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-I\-N\-T\-\_\-\-C\-S\-T\-Y\-L\-E}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-I\-N\-T\-\_\-\-C\-S\-T\-Y\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-I\-N\-T\-\_\-\-C\-S\-T\-Y\-L\-E 2}}\label{geshi_8php_a35ca0577d96258e4a733dacefcaa1c5d}
+Enhanced number format for integers like seen in C \hypertarget{geshi_8php_a558a29a94472d0414f9888cb5adfa656}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X 256}}\label{geshi_8php_a558a29a94472d0414f9888cb5adfa656}
+Number format to highlight octal numbers with a leading zero \hypertarget{geshi_8php_a21059f992b0d80358e79516fb73d3657}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-0\-O@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-0\-O}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-0\-O@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-0\-O}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-0\-O}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-0\-O 512}}\label{geshi_8php_a21059f992b0d80358e79516fb73d3657}
+Number format to highlight octal numbers with a prefix 0o (logtalk) \hypertarget{geshi_8php_a59c0b6e00cc6e108f6142b40b90a8bac}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-A\-T@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-A\-T}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-A\-T@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-A\-T}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-P\-R\-E\-F\-I\-X\-\_\-\-A\-T 1024}}\label{geshi_8php_a59c0b6e00cc6e108f6142b40b90a8bac}
+Number format to highlight octal numbers with a leading @ (Used in Hi\-Softs Devpac series). \hypertarget{geshi_8php_a6ae313a6370f813f1dbe9b6e969285e2}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-S\-U\-F\-F\-I\-X@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-S\-U\-F\-F\-I\-X}}
+\index{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-S\-U\-F\-F\-I\-X@{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-S\-U\-F\-F\-I\-X}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-S\-U\-F\-F\-I\-X}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-N\-U\-M\-B\-E\-R\-\_\-\-O\-C\-T\-\_\-\-S\-U\-F\-F\-I\-X 2048}}\label{geshi_8php_a6ae313a6370f813f1dbe9b6e969285e2}
+Number format to highlight octal numbers with a suffix of o \hypertarget{geshi_8php_abb000b37c91b5b05b426aecabddbe3a5}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-P\-H\-P\-\_\-\-P\-R\-E\-\_\-433@{G\-E\-S\-H\-I\-\_\-\-P\-H\-P\-\_\-\-P\-R\-E\-\_\-433}}
+\index{G\-E\-S\-H\-I\-\_\-\-P\-H\-P\-\_\-\-P\-R\-E\-\_\-433@{G\-E\-S\-H\-I\-\_\-\-P\-H\-P\-\_\-\-P\-R\-E\-\_\-433}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-P\-H\-P\-\_\-\-P\-R\-E\-\_\-433}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-P\-H\-P\-\_\-\-P\-R\-E\-\_\-433 !(version\-\_\-compare(P\-H\-P\-\_\-\-V\-E\-R\-S\-I\-O\-N, '4.\-3.\-3') === 1)}}\label{geshi_8php_abb000b37c91b5b05b426aecabddbe3a5}
+Used to work around missing P\-H\-P features \hypertarget{geshi_8php_accd34e52b0bbc2beff3cf62e33d24f6c}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-R\-E\-P\-L\-A\-C\-E@{G\-E\-S\-H\-I\-\_\-\-R\-E\-P\-L\-A\-C\-E}}
+\index{G\-E\-S\-H\-I\-\_\-\-R\-E\-P\-L\-A\-C\-E@{G\-E\-S\-H\-I\-\_\-\-R\-E\-P\-L\-A\-C\-E}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-R\-E\-P\-L\-A\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-R\-E\-P\-L\-A\-C\-E 1}}\label{geshi_8php_accd34e52b0bbc2beff3cf62e33d24f6c}
+The key of the regex array defining what bracket group in a matched search to use as a replacement \hypertarget{geshi_8php_a600cf0cefcaff88611c607804fa92d9b}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-S\-E\-A\-R\-C\-H@{G\-E\-S\-H\-I\-\_\-\-S\-E\-A\-R\-C\-H}}
+\index{G\-E\-S\-H\-I\-\_\-\-S\-E\-A\-R\-C\-H@{G\-E\-S\-H\-I\-\_\-\-S\-E\-A\-R\-C\-H}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-S\-E\-A\-R\-C\-H}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-S\-E\-A\-R\-C\-H 0}}\label{geshi_8php_a600cf0cefcaff88611c607804fa92d9b}
+The key of the regex array defining what to search for \hypertarget{geshi_8php_ae681952f8490031cff157153f965cbaf}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-S\-T\-A\-R\-T\-\_\-\-I\-M\-P\-O\-R\-T\-A\-N\-T@{G\-E\-S\-H\-I\-\_\-\-S\-T\-A\-R\-T\-\_\-\-I\-M\-P\-O\-R\-T\-A\-N\-T}}
+\index{G\-E\-S\-H\-I\-\_\-\-S\-T\-A\-R\-T\-\_\-\-I\-M\-P\-O\-R\-T\-A\-N\-T@{G\-E\-S\-H\-I\-\_\-\-S\-T\-A\-R\-T\-\_\-\-I\-M\-P\-O\-R\-T\-A\-N\-T}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-S\-T\-A\-R\-T\-\_\-\-I\-M\-P\-O\-R\-T\-A\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-S\-T\-A\-R\-T\-\_\-\-I\-M\-P\-O\-R\-T\-A\-N\-T '$<$B\-E\-G\-I\-N {\bf Ge\-S\-Hi}$>$'}}\label{geshi_8php_ae681952f8490031cff157153f965cbaf}
+The starter for important parts of the source \hypertarget{geshi_8php_ad1ea05c1a2b4ad5c5f0f45d4e4a63366}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-V\-E\-R\-S\-I\-O\-N@{G\-E\-S\-H\-I\-\_\-\-V\-E\-R\-S\-I\-O\-N}}
+\index{G\-E\-S\-H\-I\-\_\-\-V\-E\-R\-S\-I\-O\-N@{G\-E\-S\-H\-I\-\_\-\-V\-E\-R\-S\-I\-O\-N}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-V\-E\-R\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-V\-E\-R\-S\-I\-O\-N '1.\-0.\-8.\-10'}}\label{geshi_8php_ad1ea05c1a2b4ad5c5f0f45d4e4a63366}
+The version of this \hyperlink{class_ge_s_hi}{Ge\-S\-Hi} file \hypertarget{geshi_8php_a1e565db022fc06a7a9dac10bc247a309}{\index{geshi.\-php@{geshi.\-php}!G\-E\-S\-H\-I\-\_\-\-V\-I\-S\-I\-T\-E\-D@{G\-E\-S\-H\-I\-\_\-\-V\-I\-S\-I\-T\-E\-D}}
+\index{G\-E\-S\-H\-I\-\_\-\-V\-I\-S\-I\-T\-E\-D@{G\-E\-S\-H\-I\-\_\-\-V\-I\-S\-I\-T\-E\-D}!geshi.php@{geshi.\-php}}
+\subsubsection[{G\-E\-S\-H\-I\-\_\-\-V\-I\-S\-I\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}const G\-E\-S\-H\-I\-\_\-\-V\-I\-S\-I\-T\-E\-D 3}}\label{geshi_8php_a1e565db022fc06a7a9dac10bc247a309}
+Links in the source in the \-:visited state 

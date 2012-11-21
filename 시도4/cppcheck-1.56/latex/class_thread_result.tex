@@ -1,0 +1,307 @@
+\hypertarget{class_thread_result}{\section{Thread\-Result Class Reference}
+\label{class_thread_result}\index{Thread\-Result@{Thread\-Result}}
+}
+
+
+Threads use this class to obtain new files to process and to publish results.  
+
+
+
+
+{\ttfamily \#include $<$threadresult.\-h$>$}
+
+Inheritance diagram for Thread\-Result\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_thread_result}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_thread_result_af21d11c7607fa94cf385586a1fa0a41e}{File\-Checked} (const Q\-String \&file)
+\begin{DoxyCompactList}\small\item\em Slot threads use to signal this class that a specific file is checked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_thread_result_acfbac907ecb42e737f646334afd1a90a}{Progress} (int value, const Q\-String \&description)
+\begin{DoxyCompactList}\small\item\em Progress signal. \end{DoxyCompactList}\item 
+void \hyperlink{class_thread_result_a079507757d561abd876d546548e1afc0}{Error} (const \hyperlink{class_error_item}{Error\-Item} \&item)
+\begin{DoxyCompactList}\small\item\em Signal of a new error. \end{DoxyCompactList}\item 
+void \hyperlink{class_thread_result_a01e6c8e662ba4da9c4828ce5bb134a00}{Log} (const Q\-String \&logline)
+\begin{DoxyCompactList}\small\item\em Signal of a new log message. \end{DoxyCompactList}\item 
+void \hyperlink{class_thread_result_a2bf2f5f36505cb0a45ca4ecfb83f7f29}{Debug\-Error} (const \hyperlink{class_error_item}{Error\-Item} \&item)
+\begin{DoxyCompactList}\small\item\em Signal of a debug error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_thread_result_a8e410a07d55f72f063d87d54c20bd77b}{Thread\-Result} ()
+\item 
+virtual \hyperlink{class_thread_result_ab4e747ab75b907f1a04cd0600236624b}{$\sim$\-Thread\-Result} ()
+\item 
+Q\-String \hyperlink{class_thread_result_ae08020c825703e0edecbd3fbaf88ba5c}{Get\-Next\-File} ()
+\begin{DoxyCompactList}\small\item\em Get next unprocessed file. \end{DoxyCompactList}\item 
+void \hyperlink{class_thread_result_a3dc6c68b45ffc577ffe0e81138b2022b}{Set\-Files} (const Q\-String\-List \&files)
+\begin{DoxyCompactList}\small\item\em Set list of files to check. \end{DoxyCompactList}\item 
+void \hyperlink{class_thread_result_af69e130dc7ff9e5a293a4a9d977eb71d}{Clear\-Files} ()
+\begin{DoxyCompactList}\small\item\em Clear files to check. \end{DoxyCompactList}\item 
+int \hyperlink{class_thread_result_a3486ba8dc0ec8b48418bffba61bd51c1}{Get\-File\-Count} ()
+\begin{DoxyCompactList}\small\item\em Get the number of files to check. \end{DoxyCompactList}\item 
+void \hyperlink{class_thread_result_a92e60f6281e6f107f62252954b061f89}{report\-Out} (const std\-::string \&outmsg)
+\item 
+void \hyperlink{class_thread_result_ac894491441813236e0baf284ee8d3621}{report\-Err} (const \hyperlink{class_error_logger_1_1_error_message}{Error\-Logger\-::\-Error\-Message} \&msg)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\-Mutex \hyperlink{class_thread_result_a32543bd6b9a72184fc9ba7cec8a79eb1}{mutex}
+\begin{DoxyCompactList}\small\item\em Mutex. \end{DoxyCompactList}\item 
+Q\-String\-List \hyperlink{class_thread_result_a0f4173fd7c5a939f2f675af4fcf25f73}{m\-Files}
+\begin{DoxyCompactList}\small\item\em List of files to check. \end{DoxyCompactList}\item 
+quint64 \hyperlink{class_thread_result_a060f28123eea6a0c777ab488aa378ed6}{m\-Max\-Progress}
+\begin{DoxyCompactList}\small\item\em Max progress. \end{DoxyCompactList}\item 
+quint64 \hyperlink{class_thread_result_a51c4763ca09dbec15f74b2fbccecc467}{m\-Progress}
+\begin{DoxyCompactList}\small\item\em Current progress. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{class_thread_result_acc0b57f2dd6c0d3ff84e88e86e5e5464}{m\-Files\-Checked}
+\begin{DoxyCompactList}\small\item\em Current number of files checked. \end{DoxyCompactList}\item 
+unsigned long \hyperlink{class_thread_result_a387d860d3a9d220642efd8d8240e6d5c}{m\-Total\-Files}
+\begin{DoxyCompactList}\small\item\em Total number of files. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Threads use this class to obtain new files to process and to publish results. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_thread_result_a8e410a07d55f72f063d87d54c20bd77b}{\index{Thread\-Result@{Thread\-Result}!Thread\-Result@{Thread\-Result}}
+\index{Thread\-Result@{Thread\-Result}!ThreadResult@{Thread\-Result}}
+\subsubsection[{Thread\-Result}]{\setlength{\rightskip}{0pt plus 5cm}Thread\-Result\-::\-Thread\-Result (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_thread_result_a8e410a07d55f72f063d87d54c20bd77b}
+\hypertarget{class_thread_result_ab4e747ab75b907f1a04cd0600236624b}{\index{Thread\-Result@{Thread\-Result}!$\sim$\-Thread\-Result@{$\sim$\-Thread\-Result}}
+\index{$\sim$\-Thread\-Result@{$\sim$\-Thread\-Result}!ThreadResult@{Thread\-Result}}
+\subsubsection[{$\sim$\-Thread\-Result}]{\setlength{\rightskip}{0pt plus 5cm}Thread\-Result\-::$\sim$\-Thread\-Result (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_thread_result_ab4e747ab75b907f1a04cd0600236624b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_thread_result_af69e130dc7ff9e5a293a4a9d977eb71d}{\index{Thread\-Result@{Thread\-Result}!Clear\-Files@{Clear\-Files}}
+\index{Clear\-Files@{Clear\-Files}!ThreadResult@{Thread\-Result}}
+\subsubsection[{Clear\-Files}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Result\-::\-Clear\-Files (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_thread_result_af69e130dc7ff9e5a293a4a9d977eb71d}
+
+
+Clear files to check. 
+
+\hypertarget{class_thread_result_a2bf2f5f36505cb0a45ca4ecfb83f7f29}{\index{Thread\-Result@{Thread\-Result}!Debug\-Error@{Debug\-Error}}
+\index{Debug\-Error@{Debug\-Error}!ThreadResult@{Thread\-Result}}
+\subsubsection[{Debug\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Result\-::\-Debug\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\-Item} \&}]{item}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_thread_result_a2bf2f5f36505cb0a45ca4ecfb83f7f29}
+
+
+Signal of a debug error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Error data \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_thread_result_a079507757d561abd876d546548e1afc0}{\index{Thread\-Result@{Thread\-Result}!Error@{Error}}
+\index{Error@{Error}!ThreadResult@{Thread\-Result}}
+\subsubsection[{Error}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Result\-::\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\-Item} \&}]{item}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_thread_result_a079507757d561abd876d546548e1afc0}
+
+
+Signal of a new error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Error data \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_thread_result_af21d11c7607fa94cf385586a1fa0a41e}{\index{Thread\-Result@{Thread\-Result}!File\-Checked@{File\-Checked}}
+\index{File\-Checked@{File\-Checked}!ThreadResult@{Thread\-Result}}
+\subsubsection[{File\-Checked}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Result\-::\-File\-Checked (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_thread_result_af21d11c7607fa94cf385586a1fa0a41e}
+
+
+Slot threads use to signal this class that a specific file is checked. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & File that is checked \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_thread_result_a3486ba8dc0ec8b48418bffba61bd51c1}{\index{Thread\-Result@{Thread\-Result}!Get\-File\-Count@{Get\-File\-Count}}
+\index{Get\-File\-Count@{Get\-File\-Count}!ThreadResult@{Thread\-Result}}
+\subsubsection[{Get\-File\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int Thread\-Result\-::\-Get\-File\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_thread_result_a3486ba8dc0ec8b48418bffba61bd51c1}
+
+
+Get the number of files to check. 
+
+\hypertarget{class_thread_result_ae08020c825703e0edecbd3fbaf88ba5c}{\index{Thread\-Result@{Thread\-Result}!Get\-Next\-File@{Get\-Next\-File}}
+\index{Get\-Next\-File@{Get\-Next\-File}!ThreadResult@{Thread\-Result}}
+\subsubsection[{Get\-Next\-File}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Thread\-Result\-::\-Get\-Next\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_thread_result_ae08020c825703e0edecbd3fbaf88ba5c}
+
+
+Get next unprocessed file. 
+
+\begin{DoxyReturn}{Returns}
+File path 
+\end{DoxyReturn}
+\hypertarget{class_thread_result_a01e6c8e662ba4da9c4828ce5bb134a00}{\index{Thread\-Result@{Thread\-Result}!Log@{Log}}
+\index{Log@{Log}!ThreadResult@{Thread\-Result}}
+\subsubsection[{Log}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Result\-::\-Log (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{logline}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_thread_result_a01e6c8e662ba4da9c4828ce5bb134a00}
+
+
+Signal of a new log message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logline} & Log line \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_thread_result_acfbac907ecb42e737f646334afd1a90a}{\index{Thread\-Result@{Thread\-Result}!Progress@{Progress}}
+\index{Progress@{Progress}!ThreadResult@{Thread\-Result}}
+\subsubsection[{Progress}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Result\-::\-Progress (
+\begin{DoxyParamCaption}
+\item[{int}]{value, }
+\item[{const Q\-String \&}]{description}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_thread_result_acfbac907ecb42e737f646334afd1a90a}
+
+
+Progress signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Current progress \\
+\hline
+{\em description} & Description of the current stage \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_thread_result_ac894491441813236e0baf284ee8d3621}{\index{Thread\-Result@{Thread\-Result}!report\-Err@{report\-Err}}
+\index{report\-Err@{report\-Err}!ThreadResult@{Thread\-Result}}
+\subsubsection[{report\-Err}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Result\-::report\-Err (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\-Logger\-::\-Error\-Message} \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_thread_result_ac894491441813236e0baf284ee8d3621}
+Information about found errors and warnings is directed here. Override this to receive the errormessages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Location and other information about the found error. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_error_logger_aea56e01f24c0d8ecaa5498ae4eba1739}{Error\-Logger}.
+
+\hypertarget{class_thread_result_a92e60f6281e6f107f62252954b061f89}{\index{Thread\-Result@{Thread\-Result}!report\-Out@{report\-Out}}
+\index{report\-Out@{report\-Out}!ThreadResult@{Thread\-Result}}
+\subsubsection[{report\-Out}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Result\-::report\-Out (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{outmsg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_thread_result_a92e60f6281e6f107f62252954b061f89}
+\hyperlink{class_error_logger}{Error\-Logger} methods 
+
+Implements \hyperlink{class_error_logger_aeb9c56add35e46cd83e9b7e92e5e110c}{Error\-Logger}.
+
+\hypertarget{class_thread_result_a3dc6c68b45ffc577ffe0e81138b2022b}{\index{Thread\-Result@{Thread\-Result}!Set\-Files@{Set\-Files}}
+\index{Set\-Files@{Set\-Files}!ThreadResult@{Thread\-Result}}
+\subsubsection[{Set\-Files}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Result\-::\-Set\-Files (
+\begin{DoxyParamCaption}
+\item[{const Q\-String\-List \&}]{files}
+\end{DoxyParamCaption}
+)}}\label{class_thread_result_a3dc6c68b45ffc577ffe0e81138b2022b}
+
+
+Set list of files to check. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em files} & List of files to check \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_thread_result_a0f4173fd7c5a939f2f675af4fcf25f73}{\index{Thread\-Result@{Thread\-Result}!m\-Files@{m\-Files}}
+\index{m\-Files@{m\-Files}!ThreadResult@{Thread\-Result}}
+\subsubsection[{m\-Files}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String\-List Thread\-Result\-::m\-Files\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_thread_result_a0f4173fd7c5a939f2f675af4fcf25f73}
+
+
+List of files to check. 
+
+\hypertarget{class_thread_result_acc0b57f2dd6c0d3ff84e88e86e5e5464}{\index{Thread\-Result@{Thread\-Result}!m\-Files\-Checked@{m\-Files\-Checked}}
+\index{m\-Files\-Checked@{m\-Files\-Checked}!ThreadResult@{Thread\-Result}}
+\subsubsection[{m\-Files\-Checked}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long Thread\-Result\-::m\-Files\-Checked\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_thread_result_acc0b57f2dd6c0d3ff84e88e86e5e5464}
+
+
+Current number of files checked. 
+
+\hypertarget{class_thread_result_a060f28123eea6a0c777ab488aa378ed6}{\index{Thread\-Result@{Thread\-Result}!m\-Max\-Progress@{m\-Max\-Progress}}
+\index{m\-Max\-Progress@{m\-Max\-Progress}!ThreadResult@{Thread\-Result}}
+\subsubsection[{m\-Max\-Progress}]{\setlength{\rightskip}{0pt plus 5cm}quint64 Thread\-Result\-::m\-Max\-Progress\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_thread_result_a060f28123eea6a0c777ab488aa378ed6}
+
+
+Max progress. 
+
+\hypertarget{class_thread_result_a51c4763ca09dbec15f74b2fbccecc467}{\index{Thread\-Result@{Thread\-Result}!m\-Progress@{m\-Progress}}
+\index{m\-Progress@{m\-Progress}!ThreadResult@{Thread\-Result}}
+\subsubsection[{m\-Progress}]{\setlength{\rightskip}{0pt plus 5cm}quint64 Thread\-Result\-::m\-Progress\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_thread_result_a51c4763ca09dbec15f74b2fbccecc467}
+
+
+Current progress. 
+
+\hypertarget{class_thread_result_a387d860d3a9d220642efd8d8240e6d5c}{\index{Thread\-Result@{Thread\-Result}!m\-Total\-Files@{m\-Total\-Files}}
+\index{m\-Total\-Files@{m\-Total\-Files}!ThreadResult@{Thread\-Result}}
+\subsubsection[{m\-Total\-Files}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long Thread\-Result\-::m\-Total\-Files\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_thread_result_a387d860d3a9d220642efd8d8240e6d5c}
+
+
+Total number of files. 
+
+\hypertarget{class_thread_result_a32543bd6b9a72184fc9ba7cec8a79eb1}{\index{Thread\-Result@{Thread\-Result}!mutex@{mutex}}
+\index{mutex@{mutex}!ThreadResult@{Thread\-Result}}
+\subsubsection[{mutex}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Mutex Thread\-Result\-::mutex\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}}\label{class_thread_result_a32543bd6b9a72184fc9ba7cec8a79eb1}
+
+
+Mutex. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{threadresult_8h}{threadresult.\-h}\item 
+gui/\hyperlink{threadresult_8cpp}{threadresult.\-cpp}\end{DoxyCompactItemize}

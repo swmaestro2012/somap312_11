@@ -1,0 +1,119 @@
+\hypertarget{class_check_auto_variables}{\section{Check\-Auto\-Variables Class Reference}
+\label{class_check_auto_variables}\index{Check\-Auto\-Variables@{Check\-Auto\-Variables}}
+}
+
+
+{\ttfamily \#include $<$checkautovariables.\-h$>$}
+
+Inheritance diagram for Check\-Auto\-Variables\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_check_auto_variables}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_check_auto_variables_ac25d0eaa94d3d337dd636f6aaae9a934}{Check\-Auto\-Variables} ()
+\item 
+\hyperlink{class_check_auto_variables_abfc45c06de7f9478de4dbe9d82c08a30}{Check\-Auto\-Variables} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\item 
+void \hyperlink{class_check_auto_variables_a667c0b75e6b3304da5f0970f4f283e6d}{run\-Checks} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\begin{DoxyCompactList}\small\item\em Run checks against the normal token list. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_auto_variables_a68a13cebf21059199ad4c9008ecc37a7}{run\-Simplified\-Checks} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\item 
+void \hyperlink{class_check_auto_variables_acca7636cc1768e6a17fc0f199fbb7497}{auto\-Variables} ()
+\item 
+void \hyperlink{class_check_auto_variables_a19e49f355a1e1a4ea0d0d88028d9964d}{return\-Pointer\-To\-Local\-Array} ()
+\item 
+void \hyperlink{class_check_auto_variables_a06e329bf2f8e2fe37acfdb4d4412f642}{return\-Reference} ()
+\item 
+void \hyperlink{class_check_auto_variables_adcbd51b2bc5f68faaa65d2f56c2e1564}{returncstr} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_check_auto_variables_ac25d0eaa94d3d337dd636f6aaae9a934}{\index{Check\-Auto\-Variables@{Check\-Auto\-Variables}!Check\-Auto\-Variables@{Check\-Auto\-Variables}}
+\index{Check\-Auto\-Variables@{Check\-Auto\-Variables}!CheckAutoVariables@{Check\-Auto\-Variables}}
+\subsubsection[{Check\-Auto\-Variables}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Auto\-Variables\-::\-Check\-Auto\-Variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_auto_variables_ac25d0eaa94d3d337dd636f6aaae9a934}
+This constructor is used when registering the \hyperlink{class_check_class}{Check\-Class} \hypertarget{class_check_auto_variables_abfc45c06de7f9478de4dbe9d82c08a30}{\index{Check\-Auto\-Variables@{Check\-Auto\-Variables}!Check\-Auto\-Variables@{Check\-Auto\-Variables}}
+\index{Check\-Auto\-Variables@{Check\-Auto\-Variables}!CheckAutoVariables@{Check\-Auto\-Variables}}
+\subsubsection[{Check\-Auto\-Variables}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Auto\-Variables\-::\-Check\-Auto\-Variables (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_auto_variables_abfc45c06de7f9478de4dbe9d82c08a30}
+This constructor is used when running checks. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_check_auto_variables_acca7636cc1768e6a17fc0f199fbb7497}{\index{Check\-Auto\-Variables@{Check\-Auto\-Variables}!auto\-Variables@{auto\-Variables}}
+\index{auto\-Variables@{auto\-Variables}!CheckAutoVariables@{Check\-Auto\-Variables}}
+\subsubsection[{auto\-Variables}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Auto\-Variables\-::auto\-Variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_auto_variables_acca7636cc1768e6a17fc0f199fbb7497}
+\hyperlink{class_check}{Check} auto variables \hypertarget{class_check_auto_variables_adcbd51b2bc5f68faaa65d2f56c2e1564}{\index{Check\-Auto\-Variables@{Check\-Auto\-Variables}!returncstr@{returncstr}}
+\index{returncstr@{returncstr}!CheckAutoVariables@{Check\-Auto\-Variables}}
+\subsubsection[{returncstr}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Auto\-Variables\-::returncstr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_auto_variables_adcbd51b2bc5f68faaa65d2f56c2e1564}
+Returning c\-\_\-str to local variable \hypertarget{class_check_auto_variables_a19e49f355a1e1a4ea0d0d88028d9964d}{\index{Check\-Auto\-Variables@{Check\-Auto\-Variables}!return\-Pointer\-To\-Local\-Array@{return\-Pointer\-To\-Local\-Array}}
+\index{return\-Pointer\-To\-Local\-Array@{return\-Pointer\-To\-Local\-Array}!CheckAutoVariables@{Check\-Auto\-Variables}}
+\subsubsection[{return\-Pointer\-To\-Local\-Array}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Auto\-Variables\-::return\-Pointer\-To\-Local\-Array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_auto_variables_a19e49f355a1e1a4ea0d0d88028d9964d}
+Returning pointer to local array \hypertarget{class_check_auto_variables_a06e329bf2f8e2fe37acfdb4d4412f642}{\index{Check\-Auto\-Variables@{Check\-Auto\-Variables}!return\-Reference@{return\-Reference}}
+\index{return\-Reference@{return\-Reference}!CheckAutoVariables@{Check\-Auto\-Variables}}
+\subsubsection[{return\-Reference}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Auto\-Variables\-::return\-Reference (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_auto_variables_a06e329bf2f8e2fe37acfdb4d4412f642}
+Returning reference to local/temporary variable \hypertarget{class_check_auto_variables_a667c0b75e6b3304da5f0970f4f283e6d}{\index{Check\-Auto\-Variables@{Check\-Auto\-Variables}!run\-Checks@{run\-Checks}}
+\index{run\-Checks@{run\-Checks}!CheckAutoVariables@{Check\-Auto\-Variables}}
+\subsubsection[{run\-Checks}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Auto\-Variables\-::run\-Checks (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_auto_variables_a667c0b75e6b3304da5f0970f4f283e6d}
+
+
+Run checks against the normal token list. 
+
+
+
+Reimplemented from \hyperlink{class_check_a939af1c75d133393021036e73ca57cc4}{Check}.
+
+\hypertarget{class_check_auto_variables_a68a13cebf21059199ad4c9008ecc37a7}{\index{Check\-Auto\-Variables@{Check\-Auto\-Variables}!run\-Simplified\-Checks@{run\-Simplified\-Checks}}
+\index{run\-Simplified\-Checks@{run\-Simplified\-Checks}!CheckAutoVariables@{Check\-Auto\-Variables}}
+\subsubsection[{run\-Simplified\-Checks}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Auto\-Variables\-::run\-Simplified\-Checks (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_auto_variables_a68a13cebf21059199ad4c9008ecc37a7}
+run checks, the token list is simplified 
+
+Implements \hyperlink{class_check_a112445eed1625599b93c69aab4701e5e}{Check}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{checkautovariables_8h}{checkautovariables.\-h}\item 
+lib/\hyperlink{checkautovariables_8cpp}{checkautovariables.\-cpp}\end{DoxyCompactItemize}

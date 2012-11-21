@@ -1,0 +1,388 @@
+\hypertarget{class_project_file}{\section{Project\-File Class Reference}
+\label{class_project_file}\index{Project\-File@{Project\-File}}
+}
+
+
+A class that reads and writes project files. The project files contain project-\/specific settings for checking. For example a list of include paths.  
+
+
+
+
+{\ttfamily \#include $<$projectfile.\-h$>$}
+
+Inheritance diagram for Project\-File\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_project_file}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_project_file_a0de7dba3827b1bed72eb7e4228baeaf3}{Project\-File} (Q\-Object $\ast$parent=0)
+\item 
+\hyperlink{class_project_file_a8ee47ddffd45f5443ebd661efb7c763d}{Project\-File} (const Q\-String \&filename, Q\-Object $\ast$parent=0)
+\item 
+bool \hyperlink{class_project_file_a66e7c033164c37dd9c0bab575585f4c5}{Read} (const Q\-String \&filename=Q\-String())
+\begin{DoxyCompactList}\small\item\em Read the project file. \end{DoxyCompactList}\item 
+Q\-String \hyperlink{class_project_file_a1bcc5f6cbcb46d9da953435a42fe0588}{Get\-Root\-Path} () const 
+\begin{DoxyCompactList}\small\item\em Get project root path. \end{DoxyCompactList}\item 
+Q\-String\-List \hyperlink{class_project_file_a99eaeaf63d9af7a53859bfbef27f4f53}{Get\-Include\-Dirs} () const 
+\begin{DoxyCompactList}\small\item\em Get list of include directories. \end{DoxyCompactList}\item 
+Q\-String\-List \hyperlink{class_project_file_ae85e1bc32f973becb0507a222fe00002}{Get\-Defines} () const 
+\begin{DoxyCompactList}\small\item\em Get list of defines. \end{DoxyCompactList}\item 
+Q\-String\-List \hyperlink{class_project_file_af322bc9b9a12583cee1ce2957d642b2a}{Get\-Check\-Paths} () const 
+\begin{DoxyCompactList}\small\item\em Get list of paths to check. \end{DoxyCompactList}\item 
+Q\-String\-List \hyperlink{class_project_file_a1acacd36addf3a5b7df2efc72dae939a}{Get\-Excluded\-Paths} () const 
+\begin{DoxyCompactList}\small\item\em Get list of paths to exclude from the check. \end{DoxyCompactList}\item 
+Q\-String \hyperlink{class_project_file_a1101263710071c7028ebc31c74516664}{Get\-Filename} ()
+\begin{DoxyCompactList}\small\item\em Get filename for the project file. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_a30d42c900372ab0d2f71a2600154e9a9}{Set\-Root\-Path} (const Q\-String \&rootpath)
+\begin{DoxyCompactList}\small\item\em Set project root path. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_aa4eea207fe45e9646b4801ad90d9b1a8}{Set\-Includes} (const Q\-String\-List \&includes)
+\begin{DoxyCompactList}\small\item\em Set list of includes. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_a3b3b487125d11ae518ca7e6d6d775da7}{Set\-Defines} (const Q\-String\-List \&defines)
+\begin{DoxyCompactList}\small\item\em Set list of defines. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_a8327d78e8c814b7a9002491c4c533eff}{Set\-Check\-Paths} (const Q\-String\-List \&paths)
+\begin{DoxyCompactList}\small\item\em Set list of paths to check. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_a30c1866c5f86eca0de4b4fddbdcb761a}{Set\-Excluded\-Paths} (const Q\-String\-List \&paths)
+\begin{DoxyCompactList}\small\item\em Set list of paths to exclude from the check. \end{DoxyCompactList}\item 
+bool \hyperlink{class_project_file_a08e611ca440d47fa9e184d7acc89c41c}{Write} (const Q\-String \&filename=Q\-String())
+\begin{DoxyCompactList}\small\item\em Write project file (to disk). \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_af462360026c93df38c0e12baa2af4301}{Set\-Filename} (const Q\-String \&filename)
+\begin{DoxyCompactList}\small\item\em Set filename for the project file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_project_file_abcce33affe9d0f05a19439aa1859d1a6}{Read\-Root\-Path} (Q\-Xml\-Stream\-Reader \&reader)
+\begin{DoxyCompactList}\small\item\em Read optional root path from X\-M\-L. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_a00782c2703b2335eeb90f5146d685b18}{Read\-Include\-Dirs} (Q\-Xml\-Stream\-Reader \&reader)
+\begin{DoxyCompactList}\small\item\em Read list of include directories from X\-M\-L. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_a49a536f23393a4d57456a207dd0d9e44}{Read\-Defines} (Q\-Xml\-Stream\-Reader \&reader)
+\begin{DoxyCompactList}\small\item\em Read list of defines from X\-M\-L. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_af19c667d1dbc4b94c5a995d35a966268}{Read\-Check\-Paths} (Q\-Xml\-Stream\-Reader \&reader)
+\begin{DoxyCompactList}\small\item\em Read list paths to check. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_a5eab4d466bf8dffe88fba8811627f4c9}{Read\-Excludes} (Q\-Xml\-Stream\-Reader \&reader)
+\begin{DoxyCompactList}\small\item\em Read lists of excluded paths. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class that reads and writes project files. The project files contain project-\/specific settings for checking. For example a list of include paths. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_project_file_a0de7dba3827b1bed72eb7e4228baeaf3}{\index{Project\-File@{Project\-File}!Project\-File@{Project\-File}}
+\index{Project\-File@{Project\-File}!ProjectFile@{Project\-File}}
+\subsubsection[{Project\-File}]{\setlength{\rightskip}{0pt plus 5cm}Project\-File\-::\-Project\-File (
+\begin{DoxyParamCaption}
+\item[{Q\-Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_project_file_a0de7dba3827b1bed72eb7e4228baeaf3}
+\hypertarget{class_project_file_a8ee47ddffd45f5443ebd661efb7c763d}{\index{Project\-File@{Project\-File}!Project\-File@{Project\-File}}
+\index{Project\-File@{Project\-File}!ProjectFile@{Project\-File}}
+\subsubsection[{Project\-File}]{\setlength{\rightskip}{0pt plus 5cm}Project\-File\-::\-Project\-File (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{filename, }
+\item[{Q\-Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_project_file_a8ee47ddffd45f5443ebd661efb7c763d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_project_file_af322bc9b9a12583cee1ce2957d642b2a}{\index{Project\-File@{Project\-File}!Get\-Check\-Paths@{Get\-Check\-Paths}}
+\index{Get\-Check\-Paths@{Get\-Check\-Paths}!ProjectFile@{Project\-File}}
+\subsubsection[{Get\-Check\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String\-List Project\-File\-::\-Get\-Check\-Paths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_project_file_af322bc9b9a12583cee1ce2957d642b2a}
+
+
+Get list of paths to check. 
+
+\begin{DoxyReturn}{Returns}
+list of paths. 
+\end{DoxyReturn}
+\hypertarget{class_project_file_ae85e1bc32f973becb0507a222fe00002}{\index{Project\-File@{Project\-File}!Get\-Defines@{Get\-Defines}}
+\index{Get\-Defines@{Get\-Defines}!ProjectFile@{Project\-File}}
+\subsubsection[{Get\-Defines}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String\-List Project\-File\-::\-Get\-Defines (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_project_file_ae85e1bc32f973becb0507a222fe00002}
+
+
+Get list of defines. 
+
+\begin{DoxyReturn}{Returns}
+list of defines. 
+\end{DoxyReturn}
+\hypertarget{class_project_file_a1acacd36addf3a5b7df2efc72dae939a}{\index{Project\-File@{Project\-File}!Get\-Excluded\-Paths@{Get\-Excluded\-Paths}}
+\index{Get\-Excluded\-Paths@{Get\-Excluded\-Paths}!ProjectFile@{Project\-File}}
+\subsubsection[{Get\-Excluded\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String\-List Project\-File\-::\-Get\-Excluded\-Paths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_project_file_a1acacd36addf3a5b7df2efc72dae939a}
+
+
+Get list of paths to exclude from the check. 
+
+\begin{DoxyReturn}{Returns}
+list of paths. 
+\end{DoxyReturn}
+\hypertarget{class_project_file_a1101263710071c7028ebc31c74516664}{\index{Project\-File@{Project\-File}!Get\-Filename@{Get\-Filename}}
+\index{Get\-Filename@{Get\-Filename}!ProjectFile@{Project\-File}}
+\subsubsection[{Get\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Project\-File\-::\-Get\-Filename (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_project_file_a1101263710071c7028ebc31c74516664}
+
+
+Get filename for the project file. 
+
+\begin{DoxyReturn}{Returns}
+file name. 
+\end{DoxyReturn}
+\hypertarget{class_project_file_a99eaeaf63d9af7a53859bfbef27f4f53}{\index{Project\-File@{Project\-File}!Get\-Include\-Dirs@{Get\-Include\-Dirs}}
+\index{Get\-Include\-Dirs@{Get\-Include\-Dirs}!ProjectFile@{Project\-File}}
+\subsubsection[{Get\-Include\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String\-List Project\-File\-::\-Get\-Include\-Dirs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_project_file_a99eaeaf63d9af7a53859bfbef27f4f53}
+
+
+Get list of include directories. 
+
+\begin{DoxyReturn}{Returns}
+list of directories. 
+\end{DoxyReturn}
+\hypertarget{class_project_file_a1bcc5f6cbcb46d9da953435a42fe0588}{\index{Project\-File@{Project\-File}!Get\-Root\-Path@{Get\-Root\-Path}}
+\index{Get\-Root\-Path@{Get\-Root\-Path}!ProjectFile@{Project\-File}}
+\subsubsection[{Get\-Root\-Path}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Project\-File\-::\-Get\-Root\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_project_file_a1bcc5f6cbcb46d9da953435a42fe0588}
+
+
+Get project root path. 
+
+\begin{DoxyReturn}{Returns}
+project root path. 
+\end{DoxyReturn}
+\hypertarget{class_project_file_a66e7c033164c37dd9c0bab575585f4c5}{\index{Project\-File@{Project\-File}!Read@{Read}}
+\index{Read@{Read}!ProjectFile@{Project\-File}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}bool Project\-File\-::\-Read (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{filename = {\ttfamily QString()}}
+\end{DoxyParamCaption}
+)}}\label{class_project_file_a66e7c033164c37dd9c0bab575585f4c5}
+
+
+Read the project file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Filename (can be also given to constructor). \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_af19c667d1dbc4b94c5a995d35a966268}{\index{Project\-File@{Project\-File}!Read\-Check\-Paths@{Read\-Check\-Paths}}
+\index{Read\-Check\-Paths@{Read\-Check\-Paths}!ProjectFile@{Project\-File}}
+\subsubsection[{Read\-Check\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-::\-Read\-Check\-Paths (
+\begin{DoxyParamCaption}
+\item[{Q\-Xml\-Stream\-Reader \&}]{reader}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_project_file_af19c667d1dbc4b94c5a995d35a966268}
+
+
+Read list paths to check. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & X\-M\-L stream reader. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_a49a536f23393a4d57456a207dd0d9e44}{\index{Project\-File@{Project\-File}!Read\-Defines@{Read\-Defines}}
+\index{Read\-Defines@{Read\-Defines}!ProjectFile@{Project\-File}}
+\subsubsection[{Read\-Defines}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-::\-Read\-Defines (
+\begin{DoxyParamCaption}
+\item[{Q\-Xml\-Stream\-Reader \&}]{reader}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_project_file_a49a536f23393a4d57456a207dd0d9e44}
+
+
+Read list of defines from X\-M\-L. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & X\-M\-L stream reader. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_a5eab4d466bf8dffe88fba8811627f4c9}{\index{Project\-File@{Project\-File}!Read\-Excludes@{Read\-Excludes}}
+\index{Read\-Excludes@{Read\-Excludes}!ProjectFile@{Project\-File}}
+\subsubsection[{Read\-Excludes}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-::\-Read\-Excludes (
+\begin{DoxyParamCaption}
+\item[{Q\-Xml\-Stream\-Reader \&}]{reader}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_project_file_a5eab4d466bf8dffe88fba8811627f4c9}
+
+
+Read lists of excluded paths. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & X\-M\-L stream reader. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_a00782c2703b2335eeb90f5146d685b18}{\index{Project\-File@{Project\-File}!Read\-Include\-Dirs@{Read\-Include\-Dirs}}
+\index{Read\-Include\-Dirs@{Read\-Include\-Dirs}!ProjectFile@{Project\-File}}
+\subsubsection[{Read\-Include\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-::\-Read\-Include\-Dirs (
+\begin{DoxyParamCaption}
+\item[{Q\-Xml\-Stream\-Reader \&}]{reader}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_project_file_a00782c2703b2335eeb90f5146d685b18}
+
+
+Read list of include directories from X\-M\-L. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & X\-M\-L stream reader. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_abcce33affe9d0f05a19439aa1859d1a6}{\index{Project\-File@{Project\-File}!Read\-Root\-Path@{Read\-Root\-Path}}
+\index{Read\-Root\-Path@{Read\-Root\-Path}!ProjectFile@{Project\-File}}
+\subsubsection[{Read\-Root\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-::\-Read\-Root\-Path (
+\begin{DoxyParamCaption}
+\item[{Q\-Xml\-Stream\-Reader \&}]{reader}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_project_file_abcce33affe9d0f05a19439aa1859d1a6}
+
+
+Read optional root path from X\-M\-L. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & X\-M\-L stream reader. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_a8327d78e8c814b7a9002491c4c533eff}{\index{Project\-File@{Project\-File}!Set\-Check\-Paths@{Set\-Check\-Paths}}
+\index{Set\-Check\-Paths@{Set\-Check\-Paths}!ProjectFile@{Project\-File}}
+\subsubsection[{Set\-Check\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-::\-Set\-Check\-Paths (
+\begin{DoxyParamCaption}
+\item[{const Q\-String\-List \&}]{paths}
+\end{DoxyParamCaption}
+)}}\label{class_project_file_a8327d78e8c814b7a9002491c4c533eff}
+
+
+Set list of paths to check. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em defines} & List of paths. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_a3b3b487125d11ae518ca7e6d6d775da7}{\index{Project\-File@{Project\-File}!Set\-Defines@{Set\-Defines}}
+\index{Set\-Defines@{Set\-Defines}!ProjectFile@{Project\-File}}
+\subsubsection[{Set\-Defines}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-::\-Set\-Defines (
+\begin{DoxyParamCaption}
+\item[{const Q\-String\-List \&}]{defines}
+\end{DoxyParamCaption}
+)}}\label{class_project_file_a3b3b487125d11ae518ca7e6d6d775da7}
+
+
+Set list of defines. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em defines} & List of defines. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_a30c1866c5f86eca0de4b4fddbdcb761a}{\index{Project\-File@{Project\-File}!Set\-Excluded\-Paths@{Set\-Excluded\-Paths}}
+\index{Set\-Excluded\-Paths@{Set\-Excluded\-Paths}!ProjectFile@{Project\-File}}
+\subsubsection[{Set\-Excluded\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-::\-Set\-Excluded\-Paths (
+\begin{DoxyParamCaption}
+\item[{const Q\-String\-List \&}]{paths}
+\end{DoxyParamCaption}
+)}}\label{class_project_file_a30c1866c5f86eca0de4b4fddbdcb761a}
+
+
+Set list of paths to exclude from the check. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em defines} & List of paths. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_af462360026c93df38c0e12baa2af4301}{\index{Project\-File@{Project\-File}!Set\-Filename@{Set\-Filename}}
+\index{Set\-Filename@{Set\-Filename}!ProjectFile@{Project\-File}}
+\subsubsection[{Set\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-::\-Set\-Filename (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_project_file_af462360026c93df38c0e12baa2af4301}
+
+
+Set filename for the project file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Filename to use. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_aa4eea207fe45e9646b4801ad90d9b1a8}{\index{Project\-File@{Project\-File}!Set\-Includes@{Set\-Includes}}
+\index{Set\-Includes@{Set\-Includes}!ProjectFile@{Project\-File}}
+\subsubsection[{Set\-Includes}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-::\-Set\-Includes (
+\begin{DoxyParamCaption}
+\item[{const Q\-String\-List \&}]{includes}
+\end{DoxyParamCaption}
+)}}\label{class_project_file_aa4eea207fe45e9646b4801ad90d9b1a8}
+
+
+Set list of includes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em includes} & List of defines. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_a30d42c900372ab0d2f71a2600154e9a9}{\index{Project\-File@{Project\-File}!Set\-Root\-Path@{Set\-Root\-Path}}
+\index{Set\-Root\-Path@{Set\-Root\-Path}!ProjectFile@{Project\-File}}
+\subsubsection[{Set\-Root\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-::\-Set\-Root\-Path (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{rootpath}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_project_file_a30d42c900372ab0d2f71a2600154e9a9}
+
+
+Set project root path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rootpath} & new project root path. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_a08e611ca440d47fa9e184d7acc89c41c}{\index{Project\-File@{Project\-File}!Write@{Write}}
+\index{Write@{Write}!ProjectFile@{Project\-File}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}bool Project\-File\-::\-Write (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{filename = {\ttfamily QString()}}
+\end{DoxyParamCaption}
+)}}\label{class_project_file_a08e611ca440d47fa9e184d7acc89c41c}
+
+
+Write project file (to disk). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Filename to use. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{projectfile_8h}{projectfile.\-h}\item 
+gui/\hyperlink{projectfile_8cpp}{projectfile.\-cpp}\end{DoxyCompactItemize}

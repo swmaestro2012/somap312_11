@@ -1,0 +1,258 @@
+\hypertarget{class_application_list}{\section{Application\-List Class Reference}
+\label{class_application_list}\index{Application\-List@{Application\-List}}
+}
+
+
+List of applications user has specified to open errors with.  
+
+
+
+
+{\ttfamily \#include $<$applicationlist.\-h$>$}
+
+Inheritance diagram for Application\-List\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_application_list}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_application_list_a0efc6a365ff3a7881ddbe0307c037c03}{Application\-List} (Q\-Object $\ast$parent=0)
+\item 
+virtual \hyperlink{class_application_list_a150490e3f5963dcc8ca0a90e1763b7ae}{$\sim$\-Application\-List} ()
+\item 
+bool \hyperlink{class_application_list_ae8d7cd833afccb9b1d73b24cd86f8e65}{Load\-Settings} ()
+\begin{DoxyCompactList}\small\item\em Load all applications. \end{DoxyCompactList}\item 
+void \hyperlink{class_application_list_aa8cd151f9183584630f84ae7cfb4626a}{Save\-Settings} ()
+\begin{DoxyCompactList}\small\item\em Save all applications. \end{DoxyCompactList}\item 
+int \hyperlink{class_application_list_a59865bd071c64693883edb41f3b033ed}{Get\-Application\-Count} () const 
+\begin{DoxyCompactList}\small\item\em Get the amount of applications in the list. \end{DoxyCompactList}\item 
+\hyperlink{class_application}{Application} \hyperlink{class_application_list_a2cf23437570b0d2bf404e97c80351d95}{Get\-Application} (const int index) const 
+\begin{DoxyCompactList}\small\item\em Get specific application's name. \end{DoxyCompactList}\item 
+int \hyperlink{class_application_list_a5b248c1cf7cf9da0ab1220ed7a41eda8}{Get\-Default\-Application} () const 
+\begin{DoxyCompactList}\small\item\em Return the default application. \end{DoxyCompactList}\item 
+void \hyperlink{class_application_list_a039254c9632556d4ae2e387f1f52dfbe}{Set\-Application} (int index, const \hyperlink{class_application}{Application} \&app)
+\begin{DoxyCompactList}\small\item\em Modify an application. \end{DoxyCompactList}\item 
+void \hyperlink{class_application_list_aec0f69cf2bd73d07eed17dfc918e64ee}{Add\-Application} (const \hyperlink{class_application}{Application} \&app)
+\begin{DoxyCompactList}\small\item\em Add a new application. \end{DoxyCompactList}\item 
+void \hyperlink{class_application_list_aeb220e504fe8c69e7ab533ce795f5b68}{Remove\-Application} (const int index)
+\begin{DoxyCompactList}\small\item\em Remove an application from the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_application_list_a391acbf41368908a9c6e53494bce23fb}{Set\-Default} (const int index)
+\begin{DoxyCompactList}\small\item\em Set application as default application. \end{DoxyCompactList}\item 
+void \hyperlink{class_application_list_a192280bd8e3afa1d29711c77d682ad89}{Copy} (const \hyperlink{class_application_list}{Application\-List} $\ast$list)
+\begin{DoxyCompactList}\small\item\em Remove all applications from this list and copy all applications from list given as a parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_application_list_a588d75d7d329a6694a6f94a0dca380d1}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Clear the list. \end{DoxyCompactList}\item 
+bool \hyperlink{class_application_list_a0d32b112cd8357336bd192734bfe1685}{Find\-Default\-Windows\-Editor} ()
+\begin{DoxyCompactList}\small\item\em Find editor used by default in Windows. \hyperlink{class_check}{Check} if Notepad++ is installed and use it. If not, use Notepad. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+List of applications user has specified to open errors with. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_application_list_a0efc6a365ff3a7881ddbe0307c037c03}{\index{Application\-List@{Application\-List}!Application\-List@{Application\-List}}
+\index{Application\-List@{Application\-List}!ApplicationList@{Application\-List}}
+\subsubsection[{Application\-List}]{\setlength{\rightskip}{0pt plus 5cm}Application\-List\-::\-Application\-List (
+\begin{DoxyParamCaption}
+\item[{Q\-Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_application_list_a0efc6a365ff3a7881ddbe0307c037c03}
+\hypertarget{class_application_list_a150490e3f5963dcc8ca0a90e1763b7ae}{\index{Application\-List@{Application\-List}!$\sim$\-Application\-List@{$\sim$\-Application\-List}}
+\index{$\sim$\-Application\-List@{$\sim$\-Application\-List}!ApplicationList@{Application\-List}}
+\subsubsection[{$\sim$\-Application\-List}]{\setlength{\rightskip}{0pt plus 5cm}Application\-List\-::$\sim$\-Application\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_application_list_a150490e3f5963dcc8ca0a90e1763b7ae}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_application_list_aec0f69cf2bd73d07eed17dfc918e64ee}{\index{Application\-List@{Application\-List}!Add\-Application@{Add\-Application}}
+\index{Add\-Application@{Add\-Application}!ApplicationList@{Application\-List}}
+\subsubsection[{Add\-Application}]{\setlength{\rightskip}{0pt plus 5cm}void Application\-List\-::\-Add\-Application (
+\begin{DoxyParamCaption}
+\item[{const {\bf Application} \&}]{app}
+\end{DoxyParamCaption}
+)}}\label{class_application_list_aec0f69cf2bd73d07eed17dfc918e64ee}
+
+
+Add a new application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & \hyperlink{class_application}{Application} to add. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_application_list_a588d75d7d329a6694a6f94a0dca380d1}{\index{Application\-List@{Application\-List}!Clear@{Clear}}
+\index{Clear@{Clear}!ApplicationList@{Application\-List}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void Application\-List\-::\-Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_application_list_a588d75d7d329a6694a6f94a0dca380d1}
+
+
+Clear the list. 
+
+\hypertarget{class_application_list_a192280bd8e3afa1d29711c77d682ad89}{\index{Application\-List@{Application\-List}!Copy@{Copy}}
+\index{Copy@{Copy}!ApplicationList@{Application\-List}}
+\subsubsection[{Copy}]{\setlength{\rightskip}{0pt plus 5cm}void Application\-List\-::\-Copy (
+\begin{DoxyParamCaption}
+\item[{const {\bf Application\-List} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{class_application_list_a192280bd8e3afa1d29711c77d682ad89}
+
+
+Remove all applications from this list and copy all applications from list given as a parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Copying source \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_application_list_a0d32b112cd8357336bd192734bfe1685}{\index{Application\-List@{Application\-List}!Find\-Default\-Windows\-Editor@{Find\-Default\-Windows\-Editor}}
+\index{Find\-Default\-Windows\-Editor@{Find\-Default\-Windows\-Editor}!ApplicationList@{Application\-List}}
+\subsubsection[{Find\-Default\-Windows\-Editor}]{\setlength{\rightskip}{0pt plus 5cm}bool Application\-List\-::\-Find\-Default\-Windows\-Editor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_application_list_a0d32b112cd8357336bd192734bfe1685}
+
+
+Find editor used by default in Windows. \hyperlink{class_check}{Check} if Notepad++ is installed and use it. If not, use Notepad. 
+
+\hypertarget{class_application_list_a2cf23437570b0d2bf404e97c80351d95}{\index{Application\-List@{Application\-List}!Get\-Application@{Get\-Application}}
+\index{Get\-Application@{Get\-Application}!ApplicationList@{Application\-List}}
+\subsubsection[{Get\-Application}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Application} Application\-List\-::\-Get\-Application (
+\begin{DoxyParamCaption}
+\item[{const int}]{index}
+\end{DoxyParamCaption}
+) const}}\label{class_application_list_a2cf23437570b0d2bf404e97c80351d95}
+
+
+Get specific application's name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the application whose name to get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Name of the application 
+\end{DoxyReturn}
+\hypertarget{class_application_list_a59865bd071c64693883edb41f3b033ed}{\index{Application\-List@{Application\-List}!Get\-Application\-Count@{Get\-Application\-Count}}
+\index{Get\-Application\-Count@{Get\-Application\-Count}!ApplicationList@{Application\-List}}
+\subsubsection[{Get\-Application\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int Application\-List\-::\-Get\-Application\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_application_list_a59865bd071c64693883edb41f3b033ed}
+
+
+Get the amount of applications in the list. 
+
+\begin{DoxyReturn}{Returns}
+The count of applications 
+\end{DoxyReturn}
+\hypertarget{class_application_list_a5b248c1cf7cf9da0ab1220ed7a41eda8}{\index{Application\-List@{Application\-List}!Get\-Default\-Application@{Get\-Default\-Application}}
+\index{Get\-Default\-Application@{Get\-Default\-Application}!ApplicationList@{Application\-List}}
+\subsubsection[{Get\-Default\-Application}]{\setlength{\rightskip}{0pt plus 5cm}int Application\-List\-::\-Get\-Default\-Application (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_application_list_a5b248c1cf7cf9da0ab1220ed7a41eda8}
+
+
+Return the default application. 
+
+\begin{DoxyReturn}{Returns}
+Index of the default application. 
+\end{DoxyReturn}
+\hypertarget{class_application_list_ae8d7cd833afccb9b1d73b24cd86f8e65}{\index{Application\-List@{Application\-List}!Load\-Settings@{Load\-Settings}}
+\index{Load\-Settings@{Load\-Settings}!ApplicationList@{Application\-List}}
+\subsubsection[{Load\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}bool Application\-List\-::\-Load\-Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_application_list_ae8d7cd833afccb9b1d73b24cd86f8e65}
+
+
+Load all applications. 
+
+\begin{DoxyReturn}{Returns}
+true if loading succeeded, false if there is problem with application list. Most probably because of older version settings need to be upgraded. 
+\end{DoxyReturn}
+\hypertarget{class_application_list_aeb220e504fe8c69e7ab533ce795f5b68}{\index{Application\-List@{Application\-List}!Remove\-Application@{Remove\-Application}}
+\index{Remove\-Application@{Remove\-Application}!ApplicationList@{Application\-List}}
+\subsubsection[{Remove\-Application}]{\setlength{\rightskip}{0pt plus 5cm}void Application\-List\-::\-Remove\-Application (
+\begin{DoxyParamCaption}
+\item[{const int}]{index}
+\end{DoxyParamCaption}
+)}}\label{class_application_list_aeb220e504fe8c69e7ab533ce795f5b68}
+
+
+Remove an application from the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the application to remove. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_application_list_aa8cd151f9183584630f84ae7cfb4626a}{\index{Application\-List@{Application\-List}!Save\-Settings@{Save\-Settings}}
+\index{Save\-Settings@{Save\-Settings}!ApplicationList@{Application\-List}}
+\subsubsection[{Save\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void Application\-List\-::\-Save\-Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_application_list_aa8cd151f9183584630f84ae7cfb4626a}
+
+
+Save all applications. 
+
+\hypertarget{class_application_list_a039254c9632556d4ae2e387f1f52dfbe}{\index{Application\-List@{Application\-List}!Set\-Application@{Set\-Application}}
+\index{Set\-Application@{Set\-Application}!ApplicationList@{Application\-List}}
+\subsubsection[{Set\-Application}]{\setlength{\rightskip}{0pt plus 5cm}void Application\-List\-::\-Set\-Application (
+\begin{DoxyParamCaption}
+\item[{int}]{index, }
+\item[{const {\bf Application} \&}]{app}
+\end{DoxyParamCaption}
+)}}\label{class_application_list_a039254c9632556d4ae2e387f1f52dfbe}
+
+
+Modify an application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the application to modify \\
+\hline
+{\em app} & \hyperlink{class_application}{Application} with new data. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_application_list_a391acbf41368908a9c6e53494bce23fb}{\index{Application\-List@{Application\-List}!Set\-Default@{Set\-Default}}
+\index{Set\-Default@{Set\-Default}!ApplicationList@{Application\-List}}
+\subsubsection[{Set\-Default}]{\setlength{\rightskip}{0pt plus 5cm}void Application\-List\-::\-Set\-Default (
+\begin{DoxyParamCaption}
+\item[{const int}]{index}
+\end{DoxyParamCaption}
+)}}\label{class_application_list_a391acbf41368908a9c6e53494bce23fb}
+
+
+Set application as default application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the application to make the default one \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{applicationlist_8h}{applicationlist.\-h}\item 
+gui/\hyperlink{applicationlist_8cpp}{applicationlist.\-cpp}\end{DoxyCompactItemize}

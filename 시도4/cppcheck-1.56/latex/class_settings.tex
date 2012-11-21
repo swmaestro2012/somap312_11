@@ -1,0 +1,475 @@
+\hypertarget{class_settings}{\section{Settings Class Reference}
+\label{class_settings}\index{Settings@{Settings}}
+}
+
+
+This is just a container for general settings so that we don't need to pass individual values to functions or constructors now or in the future when we might have even more detailed settings.  
+
+
+
+
+{\ttfamily \#include $<$settings.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8}{Platform\-Type} \{ \\*
+\hyperlink{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8aa3320665aa07f8cf0e0e0751ceb91ecc}{Unspecified}, 
+\hyperlink{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8a81deabfdd294abf8cdcce45fa11abf09}{Win32\-A}, 
+\hyperlink{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8ad7275558801ab7ec5d0a26f30472b40c}{Win32\-W}, 
+\hyperlink{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8af6ee9ca221451c054a86451f3ebda13f}{Win64}, 
+\\*
+\hyperlink{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8aed8b9591ef84f44874240ed9d5fc2743}{Unix32}, 
+\hyperlink{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8ae53acedf6c642bf12bf0501f59813c52}{Unix64}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_settings_ab7169a6eefce79566dd07db3b1e5e967}{Settings} ()
+\item 
+void \hyperlink{class_settings_a2384cf7e32819e9da61dbbbda6853c11}{terminate} ()
+\begin{DoxyCompactList}\small\item\em Request termination of checking. \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_a9317ff8b48c95b8b25d660883f5afeb0}{terminated} () const 
+\begin{DoxyCompactList}\small\item\em termination requested? \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_a9379218e01e7e4477527f4e72538e9db}{append} (const std\-::string \&filename)
+\begin{DoxyCompactList}\small\item\em assign append code (--append) \end{DoxyCompactList}\item 
+const std\-::string \& \hyperlink{class_settings_ac3b6d64fe56c70b69b03a2b8c066effa}{append} () const 
+\begin{DoxyCompactList}\small\item\em get append code (--append) \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_a1b33748bfffa16acc01bd9687bb2755a}{is\-Enabled} (const std\-::string \&str) const 
+\begin{DoxyCompactList}\small\item\em Returns true if given id is in the list of enabled extra checks (--enable) \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_settings_a24c9995edb6f1aaca2ffe76ac6d29edb}{add\-Enabled} (const std\-::string \&str)
+\begin{DoxyCompactList}\small\item\em Enable extra checks by id. See \hyperlink{class_settings_a1b33748bfffa16acc01bd9687bb2755a}{is\-Enabled()} \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_a6da762b74e7e8b8104849a1d8feaafec}{platform} (\hyperlink{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8}{Platform\-Type} type)
+\item 
+bool \hyperlink{class_settings_ae96281d10c45bb31246f025e4fbde6c6}{platform\-File} (const std\-::string \&filename)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_settings_ad9ae775f5f68995dd70b263ff006d5dd}{debug}
+\begin{DoxyCompactList}\small\item\em Is --debug given? \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_aff86aa98beb34d00d4b46b5fa0768cdc}{debugwarnings}
+\begin{DoxyCompactList}\small\item\em Is --debug-\/warnings given? \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_acca1011cb5bc234467cd3173da3e5f7e}{debug\-False\-Positive}
+\begin{DoxyCompactList}\small\item\em Is --debug-\/fp given? \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_a56c6e511f3a996d891bd2b9417d6670e}{inconclusive}
+\begin{DoxyCompactList}\small\item\em Inconclusive checks. \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_a66bd09ed65174792fef48d5948abfc40}{experimental}
+\item 
+bool \hyperlink{class_settings_acb01e09ba151cc22b13d44de6563a4e5}{\-\_\-errors\-Only}
+\begin{DoxyCompactList}\small\item\em Is --quiet given? \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_ad51ddd067998b229c64589f183952392}{\-\_\-inline\-Suppressions}
+\begin{DoxyCompactList}\small\item\em Is --inline-\/suppr given? \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_a4cbeac0f69cfe67ea995b2e8b03543fe}{\-\_\-verbose}
+\begin{DoxyCompactList}\small\item\em Is --verbose given? \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_a308bf6973159f94f1889c1008fe08b5d}{\-\_\-force}
+\begin{DoxyCompactList}\small\item\em Force checking the files with \char`\"{}too many\char`\"{} configurations (--force). \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_ab99c72c997d7b2f6f8985c0ced0881ac}{\-\_\-relative\-Paths}
+\begin{DoxyCompactList}\small\item\em Use relative paths in output. \end{DoxyCompactList}\item 
+std\-::vector$<$ std\-::string $>$ \hyperlink{class_settings_afadd19fdbdf1c1c2be908a60ba92f23f}{\-\_\-base\-Paths}
+\begin{DoxyCompactList}\small\item\em Paths used as base for conversion to relative paths. \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_ab657e8c6731499441e902246a0697be0}{\-\_\-xml}
+\begin{DoxyCompactList}\small\item\em write X\-M\-L results (--xml) \end{DoxyCompactList}\item 
+int \hyperlink{class_settings_abfe06684500ddd333513a0b0c2abb023}{\-\_\-xml\-\_\-version}
+\begin{DoxyCompactList}\small\item\em X\-M\-L version (--xmlver=..) \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_settings_ad1d32f22bf496ef134ce83512b3179a6}{\-\_\-jobs}
+\begin{DoxyCompactList}\small\item\em How many processes/threads should do checking at the same time. Default is 1. (-\/j N) \end{DoxyCompactList}\item 
+int \hyperlink{class_settings_a7404d25f5be389944f9a602da9c47c92}{\-\_\-exit\-Code}
+\begin{DoxyCompactList}\small\item\em If errors are found, this value is returned from \hyperlink{cli_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main()}. Default value is 0. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_settings_ac28b2437de15405caeaa89dce1c2a669}{\-\_\-output\-Format}
+\begin{DoxyCompactList}\small\item\em The output format in which the errors are printed in text mode, e.\-g. \char`\"{}\{severity\} \{file\}\-:\{line\} \{message\} \{id\}\char`\"{}. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_settings_a2b369b09fa11c6488c96c3843bb19e83}{\-\_\-showtime}
+\begin{DoxyCompactList}\small\item\em show timing information (--showtime=file$|$summary$|$top5) \end{DoxyCompactList}\item 
+std\-::list$<$ std\-::string $>$ \hyperlink{class_settings_ad9a5e9c7ab0ad1ea6b6d87fe1486b69d}{\-\_\-include\-Paths}
+\begin{DoxyCompactList}\small\item\em List of include paths, e.\-g. \char`\"{}my/includes/\char`\"{} which should be used for finding include files inside source files. (-\/\-I) \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_settings_ab7e1b0a42a74f4203816663f878b3db2}{\-\_\-max\-Configs}
+\begin{DoxyCompactList}\small\item\em Maximum number of configurations to check before bailing. Default is 12. (--max-\/configs=N) \end{DoxyCompactList}\item 
+\hyperlink{class_suppressions}{Suppressions} \hyperlink{class_settings_aa34b7eef61a5ff9f98f1bfbbfca31a08}{nomsg}
+\begin{DoxyCompactList}\small\item\em suppress message (--suppressions) \end{DoxyCompactList}\item 
+\hyperlink{class_suppressions}{Suppressions} \hyperlink{class_settings_a9bdd97a6626124e38b19503b9fd7a6f0}{nofail}
+\begin{DoxyCompactList}\small\item\em suppress exitcode \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_settings_a8829507f5f2c8bbc1717169ba21edabd}{user\-Defines}
+\begin{DoxyCompactList}\small\item\em defines given by the user \end{DoxyCompactList}\item 
+std\-::set$<$ std\-::string $>$ \hyperlink{class_settings_a010d28fdcfcb50e46fc7de37086da957}{user\-Undefs}
+\begin{DoxyCompactList}\small\item\em undefines given by the user \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_a4b8992ce101fd7bb4e8cec8203b51a5b}{report\-Progress}
+\begin{DoxyCompactList}\small\item\em --report-\/progress \end{DoxyCompactList}\item 
+bool \hyperlink{class_settings_a56346f5b3dd9313608b3b9b7b4310e60}{check\-Configuration}
+\item 
+\hyperlink{struct_standards}{Standards} \hyperlink{class_settings_affed1d4355e85d3c4abb1364964e2ff5}{standards}
+\item 
+unsigned int \hyperlink{class_settings_a9360678fb9ab1207238f2bc2577b9ed7}{sizeof\-\_\-bool}
+\item 
+unsigned int \hyperlink{class_settings_a864bcb7744b825b0d0fd247087352203}{sizeof\-\_\-short}
+\item 
+unsigned int \hyperlink{class_settings_a89ab35c2d7d0b23391e94d70e53434e0}{sizeof\-\_\-int}
+\item 
+unsigned int \hyperlink{class_settings_ae7e0edfce174fc9ada72f310fc55ef33}{sizeof\-\_\-long}
+\item 
+unsigned int \hyperlink{class_settings_ad0e779b70fc21acbf1df5c502f0dd96d}{sizeof\-\_\-long\-\_\-long}
+\item 
+unsigned int \hyperlink{class_settings_aa94baf211f5c650231bde448e4076219}{sizeof\-\_\-float}
+\item 
+unsigned int \hyperlink{class_settings_a3ee54db34fd2a8daa1fcc79847160658}{sizeof\-\_\-double}
+\item 
+unsigned int \hyperlink{class_settings_a99f88aa43c73078ba8024519a5bb3f35}{sizeof\-\_\-long\-\_\-double}
+\item 
+unsigned int \hyperlink{class_settings_ac94aa8ccd4a48075a750cb4142b04c52}{sizeof\-\_\-size\-\_\-t}
+\item 
+unsigned int \hyperlink{class_settings_acbd92cfb57a1ebd1b6b3838e863e960d}{sizeof\-\_\-pointer}
+\item 
+\hyperlink{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8}{Platform\-Type} \hyperlink{class_settings_a6c375855187695c207a7a873185c0d07}{platform\-Type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is just a container for general settings so that we don't need to pass individual values to functions or constructors now or in the future when we might have even more detailed settings. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8}{\index{Settings@{Settings}!Platform\-Type@{Platform\-Type}}
+\index{Platform\-Type@{Platform\-Type}!Settings@{Settings}}
+\subsubsection[{Platform\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Settings\-::\-Platform\-Type}}}\label{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{Unspecified@{Unspecified}!Settings@{Settings}}\index{Settings@{Settings}!Unspecified@{Unspecified}}\item[{\em 
+\hypertarget{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8aa3320665aa07f8cf0e0e0751ceb91ecc}{Unspecified}\label{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8aa3320665aa07f8cf0e0e0751ceb91ecc}
+}]\index{Win32\-A@{Win32\-A}!Settings@{Settings}}\index{Settings@{Settings}!Win32\-A@{Win32\-A}}\item[{\em 
+\hypertarget{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8a81deabfdd294abf8cdcce45fa11abf09}{Win32\-A}\label{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8a81deabfdd294abf8cdcce45fa11abf09}
+}]\index{Win32\-W@{Win32\-W}!Settings@{Settings}}\index{Settings@{Settings}!Win32\-W@{Win32\-W}}\item[{\em 
+\hypertarget{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8ad7275558801ab7ec5d0a26f30472b40c}{Win32\-W}\label{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8ad7275558801ab7ec5d0a26f30472b40c}
+}]\index{Win64@{Win64}!Settings@{Settings}}\index{Settings@{Settings}!Win64@{Win64}}\item[{\em 
+\hypertarget{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8af6ee9ca221451c054a86451f3ebda13f}{Win64}\label{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8af6ee9ca221451c054a86451f3ebda13f}
+}]\index{Unix32@{Unix32}!Settings@{Settings}}\index{Settings@{Settings}!Unix32@{Unix32}}\item[{\em 
+\hypertarget{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8aed8b9591ef84f44874240ed9d5fc2743}{Unix32}\label{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8aed8b9591ef84f44874240ed9d5fc2743}
+}]\index{Unix64@{Unix64}!Settings@{Settings}}\index{Settings@{Settings}!Unix64@{Unix64}}\item[{\em 
+\hypertarget{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8ae53acedf6c642bf12bf0501f59813c52}{Unix64}\label{class_settings_a7c94920f2160a5cf261ce822a0ce2ee8ae53acedf6c642bf12bf0501f59813c52}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_settings_ab7169a6eefce79566dd07db3b1e5e967}{\index{Settings@{Settings}!Settings@{Settings}}
+\index{Settings@{Settings}!Settings@{Settings}}
+\subsubsection[{Settings}]{\setlength{\rightskip}{0pt plus 5cm}Settings\-::\-Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_settings_ab7169a6eefce79566dd07db3b1e5e967}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_settings_a24c9995edb6f1aaca2ffe76ac6d29edb}{\index{Settings@{Settings}!add\-Enabled@{add\-Enabled}}
+\index{add\-Enabled@{add\-Enabled}!Settings@{Settings}}
+\subsubsection[{add\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Settings\-::add\-Enabled (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)}}\label{class_settings_a24c9995edb6f1aaca2ffe76ac6d29edb}
+
+
+Enable extra checks by id. See \hyperlink{class_settings_a1b33748bfffa16acc01bd9687bb2755a}{is\-Enabled()} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & single id or list of id values to be enabled or empty string to enable all. e.\-g. \char`\"{}style,possible\-Error\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error message. empty upon success 
+\end{DoxyReturn}
+\hypertarget{class_settings_a9379218e01e7e4477527f4e72538e9db}{\index{Settings@{Settings}!append@{append}}
+\index{append@{append}!Settings@{Settings}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-::append (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename}
+\end{DoxyParamCaption}
+)}}\label{class_settings_a9379218e01e7e4477527f4e72538e9db}
+
+
+assign append code (--append) 
+
+\hypertarget{class_settings_ac3b6d64fe56c70b69b03a2b8c066effa}{\index{Settings@{Settings}!append@{append}}
+\index{append@{append}!Settings@{Settings}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string \& Settings\-::append (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_settings_ac3b6d64fe56c70b69b03a2b8c066effa}
+
+
+get append code (--append) 
+
+\hypertarget{class_settings_a1b33748bfffa16acc01bd9687bb2755a}{\index{Settings@{Settings}!is\-Enabled@{is\-Enabled}}
+\index{is\-Enabled@{is\-Enabled}!Settings@{Settings}}
+\subsubsection[{is\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-::is\-Enabled (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+) const}}\label{class_settings_a1b33748bfffa16acc01bd9687bb2755a}
+
+
+Returns true if given id is in the list of enabled extra checks (--enable) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & id for the extra check, e.\-g. \char`\"{}style\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the check is enabled. 
+\end{DoxyReturn}
+\hypertarget{class_settings_a6da762b74e7e8b8104849a1d8feaafec}{\index{Settings@{Settings}!platform@{platform}}
+\index{platform@{platform}!Settings@{Settings}}
+\subsubsection[{platform}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-::platform (
+\begin{DoxyParamCaption}
+\item[{{\bf Platform\-Type}}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_settings_a6da762b74e7e8b8104849a1d8feaafec}
+set the platform type for predefined platforms \hypertarget{class_settings_ae96281d10c45bb31246f025e4fbde6c6}{\index{Settings@{Settings}!platform\-File@{platform\-File}}
+\index{platform\-File@{platform\-File}!Settings@{Settings}}
+\subsubsection[{platform\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-::platform\-File (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename}
+\end{DoxyParamCaption}
+)}}\label{class_settings_ae96281d10c45bb31246f025e4fbde6c6}
+set the platform type for user specified platforms \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000053}{Todo}]T\-B\-D \end{DoxyRefDesc}
+\hypertarget{class_settings_a2384cf7e32819e9da61dbbbda6853c11}{\index{Settings@{Settings}!terminate@{terminate}}
+\index{terminate@{terminate}!Settings@{Settings}}
+\subsubsection[{terminate}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\-::terminate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_settings_a2384cf7e32819e9da61dbbbda6853c11}
+
+
+Request termination of checking. 
+
+\hypertarget{class_settings_a9317ff8b48c95b8b25d660883f5afeb0}{\index{Settings@{Settings}!terminated@{terminated}}
+\index{terminated@{terminated}!Settings@{Settings}}
+\subsubsection[{terminated}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-::terminated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_settings_a9317ff8b48c95b8b25d660883f5afeb0}
+
+
+termination requested? 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_settings_afadd19fdbdf1c1c2be908a60ba92f23f}{\index{Settings@{Settings}!\-\_\-base\-Paths@{\-\_\-base\-Paths}}
+\index{\-\_\-base\-Paths@{\-\_\-base\-Paths}!Settings@{Settings}}
+\subsubsection[{\-\_\-base\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::string$>$ Settings\-::\-\_\-base\-Paths}}\label{class_settings_afadd19fdbdf1c1c2be908a60ba92f23f}
+
+
+Paths used as base for conversion to relative paths. 
+
+\hypertarget{class_settings_acb01e09ba151cc22b13d44de6563a4e5}{\index{Settings@{Settings}!\-\_\-errors\-Only@{\-\_\-errors\-Only}}
+\index{\-\_\-errors\-Only@{\-\_\-errors\-Only}!Settings@{Settings}}
+\subsubsection[{\-\_\-errors\-Only}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-::\-\_\-errors\-Only}}\label{class_settings_acb01e09ba151cc22b13d44de6563a4e5}
+
+
+Is --quiet given? 
+
+\hypertarget{class_settings_a7404d25f5be389944f9a602da9c47c92}{\index{Settings@{Settings}!\-\_\-exit\-Code@{\-\_\-exit\-Code}}
+\index{\-\_\-exit\-Code@{\-\_\-exit\-Code}!Settings@{Settings}}
+\subsubsection[{\-\_\-exit\-Code}]{\setlength{\rightskip}{0pt plus 5cm}int Settings\-::\-\_\-exit\-Code}}\label{class_settings_a7404d25f5be389944f9a602da9c47c92}
+
+
+If errors are found, this value is returned from \hyperlink{cli_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main()}. Default value is 0. 
+
+\hypertarget{class_settings_a308bf6973159f94f1889c1008fe08b5d}{\index{Settings@{Settings}!\-\_\-force@{\-\_\-force}}
+\index{\-\_\-force@{\-\_\-force}!Settings@{Settings}}
+\subsubsection[{\-\_\-force}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-::\-\_\-force}}\label{class_settings_a308bf6973159f94f1889c1008fe08b5d}
+
+
+Force checking the files with \char`\"{}too many\char`\"{} configurations (--force). 
+
+\hypertarget{class_settings_ad9a5e9c7ab0ad1ea6b6d87fe1486b69d}{\index{Settings@{Settings}!\-\_\-include\-Paths@{\-\_\-include\-Paths}}
+\index{\-\_\-include\-Paths@{\-\_\-include\-Paths}!Settings@{Settings}}
+\subsubsection[{\-\_\-include\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<$std\-::string$>$ Settings\-::\-\_\-include\-Paths}}\label{class_settings_ad9a5e9c7ab0ad1ea6b6d87fe1486b69d}
+
+
+List of include paths, e.\-g. \char`\"{}my/includes/\char`\"{} which should be used for finding include files inside source files. (-\/\-I) 
+
+\hypertarget{class_settings_ad51ddd067998b229c64589f183952392}{\index{Settings@{Settings}!\-\_\-inline\-Suppressions@{\-\_\-inline\-Suppressions}}
+\index{\-\_\-inline\-Suppressions@{\-\_\-inline\-Suppressions}!Settings@{Settings}}
+\subsubsection[{\-\_\-inline\-Suppressions}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-::\-\_\-inline\-Suppressions}}\label{class_settings_ad51ddd067998b229c64589f183952392}
+
+
+Is --inline-\/suppr given? 
+
+\hypertarget{class_settings_ad1d32f22bf496ef134ce83512b3179a6}{\index{Settings@{Settings}!\-\_\-jobs@{\-\_\-jobs}}
+\index{\-\_\-jobs@{\-\_\-jobs}!Settings@{Settings}}
+\subsubsection[{\-\_\-jobs}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Settings\-::\-\_\-jobs}}\label{class_settings_ad1d32f22bf496ef134ce83512b3179a6}
+
+
+How many processes/threads should do checking at the same time. Default is 1. (-\/j N) 
+
+\hypertarget{class_settings_ab7e1b0a42a74f4203816663f878b3db2}{\index{Settings@{Settings}!\-\_\-max\-Configs@{\-\_\-max\-Configs}}
+\index{\-\_\-max\-Configs@{\-\_\-max\-Configs}!Settings@{Settings}}
+\subsubsection[{\-\_\-max\-Configs}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Settings\-::\-\_\-max\-Configs}}\label{class_settings_ab7e1b0a42a74f4203816663f878b3db2}
+
+
+Maximum number of configurations to check before bailing. Default is 12. (--max-\/configs=N) 
+
+\hypertarget{class_settings_ac28b2437de15405caeaa89dce1c2a669}{\index{Settings@{Settings}!\-\_\-output\-Format@{\-\_\-output\-Format}}
+\index{\-\_\-output\-Format@{\-\_\-output\-Format}!Settings@{Settings}}
+\subsubsection[{\-\_\-output\-Format}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Settings\-::\-\_\-output\-Format}}\label{class_settings_ac28b2437de15405caeaa89dce1c2a669}
+
+
+The output format in which the errors are printed in text mode, e.\-g. \char`\"{}\{severity\} \{file\}\-:\{line\} \{message\} \{id\}\char`\"{}. 
+
+\hypertarget{class_settings_ab99c72c997d7b2f6f8985c0ced0881ac}{\index{Settings@{Settings}!\-\_\-relative\-Paths@{\-\_\-relative\-Paths}}
+\index{\-\_\-relative\-Paths@{\-\_\-relative\-Paths}!Settings@{Settings}}
+\subsubsection[{\-\_\-relative\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-::\-\_\-relative\-Paths}}\label{class_settings_ab99c72c997d7b2f6f8985c0ced0881ac}
+
+
+Use relative paths in output. 
+
+\hypertarget{class_settings_a2b369b09fa11c6488c96c3843bb19e83}{\index{Settings@{Settings}!\-\_\-showtime@{\-\_\-showtime}}
+\index{\-\_\-showtime@{\-\_\-showtime}!Settings@{Settings}}
+\subsubsection[{\-\_\-showtime}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Settings\-::\-\_\-showtime}}\label{class_settings_a2b369b09fa11c6488c96c3843bb19e83}
+
+
+show timing information (--showtime=file$|$summary$|$top5) 
+
+\hypertarget{class_settings_a4cbeac0f69cfe67ea995b2e8b03543fe}{\index{Settings@{Settings}!\-\_\-verbose@{\-\_\-verbose}}
+\index{\-\_\-verbose@{\-\_\-verbose}!Settings@{Settings}}
+\subsubsection[{\-\_\-verbose}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-::\-\_\-verbose}}\label{class_settings_a4cbeac0f69cfe67ea995b2e8b03543fe}
+
+
+Is --verbose given? 
+
+\hypertarget{class_settings_ab657e8c6731499441e902246a0697be0}{\index{Settings@{Settings}!\-\_\-xml@{\-\_\-xml}}
+\index{\-\_\-xml@{\-\_\-xml}!Settings@{Settings}}
+\subsubsection[{\-\_\-xml}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-::\-\_\-xml}}\label{class_settings_ab657e8c6731499441e902246a0697be0}
+
+
+write X\-M\-L results (--xml) 
+
+\hypertarget{class_settings_abfe06684500ddd333513a0b0c2abb023}{\index{Settings@{Settings}!\-\_\-xml\-\_\-version@{\-\_\-xml\-\_\-version}}
+\index{\-\_\-xml\-\_\-version@{\-\_\-xml\-\_\-version}!Settings@{Settings}}
+\subsubsection[{\-\_\-xml\-\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}int Settings\-::\-\_\-xml\-\_\-version}}\label{class_settings_abfe06684500ddd333513a0b0c2abb023}
+
+
+X\-M\-L version (--xmlver=..) 
+
+\hypertarget{class_settings_a56346f5b3dd9313608b3b9b7b4310e60}{\index{Settings@{Settings}!check\-Configuration@{check\-Configuration}}
+\index{check\-Configuration@{check\-Configuration}!Settings@{Settings}}
+\subsubsection[{check\-Configuration}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-::check\-Configuration}}\label{class_settings_a56346f5b3dd9313608b3b9b7b4310e60}
+Is the 'configuration checking' wanted? \hypertarget{class_settings_ad9ae775f5f68995dd70b263ff006d5dd}{\index{Settings@{Settings}!debug@{debug}}
+\index{debug@{debug}!Settings@{Settings}}
+\subsubsection[{debug}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-::debug}}\label{class_settings_ad9ae775f5f68995dd70b263ff006d5dd}
+
+
+Is --debug given? 
+
+\hypertarget{class_settings_acca1011cb5bc234467cd3173da3e5f7e}{\index{Settings@{Settings}!debug\-False\-Positive@{debug\-False\-Positive}}
+\index{debug\-False\-Positive@{debug\-False\-Positive}!Settings@{Settings}}
+\subsubsection[{debug\-False\-Positive}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-::debug\-False\-Positive}}\label{class_settings_acca1011cb5bc234467cd3173da3e5f7e}
+
+
+Is --debug-\/fp given? 
+
+\hypertarget{class_settings_aff86aa98beb34d00d4b46b5fa0768cdc}{\index{Settings@{Settings}!debugwarnings@{debugwarnings}}
+\index{debugwarnings@{debugwarnings}!Settings@{Settings}}
+\subsubsection[{debugwarnings}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-::debugwarnings}}\label{class_settings_aff86aa98beb34d00d4b46b5fa0768cdc}
+
+
+Is --debug-\/warnings given? 
+
+\hypertarget{class_settings_a66bd09ed65174792fef48d5948abfc40}{\index{Settings@{Settings}!experimental@{experimental}}
+\index{experimental@{experimental}!Settings@{Settings}}
+\subsubsection[{experimental}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-::experimental}}\label{class_settings_a66bd09ed65174792fef48d5948abfc40}
+When this flag is false (default) then experimental heuristics and checks are disabled.
+
+It should not be possible to enable this from any client. \hypertarget{class_settings_a56c6e511f3a996d891bd2b9417d6670e}{\index{Settings@{Settings}!inconclusive@{inconclusive}}
+\index{inconclusive@{inconclusive}!Settings@{Settings}}
+\subsubsection[{inconclusive}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-::inconclusive}}\label{class_settings_a56c6e511f3a996d891bd2b9417d6670e}
+
+
+Inconclusive checks. 
+
+\hypertarget{class_settings_a9bdd97a6626124e38b19503b9fd7a6f0}{\index{Settings@{Settings}!nofail@{nofail}}
+\index{nofail@{nofail}!Settings@{Settings}}
+\subsubsection[{nofail}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Suppressions} Settings\-::nofail}}\label{class_settings_a9bdd97a6626124e38b19503b9fd7a6f0}
+
+
+suppress exitcode 
+
+\hypertarget{class_settings_aa34b7eef61a5ff9f98f1bfbbfca31a08}{\index{Settings@{Settings}!nomsg@{nomsg}}
+\index{nomsg@{nomsg}!Settings@{Settings}}
+\subsubsection[{nomsg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Suppressions} Settings\-::nomsg}}\label{class_settings_aa34b7eef61a5ff9f98f1bfbbfca31a08}
+
+
+suppress message (--suppressions) 
+
+\hypertarget{class_settings_a6c375855187695c207a7a873185c0d07}{\index{Settings@{Settings}!platform\-Type@{platform\-Type}}
+\index{platform\-Type@{platform\-Type}!Settings@{Settings}}
+\subsubsection[{platform\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Platform\-Type} Settings\-::platform\-Type}}\label{class_settings_a6c375855187695c207a7a873185c0d07}
+platform type \hypertarget{class_settings_a4b8992ce101fd7bb4e8cec8203b51a5b}{\index{Settings@{Settings}!report\-Progress@{report\-Progress}}
+\index{report\-Progress@{report\-Progress}!Settings@{Settings}}
+\subsubsection[{report\-Progress}]{\setlength{\rightskip}{0pt plus 5cm}bool Settings\-::report\-Progress}}\label{class_settings_a4b8992ce101fd7bb4e8cec8203b51a5b}
+
+
+--report-\/progress 
+
+\hypertarget{class_settings_a9360678fb9ab1207238f2bc2577b9ed7}{\index{Settings@{Settings}!sizeof\-\_\-bool@{sizeof\-\_\-bool}}
+\index{sizeof\-\_\-bool@{sizeof\-\_\-bool}!Settings@{Settings}}
+\subsubsection[{sizeof\-\_\-bool}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Settings\-::sizeof\-\_\-bool}}\label{class_settings_a9360678fb9ab1207238f2bc2577b9ed7}
+size of standard types \hypertarget{class_settings_a3ee54db34fd2a8daa1fcc79847160658}{\index{Settings@{Settings}!sizeof\-\_\-double@{sizeof\-\_\-double}}
+\index{sizeof\-\_\-double@{sizeof\-\_\-double}!Settings@{Settings}}
+\subsubsection[{sizeof\-\_\-double}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Settings\-::sizeof\-\_\-double}}\label{class_settings_a3ee54db34fd2a8daa1fcc79847160658}
+\hypertarget{class_settings_aa94baf211f5c650231bde448e4076219}{\index{Settings@{Settings}!sizeof\-\_\-float@{sizeof\-\_\-float}}
+\index{sizeof\-\_\-float@{sizeof\-\_\-float}!Settings@{Settings}}
+\subsubsection[{sizeof\-\_\-float}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Settings\-::sizeof\-\_\-float}}\label{class_settings_aa94baf211f5c650231bde448e4076219}
+\hypertarget{class_settings_a89ab35c2d7d0b23391e94d70e53434e0}{\index{Settings@{Settings}!sizeof\-\_\-int@{sizeof\-\_\-int}}
+\index{sizeof\-\_\-int@{sizeof\-\_\-int}!Settings@{Settings}}
+\subsubsection[{sizeof\-\_\-int}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Settings\-::sizeof\-\_\-int}}\label{class_settings_a89ab35c2d7d0b23391e94d70e53434e0}
+\hypertarget{class_settings_ae7e0edfce174fc9ada72f310fc55ef33}{\index{Settings@{Settings}!sizeof\-\_\-long@{sizeof\-\_\-long}}
+\index{sizeof\-\_\-long@{sizeof\-\_\-long}!Settings@{Settings}}
+\subsubsection[{sizeof\-\_\-long}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Settings\-::sizeof\-\_\-long}}\label{class_settings_ae7e0edfce174fc9ada72f310fc55ef33}
+\hypertarget{class_settings_a99f88aa43c73078ba8024519a5bb3f35}{\index{Settings@{Settings}!sizeof\-\_\-long\-\_\-double@{sizeof\-\_\-long\-\_\-double}}
+\index{sizeof\-\_\-long\-\_\-double@{sizeof\-\_\-long\-\_\-double}!Settings@{Settings}}
+\subsubsection[{sizeof\-\_\-long\-\_\-double}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Settings\-::sizeof\-\_\-long\-\_\-double}}\label{class_settings_a99f88aa43c73078ba8024519a5bb3f35}
+\hypertarget{class_settings_ad0e779b70fc21acbf1df5c502f0dd96d}{\index{Settings@{Settings}!sizeof\-\_\-long\-\_\-long@{sizeof\-\_\-long\-\_\-long}}
+\index{sizeof\-\_\-long\-\_\-long@{sizeof\-\_\-long\-\_\-long}!Settings@{Settings}}
+\subsubsection[{sizeof\-\_\-long\-\_\-long}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Settings\-::sizeof\-\_\-long\-\_\-long}}\label{class_settings_ad0e779b70fc21acbf1df5c502f0dd96d}
+\hypertarget{class_settings_acbd92cfb57a1ebd1b6b3838e863e960d}{\index{Settings@{Settings}!sizeof\-\_\-pointer@{sizeof\-\_\-pointer}}
+\index{sizeof\-\_\-pointer@{sizeof\-\_\-pointer}!Settings@{Settings}}
+\subsubsection[{sizeof\-\_\-pointer}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Settings\-::sizeof\-\_\-pointer}}\label{class_settings_acbd92cfb57a1ebd1b6b3838e863e960d}
+\hypertarget{class_settings_a864bcb7744b825b0d0fd247087352203}{\index{Settings@{Settings}!sizeof\-\_\-short@{sizeof\-\_\-short}}
+\index{sizeof\-\_\-short@{sizeof\-\_\-short}!Settings@{Settings}}
+\subsubsection[{sizeof\-\_\-short}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Settings\-::sizeof\-\_\-short}}\label{class_settings_a864bcb7744b825b0d0fd247087352203}
+\hypertarget{class_settings_ac94aa8ccd4a48075a750cb4142b04c52}{\index{Settings@{Settings}!sizeof\-\_\-size\-\_\-t@{sizeof\-\_\-size\-\_\-t}}
+\index{sizeof\-\_\-size\-\_\-t@{sizeof\-\_\-size\-\_\-t}!Settings@{Settings}}
+\subsubsection[{sizeof\-\_\-size\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Settings\-::sizeof\-\_\-size\-\_\-t}}\label{class_settings_ac94aa8ccd4a48075a750cb4142b04c52}
+\hypertarget{class_settings_affed1d4355e85d3c4abb1364964e2ff5}{\index{Settings@{Settings}!standards@{standards}}
+\index{standards@{standards}!Settings@{Settings}}
+\subsubsection[{standards}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Standards} Settings\-::standards}}\label{class_settings_affed1d4355e85d3c4abb1364964e2ff5}
+Struct contains standards settings \hypertarget{class_settings_a8829507f5f2c8bbc1717169ba21edabd}{\index{Settings@{Settings}!user\-Defines@{user\-Defines}}
+\index{user\-Defines@{user\-Defines}!Settings@{Settings}}
+\subsubsection[{user\-Defines}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Settings\-::user\-Defines}}\label{class_settings_a8829507f5f2c8bbc1717169ba21edabd}
+
+
+defines given by the user 
+
+\hypertarget{class_settings_a010d28fdcfcb50e46fc7de37086da957}{\index{Settings@{Settings}!user\-Undefs@{user\-Undefs}}
+\index{user\-Undefs@{user\-Undefs}!Settings@{Settings}}
+\subsubsection[{user\-Undefs}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<$std\-::string$>$ Settings\-::user\-Undefs}}\label{class_settings_a010d28fdcfcb50e46fc7de37086da957}
+
+
+undefines given by the user 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{settings_8h}{settings.\-h}\item 
+lib/\hyperlink{settings_8cpp}{settings.\-cpp}\end{DoxyCompactItemize}

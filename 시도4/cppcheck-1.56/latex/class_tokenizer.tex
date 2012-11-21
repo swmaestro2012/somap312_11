@@ -1,0 +1,1493 @@
+\hypertarget{class_tokenizer}{\section{Tokenizer Class Reference}
+\label{class_tokenizer}\index{Tokenizer@{Tokenizer}}
+}
+
+
+The main purpose is to tokenize the source code. It also has functions that simplify the token list.  
+
+
+
+
+{\ttfamily \#include $<$tokenize.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tokenizer_a2a6c04ea8c784f66bebcb6df7073769c}{Tokenizer} ()
+\item 
+\hyperlink{class_tokenizer_afbed747031f3829396c645086d2d72ab}{Tokenizer} (const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\item 
+\hyperlink{class_tokenizer_a3f60f887953edf0f95ba5f36102f7017}{$\sim$\-Tokenizer} ()
+\item 
+void \hyperlink{class_tokenizer_ac041ef803ed51ea595979f15ecab1188}{set\-Timer\-Results} (\hyperlink{class_timer_results}{Timer\-Results} $\ast$tr)
+\item 
+const std\-::string \& \hyperlink{class_tokenizer_adda47beabaa72ae16c687ae1294776d8}{get\-Source\-File\-Path} () const 
+\item 
+bool \hyperlink{class_tokenizer_aea9d49a9c8d200059d04fddea09fdeea}{is\-Java} () const 
+\item 
+bool \hyperlink{class_tokenizer_ae6d8a7a1b0898f13fb68dad35463590e}{is\-C\-Sharp} () const 
+\item 
+bool \hyperlink{class_tokenizer_a3e61fb17ee95420392506ab1d6f767bb}{is\-Java\-Or\-C\-Sharp} () const 
+\item 
+bool \hyperlink{class_tokenizer_a3e2a6df2dd3275efe39586965f301c26}{is\-C} () const 
+\item 
+bool \hyperlink{class_tokenizer_a4c9ff98aae71170776600666ea5baf4b}{is\-C\-P\-P} () const 
+\item 
+bool \hyperlink{class_tokenizer_abb907db1cec9bcf665f7d2af04343050}{tokenize} (std\-::istream \&code, const char File\-Name\mbox{[}$\,$\mbox{]}, const std\-::string \&configuration=\char`\"{}\char`\"{}, const bool preprocessor\-Condition=false)
+\item 
+void \hyperlink{class_tokenizer_a7a34570dbecff212027ff401915e0a7e}{set\-Var\-Id} ()
+\item 
+bool \hyperlink{class_tokenizer_a831fde8399875de9890ee2dc03e6b5fb}{simplify\-Token\-List} ()
+\item 
+void \hyperlink{class_tokenizer_af6e5886b4d2907eadb2eb6768c2e3a82}{simplify\-Mul\-And\-Parens} ()
+\item 
+unsigned int \hyperlink{class_tokenizer_a6e5adaed9402c3131ea43ce7d64ecd74}{size\-Of\-Type} (const \hyperlink{class_token}{Token} $\ast$type) const 
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_tokenizer_a11af512dd37794e12d72718182000836}{get\-Function\-Token\-By\-Name} (const char funcname\mbox{[}$\,$\mbox{]}) const 
+\item 
+bool \hyperlink{class_tokenizer_a51739a30b1c0bbe6655481aae241d4ab}{is\-Function\-Parameter\-Passed\-By\-Value} (const \hyperlink{class_token}{Token} $\ast$fpar) const 
+\item 
+void \hyperlink{class_tokenizer_adab655da41f157375945d6d2fee8d112}{simplify\-Assignment\-In\-Function\-Call} ()
+\item 
+bool \hyperlink{class_tokenizer_a3b12f64cac239412373bdefd80d582fd}{simplify\-Calculations} ()
+\item 
+void \hyperlink{class_tokenizer_ad53b6168d31dace4388ef9c8f79678ed}{simplify\-Java\-And\-C\-Sharp} ()
+\item 
+void \hyperlink{class_tokenizer_a94acfdf51eb49ebccc0170342c788db3}{array\-Size} ()
+\item 
+void \hyperlink{class_tokenizer_a0498a8650aa880d68cf78fe468e37fef}{simplify\-Labels\-Case\-Default} ()
+\item 
+void \hyperlink{class_tokenizer_a23a3207e92de4385c32375ef55cfb879}{remove\-Macros\-In\-Global\-Scope} ()
+\item 
+void \hyperlink{class_tokenizer_a025789931af4eff6087add0b4b11db2f}{remove\-Redundant\-Assignment} ()
+\item 
+void \hyperlink{class_tokenizer_a79a0495a1d9b030525764773a1a94513}{simplify\-Realloc} ()
+\item 
+bool \hyperlink{class_tokenizer_a76d4ed6ce491f77999f0662bc99e6da7}{simplify\-Sizeof} ()
+\item 
+void \hyperlink{class_tokenizer_a53bdb1e75d8b43c77dca6332e17ac39c}{simplify\-Var\-Decl} (bool only\-\_\-k\-\_\-r\-\_\-fpar)
+\item 
+void \hyperlink{class_tokenizer_a4497fcfc3628b7a47279945cbe4b7416}{simplify\-Init\-Var} ()
+\item 
+\hyperlink{class_token}{Token} $\ast$ \hyperlink{class_tokenizer_a878a8e74f252434cacc94da05f24930f}{init\-Var} (\hyperlink{class_token}{Token} $\ast$tok)
+\item 
+void \hyperlink{class_tokenizer_a70690e32b126df2dce134c1cb8542165}{simplify\-Platform\-Types} ()
+\item 
+void \hyperlink{class_tokenizer_a5519b36a3247039f62ad79c337db830f}{simplify\-Std\-Type} ()
+\item 
+bool \hyperlink{class_tokenizer_a46e303554fa55788896fd7bd55e7f584}{simplify\-Question\-Mark} ()
+\item 
+void \hyperlink{class_tokenizer_ae34b725995514febb57844b0d8232cb7}{simplify\-Compound\-Assignment} ()
+\item 
+void \hyperlink{class_tokenizer_abcf346281ac3152cbb01dd6d3a03eae8}{simplify\-If\-Assign} ()
+\item 
+void \hyperlink{class_tokenizer_afa8a373a3f98712b4bbbd4a32e0841fa}{simplify\-Variable\-Multiple\-Assign} ()
+\item 
+void \hyperlink{class_tokenizer_abc71845367bb4bd26d7636c6f0993920}{simplify\-If\-Not} ()
+\item 
+void \hyperlink{class_tokenizer_a9cca5b02e36e92f4925798e071696928}{simplify\-If\-Not\-Null} ()
+\item 
+void \hyperlink{class_tokenizer_acf5d58cd6c9dada077e0ff8c3326edbd}{simplify\-If\-Same\-Inner\-Condition} ()
+\begin{DoxyCompactList}\small\item\em simplify if (a) \{ if (a) \end{DoxyCompactList}\item 
+bool \hyperlink{class_tokenizer_a9634f50a1164a4440992c4020caf1374}{simplify\-Logical\-Operators} ()
+\item 
+void \hyperlink{class_tokenizer_a46acc4f15217af35d073729dbf1d5cef}{simplify\-Comma} ()
+\item 
+bool \hyperlink{class_tokenizer_af88af70b74d3d880ba7509604ca432ac}{simplify\-If\-Add\-Braces} ()
+\item 
+void \hyperlink{class_tokenizer_a32860c1f0ff867719cef87b6cacfedeb}{simplify\-Do\-While\-Add\-Braces} ()
+\item 
+void \hyperlink{class_tokenizer_a4adb4d624e0238e2482e452c92298c78}{simplify\-Typedef} ()
+\item 
+void \hyperlink{class_tokenizer_a20b9968c92ee46da537d9fe341ab40f6}{simplify\-Casts} ()
+\item 
+void \hyperlink{class_tokenizer_a332c62eb5d90825b802a93f9f6613c1b}{simplify\-Undefined\-Size\-Array} ()
+\item 
+bool \hyperlink{class_tokenizer_ae1824db120475c5d75b742e7eac9276a}{simplify\-Known\-Variables} ()
+\item 
+bool \hyperlink{class_tokenizer_a0dec37477d6c4639c79a961b72abc77b}{simplify\-Known\-Variables\-Simplify} (\hyperlink{class_token}{Token} $\ast$$\ast$tok2, \hyperlink{class_token}{Token} $\ast$tok3, unsigned int varid, const std\-::string \&structname, std\-::string \&value, unsigned int value\-Var\-Id, bool value\-Is\-Pointer, const \hyperlink{class_token}{Token} $\ast$const value\-Token, int indentlevel) const 
+\item 
+void \hyperlink{class_tokenizer_a252abfdedbd97a53a8b857420d12654a}{simplify\-Goto} ()
+\item 
+void \hyperlink{class_tokenizer_a7034fc3dabd74b2a01aedaa74e19f426}{simplify\-Empty\-Namespaces} ()
+\item 
+void \hyperlink{class_tokenizer_a9b5cd11dd4c20365f8fe31b19dbcfc69}{simplify\-Flow\-Control} ()
+\item 
+void \hyperlink{class_tokenizer_a542ae86b25bd3cfb96b51b976a585f41}{simplify\-Nested\-Strcat} ()
+\item 
+void \hyperlink{class_tokenizer_a1bf74b4b204cea528eb98708a322e761}{elseif} ()
+\item 
+void \hyperlink{class_tokenizer_afb20e62fe8f0fe22b9e9f5c46c9a944b}{simplify\-Condition\-Operator} ()
+\item 
+bool \hyperlink{class_tokenizer_ae6363314ad4f9691219a771eb14bf93f}{simplify\-Conditions} ()
+\item 
+bool \hyperlink{class_tokenizer_a0f79b2b8532b9910e5fe23b8af24ad0f}{remove\-Redundant\-Conditions} ()
+\item 
+void \hyperlink{class_tokenizer_a6073b131f653c1e89c01e52b03bba3b5}{remove\-Redundant\-For} ()
+\item 
+void \hyperlink{class_tokenizer_ac585e6704bc6b95bce3318d4bbf36c42}{remove\-Redundant\-Semicolons} ()
+\item 
+bool \hyperlink{class_tokenizer_a7875cbb8e96e341f496e0c14eff4e846}{simplify\-Function\-Return} ()
+\item 
+void \hyperlink{class_tokenizer_ac86781416900a72ce34cf6644706191d}{simplify\-Struct\-Init} ()
+\item 
+void \hyperlink{class_tokenizer_ade9c95a7840d26978ec30a216744d137}{simplify\-Struct\-Decl} ()
+\item 
+bool \hyperlink{class_tokenizer_a8fd90f320882f33351e6939ae175648d}{simplify\-Redundant\-Parenthesis} ()
+\item 
+void \hyperlink{class_tokenizer_ad5c4f54db39b4c90e9abc4f3a568dead}{simplify\-Reference} ()
+\item 
+bool \hyperlink{class_tokenizer_a9bb9eab7cf906aa28c0b35b42cda1537}{simplify\-Function\-Parameters} ()
+\item 
+void \hyperlink{class_tokenizer_a2641e4b4497f6e054890c1f5e33ac85a}{simplify\-Templates} ()
+\item 
+void \hyperlink{class_tokenizer_a5195047b9a36e6f21062664962617142}{simplify\-Double\-Plus\-And\-Double\-Minus} ()
+\item 
+void \hyperlink{class_tokenizer_a1c766679f94a4ede925ddf9e9c3f7aa3}{simplify\-Redundant\-Consecutive\-Braces} ()
+\item 
+void \hyperlink{class_tokenizer_af605600822060a659a080c8d0b52c93b}{simplify\-Array\-Access\-Syntax} ()
+\item 
+void \hyperlink{class_tokenizer_aa0943c1822254ed5dde634ba265faea2}{simplify\-Parameter\-Void} ()
+\item 
+void \hyperlink{class_tokenizer_a8cdca2e92fe96adb91adeb189d6b842c}{concatenate\-Double\-Sharp} ()
+\item 
+void \hyperlink{class_tokenizer_a30b743fb2e31316f280bd5773579a6c7}{simplify\-Line\-Macro} ()
+\item 
+void \hyperlink{class_tokenizer_a78315546b121d95f9affaff19c2b1d16}{simplify\-Null} ()
+\item 
+void \hyperlink{class_tokenizer_a58ddf674a5ae77625127217c21626106}{concatenate\-Negative\-Number} ()
+\item 
+void \hyperlink{class_tokenizer_a3a823f4a90bf6d7c2d025900b582ea30}{simplify\-Extern\-C} ()
+\item 
+void \hyperlink{class_tokenizer_a12a9958a54903c6279623e07237a5d35}{simplify\-Round\-Curly\-Parenthesis} ()
+\item 
+void \hyperlink{class_tokenizer_aecb521f742e46cf97628eb89dd7d532d}{simplify\-Debug\-New} ()
+\item 
+void \hyperlink{class_tokenizer_a4590251251d09cf3e1912ca12c074923}{simplify\-S\-Q\-L} ()
+\item 
+bool \hyperlink{class_tokenizer_a28080f714fbefe8fd28a6698029f6b89}{has\-Enums\-With\-Typedef} ()
+\item 
+void \hyperlink{class_tokenizer_a14752242a72ebd3ec678e6dd50dd8332}{simplify\-Default\-And\-Delete\-Inside\-Class} ()
+\item 
+bool \hyperlink{class_tokenizer_a7d5baa94b3dda72de6ff450a667e96ec}{has\-Complicated\-Syntax\-Errors\-In\-Templates} ()
+\item 
+void \hyperlink{class_tokenizer_a6fc1ed36a93f127cb3e0b80b112d1685}{simplify\-Math\-Functions} ()
+\item 
+void \hyperlink{class_tokenizer_aa18828917ba93d49840f53d33ecb33ba}{simplify\-Comparison\-Order} ()
+\item 
+void \hyperlink{class_tokenizer_a6a6e18a60deacd19cc2d78f6a4cc2dcf}{type\-Const\-To\-Const\-Type} ()
+\item 
+void \hyperlink{class_tokenizer_abe19896c194b4cec582d6e5a1177a7c6}{simplify\-Const} ()
+\item 
+void \hyperlink{class_tokenizer_a2d3bb256dbef8722a67a437044aeb847}{simplify\-While0} ()
+\item 
+void \hyperlink{class_tokenizer_a3d1b9c8b0236f523df3f1bffb31b048b}{simplify\-Err\-No\-In\-While} ()
+\item 
+void \hyperlink{class_tokenizer_a93f141d2facee12d11162955e604f21f}{simplify\-Func\-In\-While} ()
+\item 
+void \hyperlink{class_tokenizer_a22ab871e265a798011be3869dca955db}{simplify\-Enum} ()
+\item 
+void \hyperlink{class_tokenizer_aa1a499a7052c9bcc201b243ec1725a44}{simplify\-Std} ()
+\item 
+void \hyperlink{class_tokenizer_ac097e24a8faa2677b120c6067405da3d}{simplify\-Pointer\-To\-Standard\-Type} ()
+\item 
+void \hyperlink{class_tokenizer_ac62bdf4963d0fe0e82b6879f3db28938}{simplify\-Function\-Pointers} ()
+\item 
+void \hyperlink{class_tokenizer_a0cef5c18c2b6e3dec6116db5dab5e669}{remove\-Exception\-Specifications} ()
+\item 
+void \hyperlink{class_tokenizer_a98063f3ff92cc64ac78a08e8cbd10752}{cppcheck\-Error} (const \hyperlink{class_token}{Token} $\ast$tok) const 
+\item 
+bool \hyperlink{class_tokenizer_a883b3b1d33451fb88268f66402f5b6cf}{create\-Links} ()
+\item 
+void \hyperlink{class_tokenizer_a9a3f10d2816dbfa65e5052fc7b78ed23}{create\-Links2} ()
+\item 
+void \hyperlink{class_tokenizer_ac06872e059c5618fa327b965219f3dde}{syntax\-Error} (const \hyperlink{class_token}{Token} $\ast$tok) const 
+\item 
+void \hyperlink{class_tokenizer_a3dacb2f9fc425b4ad52c9d994388be5d}{syntax\-Error} (const \hyperlink{class_token}{Token} $\ast$tok, char c) const 
+\item 
+bool \hyperlink{class_tokenizer_a6610c298348fa148b6ddd242f22a7e0a}{validate} () const 
+\item 
+void \hyperlink{class_tokenizer_ab4cdd64662f1ccdde88ed405c37cf68c}{simplify\-Declspec} ()
+\item 
+void \hyperlink{class_tokenizer_ac60c2c3c15f25c8b059f3168cf5f1477}{simplify\-Calling\-Convention} ()
+\item 
+void \hyperlink{class_tokenizer_a3741a13d956b57a5ff5e372e49a34498}{simplify\-Attribute} ()
+\item 
+void \hyperlink{class_tokenizer_a88a80e17de0e350622da75bb81217b8f}{simplify\-Keyword} ()
+\item 
+void \hyperlink{class_tokenizer_ac9d455019c6c6b92b404cddff5e1a22e}{simplify\-Asm} ()
+\item 
+void \hyperlink{class_tokenizer_a10e472764cd66be39e4ce0a2299e209a}{simplify\-Bitfields} ()
+\item 
+void \hyperlink{class_tokenizer_ac3844f3ef06c0a63a0ea60164c433523}{simplify\-Builtin\-Expect} ()
+\item 
+void \hyperlink{class_tokenizer_a45dd5bfee9a623306b4ee1e6c35931d0}{remove\-Unnecessary\-Qualification} ()
+\item 
+void \hyperlink{class_tokenizer_a0842fdd2139ddc78586849609ac2198c}{unnecessary\-Qualification\-Error} (const \hyperlink{class_token}{Token} $\ast$tok, const std\-::string \&qualification) const 
+\item 
+void \hyperlink{class_tokenizer_a862e42cf9fdae8aed3613623685d0e72}{simplify\-Namespace\-Std} ()
+\item 
+void \hyperlink{class_tokenizer_a0337b53b64d66b74ba22cb9363a83130}{simplify\-Microsoft\-M\-F\-C} ()
+\item 
+void \hyperlink{class_tokenizer_a78677673c0ad2883df9e792c1a4c38bd}{simplify\-Microsoft\-Memory\-Functions} ()
+\item 
+void \hyperlink{class_tokenizer_a08086f8768d8478368d78fe1331d42f1}{simplify\-Microsoft\-String\-Functions} ()
+\item 
+void \hyperlink{class_tokenizer_ac4a1707ecc771930583154149e5f4dec}{simplify\-Borland} ()
+\item 
+void \hyperlink{class_tokenizer_ad17ee9c8dfc3eb971e772901836e8508}{simplify\-Qt\-Signals\-Slots} ()
+\item 
+void \hyperlink{class_tokenizer_ae73701db432addc7d87f5652103870f6}{simplify\-Operator\-Name} ()
+\item 
+bool \hyperlink{class_tokenizer_a887e1235c6c0042585ffbc04d33deeb7}{duplicate\-Definition} (\hyperlink{class_token}{Token} $\ast$$\ast$tok\-Ptr, const \hyperlink{class_token}{Token} $\ast$name) const 
+\item 
+void \hyperlink{class_tokenizer_a1147d0be1846ad886ad5e45c58d7d979}{report\-Error} (const \hyperlink{class_token}{Token} $\ast$tok, const \hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6}{Severity\-::\-Severity\-Type} severity, const std\-::string \&id, const std\-::string \&msg, bool inconclusive=false) const 
+\item 
+void \hyperlink{class_tokenizer_a9a5827bede7b939d3f142049a84d22fc}{report\-Error} (const std\-::list$<$ const \hyperlink{class_token}{Token} $\ast$ $>$ \&callstack, \hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6}{Severity\-::\-Severity\-Type} severity, const std\-::string \&id, const std\-::string \&msg, bool inconclusive=false) const 
+\item 
+void \hyperlink{class_tokenizer_a87ec82f8bb7fc338d444782cea181694}{duplicate\-Enum\-Error} (const \hyperlink{class_token}{Token} $\ast$tok1, const \hyperlink{class_token}{Token} $\ast$tok2, const std\-::string \&type) const 
+\item 
+bool \hyperlink{class_tokenizer_aa96ad648dc25a43c6c098fde70b3320f}{duplicate\-Typedef} (\hyperlink{class_token}{Token} $\ast$$\ast$tok\-Ptr, const \hyperlink{class_token}{Token} $\ast$name, const \hyperlink{class_token}{Token} $\ast$type\-Def, bool undefined\-Struct) const 
+\item 
+void \hyperlink{class_tokenizer_aeaf4716d4831853eb495f159eca3c00b}{duplicate\-Typedef\-Error} (const \hyperlink{class_token}{Token} $\ast$tok1, const \hyperlink{class_token}{Token} $\ast$tok2, const std\-::string \&type) const 
+\item 
+void \hyperlink{class_tokenizer_adc89d8167c143f4644dac7a9ddc890f8}{duplicate\-Declaration\-Error} (const \hyperlink{class_token}{Token} $\ast$tok1, const \hyperlink{class_token}{Token} $\ast$tok2, const std\-::string \&type) const 
+\item 
+void \hyperlink{class_tokenizer_a521e1212c8eb262e6f8208c24facf1c1}{unsupported\-Typedef} (const \hyperlink{class_token}{Token} $\ast$tok) const 
+\item 
+bool \hyperlink{class_tokenizer_af117d1e89be213c115c7944f686fcfd9}{code\-With\-Templates} () const 
+\item 
+void \hyperlink{class_tokenizer_a82ec7637b07ea82345c8aaf4f9b4f75d}{set\-Settings} (const \hyperlink{class_settings}{Settings} $\ast$settings)
+\item 
+const \hyperlink{class_symbol_database}{Symbol\-Database} $\ast$ \hyperlink{class_tokenizer_a237fb56960ffd28d04f0a7787e750f68}{get\-Symbol\-Database} () const 
+\item 
+void \hyperlink{class_tokenizer_a4b8fa6e4074e754932da12d67da0daed}{create\-Symbol\-Database} ()
+\item 
+void \hyperlink{class_tokenizer_a6a29d94d5205a4b742816707024f36bf}{delete\-Symbol\-Database} ()
+\item 
+\hyperlink{class_token}{Token} $\ast$ \hyperlink{class_tokenizer_a1673db241d935584cd7d1cb0652137e0}{delete\-Invalid\-Typedef} (\hyperlink{class_token}{Token} $\ast$type\-Def)
+\item 
+unsigned int \hyperlink{class_tokenizer_ac77d3690b2659969a7a0cc29071e32d5}{var\-Id\-Count} () const 
+\item 
+void \hyperlink{class_tokenizer_a525573f8775eb0bf85052709a6af2dd7}{simplify\-Return\-Strncat} ()
+\item 
+void \hyperlink{class_tokenizer_a0be7ed0b36ea1ebf41eb9968eb46f713}{print\-Unknown\-Types} ()
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_tokenizer_a5f932706a5d3bb6ddc0b68634005300d}{tokens} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_tokenizer_a16e6e5df07cba250c4784196dab9b02b}{Is\-Scope\-No\-Return} (const \hyperlink{class_token}{Token} $\ast$end\-Scope\-Token, bool $\ast$unknown=0)
+\item 
+static void \hyperlink{class_tokenizer_a6d10625d0964c09660922c4daa747139}{erase\-Dead\-Code} (\hyperlink{class_token}{Token} $\ast$begin, const \hyperlink{class_token}{Token} $\ast$end)
+\item 
+static void \hyperlink{class_tokenizer_af787c3b38d5a5f3f7ac21d30ccadffb1}{get\-Error\-Messages} (\hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger, const \hyperlink{class_settings}{Settings} $\ast$settings)
+\item 
+static bool \hyperlink{class_tokenizer_a31f3ce7fe16a4a368d19ba2059762284}{simplify\-Known\-Variables\-Get\-Data} (unsigned int varid, \hyperlink{class_token}{Token} $\ast$$\ast$\-\_\-tok2, \hyperlink{class_token}{Token} $\ast$$\ast$\-\_\-tok3, std\-::string \&value, unsigned int \&value\-Var\-Id, bool \&value\-Is\-Pointer, bool floatvar)
+\item 
+static std\-::string \hyperlink{class_tokenizer_a437d19231a3d3d574c4c1126c984523e}{simplify\-String} (const std\-::string \&source)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_token_list}{Token\-List} \hyperlink{class_tokenizer_a82d276b4b3ec47adbadd612129b7c65a}{list}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The main purpose is to tokenize the source code. It also has functions that simplify the token list. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tokenizer_a2a6c04ea8c784f66bebcb6df7073769c}{\index{Tokenizer@{Tokenizer}!Tokenizer@{Tokenizer}}
+\index{Tokenizer@{Tokenizer}!Tokenizer@{Tokenizer}}
+\subsubsection[{Tokenizer}]{\setlength{\rightskip}{0pt plus 5cm}Tokenizer\-::\-Tokenizer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a2a6c04ea8c784f66bebcb6df7073769c}
+\hypertarget{class_tokenizer_afbed747031f3829396c645086d2d72ab}{\index{Tokenizer@{Tokenizer}!Tokenizer@{Tokenizer}}
+\index{Tokenizer@{Tokenizer}!Tokenizer@{Tokenizer}}
+\subsubsection[{Tokenizer}]{\setlength{\rightskip}{0pt plus 5cm}Tokenizer\-::\-Tokenizer (
+\begin{DoxyParamCaption}
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_afbed747031f3829396c645086d2d72ab}
+\hypertarget{class_tokenizer_a3f60f887953edf0f95ba5f36102f7017}{\index{Tokenizer@{Tokenizer}!$\sim$\-Tokenizer@{$\sim$\-Tokenizer}}
+\index{$\sim$\-Tokenizer@{$\sim$\-Tokenizer}!Tokenizer@{Tokenizer}}
+\subsubsection[{$\sim$\-Tokenizer}]{\setlength{\rightskip}{0pt plus 5cm}Tokenizer\-::$\sim$\-Tokenizer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a3f60f887953edf0f95ba5f36102f7017}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tokenizer_a94acfdf51eb49ebccc0170342c788db3}{\index{Tokenizer@{Tokenizer}!array\-Size@{array\-Size}}
+\index{array\-Size@{array\-Size}!Tokenizer@{Tokenizer}}
+\subsubsection[{array\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::array\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a94acfdf51eb49ebccc0170342c788db3}
+Insert array size where it isn't given
+
+Specify array size if it hasn't been given \hypertarget{class_tokenizer_af117d1e89be213c115c7944f686fcfd9}{\index{Tokenizer@{Tokenizer}!code\-With\-Templates@{code\-With\-Templates}}
+\index{code\-With\-Templates@{code\-With\-Templates}!Tokenizer@{Tokenizer}}
+\subsubsection[{code\-With\-Templates}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::code\-With\-Templates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_tokenizer_af117d1e89be213c115c7944f686fcfd9}
+Was there templates in the code? \hypertarget{class_tokenizer_a8cdca2e92fe96adb91adeb189d6b842c}{\index{Tokenizer@{Tokenizer}!concatenate\-Double\-Sharp@{concatenate\-Double\-Sharp}}
+\index{concatenate\-Double\-Sharp@{concatenate\-Double\-Sharp}!Tokenizer@{Tokenizer}}
+\subsubsection[{concatenate\-Double\-Sharp}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::concatenate\-Double\-Sharp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a8cdca2e92fe96adb91adeb189d6b842c}
+\hypertarget{class_tokenizer_a58ddf674a5ae77625127217c21626106}{\index{Tokenizer@{Tokenizer}!concatenate\-Negative\-Number@{concatenate\-Negative\-Number}}
+\index{concatenate\-Negative\-Number@{concatenate\-Negative\-Number}!Tokenizer@{Tokenizer}}
+\subsubsection[{concatenate\-Negative\-Number}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::concatenate\-Negative\-Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a58ddf674a5ae77625127217c21626106}
+\hypertarget{class_tokenizer_a98063f3ff92cc64ac78a08e8cbd10752}{\index{Tokenizer@{Tokenizer}!cppcheck\-Error@{cppcheck\-Error}}
+\index{cppcheck\-Error@{cppcheck\-Error}!Tokenizer@{Tokenizer}}
+\subsubsection[{cppcheck\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::cppcheck\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_a98063f3ff92cc64ac78a08e8cbd10752}
+Send error message to error logger about internal bug. 
+\begin{DoxyParams}{Parameters}
+{\em tok} & the token that this bug concerns. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_tokenizer_a883b3b1d33451fb88268f66402f5b6cf}{\index{Tokenizer@{Tokenizer}!create\-Links@{create\-Links}}
+\index{create\-Links@{create\-Links}!Tokenizer@{Tokenizer}}
+\subsubsection[{create\-Links}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::create\-Links (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a883b3b1d33451fb88268f66402f5b6cf}
+Setup links for tokens so that one can call \hyperlink{class_token_accbffd8560e96f4fd7e9e9e33e04b773}{Token\-::link()}.
+
+\begin{DoxyReturn}{Returns}
+false if there was a mismatch with tokens, this should mean that source code was not valid. 
+\end{DoxyReturn}
+\hypertarget{class_tokenizer_a9a3f10d2816dbfa65e5052fc7b78ed23}{\index{Tokenizer@{Tokenizer}!create\-Links2@{create\-Links2}}
+\index{create\-Links2@{create\-Links2}!Tokenizer@{Tokenizer}}
+\subsubsection[{create\-Links2}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::create\-Links2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a9a3f10d2816dbfa65e5052fc7b78ed23}
+Setup links between $<$ and $>$. \hypertarget{class_tokenizer_a4b8fa6e4074e754932da12d67da0daed}{\index{Tokenizer@{Tokenizer}!create\-Symbol\-Database@{create\-Symbol\-Database}}
+\index{create\-Symbol\-Database@{create\-Symbol\-Database}!Tokenizer@{Tokenizer}}
+\subsubsection[{create\-Symbol\-Database}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::create\-Symbol\-Database (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a4b8fa6e4074e754932da12d67da0daed}
+\hypertarget{class_tokenizer_a1673db241d935584cd7d1cb0652137e0}{\index{Tokenizer@{Tokenizer}!delete\-Invalid\-Typedef@{delete\-Invalid\-Typedef}}
+\index{delete\-Invalid\-Typedef@{delete\-Invalid\-Typedef}!Tokenizer@{Tokenizer}}
+\subsubsection[{delete\-Invalid\-Typedef}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Token} $\ast$ Tokenizer\-::delete\-Invalid\-Typedef (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$}]{type\-Def}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a1673db241d935584cd7d1cb0652137e0}
+\hypertarget{class_tokenizer_a6a29d94d5205a4b742816707024f36bf}{\index{Tokenizer@{Tokenizer}!delete\-Symbol\-Database@{delete\-Symbol\-Database}}
+\index{delete\-Symbol\-Database@{delete\-Symbol\-Database}!Tokenizer@{Tokenizer}}
+\subsubsection[{delete\-Symbol\-Database}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::delete\-Symbol\-Database (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a6a29d94d5205a4b742816707024f36bf}
+\hypertarget{class_tokenizer_adc89d8167c143f4644dac7a9ddc890f8}{\index{Tokenizer@{Tokenizer}!duplicate\-Declaration\-Error@{duplicate\-Declaration\-Error}}
+\index{duplicate\-Declaration\-Error@{duplicate\-Declaration\-Error}!Tokenizer@{Tokenizer}}
+\subsubsection[{duplicate\-Declaration\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::duplicate\-Declaration\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok1, }
+\item[{const {\bf Token} $\ast$}]{tok2, }
+\item[{const std\-::string \&}]{type}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_adc89d8167c143f4644dac7a9ddc890f8}
+\hyperlink{class_report}{Report} error -\/ duplicate declarations \hypertarget{class_tokenizer_a887e1235c6c0042585ffbc04d33deeb7}{\index{Tokenizer@{Tokenizer}!duplicate\-Definition@{duplicate\-Definition}}
+\index{duplicate\-Definition@{duplicate\-Definition}!Tokenizer@{Tokenizer}}
+\subsubsection[{duplicate\-Definition}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::duplicate\-Definition (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$$\ast$}]{tok\-Ptr, }
+\item[{const {\bf Token} $\ast$}]{name}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_a887e1235c6c0042585ffbc04d33deeb7}
+check for duplicate enum definition \hypertarget{class_tokenizer_a87ec82f8bb7fc338d444782cea181694}{\index{Tokenizer@{Tokenizer}!duplicate\-Enum\-Error@{duplicate\-Enum\-Error}}
+\index{duplicate\-Enum\-Error@{duplicate\-Enum\-Error}!Tokenizer@{Tokenizer}}
+\subsubsection[{duplicate\-Enum\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::duplicate\-Enum\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok1, }
+\item[{const {\bf Token} $\ast$}]{tok2, }
+\item[{const std\-::string \&}]{type}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_a87ec82f8bb7fc338d444782cea181694}
+duplicate enum definition error \hypertarget{class_tokenizer_aa96ad648dc25a43c6c098fde70b3320f}{\index{Tokenizer@{Tokenizer}!duplicate\-Typedef@{duplicate\-Typedef}}
+\index{duplicate\-Typedef@{duplicate\-Typedef}!Tokenizer@{Tokenizer}}
+\subsubsection[{duplicate\-Typedef}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::duplicate\-Typedef (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$$\ast$}]{tok\-Ptr, }
+\item[{const {\bf Token} $\ast$}]{name, }
+\item[{const {\bf Token} $\ast$}]{type\-Def, }
+\item[{bool}]{undefined\-Struct}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_aa96ad648dc25a43c6c098fde70b3320f}
+\hypertarget{class_tokenizer_aeaf4716d4831853eb495f159eca3c00b}{\index{Tokenizer@{Tokenizer}!duplicate\-Typedef\-Error@{duplicate\-Typedef\-Error}}
+\index{duplicate\-Typedef\-Error@{duplicate\-Typedef\-Error}!Tokenizer@{Tokenizer}}
+\subsubsection[{duplicate\-Typedef\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::duplicate\-Typedef\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok1, }
+\item[{const {\bf Token} $\ast$}]{tok2, }
+\item[{const std\-::string \&}]{type}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_aeaf4716d4831853eb495f159eca3c00b}
+\hypertarget{class_tokenizer_a1bf74b4b204cea528eb98708a322e761}{\index{Tokenizer@{Tokenizer}!elseif@{elseif}}
+\index{elseif@{elseif}!Tokenizer@{Tokenizer}}
+\subsubsection[{elseif}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::elseif (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a1bf74b4b204cea528eb98708a322e761}
+Simplify \char`\"{}if else\char`\"{} \hypertarget{class_tokenizer_a6d10625d0964c09660922c4daa747139}{\index{Tokenizer@{Tokenizer}!erase\-Dead\-Code@{erase\-Dead\-Code}}
+\index{erase\-Dead\-Code@{erase\-Dead\-Code}!Tokenizer@{Tokenizer}}
+\subsubsection[{erase\-Dead\-Code}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::erase\-Dead\-Code (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$}]{begin, }
+\item[{const {\bf Token} $\ast$}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_tokenizer_a6d10625d0964c09660922c4daa747139}
+Deletes dead code between 'begin' and 'end'. In general not everything can be erased, such as\-:
+\begin{DoxyItemize}
+\item code after labels;
+\item code outside the scope where the function is called;
+\item code after a change of scope caused by 'switch(...);' instructions, like 'case any\%;' or 'default;' Also, if the dead code contains a 'switch' block and inside it there's a label, the function removes all the 'switch(..)' tokens and every occurrence of 'case any\%; $|$ default;' expression, such as the 'switch' block is reduced to a simple block.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin} & Tokens after this have a possibility to be erased. \\
+\hline
+{\em end} & Tokens before this have a possibility to be erased. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_tokenizer_af787c3b38d5a5f3f7ac21d30ccadffb1}{\index{Tokenizer@{Tokenizer}!get\-Error\-Messages@{get\-Error\-Messages}}
+\index{get\-Error\-Messages@{get\-Error\-Messages}!Tokenizer@{Tokenizer}}
+\subsubsection[{get\-Error\-Messages}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::get\-Error\-Messages (
+\begin{DoxyParamCaption}
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger, }
+\item[{const {\bf Settings} $\ast$}]{settings}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_tokenizer_af787c3b38d5a5f3f7ac21d30ccadffb1}
+get error messages that the tokenizer generate \hypertarget{class_tokenizer_a11af512dd37794e12d72718182000836}{\index{Tokenizer@{Tokenizer}!get\-Function\-Token\-By\-Name@{get\-Function\-Token\-By\-Name}}
+\index{get\-Function\-Token\-By\-Name@{get\-Function\-Token\-By\-Name}!Tokenizer@{Tokenizer}}
+\subsubsection[{get\-Function\-Token\-By\-Name}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token} $\ast$ Tokenizer\-::get\-Function\-Token\-By\-Name (
+\begin{DoxyParamCaption}
+\item[{const char}]{funcname\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_a11af512dd37794e12d72718182000836}
+Get function token by function name \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000065}{Todo}]better handling of overloaded functions 
+
+only scan parent scopes \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em funcname} & function name \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_tokenizer_adda47beabaa72ae16c687ae1294776d8}{\index{Tokenizer@{Tokenizer}!get\-Source\-File\-Path@{get\-Source\-File\-Path}}
+\index{get\-Source\-File\-Path@{get\-Source\-File\-Path}!Tokenizer@{Tokenizer}}
+\subsubsection[{get\-Source\-File\-Path}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string \& Tokenizer\-::get\-Source\-File\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_adda47beabaa72ae16c687ae1294776d8}
+Returns the source file path. e.\-g. \char`\"{}file.\-cpp\char`\"{} \hypertarget{class_tokenizer_a237fb56960ffd28d04f0a7787e750f68}{\index{Tokenizer@{Tokenizer}!get\-Symbol\-Database@{get\-Symbol\-Database}}
+\index{get\-Symbol\-Database@{get\-Symbol\-Database}!Tokenizer@{Tokenizer}}
+\subsubsection[{get\-Symbol\-Database}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Symbol\-Database}$\ast$ Tokenizer\-::get\-Symbol\-Database (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_tokenizer_a237fb56960ffd28d04f0a7787e750f68}
+\hypertarget{class_tokenizer_a7d5baa94b3dda72de6ff450a667e96ec}{\index{Tokenizer@{Tokenizer}!has\-Complicated\-Syntax\-Errors\-In\-Templates@{has\-Complicated\-Syntax\-Errors\-In\-Templates}}
+\index{has\-Complicated\-Syntax\-Errors\-In\-Templates@{has\-Complicated\-Syntax\-Errors\-In\-Templates}!Tokenizer@{Tokenizer}}
+\subsubsection[{has\-Complicated\-Syntax\-Errors\-In\-Templates}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::has\-Complicated\-Syntax\-Errors\-In\-Templates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a7d5baa94b3dda72de6ff450a667e96ec}
+\hypertarget{class_tokenizer_a28080f714fbefe8fd28a6698029f6b89}{\index{Tokenizer@{Tokenizer}!has\-Enums\-With\-Typedef@{has\-Enums\-With\-Typedef}}
+\index{has\-Enums\-With\-Typedef@{has\-Enums\-With\-Typedef}!Tokenizer@{Tokenizer}}
+\subsubsection[{has\-Enums\-With\-Typedef}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::has\-Enums\-With\-Typedef (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a28080f714fbefe8fd28a6698029f6b89}
+\hypertarget{class_tokenizer_a878a8e74f252434cacc94da05f24930f}{\index{Tokenizer@{Tokenizer}!init\-Var@{init\-Var}}
+\index{init\-Var@{init\-Var}!Tokenizer@{Tokenizer}}
+\subsubsection[{init\-Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Token} $\ast$ Tokenizer\-::init\-Var (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$}]{tok}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a878a8e74f252434cacc94da05f24930f}
+\hypertarget{class_tokenizer_a3e2a6df2dd3275efe39586965f301c26}{\index{Tokenizer@{Tokenizer}!is\-C@{is\-C}}
+\index{is\-C@{is\-C}!Tokenizer@{Tokenizer}}
+\subsubsection[{is\-C}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::is\-C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_a3e2a6df2dd3275efe39586965f301c26}
+Is the code C. Used for bailouts \hypertarget{class_tokenizer_a4c9ff98aae71170776600666ea5baf4b}{\index{Tokenizer@{Tokenizer}!is\-C\-P\-P@{is\-C\-P\-P}}
+\index{is\-C\-P\-P@{is\-C\-P\-P}!Tokenizer@{Tokenizer}}
+\subsubsection[{is\-C\-P\-P}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::is\-C\-P\-P (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_a4c9ff98aae71170776600666ea5baf4b}
+Is the code C\-P\-P. Used for bailouts \hypertarget{class_tokenizer_ae6d8a7a1b0898f13fb68dad35463590e}{\index{Tokenizer@{Tokenizer}!is\-C\-Sharp@{is\-C\-Sharp}}
+\index{is\-C\-Sharp@{is\-C\-Sharp}!Tokenizer@{Tokenizer}}
+\subsubsection[{is\-C\-Sharp}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::is\-C\-Sharp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_ae6d8a7a1b0898f13fb68dad35463590e}
+Is the code C\#. Used for bailouts \hypertarget{class_tokenizer_a51739a30b1c0bbe6655481aae241d4ab}{\index{Tokenizer@{Tokenizer}!is\-Function\-Parameter\-Passed\-By\-Value@{is\-Function\-Parameter\-Passed\-By\-Value}}
+\index{is\-Function\-Parameter\-Passed\-By\-Value@{is\-Function\-Parameter\-Passed\-By\-Value}!Tokenizer@{Tokenizer}}
+\subsubsection[{is\-Function\-Parameter\-Passed\-By\-Value}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::is\-Function\-Parameter\-Passed\-By\-Value (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{fpar}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_a51739a30b1c0bbe6655481aae241d4ab}
+Try to determine if function parameter is passed by value by looking at the function declaration. 
+\begin{DoxyParams}{Parameters}
+{\em fpar} & token for function parameter in the function call \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the parameter is passed by value. if unsure, false is returned 
+\end{DoxyReturn}
+\hypertarget{class_tokenizer_aea9d49a9c8d200059d04fddea09fdeea}{\index{Tokenizer@{Tokenizer}!is\-Java@{is\-Java}}
+\index{is\-Java@{is\-Java}!Tokenizer@{Tokenizer}}
+\subsubsection[{is\-Java}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::is\-Java (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_aea9d49a9c8d200059d04fddea09fdeea}
+Is the code J\-A\-V\-A. Used for bailouts \hypertarget{class_tokenizer_a3e61fb17ee95420392506ab1d6f767bb}{\index{Tokenizer@{Tokenizer}!is\-Java\-Or\-C\-Sharp@{is\-Java\-Or\-C\-Sharp}}
+\index{is\-Java\-Or\-C\-Sharp@{is\-Java\-Or\-C\-Sharp}!Tokenizer@{Tokenizer}}
+\subsubsection[{is\-Java\-Or\-C\-Sharp}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::is\-Java\-Or\-C\-Sharp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_a3e61fb17ee95420392506ab1d6f767bb}
+Is the code J\-A\-V\-A/\-C\#. Used for bailouts \hypertarget{class_tokenizer_a16e6e5df07cba250c4784196dab9b02b}{\index{Tokenizer@{Tokenizer}!Is\-Scope\-No\-Return@{Is\-Scope\-No\-Return}}
+\index{Is\-Scope\-No\-Return@{Is\-Scope\-No\-Return}!Tokenizer@{Tokenizer}}
+\subsubsection[{Is\-Scope\-No\-Return}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::\-Is\-Scope\-No\-Return (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{end\-Scope\-Token, }
+\item[{bool $\ast$}]{unknown = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_tokenizer_a16e6e5df07cba250c4784196dab9b02b}
+\hyperlink{class_check}{Check} if inner scope ends with a call to a noreturn function 
+\begin{DoxyParams}{Parameters}
+{\em end\-Scope\-Token} & The '\}' token \\
+\hline
+{\em unknown} & set to true if it's unknown if the scope is noreturn \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if scope ends with a function call that might be 'noreturn' 
+\end{DoxyReturn}
+\hypertarget{class_tokenizer_a0be7ed0b36ea1ebf41eb9968eb46f713}{\index{Tokenizer@{Tokenizer}!print\-Unknown\-Types@{print\-Unknown\-Types}}
+\index{print\-Unknown\-Types@{print\-Unknown\-Types}!Tokenizer@{Tokenizer}}
+\subsubsection[{print\-Unknown\-Types}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::print\-Unknown\-Types (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a0be7ed0b36ea1ebf41eb9968eb46f713}
+Output list of unknown types. \hypertarget{class_tokenizer_a0cef5c18c2b6e3dec6116db5dab5e669}{\index{Tokenizer@{Tokenizer}!remove\-Exception\-Specifications@{remove\-Exception\-Specifications}}
+\index{remove\-Exception\-Specifications@{remove\-Exception\-Specifications}!Tokenizer@{Tokenizer}}
+\subsubsection[{remove\-Exception\-Specifications}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::remove\-Exception\-Specifications (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a0cef5c18c2b6e3dec6116db5dab5e669}
+Remove exception specifications. \hypertarget{class_tokenizer_a23a3207e92de4385c32375ef55cfb879}{\index{Tokenizer@{Tokenizer}!remove\-Macros\-In\-Global\-Scope@{remove\-Macros\-In\-Global\-Scope}}
+\index{remove\-Macros\-In\-Global\-Scope@{remove\-Macros\-In\-Global\-Scope}!Tokenizer@{Tokenizer}}
+\subsubsection[{remove\-Macros\-In\-Global\-Scope}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::remove\-Macros\-In\-Global\-Scope (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a23a3207e92de4385c32375ef55cfb879}
+Remove macros in global scope \hypertarget{class_tokenizer_a025789931af4eff6087add0b4b11db2f}{\index{Tokenizer@{Tokenizer}!remove\-Redundant\-Assignment@{remove\-Redundant\-Assignment}}
+\index{remove\-Redundant\-Assignment@{remove\-Redundant\-Assignment}!Tokenizer@{Tokenizer}}
+\subsubsection[{remove\-Redundant\-Assignment}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::remove\-Redundant\-Assignment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a025789931af4eff6087add0b4b11db2f}
+Remove redundant assignment \hypertarget{class_tokenizer_a0f79b2b8532b9910e5fe23b8af24ad0f}{\index{Tokenizer@{Tokenizer}!remove\-Redundant\-Conditions@{remove\-Redundant\-Conditions}}
+\index{remove\-Redundant\-Conditions@{remove\-Redundant\-Conditions}!Tokenizer@{Tokenizer}}
+\subsubsection[{remove\-Redundant\-Conditions}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::remove\-Redundant\-Conditions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a0f79b2b8532b9910e5fe23b8af24ad0f}
+Remove redundant code, e.\-g. if( false ) \{ int a; \} should be removed, because it is never executed. \begin{DoxyReturn}{Returns}
+true if something is modified false if nothing is done. 
+\end{DoxyReturn}
+\hypertarget{class_tokenizer_a6073b131f653c1e89c01e52b03bba3b5}{\index{Tokenizer@{Tokenizer}!remove\-Redundant\-For@{remove\-Redundant\-For}}
+\index{remove\-Redundant\-For@{remove\-Redundant\-For}!Tokenizer@{Tokenizer}}
+\subsubsection[{remove\-Redundant\-For}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::remove\-Redundant\-For (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a6073b131f653c1e89c01e52b03bba3b5}
+Remove redundant for\-: \char`\"{}for (x=0;x$<$1;x++) \{ \}\char`\"{} =$>$ \char`\"{}\{ x = 1; \}\char`\"{} \hypertarget{class_tokenizer_ac585e6704bc6b95bce3318d4bbf36c42}{\index{Tokenizer@{Tokenizer}!remove\-Redundant\-Semicolons@{remove\-Redundant\-Semicolons}}
+\index{remove\-Redundant\-Semicolons@{remove\-Redundant\-Semicolons}!Tokenizer@{Tokenizer}}
+\subsubsection[{remove\-Redundant\-Semicolons}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::remove\-Redundant\-Semicolons (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_ac585e6704bc6b95bce3318d4bbf36c42}
+Reduces \char`\"{}; ;\char`\"{} to \char`\"{};\char`\"{}, except in \char`\"{}( ; ; )\char`\"{} \hypertarget{class_tokenizer_a45dd5bfee9a623306b4ee1e6c35931d0}{\index{Tokenizer@{Tokenizer}!remove\-Unnecessary\-Qualification@{remove\-Unnecessary\-Qualification}}
+\index{remove\-Unnecessary\-Qualification@{remove\-Unnecessary\-Qualification}!Tokenizer@{Tokenizer}}
+\subsubsection[{remove\-Unnecessary\-Qualification}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::remove\-Unnecessary\-Qualification (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a45dd5bfee9a623306b4ee1e6c35931d0}
+Remove unnecessary member qualification \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000064}{Todo}]this should be made more generic to handle more levels \end{DoxyRefDesc}
+\hypertarget{class_tokenizer_a1147d0be1846ad886ad5e45c58d7d979}{\index{Tokenizer@{Tokenizer}!report\-Error@{report\-Error}}
+\index{report\-Error@{report\-Error}!Tokenizer@{Tokenizer}}
+\subsubsection[{report\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::report\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const {\bf Severity\-::\-Severity\-Type}}]{severity, }
+\item[{const std\-::string \&}]{id, }
+\item[{const std\-::string \&}]{msg, }
+\item[{bool}]{inconclusive = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_a1147d0be1846ad886ad5e45c58d7d979}
+report error message \hypertarget{class_tokenizer_a9a5827bede7b939d3f142049a84d22fc}{\index{Tokenizer@{Tokenizer}!report\-Error@{report\-Error}}
+\index{report\-Error@{report\-Error}!Tokenizer@{Tokenizer}}
+\subsubsection[{report\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::report\-Error (
+\begin{DoxyParamCaption}
+\item[{const std\-::list$<$ const {\bf Token} $\ast$ $>$ \&}]{callstack, }
+\item[{{\bf Severity\-::\-Severity\-Type}}]{severity, }
+\item[{const std\-::string \&}]{id, }
+\item[{const std\-::string \&}]{msg, }
+\item[{bool}]{inconclusive = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_a9a5827bede7b939d3f142049a84d22fc}
+\hypertarget{class_tokenizer_a82ec7637b07ea82345c8aaf4f9b4f75d}{\index{Tokenizer@{Tokenizer}!set\-Settings@{set\-Settings}}
+\index{set\-Settings@{set\-Settings}!Tokenizer@{Tokenizer}}
+\subsubsection[{set\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::set\-Settings (
+\begin{DoxyParamCaption}
+\item[{const {\bf Settings} $\ast$}]{settings}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_tokenizer_a82ec7637b07ea82345c8aaf4f9b4f75d}
+\hypertarget{class_tokenizer_ac041ef803ed51ea595979f15ecab1188}{\index{Tokenizer@{Tokenizer}!set\-Timer\-Results@{set\-Timer\-Results}}
+\index{set\-Timer\-Results@{set\-Timer\-Results}!Tokenizer@{Tokenizer}}
+\subsubsection[{set\-Timer\-Results}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::set\-Timer\-Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Timer\-Results} $\ast$}]{tr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_tokenizer_ac041ef803ed51ea595979f15ecab1188}
+\hypertarget{class_tokenizer_a7a34570dbecff212027ff401915e0a7e}{\index{Tokenizer@{Tokenizer}!set\-Var\-Id@{set\-Var\-Id}}
+\index{set\-Var\-Id@{set\-Var\-Id}!Tokenizer@{Tokenizer}}
+\subsubsection[{set\-Var\-Id}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::set\-Var\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a7a34570dbecff212027ff401915e0a7e}
+Set variable id \hypertarget{class_tokenizer_af605600822060a659a080c8d0b52c93b}{\index{Tokenizer@{Tokenizer}!simplify\-Array\-Access\-Syntax@{simplify\-Array\-Access\-Syntax}}
+\index{simplify\-Array\-Access\-Syntax@{simplify\-Array\-Access\-Syntax}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Array\-Access\-Syntax}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Array\-Access\-Syntax (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_af605600822060a659a080c8d0b52c93b}
+\hypertarget{class_tokenizer_ac9d455019c6c6b92b404cddff5e1a22e}{\index{Tokenizer@{Tokenizer}!simplify\-Asm@{simplify\-Asm}}
+\index{simplify\-Asm@{simplify\-Asm}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Asm}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Asm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_ac9d455019c6c6b92b404cddff5e1a22e}
+Remove \-\_\-\-\_\-asm \hypertarget{class_tokenizer_adab655da41f157375945d6d2fee8d112}{\index{Tokenizer@{Tokenizer}!simplify\-Assignment\-In\-Function\-Call@{simplify\-Assignment\-In\-Function\-Call}}
+\index{simplify\-Assignment\-In\-Function\-Call@{simplify\-Assignment\-In\-Function\-Call}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Assignment\-In\-Function\-Call}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Assignment\-In\-Function\-Call (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_adab655da41f157375945d6d2fee8d112}
+Simplify assignment in function call \char`\"{}f(x=g());\char`\"{} =$>$ \char`\"{}x=g();f(x);\char`\"{} \hypertarget{class_tokenizer_a3741a13d956b57a5ff5e372e49a34498}{\index{Tokenizer@{Tokenizer}!simplify\-Attribute@{simplify\-Attribute}}
+\index{simplify\-Attribute@{simplify\-Attribute}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Attribute}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Attribute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a3741a13d956b57a5ff5e372e49a34498}
+Remove {\bfseries attribute} ((?)) \hypertarget{class_tokenizer_a10e472764cd66be39e4ce0a2299e209a}{\index{Tokenizer@{Tokenizer}!simplify\-Bitfields@{simplify\-Bitfields}}
+\index{simplify\-Bitfields@{simplify\-Bitfields}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Bitfields}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Bitfields (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a10e472764cd66be39e4ce0a2299e209a}
+Simplify bitfields -\/ the field width is removed as we don't use it. \hypertarget{class_tokenizer_ac4a1707ecc771930583154149e5f4dec}{\index{Tokenizer@{Tokenizer}!simplify\-Borland@{simplify\-Borland}}
+\index{simplify\-Borland@{simplify\-Borland}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Borland}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Borland (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_ac4a1707ecc771930583154149e5f4dec}
+Remove Borland code \hypertarget{class_tokenizer_ac3844f3ef06c0a63a0ea60164c433523}{\index{Tokenizer@{Tokenizer}!simplify\-Builtin\-Expect@{simplify\-Builtin\-Expect}}
+\index{simplify\-Builtin\-Expect@{simplify\-Builtin\-Expect}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Builtin\-Expect}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Builtin\-Expect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_ac3844f3ef06c0a63a0ea60164c433523}
+Remove \-\_\-\-\_\-builtin\-\_\-expect(...), likely(...), and unlikely(...) \hypertarget{class_tokenizer_a3b12f64cac239412373bdefd80d582fd}{\index{Tokenizer@{Tokenizer}!simplify\-Calculations@{simplify\-Calculations}}
+\index{simplify\-Calculations@{simplify\-Calculations}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Calculations}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::simplify\-Calculations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a3b12f64cac239412373bdefd80d582fd}
+Simplify constant calculations such as \char`\"{}1+2\char`\"{} =$>$ \char`\"{}3\char`\"{} \begin{DoxyReturn}{Returns}
+true if modifications to token-\/list are done. false if no modifications are done. 
+\end{DoxyReturn}
+\hypertarget{class_tokenizer_ac60c2c3c15f25c8b059f3168cf5f1477}{\index{Tokenizer@{Tokenizer}!simplify\-Calling\-Convention@{simplify\-Calling\-Convention}}
+\index{simplify\-Calling\-Convention@{simplify\-Calling\-Convention}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Calling\-Convention}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Calling\-Convention (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_ac60c2c3c15f25c8b059f3168cf5f1477}
+Remove calling convention \hypertarget{class_tokenizer_a20b9968c92ee46da537d9fe341ab40f6}{\index{Tokenizer@{Tokenizer}!simplify\-Casts@{simplify\-Casts}}
+\index{simplify\-Casts@{simplify\-Casts}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Casts}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Casts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a20b9968c92ee46da537d9fe341ab40f6}
+Simplify casts \hypertarget{class_tokenizer_a46acc4f15217af35d073729dbf1d5cef}{\index{Tokenizer@{Tokenizer}!simplify\-Comma@{simplify\-Comma}}
+\index{simplify\-Comma@{simplify\-Comma}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Comma}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Comma (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a46acc4f15217af35d073729dbf1d5cef}
+Simplify comma into a semicolon when possible\-:
+\begin{DoxyItemize}
+\item \char`\"{}delete a, delete b\char`\"{} =$>$ \char`\"{}delete a; delete b;\char`\"{}
+\item \char`\"{}a = 0, b = 0;\char`\"{} =$>$ \char`\"{}a = 0; b = 0;\char`\"{}
+\item \char`\"{}return a(), b;\char`\"{} =$>$ \char`\"{}a(); return b;\char`\"{} 
+\end{DoxyItemize}\hypertarget{class_tokenizer_aa18828917ba93d49840f53d33ecb33ba}{\index{Tokenizer@{Tokenizer}!simplify\-Comparison\-Order@{simplify\-Comparison\-Order}}
+\index{simplify\-Comparison\-Order@{simplify\-Comparison\-Order}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Comparison\-Order}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Comparison\-Order (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_aa18828917ba93d49840f53d33ecb33ba}
+Use \char`\"{}$<$\char`\"{} comparison instead of \char`\"{}$>$\char`\"{} Use \char`\"{}$<$=\char`\"{} comparison instead of \char`\"{}$>$=\char`\"{} \hypertarget{class_tokenizer_ae34b725995514febb57844b0d8232cb7}{\index{Tokenizer@{Tokenizer}!simplify\-Compound\-Assignment@{simplify\-Compound\-Assignment}}
+\index{simplify\-Compound\-Assignment@{simplify\-Compound\-Assignment}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Compound\-Assignment}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Compound\-Assignment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_ae34b725995514febb57844b0d8232cb7}
+Simplify compound assignments Example\-: \char`\"{};a+=b;\char`\"{} =$>$ \char`\"{};a=a+b;\char`\"{} \hypertarget{class_tokenizer_afb20e62fe8f0fe22b9e9f5c46c9a944b}{\index{Tokenizer@{Tokenizer}!simplify\-Condition\-Operator@{simplify\-Condition\-Operator}}
+\index{simplify\-Condition\-Operator@{simplify\-Condition\-Operator}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Condition\-Operator}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Condition\-Operator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_afb20e62fe8f0fe22b9e9f5c46c9a944b}
+Simplify the operator \char`\"{}?\-:\char`\"{} \hypertarget{class_tokenizer_ae6363314ad4f9691219a771eb14bf93f}{\index{Tokenizer@{Tokenizer}!simplify\-Conditions@{simplify\-Conditions}}
+\index{simplify\-Conditions@{simplify\-Conditions}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Conditions}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::simplify\-Conditions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_ae6363314ad4f9691219a771eb14bf93f}
+Simplify conditions \begin{DoxyReturn}{Returns}
+true if something is modified false if nothing is done. 
+\end{DoxyReturn}
+\hypertarget{class_tokenizer_abe19896c194b4cec582d6e5a1177a7c6}{\index{Tokenizer@{Tokenizer}!simplify\-Const@{simplify\-Const}}
+\index{simplify\-Const@{simplify\-Const}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Const}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Const (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_abe19896c194b4cec582d6e5a1177a7c6}
+Change \char`\"{}int const x;\char`\"{} into \char`\"{}const int x;\char`\"{} \hypertarget{class_tokenizer_aecb521f742e46cf97628eb89dd7d532d}{\index{Tokenizer@{Tokenizer}!simplify\-Debug\-New@{simplify\-Debug\-New}}
+\index{simplify\-Debug\-New@{simplify\-Debug\-New}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Debug\-New}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Debug\-New (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_aecb521f742e46cf97628eb89dd7d532d}
+\hypertarget{class_tokenizer_ab4cdd64662f1ccdde88ed405c37cf68c}{\index{Tokenizer@{Tokenizer}!simplify\-Declspec@{simplify\-Declspec}}
+\index{simplify\-Declspec@{simplify\-Declspec}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Declspec}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Declspec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_ab4cdd64662f1ccdde88ed405c37cf68c}
+Remove \-\_\-\-\_\-declspec() \hypertarget{class_tokenizer_a14752242a72ebd3ec678e6dd50dd8332}{\index{Tokenizer@{Tokenizer}!simplify\-Default\-And\-Delete\-Inside\-Class@{simplify\-Default\-And\-Delete\-Inside\-Class}}
+\index{simplify\-Default\-And\-Delete\-Inside\-Class@{simplify\-Default\-And\-Delete\-Inside\-Class}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Default\-And\-Delete\-Inside\-Class}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Default\-And\-Delete\-Inside\-Class (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a14752242a72ebd3ec678e6dd50dd8332}
+\hypertarget{class_tokenizer_a5195047b9a36e6f21062664962617142}{\index{Tokenizer@{Tokenizer}!simplify\-Double\-Plus\-And\-Double\-Minus@{simplify\-Double\-Plus\-And\-Double\-Minus}}
+\index{simplify\-Double\-Plus\-And\-Double\-Minus@{simplify\-Double\-Plus\-And\-Double\-Minus}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Double\-Plus\-And\-Double\-Minus}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Double\-Plus\-And\-Double\-Minus (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a5195047b9a36e6f21062664962617142}
+\hypertarget{class_tokenizer_a32860c1f0ff867719cef87b6cacfedeb}{\index{Tokenizer@{Tokenizer}!simplify\-Do\-While\-Add\-Braces@{simplify\-Do\-While\-Add\-Braces}}
+\index{simplify\-Do\-While\-Add\-Braces@{simplify\-Do\-While\-Add\-Braces}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Do\-While\-Add\-Braces}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Do\-While\-Add\-Braces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a32860c1f0ff867719cef87b6cacfedeb}
+Add braces to an do-\/while block \hypertarget{class_tokenizer_a7034fc3dabd74b2a01aedaa74e19f426}{\index{Tokenizer@{Tokenizer}!simplify\-Empty\-Namespaces@{simplify\-Empty\-Namespaces}}
+\index{simplify\-Empty\-Namespaces@{simplify\-Empty\-Namespaces}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Empty\-Namespaces}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Empty\-Namespaces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a7034fc3dabd74b2a01aedaa74e19f426}
+Simplify useless C++ empty namespaces, like\-: 'namespace var\% \{ \}' \hypertarget{class_tokenizer_a22ab871e265a798011be3869dca955db}{\index{Tokenizer@{Tokenizer}!simplify\-Enum@{simplify\-Enum}}
+\index{simplify\-Enum@{simplify\-Enum}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Enum}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Enum (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a22ab871e265a798011be3869dca955db}
+Replace enum with constant value \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000063}{Todo}]start substitution check at forward declaration \end{DoxyRefDesc}
+\hypertarget{class_tokenizer_a3d1b9c8b0236f523df3f1bffb31b048b}{\index{Tokenizer@{Tokenizer}!simplify\-Err\-No\-In\-While@{simplify\-Err\-No\-In\-While}}
+\index{simplify\-Err\-No\-In\-While@{simplify\-Err\-No\-In\-While}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Err\-No\-In\-While}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Err\-No\-In\-While (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a3d1b9c8b0236f523df3f1bffb31b048b}
+Simplify while(func() \&\& errno==E\-I\-N\-T\-R) \hypertarget{class_tokenizer_a3a823f4a90bf6d7c2d025900b582ea30}{\index{Tokenizer@{Tokenizer}!simplify\-Extern\-C@{simplify\-Extern\-C}}
+\index{simplify\-Extern\-C@{simplify\-Extern\-C}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Extern\-C}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Extern\-C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a3a823f4a90bf6d7c2d025900b582ea30}
+\hypertarget{class_tokenizer_a9b5cd11dd4c20365f8fe31b19dbcfc69}{\index{Tokenizer@{Tokenizer}!simplify\-Flow\-Control@{simplify\-Flow\-Control}}
+\index{simplify\-Flow\-Control@{simplify\-Flow\-Control}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Flow\-Control}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Flow\-Control (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a9b5cd11dd4c20365f8fe31b19dbcfc69}
+Simplify redundant code placed after control flow statements \-: 'return', 'throw', 'goto', 'break' and 'continue' \hypertarget{class_tokenizer_a93f141d2facee12d11162955e604f21f}{\index{Tokenizer@{Tokenizer}!simplify\-Func\-In\-While@{simplify\-Func\-In\-While}}
+\index{simplify\-Func\-In\-While@{simplify\-Func\-In\-While}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Func\-In\-While}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Func\-In\-While (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a93f141d2facee12d11162955e604f21f}
+Simplify while(func(f)) \hypertarget{class_tokenizer_a9bb9eab7cf906aa28c0b35b42cda1537}{\index{Tokenizer@{Tokenizer}!simplify\-Function\-Parameters@{simplify\-Function\-Parameters}}
+\index{simplify\-Function\-Parameters@{simplify\-Function\-Parameters}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Function\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::simplify\-Function\-Parameters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a9bb9eab7cf906aa28c0b35b42cda1537}
+Simplify functions like \char`\"{}void f(x) int x; \{\char`\"{} into \char`\"{}void f(int x) \{\char`\"{} \begin{DoxyReturn}{Returns}
+false only if there's a syntax error 
+\end{DoxyReturn}
+\hypertarget{class_tokenizer_ac62bdf4963d0fe0e82b6879f3db28938}{\index{Tokenizer@{Tokenizer}!simplify\-Function\-Pointers@{simplify\-Function\-Pointers}}
+\index{simplify\-Function\-Pointers@{simplify\-Function\-Pointers}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Function\-Pointers}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Function\-Pointers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_ac62bdf4963d0fe0e82b6879f3db28938}
+Simplify function pointers \hypertarget{class_tokenizer_a7875cbb8e96e341f496e0c14eff4e846}{\index{Tokenizer@{Tokenizer}!simplify\-Function\-Return@{simplify\-Function\-Return}}
+\index{simplify\-Function\-Return@{simplify\-Function\-Return}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Function\-Return}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::simplify\-Function\-Return (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a7875cbb8e96e341f496e0c14eff4e846}
+Simplify function calls -\/ constant return value \begin{DoxyReturn}{Returns}
+true if something is modified false if nothing is done. 
+\end{DoxyReturn}
+\hypertarget{class_tokenizer_a252abfdedbd97a53a8b857420d12654a}{\index{Tokenizer@{Tokenizer}!simplify\-Goto@{simplify\-Goto}}
+\index{simplify\-Goto@{simplify\-Goto}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Goto}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Goto (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a252abfdedbd97a53a8b857420d12654a}
+Replace a \char`\"{}goto\char`\"{} with the statements \hypertarget{class_tokenizer_af88af70b74d3d880ba7509604ca432ac}{\index{Tokenizer@{Tokenizer}!simplify\-If\-Add\-Braces@{simplify\-If\-Add\-Braces}}
+\index{simplify\-If\-Add\-Braces@{simplify\-If\-Add\-Braces}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-If\-Add\-Braces}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::simplify\-If\-Add\-Braces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_af88af70b74d3d880ba7509604ca432ac}
+Add braces to an if-\/block \begin{DoxyReturn}{Returns}
+true if no syntax errors 
+\end{DoxyReturn}
+\hypertarget{class_tokenizer_abcf346281ac3152cbb01dd6d3a03eae8}{\index{Tokenizer@{Tokenizer}!simplify\-If\-Assign@{simplify\-If\-Assign}}
+\index{simplify\-If\-Assign@{simplify\-If\-Assign}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-If\-Assign}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-If\-Assign (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_abcf346281ac3152cbb01dd6d3a03eae8}
+simplify if-\/assignments Example\-: \char`\"{}if(a=b);\char`\"{} =$>$ \char`\"{}a=b;if(a);\char`\"{} \hypertarget{class_tokenizer_abc71845367bb4bd26d7636c6f0993920}{\index{Tokenizer@{Tokenizer}!simplify\-If\-Not@{simplify\-If\-Not}}
+\index{simplify\-If\-Not@{simplify\-If\-Not}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-If\-Not}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-If\-Not (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_abc71845367bb4bd26d7636c6f0993920}
+simplify if-\/not Example\-: \char`\"{}if(0==x);\char`\"{} =$>$ \char`\"{}if(!x);\char`\"{} \hypertarget{class_tokenizer_a9cca5b02e36e92f4925798e071696928}{\index{Tokenizer@{Tokenizer}!simplify\-If\-Not\-Null@{simplify\-If\-Not\-Null}}
+\index{simplify\-If\-Not\-Null@{simplify\-If\-Not\-Null}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-If\-Not\-Null}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-If\-Not\-Null (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a9cca5b02e36e92f4925798e071696928}
+simplify if-\/not N\-U\-L\-L Example\-: \char`\"{}if(0!=x);\char`\"{} =$>$ \char`\"{}if(x);\char`\"{} Special case\-: 'x = (0 != x);' is removed. \hypertarget{class_tokenizer_acf5d58cd6c9dada077e0ff8c3326edbd}{\index{Tokenizer@{Tokenizer}!simplify\-If\-Same\-Inner\-Condition@{simplify\-If\-Same\-Inner\-Condition}}
+\index{simplify\-If\-Same\-Inner\-Condition@{simplify\-If\-Same\-Inner\-Condition}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-If\-Same\-Inner\-Condition}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-If\-Same\-Inner\-Condition (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_acf5d58cd6c9dada077e0ff8c3326edbd}
+
+
+simplify if (a) \{ if (a) 
+
+\hypertarget{class_tokenizer_a4497fcfc3628b7a47279945cbe4b7416}{\index{Tokenizer@{Tokenizer}!simplify\-Init\-Var@{simplify\-Init\-Var}}
+\index{simplify\-Init\-Var@{simplify\-Init\-Var}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Init\-Var}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Init\-Var (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a4497fcfc3628b7a47279945cbe4b7416}
+Simplify variable initialization '; int $\ast$p(0);' =$>$ '; int $\ast$p = 0;' \hypertarget{class_tokenizer_ad53b6168d31dace4388ef9c8f79678ed}{\index{Tokenizer@{Tokenizer}!simplify\-Java\-And\-C\-Sharp@{simplify\-Java\-And\-C\-Sharp}}
+\index{simplify\-Java\-And\-C\-Sharp@{simplify\-Java\-And\-C\-Sharp}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Java\-And\-C\-Sharp}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Java\-And\-C\-Sharp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_ad53b6168d31dace4388ef9c8f79678ed}
+Simplify Java and C\# syntax \hypertarget{class_tokenizer_a88a80e17de0e350622da75bb81217b8f}{\index{Tokenizer@{Tokenizer}!simplify\-Keyword@{simplify\-Keyword}}
+\index{simplify\-Keyword@{simplify\-Keyword}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Keyword}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Keyword (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a88a80e17de0e350622da75bb81217b8f}
+Remove keywords \char`\"{}volatile\char`\"{}, \char`\"{}inline\char`\"{}, \char`\"{}register\char`\"{}, and \char`\"{}restrict\char`\"{} \hypertarget{class_tokenizer_ae1824db120475c5d75b742e7eac9276a}{\index{Tokenizer@{Tokenizer}!simplify\-Known\-Variables@{simplify\-Known\-Variables}}
+\index{simplify\-Known\-Variables@{simplify\-Known\-Variables}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Known\-Variables}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::simplify\-Known\-Variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_ae1824db120475c5d75b742e7eac9276a}
+A simplify function that replaces a variable with its value in cases when the value is known. e.\-g. \char`\"{}x=10; if(x)\char`\"{} =$>$ \char`\"{}x=10;if(10)\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+true if modifications to token-\/list are done. false if no modifications are done. 
+\end{DoxyReturn}
+\hypertarget{class_tokenizer_a31f3ce7fe16a4a368d19ba2059762284}{\index{Tokenizer@{Tokenizer}!simplify\-Known\-Variables\-Get\-Data@{simplify\-Known\-Variables\-Get\-Data}}
+\index{simplify\-Known\-Variables\-Get\-Data@{simplify\-Known\-Variables\-Get\-Data}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Known\-Variables\-Get\-Data}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::simplify\-Known\-Variables\-Get\-Data (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid, }
+\item[{{\bf Token} $\ast$$\ast$}]{\-\_\-tok2, }
+\item[{{\bf Token} $\ast$$\ast$}]{\-\_\-tok3, }
+\item[{std\-::string \&}]{value, }
+\item[{unsigned int \&}]{value\-Var\-Id, }
+\item[{bool \&}]{value\-Is\-Pointer, }
+\item[{bool}]{floatvar}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_tokenizer_a31f3ce7fe16a4a368d19ba2059762284}
+Utility function for simplify\-Known\-Variables. Get data about an assigned variable. \hypertarget{class_tokenizer_a0dec37477d6c4639c79a961b72abc77b}{\index{Tokenizer@{Tokenizer}!simplify\-Known\-Variables\-Simplify@{simplify\-Known\-Variables\-Simplify}}
+\index{simplify\-Known\-Variables\-Simplify@{simplify\-Known\-Variables\-Simplify}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Known\-Variables\-Simplify}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::simplify\-Known\-Variables\-Simplify (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$$\ast$}]{tok2, }
+\item[{{\bf Token} $\ast$}]{tok3, }
+\item[{unsigned int}]{varid, }
+\item[{const std\-::string \&}]{structname, }
+\item[{std\-::string \&}]{value, }
+\item[{unsigned int}]{value\-Var\-Id, }
+\item[{bool}]{value\-Is\-Pointer, }
+\item[{const {\bf Token} $\ast$const}]{value\-Token, }
+\item[{int}]{indentlevel}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_a0dec37477d6c4639c79a961b72abc77b}
+utility function for simplify\-Known\-Variables. Perform simplification of a given variable \hypertarget{class_tokenizer_a0498a8650aa880d68cf78fe468e37fef}{\index{Tokenizer@{Tokenizer}!simplify\-Labels\-Case\-Default@{simplify\-Labels\-Case\-Default}}
+\index{simplify\-Labels\-Case\-Default@{simplify\-Labels\-Case\-Default}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Labels\-Case\-Default}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Labels\-Case\-Default (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a0498a8650aa880d68cf78fe468e37fef}
+Simplify labels and 'case$|$default' syntaxes
+
+simplify labels and case$|$default in the code\-: add a \char`\"{};\char`\"{} if not already in. \hypertarget{class_tokenizer_a30b743fb2e31316f280bd5773579a6c7}{\index{Tokenizer@{Tokenizer}!simplify\-Line\-Macro@{simplify\-Line\-Macro}}
+\index{simplify\-Line\-Macro@{simplify\-Line\-Macro}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Line\-Macro}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Line\-Macro (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a30b743fb2e31316f280bd5773579a6c7}
+\hypertarget{class_tokenizer_a9634f50a1164a4440992c4020caf1374}{\index{Tokenizer@{Tokenizer}!simplify\-Logical\-Operators@{simplify\-Logical\-Operators}}
+\index{simplify\-Logical\-Operators@{simplify\-Logical\-Operators}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Logical\-Operators}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::simplify\-Logical\-Operators (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a9634f50a1164a4440992c4020caf1374}
+Simplify the \char`\"{}not\char`\"{} and \char`\"{}and\char`\"{} keywords to \char`\"{}!\char`\"{} and \char`\"{}\&\&\char`\"{} accordingly. Examples\-:
+\begin{DoxyItemize}
+\item \char`\"{}if (not p)\char`\"{} =$>$ \char`\"{}if (!p)\char`\"{}
+\item \char`\"{}if (p and q)\char`\"{} =$>$ \char`\"{}if (p \&\& q)\char`\"{} 
+\end{DoxyItemize}\hypertarget{class_tokenizer_a6fc1ed36a93f127cb3e0b80b112d1685}{\index{Tokenizer@{Tokenizer}!simplify\-Math\-Functions@{simplify\-Math\-Functions}}
+\index{simplify\-Math\-Functions@{simplify\-Math\-Functions}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Math\-Functions}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Math\-Functions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a6fc1ed36a93f127cb3e0b80b112d1685}
+Simplify e.\-g. 'atol(\char`\"{}0\char`\"{})' into '0' \hypertarget{class_tokenizer_a78677673c0ad2883df9e792c1a4c38bd}{\index{Tokenizer@{Tokenizer}!simplify\-Microsoft\-Memory\-Functions@{simplify\-Microsoft\-Memory\-Functions}}
+\index{simplify\-Microsoft\-Memory\-Functions@{simplify\-Microsoft\-Memory\-Functions}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Microsoft\-Memory\-Functions}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Microsoft\-Memory\-Functions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a78677673c0ad2883df9e792c1a4c38bd}
+Convert Microsoft memory functions Copy\-Memory(dst, src, len) -\/$>$ memcpy(dst, src, len) Fill\-Memory(dst, len, val) -\/$>$ memset(dst, val, len) Move\-Memory(dst, src, len) -\/$>$ memmove(dst, src, len) Zero\-Memory(dst, len) -\/$>$ memset(dst, 0, len) \hypertarget{class_tokenizer_a0337b53b64d66b74ba22cb9363a83130}{\index{Tokenizer@{Tokenizer}!simplify\-Microsoft\-M\-F\-C@{simplify\-Microsoft\-M\-F\-C}}
+\index{simplify\-Microsoft\-M\-F\-C@{simplify\-Microsoft\-M\-F\-C}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Microsoft\-M\-F\-C}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Microsoft\-M\-F\-C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a0337b53b64d66b74ba22cb9363a83130}
+Remove Microsoft M\-F\-C 'D\-E\-C\-L\-A\-R\-E\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-M\-A\-P()' \hypertarget{class_tokenizer_a08086f8768d8478368d78fe1331d42f1}{\index{Tokenizer@{Tokenizer}!simplify\-Microsoft\-String\-Functions@{simplify\-Microsoft\-String\-Functions}}
+\index{simplify\-Microsoft\-String\-Functions@{simplify\-Microsoft\-String\-Functions}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Microsoft\-String\-Functions}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Microsoft\-String\-Functions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a08086f8768d8478368d78fe1331d42f1}
+Convert Microsoft string functions \-\_\-tcscpy -\/$>$ strcpy \hypertarget{class_tokenizer_af6e5886b4d2907eadb2eb6768c2e3a82}{\index{Tokenizer@{Tokenizer}!simplify\-Mul\-And\-Parens@{simplify\-Mul\-And\-Parens}}
+\index{simplify\-Mul\-And\-Parens@{simplify\-Mul\-And\-Parens}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Mul\-And\-Parens}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Mul\-And\-Parens (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_af6e5886b4d2907eadb2eb6768c2e3a82}
+Simplify '$\ast$ \& ( var\% ) =' or any combination of '$\ast$ \&' and '()' parentheses around 'var' to 'var\% =' \hypertarget{class_tokenizer_a862e42cf9fdae8aed3613623685d0e72}{\index{Tokenizer@{Tokenizer}!simplify\-Namespace\-Std@{simplify\-Namespace\-Std}}
+\index{simplify\-Namespace\-Std@{simplify\-Namespace\-Std}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Namespace\-Std}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Namespace\-Std (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a862e42cf9fdae8aed3613623685d0e72}
+Add std\-:\-: in front of std classes, when using namespace std; was given \hypertarget{class_tokenizer_a542ae86b25bd3cfb96b51b976a585f41}{\index{Tokenizer@{Tokenizer}!simplify\-Nested\-Strcat@{simplify\-Nested\-Strcat}}
+\index{simplify\-Nested\-Strcat@{simplify\-Nested\-Strcat}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Nested\-Strcat}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Nested\-Strcat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a542ae86b25bd3cfb96b51b976a585f41}
+Expand nested strcat() calls. \hypertarget{class_tokenizer_a78315546b121d95f9affaff19c2b1d16}{\index{Tokenizer@{Tokenizer}!simplify\-Null@{simplify\-Null}}
+\index{simplify\-Null@{simplify\-Null}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Null}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Null (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a78315546b121d95f9affaff19c2b1d16}
+\hypertarget{class_tokenizer_ae73701db432addc7d87f5652103870f6}{\index{Tokenizer@{Tokenizer}!simplify\-Operator\-Name@{simplify\-Operator\-Name}}
+\index{simplify\-Operator\-Name@{simplify\-Operator\-Name}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Operator\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Operator\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_ae73701db432addc7d87f5652103870f6}
+Collapse operator name tokens into single token operator = =$>$ operator= \hypertarget{class_tokenizer_aa0943c1822254ed5dde634ba265faea2}{\index{Tokenizer@{Tokenizer}!simplify\-Parameter\-Void@{simplify\-Parameter\-Void}}
+\index{simplify\-Parameter\-Void@{simplify\-Parameter\-Void}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Parameter\-Void}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Parameter\-Void (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_aa0943c1822254ed5dde634ba265faea2}
+\hypertarget{class_tokenizer_a70690e32b126df2dce134c1cb8542165}{\index{Tokenizer@{Tokenizer}!simplify\-Platform\-Types@{simplify\-Platform\-Types}}
+\index{simplify\-Platform\-Types@{simplify\-Platform\-Types}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Platform\-Types}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Platform\-Types (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a70690e32b126df2dce134c1cb8542165}
+Convert platform dependent types to standard types. 32 bits\-: size\-\_\-t -\/$>$ unsigned long 64 bits\-: size\-\_\-t -\/$>$ unsigned long long \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000062}{Todo}]This assumes a flat address space. Not true for segmented address space (F\-A\-R $\ast$). \end{DoxyRefDesc}
+\hypertarget{class_tokenizer_ac097e24a8faa2677b120c6067405da3d}{\index{Tokenizer@{Tokenizer}!simplify\-Pointer\-To\-Standard\-Type@{simplify\-Pointer\-To\-Standard\-Type}}
+\index{simplify\-Pointer\-To\-Standard\-Type@{simplify\-Pointer\-To\-Standard\-Type}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Pointer\-To\-Standard\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Pointer\-To\-Standard\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_ac097e24a8faa2677b120c6067405da3d}
+Simplify pointer to standard type (C only) \hypertarget{class_tokenizer_ad17ee9c8dfc3eb971e772901836e8508}{\index{Tokenizer@{Tokenizer}!simplify\-Qt\-Signals\-Slots@{simplify\-Qt\-Signals\-Slots}}
+\index{simplify\-Qt\-Signals\-Slots@{simplify\-Qt\-Signals\-Slots}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Qt\-Signals\-Slots}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Qt\-Signals\-Slots (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_ad17ee9c8dfc3eb971e772901836e8508}
+Remove Qt signals and slots \hypertarget{class_tokenizer_a46e303554fa55788896fd7bd55e7f584}{\index{Tokenizer@{Tokenizer}!simplify\-Question\-Mark@{simplify\-Question\-Mark}}
+\index{simplify\-Question\-Mark@{simplify\-Question\-Mark}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Question\-Mark}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::simplify\-Question\-Mark (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a46e303554fa55788896fd7bd55e7f584}
+Simplify question mark -\/ colon operator Example\-: 0 ? (2/0) \-: 0 =$>$ 0 \begin{DoxyReturn}{Returns}
+true if something is modified false if nothing is done. 
+\end{DoxyReturn}
+\hypertarget{class_tokenizer_a79a0495a1d9b030525764773a1a94513}{\index{Tokenizer@{Tokenizer}!simplify\-Realloc@{simplify\-Realloc}}
+\index{simplify\-Realloc@{simplify\-Realloc}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Realloc}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Realloc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a79a0495a1d9b030525764773a1a94513}
+Simplifies some realloc usage like 'x = realloc (0, n);' =$>$ 'x = malloc(n);' 'x = realloc (y, 0);' =$>$ 'x = 0; free(y);' \hypertarget{class_tokenizer_a1c766679f94a4ede925ddf9e9c3f7aa3}{\index{Tokenizer@{Tokenizer}!simplify\-Redundant\-Consecutive\-Braces@{simplify\-Redundant\-Consecutive\-Braces}}
+\index{simplify\-Redundant\-Consecutive\-Braces@{simplify\-Redundant\-Consecutive\-Braces}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Redundant\-Consecutive\-Braces}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Redundant\-Consecutive\-Braces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a1c766679f94a4ede925ddf9e9c3f7aa3}
+\hypertarget{class_tokenizer_a8fd90f320882f33351e6939ae175648d}{\index{Tokenizer@{Tokenizer}!simplify\-Redundant\-Parenthesis@{simplify\-Redundant\-Parenthesis}}
+\index{simplify\-Redundant\-Parenthesis@{simplify\-Redundant\-Parenthesis}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Redundant\-Parenthesis}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::simplify\-Redundant\-Parenthesis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a8fd90f320882f33351e6939ae175648d}
+Remove redundant parenthesis\-:
+\begin{DoxyItemize}
+\item \char`\"{}((x))\char`\"{} =$>$ \char`\"{}(x)\char`\"{}
+\item \char`\"{}(function())\char`\"{} =$>$ \char`\"{}function()\char`\"{}
+\item \char`\"{}(delete x)\char`\"{} =$>$ \char`\"{}delete x\char`\"{}
+\item \char`\"{}(delete \mbox{[}$\,$\mbox{]} x)\char`\"{} =$>$ \char`\"{}delete \mbox{[}$\,$\mbox{]} x\char`\"{} \begin{DoxyReturn}{Returns}
+true if modifications to token-\/list are done. false if no modifications are done. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\hypertarget{class_tokenizer_ad5c4f54db39b4c90e9abc4f3a568dead}{\index{Tokenizer@{Tokenizer}!simplify\-Reference@{simplify\-Reference}}
+\index{simplify\-Reference@{simplify\-Reference}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Reference}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Reference (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_ad5c4f54db39b4c90e9abc4f3a568dead}
+Simplify references \hypertarget{class_tokenizer_a525573f8775eb0bf85052709a6af2dd7}{\index{Tokenizer@{Tokenizer}!simplify\-Return\-Strncat@{simplify\-Return\-Strncat}}
+\index{simplify\-Return\-Strncat@{simplify\-Return\-Strncat}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Return\-Strncat}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Return\-Strncat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a525573f8775eb0bf85052709a6af2dd7}
+Simplify e.\-g. 'return(strncat(temp,\char`\"{}a\char`\"{},1));' into strncat(temp,\char`\"{}a\char`\"{},1); return temp; \hypertarget{class_tokenizer_a12a9958a54903c6279623e07237a5d35}{\index{Tokenizer@{Tokenizer}!simplify\-Round\-Curly\-Parenthesis@{simplify\-Round\-Curly\-Parenthesis}}
+\index{simplify\-Round\-Curly\-Parenthesis@{simplify\-Round\-Curly\-Parenthesis}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Round\-Curly\-Parenthesis}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Round\-Curly\-Parenthesis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a12a9958a54903c6279623e07237a5d35}
+\hypertarget{class_tokenizer_a76d4ed6ce491f77999f0662bc99e6da7}{\index{Tokenizer@{Tokenizer}!simplify\-Sizeof@{simplify\-Sizeof}}
+\index{simplify\-Sizeof@{simplify\-Sizeof}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Sizeof}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::simplify\-Sizeof (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a76d4ed6ce491f77999f0662bc99e6da7}
+Replace sizeof() to appropriate size. \begin{DoxyReturn}{Returns}
+true if modifications to token-\/list are done. false if no modifications are done. 
+\end{DoxyReturn}
+\hypertarget{class_tokenizer_a4590251251d09cf3e1912ca12c074923}{\index{Tokenizer@{Tokenizer}!simplify\-S\-Q\-L@{simplify\-S\-Q\-L}}
+\index{simplify\-S\-Q\-L@{simplify\-S\-Q\-L}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-S\-Q\-L}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-S\-Q\-L (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a4590251251d09cf3e1912ca12c074923}
+\hypertarget{class_tokenizer_aa1a499a7052c9bcc201b243ec1725a44}{\index{Tokenizer@{Tokenizer}!simplify\-Std@{simplify\-Std}}
+\index{simplify\-Std@{simplify\-Std}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Std}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Std (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_aa1a499a7052c9bcc201b243ec1725a44}
+Remove \char`\"{}std\-::\char`\"{} before some function names \hypertarget{class_tokenizer_a5519b36a3247039f62ad79c337db830f}{\index{Tokenizer@{Tokenizer}!simplify\-Std\-Type@{simplify\-Std\-Type}}
+\index{simplify\-Std\-Type@{simplify\-Std\-Type}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Std\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Std\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a5519b36a3247039f62ad79c337db830f}
+Collapse compound standard types into a single token. unsigned long long int =$>$ long \-\_\-is\-Unsigned=true,\-\_\-is\-Long=true \hypertarget{class_tokenizer_a437d19231a3d3d574c4c1126c984523e}{\index{Tokenizer@{Tokenizer}!simplify\-String@{simplify\-String}}
+\index{simplify\-String@{simplify\-String}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-String}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Tokenizer\-::simplify\-String (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{source}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_tokenizer_a437d19231a3d3d574c4c1126c984523e}
+Modify strings in the token list by replacing hex and oct values. E.\-g. \char`\"{}\textbackslash{}x61\char`\"{} -\/$>$ \char`\"{}a\char`\"{} and \char`\"{}\textbackslash{}000\char`\"{} -\/$>$ \char`\"{}\textbackslash{}0\char`\"{} 
+\begin{DoxyParams}{Parameters}
+{\em source} & The string to be modified, e.\-g. \char`\"{}\textbackslash{}x61\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Modified string, e.\-g. \char`\"{}a\char`\"{} 
+\end{DoxyReturn}
+\hypertarget{class_tokenizer_ade9c95a7840d26978ec30a216744d137}{\index{Tokenizer@{Tokenizer}!simplify\-Struct\-Decl@{simplify\-Struct\-Decl}}
+\index{simplify\-Struct\-Decl@{simplify\-Struct\-Decl}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Struct\-Decl}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Struct\-Decl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_ade9c95a7840d26978ec30a216744d137}
+Struct simplification \char`\"{}struct S \{ \} s;\char`\"{} =$>$ \char`\"{}struct S \{ \}; S s;\char`\"{} \hypertarget{class_tokenizer_ac86781416900a72ce34cf6644706191d}{\index{Tokenizer@{Tokenizer}!simplify\-Struct\-Init@{simplify\-Struct\-Init}}
+\index{simplify\-Struct\-Init@{simplify\-Struct\-Init}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Struct\-Init}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Struct\-Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_ac86781416900a72ce34cf6644706191d}
+Struct initialization \hypertarget{class_tokenizer_a2641e4b4497f6e054890c1f5e33ac85a}{\index{Tokenizer@{Tokenizer}!simplify\-Templates@{simplify\-Templates}}
+\index{simplify\-Templates@{simplify\-Templates}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Templates}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Templates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a2641e4b4497f6e054890c1f5e33ac85a}
+Simplify templates \hypertarget{class_tokenizer_a831fde8399875de9890ee2dc03e6b5fb}{\index{Tokenizer@{Tokenizer}!simplify\-Token\-List@{simplify\-Token\-List}}
+\index{simplify\-Token\-List@{simplify\-Token\-List}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Token\-List}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::simplify\-Token\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a831fde8399875de9890ee2dc03e6b5fb}
+Simplify tokenlist
+
+\begin{DoxyReturn}{Returns}
+false if there is an error that requires aborting the checking of this file. 
+\end{DoxyReturn}
+\hypertarget{class_tokenizer_a4adb4d624e0238e2482e452c92298c78}{\index{Tokenizer@{Tokenizer}!simplify\-Typedef@{simplify\-Typedef}}
+\index{simplify\-Typedef@{simplify\-Typedef}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Typedef}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Typedef (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a4adb4d624e0238e2482e452c92298c78}
+typedef A mytype; mytype c;
+
+Becomes\-: typedef A mytype; A c; \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000059}{Todo}]add support for union \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000060}{Todo}]add support for multi-\/token operators \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000061}{Todo}]add support for multi-\/token operators \end{DoxyRefDesc}
+\hypertarget{class_tokenizer_a332c62eb5d90825b802a93f9f6613c1b}{\index{Tokenizer@{Tokenizer}!simplify\-Undefined\-Size\-Array@{simplify\-Undefined\-Size\-Array}}
+\index{simplify\-Undefined\-Size\-Array@{simplify\-Undefined\-Size\-Array}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Undefined\-Size\-Array}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Undefined\-Size\-Array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a332c62eb5d90825b802a93f9f6613c1b}
+Change (multiple) arrays to (multiple) pointers. \hypertarget{class_tokenizer_a53bdb1e75d8b43c77dca6332e17ac39c}{\index{Tokenizer@{Tokenizer}!simplify\-Var\-Decl@{simplify\-Var\-Decl}}
+\index{simplify\-Var\-Decl@{simplify\-Var\-Decl}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Var\-Decl}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Var\-Decl (
+\begin{DoxyParamCaption}
+\item[{bool}]{only\-\_\-k\-\_\-r\-\_\-fpar}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a53bdb1e75d8b43c77dca6332e17ac39c}
+Simplify variable declarations (split up) 
+\begin{DoxyParams}{Parameters}
+{\em only\-\_\-k\-\_\-r\-\_\-fpar} & Only simplify K\&R function parameters \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_tokenizer_afa8a373a3f98712b4bbbd4a32e0841fa}{\index{Tokenizer@{Tokenizer}!simplify\-Variable\-Multiple\-Assign@{simplify\-Variable\-Multiple\-Assign}}
+\index{simplify\-Variable\-Multiple\-Assign@{simplify\-Variable\-Multiple\-Assign}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-Variable\-Multiple\-Assign}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-Variable\-Multiple\-Assign (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_afa8a373a3f98712b4bbbd4a32e0841fa}
+Simplify multiple assignments. Example\-: \char`\"{}a = b = c = 0;\char`\"{} =$>$ \char`\"{}a = 0; b = 0; c = 0;\char`\"{} \hypertarget{class_tokenizer_a2d3bb256dbef8722a67a437044aeb847}{\index{Tokenizer@{Tokenizer}!simplify\-While0@{simplify\-While0}}
+\index{simplify\-While0@{simplify\-While0}!Tokenizer@{Tokenizer}}
+\subsubsection[{simplify\-While0}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::simplify\-While0 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a2d3bb256dbef8722a67a437044aeb847}
+simplify \char`\"{}while (0)\char`\"{} \hypertarget{class_tokenizer_a6e5adaed9402c3131ea43ce7d64ecd74}{\index{Tokenizer@{Tokenizer}!size\-Of\-Type@{size\-Of\-Type}}
+\index{size\-Of\-Type@{size\-Of\-Type}!Tokenizer@{Tokenizer}}
+\subsubsection[{size\-Of\-Type}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tokenizer\-::size\-Of\-Type (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{type}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_a6e5adaed9402c3131ea43ce7d64ecd74}
+Calculates sizeof value for given type. 
+\begin{DoxyParams}{Parameters}
+{\em type} & \hyperlink{class_token}{Token} which will contain e.\-g. \char`\"{}int\char`\"{}, \char`\"{}$\ast$\char`\"{}, or string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sizeof for given type, or 0 if it can't be calculated. 
+\end{DoxyReturn}
+\hypertarget{class_tokenizer_ac06872e059c5618fa327b965219f3dde}{\index{Tokenizer@{Tokenizer}!syntax\-Error@{syntax\-Error}}
+\index{syntax\-Error@{syntax\-Error}!Tokenizer@{Tokenizer}}
+\subsubsection[{syntax\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::syntax\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_ac06872e059c5618fa327b965219f3dde}
+Syntax error \hypertarget{class_tokenizer_a3dacb2f9fc425b4ad52c9d994388be5d}{\index{Tokenizer@{Tokenizer}!syntax\-Error@{syntax\-Error}}
+\index{syntax\-Error@{syntax\-Error}!Tokenizer@{Tokenizer}}
+\subsubsection[{syntax\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::syntax\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{char}]{c}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_a3dacb2f9fc425b4ad52c9d994388be5d}
+Syntax error. Example\-: invalid number of ')' \hypertarget{class_tokenizer_abb907db1cec9bcf665f7d2af04343050}{\index{Tokenizer@{Tokenizer}!tokenize@{tokenize}}
+\index{tokenize@{tokenize}!Tokenizer@{Tokenizer}}
+\subsubsection[{tokenize}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::tokenize (
+\begin{DoxyParamCaption}
+\item[{std\-::istream \&}]{code, }
+\item[{const char}]{File\-Name\mbox{[}$\,$\mbox{]}, }
+\item[{const std\-::string \&}]{configuration = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{const bool}]{preprocessor\-Condition = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_abb907db1cec9bcf665f7d2af04343050}
+Tokenize code 
+\begin{DoxyParams}{Parameters}
+{\em code} & input stream for code, e.\-g. 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#file "p.h"}
+\textcolor{preprocessor}{}\textcolor{keyword}{class }Foo
+\{
+\textcolor{keyword}{private}:
+\textcolor{keywordtype}{void} Bar();
+\};
+
+\textcolor{preprocessor}{#endfile}
+\textcolor{preprocessor}{}\textcolor{keywordtype}{void} Foo::Bar()
+\{
+\}
+\end{DoxyCode}
+\\
+\hline
+{\em File\-Name} & The filename \\
+\hline
+{\em configuration} & E.\-g. \char`\"{}\-A\char`\"{} for code where \char`\"{}\#ifdef A\char`\"{} is true \\
+\hline
+{\em preprocessor\-Condition} & Set this flag to true if the code is a preprocessor condition. It disables some simplifications \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if source code contains syntax errors 
+\end{DoxyReturn}
+\hypertarget{class_tokenizer_a5f932706a5d3bb6ddc0b68634005300d}{\index{Tokenizer@{Tokenizer}!tokens@{tokens}}
+\index{tokens@{tokens}!Tokenizer@{Tokenizer}}
+\subsubsection[{tokens}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token}$\ast$ Tokenizer\-::tokens (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_tokenizer_a5f932706a5d3bb6ddc0b68634005300d}
+\hypertarget{class_tokenizer_a6a6e18a60deacd19cc2d78f6a4cc2dcf}{\index{Tokenizer@{Tokenizer}!type\-Const\-To\-Const\-Type@{type\-Const\-To\-Const\-Type}}
+\index{type\-Const\-To\-Const\-Type@{type\-Const\-To\-Const\-Type}!Tokenizer@{Tokenizer}}
+\subsubsection[{type\-Const\-To\-Const\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::type\-Const\-To\-Const\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tokenizer_a6a6e18a60deacd19cc2d78f6a4cc2dcf}
+simplify \char`\"{}type const\char`\"{} to \char`\"{}const type\char`\"{} For example\-: int const x =$>$ const int x \hypertarget{class_tokenizer_a0842fdd2139ddc78586849609ac2198c}{\index{Tokenizer@{Tokenizer}!unnecessary\-Qualification\-Error@{unnecessary\-Qualification\-Error}}
+\index{unnecessary\-Qualification\-Error@{unnecessary\-Qualification\-Error}!Tokenizer@{Tokenizer}}
+\subsubsection[{unnecessary\-Qualification\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::unnecessary\-Qualification\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const std\-::string \&}]{qualification}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_a0842fdd2139ddc78586849609ac2198c}
+unnecessary member qualification error \hypertarget{class_tokenizer_a521e1212c8eb262e6f8208c24facf1c1}{\index{Tokenizer@{Tokenizer}!unsupported\-Typedef@{unsupported\-Typedef}}
+\index{unsupported\-Typedef@{unsupported\-Typedef}!Tokenizer@{Tokenizer}}
+\subsubsection[{unsupported\-Typedef}]{\setlength{\rightskip}{0pt plus 5cm}void Tokenizer\-::unsupported\-Typedef (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_a521e1212c8eb262e6f8208c24facf1c1}
+\hypertarget{class_tokenizer_a6610c298348fa148b6ddd242f22a7e0a}{\index{Tokenizer@{Tokenizer}!validate@{validate}}
+\index{validate@{validate}!Tokenizer@{Tokenizer}}
+\subsubsection[{validate}]{\setlength{\rightskip}{0pt plus 5cm}bool Tokenizer\-::validate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tokenizer_a6610c298348fa148b6ddd242f22a7e0a}
+assert that tokens are ok -\/ used during debugging for example to catch problems in simplify\-Token\-List. \begin{DoxyReturn}{Returns}
+always true. 
+\end{DoxyReturn}
+\hypertarget{class_tokenizer_ac77d3690b2659969a7a0cc29071e32d5}{\index{Tokenizer@{Tokenizer}!var\-Id\-Count@{var\-Id\-Count}}
+\index{var\-Id\-Count@{var\-Id\-Count}!Tokenizer@{Tokenizer}}
+\subsubsection[{var\-Id\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Tokenizer\-::var\-Id\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_tokenizer_ac77d3690b2659969a7a0cc29071e32d5}
+Get variable count. \begin{DoxyReturn}{Returns}
+number of variables 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_tokenizer_a82d276b4b3ec47adbadd612129b7c65a}{\index{Tokenizer@{Tokenizer}!list@{list}}
+\index{list@{list}!Tokenizer@{Tokenizer}}
+\subsubsection[{list}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Token\-List} Tokenizer\-::list}}\label{class_tokenizer_a82d276b4b3ec47adbadd612129b7c65a}
+\hyperlink{class_token}{Token} list\-: stores all tokens. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{tokenize_8h}{tokenize.\-h}\item 
+lib/\hyperlink{tokenize_8cpp}{tokenize.\-cpp}\end{DoxyCompactItemize}

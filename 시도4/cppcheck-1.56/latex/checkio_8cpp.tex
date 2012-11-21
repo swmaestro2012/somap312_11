@@ -1,0 +1,44 @@
+\hypertarget{checkio_8cpp}{\section{lib/checkio.cpp File Reference}
+\label{checkio_8cpp}\index{lib/checkio.\-cpp@{lib/checkio.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}checkio.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tokenize.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}token.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}errorlogger.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}symboldatabase.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$cctype$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_filepointer}{Filepointer}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{checkio_8cpp_a3a70f8b621474c9885f80fe709e2dca2}{Open\-Mode} \{ , \hyperlink{checkio_8cpp_a3a70f8b621474c9885f80fe709e2dca2aa2f18143cfa252aa4deb2736e690e8d2}{R\-E\-A\-D\-\_\-\-M\-O\-D\-E}, 
+\hyperlink{checkio_8cpp_a3a70f8b621474c9885f80fe709e2dca2a68a470c9a36fab44404714c9e199bb95}{W\-R\-I\-T\-E\-\_\-\-M\-O\-D\-E}, 
+\hyperlink{checkio_8cpp_a3a70f8b621474c9885f80fe709e2dca2a6c2abff38c818faa761934c62ce7f81c}{R\-W\-\_\-\-M\-O\-D\-E}, 
+\hyperlink{checkio_8cpp_a3a70f8b621474c9885f80fe709e2dca2a6ce26a62afab55d7606ad4e92428b30c}{U\-N\-K\-N\-O\-W\-N}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{checkio_8cpp_a3a70f8b621474c9885f80fe709e2dca2}{\index{checkio.\-cpp@{checkio.\-cpp}!Open\-Mode@{Open\-Mode}}
+\index{Open\-Mode@{Open\-Mode}!checkio.cpp@{checkio.\-cpp}}
+\subsubsection[{Open\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Open\-Mode}}}\label{checkio_8cpp_a3a70f8b621474c9885f80fe709e2dca2}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{R\-E\-A\-D\-\_\-\-M\-O\-D\-E@{R\-E\-A\-D\-\_\-\-M\-O\-D\-E}!checkio.\-cpp@{checkio.\-cpp}}\index{checkio.\-cpp@{checkio.\-cpp}!R\-E\-A\-D\-\_\-\-M\-O\-D\-E@{R\-E\-A\-D\-\_\-\-M\-O\-D\-E}}\item[{\em 
+\hypertarget{checkio_8cpp_a3a70f8b621474c9885f80fe709e2dca2aa2f18143cfa252aa4deb2736e690e8d2}{R\-E\-A\-D\-\_\-\-M\-O\-D\-E}\label{checkio_8cpp_a3a70f8b621474c9885f80fe709e2dca2aa2f18143cfa252aa4deb2736e690e8d2}
+}]\index{W\-R\-I\-T\-E\-\_\-\-M\-O\-D\-E@{W\-R\-I\-T\-E\-\_\-\-M\-O\-D\-E}!checkio.\-cpp@{checkio.\-cpp}}\index{checkio.\-cpp@{checkio.\-cpp}!W\-R\-I\-T\-E\-\_\-\-M\-O\-D\-E@{W\-R\-I\-T\-E\-\_\-\-M\-O\-D\-E}}\item[{\em 
+\hypertarget{checkio_8cpp_a3a70f8b621474c9885f80fe709e2dca2a68a470c9a36fab44404714c9e199bb95}{W\-R\-I\-T\-E\-\_\-\-M\-O\-D\-E}\label{checkio_8cpp_a3a70f8b621474c9885f80fe709e2dca2a68a470c9a36fab44404714c9e199bb95}
+}]\index{R\-W\-\_\-\-M\-O\-D\-E@{R\-W\-\_\-\-M\-O\-D\-E}!checkio.\-cpp@{checkio.\-cpp}}\index{checkio.\-cpp@{checkio.\-cpp}!R\-W\-\_\-\-M\-O\-D\-E@{R\-W\-\_\-\-M\-O\-D\-E}}\item[{\em 
+\hypertarget{checkio_8cpp_a3a70f8b621474c9885f80fe709e2dca2a6c2abff38c818faa761934c62ce7f81c}{R\-W\-\_\-\-M\-O\-D\-E}\label{checkio_8cpp_a3a70f8b621474c9885f80fe709e2dca2a6c2abff38c818faa761934c62ce7f81c}
+}]\index{U\-N\-K\-N\-O\-W\-N@{U\-N\-K\-N\-O\-W\-N}!checkio.\-cpp@{checkio.\-cpp}}\index{checkio.\-cpp@{checkio.\-cpp}!U\-N\-K\-N\-O\-W\-N@{U\-N\-K\-N\-O\-W\-N}}\item[{\em 
+\hypertarget{checkio_8cpp_a3a70f8b621474c9885f80fe709e2dca2a6ce26a62afab55d7606ad4e92428b30c}{U\-N\-K\-N\-O\-W\-N}\label{checkio_8cpp_a3a70f8b621474c9885f80fe709e2dca2a6ce26a62afab55d7606ad4e92428b30c}
+}]\end{description}
+\end{Desc}
+

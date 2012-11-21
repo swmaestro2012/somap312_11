@@ -1,0 +1,53 @@
+\hypertarget{testsymboldatabase_8cpp}{\section{test/testsymboldatabase.cpp File Reference}
+\label{testsymboldatabase_8cpp}\index{test/testsymboldatabase.\-cpp@{test/testsymboldatabase.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}testsuite.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}testutils.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}symboldatabase.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_test_symbol_database}{Test\-Symbol\-Database}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{testsymboldatabase_8cpp_a4c5378a087bb944ae121d68582a062d2}{G\-E\-T\-\_\-\-S\-Y\-M\-B\-O\-L\-\_\-\-D\-B}(code)
+\item 
+\#define \hyperlink{testsymboldatabase_8cpp_a9d700b35d84fec9c76217900c257d8d2}{G\-E\-T\-\_\-\-S\-Y\-M\-B\-O\-L\-\_\-\-D\-B\-\_\-\-C}(code)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{testsymboldatabase_8cpp_a4c5378a087bb944ae121d68582a062d2}{\index{testsymboldatabase.\-cpp@{testsymboldatabase.\-cpp}!G\-E\-T\-\_\-\-S\-Y\-M\-B\-O\-L\-\_\-\-D\-B@{G\-E\-T\-\_\-\-S\-Y\-M\-B\-O\-L\-\_\-\-D\-B}}
+\index{G\-E\-T\-\_\-\-S\-Y\-M\-B\-O\-L\-\_\-\-D\-B@{G\-E\-T\-\_\-\-S\-Y\-M\-B\-O\-L\-\_\-\-D\-B}!testsymboldatabase.cpp@{testsymboldatabase.\-cpp}}
+\subsubsection[{G\-E\-T\-\_\-\-S\-Y\-M\-B\-O\-L\-\_\-\-D\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-S\-Y\-M\-B\-O\-L\-\_\-\-D\-B(
+\begin{DoxyParamCaption}
+\item[{}]{code}
+\end{DoxyParamCaption}
+)}}\label{testsymboldatabase_8cpp_a4c5378a087bb944ae121d68582a062d2}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\hyperlink{redirect_8h_a8b41e5db712c415c29f0b8225c9a169c}{errout}.str(\textcolor{stringliteral}{""}); \hyperlink{class_settings}{\(\backslash\)}
+\hyperlink{class_settings}{    Settings} settings; \hyperlink{class_tokenizer}{\(\backslash\)}
+\hyperlink{class_tokenizer}{    Tokenizer} tokenizer(&settings, \textcolor{keyword}{this}); \(\backslash\)
+    std::istringstream istr(\hyperlink{namespaceextracttests_a629a2ac1b3919c13d79e4c009892c10f}{code}); \(\backslash\)
+    tokenizer.tokenize(istr, \textcolor{stringliteral}{"test.cpp"}); \(\backslash\)
+    const \hyperlink{class_symbol_database}{SymbolDatabase} *db = tokenizer.getSymbolDatabase();
+\end{DoxyCode}
+\hypertarget{testsymboldatabase_8cpp_a9d700b35d84fec9c76217900c257d8d2}{\index{testsymboldatabase.\-cpp@{testsymboldatabase.\-cpp}!G\-E\-T\-\_\-\-S\-Y\-M\-B\-O\-L\-\_\-\-D\-B\-\_\-\-C@{G\-E\-T\-\_\-\-S\-Y\-M\-B\-O\-L\-\_\-\-D\-B\-\_\-\-C}}
+\index{G\-E\-T\-\_\-\-S\-Y\-M\-B\-O\-L\-\_\-\-D\-B\-\_\-\-C@{G\-E\-T\-\_\-\-S\-Y\-M\-B\-O\-L\-\_\-\-D\-B\-\_\-\-C}!testsymboldatabase.cpp@{testsymboldatabase.\-cpp}}
+\subsubsection[{G\-E\-T\-\_\-\-S\-Y\-M\-B\-O\-L\-\_\-\-D\-B\-\_\-\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-S\-Y\-M\-B\-O\-L\-\_\-\-D\-B\-\_\-\-C(
+\begin{DoxyParamCaption}
+\item[{}]{code}
+\end{DoxyParamCaption}
+)}}\label{testsymboldatabase_8cpp_a9d700b35d84fec9c76217900c257d8d2}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\hyperlink{redirect_8h_a8b41e5db712c415c29f0b8225c9a169c}{errout}.str(\textcolor{stringliteral}{""}); \hyperlink{class_settings}{\(\backslash\)}
+\hyperlink{class_settings}{    Settings} settings; \hyperlink{class_tokenizer}{\(\backslash\)}
+\hyperlink{class_tokenizer}{    Tokenizer} tokenizer(&settings, \textcolor{keyword}{this}); \(\backslash\)
+    std::istringstream istr(\hyperlink{namespaceextracttests_a629a2ac1b3919c13d79e4c009892c10f}{code}); \(\backslash\)
+    tokenizer.tokenize(istr, \textcolor{stringliteral}{"test.c"}); \(\backslash\)
+    const \hyperlink{class_symbol_database}{SymbolDatabase} *db = tokenizer.getSymbolDatabase();
+\end{DoxyCode}

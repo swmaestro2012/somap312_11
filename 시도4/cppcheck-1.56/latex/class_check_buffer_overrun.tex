@@ -1,0 +1,342 @@
+\hypertarget{class_check_buffer_overrun}{\section{Check\-Buffer\-Overrun Class Reference}
+\label{class_check_buffer_overrun}\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}}
+}
+
+
+buffer overruns and array index out of bounds  
+
+
+
+
+{\ttfamily \#include $<$checkbufferoverrun.\-h$>$}
+
+Inheritance diagram for Check\-Buffer\-Overrun\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_check_buffer_overrun}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_check_buffer_overrun_1_1_array_info}{Array\-Info}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_check_buffer_overrun_a1cb967e46fe74a25d76e1eddf89e50a5}{Check\-Buffer\-Overrun} ()
+\item 
+\hyperlink{class_check_buffer_overrun_a31106cd3941647bd0064d2c7f60e7f6d}{Check\-Buffer\-Overrun} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\item 
+void \hyperlink{class_check_buffer_overrun_af0b26b559bda17a0403231d73756bd81}{run\-Simplified\-Checks} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\item 
+void \hyperlink{class_check_buffer_overrun_a610709cc6a78494f9d87074fae823554}{buffer\-Overrun} ()
+\begin{DoxyCompactList}\small\item\em Check for buffer overruns \end{DoxyCompactList}\item 
+void \hyperlink{class_check_buffer_overrun_a81f504580129762e77ec0680fff447a2}{array\-Index\-Then\-Check} ()
+\begin{DoxyCompactList}\small\item\em Using array index before bounds check. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_buffer_overrun_aab02af8a1f11d1f7443bb0ea10cd9409}{execution\-Paths} ()
+\begin{DoxyCompactList}\small\item\em Check for buffer overruns by inspecting execution paths \end{DoxyCompactList}\item 
+void \hyperlink{class_check_buffer_overrun_a09a7c952ced17dea7170e56165e88961}{check\-Sprintf\-Call} (const \hyperlink{class_token}{Token} $\ast$tok, const \hyperlink{class_math_lib_aea370b3be964c5704b6244d757fcac99}{Math\-Lib\-::bigint} size)
+\begin{DoxyCompactList}\small\item\em Check code that matches\-: \char`\"{}sprintf ( \%varid\% , \%str\% \mbox{[},)\mbox{]}\char`\"{} when varid is not 0, and report found errors. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_buffer_overrun_af902d1058c19edbfa9360d96e0b52618}{check\-Struct\-Variable} ()
+\item 
+void \hyperlink{class_check_buffer_overrun_af3d1d363b22f3ee8573447b08714ce85}{check\-Global\-And\-Local\-Variable} ()
+\item 
+void \hyperlink{class_check_buffer_overrun_aa48b2092cfbe4c0a70a0317ae4661ecf}{check\-Buffer\-Allocated\-With\-Strlen} ()
+\item 
+void \hyperlink{class_check_buffer_overrun_af64df625129b153c9d23bff89e2cbd18}{check\-Insecure\-Cmd\-Line\-Args} ()
+\item 
+void \hyperlink{class_check_buffer_overrun_a44e4545d42f9f84ee3db00001ee7124c}{negative\-Index} ()
+\item 
+void \hyperlink{class_check_buffer_overrun_aa5df4a4008c9530157522f15b00a1a32}{check\-Scope} (const \hyperlink{class_token}{Token} $\ast$tok, const \hyperlink{class_check_buffer_overrun_1_1_array_info}{Array\-Info} \&array\-Info)
+\item 
+void \hyperlink{class_check_buffer_overrun_a827fbba366d3ff8398776cd8ab6a3a6a}{check\-Scope} (const \hyperlink{class_token}{Token} $\ast$tok, const std\-::vector$<$ std\-::string $>$ \&varname, const \hyperlink{class_check_buffer_overrun_1_1_array_info}{Array\-Info} \&array\-Info)
+\item 
+void \hyperlink{class_check_buffer_overrun_a23c7fa8a6c1b3e3df10f6f6b264d28ed}{check\-Scope\-For\-Body} (const \hyperlink{class_token}{Token} $\ast$tok, const \hyperlink{class_check_buffer_overrun_1_1_array_info}{Array\-Info} \&array\-Info, bool \&bailout)
+\item 
+void \hyperlink{class_check_buffer_overrun_af4fe893bb9e3b4d402467bfc201acb01}{parse\-\_\-for\-\_\-body} (const \hyperlink{class_token}{Token} $\ast$tok2, const \hyperlink{class_check_buffer_overrun_1_1_array_info}{Array\-Info} \&array\-Info, const std\-::string \&strindex, bool condition\-\_\-out\-\_\-of\-\_\-bounds, unsigned int counter\-\_\-varid, const std\-::string \&min\-\_\-counter\-\_\-value, const std\-::string \&max\-\_\-counter\-\_\-value)
+\item 
+void \hyperlink{class_check_buffer_overrun_aee754a297691842bab044286ee10cef8}{check\-Readlink\-Buffer\-Usage} (const \hyperlink{class_token}{Token} $\ast$tok, const \hyperlink{class_token}{Token} $\ast$scope\-\_\-begin, const \hyperlink{class_math_lib_aea370b3be964c5704b6244d757fcac99}{Math\-Lib\-::bigint} total\-\_\-size, const bool is\-\_\-readlinkat)
+\item 
+void \hyperlink{class_check_buffer_overrun_a349c85e9194cf7661bd2b3f1eed515f6}{check\-Function\-Parameter} (const \hyperlink{class_token}{Token} \&tok, const unsigned int par, const \hyperlink{class_check_buffer_overrun_1_1_array_info}{Array\-Info} \&array\-Info, std\-::list$<$ const \hyperlink{class_token}{Token} $\ast$ $>$ callstack)
+\item 
+void \hyperlink{class_check_buffer_overrun_ae6b4206b902bb519a791eda0e95a6ae1}{check\-Function\-Call} (const \hyperlink{class_token}{Token} $\ast$tok, const \hyperlink{class_check_buffer_overrun_1_1_array_info}{Array\-Info} \&array\-Info, std\-::list$<$ const \hyperlink{class_token}{Token} $\ast$ $>$ callstack)
+\item 
+void \hyperlink{class_check_buffer_overrun_ad30a16a5a56ac0f3fe137117afc70d21}{array\-Index\-Out\-Of\-Bounds\-Error} (const \hyperlink{class_token}{Token} $\ast$tok, const \hyperlink{class_check_buffer_overrun_1_1_array_info}{Array\-Info} \&array\-Info, const std\-::vector$<$ \hyperlink{class_math_lib_aea370b3be964c5704b6244d757fcac99}{Math\-Lib\-::bigint} $>$ \&index)
+\item 
+void \hyperlink{class_check_buffer_overrun_a21d46e65e2b2e030bc5b049c8f61d277}{get\-Error\-Messages} (\hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger, const \hyperlink{class_settings}{Settings} $\ast$settings) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_math_lib_aea370b3be964c5704b6244d757fcac99}{Math\-Lib\-::bigint} \hyperlink{class_check_buffer_overrun_a9e6e2bcffc541c9b54cff59301d8b3b2}{count\-Sprintf\-Length} (const std\-::string \&input\-\_\-string, const std\-::list$<$ const \hyperlink{class_token}{Token} $\ast$ $>$ \&parameters)
+\begin{DoxyCompactList}\small\item\em Get minimum length of format string result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+buffer overruns and array index out of bounds 
+
+Buffer overrun and array index out of bounds are pretty much the same. But I generally use 'array index' if the code contains \mbox{[}\mbox{]}. And the given index is out of bounds. I generally use 'buffer overrun' if you for example call a strcpy or other function and pass a buffer and reads or writes too much data. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_check_buffer_overrun_a1cb967e46fe74a25d76e1eddf89e50a5}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}}
+\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{Check\-Buffer\-Overrun}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Buffer\-Overrun\-::\-Check\-Buffer\-Overrun (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_buffer_overrun_a1cb967e46fe74a25d76e1eddf89e50a5}
+This constructor is used when registering the \hyperlink{class_check_class}{Check\-Class} \hypertarget{class_check_buffer_overrun_a31106cd3941647bd0064d2c7f60e7f6d}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}}
+\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{Check\-Buffer\-Overrun}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Buffer\-Overrun\-::\-Check\-Buffer\-Overrun (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_buffer_overrun_a31106cd3941647bd0064d2c7f60e7f6d}
+This constructor is used when running checks. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_check_buffer_overrun_ad30a16a5a56ac0f3fe137117afc70d21}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!array\-Index\-Out\-Of\-Bounds\-Error@{array\-Index\-Out\-Of\-Bounds\-Error}}
+\index{array\-Index\-Out\-Of\-Bounds\-Error@{array\-Index\-Out\-Of\-Bounds\-Error}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{array\-Index\-Out\-Of\-Bounds\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::array\-Index\-Out\-Of\-Bounds\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const {\bf Array\-Info} \&}]{array\-Info, }
+\item[{const std\-::vector$<$ {\bf Math\-Lib\-::bigint} $>$ \&}]{index}
+\end{DoxyParamCaption}
+)}}\label{class_check_buffer_overrun_ad30a16a5a56ac0f3fe137117afc70d21}
+\hypertarget{class_check_buffer_overrun_a81f504580129762e77ec0680fff447a2}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!array\-Index\-Then\-Check@{array\-Index\-Then\-Check}}
+\index{array\-Index\-Then\-Check@{array\-Index\-Then\-Check}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{array\-Index\-Then\-Check}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::array\-Index\-Then\-Check (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_buffer_overrun_a81f504580129762e77ec0680fff447a2}
+
+
+Using array index before bounds check. 
+
+\hypertarget{class_check_buffer_overrun_a610709cc6a78494f9d87074fae823554}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!buffer\-Overrun@{buffer\-Overrun}}
+\index{buffer\-Overrun@{buffer\-Overrun}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{buffer\-Overrun}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::buffer\-Overrun (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_buffer_overrun_a610709cc6a78494f9d87074fae823554}
+
+
+Check for buffer overruns 
+
+\hypertarget{class_check_buffer_overrun_aa48b2092cfbe4c0a70a0317ae4661ecf}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!check\-Buffer\-Allocated\-With\-Strlen@{check\-Buffer\-Allocated\-With\-Strlen}}
+\index{check\-Buffer\-Allocated\-With\-Strlen@{check\-Buffer\-Allocated\-With\-Strlen}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{check\-Buffer\-Allocated\-With\-Strlen}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::check\-Buffer\-Allocated\-With\-Strlen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_buffer_overrun_aa48b2092cfbe4c0a70a0317ae4661ecf}
+\hyperlink{class_check}{Check} for buffer overruns due to allocating strlen(src) bytes instead of (strlen(src)+1) bytes before copying a string \hypertarget{class_check_buffer_overrun_ae6b4206b902bb519a791eda0e95a6ae1}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!check\-Function\-Call@{check\-Function\-Call}}
+\index{check\-Function\-Call@{check\-Function\-Call}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{check\-Function\-Call}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::check\-Function\-Call (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const {\bf Array\-Info} \&}]{array\-Info, }
+\item[{std\-::list$<$ const {\bf Token} $\ast$ $>$}]{callstack}
+\end{DoxyParamCaption}
+)}}\label{class_check_buffer_overrun_ae6b4206b902bb519a791eda0e95a6ae1}
+Helper function that checks if the array is used and if so calls the check\-Function\-Call 
+\begin{DoxyParams}{Parameters}
+{\em tok} & token that matches \char`\"{}\%var\% (\char`\"{} \\
+\hline
+{\em array\-Info} & the array information \\
+\hline
+{\em callstack} & call stack. This is used to prevent recursion and to provide better error messages. Pass a empty list from check\-Scope etc. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_check_buffer_overrun_a349c85e9194cf7661bd2b3f1eed515f6}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!check\-Function\-Parameter@{check\-Function\-Parameter}}
+\index{check\-Function\-Parameter@{check\-Function\-Parameter}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{check\-Function\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::check\-Function\-Parameter (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} \&}]{tok, }
+\item[{const unsigned int}]{par, }
+\item[{const {\bf Array\-Info} \&}]{array\-Info, }
+\item[{std\-::list$<$ const {\bf Token} $\ast$ $>$}]{callstack}
+\end{DoxyParamCaption}
+)}}\label{class_check_buffer_overrun_a349c85e9194cf7661bd2b3f1eed515f6}
+Helper function for check\-Function\-Call -\/ check a function parameter 
+\begin{DoxyParams}{Parameters}
+{\em tok} & token for the function name \\
+\hline
+{\em par} & on what parameter is the array used \\
+\hline
+{\em array\-Info} & the array information \\
+\hline
+{\em callstack} & call stack. This is used to prevent recursion and to provide better error messages. Pass a empty list from check\-Scope etc. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_check_buffer_overrun_af3d1d363b22f3ee8573447b08714ce85}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!check\-Global\-And\-Local\-Variable@{check\-Global\-And\-Local\-Variable}}
+\index{check\-Global\-And\-Local\-Variable@{check\-Global\-And\-Local\-Variable}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{check\-Global\-And\-Local\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::check\-Global\-And\-Local\-Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_buffer_overrun_af3d1d363b22f3ee8573447b08714ce85}
+\hyperlink{class_check}{Check} for buffer overruns -\/ locate global variables and local function variables and check them with the check\-Scope function \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000028}{Todo}]false negatives\-: this may be too conservative \end{DoxyRefDesc}
+\hypertarget{class_check_buffer_overrun_af64df625129b153c9d23bff89e2cbd18}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!check\-Insecure\-Cmd\-Line\-Args@{check\-Insecure\-Cmd\-Line\-Args}}
+\index{check\-Insecure\-Cmd\-Line\-Args@{check\-Insecure\-Cmd\-Line\-Args}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{check\-Insecure\-Cmd\-Line\-Args}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::check\-Insecure\-Cmd\-Line\-Args (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_buffer_overrun_af64df625129b153c9d23bff89e2cbd18}
+\hyperlink{class_check}{Check} for buffer overruns due to copying command-\/line args to fixed-\/sized buffers without bounds checking \hypertarget{class_check_buffer_overrun_aee754a297691842bab044286ee10cef8}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!check\-Readlink\-Buffer\-Usage@{check\-Readlink\-Buffer\-Usage}}
+\index{check\-Readlink\-Buffer\-Usage@{check\-Readlink\-Buffer\-Usage}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{check\-Readlink\-Buffer\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::check\-Readlink\-Buffer\-Usage (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const {\bf Token} $\ast$}]{scope\-\_\-begin, }
+\item[{const {\bf Math\-Lib\-::bigint}}]{total\-\_\-size, }
+\item[{const bool}]{is\-\_\-readlinkat}
+\end{DoxyParamCaption}
+)}}\label{class_check_buffer_overrun_aee754a297691842bab044286ee10cef8}
+\hyperlink{class_check}{Check} readlink or readlinkat() buffer usage \hypertarget{class_check_buffer_overrun_aa5df4a4008c9530157522f15b00a1a32}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!check\-Scope@{check\-Scope}}
+\index{check\-Scope@{check\-Scope}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{check\-Scope}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::check\-Scope (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const {\bf Array\-Info} \&}]{array\-Info}
+\end{DoxyParamCaption}
+)}}\label{class_check_buffer_overrun_aa5df4a4008c9530157522f15b00a1a32}
+\hyperlink{class_check}{Check} for buffer overruns (based on \hyperlink{class_check_buffer_overrun_1_1_array_info}{Array\-Info}) \hypertarget{class_check_buffer_overrun_a827fbba366d3ff8398776cd8ab6a3a6a}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!check\-Scope@{check\-Scope}}
+\index{check\-Scope@{check\-Scope}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{check\-Scope}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::check\-Scope (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const std\-::vector$<$ std\-::string $>$ \&}]{varname, }
+\item[{const {\bf Array\-Info} \&}]{array\-Info}
+\end{DoxyParamCaption}
+)}}\label{class_check_buffer_overrun_a827fbba366d3ff8398776cd8ab6a3a6a}
+\hyperlink{class_check}{Check} for buffer overruns \hypertarget{class_check_buffer_overrun_a23c7fa8a6c1b3e3df10f6f6b264d28ed}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!check\-Scope\-For\-Body@{check\-Scope\-For\-Body}}
+\index{check\-Scope\-For\-Body@{check\-Scope\-For\-Body}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{check\-Scope\-For\-Body}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::check\-Scope\-For\-Body (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const {\bf Array\-Info} \&}]{array\-Info, }
+\item[{bool \&}]{bailout}
+\end{DoxyParamCaption}
+)}}\label{class_check_buffer_overrun_a23c7fa8a6c1b3e3df10f6f6b264d28ed}
+\hyperlink{class_check}{Check} scope helper function -\/ parse for body \hypertarget{class_check_buffer_overrun_a09a7c952ced17dea7170e56165e88961}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!check\-Sprintf\-Call@{check\-Sprintf\-Call}}
+\index{check\-Sprintf\-Call@{check\-Sprintf\-Call}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{check\-Sprintf\-Call}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::check\-Sprintf\-Call (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const {\bf Math\-Lib\-::bigint}}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_check_buffer_overrun_a09a7c952ced17dea7170e56165e88961}
+
+
+Check code that matches\-: \char`\"{}sprintf ( \%varid\% , \%str\% \mbox{[},)\mbox{]}\char`\"{} when varid is not 0, and report found errors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tok} & The \char`\"{}sprintf\char`\"{} token. \\
+\hline
+{\em size} & The size of the buffer where sprintf is writing. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_check_buffer_overrun_af902d1058c19edbfa9360d96e0b52618}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!check\-Struct\-Variable@{check\-Struct\-Variable}}
+\index{check\-Struct\-Variable@{check\-Struct\-Variable}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{check\-Struct\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::check\-Struct\-Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_buffer_overrun_af902d1058c19edbfa9360d96e0b52618}
+\hyperlink{class_check}{Check} for buffer overruns -\/ locate struct variables and check them with the ..\-\_\-\-Check\-Scope function \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000029}{Todo}]false negatives\-: handle inner scopes someday \end{DoxyRefDesc}
+\hypertarget{class_check_buffer_overrun_a9e6e2bcffc541c9b54cff59301d8b3b2}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!count\-Sprintf\-Length@{count\-Sprintf\-Length}}
+\index{count\-Sprintf\-Length@{count\-Sprintf\-Length}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{count\-Sprintf\-Length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Math\-Lib\-::bigint} Check\-Buffer\-Overrun\-::count\-Sprintf\-Length (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{input\-\_\-string, }
+\item[{const std\-::list$<$ const {\bf Token} $\ast$ $>$ \&}]{parameters}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_check_buffer_overrun_a9e6e2bcffc541c9b54cff59301d8b3b2}
+
+
+Get minimum length of format string result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\-\_\-string} & format string \\
+\hline
+{\em parameters} & given parameters to sprintf \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+minimum length of resulting string 
+\end{DoxyReturn}
+\hypertarget{class_check_buffer_overrun_aab02af8a1f11d1f7443bb0ea10cd9409}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!execution\-Paths@{execution\-Paths}}
+\index{execution\-Paths@{execution\-Paths}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{execution\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::execution\-Paths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_buffer_overrun_aab02af8a1f11d1f7443bb0ea10cd9409}
+
+
+Check for buffer overruns by inspecting execution paths 
+
+\hypertarget{class_check_buffer_overrun_a21d46e65e2b2e030bc5b049c8f61d277}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!get\-Error\-Messages@{get\-Error\-Messages}}
+\index{get\-Error\-Messages@{get\-Error\-Messages}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{get\-Error\-Messages}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::get\-Error\-Messages (
+\begin{DoxyParamCaption}
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger, }
+\item[{const {\bf Settings} $\ast$}]{settings}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_buffer_overrun_a21d46e65e2b2e030bc5b049c8f61d277}
+get error messages 
+
+Implements \hyperlink{class_check_a2618762a5ca467c9aecc52071fb0a00b}{Check}.
+
+\hypertarget{class_check_buffer_overrun_a44e4545d42f9f84ee3db00001ee7124c}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!negative\-Index@{negative\-Index}}
+\index{negative\-Index@{negative\-Index}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{negative\-Index}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::negative\-Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_buffer_overrun_a44e4545d42f9f84ee3db00001ee7124c}
+\hyperlink{class_check}{Check} for negative index \hypertarget{class_check_buffer_overrun_af4fe893bb9e3b4d402467bfc201acb01}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!parse\-\_\-for\-\_\-body@{parse\-\_\-for\-\_\-body}}
+\index{parse\-\_\-for\-\_\-body@{parse\-\_\-for\-\_\-body}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{parse\-\_\-for\-\_\-body}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::parse\-\_\-for\-\_\-body (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok2, }
+\item[{const {\bf Array\-Info} \&}]{array\-Info, }
+\item[{const std\-::string \&}]{strindex, }
+\item[{bool}]{condition\-\_\-out\-\_\-of\-\_\-bounds, }
+\item[{unsigned int}]{counter\-\_\-varid, }
+\item[{const std\-::string \&}]{min\-\_\-counter\-\_\-value, }
+\item[{const std\-::string \&}]{max\-\_\-counter\-\_\-value}
+\end{DoxyParamCaption}
+)}}\label{class_check_buffer_overrun_af4fe893bb9e3b4d402467bfc201acb01}
+Helper function used when parsing for-\/loops \hypertarget{class_check_buffer_overrun_af0b26b559bda17a0403231d73756bd81}{\index{Check\-Buffer\-Overrun@{Check\-Buffer\-Overrun}!run\-Simplified\-Checks@{run\-Simplified\-Checks}}
+\index{run\-Simplified\-Checks@{run\-Simplified\-Checks}!CheckBufferOverrun@{Check\-Buffer\-Overrun}}
+\subsubsection[{run\-Simplified\-Checks}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::run\-Simplified\-Checks (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_buffer_overrun_af0b26b559bda17a0403231d73756bd81}
+run checks, the token list is simplified \hyperlink{class_execution_path}{Execution\-Path} checking.. 
+
+Implements \hyperlink{class_check_a112445eed1625599b93c69aab4701e5e}{Check}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{checkbufferoverrun_8h}{checkbufferoverrun.\-h}\item 
+lib/\hyperlink{checkbufferoverrun_8cpp}{checkbufferoverrun.\-cpp}\end{DoxyCompactItemize}

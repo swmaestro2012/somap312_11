@@ -1,0 +1,895 @@
+\hypertarget{class_results_tree}{\section{Results\-Tree Class Reference}
+\label{class_results_tree}\index{Results\-Tree@{Results\-Tree}}
+}
+
+
+Cppcheck's results are shown in this tree.  
+
+
+
+
+{\ttfamily \#include $<$resultstree.\-h$>$}
+
+Inheritance diagram for Results\-Tree\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_results_tree}
+\end{center}
+\end{figure}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_results_tree_a925b10c78c1d2bc8113243a3a15785fe}{Results\-Hidden} (bool hidden)
+\begin{DoxyCompactList}\small\item\em Signal that results have been hidden or shown. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_afd7749c517764aaec5b4748b6561e934}{Selection\-Changed} (const Q\-Model\-Index \&current)
+\begin{DoxyCompactList}\small\item\em Signal for selection change in result tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_results_tree_a3fbce5bb5c458ec496890af1f59af559}{Results\-Tree} (Q\-Widget $\ast$parent=0)
+\item 
+virtual \hyperlink{class_results_tree_a96a57550fe1ef45c3003ff830caf753b}{$\sim$\-Results\-Tree} ()
+\item 
+void \hyperlink{class_results_tree_a2afab0b7a2569de86167ad1b47992701}{Initialize} (Q\-Settings $\ast$settings, \hyperlink{class_application_list}{Application\-List} $\ast$list)
+\item 
+void \hyperlink{class_results_tree_a7ec565ce55d01f4b8272c6d15780e5b0}{Add\-Error\-Item} (const \hyperlink{class_error_item}{Error\-Item} \&item)
+\begin{DoxyCompactList}\small\item\em Add a new item to the tree. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_a1c98b1189bf5891d0301c57f6b5325ca}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Clear all errors from the tree. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_a72f91a578f17b348d5a53144cd64bd6e}{Clear} (const Q\-String \&filename)
+\begin{DoxyCompactList}\small\item\em Clear errors for a specific file from the tree. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_a6e0acf8011f034fdbf14429cc6e84f6c}{Show\-Results} (\hyperlink{class_show_types_a92c368f2a33741268265ac2d931eae3f}{Show\-Types\-::\-Show\-Type} type, bool show)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_function}{Function} to show/hide certain type of errors Refreshes the tree. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_a2384fb6041109f3a53a4867eac15b563}{Filter\-Results} (const Q\-String \&filter)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_function}{Function} to filter the displayed list of errors. Refreshes the tree. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_aadc731849f76930eb6f345e697515e0f}{Show\-Hidden\-Results} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_function}{Function} to show results that were previous hidden with \hyperlink{class_results_tree_a8abdbfd6501d249c9da5bc0e875d5883}{Hide\-Result()} \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_a827aaff4ba614e26909624cb8bb3436e}{Save\-Results} (\hyperlink{class_report}{Report} $\ast$report)
+\begin{DoxyCompactList}\small\item\em Save results to a text stream. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_afdc60aa0433b989329650053593c9c8c}{Update\-Settings} (bool show\-Full\-Path, bool save\-Full\-Path, bool save\-All\-Errors)
+\begin{DoxyCompactList}\small\item\em Update tree settings. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_a0fb705da7b19819e3d7dda37ee8c3911}{Set\-Check\-Directory} (const Q\-String \&dir)
+\begin{DoxyCompactList}\small\item\em Set the directory we are checking. \end{DoxyCompactList}\item 
+bool \hyperlink{class_results_tree_a564d0a88e01b546e3ce567b14997ebdd}{Has\-Visible\-Results} () const 
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_check}{Check} if there are any visible results in view. \end{DoxyCompactList}\item 
+bool \hyperlink{class_results_tree_a18fae258228df50cd36a277eb5d73f6c}{Has\-Results} () const 
+\begin{DoxyCompactList}\small\item\em Do we have results from check? \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_a897f4c23156619b6e780552eaabeaeb5}{Save\-Settings} ()
+\begin{DoxyCompactList}\small\item\em Save all settings Column widths. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_a4622fde8ddf593104a0146d3a76cbfa3}{Translate} ()
+\begin{DoxyCompactList}\small\item\em Change all visible texts language. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_show_types}{Show\-Types} \hyperlink{class_results_tree_a5c18a240324385c3d7eea5fd247ffe95}{m\-Show\-Severities}
+\begin{DoxyCompactList}\small\item\em G\-U\-I severities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_results_tree_a90d9684ab2a2cdd85f8bf87726ab8405}{Quick\-Start\-Application} (const Q\-Model\-Index \&index)
+\begin{DoxyCompactList}\small\item\em Slot to quickstart an error with default application. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_aa44bb046505efa7207162c22f94002f3}{Context} (int application)
+\begin{DoxyCompactList}\small\item\em Slot for context menu item to open an error with specified application. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_a8043ea2093ed49c5f46ec2ce97b9183d}{Copy\-Filename} ()
+\begin{DoxyCompactList}\small\item\em Slot for context menu item to copy filename to clipboard. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_a81d34f0bfc5d8eb0c4e785fda1933c2a}{Copy\-Full\-Path} ()
+\begin{DoxyCompactList}\small\item\em Slot for context menu item to copy full path to clipboard. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_ad4b71c8e9cb07b06579370a1f3af9a13}{Copy\-Message} ()
+\begin{DoxyCompactList}\small\item\em Slot for context menu item to the current error message to clipboard. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_a8abdbfd6501d249c9da5bc0e875d5883}{Hide\-Result} ()
+\begin{DoxyCompactList}\small\item\em Slot for context menu item to hide the current error message. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_results_tree_a4933487b685602aa451086791e147457}{current\-Changed} (const Q\-Model\-Index \&current, const Q\-Model\-Index \&previous)
+\begin{DoxyCompactList}\small\item\em Slot for selection change in the results tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_results_tree_a3d9043f2c4d28cf26954988e5c27d9e3}{Refresh\-File\-Paths} ()
+\begin{DoxyCompactList}\small\item\em Hides/shows full file path on all error file items according to m\-Show\-Full\-Path. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_ad326e81f640835a5ffbcac68a7fe363c}{Refresh\-File\-Paths} (Q\-Standard\-Item $\ast$item)
+\begin{DoxyCompactList}\small\item\em Hides/shows full file path on all error file items according to m\-Show\-Full\-Path. \end{DoxyCompactList}\item 
+Q\-String \hyperlink{class_results_tree_ac81d51e8c334869b125a83b8907bd393}{Strip\-Path} (const Q\-String \&path, bool saving)
+\begin{DoxyCompactList}\small\item\em Removes checking directory from given path if m\-Show\-Full\-Path is false. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_a00a570f21de0f2f2d759f5de0668d359}{Save\-Errors} (\hyperlink{class_report}{Report} $\ast$report, Q\-Standard\-Item $\ast$item)
+\begin{DoxyCompactList}\small\item\em Save all errors under specified item. \end{DoxyCompactList}\item 
+Q\-String \hyperlink{class_results_tree_aa75467b65715c99c2ab3d7b0f575fb34}{Severity\-To\-Icon} (\hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6}{Severity\-::\-Severity\-Type} severity) const 
+\begin{DoxyCompactList}\small\item\em Convert a severity string to a icon filename. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_ab99d7ca6fd7120fb10166b6e92b16809}{Start\-Application} (Q\-Standard\-Item $\ast$target, int application=-\/1)
+\begin{DoxyCompactList}\small\item\em Helper function to open an error within target with application$\ast$. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_af1612a3ae87e0bd9ac2320eb11cdd891}{Copy\-Path} (Q\-Standard\-Item $\ast$target, bool full\-Path)
+\begin{DoxyCompactList}\small\item\em Helper function to copy filename/full path to the clipboard. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_a0f858d208a0440a6a2a98256cbb77ba8}{context\-Menu\-Event} (Q\-Context\-Menu\-Event $\ast$e)
+\begin{DoxyCompactList}\small\item\em Context menu event (user right clicked on the tree) \end{DoxyCompactList}\item 
+Q\-Standard\-Item $\ast$ \hyperlink{class_results_tree_a73c70aff7a2fdaba4ab01806030a679d}{Add\-Backtrace\-Files} (Q\-Standard\-Item $\ast$parent, const \hyperlink{class_error_line}{Error\-Line} \&item, const bool hide, const Q\-String \&icon)
+\begin{DoxyCompactList}\small\item\em Add a new error item beneath a file or a backtrace item beneath an error. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_aba23d67996a5c56474d610f84a1bbd2b}{Refresh\-Tree} ()
+\begin{DoxyCompactList}\small\item\em Refresh tree by checking which of the items should be shown and which should be hidden. \end{DoxyCompactList}\item 
+Q\-String \hyperlink{class_results_tree_ac2a9b0751652e3e5e7cbed428b0af32e}{Severity\-To\-Translated\-String} (\hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6}{Severity\-::\-Severity\-Type} severity)
+\begin{DoxyCompactList}\small\item\em Convert \hyperlink{class_severity}{Severity} to translated string for G\-U\-I. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_af015f1d1b36f1979d106055f05bb9abb}{Load\-Settings} ()
+\begin{DoxyCompactList}\small\item\em Load all settings Column widths. \end{DoxyCompactList}\item 
+Q\-String \hyperlink{class_results_tree_a93d0cc42de0537cec1f9f6f271312e0a}{Ask\-File\-Dir} (const Q\-String \&file)
+\begin{DoxyCompactList}\small\item\em Ask directory where file is located. \end{DoxyCompactList}\item 
+Q\-Standard\-Item $\ast$ \hyperlink{class_results_tree_a2970e0780523e3ed847c6f5f5e346fa3}{Create\-Normal\-Item} (const Q\-String \&name)
+\begin{DoxyCompactList}\small\item\em Create new normal item. \end{DoxyCompactList}\item 
+Q\-Standard\-Item $\ast$ \hyperlink{class_results_tree_a11851e5873648b1f509ba8846c6bd77d}{Create\-Line\-Number\-Item} (const Q\-String \&linenumber)
+\begin{DoxyCompactList}\small\item\em Create new line number item. \end{DoxyCompactList}\item 
+Q\-Standard\-Item $\ast$ \hyperlink{class_results_tree_a87bcc32fe12e3e498e521b11715ddb29}{Find\-File\-Item} (const Q\-String \&name)
+\begin{DoxyCompactList}\small\item\em Finds a file item. \end{DoxyCompactList}\item 
+Q\-Standard\-Item $\ast$ \hyperlink{class_results_tree_a03c27356a21d78982fb72e6a1e56e235}{Ensure\-File\-Item} (const Q\-String \&fullpath, const Q\-String \&file0, bool hide)
+\begin{DoxyCompactList}\small\item\em Ensures there's a item in the model for the specified file. \end{DoxyCompactList}\item 
+void \hyperlink{class_results_tree_ab5c6637de7b81e0808963ab24c26fbf0}{Show\-File\-Item} (const Q\-String \&name)
+\begin{DoxyCompactList}\small\item\em Show a file item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\-Standard\-Item\-Model \hyperlink{class_results_tree_a8889b30c7b1a91bc7e8190fca9f7e6bd}{m\-Model}
+\begin{DoxyCompactList}\small\item\em Item model for tree. \end{DoxyCompactList}\item 
+Q\-Settings $\ast$ \hyperlink{class_results_tree_a7dba9cd0f96e3fc49fb13b7256319ebc}{m\-Settings}
+\begin{DoxyCompactList}\small\item\em Program settings. \end{DoxyCompactList}\item 
+Q\-String \hyperlink{class_results_tree_a1f4786e67be0097bc545284dab60362a}{m\-Filter}
+\begin{DoxyCompactList}\small\item\em A string used to filter the results for display. \end{DoxyCompactList}\item 
+\hyperlink{class_application_list}{Application\-List} $\ast$ \hyperlink{class_results_tree_a984dd04477ae0aaec99c604aeb5cc7e6}{m\-Applications}
+\begin{DoxyCompactList}\small\item\em List of applications to open errors with. \end{DoxyCompactList}\item 
+Q\-Standard\-Item $\ast$ \hyperlink{class_results_tree_add694da9be3cfcc2c7c185ed794d3048}{m\-Context\-Item}
+\begin{DoxyCompactList}\small\item\em Right clicked item (used by context menu slots) \end{DoxyCompactList}\item 
+bool \hyperlink{class_results_tree_ab09fc442b721823c61da0e735ae529c2}{m\-Show\-Full\-Path}
+\begin{DoxyCompactList}\small\item\em Should full path of files be shown (true) or relative (false) \end{DoxyCompactList}\item 
+bool \hyperlink{class_results_tree_a0d2d94d0193a1749d7d8028ef8325c6c}{m\-Save\-Full\-Path}
+\begin{DoxyCompactList}\small\item\em Should full path of files be saved. \end{DoxyCompactList}\item 
+bool \hyperlink{class_results_tree_abdcc47d8713e599e1a9a48fcab53a0ce}{m\-Save\-All\-Errors}
+\begin{DoxyCompactList}\small\item\em Save all errors (true) or only visible (false) \end{DoxyCompactList}\item 
+Q\-String \hyperlink{class_results_tree_a92586c85ef2b0c8ce3bc6fc8023cdfdc}{m\-Check\-Path}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_path}{Path} we are currently checking. \end{DoxyCompactList}\item 
+bool \hyperlink{class_results_tree_a60ddd8ebf2e1ee75765a4de8bbcf3f05}{m\-Visible\-Errors}
+\begin{DoxyCompactList}\small\item\em Are there any visible errors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Cppcheck's results are shown in this tree. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_results_tree_a3fbce5bb5c458ec496890af1f59af559}{\index{Results\-Tree@{Results\-Tree}!Results\-Tree@{Results\-Tree}}
+\index{Results\-Tree@{Results\-Tree}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Results\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}Results\-Tree\-::\-Results\-Tree (
+\begin{DoxyParamCaption}
+\item[{Q\-Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_results_tree_a3fbce5bb5c458ec496890af1f59af559}
+\hypertarget{class_results_tree_a96a57550fe1ef45c3003ff830caf753b}{\index{Results\-Tree@{Results\-Tree}!$\sim$\-Results\-Tree@{$\sim$\-Results\-Tree}}
+\index{$\sim$\-Results\-Tree@{$\sim$\-Results\-Tree}!ResultsTree@{Results\-Tree}}
+\subsubsection[{$\sim$\-Results\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}Results\-Tree\-::$\sim$\-Results\-Tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_results_tree_a96a57550fe1ef45c3003ff830caf753b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_results_tree_a73c70aff7a2fdaba4ab01806030a679d}{\index{Results\-Tree@{Results\-Tree}!Add\-Backtrace\-Files@{Add\-Backtrace\-Files}}
+\index{Add\-Backtrace\-Files@{Add\-Backtrace\-Files}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Add\-Backtrace\-Files}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Standard\-Item $\ast$ Results\-Tree\-::\-Add\-Backtrace\-Files (
+\begin{DoxyParamCaption}
+\item[{Q\-Standard\-Item $\ast$}]{parent, }
+\item[{const {\bf Error\-Line} \&}]{item, }
+\item[{const bool}]{hide, }
+\item[{const Q\-String \&}]{icon}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_a73c70aff7a2fdaba4ab01806030a679d}
+
+
+Add a new error item beneath a file or a backtrace item beneath an error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent for the item. Either a file item or an error item \\
+\hline
+{\em item} & Error line data \\
+\hline
+{\em hide} & Should this be hidden (true) or shown (false) \\
+\hline
+{\em icon} & Should a default backtrace item icon be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+newly created Q\-Standard\-Item $\ast$ 
+\end{DoxyReturn}
+\hypertarget{class_results_tree_a7ec565ce55d01f4b8272c6d15780e5b0}{\index{Results\-Tree@{Results\-Tree}!Add\-Error\-Item@{Add\-Error\-Item}}
+\index{Add\-Error\-Item@{Add\-Error\-Item}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Add\-Error\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Add\-Error\-Item (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\-Item} \&}]{item}
+\end{DoxyParamCaption}
+)}}\label{class_results_tree_a7ec565ce55d01f4b8272c6d15780e5b0}
+
+
+Add a new item to the tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Error item data \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_tree_a93d0cc42de0537cec1f9f6f271312e0a}{\index{Results\-Tree@{Results\-Tree}!Ask\-File\-Dir@{Ask\-File\-Dir}}
+\index{Ask\-File\-Dir@{Ask\-File\-Dir}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Ask\-File\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Results\-Tree\-::\-Ask\-File\-Dir (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_a93d0cc42de0537cec1f9f6f271312e0a}
+
+
+Ask directory where file is located. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & File name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Directory user chose. 
+\end{DoxyReturn}
+\hypertarget{class_results_tree_a1c98b1189bf5891d0301c57f6b5325ca}{\index{Results\-Tree@{Results\-Tree}!Clear@{Clear}}
+\index{Clear@{Clear}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_results_tree_a1c98b1189bf5891d0301c57f6b5325ca}
+
+
+Clear all errors from the tree. 
+
+\hypertarget{class_results_tree_a72f91a578f17b348d5a53144cd64bd6e}{\index{Results\-Tree@{Results\-Tree}!Clear@{Clear}}
+\index{Clear@{Clear}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Clear (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{filename}
+\end{DoxyParamCaption}
+)}}\label{class_results_tree_a72f91a578f17b348d5a53144cd64bd6e}
+
+
+Clear errors for a specific file from the tree. 
+
+\hypertarget{class_results_tree_aa44bb046505efa7207162c22f94002f3}{\index{Results\-Tree@{Results\-Tree}!Context@{Context}}
+\index{Context@{Context}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Context}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Context (
+\begin{DoxyParamCaption}
+\item[{int}]{application}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_results_tree_aa44bb046505efa7207162c22f94002f3}
+
+
+Slot for context menu item to open an error with specified application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em application} & Index of the application to open the error \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_tree_a0f858d208a0440a6a2a98256cbb77ba8}{\index{Results\-Tree@{Results\-Tree}!context\-Menu\-Event@{context\-Menu\-Event}}
+\index{context\-Menu\-Event@{context\-Menu\-Event}!ResultsTree@{Results\-Tree}}
+\subsubsection[{context\-Menu\-Event}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::context\-Menu\-Event (
+\begin{DoxyParamCaption}
+\item[{Q\-Context\-Menu\-Event $\ast$}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_a0f858d208a0440a6a2a98256cbb77ba8}
+
+
+Context menu event (user right clicked on the tree) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Event \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_tree_a8043ea2093ed49c5f46ec2ce97b9183d}{\index{Results\-Tree@{Results\-Tree}!Copy\-Filename@{Copy\-Filename}}
+\index{Copy\-Filename@{Copy\-Filename}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Copy\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Copy\-Filename (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_results_tree_a8043ea2093ed49c5f46ec2ce97b9183d}
+
+
+Slot for context menu item to copy filename to clipboard. 
+
+\hypertarget{class_results_tree_a81d34f0bfc5d8eb0c4e785fda1933c2a}{\index{Results\-Tree@{Results\-Tree}!Copy\-Full\-Path@{Copy\-Full\-Path}}
+\index{Copy\-Full\-Path@{Copy\-Full\-Path}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Copy\-Full\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Copy\-Full\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_results_tree_a81d34f0bfc5d8eb0c4e785fda1933c2a}
+
+
+Slot for context menu item to copy full path to clipboard. 
+
+\hypertarget{class_results_tree_ad4b71c8e9cb07b06579370a1f3af9a13}{\index{Results\-Tree@{Results\-Tree}!Copy\-Message@{Copy\-Message}}
+\index{Copy\-Message@{Copy\-Message}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Copy\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Copy\-Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_results_tree_ad4b71c8e9cb07b06579370a1f3af9a13}
+
+
+Slot for context menu item to the current error message to clipboard. 
+
+\hypertarget{class_results_tree_af1612a3ae87e0bd9ac2320eb11cdd891}{\index{Results\-Tree@{Results\-Tree}!Copy\-Path@{Copy\-Path}}
+\index{Copy\-Path@{Copy\-Path}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Copy\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Copy\-Path (
+\begin{DoxyParamCaption}
+\item[{Q\-Standard\-Item $\ast$}]{target, }
+\item[{bool}]{full\-Path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_af1612a3ae87e0bd9ac2320eb11cdd891}
+
+
+Helper function to copy filename/full path to the clipboard. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Error tree item to open \\
+\hline
+{\em full\-Path} & Are we copying full path or only filename? \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_tree_a11851e5873648b1f509ba8846c6bd77d}{\index{Results\-Tree@{Results\-Tree}!Create\-Line\-Number\-Item@{Create\-Line\-Number\-Item}}
+\index{Create\-Line\-Number\-Item@{Create\-Line\-Number\-Item}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Create\-Line\-Number\-Item}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Standard\-Item $\ast$ Results\-Tree\-::\-Create\-Line\-Number\-Item (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{linenumber}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_a11851e5873648b1f509ba8846c6bd77d}
+
+
+Create new line number item. 
+
+Line number item has right align and text set as tooltip. 
+\begin{DoxyParams}{Parameters}
+{\em name} & name for the item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new Q\-Standard\-Item 
+\end{DoxyReturn}
+\hypertarget{class_results_tree_a2970e0780523e3ed847c6f5f5e346fa3}{\index{Results\-Tree@{Results\-Tree}!Create\-Normal\-Item@{Create\-Normal\-Item}}
+\index{Create\-Normal\-Item@{Create\-Normal\-Item}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Create\-Normal\-Item}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Standard\-Item $\ast$ Results\-Tree\-::\-Create\-Normal\-Item (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_a2970e0780523e3ed847c6f5f5e346fa3}
+
+
+Create new normal item. 
+
+Normal item has left alignment and text set also as tooltip. 
+\begin{DoxyParams}{Parameters}
+{\em name} & name for the item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new Q\-Standard\-Item 
+\end{DoxyReturn}
+\hypertarget{class_results_tree_a4933487b685602aa451086791e147457}{\index{Results\-Tree@{Results\-Tree}!current\-Changed@{current\-Changed}}
+\index{current\-Changed@{current\-Changed}!ResultsTree@{Results\-Tree}}
+\subsubsection[{current\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::current\-Changed (
+\begin{DoxyParamCaption}
+\item[{const Q\-Model\-Index \&}]{current, }
+\item[{const Q\-Model\-Index \&}]{previous}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}, {\ttfamily [slot]}}}\label{class_results_tree_a4933487b685602aa451086791e147457}
+
+
+Slot for selection change in the results tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Model index to specify new selected item. \\
+\hline
+{\em index} & Model index to specify previous selected item. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_tree_a03c27356a21d78982fb72e6a1e56e235}{\index{Results\-Tree@{Results\-Tree}!Ensure\-File\-Item@{Ensure\-File\-Item}}
+\index{Ensure\-File\-Item@{Ensure\-File\-Item}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Ensure\-File\-Item}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Standard\-Item $\ast$ Results\-Tree\-::\-Ensure\-File\-Item (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{fullpath, }
+\item[{const Q\-String \&}]{file0, }
+\item[{bool}]{hide}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_a03c27356a21d78982fb72e6a1e56e235}
+
+
+Ensures there's a item in the model for the specified file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fullpath} & Full path to the file item. \\
+\hline
+{\em file0} & Source file \\
+\hline
+{\em hide} & is the error (we want this file item for) hidden? \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Q\-Standard\-Item to be used as a parent for all errors for specified file 
+\end{DoxyReturn}
+\hypertarget{class_results_tree_a2384fb6041109f3a53a4867eac15b563}{\index{Results\-Tree@{Results\-Tree}!Filter\-Results@{Filter\-Results}}
+\index{Filter\-Results@{Filter\-Results}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Filter\-Results}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Filter\-Results (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{filter}
+\end{DoxyParamCaption}
+)}}\label{class_results_tree_a2384fb6041109f3a53a4867eac15b563}
+
+
+\hyperlink{class_function}{Function} to filter the displayed list of errors. Refreshes the tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter} & String that must be found in the summary, description, file or id \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_tree_a87bcc32fe12e3e498e521b11715ddb29}{\index{Results\-Tree@{Results\-Tree}!Find\-File\-Item@{Find\-File\-Item}}
+\index{Find\-File\-Item@{Find\-File\-Item}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Find\-File\-Item}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Standard\-Item $\ast$ Results\-Tree\-::\-Find\-File\-Item (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_a87bcc32fe12e3e498e521b11715ddb29}
+
+
+Finds a file item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the file item to find \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to file item or null if none found 
+\end{DoxyReturn}
+\hypertarget{class_results_tree_a18fae258228df50cd36a277eb5d73f6c}{\index{Results\-Tree@{Results\-Tree}!Has\-Results@{Has\-Results}}
+\index{Has\-Results@{Has\-Results}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Has\-Results}]{\setlength{\rightskip}{0pt plus 5cm}bool Results\-Tree\-::\-Has\-Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_results_tree_a18fae258228df50cd36a277eb5d73f6c}
+
+
+Do we have results from check? 
+
+\begin{DoxyReturn}{Returns}
+true if there is at least one warning/error, hidden or visible. 
+\end{DoxyReturn}
+\hypertarget{class_results_tree_a564d0a88e01b546e3ce567b14997ebdd}{\index{Results\-Tree@{Results\-Tree}!Has\-Visible\-Results@{Has\-Visible\-Results}}
+\index{Has\-Visible\-Results@{Has\-Visible\-Results}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Has\-Visible\-Results}]{\setlength{\rightskip}{0pt plus 5cm}bool Results\-Tree\-::\-Has\-Visible\-Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_results_tree_a564d0a88e01b546e3ce567b14997ebdd}
+
+
+\hyperlink{class_check}{Check} if there are any visible results in view. 
+
+\begin{DoxyReturn}{Returns}
+true if there is at least one visible warning/error. 
+\end{DoxyReturn}
+\hypertarget{class_results_tree_a8abdbfd6501d249c9da5bc0e875d5883}{\index{Results\-Tree@{Results\-Tree}!Hide\-Result@{Hide\-Result}}
+\index{Hide\-Result@{Hide\-Result}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Hide\-Result}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Hide\-Result (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_results_tree_a8abdbfd6501d249c9da5bc0e875d5883}
+
+
+Slot for context menu item to hide the current error message. 
+
+\hypertarget{class_results_tree_a2afab0b7a2569de86167ad1b47992701}{\index{Results\-Tree@{Results\-Tree}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Initialize (
+\begin{DoxyParamCaption}
+\item[{Q\-Settings $\ast$}]{settings, }
+\item[{{\bf Application\-List} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{class_results_tree_a2afab0b7a2569de86167ad1b47992701}
+\hypertarget{class_results_tree_af015f1d1b36f1979d106055f05bb9abb}{\index{Results\-Tree@{Results\-Tree}!Load\-Settings@{Load\-Settings}}
+\index{Load\-Settings@{Load\-Settings}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Load\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Load\-Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_af015f1d1b36f1979d106055f05bb9abb}
+
+
+Load all settings Column widths. 
+
+\hypertarget{class_results_tree_a90d9684ab2a2cdd85f8bf87726ab8405}{\index{Results\-Tree@{Results\-Tree}!Quick\-Start\-Application@{Quick\-Start\-Application}}
+\index{Quick\-Start\-Application@{Quick\-Start\-Application}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Quick\-Start\-Application}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Quick\-Start\-Application (
+\begin{DoxyParamCaption}
+\item[{const Q\-Model\-Index \&}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_results_tree_a90d9684ab2a2cdd85f8bf87726ab8405}
+
+
+Slot to quickstart an error with default application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Model index to specify which error item to open \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_tree_a3d9043f2c4d28cf26954988e5c27d9e3}{\index{Results\-Tree@{Results\-Tree}!Refresh\-File\-Paths@{Refresh\-File\-Paths}}
+\index{Refresh\-File\-Paths@{Refresh\-File\-Paths}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Refresh\-File\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Refresh\-File\-Paths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_a3d9043f2c4d28cf26954988e5c27d9e3}
+
+
+Hides/shows full file path on all error file items according to m\-Show\-Full\-Path. 
+
+\hypertarget{class_results_tree_ad326e81f640835a5ffbcac68a7fe363c}{\index{Results\-Tree@{Results\-Tree}!Refresh\-File\-Paths@{Refresh\-File\-Paths}}
+\index{Refresh\-File\-Paths@{Refresh\-File\-Paths}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Refresh\-File\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Refresh\-File\-Paths (
+\begin{DoxyParamCaption}
+\item[{Q\-Standard\-Item $\ast$}]{item}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_ad326e81f640835a5ffbcac68a7fe363c}
+
+
+Hides/shows full file path on all error file items according to m\-Show\-Full\-Path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Parent item whose childrens paths to change \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_tree_aba23d67996a5c56474d610f84a1bbd2b}{\index{Results\-Tree@{Results\-Tree}!Refresh\-Tree@{Refresh\-Tree}}
+\index{Refresh\-Tree@{Refresh\-Tree}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Refresh\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Refresh\-Tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_aba23d67996a5c56474d610f84a1bbd2b}
+
+
+Refresh tree by checking which of the items should be shown and which should be hidden. 
+
+\hypertarget{class_results_tree_a925b10c78c1d2bc8113243a3a15785fe}{\index{Results\-Tree@{Results\-Tree}!Results\-Hidden@{Results\-Hidden}}
+\index{Results\-Hidden@{Results\-Hidden}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Results\-Hidden}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Results\-Hidden (
+\begin{DoxyParamCaption}
+\item[{bool}]{hidden}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_results_tree_a925b10c78c1d2bc8113243a3a15785fe}
+
+
+Signal that results have been hidden or shown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hidden} & true if there are some hidden results, or false if there are not \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_tree_a00a570f21de0f2f2d759f5de0668d359}{\index{Results\-Tree@{Results\-Tree}!Save\-Errors@{Save\-Errors}}
+\index{Save\-Errors@{Save\-Errors}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Save\-Errors}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Save\-Errors (
+\begin{DoxyParamCaption}
+\item[{{\bf Report} $\ast$}]{report, }
+\item[{Q\-Standard\-Item $\ast$}]{item}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_a00a570f21de0f2f2d759f5de0668d359}
+
+
+Save all errors under specified item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em report} & \hyperlink{class_report}{Report} that errors are saved to \\
+\hline
+{\em item} & Item whose errors to save \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_tree_a827aaff4ba614e26909624cb8bb3436e}{\index{Results\-Tree@{Results\-Tree}!Save\-Results@{Save\-Results}}
+\index{Save\-Results@{Save\-Results}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Save\-Results}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Save\-Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Report} $\ast$}]{report}
+\end{DoxyParamCaption}
+)}}\label{class_results_tree_a827aaff4ba614e26909624cb8bb3436e}
+
+
+Save results to a text stream. 
+
+\hypertarget{class_results_tree_a897f4c23156619b6e780552eaabeaeb5}{\index{Results\-Tree@{Results\-Tree}!Save\-Settings@{Save\-Settings}}
+\index{Save\-Settings@{Save\-Settings}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Save\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Save\-Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_results_tree_a897f4c23156619b6e780552eaabeaeb5}
+
+
+Save all settings Column widths. 
+
+\hypertarget{class_results_tree_afd7749c517764aaec5b4748b6561e934}{\index{Results\-Tree@{Results\-Tree}!Selection\-Changed@{Selection\-Changed}}
+\index{Selection\-Changed@{Selection\-Changed}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Selection\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Selection\-Changed (
+\begin{DoxyParamCaption}
+\item[{const Q\-Model\-Index \&}]{current}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_results_tree_afd7749c517764aaec5b4748b6561e934}
+
+
+Signal for selection change in result tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Model index to specify new selected item. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_tree_a0fb705da7b19819e3d7dda37ee8c3911}{\index{Results\-Tree@{Results\-Tree}!Set\-Check\-Directory@{Set\-Check\-Directory}}
+\index{Set\-Check\-Directory@{Set\-Check\-Directory}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Set\-Check\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Set\-Check\-Directory (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{dir}
+\end{DoxyParamCaption}
+)}}\label{class_results_tree_a0fb705da7b19819e3d7dda37ee8c3911}
+
+
+Set the directory we are checking. 
+
+This is used to split error file path to relative if necessary 
+\begin{DoxyParams}{Parameters}
+{\em dir} & Directory we are checking \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_tree_aa75467b65715c99c2ab3d7b0f575fb34}{\index{Results\-Tree@{Results\-Tree}!Severity\-To\-Icon@{Severity\-To\-Icon}}
+\index{Severity\-To\-Icon@{Severity\-To\-Icon}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Severity\-To\-Icon}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Results\-Tree\-::\-Severity\-To\-Icon (
+\begin{DoxyParamCaption}
+\item[{{\bf Severity\-::\-Severity\-Type}}]{severity}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_aa75467b65715c99c2ab3d7b0f575fb34}
+
+
+Convert a severity string to a icon filename. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em severity} & \hyperlink{class_severity}{Severity} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_tree_ac2a9b0751652e3e5e7cbed428b0af32e}{\index{Results\-Tree@{Results\-Tree}!Severity\-To\-Translated\-String@{Severity\-To\-Translated\-String}}
+\index{Severity\-To\-Translated\-String@{Severity\-To\-Translated\-String}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Severity\-To\-Translated\-String}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Results\-Tree\-::\-Severity\-To\-Translated\-String (
+\begin{DoxyParamCaption}
+\item[{{\bf Severity\-::\-Severity\-Type}}]{severity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_ac2a9b0751652e3e5e7cbed428b0af32e}
+
+
+Convert \hyperlink{class_severity}{Severity} to translated string for G\-U\-I. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & \hyperlink{class_severity}{Severity} to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_severity}{Severity} as translated string 
+\end{DoxyReturn}
+\hypertarget{class_results_tree_ab5c6637de7b81e0808963ab24c26fbf0}{\index{Results\-Tree@{Results\-Tree}!Show\-File\-Item@{Show\-File\-Item}}
+\index{Show\-File\-Item@{Show\-File\-Item}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Show\-File\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Show\-File\-Item (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_ab5c6637de7b81e0808963ab24c26fbf0}
+
+
+Show a file item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Filename of the fileitem \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_tree_aadc731849f76930eb6f345e697515e0f}{\index{Results\-Tree@{Results\-Tree}!Show\-Hidden\-Results@{Show\-Hidden\-Results}}
+\index{Show\-Hidden\-Results@{Show\-Hidden\-Results}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Show\-Hidden\-Results}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Show\-Hidden\-Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_results_tree_aadc731849f76930eb6f345e697515e0f}
+
+
+\hyperlink{class_function}{Function} to show results that were previous hidden with \hyperlink{class_results_tree_a8abdbfd6501d249c9da5bc0e875d5883}{Hide\-Result()} 
+
+\hypertarget{class_results_tree_a6e0acf8011f034fdbf14429cc6e84f6c}{\index{Results\-Tree@{Results\-Tree}!Show\-Results@{Show\-Results}}
+\index{Show\-Results@{Show\-Results}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Show\-Results}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Show\-Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Show\-Types\-::\-Show\-Type}}]{type, }
+\item[{bool}]{show}
+\end{DoxyParamCaption}
+)}}\label{class_results_tree_a6e0acf8011f034fdbf14429cc6e84f6c}
+
+
+\hyperlink{class_function}{Function} to show/hide certain type of errors Refreshes the tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of error to show/hide \\
+\hline
+{\em show} & Should specified errors be shown (true) or hidden (false) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_tree_ab99d7ca6fd7120fb10166b6e92b16809}{\index{Results\-Tree@{Results\-Tree}!Start\-Application@{Start\-Application}}
+\index{Start\-Application@{Start\-Application}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Start\-Application}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Start\-Application (
+\begin{DoxyParamCaption}
+\item[{Q\-Standard\-Item $\ast$}]{target, }
+\item[{int}]{application = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_ab99d7ca6fd7120fb10166b6e92b16809}
+
+
+Helper function to open an error within target with application$\ast$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Error tree item to open \\
+\hline
+{\em application} & Index of the application to open with. Giving -\/1 (default value) will open the default application. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_results_tree_ac81d51e8c334869b125a83b8907bd393}{\index{Results\-Tree@{Results\-Tree}!Strip\-Path@{Strip\-Path}}
+\index{Strip\-Path@{Strip\-Path}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Strip\-Path}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Results\-Tree\-::\-Strip\-Path (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{path, }
+\item[{bool}]{saving}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_ac81d51e8c334869b125a83b8907bd393}
+
+
+Removes checking directory from given path if m\-Show\-Full\-Path is false. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \hyperlink{class_path}{Path} to remove checking directory \\
+\hline
+{\em saving} & are we saving? \hyperlink{class_check}{Check} m\-Save\-Full\-Path instead \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_path}{Path} that has checking directory removed 
+\end{DoxyReturn}
+\hypertarget{class_results_tree_a4622fde8ddf593104a0146d3a76cbfa3}{\index{Results\-Tree@{Results\-Tree}!Translate@{Translate}}
+\index{Translate@{Translate}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Translate}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Translate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_results_tree_a4622fde8ddf593104a0146d3a76cbfa3}
+
+
+Change all visible texts language. 
+
+\hypertarget{class_results_tree_afdc60aa0433b989329650053593c9c8c}{\index{Results\-Tree@{Results\-Tree}!Update\-Settings@{Update\-Settings}}
+\index{Update\-Settings@{Update\-Settings}!ResultsTree@{Results\-Tree}}
+\subsubsection[{Update\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void Results\-Tree\-::\-Update\-Settings (
+\begin{DoxyParamCaption}
+\item[{bool}]{show\-Full\-Path, }
+\item[{bool}]{save\-Full\-Path, }
+\item[{bool}]{save\-All\-Errors}
+\end{DoxyParamCaption}
+)}}\label{class_results_tree_afdc60aa0433b989329650053593c9c8c}
+
+
+Update tree settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em show\-Full\-Path} & Show full path of files in the tree \\
+\hline
+{\em save\-Full\-Path} & Save full path of files in reports \\
+\hline
+{\em save\-All\-Errors} & Save all visible errors \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_results_tree_a984dd04477ae0aaec99c604aeb5cc7e6}{\index{Results\-Tree@{Results\-Tree}!m\-Applications@{m\-Applications}}
+\index{m\-Applications@{m\-Applications}!ResultsTree@{Results\-Tree}}
+\subsubsection[{m\-Applications}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Application\-List}$\ast$ Results\-Tree\-::m\-Applications\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_a984dd04477ae0aaec99c604aeb5cc7e6}
+
+
+List of applications to open errors with. 
+
+\hypertarget{class_results_tree_a92586c85ef2b0c8ce3bc6fc8023cdfdc}{\index{Results\-Tree@{Results\-Tree}!m\-Check\-Path@{m\-Check\-Path}}
+\index{m\-Check\-Path@{m\-Check\-Path}!ResultsTree@{Results\-Tree}}
+\subsubsection[{m\-Check\-Path}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Results\-Tree\-::m\-Check\-Path\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_a92586c85ef2b0c8ce3bc6fc8023cdfdc}
+
+
+\hyperlink{class_path}{Path} we are currently checking. 
+
+\hypertarget{class_results_tree_add694da9be3cfcc2c7c185ed794d3048}{\index{Results\-Tree@{Results\-Tree}!m\-Context\-Item@{m\-Context\-Item}}
+\index{m\-Context\-Item@{m\-Context\-Item}!ResultsTree@{Results\-Tree}}
+\subsubsection[{m\-Context\-Item}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Standard\-Item$\ast$ Results\-Tree\-::m\-Context\-Item\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_add694da9be3cfcc2c7c185ed794d3048}
+
+
+Right clicked item (used by context menu slots) 
+
+\hypertarget{class_results_tree_a1f4786e67be0097bc545284dab60362a}{\index{Results\-Tree@{Results\-Tree}!m\-Filter@{m\-Filter}}
+\index{m\-Filter@{m\-Filter}!ResultsTree@{Results\-Tree}}
+\subsubsection[{m\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Results\-Tree\-::m\-Filter\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_a1f4786e67be0097bc545284dab60362a}
+
+
+A string used to filter the results for display. 
+
+\hypertarget{class_results_tree_a8889b30c7b1a91bc7e8190fca9f7e6bd}{\index{Results\-Tree@{Results\-Tree}!m\-Model@{m\-Model}}
+\index{m\-Model@{m\-Model}!ResultsTree@{Results\-Tree}}
+\subsubsection[{m\-Model}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Standard\-Item\-Model Results\-Tree\-::m\-Model\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_a8889b30c7b1a91bc7e8190fca9f7e6bd}
+
+
+Item model for tree. 
+
+\hypertarget{class_results_tree_abdcc47d8713e599e1a9a48fcab53a0ce}{\index{Results\-Tree@{Results\-Tree}!m\-Save\-All\-Errors@{m\-Save\-All\-Errors}}
+\index{m\-Save\-All\-Errors@{m\-Save\-All\-Errors}!ResultsTree@{Results\-Tree}}
+\subsubsection[{m\-Save\-All\-Errors}]{\setlength{\rightskip}{0pt plus 5cm}bool Results\-Tree\-::m\-Save\-All\-Errors\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_abdcc47d8713e599e1a9a48fcab53a0ce}
+
+
+Save all errors (true) or only visible (false) 
+
+\hypertarget{class_results_tree_a0d2d94d0193a1749d7d8028ef8325c6c}{\index{Results\-Tree@{Results\-Tree}!m\-Save\-Full\-Path@{m\-Save\-Full\-Path}}
+\index{m\-Save\-Full\-Path@{m\-Save\-Full\-Path}!ResultsTree@{Results\-Tree}}
+\subsubsection[{m\-Save\-Full\-Path}]{\setlength{\rightskip}{0pt plus 5cm}bool Results\-Tree\-::m\-Save\-Full\-Path\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_a0d2d94d0193a1749d7d8028ef8325c6c}
+
+
+Should full path of files be saved. 
+
+\hypertarget{class_results_tree_a7dba9cd0f96e3fc49fb13b7256319ebc}{\index{Results\-Tree@{Results\-Tree}!m\-Settings@{m\-Settings}}
+\index{m\-Settings@{m\-Settings}!ResultsTree@{Results\-Tree}}
+\subsubsection[{m\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Settings$\ast$ Results\-Tree\-::m\-Settings\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_a7dba9cd0f96e3fc49fb13b7256319ebc}
+
+
+Program settings. 
+
+\hypertarget{class_results_tree_ab09fc442b721823c61da0e735ae529c2}{\index{Results\-Tree@{Results\-Tree}!m\-Show\-Full\-Path@{m\-Show\-Full\-Path}}
+\index{m\-Show\-Full\-Path@{m\-Show\-Full\-Path}!ResultsTree@{Results\-Tree}}
+\subsubsection[{m\-Show\-Full\-Path}]{\setlength{\rightskip}{0pt plus 5cm}bool Results\-Tree\-::m\-Show\-Full\-Path\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_ab09fc442b721823c61da0e735ae529c2}
+
+
+Should full path of files be shown (true) or relative (false) 
+
+\hypertarget{class_results_tree_a5c18a240324385c3d7eea5fd247ffe95}{\index{Results\-Tree@{Results\-Tree}!m\-Show\-Severities@{m\-Show\-Severities}}
+\index{m\-Show\-Severities@{m\-Show\-Severities}!ResultsTree@{Results\-Tree}}
+\subsubsection[{m\-Show\-Severities}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Show\-Types} Results\-Tree\-::m\-Show\-Severities}}\label{class_results_tree_a5c18a240324385c3d7eea5fd247ffe95}
+
+
+G\-U\-I severities. 
+
+\hypertarget{class_results_tree_a60ddd8ebf2e1ee75765a4de8bbcf3f05}{\index{Results\-Tree@{Results\-Tree}!m\-Visible\-Errors@{m\-Visible\-Errors}}
+\index{m\-Visible\-Errors@{m\-Visible\-Errors}!ResultsTree@{Results\-Tree}}
+\subsubsection[{m\-Visible\-Errors}]{\setlength{\rightskip}{0pt plus 5cm}bool Results\-Tree\-::m\-Visible\-Errors\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_results_tree_a60ddd8ebf2e1ee75765a4de8bbcf3f05}
+
+
+Are there any visible errors. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{resultstree_8h}{resultstree.\-h}\item 
+gui/\hyperlink{resultstree_8cpp}{resultstree.\-cpp}\end{DoxyCompactItemize}

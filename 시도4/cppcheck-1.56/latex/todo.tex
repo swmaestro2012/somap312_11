@@ -1,0 +1,137 @@
+
+\begin{DoxyRefList}
+\item[\label{todo__todo000028}%
+\hypertarget{todo__todo000028}{}%
+Member \hyperlink{class_check_buffer_overrun_af3d1d363b22f3ee8573447b08714ce85}{Check\-Buffer\-Overrun\-:\-:check\-Global\-And\-Local\-Variable} ()]false negatives\-: this may be too conservative  
+\item[\label{todo__todo000029}%
+\hypertarget{todo__todo000029}{}%
+Member \hyperlink{class_check_buffer_overrun_af902d1058c19edbfa9360d96e0b52618}{Check\-Buffer\-Overrun\-:\-:check\-Struct\-Variable} ()]false negatives\-: handle inner scopes someday  
+\item[\label{todo__todo000034}%
+\hypertarget{todo__todo000034}{}%
+Member \hyperlink{class_check_class_a78c7f5909941ff780990df74023043a2}{Check\-Class\-:\-:private\-Functions} ()]embedded class have access to private functions  
+\item[\label{todo__todo000038}%
+\hypertarget{todo__todo000038}{}%
+Member \hyperlink{class_check_memory_leak_a74c651646a8d740d6ac10a75a55de9a6}{Check\-Memory\-Leak\-:\-:isclass} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$\-\_\-tokenizer, const \hyperlink{class_token}{Token} $\ast$tok, unsigned int varid) const ]false negative\-: check base class for side effects 
+
+false negative\-: check constructors for side effects  
+\item[\label{todo__todo000040}%
+\hypertarget{todo__todo000040}{}%
+Member \hyperlink{class_check_memory_leak_in_function_ad5de6453dc31ac22af41b26369bfdce9}{Check\-Memory\-Leak\-In\-Function\-:\-:call\-\_\-func} (const \hyperlink{class_token}{Token} $\ast$tok, std\-::list$<$ const Token $\ast$ $>$ callstack, const unsigned int varid, Alloc\-Type \&alloctype, Alloc\-Type \&dealloctype, bool \&allocpar, unsigned int sz)]handle \char`\"{}goto\char`\"{}  
+\item[\label{todo__todo000042}%
+\hypertarget{todo__todo000042}{}%
+Member \hyperlink{class_check_memory_leak_in_function_a4eefe783ba9711813f40557c3a5d36dd}{Check\-Memory\-Leak\-In\-Function\-:\-:check\-Scope} (const \hyperlink{class_token}{Token} $\ast$\-Tok1, const std\-::string \&varname, unsigned int varid, bool classmember, unsigned int sz)]handle \char`\"{}goto\char`\"{}  
+\item[\label{todo__todo000041}%
+\hypertarget{todo__todo000041}{}%
+Member \hyperlink{class_check_memory_leak_in_function_a0a8ea7cea5f1e0bc1f6857c7348c61c9}{Check\-Memory\-Leak\-In\-Function\-:\-:simplifycode} (\hyperlink{class_token}{Token} $\ast$tok) const ]If the loop \char`\"{}do \{ alloc ; \}\char`\"{} can be executed twice, reduce it to \char`\"{}loop alloc ;\char`\"{}  
+\item[\label{todo__todo000049}%
+\hypertarget{todo__todo000049}{}%
+Member \hyperlink{class_check_unused_functions_ad89f0ddf22cb4eaf861089cd790a1e95}{Check\-Unused\-Functions\-:\-:check} (\hyperlink{class_error_logger}{Error\-Logger} $\ast$const error\-Logger)]add error message \char`\"{}function is only used in $<$file$>$ it can be static\char`\"{}  
+\item[\label{todo__todo000001}%
+\hypertarget{todo__todo000001}{}%
+Class \hyperlink{class_csv_report}{Csv\-Report} ]This class should be inherited from \hyperlink{class_txt_report}{Txt\-Report}?  
+\item[\label{todo__todo000009}%
+\hypertarget{todo__todo000009}{}%
+Member \hyperlink{class_ge_s_hi_ab068cf775d5f11f1002346897d42af08}{Ge\-S\-Hi\-:\-:disable\-\_\-highlighting} ()]Rewrite with array traversal  
+\item[\label{todo__todo000010}%
+\hypertarget{todo__todo000010}{}%
+Member \hyperlink{class_ge_s_hi_a15e3ef2c685ab4a68992641ef30a4761}{Ge\-S\-Hi\-:\-:enable\-\_\-highlighting} (\$flag=true)]Rewrite with array traversal  
+\item[\label{todo__todo000013}%
+\hypertarget{todo__todo000013}{}%
+Member \hyperlink{class_ge_s_hi_a48a36664603935601b203b64fc9cae70}{Ge\-S\-Hi\-:\-:enable\-\_\-important\-\_\-blocks} (\$flag)]R\-E\-M\-O\-V\-E T\-H\-I\-S S\-H\-I\-Z F\-R\-O\-M G\-E\-S\-H\-I!  
+\item[\label{todo__todo000011}%
+\hypertarget{todo__todo000011}{}%
+Member \hyperlink{class_ge_s_hi_aff9441e15e313a587161d6a0a8104622}{Ge\-S\-Hi\-:\-:get\-\_\-language\-\_\-name\-\_\-from\-\_\-extension} (\$extension, \$lookup=array())]Re-\/think about how this method works (maybe make it private and/or make it a extension-\/$>$lang lookup?) 
+
+static?  
+\item[\label{todo__todo000015}%
+\hypertarget{todo__todo000015}{}%
+Member \hyperlink{class_ge_s_hi_ac805e25b3d3b98e56721d1b3923695a1}{Ge\-S\-Hi\-:\-:handle\-\_\-keyword\-\_\-replace} (\$match)]Get rid of ender in keyword links  
+\item[\label{todo__todo000018}%
+\hypertarget{todo__todo000018}{}%
+Member \hyperlink{class_ge_s_hi_a1bc16b5dd7819813f8b8ba1ba0408ccb}{Ge\-S\-Hi\-:\-:header} ()]Document behaviour change -\/ class is outputted regardless of whether we're using classes or not. Same with style  
+\item[\label{todo__todo000014}%
+\hypertarget{todo__todo000014}{}%
+Member \hyperlink{class_ge_s_hi_ae1b0545f4143201ac3055abc0854196d}{Ge\-S\-Hi\-:\-:highlight\-\_\-lines\-\_\-extra} (\$lines, \$style=null)]Some data replication here that could be cut down on  
+\item[\label{todo__todo000012}%
+\hypertarget{todo__todo000012}{}%
+Member \hyperlink{class_ge_s_hi_ad78f694615e13053f89adffc2071250b}{Ge\-S\-Hi\-:\-:load\-\_\-from\-\_\-file} (\$file\-\_\-name, \$lookup=array())]Complete rethink of this and above method  
+\item[\label{todo__todo000017}%
+\hypertarget{todo__todo000017}{}%
+Member \hyperlink{class_ge_s_hi_a7597671dc76f5140b3762e79d8bfd7ec}{Ge\-S\-Hi\-:\-:load\-\_\-language} (\$file\-\_\-name)]Needs to load keys for lexic permissions for keywords, regexps etc  
+\item[\label{todo__todo000016}%
+\hypertarget{todo__todo000016}{}%
+Member \hyperlink{class_ge_s_hi_aa48862b4146192a1e3553bbdb0720e74}{Ge\-S\-Hi\-:\-:parse\-\_\-non\-\_\-string\-\_\-part} (\$stuff\-\_\-to\-\_\-parse)]B\-U\-G\-G\-Y! Why? Why not build string and return?  
+\item[\label{todo__todo000053}%
+\hypertarget{todo__todo000053}{}%
+Member \hyperlink{class_settings_ae96281d10c45bb31246f025e4fbde6c6}{Settings\-:\-:platform\-File} (const std\-::string \&filename)]T\-B\-D  
+\item[\label{todo__todo000019}%
+\hypertarget{todo__todo000019}{}%
+Namespace \hyperlink{namespace_simple_pie}{Simple\-Pie} ]php\-Doc comments  
+\item[\label{todo__todo000022}%
+\hypertarget{todo__todo000022}{}%
+Member \hyperlink{class_simple_pie_ad9ae2195c6464085b4ffe58d83b4bac7}{Simple\-Pie\-:\-:get\-\_\-favicon} ()]Cache atom\-:icon  public  
+\item[\label{todo__todo000023}%
+\hypertarget{todo__todo000023}{}%
+Member \hyperlink{class_simple_pie_a128eeaeb14bdc6e246ba2e0bf655be9a}{Simple\-Pie\-:\-:subscribe\-\_\-url} ()]If we have a perm redirect we should return the new U\-R\-L 
+
+When we make the above change, let's support $<$itunes\-:new-\/feed-\/url$>$ as well 
+
+Also, $|$atom\-:link$|$=self  
+\item[\label{todo__todo000026}%
+\hypertarget{todo__todo000026}{}%
+Member \hyperlink{class_simple_pie___enclosure_a171c729bb673362252cb60a05074d6b1}{Simple\-Pie\-\_\-\-Enclosure\-:\-:embed} (\$options= '', \$native=false)]If the dimensions for media\-:content are defined, use them when width/height are set to 'auto'.  
+\item[\label{todo__todo000020}%
+\hypertarget{todo__todo000020}{}%
+Class \hyperlink{class_simple_pie___file}{Simple\-Pie\-\_\-\-File} ]Move to properly supporting R\-F\-C2616 (H\-T\-T\-P/1.\-1)  
+\item[\label{todo__todo000024}%
+\hypertarget{todo__todo000024}{}%
+Member \hyperlink{class_simple_pie___item_ac85b2c315eb4406b87f61590599d51af}{Simple\-Pie\-\_\-\-Item\-:\-:get\-\_\-enclosure} (\$key=0, \$prefer=null)]Add ability to prefer one type of content over another (in a media group).  
+\item[\label{todo__todo000025}%
+\hypertarget{todo__todo000025}{}%
+Member \hyperlink{class_simple_pie___item_ac1e540310fe97afa7fd20472ffa624b5}{Simple\-Pie\-\_\-\-Item\-:\-:get\-\_\-enclosures} ()]Add support for end-\/user defined sorting of enclosures by type/handler (so we can prefer the faster-\/loading F\-L\-V over M\-P4). 
+
+If an element exists at a level, but it's value is empty, we should fall back to the value from the parent (if it exists).  
+\item[\label{todo__todo000027}%
+\hypertarget{todo__todo000027}{}%
+Member \hyperlink{class_simple_pie___misc_a2fc183050056ea622461fd169967cd0a}{Simple\-Pie\-\_\-\-Misc\-:\-:xml\-\_\-encoding} (\$data)]Add support for E\-B\-C\-D\-I\-C  
+\item[\label{todo__todo000021}%
+\hypertarget{todo__todo000021}{}%
+Class \hyperlink{class_simple_pie___sanitize}{Simple\-Pie\-\_\-\-Sanitize} ]Move to using an actual H\-T\-M\-L parser (this will allow tags to be properly stripped, and to switch between H\-T\-M\-L and X\-H\-T\-M\-L), this will also make it easier to shorten a string while preserving H\-T\-M\-L tags  
+\item[\label{todo__todo000054}%
+\hypertarget{todo__todo000054}{}%
+Member \hyperlink{class_symbol_database_a49c0ed07b100ca46f2df82ef8ea01cba}{Symbol\-Database\-:\-:Symbol\-Database} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)]save forward declarations in database someday 
+
+check entire qualification for match 
+
+handle friend functions  
+\item[\label{todo__todo000057}%
+\hypertarget{todo__todo000057}{}%
+Member \hyperlink{class_template_simplifier_a1635ce9ca865ed3644315e27a4a8382a}{Template\-Simplifier\-:\-:simplify\-Template\-Instantions} (\hyperlink{class_token_list}{Token\-List} \&tokenlist, \hyperlink{class_error_logger}{Error\-Logger} \&errorlogger, const \hyperlink{class_settings}{Settings} $\ast$\-\_\-settings, const \hyperlink{class_token}{Token} $\ast$tok, std\-::list$<$ Token $\ast$ $>$ \&template\-Instantiations, std\-::set$<$ std\-::string $>$ \&expandedtemplates)]It seems that inner templates should be instantiated recursively  
+\item[\label{todo__todo000058}%
+\hypertarget{todo__todo000058}{}%
+Member \hyperlink{class_token_a519623098bde6496825e49364575dadf}{Token\-:\-:Match} (const \hyperlink{class_token}{Token} $\ast$tok, const char pattern\mbox{[}\mbox{]}, unsigned int varid=0)]pattern \char`\"{}\%type\%$|$\%num\%\char`\"{} should mean either a type or a num. 
+\item[\label{todo__todo000065}%
+\hypertarget{todo__todo000065}{}%
+Member \hyperlink{class_tokenizer_a11af512dd37794e12d72718182000836}{Tokenizer\-:\-:get\-Function\-Token\-By\-Name} (const char funcname\mbox{[}\mbox{]}) const ]better handling of overloaded functions 
+
+only scan parent scopes  
+\item[\label{todo__todo000064}%
+\hypertarget{todo__todo000064}{}%
+Member \hyperlink{class_tokenizer_a45dd5bfee9a623306b4ee1e6c35931d0}{Tokenizer\-:\-:remove\-Unnecessary\-Qualification} ()]this should be made more generic to handle more levels  
+\item[\label{todo__todo000063}%
+\hypertarget{todo__todo000063}{}%
+Member \hyperlink{class_tokenizer_a22ab871e265a798011be3869dca955db}{Tokenizer\-:\-:simplify\-Enum} ()]start substitution check at forward declaration  
+\item[\label{todo__todo000062}%
+\hypertarget{todo__todo000062}{}%
+Member \hyperlink{class_tokenizer_a70690e32b126df2dce134c1cb8542165}{Tokenizer\-:\-:simplify\-Platform\-Types} ()]This assumes a flat address space. Not true for segmented address space (F\-A\-R $\ast$).  
+\item[\label{todo__todo000059}%
+\hypertarget{todo__todo000059}{}%
+Member \hyperlink{class_tokenizer_a4adb4d624e0238e2482e452c92298c78}{Tokenizer\-:\-:simplify\-Typedef} ()]add support for union 
+
+add support for multi-\/token operators 
+
+add support for multi-\/token operators  
+\item[\label{todo__todo000048}%
+\hypertarget{todo__todo000048}{}%
+Member \hyperlink{class_uninit_var_a68e9676afb263cf84d9edfcfdbb5fa2a}{Uninit\-Var\-:\-:analyse\-Functions} (const \hyperlink{class_token}{Token} $\ast$const tokens, std\-::set$<$ std\-::string $>$ \&func)]enable this code. if pointer is written in function then dead pointer is invalid but valid pointer is ok. 
+\end{DoxyRefList}

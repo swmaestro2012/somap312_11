@@ -1,0 +1,109 @@
+\hypertarget{class_simple_pie___net___i_pv6}{\section{Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6 Class Reference}
+\label{class_simple_pie___net___i_pv6}\index{Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6@{Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simple_pie___net___i_pv6_a27db4ae11193fae4f5de889cf060e472}{remove\-Netmask\-Spec} (\$ip)
+\item 
+\hyperlink{class_simple_pie___net___i_pv6_ae523255cb240bf5905ba805aa1da3ff2}{Uncompress} (\$ip)
+\item 
+\hyperlink{class_simple_pie___net___i_pv6_a454fd6cb4e373e9e191f14efa2929717}{Split\-V64} (\$ip)
+\item 
+\hyperlink{class_simple_pie___net___i_pv6_a4de4a7ea49c2d5937cad5d8c6f121014}{check\-I\-Pv6} (\$ip)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simple_pie___net___i_pv6_a4de4a7ea49c2d5937cad5d8c6f121014}{\index{Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6@{Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6}!check\-I\-Pv6@{check\-I\-Pv6}}
+\index{check\-I\-Pv6@{check\-I\-Pv6}!SimplePie_Net_IPv6@{Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6}}
+\subsubsection[{check\-I\-Pv6}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6\-::check\-I\-Pv6 (
+\begin{DoxyParamCaption}
+\item[{}]{\$ip}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_simple_pie___net___i_pv6_a4de4a7ea49c2d5937cad5d8c6f121014}
+Checks an I\-Pv6 address
+
+Checks if the given I\-P is I\-Pv6-\/compatible
+
+public
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$ip} & a valid I\-Pv6-\/address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if \$ip is an I\-Pv6 address 
+\end{DoxyReturn}
+\hypertarget{class_simple_pie___net___i_pv6_a27db4ae11193fae4f5de889cf060e472}{\index{Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6@{Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6}!remove\-Netmask\-Spec@{remove\-Netmask\-Spec}}
+\index{remove\-Netmask\-Spec@{remove\-Netmask\-Spec}!SimplePie_Net_IPv6@{Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6}}
+\subsubsection[{remove\-Netmask\-Spec}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6\-::remove\-Netmask\-Spec (
+\begin{DoxyParamCaption}
+\item[{}]{\$ip}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_simple_pie___net___i_pv6_a27db4ae11193fae4f5de889cf060e472}
+Removes a possible existing netmask specification of an I\-P address.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$ip} & the (compressed) I\-P as Hex representation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string the I\-P the without netmask 
+\end{DoxyReturn}
+\begin{DoxySince}{Since}
+1.\-1.\-0  public 
+\end{DoxySince}
+\hypertarget{class_simple_pie___net___i_pv6_a454fd6cb4e373e9e191f14efa2929717}{\index{Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6@{Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6}!Split\-V64@{Split\-V64}}
+\index{Split\-V64@{Split\-V64}!SimplePie_Net_IPv6@{Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6}}
+\subsubsection[{Split\-V64}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6\-::\-Split\-V64 (
+\begin{DoxyParamCaption}
+\item[{}]{\$ip}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_simple_pie___net___i_pv6_a454fd6cb4e373e9e191f14efa2929717}
+Splits an I\-Pv6 address into the I\-Pv6 and a possible I\-Pv4 part
+
+R\-F\-C 2373 allows you to note the last two parts of an I\-Pv6 address as an I\-Pv4 compatible address
+
+Example\-: 0\-:0\-:0\-:0\-:0\-:0\-:13.\-1.\-68.\-3 0\-:0\-:0\-:0\-:0\-:F\-F\-F\-F\-:129.\-144.\-52.\-38
+
+public
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$ip} & a valid I\-Pv6-\/address (hex format) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array \mbox{[}0\mbox{]} contains the I\-Pv6 part, \mbox{[}1\mbox{]} the I\-Pv4 part (hex format) 
+\end{DoxyReturn}
+\hypertarget{class_simple_pie___net___i_pv6_ae523255cb240bf5905ba805aa1da3ff2}{\index{Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6@{Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6}!Uncompress@{Uncompress}}
+\index{Uncompress@{Uncompress}!SimplePie_Net_IPv6@{Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6}}
+\subsubsection[{Uncompress}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Net\-\_\-\-I\-Pv6\-::\-Uncompress (
+\begin{DoxyParamCaption}
+\item[{}]{\$ip}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_simple_pie___net___i_pv6_ae523255cb240bf5905ba805aa1da3ff2}
+Uncompresses an I\-Pv6 address
+
+R\-F\-C 2373 allows you to compress zeros in an address to '\-:\-:'. This function expects an valid I\-Pv6 address and expands the '\-:\-:' to the required zeros.
+
+Example\-: F\-F01\-:\-:101 -\/$>$ F\-F01\-:0\-:0\-:0\-:0\-:0\-:0\-:101 \-:\-:1 -\/$>$ 0\-:0\-:0\-:0\-:0\-:0\-:0\-:1
+
+public
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$ip} & a valid I\-Pv6-\/address (hex format) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string the uncompressed I\-Pv6-\/address (hex format) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+htdocs/site/simplepie/\hyperlink{simplepie_8inc}{simplepie.\-inc}\end{DoxyCompactItemize}

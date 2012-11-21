@@ -1,0 +1,298 @@
+\hypertarget{class_path}{\section{Path Class Reference}
+\label{class_path}\index{Path@{Path}}
+}
+
+
+\hyperlink{class_path}{Path} handling routines. Internally cppcheck wants to store paths with / separator which is also native separator for Unix-\/derived systems. When giving path to user or for other functions we convert path separators back to native type.  
+
+
+
+
+{\ttfamily \#include $<$path.\-h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{class_path_a8180f83d77e13a07d5c58904d68a1f69}{to\-Native\-Separators} (std\-::string path)
+\item 
+static std\-::string \hyperlink{class_path_a3f8fc5a3d2f0e35b764eb97d4ad173b2}{from\-Native\-Separators} (std\-::string path)
+\item 
+static std\-::string \hyperlink{class_path_a3e04135bec672da9bb48da478bb15078}{simplify\-Path} (const char $\ast$original\-Path)
+\begin{DoxyCompactList}\small\item\em Simplify path \char`\"{}foo/bar/..\char`\"{} =$>$ \char`\"{}foo\char`\"{}. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_path_a994433b198ffb938b6ad8aec2d741a9a}{same\-File\-Name} (const std\-::string \&fname1, const std\-::string \&fname2)
+\begin{DoxyCompactList}\small\item\em Compare filenames to see if they are the same. On Linux the comparison is case-\/sensitive. On Windows it is case-\/insensitive. \end{DoxyCompactList}\item 
+static std\-::string \hyperlink{class_path_a694b039b6ef96e80c0db2113862d17ba}{remove\-Quotation\-Marks} (std\-::string path)
+\begin{DoxyCompactList}\small\item\em Remove quotation marks (") from the path. \end{DoxyCompactList}\item 
+static std\-::string \hyperlink{class_path_a765e79c65ddf06d2ab29166c3c9703fb}{get\-Filename\-Extension} (const std\-::string \&path)
+\begin{DoxyCompactList}\small\item\em Get an extension of the filename. \end{DoxyCompactList}\item 
+static std\-::string \hyperlink{class_path_aeb44f68420d5c45abaa34a2f1f0884af}{get\-Filename\-Extension\-In\-Lower\-Case} (const std\-::string \&path)
+\begin{DoxyCompactList}\small\item\em Get an extension of the filename in lower case. \end{DoxyCompactList}\item 
+static std\-::string \hyperlink{class_path_aaa2c14e03d07762c40708d653a46444b}{get\-Relative\-Path} (const std\-::string \&absolute\-Path, const std\-::vector$<$ std\-::string $>$ \&base\-Paths)
+\begin{DoxyCompactList}\small\item\em Create a relative path from an absolute one, if absolute path is inside the base\-Paths. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_path_a8a82b5ee3678ae1238a723a6ab352ff9}{accept\-File} (const std\-::string \&filename)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_check}{Check} if the file extension indicates that it's a C/\-C++ source file. \hyperlink{class_check}{Check} if the file has source file extension\-: $\ast$.c;$\ast$.cpp;$\ast$.cxx;$\ast$.c++;$\ast$.cc;$\ast$.txx. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_path_a02c2287a4ef7ed859d27cb32c7c7c631}{is\-C} (const std\-::string \&extension\-In\-Lower\-Case)
+\begin{DoxyCompactList}\small\item\em Identify language based on file extension. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_path_a69d7efde9be00cac4536d6da3c90a10a}{is\-C\-P\-P} (const std\-::string \&extension\-In\-Lower\-Case)
+\begin{DoxyCompactList}\small\item\em Identify language based on file extension. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_path_a741887ba94defe7014f3162efa74241e}{is\-Java} (const std\-::string \&extension\-In\-Lower\-Case)
+\begin{DoxyCompactList}\small\item\em Identify language based on file extension. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_path_a1f8f814dc4da6880efe406384be0bba3}{is\-C\-Sharp} (const std\-::string \&extension\-In\-Lower\-Case)
+\begin{DoxyCompactList}\small\item\em Identify language based on file extension. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_path}{Path} handling routines. Internally cppcheck wants to store paths with / separator which is also native separator for Unix-\/derived systems. When giving path to user or for other functions we convert path separators back to native type. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_path_a8a82b5ee3678ae1238a723a6ab352ff9}{\index{Path@{Path}!accept\-File@{accept\-File}}
+\index{accept\-File@{accept\-File}!Path@{Path}}
+\subsubsection[{accept\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\-::accept\-File (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_path_a8a82b5ee3678ae1238a723a6ab352ff9}
+
+
+\hyperlink{class_check}{Check} if the file extension indicates that it's a C/\-C++ source file. \hyperlink{class_check}{Check} if the file has source file extension\-: $\ast$.c;$\ast$.cpp;$\ast$.cxx;$\ast$.c++;$\ast$.cc;$\ast$.txx. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & filename to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if the file extension indicates it should be checked 
+\end{DoxyReturn}
+\hypertarget{class_path_a3f8fc5a3d2f0e35b764eb97d4ad173b2}{\index{Path@{Path}!from\-Native\-Separators@{from\-Native\-Separators}}
+\index{from\-Native\-Separators@{from\-Native\-Separators}!Path@{Path}}
+\subsubsection[{from\-Native\-Separators}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Path\-::from\-Native\-Separators (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_path_a3f8fc5a3d2f0e35b764eb97d4ad173b2}
+Convert path to use internal path separators. 
+\begin{DoxyParams}{Parameters}
+{\em path} & \hyperlink{class_path}{Path} string to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+converted path. 
+\end{DoxyReturn}
+\hypertarget{class_path_a765e79c65ddf06d2ab29166c3c9703fb}{\index{Path@{Path}!get\-Filename\-Extension@{get\-Filename\-Extension}}
+\index{get\-Filename\-Extension@{get\-Filename\-Extension}!Path@{Path}}
+\subsubsection[{get\-Filename\-Extension}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Path\-::get\-Filename\-Extension (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_path_a765e79c65ddf06d2ab29166c3c9703fb}
+
+
+Get an extension of the filename. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \hyperlink{class_path}{Path} containing filename. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Filename extension (containing the dot, e.\-g. \char`\"{}.\-h\char`\"{} or \char`\"{}.\-C\-P\-P\char`\"{}). 
+\end{DoxyReturn}
+\hypertarget{class_path_aeb44f68420d5c45abaa34a2f1f0884af}{\index{Path@{Path}!get\-Filename\-Extension\-In\-Lower\-Case@{get\-Filename\-Extension\-In\-Lower\-Case}}
+\index{get\-Filename\-Extension\-In\-Lower\-Case@{get\-Filename\-Extension\-In\-Lower\-Case}!Path@{Path}}
+\subsubsection[{get\-Filename\-Extension\-In\-Lower\-Case}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Path\-::get\-Filename\-Extension\-In\-Lower\-Case (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_path_aeb44f68420d5c45abaa34a2f1f0884af}
+
+
+Get an extension of the filename in lower case. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \hyperlink{class_path}{Path} containing filename. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Filename extension (containing the dot, e.\-g. \char`\"{}.\-h\char`\"{}). 
+\end{DoxyReturn}
+\hypertarget{class_path_aaa2c14e03d07762c40708d653a46444b}{\index{Path@{Path}!get\-Relative\-Path@{get\-Relative\-Path}}
+\index{get\-Relative\-Path@{get\-Relative\-Path}!Path@{Path}}
+\subsubsection[{get\-Relative\-Path}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Path\-::get\-Relative\-Path (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{absolute\-Path, }
+\item[{const std\-::vector$<$ std\-::string $>$ \&}]{base\-Paths}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_path_aaa2c14e03d07762c40708d653a46444b}
+
+
+Create a relative path from an absolute one, if absolute path is inside the base\-Paths. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em absolute\-Path} & \hyperlink{class_path}{Path} to be made relative. \\
+\hline
+{\em base\-Paths} & Paths to which it may be made relative. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+relative path, if possible. Otherwise absolute\-Path is returned unchanged 
+\end{DoxyReturn}
+\hypertarget{class_path_a02c2287a4ef7ed859d27cb32c7c7c631}{\index{Path@{Path}!is\-C@{is\-C}}
+\index{is\-C@{is\-C}!Path@{Path}}
+\subsubsection[{is\-C}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\-::is\-C (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{extension\-In\-Lower\-Case}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_path_a02c2287a4ef7ed859d27cb32c7c7c631}
+
+
+Identify language based on file extension. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em extension\-In\-Lower\-Case} & e.\-g. \char`\"{}.\-c\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if extension is meant for C files 
+\end{DoxyReturn}
+\hypertarget{class_path_a69d7efde9be00cac4536d6da3c90a10a}{\index{Path@{Path}!is\-C\-P\-P@{is\-C\-P\-P}}
+\index{is\-C\-P\-P@{is\-C\-P\-P}!Path@{Path}}
+\subsubsection[{is\-C\-P\-P}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\-::is\-C\-P\-P (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{extension\-In\-Lower\-Case}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_path_a69d7efde9be00cac4536d6da3c90a10a}
+
+
+Identify language based on file extension. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em extension\-In\-Lower\-Case} & e.\-g. \char`\"{}.\-cpp\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if extension is meant for C++ files 
+\end{DoxyReturn}
+\hypertarget{class_path_a1f8f814dc4da6880efe406384be0bba3}{\index{Path@{Path}!is\-C\-Sharp@{is\-C\-Sharp}}
+\index{is\-C\-Sharp@{is\-C\-Sharp}!Path@{Path}}
+\subsubsection[{is\-C\-Sharp}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\-::is\-C\-Sharp (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{extension\-In\-Lower\-Case}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_path_a1f8f814dc4da6880efe406384be0bba3}
+
+
+Identify language based on file extension. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em extension\-In\-Lower\-Case} & e.\-g. \char`\"{}.\-cs\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if extension is meant for C\# files 
+\end{DoxyReturn}
+\hypertarget{class_path_a741887ba94defe7014f3162efa74241e}{\index{Path@{Path}!is\-Java@{is\-Java}}
+\index{is\-Java@{is\-Java}!Path@{Path}}
+\subsubsection[{is\-Java}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\-::is\-Java (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{extension\-In\-Lower\-Case}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_path_a741887ba94defe7014f3162efa74241e}
+
+
+Identify language based on file extension. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em extension\-In\-Lower\-Case} & e.\-g. \char`\"{}.\-java\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if extension is meant for Java files 
+\end{DoxyReturn}
+\hypertarget{class_path_a694b039b6ef96e80c0db2113862d17ba}{\index{Path@{Path}!remove\-Quotation\-Marks@{remove\-Quotation\-Marks}}
+\index{remove\-Quotation\-Marks@{remove\-Quotation\-Marks}!Path@{Path}}
+\subsubsection[{remove\-Quotation\-Marks}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Path\-::remove\-Quotation\-Marks (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_path_a694b039b6ef96e80c0db2113862d17ba}
+
+
+Remove quotation marks (") from the path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & path to be cleaned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cleaned path without quotation marks. 
+\end{DoxyReturn}
+\hypertarget{class_path_a994433b198ffb938b6ad8aec2d741a9a}{\index{Path@{Path}!same\-File\-Name@{same\-File\-Name}}
+\index{same\-File\-Name@{same\-File\-Name}!Path@{Path}}
+\subsubsection[{same\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\-::same\-File\-Name (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{fname1, }
+\item[{const std\-::string \&}]{fname2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_path_a994433b198ffb938b6ad8aec2d741a9a}
+
+
+Compare filenames to see if they are the same. On Linux the comparison is case-\/sensitive. On Windows it is case-\/insensitive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fname1} & one filename \\
+\hline
+{\em fname2} & other filename \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the filenames match on the current platform 
+\end{DoxyReturn}
+\hypertarget{class_path_a3e04135bec672da9bb48da478bb15078}{\index{Path@{Path}!simplify\-Path@{simplify\-Path}}
+\index{simplify\-Path@{simplify\-Path}!Path@{Path}}
+\subsubsection[{simplify\-Path}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Path\-::simplify\-Path (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{original\-Path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_path_a3e04135bec672da9bb48da478bb15078}
+
+
+Simplify path \char`\"{}foo/bar/..\char`\"{} =$>$ \char`\"{}foo\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original\-Path} & path to be simplified, must have / -\/separators. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+simplified path 
+\end{DoxyReturn}
+\hypertarget{class_path_a8180f83d77e13a07d5c58904d68a1f69}{\index{Path@{Path}!to\-Native\-Separators@{to\-Native\-Separators}}
+\index{to\-Native\-Separators@{to\-Native\-Separators}!Path@{Path}}
+\subsubsection[{to\-Native\-Separators}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Path\-::to\-Native\-Separators (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_path_a8180f83d77e13a07d5c58904d68a1f69}
+Convert path to use native separators. 
+\begin{DoxyParams}{Parameters}
+{\em path} & \hyperlink{class_path}{Path} string to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+converted path. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{path_8h}{path.\-h}\item 
+lib/\hyperlink{path_8cpp}{path.\-cpp}\end{DoxyCompactItemize}

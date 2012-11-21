@@ -1,0 +1,143 @@
+\hypertarget{namespaceextracttests}{\section{extracttests Namespace Reference}
+\label{namespaceextracttests}\index{extracttests@{extracttests}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classextracttests_1_1_extract}{Extract}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespaceextracttests_a0c2334b6daba7329aea0accc57c86cc8}{strtoxml}
+\item 
+def \hyperlink{namespaceextracttests_a2eebad21fec29f1c277bfae0abf44fca}{trimname}
+\item 
+def \hyperlink{namespaceextracttests_a1e699aa8791545c84a83bb5bdee22501}{write\-Html\-File}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceextracttests_a6221337b9ed2dc702e37b3ecf75af370}{xml} False
+\item 
+\hyperlink{namespaceextracttests_ae8e72c8ddfad0acc854b69f255560652}{filename} None
+\item 
+\hyperlink{namespaceextracttests_a4802ed7c6c7398fd5bc6700a06be8056}{htmldir} None
+\item 
+\hyperlink{namespaceextracttests_a95eea71168be983462e5debd6ee1f3d8}{codedir} None
+\item 
+tuple \hyperlink{namespaceextracttests_a9a4c5d70c5d35e1c5a5c6963e1cc9c55}{e} \hyperlink{classextracttests_1_1_extract}{Extract}()
+\item 
+int \hyperlink{namespaceextracttests_afc0659f75fa16c14ec06fb99f56327ef}{count} 0
+\item 
+string \hyperlink{namespaceextracttests_a16068547f03c44075089cfcd0d9d384f}{s} ' $<$node'
+\item 
+tuple \hyperlink{namespaceextracttests_a0e689b33baed4a504201858c00f92221}{findex} open(\hyperlink{namespaceextracttests_a4802ed7c6c7398fd5bc6700a06be8056}{htmldir} + 'index.\-htm', 'w')
+\item 
+list \hyperlink{namespaceextracttests_a66c49796ea762e04dadfd4e147d65a9e}{function\-Names} \mbox{[}$\,$\mbox{]}
+\item 
+tuple \hyperlink{namespaceextracttests_afdfa35e11e3c89c35f3f921ec9f6b4f9}{functionname} \hyperlink{namespaceextracttests_a2eebad21fec29f1c277bfae0abf44fca}{trimname}(node\mbox{[}'\hyperlink{namespaceextracttests_ac1d22207f0c1a71d7f9a8e9359fae974}{function\-Name}'\mbox{]})
+\item 
+int \hyperlink{namespaceextracttests_ab50c99b16c07a041ebc7b644ba08958d}{numall} 0
+\item 
+int \hyperlink{namespaceextracttests_aadecd15e2b96e102a700da2f7e282aab}{numerr} 0
+\item 
+int \hyperlink{namespaceextracttests_a47e5c8f3a1b46352aed6e91bbefaed3b}{testnum} 0
+\item 
+tuple \hyperlink{namespaceextracttests_a9a2158d8cf259035ba3b844433a98d90}{errors} open(\hyperlink{namespaceextracttests_a95eea71168be983462e5debd6ee1f3d8}{codedir}+'errors.\-txt', 'w')
+\item 
+list \hyperlink{namespaceextracttests_ac1d22207f0c1a71d7f9a8e9359fae974}{function\-Name} node\mbox{[}'function\-Name'\mbox{]}
+\item 
+list \hyperlink{namespaceextracttests_a629a2ac1b3919c13d79e4c009892c10f}{code} node\mbox{[}'code'\mbox{]}
+\item 
+list \hyperlink{namespaceextracttests_a397acca50bcc6d297d4a1d558387d560}{expected} node\mbox{[}'expected'\mbox{]}
+\item 
+tuple \hyperlink{namespaceextracttests_a0c99f776e2d3811a9c8b0889b903aa66}{fout} open(\hyperlink{namespaceextracttests_a95eea71168be983462e5debd6ee1f3d8}{codedir}+\hyperlink{namespaceextracttests_ae8e72c8ddfad0acc854b69f255560652}{filename},'w')
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceextracttests_a0c2334b6daba7329aea0accc57c86cc8}{\index{extracttests@{extracttests}!strtoxml@{strtoxml}}
+\index{strtoxml@{strtoxml}!extracttests@{extracttests}}
+\subsubsection[{strtoxml}]{\setlength{\rightskip}{0pt plus 5cm}def extracttests.\-strtoxml (
+\begin{DoxyParamCaption}
+\item[{}]{s}
+\end{DoxyParamCaption}
+)}}\label{namespaceextracttests_a0c2334b6daba7329aea0accc57c86cc8}
+\begin{DoxyVerb}Convert string to xml/html format\end{DoxyVerb}
+ \hypertarget{namespaceextracttests_a2eebad21fec29f1c277bfae0abf44fca}{\index{extracttests@{extracttests}!trimname@{trimname}}
+\index{trimname@{trimname}!extracttests@{extracttests}}
+\subsubsection[{trimname}]{\setlength{\rightskip}{0pt plus 5cm}def extracttests.\-trimname (
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)}}\label{namespaceextracttests_a2eebad21fec29f1c277bfae0abf44fca}
+\begin{DoxyVerb}Trim test name. Trailing underscore and digits are removed\end{DoxyVerb}
+ \hypertarget{namespaceextracttests_a1e699aa8791545c84a83bb5bdee22501}{\index{extracttests@{extracttests}!write\-Html\-File@{write\-Html\-File}}
+\index{write\-Html\-File@{write\-Html\-File}!extracttests@{extracttests}}
+\subsubsection[{write\-Html\-File}]{\setlength{\rightskip}{0pt plus 5cm}def extracttests.\-write\-Html\-File (
+\begin{DoxyParamCaption}
+\item[{}]{nodes, }
+\item[{}]{function\-Name, }
+\item[{}]{filename, }
+\item[{}]{errors\-Only}
+\end{DoxyParamCaption}
+)}}\label{namespaceextracttests_a1e699aa8791545c84a83bb5bdee22501}
+\begin{DoxyVerb}Write html file for a function name\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\hypertarget{namespaceextracttests_a629a2ac1b3919c13d79e4c009892c10f}{\index{extracttests@{extracttests}!code@{code}}
+\index{code@{code}!extracttests@{extracttests}}
+\subsubsection[{code}]{\setlength{\rightskip}{0pt plus 5cm}tuple extracttests.\-code node\mbox{[}'code'\mbox{]}}}\label{namespaceextracttests_a629a2ac1b3919c13d79e4c009892c10f}
+\hypertarget{namespaceextracttests_a95eea71168be983462e5debd6ee1f3d8}{\index{extracttests@{extracttests}!codedir@{codedir}}
+\index{codedir@{codedir}!extracttests@{extracttests}}
+\subsubsection[{codedir}]{\setlength{\rightskip}{0pt plus 5cm}string extracttests.\-codedir None}}\label{namespaceextracttests_a95eea71168be983462e5debd6ee1f3d8}
+\hypertarget{namespaceextracttests_afc0659f75fa16c14ec06fb99f56327ef}{\index{extracttests@{extracttests}!count@{count}}
+\index{count@{count}!extracttests@{extracttests}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}int extracttests.\-count 0}}\label{namespaceextracttests_afc0659f75fa16c14ec06fb99f56327ef}
+\hypertarget{namespaceextracttests_a9a4c5d70c5d35e1c5a5c6963e1cc9c55}{\index{extracttests@{extracttests}!e@{e}}
+\index{e@{e}!extracttests@{extracttests}}
+\subsubsection[{e}]{\setlength{\rightskip}{0pt plus 5cm}tuple extracttests.\-e {\bf Extract}()}}\label{namespaceextracttests_a9a4c5d70c5d35e1c5a5c6963e1cc9c55}
+\hypertarget{namespaceextracttests_a9a2158d8cf259035ba3b844433a98d90}{\index{extracttests@{extracttests}!errors@{errors}}
+\index{errors@{errors}!extracttests@{extracttests}}
+\subsubsection[{errors}]{\setlength{\rightskip}{0pt plus 5cm}tuple extracttests.\-errors open({\bf codedir}+'errors.\-txt', 'w')}}\label{namespaceextracttests_a9a2158d8cf259035ba3b844433a98d90}
+\hypertarget{namespaceextracttests_a397acca50bcc6d297d4a1d558387d560}{\index{extracttests@{extracttests}!expected@{expected}}
+\index{expected@{expected}!extracttests@{extracttests}}
+\subsubsection[{expected}]{\setlength{\rightskip}{0pt plus 5cm}tuple extracttests.\-expected node\mbox{[}'expected'\mbox{]}}}\label{namespaceextracttests_a397acca50bcc6d297d4a1d558387d560}
+\hypertarget{namespaceextracttests_ae8e72c8ddfad0acc854b69f255560652}{\index{extracttests@{extracttests}!filename@{filename}}
+\index{filename@{filename}!extracttests@{extracttests}}
+\subsubsection[{filename}]{\setlength{\rightskip}{0pt plus 5cm}list extracttests.\-filename None}}\label{namespaceextracttests_ae8e72c8ddfad0acc854b69f255560652}
+\hypertarget{namespaceextracttests_a0e689b33baed4a504201858c00f92221}{\index{extracttests@{extracttests}!findex@{findex}}
+\index{findex@{findex}!extracttests@{extracttests}}
+\subsubsection[{findex}]{\setlength{\rightskip}{0pt plus 5cm}tuple extracttests.\-findex open({\bf htmldir} + 'index.\-htm', 'w')}}\label{namespaceextracttests_a0e689b33baed4a504201858c00f92221}
+\hypertarget{namespaceextracttests_a0c99f776e2d3811a9c8b0889b903aa66}{\index{extracttests@{extracttests}!fout@{fout}}
+\index{fout@{fout}!extracttests@{extracttests}}
+\subsubsection[{fout}]{\setlength{\rightskip}{0pt plus 5cm}tuple extracttests.\-fout open({\bf codedir}+{\bf filename},'w')}}\label{namespaceextracttests_a0c99f776e2d3811a9c8b0889b903aa66}
+\hypertarget{namespaceextracttests_afdfa35e11e3c89c35f3f921ec9f6b4f9}{\index{extracttests@{extracttests}!functionname@{functionname}}
+\index{functionname@{functionname}!extracttests@{extracttests}}
+\subsubsection[{functionname}]{\setlength{\rightskip}{0pt plus 5cm}tuple extracttests.\-functionname {\bf trimname}(node\mbox{[}'{\bf function\-Name}'\mbox{]})}}\label{namespaceextracttests_afdfa35e11e3c89c35f3f921ec9f6b4f9}
+\hypertarget{namespaceextracttests_ac1d22207f0c1a71d7f9a8e9359fae974}{\index{extracttests@{extracttests}!function\-Name@{function\-Name}}
+\index{function\-Name@{function\-Name}!extracttests@{extracttests}}
+\subsubsection[{function\-Name}]{\setlength{\rightskip}{0pt plus 5cm}list extracttests.\-function\-Name node\mbox{[}'function\-Name'\mbox{]}}}\label{namespaceextracttests_ac1d22207f0c1a71d7f9a8e9359fae974}
+\hypertarget{namespaceextracttests_a66c49796ea762e04dadfd4e147d65a9e}{\index{extracttests@{extracttests}!function\-Names@{function\-Names}}
+\index{function\-Names@{function\-Names}!extracttests@{extracttests}}
+\subsubsection[{function\-Names}]{\setlength{\rightskip}{0pt plus 5cm}list extracttests.\-function\-Names \mbox{[}$\,$\mbox{]}}}\label{namespaceextracttests_a66c49796ea762e04dadfd4e147d65a9e}
+\hypertarget{namespaceextracttests_a4802ed7c6c7398fd5bc6700a06be8056}{\index{extracttests@{extracttests}!htmldir@{htmldir}}
+\index{htmldir@{htmldir}!extracttests@{extracttests}}
+\subsubsection[{htmldir}]{\setlength{\rightskip}{0pt plus 5cm}list extracttests.\-htmldir None}}\label{namespaceextracttests_a4802ed7c6c7398fd5bc6700a06be8056}
+\hypertarget{namespaceextracttests_ab50c99b16c07a041ebc7b644ba08958d}{\index{extracttests@{extracttests}!numall@{numall}}
+\index{numall@{numall}!extracttests@{extracttests}}
+\subsubsection[{numall}]{\setlength{\rightskip}{0pt plus 5cm}int extracttests.\-numall 0}}\label{namespaceextracttests_ab50c99b16c07a041ebc7b644ba08958d}
+\hypertarget{namespaceextracttests_aadecd15e2b96e102a700da2f7e282aab}{\index{extracttests@{extracttests}!numerr@{numerr}}
+\index{numerr@{numerr}!extracttests@{extracttests}}
+\subsubsection[{numerr}]{\setlength{\rightskip}{0pt plus 5cm}int extracttests.\-numerr 0}}\label{namespaceextracttests_aadecd15e2b96e102a700da2f7e282aab}
+\hypertarget{namespaceextracttests_a16068547f03c44075089cfcd0d9d384f}{\index{extracttests@{extracttests}!s@{s}}
+\index{s@{s}!extracttests@{extracttests}}
+\subsubsection[{s}]{\setlength{\rightskip}{0pt plus 5cm}string extracttests.\-s ' $<$node'}}\label{namespaceextracttests_a16068547f03c44075089cfcd0d9d384f}
+\hypertarget{namespaceextracttests_a47e5c8f3a1b46352aed6e91bbefaed3b}{\index{extracttests@{extracttests}!testnum@{testnum}}
+\index{testnum@{testnum}!extracttests@{extracttests}}
+\subsubsection[{testnum}]{\setlength{\rightskip}{0pt plus 5cm}int extracttests.\-testnum 0}}\label{namespaceextracttests_a47e5c8f3a1b46352aed6e91bbefaed3b}
+\hypertarget{namespaceextracttests_a6221337b9ed2dc702e37b3ecf75af370}{\index{extracttests@{extracttests}!xml@{xml}}
+\index{xml@{xml}!extracttests@{extracttests}}
+\subsubsection[{xml}]{\setlength{\rightskip}{0pt plus 5cm}extracttests.\-xml False}}\label{namespaceextracttests_a6221337b9ed2dc702e37b3ecf75af370}

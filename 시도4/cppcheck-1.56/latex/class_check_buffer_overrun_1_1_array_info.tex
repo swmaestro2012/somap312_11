@@ -1,0 +1,108 @@
+\hypertarget{class_check_buffer_overrun_1_1_array_info}{\section{Check\-Buffer\-Overrun\-:\-:Array\-Info Class Reference}
+\label{class_check_buffer_overrun_1_1_array_info}\index{Check\-Buffer\-Overrun\-::\-Array\-Info@{Check\-Buffer\-Overrun\-::\-Array\-Info}}
+}
+
+
+{\ttfamily \#include $<$checkbufferoverrun.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___checks_gac59c163505a075d5a1b42c61663c2ced}{Array\-Info} ()
+\item 
+\hyperlink{group___checks_ga2107979c03ff20a99aafa4cdd40d52fe}{Array\-Info} (const \hyperlink{class_check_buffer_overrun_1_1_array_info}{Array\-Info} \&)
+\item 
+\hyperlink{group___checks_ga0251050a5c91e1f827c3515842668164}{Array\-Info} (const \hyperlink{class_variable}{Variable} $\ast$var, const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer)
+\item 
+\hyperlink{class_check_buffer_overrun_1_1_array_info}{Array\-Info} \& \hyperlink{group___checks_ga28d6d4fb27e4adcc8f7f364c9073885b}{operator=} (const \hyperlink{class_check_buffer_overrun_1_1_array_info}{Array\-Info} \&ai)
+\item 
+\hyperlink{group___checks_gadf25b1e6776f6bd756d9282e0fc00dd7}{Array\-Info} (unsigned int id, const std\-::string \&\hyperlink{class_check_ad9b7ad147b5b4cc9b1a7911162432f1c}{name}, \hyperlink{class_math_lib_aea370b3be964c5704b6244d757fcac99}{Math\-Lib\-::bigint} size1, \hyperlink{class_math_lib_aea370b3be964c5704b6244d757fcac99}{Math\-Lib\-::bigint} n)
+\item 
+\hyperlink{class_check_buffer_overrun_1_1_array_info}{Array\-Info} \hyperlink{group___checks_ga376a9d6b93c92173faeabfa906347a80}{limit} (\hyperlink{class_math_lib_aea370b3be964c5704b6244d757fcac99}{Math\-Lib\-::bigint} value) const 
+\item 
+const std\-::vector\\*
+$<$ \hyperlink{class_math_lib_aea370b3be964c5704b6244d757fcac99}{Math\-Lib\-::bigint} $>$ \& \hyperlink{class_check_buffer_overrun_1_1_array_info_a2507418e9f7612582c1b893f4ac44c2e}{num} () const 
+\item 
+\hyperlink{class_math_lib_aea370b3be964c5704b6244d757fcac99}{Math\-Lib\-::bigint} \hyperlink{class_check_buffer_overrun_1_1_array_info_a2929e51008180f6fb841107e2b713bfd}{num} (std\-::size\-\_\-t index) const 
+\item 
+void \hyperlink{class_check_buffer_overrun_1_1_array_info_a4eb4b2cdac2f6ed389cef5ece64a1076}{num} (std\-::size\-\_\-t index, \hyperlink{class_math_lib_aea370b3be964c5704b6244d757fcac99}{Math\-Lib\-::bigint} number)
+\item 
+\hyperlink{class_math_lib_aea370b3be964c5704b6244d757fcac99}{Math\-Lib\-::bigint} \hyperlink{class_check_buffer_overrun_1_1_array_info_adf2969f534b0b18edae6924a55cc2bfa}{element\-\_\-size} () const 
+\item 
+unsigned int \hyperlink{class_check_buffer_overrun_1_1_array_info_af46108a55d6d9249783de6a29f473e53}{varid} () const 
+\item 
+void \hyperlink{class_check_buffer_overrun_1_1_array_info_aaf1476bba189e2dd999228df7d41b146}{varid} (unsigned int id)
+\item 
+const std\-::string \& \hyperlink{class_check_buffer_overrun_1_1_array_info_a342b5474c470387495b18ed7ea5116c2}{varname} () const 
+\item 
+void \hyperlink{class_check_buffer_overrun_1_1_array_info_a1ffa847ee066c635abe3be010d946485}{varname} (const std\-::string \&\hyperlink{class_check_ad9b7ad147b5b4cc9b1a7911162432f1c}{name})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Information about N-\/dimensional array 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_check_buffer_overrun_1_1_array_info_adf2969f534b0b18edae6924a55cc2bfa}{\index{Check\-Buffer\-Overrun\-::\-Array\-Info@{Check\-Buffer\-Overrun\-::\-Array\-Info}!element\-\_\-size@{element\-\_\-size}}
+\index{element\-\_\-size@{element\-\_\-size}!CheckBufferOverrun::ArrayInfo@{Check\-Buffer\-Overrun\-::\-Array\-Info}}
+\subsubsection[{element\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Math\-Lib\-::bigint} Check\-Buffer\-Overrun\-::\-Array\-Info\-::element\-\_\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_buffer_overrun_1_1_array_info_adf2969f534b0b18edae6924a55cc2bfa}
+size of each element \hypertarget{class_check_buffer_overrun_1_1_array_info_a2507418e9f7612582c1b893f4ac44c2e}{\index{Check\-Buffer\-Overrun\-::\-Array\-Info@{Check\-Buffer\-Overrun\-::\-Array\-Info}!num@{num}}
+\index{num@{num}!CheckBufferOverrun::ArrayInfo@{Check\-Buffer\-Overrun\-::\-Array\-Info}}
+\subsubsection[{num}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<${\bf Math\-Lib\-::bigint}$>$\& Check\-Buffer\-Overrun\-::\-Array\-Info\-::num (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_buffer_overrun_1_1_array_info_a2507418e9f7612582c1b893f4ac44c2e}
+array sizes \hypertarget{class_check_buffer_overrun_1_1_array_info_a2929e51008180f6fb841107e2b713bfd}{\index{Check\-Buffer\-Overrun\-::\-Array\-Info@{Check\-Buffer\-Overrun\-::\-Array\-Info}!num@{num}}
+\index{num@{num}!CheckBufferOverrun::ArrayInfo@{Check\-Buffer\-Overrun\-::\-Array\-Info}}
+\subsubsection[{num}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Math\-Lib\-::bigint} Check\-Buffer\-Overrun\-::\-Array\-Info\-::num (
+\begin{DoxyParamCaption}
+\item[{std\-::size\-\_\-t}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_buffer_overrun_1_1_array_info_a2929e51008180f6fb841107e2b713bfd}
+array size \hypertarget{class_check_buffer_overrun_1_1_array_info_a4eb4b2cdac2f6ed389cef5ece64a1076}{\index{Check\-Buffer\-Overrun\-::\-Array\-Info@{Check\-Buffer\-Overrun\-::\-Array\-Info}!num@{num}}
+\index{num@{num}!CheckBufferOverrun::ArrayInfo@{Check\-Buffer\-Overrun\-::\-Array\-Info}}
+\subsubsection[{num}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::\-Array\-Info\-::num (
+\begin{DoxyParamCaption}
+\item[{std\-::size\-\_\-t}]{index, }
+\item[{{\bf Math\-Lib\-::bigint}}]{number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_buffer_overrun_1_1_array_info_a4eb4b2cdac2f6ed389cef5ece64a1076}
+\hypertarget{class_check_buffer_overrun_1_1_array_info_af46108a55d6d9249783de6a29f473e53}{\index{Check\-Buffer\-Overrun\-::\-Array\-Info@{Check\-Buffer\-Overrun\-::\-Array\-Info}!varid@{varid}}
+\index{varid@{varid}!CheckBufferOverrun::ArrayInfo@{Check\-Buffer\-Overrun\-::\-Array\-Info}}
+\subsubsection[{varid}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Check\-Buffer\-Overrun\-::\-Array\-Info\-::varid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_buffer_overrun_1_1_array_info_af46108a55d6d9249783de6a29f473e53}
+\hyperlink{class_variable}{Variable} name \hypertarget{class_check_buffer_overrun_1_1_array_info_aaf1476bba189e2dd999228df7d41b146}{\index{Check\-Buffer\-Overrun\-::\-Array\-Info@{Check\-Buffer\-Overrun\-::\-Array\-Info}!varid@{varid}}
+\index{varid@{varid}!CheckBufferOverrun::ArrayInfo@{Check\-Buffer\-Overrun\-::\-Array\-Info}}
+\subsubsection[{varid}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::\-Array\-Info\-::varid (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_buffer_overrun_1_1_array_info_aaf1476bba189e2dd999228df7d41b146}
+\hypertarget{class_check_buffer_overrun_1_1_array_info_a342b5474c470387495b18ed7ea5116c2}{\index{Check\-Buffer\-Overrun\-::\-Array\-Info@{Check\-Buffer\-Overrun\-::\-Array\-Info}!varname@{varname}}
+\index{varname@{varname}!CheckBufferOverrun::ArrayInfo@{Check\-Buffer\-Overrun\-::\-Array\-Info}}
+\subsubsection[{varname}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& Check\-Buffer\-Overrun\-::\-Array\-Info\-::varname (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_buffer_overrun_1_1_array_info_a342b5474c470387495b18ed7ea5116c2}
+\hyperlink{class_variable}{Variable} name \hypertarget{class_check_buffer_overrun_1_1_array_info_a1ffa847ee066c635abe3be010d946485}{\index{Check\-Buffer\-Overrun\-::\-Array\-Info@{Check\-Buffer\-Overrun\-::\-Array\-Info}!varname@{varname}}
+\index{varname@{varname}!CheckBufferOverrun::ArrayInfo@{Check\-Buffer\-Overrun\-::\-Array\-Info}}
+\subsubsection[{varname}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Buffer\-Overrun\-::\-Array\-Info\-::varname (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_buffer_overrun_1_1_array_info_a1ffa847ee066c635abe3be010d946485}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{checkbufferoverrun_8h}{checkbufferoverrun.\-h}\item 
+lib/\hyperlink{checkbufferoverrun_8cpp}{checkbufferoverrun.\-cpp}\end{DoxyCompactItemize}

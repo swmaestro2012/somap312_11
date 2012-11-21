@@ -1,0 +1,111 @@
+\hypertarget{class_preprocessor_macro}{\section{Preprocessor\-Macro Class Reference}
+\label{class_preprocessor_macro}\index{Preprocessor\-Macro@{Preprocessor\-Macro}}
+}
+
+
+Class that the preprocessor uses when it expands macros. This class represents a preprocessor macro.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_preprocessor_macro_ae2e9d01a7fe3727d399b5093d56b0f07}{Preprocessor\-Macro} (const std\-::string \&macro)
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{class_preprocessor_macro}{Preprocessor\-Macro}. This is the \char`\"{}setter\char`\"{} for this class -\/ everything is setup here. \end{DoxyCompactList}\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_preprocessor_macro_a7c653a837d6ff695e6c373e413f88e70}{tokens} () const 
+\item 
+const std\-::vector$<$ std\-::string $>$ \& \hyperlink{class_preprocessor_macro_a958deacfa3e4ef7fd23cdbf0d9dcf98c}{params} () const 
+\item 
+bool \hyperlink{class_preprocessor_macro_a03fc39a88bc1eb9e09c912cd527ed122}{variadic} () const 
+\item 
+bool \hyperlink{class_preprocessor_macro_a69479275958acd4a47af5da705431508}{nopar} () const 
+\item 
+const std\-::string \& \hyperlink{class_preprocessor_macro_aebabbcd86d8323f209c70e673b1e504c}{name} () const 
+\item 
+bool \hyperlink{class_preprocessor_macro_aed357e83a733c1788deecbc80c7e2bbd}{code} (const std\-::vector$<$ std\-::string $>$ \&params2, const std\-::map$<$ std\-::string, \hyperlink{class_preprocessor_macro}{Preprocessor\-Macro} $\ast$ $>$ \&macros, std\-::string \&macrocode) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that the preprocessor uses when it expands macros. This class represents a preprocessor macro. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_preprocessor_macro_ae2e9d01a7fe3727d399b5093d56b0f07}{\index{Preprocessor\-Macro@{Preprocessor\-Macro}!Preprocessor\-Macro@{Preprocessor\-Macro}}
+\index{Preprocessor\-Macro@{Preprocessor\-Macro}!PreprocessorMacro@{Preprocessor\-Macro}}
+\subsubsection[{Preprocessor\-Macro}]{\setlength{\rightskip}{0pt plus 5cm}Preprocessor\-Macro\-::\-Preprocessor\-Macro (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{macro}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{class_preprocessor_macro_ae2e9d01a7fe3727d399b5093d56b0f07}
+
+
+Constructor for \hyperlink{class_preprocessor_macro}{Preprocessor\-Macro}. This is the \char`\"{}setter\char`\"{} for this class -\/ everything is setup here. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em macro} & The code after define, until end of line, e.\-g. \char`\"{}\-A(x) foo(x);\char`\"{} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_preprocessor_macro_aed357e83a733c1788deecbc80c7e2bbd}{\index{Preprocessor\-Macro@{Preprocessor\-Macro}!code@{code}}
+\index{code@{code}!PreprocessorMacro@{Preprocessor\-Macro}}
+\subsubsection[{code}]{\setlength{\rightskip}{0pt plus 5cm}bool Preprocessor\-Macro\-::code (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ std\-::string $>$ \&}]{params2, }
+\item[{const std\-::map$<$ std\-::string, {\bf Preprocessor\-Macro} $\ast$ $>$ \&}]{macros, }
+\item[{std\-::string \&}]{macrocode}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_preprocessor_macro_aed357e83a733c1788deecbc80c7e2bbd}
+get expanded code for this macro 
+\begin{DoxyParams}{Parameters}
+{\em params2} & macro parameters \\
+\hline
+{\em macros} & macro definitions (recursion) \\
+\hline
+{\em macrocode} & output string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the expanding was successful 
+\end{DoxyReturn}
+\hypertarget{class_preprocessor_macro_aebabbcd86d8323f209c70e673b1e504c}{\index{Preprocessor\-Macro@{Preprocessor\-Macro}!name@{name}}
+\index{name@{name}!PreprocessorMacro@{Preprocessor\-Macro}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& Preprocessor\-Macro\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_preprocessor_macro_aebabbcd86d8323f209c70e673b1e504c}
+name of macro \hypertarget{class_preprocessor_macro_a69479275958acd4a47af5da705431508}{\index{Preprocessor\-Macro@{Preprocessor\-Macro}!nopar@{nopar}}
+\index{nopar@{nopar}!PreprocessorMacro@{Preprocessor\-Macro}}
+\subsubsection[{nopar}]{\setlength{\rightskip}{0pt plus 5cm}bool Preprocessor\-Macro\-::nopar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_preprocessor_macro_a69479275958acd4a47af5da705431508}
+\hyperlink{class_check}{Check} if this macro has parentheses but no parameters \hypertarget{class_preprocessor_macro_a958deacfa3e4ef7fd23cdbf0d9dcf98c}{\index{Preprocessor\-Macro@{Preprocessor\-Macro}!params@{params}}
+\index{params@{params}!PreprocessorMacro@{Preprocessor\-Macro}}
+\subsubsection[{params}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<$std\-::string$>$\& Preprocessor\-Macro\-::params (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_preprocessor_macro_a958deacfa3e4ef7fd23cdbf0d9dcf98c}
+read parameters of this macro \hypertarget{class_preprocessor_macro_a7c653a837d6ff695e6c373e413f88e70}{\index{Preprocessor\-Macro@{Preprocessor\-Macro}!tokens@{tokens}}
+\index{tokens@{tokens}!PreprocessorMacro@{Preprocessor\-Macro}}
+\subsubsection[{tokens}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token}$\ast$ Preprocessor\-Macro\-::tokens (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_preprocessor_macro_a7c653a837d6ff695e6c373e413f88e70}
+return tokens of this macro \hypertarget{class_preprocessor_macro_a03fc39a88bc1eb9e09c912cd527ed122}{\index{Preprocessor\-Macro@{Preprocessor\-Macro}!variadic@{variadic}}
+\index{variadic@{variadic}!PreprocessorMacro@{Preprocessor\-Macro}}
+\subsubsection[{variadic}]{\setlength{\rightskip}{0pt plus 5cm}bool Preprocessor\-Macro\-::variadic (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_preprocessor_macro_a03fc39a88bc1eb9e09c912cd527ed122}
+check if this is macro has a variable number of parameters 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{preprocessor_8cpp}{preprocessor.\-cpp}\end{DoxyCompactItemize}

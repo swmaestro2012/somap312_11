@@ -1,0 +1,503 @@
+\hypertarget{class_variables}{\section{Variables Class Reference}
+\label{class_variables}\index{Variables@{Variables}}
+}
+
+
+This class is used create a list of variables within a function.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_variables_1_1_variable_usage}{Variable\-Usage}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6}{Variable\-Type} \{ \\*
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa34a76d3845e9a44b518da0d2026adc3}{standard}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6a6a1861dd0b87409b45e089b2370588a9}{array}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa812c8fa27892087314ab15a660da43b}{pointer}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6ae4453a27149fc0d264b762771c05928a}{reference}, 
+\\*
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6a15559519c6107856a560144341f8b5aa}{pointer\-Array}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa35d924d47e40ee9dda77449a842f98d}{reference\-Array}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6a8bb2d5f4c546729cb782411a1c3b4c3f}{pointer\-Pointer}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa34a76d3845e9a44b518da0d2026adc3}{standard}, 
+\\*
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6a6a1861dd0b87409b45e089b2370588a9}{array}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa812c8fa27892087314ab15a660da43b}{pointer}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6ae4453a27149fc0d264b762771c05928a}{reference}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6a15559519c6107856a560144341f8b5aa}{pointer\-Array}, 
+\\*
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa35d924d47e40ee9dda77449a842f98d}{reference\-Array}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6a8bb2d5f4c546729cb782411a1c3b4c3f}{pointer\-Pointer}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6aab9f3842a98b5267483794d18d759baf}{none}
+ \}
+\item 
+enum \hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6}{Variable\-Type} \{ \\*
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa34a76d3845e9a44b518da0d2026adc3}{standard}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6a6a1861dd0b87409b45e089b2370588a9}{array}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa812c8fa27892087314ab15a660da43b}{pointer}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6ae4453a27149fc0d264b762771c05928a}{reference}, 
+\\*
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6a15559519c6107856a560144341f8b5aa}{pointer\-Array}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa35d924d47e40ee9dda77449a842f98d}{reference\-Array}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6a8bb2d5f4c546729cb782411a1c3b4c3f}{pointer\-Pointer}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa34a76d3845e9a44b518da0d2026adc3}{standard}, 
+\\*
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6a6a1861dd0b87409b45e089b2370588a9}{array}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa812c8fa27892087314ab15a660da43b}{pointer}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6ae4453a27149fc0d264b762771c05928a}{reference}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6a15559519c6107856a560144341f8b5aa}{pointer\-Array}, 
+\\*
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa35d924d47e40ee9dda77449a842f98d}{reference\-Array}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6a8bb2d5f4c546729cb782411a1c3b4c3f}{pointer\-Pointer}, 
+\hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6aab9f3842a98b5267483794d18d759baf}{none}
+ \}
+\item 
+typedef std\-::map$<$ unsigned int, \\*
+\hyperlink{class_variables_1_1_variable_usage}{Variable\-Usage} $>$ \hyperlink{class_variables_ad1842b533d8aea619d93eb5d571e35d0}{Variable\-Map}
+\item 
+typedef std\-::map$<$ unsigned int, \\*
+\hyperlink{class_variables_1_1_variable_usage}{Variable\-Usage} $>$ \hyperlink{class_variables_ad1842b533d8aea619d93eb5d571e35d0}{Variable\-Map}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_variables_a46c30050683017ad2e4089a0970eb2a8}{clear} ()
+\item 
+\hyperlink{class_variables_ad1842b533d8aea619d93eb5d571e35d0}{Variable\-Map} \& \hyperlink{class_variables_a80d0dd3e7539743bfe0cb65906ab54ad}{var\-Usage} ()
+\item 
+void \hyperlink{class_variables_ac1f2b1f8230118f9c376ec7b86cdc1b2}{add\-Var} (const \hyperlink{class_token}{Token} $\ast$name, \hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6}{Variable\-Type} type, \hyperlink{class_scope_info}{Scope\-Info} $\ast$scope, bool write\-\_\-)
+\item 
+void \hyperlink{class_variables_a5a93b5a3558b8f65747ff749c633a757}{allocate\-Memory} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_ab88a423ae0e238a45ecbdf6f2f21f524}{read} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a130e9c0c81697462c7a4599bb501c76d}{read\-Aliases} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a37ce07da83cad11a23283211781f480c}{read\-All} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a8998a3dfc5cd4e073b67b314c92f59f3}{write} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a8216a64a5fba3f0670e56e1321016119}{write\-Aliases} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a1d96362c64e76fb698cc855266be4e9a}{write\-All} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_afcc3acc3af2c1c02f3c9d4668a7f6272}{use} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a1c4d49dba6f320283d1b068daad65ba2}{modified} (unsigned int varid)
+\item 
+\hyperlink{class_variables_1_1_variable_usage}{Variable\-Usage} $\ast$ \hyperlink{class_variables_af8d45c4c9e9072bf848cc37d57243081}{find} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a459bf7f3ba16d1b0e127b283579559c7}{alias} (unsigned int varid1, unsigned int varid2, bool replace)
+\item 
+void \hyperlink{class_variables_abcc083a53b7985ca821258bee9ccec2b}{erase} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a51f66c181927366ac8b709fc176db1bb}{erase\-Aliases} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a71d64b4a85f0e49934d8af564841eb3c}{erase\-All} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a8de7aee44a72fc2a30cb6a79fb76ca68}{clear\-Aliases} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a46c30050683017ad2e4089a0970eb2a8}{clear} ()
+\item 
+const \hyperlink{class_variables_ad1842b533d8aea619d93eb5d571e35d0}{Variable\-Map} \& \hyperlink{class_variables_a54742bc6fcef02ce6dad52bc7fe4642b}{var\-Usage} () const 
+\item 
+void \hyperlink{class_variables_ad94a04ac23e1907c38a84faa8cac6c1b}{add\-Var} (const \hyperlink{class_token}{Token} $\ast$name, \hyperlink{class_variables_a1ce977f31f855a0966511a93b9deb9b6}{Variable\-Type} type, const \hyperlink{class_scope}{Scope} $\ast$scope, bool write\-\_\-)
+\item 
+void \hyperlink{class_variables_a5a93b5a3558b8f65747ff749c633a757}{allocate\-Memory} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_ab88a423ae0e238a45ecbdf6f2f21f524}{read} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a130e9c0c81697462c7a4599bb501c76d}{read\-Aliases} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a37ce07da83cad11a23283211781f480c}{read\-All} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a8998a3dfc5cd4e073b67b314c92f59f3}{write} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a8216a64a5fba3f0670e56e1321016119}{write\-Aliases} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a1d96362c64e76fb698cc855266be4e9a}{write\-All} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_afcc3acc3af2c1c02f3c9d4668a7f6272}{use} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a1c4d49dba6f320283d1b068daad65ba2}{modified} (unsigned int varid)
+\item 
+\hyperlink{class_variables_1_1_variable_usage}{Variable\-Usage} $\ast$ \hyperlink{class_variables_a400fdc22a2fcc8dcbcea3cfe5c4b8293}{find} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a459bf7f3ba16d1b0e127b283579559c7}{alias} (unsigned int varid1, unsigned int varid2, bool replace)
+\item 
+void \hyperlink{class_variables_abcc083a53b7985ca821258bee9ccec2b}{erase} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a51f66c181927366ac8b709fc176db1bb}{erase\-Aliases} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a71d64b4a85f0e49934d8af564841eb3c}{erase\-All} (unsigned int varid)
+\item 
+void \hyperlink{class_variables_a8de7aee44a72fc2a30cb6a79fb76ca68}{clear\-Aliases} (unsigned int varid)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is used create a list of variables within a function. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_variables_ad1842b533d8aea619d93eb5d571e35d0}{\index{Variables@{Variables}!Variable\-Map@{Variable\-Map}}
+\index{Variable\-Map@{Variable\-Map}!Variables@{Variables}}
+\subsubsection[{Variable\-Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<$unsigned int, {\bf Variable\-Usage}$>$ {\bf Variables\-::\-Variable\-Map}}}\label{class_variables_ad1842b533d8aea619d93eb5d571e35d0}
+\hypertarget{class_variables_ad1842b533d8aea619d93eb5d571e35d0}{\index{Variables@{Variables}!Variable\-Map@{Variable\-Map}}
+\index{Variable\-Map@{Variable\-Map}!Variables@{Variables}}
+\subsubsection[{Variable\-Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<$unsigned int, {\bf Variable\-Usage}$>$ {\bf Variables\-::\-Variable\-Map}}}\label{class_variables_ad1842b533d8aea619d93eb5d571e35d0}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6}{\index{Variables@{Variables}!Variable\-Type@{Variable\-Type}}
+\index{Variable\-Type@{Variable\-Type}!Variables@{Variables}}
+\subsubsection[{Variable\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Variables\-::\-Variable\-Type}}}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{standard@{standard}!Variables@{Variables}}\index{Variables@{Variables}!standard@{standard}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa34a76d3845e9a44b518da0d2026adc3}{standard}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa34a76d3845e9a44b518da0d2026adc3}
+}]\index{array@{array}!Variables@{Variables}}\index{Variables@{Variables}!array@{array}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6a6a1861dd0b87409b45e089b2370588a9}{array}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6a6a1861dd0b87409b45e089b2370588a9}
+}]\index{pointer@{pointer}!Variables@{Variables}}\index{Variables@{Variables}!pointer@{pointer}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa812c8fa27892087314ab15a660da43b}{pointer}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa812c8fa27892087314ab15a660da43b}
+}]\index{reference@{reference}!Variables@{Variables}}\index{Variables@{Variables}!reference@{reference}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6ae4453a27149fc0d264b762771c05928a}{reference}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6ae4453a27149fc0d264b762771c05928a}
+}]\index{pointer\-Array@{pointer\-Array}!Variables@{Variables}}\index{Variables@{Variables}!pointer\-Array@{pointer\-Array}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6a15559519c6107856a560144341f8b5aa}{pointer\-Array}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6a15559519c6107856a560144341f8b5aa}
+}]\index{reference\-Array@{reference\-Array}!Variables@{Variables}}\index{Variables@{Variables}!reference\-Array@{reference\-Array}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa35d924d47e40ee9dda77449a842f98d}{reference\-Array}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa35d924d47e40ee9dda77449a842f98d}
+}]\index{pointer\-Pointer@{pointer\-Pointer}!Variables@{Variables}}\index{Variables@{Variables}!pointer\-Pointer@{pointer\-Pointer}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6a8bb2d5f4c546729cb782411a1c3b4c3f}{pointer\-Pointer}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6a8bb2d5f4c546729cb782411a1c3b4c3f}
+}]\index{standard@{standard}!Variables@{Variables}}\index{Variables@{Variables}!standard@{standard}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa34a76d3845e9a44b518da0d2026adc3}{standard}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa34a76d3845e9a44b518da0d2026adc3}
+}]\index{array@{array}!Variables@{Variables}}\index{Variables@{Variables}!array@{array}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6a6a1861dd0b87409b45e089b2370588a9}{array}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6a6a1861dd0b87409b45e089b2370588a9}
+}]\index{pointer@{pointer}!Variables@{Variables}}\index{Variables@{Variables}!pointer@{pointer}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa812c8fa27892087314ab15a660da43b}{pointer}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa812c8fa27892087314ab15a660da43b}
+}]\index{reference@{reference}!Variables@{Variables}}\index{Variables@{Variables}!reference@{reference}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6ae4453a27149fc0d264b762771c05928a}{reference}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6ae4453a27149fc0d264b762771c05928a}
+}]\index{pointer\-Array@{pointer\-Array}!Variables@{Variables}}\index{Variables@{Variables}!pointer\-Array@{pointer\-Array}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6a15559519c6107856a560144341f8b5aa}{pointer\-Array}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6a15559519c6107856a560144341f8b5aa}
+}]\index{reference\-Array@{reference\-Array}!Variables@{Variables}}\index{Variables@{Variables}!reference\-Array@{reference\-Array}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa35d924d47e40ee9dda77449a842f98d}{reference\-Array}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa35d924d47e40ee9dda77449a842f98d}
+}]\index{pointer\-Pointer@{pointer\-Pointer}!Variables@{Variables}}\index{Variables@{Variables}!pointer\-Pointer@{pointer\-Pointer}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6a8bb2d5f4c546729cb782411a1c3b4c3f}{pointer\-Pointer}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6a8bb2d5f4c546729cb782411a1c3b4c3f}
+}]\index{none@{none}!Variables@{Variables}}\index{Variables@{Variables}!none@{none}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6aab9f3842a98b5267483794d18d759baf}{none}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6aab9f3842a98b5267483794d18d759baf}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6}{\index{Variables@{Variables}!Variable\-Type@{Variable\-Type}}
+\index{Variable\-Type@{Variable\-Type}!Variables@{Variables}}
+\subsubsection[{Variable\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Variables\-::\-Variable\-Type}}}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{standard@{standard}!Variables@{Variables}}\index{Variables@{Variables}!standard@{standard}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa34a76d3845e9a44b518da0d2026adc3}{standard}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa34a76d3845e9a44b518da0d2026adc3}
+}]\index{array@{array}!Variables@{Variables}}\index{Variables@{Variables}!array@{array}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6a6a1861dd0b87409b45e089b2370588a9}{array}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6a6a1861dd0b87409b45e089b2370588a9}
+}]\index{pointer@{pointer}!Variables@{Variables}}\index{Variables@{Variables}!pointer@{pointer}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa812c8fa27892087314ab15a660da43b}{pointer}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa812c8fa27892087314ab15a660da43b}
+}]\index{reference@{reference}!Variables@{Variables}}\index{Variables@{Variables}!reference@{reference}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6ae4453a27149fc0d264b762771c05928a}{reference}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6ae4453a27149fc0d264b762771c05928a}
+}]\index{pointer\-Array@{pointer\-Array}!Variables@{Variables}}\index{Variables@{Variables}!pointer\-Array@{pointer\-Array}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6a15559519c6107856a560144341f8b5aa}{pointer\-Array}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6a15559519c6107856a560144341f8b5aa}
+}]\index{reference\-Array@{reference\-Array}!Variables@{Variables}}\index{Variables@{Variables}!reference\-Array@{reference\-Array}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa35d924d47e40ee9dda77449a842f98d}{reference\-Array}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa35d924d47e40ee9dda77449a842f98d}
+}]\index{pointer\-Pointer@{pointer\-Pointer}!Variables@{Variables}}\index{Variables@{Variables}!pointer\-Pointer@{pointer\-Pointer}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6a8bb2d5f4c546729cb782411a1c3b4c3f}{pointer\-Pointer}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6a8bb2d5f4c546729cb782411a1c3b4c3f}
+}]\index{standard@{standard}!Variables@{Variables}}\index{Variables@{Variables}!standard@{standard}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa34a76d3845e9a44b518da0d2026adc3}{standard}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa34a76d3845e9a44b518da0d2026adc3}
+}]\index{array@{array}!Variables@{Variables}}\index{Variables@{Variables}!array@{array}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6a6a1861dd0b87409b45e089b2370588a9}{array}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6a6a1861dd0b87409b45e089b2370588a9}
+}]\index{pointer@{pointer}!Variables@{Variables}}\index{Variables@{Variables}!pointer@{pointer}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa812c8fa27892087314ab15a660da43b}{pointer}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa812c8fa27892087314ab15a660da43b}
+}]\index{reference@{reference}!Variables@{Variables}}\index{Variables@{Variables}!reference@{reference}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6ae4453a27149fc0d264b762771c05928a}{reference}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6ae4453a27149fc0d264b762771c05928a}
+}]\index{pointer\-Array@{pointer\-Array}!Variables@{Variables}}\index{Variables@{Variables}!pointer\-Array@{pointer\-Array}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6a15559519c6107856a560144341f8b5aa}{pointer\-Array}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6a15559519c6107856a560144341f8b5aa}
+}]\index{reference\-Array@{reference\-Array}!Variables@{Variables}}\index{Variables@{Variables}!reference\-Array@{reference\-Array}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa35d924d47e40ee9dda77449a842f98d}{reference\-Array}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6aa35d924d47e40ee9dda77449a842f98d}
+}]\index{pointer\-Pointer@{pointer\-Pointer}!Variables@{Variables}}\index{Variables@{Variables}!pointer\-Pointer@{pointer\-Pointer}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6a8bb2d5f4c546729cb782411a1c3b4c3f}{pointer\-Pointer}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6a8bb2d5f4c546729cb782411a1c3b4c3f}
+}]\index{none@{none}!Variables@{Variables}}\index{Variables@{Variables}!none@{none}}\item[{\em 
+\hypertarget{class_variables_a1ce977f31f855a0966511a93b9deb9b6aab9f3842a98b5267483794d18d759baf}{none}\label{class_variables_a1ce977f31f855a0966511a93b9deb9b6aab9f3842a98b5267483794d18d759baf}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_variables_ad94a04ac23e1907c38a84faa8cac6c1b}{\index{Variables@{Variables}!add\-Var@{add\-Var}}
+\index{add\-Var@{add\-Var}!Variables@{Variables}}
+\subsubsection[{add\-Var}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::add\-Var (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{name, }
+\item[{{\bf Variable\-Type}}]{type, }
+\item[{const {\bf Scope} $\ast$}]{scope, }
+\item[{bool}]{write\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_variables_ad94a04ac23e1907c38a84faa8cac6c1b}
+\hypertarget{class_variables_ac1f2b1f8230118f9c376ec7b86cdc1b2}{\index{Variables@{Variables}!add\-Var@{add\-Var}}
+\index{add\-Var@{add\-Var}!Variables@{Variables}}
+\subsubsection[{add\-Var}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::add\-Var (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{name, }
+\item[{{\bf Variable\-Type}}]{type, }
+\item[{{\bf Scope\-Info} $\ast$}]{scope, }
+\item[{bool}]{write\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_variables_ac1f2b1f8230118f9c376ec7b86cdc1b2}
+\hypertarget{class_variables_a459bf7f3ba16d1b0e127b283579559c7}{\index{Variables@{Variables}!alias@{alias}}
+\index{alias@{alias}!Variables@{Variables}}
+\subsubsection[{alias}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::alias (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid1, }
+\item[{unsigned int}]{varid2, }
+\item[{bool}]{replace}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a459bf7f3ba16d1b0e127b283579559c7}
+\hypertarget{class_variables_a459bf7f3ba16d1b0e127b283579559c7}{\index{Variables@{Variables}!alias@{alias}}
+\index{alias@{alias}!Variables@{Variables}}
+\subsubsection[{alias}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::alias (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid1, }
+\item[{unsigned int}]{varid2, }
+\item[{bool}]{replace}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a459bf7f3ba16d1b0e127b283579559c7}
+Alias the 2 given variables. Either replace the existing aliases if they exist or merge them. You would replace an existing alias when this assignment is in the same scope as the previous assignment. You might merge the aliases when this assignment is in a different scope from the previous assignment depending on the relationship of the 2 scopes. \hypertarget{class_variables_a5a93b5a3558b8f65747ff749c633a757}{\index{Variables@{Variables}!allocate\-Memory@{allocate\-Memory}}
+\index{allocate\-Memory@{allocate\-Memory}!Variables@{Variables}}
+\subsubsection[{allocate\-Memory}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::allocate\-Memory (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a5a93b5a3558b8f65747ff749c633a757}
+\hypertarget{class_variables_a5a93b5a3558b8f65747ff749c633a757}{\index{Variables@{Variables}!allocate\-Memory@{allocate\-Memory}}
+\index{allocate\-Memory@{allocate\-Memory}!Variables@{Variables}}
+\subsubsection[{allocate\-Memory}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::allocate\-Memory (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a5a93b5a3558b8f65747ff749c633a757}
+\hypertarget{class_variables_a46c30050683017ad2e4089a0970eb2a8}{\index{Variables@{Variables}!clear@{clear}}
+\index{clear@{clear}!Variables@{Variables}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variables_a46c30050683017ad2e4089a0970eb2a8}
+\hypertarget{class_variables_a46c30050683017ad2e4089a0970eb2a8}{\index{Variables@{Variables}!clear@{clear}}
+\index{clear@{clear}!Variables@{Variables}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variables_a46c30050683017ad2e4089a0970eb2a8}
+\hypertarget{class_variables_a8de7aee44a72fc2a30cb6a79fb76ca68}{\index{Variables@{Variables}!clear\-Aliases@{clear\-Aliases}}
+\index{clear\-Aliases@{clear\-Aliases}!Variables@{Variables}}
+\subsubsection[{clear\-Aliases}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::clear\-Aliases (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a8de7aee44a72fc2a30cb6a79fb76ca68}
+\hypertarget{class_variables_a8de7aee44a72fc2a30cb6a79fb76ca68}{\index{Variables@{Variables}!clear\-Aliases@{clear\-Aliases}}
+\index{clear\-Aliases@{clear\-Aliases}!Variables@{Variables}}
+\subsubsection[{clear\-Aliases}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::clear\-Aliases (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a8de7aee44a72fc2a30cb6a79fb76ca68}
+\hypertarget{class_variables_abcc083a53b7985ca821258bee9ccec2b}{\index{Variables@{Variables}!erase@{erase}}
+\index{erase@{erase}!Variables@{Variables}}
+\subsubsection[{erase}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::erase (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variables_abcc083a53b7985ca821258bee9ccec2b}
+\hypertarget{class_variables_abcc083a53b7985ca821258bee9ccec2b}{\index{Variables@{Variables}!erase@{erase}}
+\index{erase@{erase}!Variables@{Variables}}
+\subsubsection[{erase}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::erase (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variables_abcc083a53b7985ca821258bee9ccec2b}
+\hypertarget{class_variables_a51f66c181927366ac8b709fc176db1bb}{\index{Variables@{Variables}!erase\-Aliases@{erase\-Aliases}}
+\index{erase\-Aliases@{erase\-Aliases}!Variables@{Variables}}
+\subsubsection[{erase\-Aliases}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::erase\-Aliases (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a51f66c181927366ac8b709fc176db1bb}
+\hypertarget{class_variables_a51f66c181927366ac8b709fc176db1bb}{\index{Variables@{Variables}!erase\-Aliases@{erase\-Aliases}}
+\index{erase\-Aliases@{erase\-Aliases}!Variables@{Variables}}
+\subsubsection[{erase\-Aliases}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::erase\-Aliases (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a51f66c181927366ac8b709fc176db1bb}
+\hypertarget{class_variables_a71d64b4a85f0e49934d8af564841eb3c}{\index{Variables@{Variables}!erase\-All@{erase\-All}}
+\index{erase\-All@{erase\-All}!Variables@{Variables}}
+\subsubsection[{erase\-All}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::erase\-All (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a71d64b4a85f0e49934d8af564841eb3c}
+\hypertarget{class_variables_a71d64b4a85f0e49934d8af564841eb3c}{\index{Variables@{Variables}!erase\-All@{erase\-All}}
+\index{erase\-All@{erase\-All}!Variables@{Variables}}
+\subsubsection[{erase\-All}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::erase\-All (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a71d64b4a85f0e49934d8af564841eb3c}
+\hypertarget{class_variables_a400fdc22a2fcc8dcbcea3cfe5c4b8293}{\index{Variables@{Variables}!find@{find}}
+\index{find@{find}!Variables@{Variables}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable\-Usage}$\ast$ Variables\-::find (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a400fdc22a2fcc8dcbcea3cfe5c4b8293}
+\hypertarget{class_variables_af8d45c4c9e9072bf848cc37d57243081}{\index{Variables@{Variables}!find@{find}}
+\index{find@{find}!Variables@{Variables}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variables\-::\-Variable\-Usage} $\ast$ Variables\-::find (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_af8d45c4c9e9072bf848cc37d57243081}
+\hypertarget{class_variables_a1c4d49dba6f320283d1b068daad65ba2}{\index{Variables@{Variables}!modified@{modified}}
+\index{modified@{modified}!Variables@{Variables}}
+\subsubsection[{modified}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::modified (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a1c4d49dba6f320283d1b068daad65ba2}
+\hypertarget{class_variables_a1c4d49dba6f320283d1b068daad65ba2}{\index{Variables@{Variables}!modified@{modified}}
+\index{modified@{modified}!Variables@{Variables}}
+\subsubsection[{modified}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::modified (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a1c4d49dba6f320283d1b068daad65ba2}
+\hypertarget{class_variables_ab88a423ae0e238a45ecbdf6f2f21f524}{\index{Variables@{Variables}!read@{read}}
+\index{read@{read}!Variables@{Variables}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::read (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_ab88a423ae0e238a45ecbdf6f2f21f524}
+\hypertarget{class_variables_ab88a423ae0e238a45ecbdf6f2f21f524}{\index{Variables@{Variables}!read@{read}}
+\index{read@{read}!Variables@{Variables}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::read (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_ab88a423ae0e238a45ecbdf6f2f21f524}
+\hypertarget{class_variables_a130e9c0c81697462c7a4599bb501c76d}{\index{Variables@{Variables}!read\-Aliases@{read\-Aliases}}
+\index{read\-Aliases@{read\-Aliases}!Variables@{Variables}}
+\subsubsection[{read\-Aliases}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::read\-Aliases (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a130e9c0c81697462c7a4599bb501c76d}
+\hypertarget{class_variables_a130e9c0c81697462c7a4599bb501c76d}{\index{Variables@{Variables}!read\-Aliases@{read\-Aliases}}
+\index{read\-Aliases@{read\-Aliases}!Variables@{Variables}}
+\subsubsection[{read\-Aliases}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::read\-Aliases (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a130e9c0c81697462c7a4599bb501c76d}
+\hypertarget{class_variables_a37ce07da83cad11a23283211781f480c}{\index{Variables@{Variables}!read\-All@{read\-All}}
+\index{read\-All@{read\-All}!Variables@{Variables}}
+\subsubsection[{read\-All}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::read\-All (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a37ce07da83cad11a23283211781f480c}
+\hypertarget{class_variables_a37ce07da83cad11a23283211781f480c}{\index{Variables@{Variables}!read\-All@{read\-All}}
+\index{read\-All@{read\-All}!Variables@{Variables}}
+\subsubsection[{read\-All}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::read\-All (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a37ce07da83cad11a23283211781f480c}
+\hypertarget{class_variables_afcc3acc3af2c1c02f3c9d4668a7f6272}{\index{Variables@{Variables}!use@{use}}
+\index{use@{use}!Variables@{Variables}}
+\subsubsection[{use}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::use (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_afcc3acc3af2c1c02f3c9d4668a7f6272}
+\hypertarget{class_variables_afcc3acc3af2c1c02f3c9d4668a7f6272}{\index{Variables@{Variables}!use@{use}}
+\index{use@{use}!Variables@{Variables}}
+\subsubsection[{use}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::use (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_afcc3acc3af2c1c02f3c9d4668a7f6272}
+\hypertarget{class_variables_a54742bc6fcef02ce6dad52bc7fe4642b}{\index{Variables@{Variables}!var\-Usage@{var\-Usage}}
+\index{var\-Usage@{var\-Usage}!Variables@{Variables}}
+\subsubsection[{var\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Variable\-Map}\& Variables\-::var\-Usage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variables_a54742bc6fcef02ce6dad52bc7fe4642b}
+\hypertarget{class_variables_a80d0dd3e7539743bfe0cb65906ab54ad}{\index{Variables@{Variables}!var\-Usage@{var\-Usage}}
+\index{var\-Usage@{var\-Usage}!Variables@{Variables}}
+\subsubsection[{var\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Variable\-Map}\& Variables\-::var\-Usage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variables_a80d0dd3e7539743bfe0cb65906ab54ad}
+\hypertarget{class_variables_a8998a3dfc5cd4e073b67b314c92f59f3}{\index{Variables@{Variables}!write@{write}}
+\index{write@{write}!Variables@{Variables}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::write (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a8998a3dfc5cd4e073b67b314c92f59f3}
+\hypertarget{class_variables_a8998a3dfc5cd4e073b67b314c92f59f3}{\index{Variables@{Variables}!write@{write}}
+\index{write@{write}!Variables@{Variables}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::write (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a8998a3dfc5cd4e073b67b314c92f59f3}
+\hypertarget{class_variables_a8216a64a5fba3f0670e56e1321016119}{\index{Variables@{Variables}!write\-Aliases@{write\-Aliases}}
+\index{write\-Aliases@{write\-Aliases}!Variables@{Variables}}
+\subsubsection[{write\-Aliases}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::write\-Aliases (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a8216a64a5fba3f0670e56e1321016119}
+\hypertarget{class_variables_a8216a64a5fba3f0670e56e1321016119}{\index{Variables@{Variables}!write\-Aliases@{write\-Aliases}}
+\index{write\-Aliases@{write\-Aliases}!Variables@{Variables}}
+\subsubsection[{write\-Aliases}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::write\-Aliases (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a8216a64a5fba3f0670e56e1321016119}
+\hypertarget{class_variables_a1d96362c64e76fb698cc855266be4e9a}{\index{Variables@{Variables}!write\-All@{write\-All}}
+\index{write\-All@{write\-All}!Variables@{Variables}}
+\subsubsection[{write\-All}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::write\-All (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a1d96362c64e76fb698cc855266be4e9a}
+\hypertarget{class_variables_a1d96362c64e76fb698cc855266be4e9a}{\index{Variables@{Variables}!write\-All@{write\-All}}
+\index{write\-All@{write\-All}!Variables@{Variables}}
+\subsubsection[{write\-All}]{\setlength{\rightskip}{0pt plus 5cm}void Variables\-::write\-All (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{varid}
+\end{DoxyParamCaption}
+)}}\label{class_variables_a1d96362c64e76fb698cc855266be4e9a}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/test/data/benchmark/\hyperlink{simple_8cpp}{simple.\-cpp}\item 
+lib/\hyperlink{checkunusedvar_8cpp}{checkunusedvar.\-cpp}\end{DoxyCompactItemize}

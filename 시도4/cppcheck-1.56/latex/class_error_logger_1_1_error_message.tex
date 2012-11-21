@@ -1,0 +1,197 @@
+\hypertarget{class_error_logger_1_1_error_message}{\section{Error\-Logger\-:\-:Error\-Message Class Reference}
+\label{class_error_logger_1_1_error_message}\index{Error\-Logger\-::\-Error\-Message@{Error\-Logger\-::\-Error\-Message}}
+}
+
+
+{\ttfamily \#include $<$errorlogger.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_error_logger_1_1_error_message_1_1_file_location}{File\-Location}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_error_logger_1_1_error_message_a28b4ef630be617e7c635781892e08a9d}{Error\-Message} (const std\-::list$<$ \hyperlink{class_error_logger_1_1_error_message_1_1_file_location}{File\-Location} $>$ \&call\-Stack, \hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6}{Severity\-::\-Severity\-Type} severity, const std\-::string \&msg, const std\-::string \&id, bool inconclusive)
+\item 
+\hyperlink{class_error_logger_1_1_error_message_a97ebcfa70a2ea466f894467419729830}{Error\-Message} (const std\-::list$<$ const \hyperlink{class_token}{Token} $\ast$ $>$ \&callstack, const \hyperlink{class_token_list}{Token\-List} $\ast$list, \hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6}{Severity\-::\-Severity\-Type} severity, const std\-::string \&id, const std\-::string \&msg, bool inconclusive)
+\item 
+\hyperlink{class_error_logger_1_1_error_message_a6ff22717895a17e9b15fa2ed13dcb5a4}{Error\-Message} ()
+\item 
+std\-::string \hyperlink{class_error_logger_1_1_error_message_af9ffad6052651d748fed78cff18966bf}{to\-X\-M\-L} (bool verbose, int ver) const 
+\item 
+std\-::string \hyperlink{class_error_logger_1_1_error_message_a83016cd949e899d011507847b2c52790}{to\-String} (bool verbose, const std\-::string \&output\-Format=\char`\"{}\char`\"{}) const 
+\item 
+std\-::string \hyperlink{class_error_logger_1_1_error_message_a24cb003899ee92c3444730c0dc5f0de1}{serialize} () const 
+\item 
+bool \hyperlink{class_error_logger_1_1_error_message_a6676fb449879ff7948c84befbff78c6a}{deserialize} (const std\-::string \&data)
+\item 
+void \hyperlink{class_error_logger_1_1_error_message_a9e07d0c392487d3620a510b88ef2c739}{setmsg} (const std\-::string \&msg)
+\item 
+const std\-::string \& \hyperlink{class_error_logger_1_1_error_message_a29524f4eed3852fa58089218749509fd}{short\-Message} () const 
+\item 
+const std\-::string \& \hyperlink{class_error_logger_1_1_error_message_ac26c74c7fb147d4f2faf72a0f81803ec}{verbose\-Message} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{class_error_logger_1_1_error_message_a1a189796db0cf930d9dac592c671e962}{get\-X\-M\-L\-Header} (int xml\-\_\-version)
+\item 
+static std\-::string \hyperlink{class_error_logger_1_1_error_message_a1a27b7076758895909b665c180cbf4cb}{get\-X\-M\-L\-Footer} (int xml\-\_\-version)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::list$<$ \hyperlink{class_error_logger_1_1_error_message_1_1_file_location}{File\-Location} $>$ \hyperlink{class_error_logger_1_1_error_message_a727cfc17112cf06d0084073a52c87f2a}{\-\_\-call\-Stack}
+\item 
+std\-::string \hyperlink{class_error_logger_1_1_error_message_a197e43bcf760ff271d226649cd09bccb}{\-\_\-id}
+\item 
+std\-::string \hyperlink{class_error_logger_1_1_error_message_a7efa13ab9225aee1b195f878268e0ea6}{file0}
+\item 
+\hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6}{Severity\-::\-Severity\-Type} \hyperlink{class_error_logger_1_1_error_message_ad78317198d39ccb893b3a01a36ecce36}{\-\_\-severity}
+\item 
+bool \hyperlink{class_error_logger_1_1_error_message_a066e50962b37330bc0394bf7cf9ebd45}{\-\_\-inconclusive}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Wrapper for error messages, provided by \hyperlink{class_error_logger_aea56e01f24c0d8ecaa5498ae4eba1739}{report\-Err()} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_error_logger_1_1_error_message_a28b4ef630be617e7c635781892e08a9d}{\index{Error\-Logger\-::\-Error\-Message@{Error\-Logger\-::\-Error\-Message}!Error\-Message@{Error\-Message}}
+\index{Error\-Message@{Error\-Message}!ErrorLogger::ErrorMessage@{Error\-Logger\-::\-Error\-Message}}
+\subsubsection[{Error\-Message}]{\setlength{\rightskip}{0pt plus 5cm}Error\-Logger\-::\-Error\-Message\-::\-Error\-Message (
+\begin{DoxyParamCaption}
+\item[{const std\-::list$<$ {\bf File\-Location} $>$ \&}]{call\-Stack, }
+\item[{{\bf Severity\-::\-Severity\-Type}}]{severity, }
+\item[{const std\-::string \&}]{msg, }
+\item[{const std\-::string \&}]{id, }
+\item[{bool}]{inconclusive}
+\end{DoxyParamCaption}
+)}}\label{class_error_logger_1_1_error_message_a28b4ef630be617e7c635781892e08a9d}
+\hypertarget{class_error_logger_1_1_error_message_a97ebcfa70a2ea466f894467419729830}{\index{Error\-Logger\-::\-Error\-Message@{Error\-Logger\-::\-Error\-Message}!Error\-Message@{Error\-Message}}
+\index{Error\-Message@{Error\-Message}!ErrorLogger::ErrorMessage@{Error\-Logger\-::\-Error\-Message}}
+\subsubsection[{Error\-Message}]{\setlength{\rightskip}{0pt plus 5cm}Error\-Logger\-::\-Error\-Message\-::\-Error\-Message (
+\begin{DoxyParamCaption}
+\item[{const std\-::list$<$ const {\bf Token} $\ast$ $>$ \&}]{callstack, }
+\item[{const {\bf Token\-List} $\ast$}]{list, }
+\item[{{\bf Severity\-::\-Severity\-Type}}]{severity, }
+\item[{const std\-::string \&}]{id, }
+\item[{const std\-::string \&}]{msg, }
+\item[{bool}]{inconclusive}
+\end{DoxyParamCaption}
+)}}\label{class_error_logger_1_1_error_message_a97ebcfa70a2ea466f894467419729830}
+\hypertarget{class_error_logger_1_1_error_message_a6ff22717895a17e9b15fa2ed13dcb5a4}{\index{Error\-Logger\-::\-Error\-Message@{Error\-Logger\-::\-Error\-Message}!Error\-Message@{Error\-Message}}
+\index{Error\-Message@{Error\-Message}!ErrorLogger::ErrorMessage@{Error\-Logger\-::\-Error\-Message}}
+\subsubsection[{Error\-Message}]{\setlength{\rightskip}{0pt plus 5cm}Error\-Logger\-::\-Error\-Message\-::\-Error\-Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_error_logger_1_1_error_message_a6ff22717895a17e9b15fa2ed13dcb5a4}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_error_logger_1_1_error_message_a6676fb449879ff7948c84befbff78c6a}{\index{Error\-Logger\-::\-Error\-Message@{Error\-Logger\-::\-Error\-Message}!deserialize@{deserialize}}
+\index{deserialize@{deserialize}!ErrorLogger::ErrorMessage@{Error\-Logger\-::\-Error\-Message}}
+\subsubsection[{deserialize}]{\setlength{\rightskip}{0pt plus 5cm}bool Error\-Logger\-::\-Error\-Message\-::deserialize (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_error_logger_1_1_error_message_a6676fb449879ff7948c84befbff78c6a}
+\hypertarget{class_error_logger_1_1_error_message_a1a27b7076758895909b665c180cbf4cb}{\index{Error\-Logger\-::\-Error\-Message@{Error\-Logger\-::\-Error\-Message}!get\-X\-M\-L\-Footer@{get\-X\-M\-L\-Footer}}
+\index{get\-X\-M\-L\-Footer@{get\-X\-M\-L\-Footer}!ErrorLogger::ErrorMessage@{Error\-Logger\-::\-Error\-Message}}
+\subsubsection[{get\-X\-M\-L\-Footer}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Error\-Logger\-::\-Error\-Message\-::get\-X\-M\-L\-Footer (
+\begin{DoxyParamCaption}
+\item[{int}]{xml\-\_\-version}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_error_logger_1_1_error_message_a1a27b7076758895909b665c180cbf4cb}
+\hypertarget{class_error_logger_1_1_error_message_a1a189796db0cf930d9dac592c671e962}{\index{Error\-Logger\-::\-Error\-Message@{Error\-Logger\-::\-Error\-Message}!get\-X\-M\-L\-Header@{get\-X\-M\-L\-Header}}
+\index{get\-X\-M\-L\-Header@{get\-X\-M\-L\-Header}!ErrorLogger::ErrorMessage@{Error\-Logger\-::\-Error\-Message}}
+\subsubsection[{get\-X\-M\-L\-Header}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Error\-Logger\-::\-Error\-Message\-::get\-X\-M\-L\-Header (
+\begin{DoxyParamCaption}
+\item[{int}]{xml\-\_\-version}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_error_logger_1_1_error_message_a1a189796db0cf930d9dac592c671e962}
+\hypertarget{class_error_logger_1_1_error_message_a24cb003899ee92c3444730c0dc5f0de1}{\index{Error\-Logger\-::\-Error\-Message@{Error\-Logger\-::\-Error\-Message}!serialize@{serialize}}
+\index{serialize@{serialize}!ErrorLogger::ErrorMessage@{Error\-Logger\-::\-Error\-Message}}
+\subsubsection[{serialize}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Error\-Logger\-::\-Error\-Message\-::serialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_error_logger_1_1_error_message_a24cb003899ee92c3444730c0dc5f0de1}
+\hypertarget{class_error_logger_1_1_error_message_a9e07d0c392487d3620a510b88ef2c739}{\index{Error\-Logger\-::\-Error\-Message@{Error\-Logger\-::\-Error\-Message}!setmsg@{setmsg}}
+\index{setmsg@{setmsg}!ErrorLogger::ErrorMessage@{Error\-Logger\-::\-Error\-Message}}
+\subsubsection[{setmsg}]{\setlength{\rightskip}{0pt plus 5cm}void Error\-Logger\-::\-Error\-Message\-::setmsg (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{msg}
+\end{DoxyParamCaption}
+)}}\label{class_error_logger_1_1_error_message_a9e07d0c392487d3620a510b88ef2c739}
+set short and verbose messages \hypertarget{class_error_logger_1_1_error_message_a29524f4eed3852fa58089218749509fd}{\index{Error\-Logger\-::\-Error\-Message@{Error\-Logger\-::\-Error\-Message}!short\-Message@{short\-Message}}
+\index{short\-Message@{short\-Message}!ErrorLogger::ErrorMessage@{Error\-Logger\-::\-Error\-Message}}
+\subsubsection[{short\-Message}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& Error\-Logger\-::\-Error\-Message\-::short\-Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_error_logger_1_1_error_message_a29524f4eed3852fa58089218749509fd}
+Short message (single line short message) \hypertarget{class_error_logger_1_1_error_message_a83016cd949e899d011507847b2c52790}{\index{Error\-Logger\-::\-Error\-Message@{Error\-Logger\-::\-Error\-Message}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!ErrorLogger::ErrorMessage@{Error\-Logger\-::\-Error\-Message}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Error\-Logger\-::\-Error\-Message\-::to\-String (
+\begin{DoxyParamCaption}
+\item[{bool}]{verbose, }
+\item[{const std\-::string \&}]{output\-Format = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+) const}}\label{class_error_logger_1_1_error_message_a83016cd949e899d011507847b2c52790}
+Format the error message into a string. 
+\begin{DoxyParams}{Parameters}
+{\em verbose} & use verbose message \\
+\hline
+{\em output\-Format} & Empty string to use default output format or template to be used. E.\-g. \char`\"{}\{file\}\-:\{line\},\{severity\},\{id\},\{message\}\char`\"{} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_error_logger_1_1_error_message_af9ffad6052651d748fed78cff18966bf}{\index{Error\-Logger\-::\-Error\-Message@{Error\-Logger\-::\-Error\-Message}!to\-X\-M\-L@{to\-X\-M\-L}}
+\index{to\-X\-M\-L@{to\-X\-M\-L}!ErrorLogger::ErrorMessage@{Error\-Logger\-::\-Error\-Message}}
+\subsubsection[{to\-X\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Error\-Logger\-::\-Error\-Message\-::to\-X\-M\-L (
+\begin{DoxyParamCaption}
+\item[{bool}]{verbose, }
+\item[{int}]{ver}
+\end{DoxyParamCaption}
+) const}}\label{class_error_logger_1_1_error_message_af9ffad6052651d748fed78cff18966bf}
+Format the error message in X\-M\-L format 
+\begin{DoxyParams}{Parameters}
+{\em verbose} & use verbose message \\
+\hline
+{\em ver} & X\-M\-L version \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_error_logger_1_1_error_message_ac26c74c7fb147d4f2faf72a0f81803ec}{\index{Error\-Logger\-::\-Error\-Message@{Error\-Logger\-::\-Error\-Message}!verbose\-Message@{verbose\-Message}}
+\index{verbose\-Message@{verbose\-Message}!ErrorLogger::ErrorMessage@{Error\-Logger\-::\-Error\-Message}}
+\subsubsection[{verbose\-Message}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& Error\-Logger\-::\-Error\-Message\-::verbose\-Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_error_logger_1_1_error_message_ac26c74c7fb147d4f2faf72a0f81803ec}
+Verbose message (may be the same as the short message) 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_error_logger_1_1_error_message_a727cfc17112cf06d0084073a52c87f2a}{\index{Error\-Logger\-::\-Error\-Message@{Error\-Logger\-::\-Error\-Message}!\-\_\-call\-Stack@{\-\_\-call\-Stack}}
+\index{\-\_\-call\-Stack@{\-\_\-call\-Stack}!ErrorLogger::ErrorMessage@{Error\-Logger\-::\-Error\-Message}}
+\subsubsection[{\-\_\-call\-Stack}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<${\bf File\-Location}$>$ Error\-Logger\-::\-Error\-Message\-::\-\_\-call\-Stack}}\label{class_error_logger_1_1_error_message_a727cfc17112cf06d0084073a52c87f2a}
+\hypertarget{class_error_logger_1_1_error_message_a197e43bcf760ff271d226649cd09bccb}{\index{Error\-Logger\-::\-Error\-Message@{Error\-Logger\-::\-Error\-Message}!\-\_\-id@{\-\_\-id}}
+\index{\-\_\-id@{\-\_\-id}!ErrorLogger::ErrorMessage@{Error\-Logger\-::\-Error\-Message}}
+\subsubsection[{\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Error\-Logger\-::\-Error\-Message\-::\-\_\-id}}\label{class_error_logger_1_1_error_message_a197e43bcf760ff271d226649cd09bccb}
+\hypertarget{class_error_logger_1_1_error_message_a066e50962b37330bc0394bf7cf9ebd45}{\index{Error\-Logger\-::\-Error\-Message@{Error\-Logger\-::\-Error\-Message}!\-\_\-inconclusive@{\-\_\-inconclusive}}
+\index{\-\_\-inconclusive@{\-\_\-inconclusive}!ErrorLogger::ErrorMessage@{Error\-Logger\-::\-Error\-Message}}
+\subsubsection[{\-\_\-inconclusive}]{\setlength{\rightskip}{0pt plus 5cm}bool Error\-Logger\-::\-Error\-Message\-::\-\_\-inconclusive}}\label{class_error_logger_1_1_error_message_a066e50962b37330bc0394bf7cf9ebd45}
+\hypertarget{class_error_logger_1_1_error_message_ad78317198d39ccb893b3a01a36ecce36}{\index{Error\-Logger\-::\-Error\-Message@{Error\-Logger\-::\-Error\-Message}!\-\_\-severity@{\-\_\-severity}}
+\index{\-\_\-severity@{\-\_\-severity}!ErrorLogger::ErrorMessage@{Error\-Logger\-::\-Error\-Message}}
+\subsubsection[{\-\_\-severity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Severity\-::\-Severity\-Type} Error\-Logger\-::\-Error\-Message\-::\-\_\-severity}}\label{class_error_logger_1_1_error_message_ad78317198d39ccb893b3a01a36ecce36}
+\hypertarget{class_error_logger_1_1_error_message_a7efa13ab9225aee1b195f878268e0ea6}{\index{Error\-Logger\-::\-Error\-Message@{Error\-Logger\-::\-Error\-Message}!file0@{file0}}
+\index{file0@{file0}!ErrorLogger::ErrorMessage@{Error\-Logger\-::\-Error\-Message}}
+\subsubsection[{file0}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Error\-Logger\-::\-Error\-Message\-::file0}}\label{class_error_logger_1_1_error_message_a7efa13ab9225aee1b195f878268e0ea6}
+source file (not header) 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{errorlogger_8h}{errorlogger.\-h}\item 
+lib/\hyperlink{errorlogger_8cpp}{errorlogger.\-cpp}\end{DoxyCompactItemize}

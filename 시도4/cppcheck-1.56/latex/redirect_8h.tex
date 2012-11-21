@@ -1,0 +1,46 @@
+\hypertarget{redirect_8h}{\section{test/redirect.h File Reference}
+\label{redirect_8h}\index{test/redirect.\-h@{test/redirect.\-h}}
+}
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_redirect_output_error}{Redirect\-Output\-Error}
+\begin{DoxyCompactList}\small\item\em Utility class for capturing cout and cerr to ostringstream buffers for later use. Uses R\-A\-I\-I to stop redirection when the object goes out of scope. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{redirect_8h_afd0086f6d03b7b9d3dcf316957b6f52d}{R\-E\-D\-I\-R\-E\-C\-T}~\hyperlink{class_redirect_output_error}{Redirect\-Output\-Error} redir;
+\item 
+\#define \hyperlink{redirect_8h_ad25de9abce3b2bedba8f37aae4aaaf19}{G\-E\-T\-\_\-\-R\-E\-D\-I\-R\-E\-C\-T\-\_\-\-O\-U\-T\-P\-U\-T}~redir.\-get\-Output()
+\item 
+\#define \hyperlink{redirect_8h_a09fa17019dc887e8ff8ca27d607a4fda}{C\-L\-E\-A\-R\-\_\-\-R\-E\-D\-I\-R\-E\-C\-T\-\_\-\-O\-U\-T\-P\-U\-T}~redir.\-clear\-Output()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\-::ostringstream \hyperlink{redirect_8h_a8b41e5db712c415c29f0b8225c9a169c}{errout}
+\item 
+std\-::ostringstream \hyperlink{redirect_8h_a2369284a02343f6cea00e0e992c138ce}{output}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{redirect_8h_a09fa17019dc887e8ff8ca27d607a4fda}{\index{redirect.\-h@{redirect.\-h}!C\-L\-E\-A\-R\-\_\-\-R\-E\-D\-I\-R\-E\-C\-T\-\_\-\-O\-U\-T\-P\-U\-T@{C\-L\-E\-A\-R\-\_\-\-R\-E\-D\-I\-R\-E\-C\-T\-\_\-\-O\-U\-T\-P\-U\-T}}
+\index{C\-L\-E\-A\-R\-\_\-\-R\-E\-D\-I\-R\-E\-C\-T\-\_\-\-O\-U\-T\-P\-U\-T@{C\-L\-E\-A\-R\-\_\-\-R\-E\-D\-I\-R\-E\-C\-T\-\_\-\-O\-U\-T\-P\-U\-T}!redirect.h@{redirect.\-h}}
+\subsubsection[{C\-L\-E\-A\-R\-\_\-\-R\-E\-D\-I\-R\-E\-C\-T\-\_\-\-O\-U\-T\-P\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-L\-E\-A\-R\-\_\-\-R\-E\-D\-I\-R\-E\-C\-T\-\_\-\-O\-U\-T\-P\-U\-T~redir.\-clear\-Output()}}\label{redirect_8h_a09fa17019dc887e8ff8ca27d607a4fda}
+\hypertarget{redirect_8h_ad25de9abce3b2bedba8f37aae4aaaf19}{\index{redirect.\-h@{redirect.\-h}!G\-E\-T\-\_\-\-R\-E\-D\-I\-R\-E\-C\-T\-\_\-\-O\-U\-T\-P\-U\-T@{G\-E\-T\-\_\-\-R\-E\-D\-I\-R\-E\-C\-T\-\_\-\-O\-U\-T\-P\-U\-T}}
+\index{G\-E\-T\-\_\-\-R\-E\-D\-I\-R\-E\-C\-T\-\_\-\-O\-U\-T\-P\-U\-T@{G\-E\-T\-\_\-\-R\-E\-D\-I\-R\-E\-C\-T\-\_\-\-O\-U\-T\-P\-U\-T}!redirect.h@{redirect.\-h}}
+\subsubsection[{G\-E\-T\-\_\-\-R\-E\-D\-I\-R\-E\-C\-T\-\_\-\-O\-U\-T\-P\-U\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-R\-E\-D\-I\-R\-E\-C\-T\-\_\-\-O\-U\-T\-P\-U\-T~redir.\-get\-Output()}}\label{redirect_8h_ad25de9abce3b2bedba8f37aae4aaaf19}
+\hypertarget{redirect_8h_afd0086f6d03b7b9d3dcf316957b6f52d}{\index{redirect.\-h@{redirect.\-h}!R\-E\-D\-I\-R\-E\-C\-T@{R\-E\-D\-I\-R\-E\-C\-T}}
+\index{R\-E\-D\-I\-R\-E\-C\-T@{R\-E\-D\-I\-R\-E\-C\-T}!redirect.h@{redirect.\-h}}
+\subsubsection[{R\-E\-D\-I\-R\-E\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-D\-I\-R\-E\-C\-T~{\bf Redirect\-Output\-Error} redir;}}\label{redirect_8h_afd0086f6d03b7b9d3dcf316957b6f52d}
+
+
+\subsection{Variable Documentation}
+\hypertarget{redirect_8h_a8b41e5db712c415c29f0b8225c9a169c}{\index{redirect.\-h@{redirect.\-h}!errout@{errout}}
+\index{errout@{errout}!redirect.h@{redirect.\-h}}
+\subsubsection[{errout}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostringstream errout}}\label{redirect_8h_a8b41e5db712c415c29f0b8225c9a169c}
+\hypertarget{redirect_8h_a2369284a02343f6cea00e0e992c138ce}{\index{redirect.\-h@{redirect.\-h}!output@{output}}
+\index{output@{output}!redirect.h@{redirect.\-h}}
+\subsubsection[{output}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostringstream output}}\label{redirect_8h_a2369284a02343f6cea00e0e992c138ce}

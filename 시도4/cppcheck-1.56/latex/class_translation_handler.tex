@@ -1,0 +1,189 @@
+\hypertarget{class_translation_handler}{\section{Translation\-Handler Class Reference}
+\label{class_translation_handler}\index{Translation\-Handler@{Translation\-Handler}}
+}
+
+
+A class handling the available translations.  
+
+
+
+
+{\ttfamily \#include $<$translationhandler.\-h$>$}
+
+Inheritance diagram for Translation\-Handler\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_translation_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_translation_handler_a37636fc0605dafe154594b4a20b1c34b}{Translation\-Handler} (Q\-Object $\ast$parent=0)
+\item 
+virtual \hyperlink{class_translation_handler_acd7d9f74fb9171850f940bd83fd1e40d}{$\sim$\-Translation\-Handler} ()
+\item 
+const Q\-String\-List \hyperlink{class_translation_handler_a886e287c10961665d5c3bede8be1d886}{Get\-Names} () const 
+\begin{DoxyCompactList}\small\item\em Get a list of available translation names. \end{DoxyCompactList}\item 
+Q\-List$<$ \hyperlink{struct_translation_info}{Translation\-Info} $>$ \hyperlink{class_translation_handler_af2e56511e86488463a14fe515fcd01a2}{Get\-Translations} () const 
+\begin{DoxyCompactList}\small\item\em Get a list of available translations. \end{DoxyCompactList}\item 
+bool \hyperlink{class_translation_handler_ac38e411064467360006817f57c5897f2}{Set\-Language} (const Q\-String \&code, Q\-String \&error)
+\begin{DoxyCompactList}\small\item\em Set active translation. \end{DoxyCompactList}\item 
+Q\-String \hyperlink{class_translation_handler_a4aaca1c4faf95b0616678a1100e086d3}{Get\-Current\-Language} () const 
+\begin{DoxyCompactList}\small\item\em Get currently selected translation. \end{DoxyCompactList}\item 
+Q\-String \hyperlink{class_translation_handler_a50d0baf26823cc1f05daf4cc4527631b}{Suggest\-Language} () const 
+\begin{DoxyCompactList}\small\item\em Get translation suggestion for the system. This function checks the current system locale and determines which of the available translations is best as current translation. If none of the available translations is good then it returns English (\char`\"{}en\char`\"{}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_translation_handler_a71ea7a82d9785dac510a551cb8614fe8}{Add\-Translation} (const char $\ast$name, const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Add new translation to list of available translations. \end{DoxyCompactList}\item 
+int \hyperlink{class_translation_handler_a12ebba07830436ff35c883f228c537f4}{Get\-Language\-Index\-By\-Code} (const Q\-String \&code) const 
+\begin{DoxyCompactList}\small\item\em Find language in the list and return its index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class handling the available translations. 
+
+This class contains a list of available translations. The class also keeps track which translation is the currently active translation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_translation_handler_a37636fc0605dafe154594b4a20b1c34b}{\index{Translation\-Handler@{Translation\-Handler}!Translation\-Handler@{Translation\-Handler}}
+\index{Translation\-Handler@{Translation\-Handler}!TranslationHandler@{Translation\-Handler}}
+\subsubsection[{Translation\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}Translation\-Handler\-::\-Translation\-Handler (
+\begin{DoxyParamCaption}
+\item[{Q\-Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_translation_handler_a37636fc0605dafe154594b4a20b1c34b}
+\hypertarget{class_translation_handler_acd7d9f74fb9171850f940bd83fd1e40d}{\index{Translation\-Handler@{Translation\-Handler}!$\sim$\-Translation\-Handler@{$\sim$\-Translation\-Handler}}
+\index{$\sim$\-Translation\-Handler@{$\sim$\-Translation\-Handler}!TranslationHandler@{Translation\-Handler}}
+\subsubsection[{$\sim$\-Translation\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}Translation\-Handler\-::$\sim$\-Translation\-Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_translation_handler_acd7d9f74fb9171850f940bd83fd1e40d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_translation_handler_a71ea7a82d9785dac510a551cb8614fe8}{\index{Translation\-Handler@{Translation\-Handler}!Add\-Translation@{Add\-Translation}}
+\index{Add\-Translation@{Add\-Translation}!TranslationHandler@{Translation\-Handler}}
+\subsubsection[{Add\-Translation}]{\setlength{\rightskip}{0pt plus 5cm}void Translation\-Handler\-::\-Add\-Translation (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_translation_handler_a71ea7a82d9785dac510a551cb8614fe8}
+
+
+Add new translation to list of available translations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the translation (\char`\"{}\-English\char`\"{}). \\
+\hline
+{\em filename} & Filename of the translation. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_translation_handler_a4aaca1c4faf95b0616678a1100e086d3}{\index{Translation\-Handler@{Translation\-Handler}!Get\-Current\-Language@{Get\-Current\-Language}}
+\index{Get\-Current\-Language@{Get\-Current\-Language}!TranslationHandler@{Translation\-Handler}}
+\subsubsection[{Get\-Current\-Language}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Translation\-Handler\-::\-Get\-Current\-Language (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_translation_handler_a4aaca1c4faf95b0616678a1100e086d3}
+
+
+Get currently selected translation. 
+
+\begin{DoxyReturn}{Returns}
+I\-S\-O 639 language code for current translation. 
+\end{DoxyReturn}
+\hypertarget{class_translation_handler_a12ebba07830436ff35c883f228c537f4}{\index{Translation\-Handler@{Translation\-Handler}!Get\-Language\-Index\-By\-Code@{Get\-Language\-Index\-By\-Code}}
+\index{Get\-Language\-Index\-By\-Code@{Get\-Language\-Index\-By\-Code}!TranslationHandler@{Translation\-Handler}}
+\subsubsection[{Get\-Language\-Index\-By\-Code}]{\setlength{\rightskip}{0pt plus 5cm}int Translation\-Handler\-::\-Get\-Language\-Index\-By\-Code (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{code}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_translation_handler_a12ebba07830436ff35c883f228c537f4}
+
+
+Find language in the list and return its index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & I\-S\-O 639 language code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index at list, or -\/1 if not found. 
+\end{DoxyReturn}
+\hypertarget{class_translation_handler_a886e287c10961665d5c3bede8be1d886}{\index{Translation\-Handler@{Translation\-Handler}!Get\-Names@{Get\-Names}}
+\index{Get\-Names@{Get\-Names}!TranslationHandler@{Translation\-Handler}}
+\subsubsection[{Get\-Names}]{\setlength{\rightskip}{0pt plus 5cm}const Q\-String\-List Translation\-Handler\-::\-Get\-Names (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_translation_handler_a886e287c10961665d5c3bede8be1d886}
+
+
+Get a list of available translation names. 
+
+\begin{DoxyReturn}{Returns}
+List of available translation names. 
+\end{DoxyReturn}
+\hypertarget{class_translation_handler_af2e56511e86488463a14fe515fcd01a2}{\index{Translation\-Handler@{Translation\-Handler}!Get\-Translations@{Get\-Translations}}
+\index{Get\-Translations@{Get\-Translations}!TranslationHandler@{Translation\-Handler}}
+\subsubsection[{Get\-Translations}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<${\bf Translation\-Info}$>$ Translation\-Handler\-::\-Get\-Translations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_translation_handler_af2e56511e86488463a14fe515fcd01a2}
+
+
+Get a list of available translations. 
+
+\begin{DoxyReturn}{Returns}
+List of available translations. 
+\end{DoxyReturn}
+\hypertarget{class_translation_handler_ac38e411064467360006817f57c5897f2}{\index{Translation\-Handler@{Translation\-Handler}!Set\-Language@{Set\-Language}}
+\index{Set\-Language@{Set\-Language}!TranslationHandler@{Translation\-Handler}}
+\subsubsection[{Set\-Language}]{\setlength{\rightskip}{0pt plus 5cm}bool Translation\-Handler\-::\-Set\-Language (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{code, }
+\item[{Q\-String \&}]{error}
+\end{DoxyParamCaption}
+)}}\label{class_translation_handler_ac38e411064467360006817f57c5897f2}
+
+
+Set active translation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & I\-S\-O 639 language code for new selected translation. \\
+\hline
+{\em error} & Returns error string if selection fails. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if succeeds, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_translation_handler_a50d0baf26823cc1f05daf4cc4527631b}{\index{Translation\-Handler@{Translation\-Handler}!Suggest\-Language@{Suggest\-Language}}
+\index{Suggest\-Language@{Suggest\-Language}!TranslationHandler@{Translation\-Handler}}
+\subsubsection[{Suggest\-Language}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Translation\-Handler\-::\-Suggest\-Language (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_translation_handler_a50d0baf26823cc1f05daf4cc4527631b}
+
+
+Get translation suggestion for the system. This function checks the current system locale and determines which of the available translations is best as current translation. If none of the available translations is good then it returns English (\char`\"{}en\char`\"{}). 
+
+\begin{DoxyReturn}{Returns}
+Suggested translation I\-S\-O 639 language code. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{translationhandler_8h}{translationhandler.\-h}\item 
+gui/\hyperlink{translationhandler_8cpp}{translationhandler.\-cpp}\end{DoxyCompactItemize}

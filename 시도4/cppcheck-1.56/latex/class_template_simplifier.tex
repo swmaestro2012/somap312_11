@@ -1,0 +1,268 @@
+\hypertarget{class_template_simplifier}{\section{Template\-Simplifier Class Reference}
+\label{class_template_simplifier}\index{Template\-Simplifier@{Template\-Simplifier}}
+}
+
+
+Simplify templates from the preprocessed and partially simplified code.  
+
+
+
+
+{\ttfamily \#include $<$templatesimplifier.\-h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_template_simplifier_ac01f95905486dd13583dd9b0fcbda66d}{cleanup\-After\-Simplify} (\hyperlink{class_token}{Token} $\ast$tokens)
+\item 
+static const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_template_simplifier_aafb5e2fe82fa8760250e4801b87e3260}{has\-Complicated\-Syntax\-Errors\-In\-Templates} (\hyperlink{class_token}{Token} $\ast$tokens)
+\item 
+static unsigned int \hyperlink{class_template_simplifier_ac2e88e20115cff2f804966b2922f6aeb}{template\-Parameters} (const \hyperlink{class_token}{Token} $\ast$tok)
+\item 
+static std\-::set$<$ std\-::string $>$ \hyperlink{class_template_simplifier_a03514dd02336f0ee0210b835f1aba50b}{simplify\-Templates\-Expand\-Specialized} (\hyperlink{class_token}{Token} $\ast$tokens)
+\item 
+static std\-::list$<$ \hyperlink{class_token}{Token} $\ast$ $>$ \hyperlink{class_template_simplifier_a2c73fc976e20811e63d69010e5b8e6dc}{simplify\-Templates\-Get\-Template\-Declarations} (\hyperlink{class_token}{Token} $\ast$tokens, bool \&code\-With\-Templates)
+\item 
+static std\-::list$<$ \hyperlink{class_token}{Token} $\ast$ $>$ \hyperlink{class_template_simplifier_a0b7e22b1885c069ac26b7cb8c39b4833}{simplify\-Templates\-Get\-Template\-Instantiations} (\hyperlink{class_token}{Token} $\ast$tokens)
+\item 
+static void \hyperlink{class_template_simplifier_a31b341ec2f4b101217b12948baf39745}{simplify\-Templates\-Use\-Default\-Argument\-Values} (const std\-::list$<$ \hyperlink{class_token}{Token} $\ast$ $>$ \&templates, const std\-::list$<$ \hyperlink{class_token}{Token} $\ast$ $>$ \&template\-Instantiations)
+\item 
+static bool \hyperlink{class_template_simplifier_ab78546bb740ae3f70033101b18a644f4}{simplify\-Templates\-Instantiate\-Match} (const \hyperlink{class_token}{Token} $\ast$instance, const std\-::string \&name, std\-::size\-\_\-t number\-Of\-Arguments, const char pattern\-After\mbox{[}$\,$\mbox{]})
+\item 
+static int \hyperlink{class_template_simplifier_a2a14b0493991419bfae61168faafd026}{simplify\-Templates\-Get\-Template\-Name\-Position} (const \hyperlink{class_token}{Token} $\ast$tok)
+\item 
+static void \hyperlink{class_template_simplifier_adb9d597074e9a92aae9c2efa04b786c6}{simplify\-Templates\-Expand\-Template} (\hyperlink{class_token_list}{Token\-List} \&tokenlist, const \hyperlink{class_token}{Token} $\ast$tok, const std\-::string \&name, std\-::vector$<$ const \hyperlink{class_token}{Token} $\ast$ $>$ \&type\-Parameters\-In\-Declaration, const std\-::string \&new\-Name, std\-::vector$<$ const \hyperlink{class_token}{Token} $\ast$ $>$ \&types\-Used\-In\-Template\-Instantion, std\-::list$<$ \hyperlink{class_token}{Token} $\ast$ $>$ \&template\-Instantiations)
+\item 
+static bool \hyperlink{class_template_simplifier_a1635ce9ca865ed3644315e27a4a8382a}{simplify\-Template\-Instantions} (\hyperlink{class_token_list}{Token\-List} \&tokenlist, \hyperlink{class_error_logger}{Error\-Logger} \&errorlogger, const \hyperlink{class_settings}{Settings} $\ast$\-\_\-settings, const \hyperlink{class_token}{Token} $\ast$tok, std\-::list$<$ \hyperlink{class_token}{Token} $\ast$ $>$ \&template\-Instantiations, std\-::set$<$ std\-::string $>$ \&expandedtemplates)
+\item 
+static void \hyperlink{class_template_simplifier_a87a4d1913f2c36ec3bde476b6f583226}{simplify\-Templates} (\hyperlink{class_token_list}{Token\-List} \&tokenlist, \hyperlink{class_error_logger}{Error\-Logger} \&errorlogger, const \hyperlink{class_settings}{Settings} $\ast$\-\_\-settings, bool \&\-\_\-code\-With\-Templates)
+\item 
+static bool \hyperlink{class_template_simplifier_a51e814c75f3940a0e11ba762b11db811}{simplify\-Numeric\-Calculations} (\hyperlink{class_token}{Token} $\ast$tok)
+\item 
+static bool \hyperlink{class_template_simplifier_a2a4841cbea2e1446b8e4bc5a99dc1f4f}{simplify\-Calculations} (\hyperlink{class_token}{Token} $\ast$\-\_\-tokens)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Simplify templates from the preprocessed and partially simplified code. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_template_simplifier_ac01f95905486dd13583dd9b0fcbda66d}{\index{Template\-Simplifier@{Template\-Simplifier}!cleanup\-After\-Simplify@{cleanup\-After\-Simplify}}
+\index{cleanup\-After\-Simplify@{cleanup\-After\-Simplify}!TemplateSimplifier@{Template\-Simplifier}}
+\subsubsection[{cleanup\-After\-Simplify}]{\setlength{\rightskip}{0pt plus 5cm}void Template\-Simplifier\-::cleanup\-After\-Simplify (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$}]{tokens}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_template_simplifier_ac01f95905486dd13583dd9b0fcbda66d}
+Used after simplify\-Templates to perform a little cleanup. Sometimes the simplify\-Templates isn't fully successful and then there are function calls etc with \char`\"{}wrong\char`\"{} syntax. \hypertarget{class_template_simplifier_aafb5e2fe82fa8760250e4801b87e3260}{\index{Template\-Simplifier@{Template\-Simplifier}!has\-Complicated\-Syntax\-Errors\-In\-Templates@{has\-Complicated\-Syntax\-Errors\-In\-Templates}}
+\index{has\-Complicated\-Syntax\-Errors\-In\-Templates@{has\-Complicated\-Syntax\-Errors\-In\-Templates}!TemplateSimplifier@{Template\-Simplifier}}
+\subsubsection[{has\-Complicated\-Syntax\-Errors\-In\-Templates}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token} $\ast$ Template\-Simplifier\-::has\-Complicated\-Syntax\-Errors\-In\-Templates (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$}]{tokens}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_template_simplifier_aafb5e2fe82fa8760250e4801b87e3260}
+\begin{DoxyReturn}{Returns}
+0 if there are no syntax errors or return token which identifies the location of syntax error. 
+\end{DoxyReturn}
+\hypertarget{class_template_simplifier_a2a4841cbea2e1446b8e4bc5a99dc1f4f}{\index{Template\-Simplifier@{Template\-Simplifier}!simplify\-Calculations@{simplify\-Calculations}}
+\index{simplify\-Calculations@{simplify\-Calculations}!TemplateSimplifier@{Template\-Simplifier}}
+\subsubsection[{simplify\-Calculations}]{\setlength{\rightskip}{0pt plus 5cm}bool Template\-Simplifier\-::simplify\-Calculations (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$}]{\-\_\-tokens}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_template_simplifier_a2a4841cbea2e1446b8e4bc5a99dc1f4f}
+Simplify constant calculations such as \char`\"{}1+2\char`\"{} =$>$ \char`\"{}3\char`\"{}. This also perform simple cleanup of parantheses etc. 
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-tokens} & start token \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if modifications to token-\/list are done. false if no modifications are done. 
+\end{DoxyReturn}
+\hypertarget{class_template_simplifier_a51e814c75f3940a0e11ba762b11db811}{\index{Template\-Simplifier@{Template\-Simplifier}!simplify\-Numeric\-Calculations@{simplify\-Numeric\-Calculations}}
+\index{simplify\-Numeric\-Calculations@{simplify\-Numeric\-Calculations}!TemplateSimplifier@{Template\-Simplifier}}
+\subsubsection[{simplify\-Numeric\-Calculations}]{\setlength{\rightskip}{0pt plus 5cm}bool Template\-Simplifier\-::simplify\-Numeric\-Calculations (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$}]{tok}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_template_simplifier_a51e814c75f3940a0e11ba762b11db811}
+Simplify constant calculations such as \char`\"{}1+2\char`\"{} =$>$ \char`\"{}3\char`\"{} 
+\begin{DoxyParams}{Parameters}
+{\em tok} & start token \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if modifications to token-\/list are done. false if no modifications are done. 
+\end{DoxyReturn}
+\hypertarget{class_template_simplifier_a1635ce9ca865ed3644315e27a4a8382a}{\index{Template\-Simplifier@{Template\-Simplifier}!simplify\-Template\-Instantions@{simplify\-Template\-Instantions}}
+\index{simplify\-Template\-Instantions@{simplify\-Template\-Instantions}!TemplateSimplifier@{Template\-Simplifier}}
+\subsubsection[{simplify\-Template\-Instantions}]{\setlength{\rightskip}{0pt plus 5cm}bool Template\-Simplifier\-::simplify\-Template\-Instantions (
+\begin{DoxyParamCaption}
+\item[{{\bf Token\-List} \&}]{tokenlist, }
+\item[{{\bf Error\-Logger} \&}]{errorlogger, }
+\item[{const {\bf Settings} $\ast$}]{\-\_\-settings, }
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{std\-::list$<$ {\bf Token} $\ast$ $>$ \&}]{template\-Instantiations, }
+\item[{std\-::set$<$ std\-::string $>$ \&}]{expandedtemplates}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_template_simplifier_a1635ce9ca865ed3644315e27a4a8382a}
+Simplify templates \-: expand all instantiatiations for a template \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000057}{Todo}]It seems that inner templates should be instantiated recursively \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em tokenlist} & token list \\
+\hline
+{\em errorlogger} & error logger \\
+\hline
+{\em \-\_\-settings} & settings \\
+\hline
+{\em tok} & token where the template declaration begins \\
+\hline
+{\em template\-Instantiations} & a list of template usages (not necessarily just for this template) \\
+\hline
+{\em expandedtemplates} & all templates that has been expanded so far. The full names are stored. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the template was instantiated 
+\end{DoxyReturn}
+\hypertarget{class_template_simplifier_a87a4d1913f2c36ec3bde476b6f583226}{\index{Template\-Simplifier@{Template\-Simplifier}!simplify\-Templates@{simplify\-Templates}}
+\index{simplify\-Templates@{simplify\-Templates}!TemplateSimplifier@{Template\-Simplifier}}
+\subsubsection[{simplify\-Templates}]{\setlength{\rightskip}{0pt plus 5cm}void Template\-Simplifier\-::simplify\-Templates (
+\begin{DoxyParamCaption}
+\item[{{\bf Token\-List} \&}]{tokenlist, }
+\item[{{\bf Error\-Logger} \&}]{errorlogger, }
+\item[{const {\bf Settings} $\ast$}]{\-\_\-settings, }
+\item[{bool \&}]{\-\_\-code\-With\-Templates}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_template_simplifier_a87a4d1913f2c36ec3bde476b6f583226}
+Simplify templates 
+\begin{DoxyParams}{Parameters}
+{\em tokenlist} & token list \\
+\hline
+{\em errorlogger} & error logger \\
+\hline
+{\em \-\_\-settings} & settings \\
+\hline
+{\em \-\_\-code\-With\-Templates} & output parameter that is set if code contains templates \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_template_simplifier_a03514dd02336f0ee0210b835f1aba50b}{\index{Template\-Simplifier@{Template\-Simplifier}!simplify\-Templates\-Expand\-Specialized@{simplify\-Templates\-Expand\-Specialized}}
+\index{simplify\-Templates\-Expand\-Specialized@{simplify\-Templates\-Expand\-Specialized}!TemplateSimplifier@{Template\-Simplifier}}
+\subsubsection[{simplify\-Templates\-Expand\-Specialized}]{\setlength{\rightskip}{0pt plus 5cm}std\-::set$<$ std\-::string $>$ Template\-Simplifier\-::simplify\-Templates\-Expand\-Specialized (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$}]{tokens}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_template_simplifier_a03514dd02336f0ee0210b835f1aba50b}
+Expand specialized templates \-: \char`\"{}template$<$$>$..\char`\"{} \begin{DoxyReturn}{Returns}
+names of expanded templates 
+\end{DoxyReturn}
+\hypertarget{class_template_simplifier_adb9d597074e9a92aae9c2efa04b786c6}{\index{Template\-Simplifier@{Template\-Simplifier}!simplify\-Templates\-Expand\-Template@{simplify\-Templates\-Expand\-Template}}
+\index{simplify\-Templates\-Expand\-Template@{simplify\-Templates\-Expand\-Template}!TemplateSimplifier@{Template\-Simplifier}}
+\subsubsection[{simplify\-Templates\-Expand\-Template}]{\setlength{\rightskip}{0pt plus 5cm}void Template\-Simplifier\-::simplify\-Templates\-Expand\-Template (
+\begin{DoxyParamCaption}
+\item[{{\bf Token\-List} \&}]{tokenlist, }
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const std\-::string \&}]{name, }
+\item[{std\-::vector$<$ const {\bf Token} $\ast$ $>$ \&}]{type\-Parameters\-In\-Declaration, }
+\item[{const std\-::string \&}]{new\-Name, }
+\item[{std\-::vector$<$ const {\bf Token} $\ast$ $>$ \&}]{types\-Used\-In\-Template\-Instantion, }
+\item[{std\-::list$<$ {\bf Token} $\ast$ $>$ \&}]{template\-Instantiations}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_template_simplifier_adb9d597074e9a92aae9c2efa04b786c6}
+\hypertarget{class_template_simplifier_a2c73fc976e20811e63d69010e5b8e6dc}{\index{Template\-Simplifier@{Template\-Simplifier}!simplify\-Templates\-Get\-Template\-Declarations@{simplify\-Templates\-Get\-Template\-Declarations}}
+\index{simplify\-Templates\-Get\-Template\-Declarations@{simplify\-Templates\-Get\-Template\-Declarations}!TemplateSimplifier@{Template\-Simplifier}}
+\subsubsection[{simplify\-Templates\-Get\-Template\-Declarations}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<$ {\bf Token} $\ast$ $>$ Template\-Simplifier\-::simplify\-Templates\-Get\-Template\-Declarations (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$}]{tokens, }
+\item[{bool \&}]{code\-With\-Templates}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_template_simplifier_a2c73fc976e20811e63d69010e5b8e6dc}
+Get template declarations \begin{DoxyReturn}{Returns}
+list of template declarations 
+\end{DoxyReturn}
+\hypertarget{class_template_simplifier_a0b7e22b1885c069ac26b7cb8c39b4833}{\index{Template\-Simplifier@{Template\-Simplifier}!simplify\-Templates\-Get\-Template\-Instantiations@{simplify\-Templates\-Get\-Template\-Instantiations}}
+\index{simplify\-Templates\-Get\-Template\-Instantiations@{simplify\-Templates\-Get\-Template\-Instantiations}!TemplateSimplifier@{Template\-Simplifier}}
+\subsubsection[{simplify\-Templates\-Get\-Template\-Instantiations}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<$ {\bf Token} $\ast$ $>$ Template\-Simplifier\-::simplify\-Templates\-Get\-Template\-Instantiations (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$}]{tokens}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_template_simplifier_a0b7e22b1885c069ac26b7cb8c39b4833}
+Get template instantiations \begin{DoxyReturn}{Returns}
+list of template instantiations 
+\end{DoxyReturn}
+\hypertarget{class_template_simplifier_a2a14b0493991419bfae61168faafd026}{\index{Template\-Simplifier@{Template\-Simplifier}!simplify\-Templates\-Get\-Template\-Name\-Position@{simplify\-Templates\-Get\-Template\-Name\-Position}}
+\index{simplify\-Templates\-Get\-Template\-Name\-Position@{simplify\-Templates\-Get\-Template\-Name\-Position}!TemplateSimplifier@{Template\-Simplifier}}
+\subsubsection[{simplify\-Templates\-Get\-Template\-Name\-Position}]{\setlength{\rightskip}{0pt plus 5cm}int Template\-Simplifier\-::simplify\-Templates\-Get\-Template\-Name\-Position (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_template_simplifier_a2a14b0493991419bfae61168faafd026}
+Match template declaration/instantiation 
+\begin{DoxyParams}{Parameters}
+{\em tok} & The \char`\"{}$>$\char`\"{} token e.\-g. before \char`\"{}class\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 to bail out or positive integer to identity the position of the template name. 
+\end{DoxyReturn}
+\hypertarget{class_template_simplifier_ab78546bb740ae3f70033101b18a644f4}{\index{Template\-Simplifier@{Template\-Simplifier}!simplify\-Templates\-Instantiate\-Match@{simplify\-Templates\-Instantiate\-Match}}
+\index{simplify\-Templates\-Instantiate\-Match@{simplify\-Templates\-Instantiate\-Match}!TemplateSimplifier@{Template\-Simplifier}}
+\subsubsection[{simplify\-Templates\-Instantiate\-Match}]{\setlength{\rightskip}{0pt plus 5cm}bool Template\-Simplifier\-::simplify\-Templates\-Instantiate\-Match (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{instance, }
+\item[{const std\-::string \&}]{name, }
+\item[{std\-::size\-\_\-t}]{number\-Of\-Arguments, }
+\item[{const char}]{pattern\-After\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_template_simplifier_ab78546bb740ae3f70033101b18a644f4}
+Match template declaration/instantiation 
+\begin{DoxyParams}{Parameters}
+{\em instance} & template instantiation \\
+\hline
+{\em name} & name of template \\
+\hline
+{\em number\-Of\-Arguments} & number of template arguments \\
+\hline
+{\em pattern\-After} & pattern that must match the tokens after the \char`\"{}$>$\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+match =$>$ true 
+\end{DoxyReturn}
+\hypertarget{class_template_simplifier_a31b341ec2f4b101217b12948baf39745}{\index{Template\-Simplifier@{Template\-Simplifier}!simplify\-Templates\-Use\-Default\-Argument\-Values@{simplify\-Templates\-Use\-Default\-Argument\-Values}}
+\index{simplify\-Templates\-Use\-Default\-Argument\-Values@{simplify\-Templates\-Use\-Default\-Argument\-Values}!TemplateSimplifier@{Template\-Simplifier}}
+\subsubsection[{simplify\-Templates\-Use\-Default\-Argument\-Values}]{\setlength{\rightskip}{0pt plus 5cm}void Template\-Simplifier\-::simplify\-Templates\-Use\-Default\-Argument\-Values (
+\begin{DoxyParamCaption}
+\item[{const std\-::list$<$ {\bf Token} $\ast$ $>$ \&}]{templates, }
+\item[{const std\-::list$<$ {\bf Token} $\ast$ $>$ \&}]{template\-Instantiations}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_template_simplifier_a31b341ec2f4b101217b12948baf39745}
+simplify template instantiations (use default argument values) 
+\begin{DoxyParams}{Parameters}
+{\em templates} & list of template declarations \\
+\hline
+{\em template\-Instantiations} & list of template instantiations \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_template_simplifier_ac2e88e20115cff2f804966b2922f6aeb}{\index{Template\-Simplifier@{Template\-Simplifier}!template\-Parameters@{template\-Parameters}}
+\index{template\-Parameters@{template\-Parameters}!TemplateSimplifier@{Template\-Simplifier}}
+\subsubsection[{template\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Template\-Simplifier\-::template\-Parameters (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_template_simplifier_ac2e88e20115cff2f804966b2922f6aeb}
+is the token pointing at a template parameters block $<$ int , 3 $>$ =$>$ yes 
+\begin{DoxyParams}{Parameters}
+{\em tok} & start token that must point at \char`\"{}$<$\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of parameters (invalid parameters =$>$ 0) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{templatesimplifier_8h}{templatesimplifier.\-h}\item 
+lib/\hyperlink{templatesimplifier_8cpp}{templatesimplifier.\-cpp}\end{DoxyCompactItemize}

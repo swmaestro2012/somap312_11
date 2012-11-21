@@ -1,0 +1,68 @@
+\hypertarget{checkother_8cpp}{\section{lib/checkother.cpp File Reference}
+\label{checkother_8cpp}\index{lib/checkother.\-cpp@{lib/checkother.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}checkother.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}mathlib.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}symboldatabase.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$stack$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_condition}{Condition}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{checkother_8cpp_ab91b34ae619fcdfcba4522b4f335bf83}{Position} \{ , \hyperlink{checkother_8cpp_ab91b34ae619fcdfcba4522b4f335bf83a6ca36e4a4a4052597a28b219baf6576f}{Second}, 
+\hyperlink{checkother_8cpp_ab91b34ae619fcdfcba4522b4f335bf83ac75245149c3f64d74430b8996b1e0558}{N\-A}
+ \}
+\item 
+enum \hyperlink{checkother_8cpp_a32244553e6de01a64084f56cc7da7747}{Relation} \{ \\*
+\hyperlink{checkother_8cpp_a32244553e6de01a64084f56cc7da7747a4c2ccc0164cc7fc1102a4b69361acd1e}{Equal}, 
+\hyperlink{checkother_8cpp_a32244553e6de01a64084f56cc7da7747a0260621f7febf4fd12ade588e0d8e4df}{Not\-Equal}, 
+\hyperlink{checkother_8cpp_a32244553e6de01a64084f56cc7da7747af2360f16fa13d5c5e9b71b733268b47e}{Less}, 
+\hyperlink{checkother_8cpp_a32244553e6de01a64084f56cc7da7747a56517c9db2cab4eba47e3914d357ba0c}{Less\-Equal}, 
+\\*
+\hyperlink{checkother_8cpp_a32244553e6de01a64084f56cc7da7747a67ebccae5b47955d2e76065040a0428e}{More}, 
+\hyperlink{checkother_8cpp_a32244553e6de01a64084f56cc7da7747a34291bbc3ae8d97c05fae71b8f81fd2c}{More\-Equal}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{checkother_8cpp_ab91b34ae619fcdfcba4522b4f335bf83}{\index{checkother.\-cpp@{checkother.\-cpp}!Position@{Position}}
+\index{Position@{Position}!checkother.cpp@{checkother.\-cpp}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Position}}}\label{checkother_8cpp_ab91b34ae619fcdfcba4522b4f335bf83}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{Second@{Second}!checkother.\-cpp@{checkother.\-cpp}}\index{checkother.\-cpp@{checkother.\-cpp}!Second@{Second}}\item[{\em 
+\hypertarget{checkother_8cpp_ab91b34ae619fcdfcba4522b4f335bf83a6ca36e4a4a4052597a28b219baf6576f}{Second}\label{checkother_8cpp_ab91b34ae619fcdfcba4522b4f335bf83a6ca36e4a4a4052597a28b219baf6576f}
+}]\index{N\-A@{N\-A}!checkother.\-cpp@{checkother.\-cpp}}\index{checkother.\-cpp@{checkother.\-cpp}!N\-A@{N\-A}}\item[{\em 
+\hypertarget{checkother_8cpp_ab91b34ae619fcdfcba4522b4f335bf83ac75245149c3f64d74430b8996b1e0558}{N\-A}\label{checkother_8cpp_ab91b34ae619fcdfcba4522b4f335bf83ac75245149c3f64d74430b8996b1e0558}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{checkother_8cpp_a32244553e6de01a64084f56cc7da7747}{\index{checkother.\-cpp@{checkother.\-cpp}!Relation@{Relation}}
+\index{Relation@{Relation}!checkother.cpp@{checkother.\-cpp}}
+\subsubsection[{Relation}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Relation}}}\label{checkother_8cpp_a32244553e6de01a64084f56cc7da7747}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{Equal@{Equal}!checkother.\-cpp@{checkother.\-cpp}}\index{checkother.\-cpp@{checkother.\-cpp}!Equal@{Equal}}\item[{\em 
+\hypertarget{checkother_8cpp_a32244553e6de01a64084f56cc7da7747a4c2ccc0164cc7fc1102a4b69361acd1e}{Equal}\label{checkother_8cpp_a32244553e6de01a64084f56cc7da7747a4c2ccc0164cc7fc1102a4b69361acd1e}
+}]\index{Not\-Equal@{Not\-Equal}!checkother.\-cpp@{checkother.\-cpp}}\index{checkother.\-cpp@{checkother.\-cpp}!Not\-Equal@{Not\-Equal}}\item[{\em 
+\hypertarget{checkother_8cpp_a32244553e6de01a64084f56cc7da7747a0260621f7febf4fd12ade588e0d8e4df}{Not\-Equal}\label{checkother_8cpp_a32244553e6de01a64084f56cc7da7747a0260621f7febf4fd12ade588e0d8e4df}
+}]\index{Less@{Less}!checkother.\-cpp@{checkother.\-cpp}}\index{checkother.\-cpp@{checkother.\-cpp}!Less@{Less}}\item[{\em 
+\hypertarget{checkother_8cpp_a32244553e6de01a64084f56cc7da7747af2360f16fa13d5c5e9b71b733268b47e}{Less}\label{checkother_8cpp_a32244553e6de01a64084f56cc7da7747af2360f16fa13d5c5e9b71b733268b47e}
+}]\index{Less\-Equal@{Less\-Equal}!checkother.\-cpp@{checkother.\-cpp}}\index{checkother.\-cpp@{checkother.\-cpp}!Less\-Equal@{Less\-Equal}}\item[{\em 
+\hypertarget{checkother_8cpp_a32244553e6de01a64084f56cc7da7747a56517c9db2cab4eba47e3914d357ba0c}{Less\-Equal}\label{checkother_8cpp_a32244553e6de01a64084f56cc7da7747a56517c9db2cab4eba47e3914d357ba0c}
+}]\index{More@{More}!checkother.\-cpp@{checkother.\-cpp}}\index{checkother.\-cpp@{checkother.\-cpp}!More@{More}}\item[{\em 
+\hypertarget{checkother_8cpp_a32244553e6de01a64084f56cc7da7747a67ebccae5b47955d2e76065040a0428e}{More}\label{checkother_8cpp_a32244553e6de01a64084f56cc7da7747a67ebccae5b47955d2e76065040a0428e}
+}]\index{More\-Equal@{More\-Equal}!checkother.\-cpp@{checkother.\-cpp}}\index{checkother.\-cpp@{checkother.\-cpp}!More\-Equal@{More\-Equal}}\item[{\em 
+\hypertarget{checkother_8cpp_a32244553e6de01a64084f56cc7da7747a34291bbc3ae8d97c05fae71b8f81fd2c}{More\-Equal}\label{checkother_8cpp_a32244553e6de01a64084f56cc7da7747a34291bbc3ae8d97c05fae71b8f81fd2c}
+}]\end{description}
+\end{Desc}
+

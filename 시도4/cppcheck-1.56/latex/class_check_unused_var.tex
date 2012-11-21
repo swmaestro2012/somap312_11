@@ -1,0 +1,150 @@
+\hypertarget{class_check_unused_var}{\section{Check\-Unused\-Var Class Reference}
+\label{class_check_unused_var}\index{Check\-Unused\-Var@{Check\-Unused\-Var}}
+}
+
+
+Various small checks.  
+
+
+
+
+{\ttfamily \#include $<$checkunusedvar.\-h$>$}
+
+Inheritance diagram for Check\-Unused\-Var\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_check_unused_var}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_check_unused_var_a827bebd0450ed79ccead1d6af6754c23}{Check\-Unused\-Var} ()
+\begin{DoxyCompactList}\small\item\em This constructor is used when registering the \hyperlink{class_check_class}{Check\-Class}. \end{DoxyCompactList}\item 
+\hyperlink{class_check_unused_var_abab31c1d18d2cd28e5b37697e8e26d36}{Check\-Unused\-Var} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\begin{DoxyCompactList}\small\item\em This constructor is used when running checks. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_unused_var_ae2a9e52d785e4303f9e6daa9c3e3cb58}{run\-Checks} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\begin{DoxyCompactList}\small\item\em Run checks against the normal token list. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_unused_var_a69fd727c2bb04622a48024ad6c7b2a0e}{run\-Simplified\-Checks} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\begin{DoxyCompactList}\small\item\em Run checks against the simplified token list. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_unused_var_aae8ccc57e79be407ab5b154f2dba862a}{check\-Function\-Variable\-Usage\-\_\-iterate\-Scopes} (const \hyperlink{class_scope}{Scope} $\ast$const scope, \hyperlink{class_variables}{Variables} \&variables)
+\begin{DoxyCompactList}\small\item\em Check for unused function variables \end{DoxyCompactList}\item 
+void \hyperlink{class_check_unused_var_a46ea4928f34b3de6070196a88d28a820}{check\-Variable\-Usage} (const \hyperlink{class_scope}{Scope} $\ast$const scope, const \hyperlink{class_token}{Token} $\ast$start, \hyperlink{class_variables}{Variables} \&variables)
+\item 
+void \hyperlink{class_check_unused_var_aacfce0c1ed05eabf4373212d95c4b0fc}{check\-Function\-Variable\-Usage} ()
+\item 
+void \hyperlink{class_check_unused_var_a8aee91c8e0c312afa135de176c2ff621}{check\-Struct\-Member\-Usage} ()
+\begin{DoxyCompactList}\small\item\em Check that all struct members are used \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Various small checks. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_check_unused_var_a827bebd0450ed79ccead1d6af6754c23}{\index{Check\-Unused\-Var@{Check\-Unused\-Var}!Check\-Unused\-Var@{Check\-Unused\-Var}}
+\index{Check\-Unused\-Var@{Check\-Unused\-Var}!CheckUnusedVar@{Check\-Unused\-Var}}
+\subsubsection[{Check\-Unused\-Var}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Unused\-Var\-::\-Check\-Unused\-Var (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_unused_var_a827bebd0450ed79ccead1d6af6754c23}
+
+
+This constructor is used when registering the \hyperlink{class_check_class}{Check\-Class}. 
+
+\hypertarget{class_check_unused_var_abab31c1d18d2cd28e5b37697e8e26d36}{\index{Check\-Unused\-Var@{Check\-Unused\-Var}!Check\-Unused\-Var@{Check\-Unused\-Var}}
+\index{Check\-Unused\-Var@{Check\-Unused\-Var}!CheckUnusedVar@{Check\-Unused\-Var}}
+\subsubsection[{Check\-Unused\-Var}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Unused\-Var\-::\-Check\-Unused\-Var (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_unused_var_abab31c1d18d2cd28e5b37697e8e26d36}
+
+
+This constructor is used when running checks. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_check_unused_var_aacfce0c1ed05eabf4373212d95c4b0fc}{\index{Check\-Unused\-Var@{Check\-Unused\-Var}!check\-Function\-Variable\-Usage@{check\-Function\-Variable\-Usage}}
+\index{check\-Function\-Variable\-Usage@{check\-Function\-Variable\-Usage}!CheckUnusedVar@{Check\-Unused\-Var}}
+\subsubsection[{check\-Function\-Variable\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Unused\-Var\-::check\-Function\-Variable\-Usage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_unused_var_aacfce0c1ed05eabf4373212d95c4b0fc}
+\hypertarget{class_check_unused_var_aae8ccc57e79be407ab5b154f2dba862a}{\index{Check\-Unused\-Var@{Check\-Unused\-Var}!check\-Function\-Variable\-Usage\-\_\-iterate\-Scopes@{check\-Function\-Variable\-Usage\-\_\-iterate\-Scopes}}
+\index{check\-Function\-Variable\-Usage\-\_\-iterate\-Scopes@{check\-Function\-Variable\-Usage\-\_\-iterate\-Scopes}!CheckUnusedVar@{Check\-Unused\-Var}}
+\subsubsection[{check\-Function\-Variable\-Usage\-\_\-iterate\-Scopes}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Unused\-Var\-::check\-Function\-Variable\-Usage\-\_\-iterate\-Scopes (
+\begin{DoxyParamCaption}
+\item[{const {\bf Scope} $\ast$const}]{scope, }
+\item[{{\bf Variables} \&}]{variables}
+\end{DoxyParamCaption}
+)}}\label{class_check_unused_var_aae8ccc57e79be407ab5b154f2dba862a}
+
+
+Check for unused function variables 
+
+\hypertarget{class_check_unused_var_a8aee91c8e0c312afa135de176c2ff621}{\index{Check\-Unused\-Var@{Check\-Unused\-Var}!check\-Struct\-Member\-Usage@{check\-Struct\-Member\-Usage}}
+\index{check\-Struct\-Member\-Usage@{check\-Struct\-Member\-Usage}!CheckUnusedVar@{Check\-Unused\-Var}}
+\subsubsection[{check\-Struct\-Member\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Unused\-Var\-::check\-Struct\-Member\-Usage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_unused_var_a8aee91c8e0c312afa135de176c2ff621}
+
+
+Check that all struct members are used 
+
+\hypertarget{class_check_unused_var_a46ea4928f34b3de6070196a88d28a820}{\index{Check\-Unused\-Var@{Check\-Unused\-Var}!check\-Variable\-Usage@{check\-Variable\-Usage}}
+\index{check\-Variable\-Usage@{check\-Variable\-Usage}!CheckUnusedVar@{Check\-Unused\-Var}}
+\subsubsection[{check\-Variable\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Unused\-Var\-::check\-Variable\-Usage (
+\begin{DoxyParamCaption}
+\item[{const {\bf Scope} $\ast$const}]{scope, }
+\item[{const {\bf Token} $\ast$}]{start, }
+\item[{{\bf Variables} \&}]{variables}
+\end{DoxyParamCaption}
+)}}\label{class_check_unused_var_a46ea4928f34b3de6070196a88d28a820}
+\hypertarget{class_check_unused_var_ae2a9e52d785e4303f9e6daa9c3e3cb58}{\index{Check\-Unused\-Var@{Check\-Unused\-Var}!run\-Checks@{run\-Checks}}
+\index{run\-Checks@{run\-Checks}!CheckUnusedVar@{Check\-Unused\-Var}}
+\subsubsection[{run\-Checks}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Unused\-Var\-::run\-Checks (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_unused_var_ae2a9e52d785e4303f9e6daa9c3e3cb58}
+
+
+Run checks against the normal token list. 
+
+
+
+Reimplemented from \hyperlink{class_check_a939af1c75d133393021036e73ca57cc4}{Check}.
+
+\hypertarget{class_check_unused_var_a69fd727c2bb04622a48024ad6c7b2a0e}{\index{Check\-Unused\-Var@{Check\-Unused\-Var}!run\-Simplified\-Checks@{run\-Simplified\-Checks}}
+\index{run\-Simplified\-Checks@{run\-Simplified\-Checks}!CheckUnusedVar@{Check\-Unused\-Var}}
+\subsubsection[{run\-Simplified\-Checks}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Unused\-Var\-::run\-Simplified\-Checks (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_unused_var_a69fd727c2bb04622a48024ad6c7b2a0e}
+
+
+Run checks against the simplified token list. 
+
+
+
+Implements \hyperlink{class_check_a112445eed1625599b93c69aab4701e5e}{Check}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{checkunusedvar_8h}{checkunusedvar.\-h}\item 
+lib/\hyperlink{checkunusedvar_8cpp}{checkunusedvar.\-cpp}\end{DoxyCompactItemize}

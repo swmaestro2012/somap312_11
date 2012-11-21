@@ -1,0 +1,397 @@
+\hypertarget{class_thread_handler}{\section{Thread\-Handler Class Reference}
+\label{class_thread_handler}\index{Thread\-Handler@{Thread\-Handler}}
+}
+
+
+This class handles creating threadresult and starting threads.  
+
+
+
+
+{\ttfamily \#include $<$threadhandler.\-h$>$}
+
+Inheritance diagram for Thread\-Handler\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_thread_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_thread_handler_af38507b6aa74ecbf6b13a7a3ea164be9}{Stop} ()
+\begin{DoxyCompactList}\small\item\em Slot to stop all threads. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_thread_handler_a12c6ff2d09143f2d0b72bd76a900a77f}{Done} ()
+\begin{DoxyCompactList}\small\item\em Signal that all threads are done. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_thread_handler_a91f8b72791c029d7cd5e2c0e4dab4b36}{Thread\-Handler} (Q\-Object $\ast$parent=0)
+\item 
+virtual \hyperlink{class_thread_handler_aa8c0bc9cc64189e5dfd7524a903ec176}{$\sim$\-Thread\-Handler} ()
+\item 
+void \hyperlink{class_thread_handler_a1f4af444c9410cd7101e783d10b57fac}{Set\-Thread\-Count} (const int count)
+\begin{DoxyCompactList}\small\item\em Set the number of threads to use. \end{DoxyCompactList}\item 
+void \hyperlink{class_thread_handler_a646cf240ab9545ac0681ce107c8cc35f}{Initialize} (\hyperlink{class_results_view}{Results\-View} $\ast$view)
+\begin{DoxyCompactList}\small\item\em Initialize the threads (connect all signals to resultsview's slots) \end{DoxyCompactList}\item 
+void \hyperlink{class_thread_handler_ae7914463cf34caf6792f12a6b14677b3}{Load\-Settings} (Q\-Settings \&settings)
+\begin{DoxyCompactList}\small\item\em Load settings. \end{DoxyCompactList}\item 
+void \hyperlink{class_thread_handler_a5bff11d85c1f450bc7183b3ffbae4d3e}{Save\-Settings} (Q\-Settings \&settings)
+\begin{DoxyCompactList}\small\item\em Save settings. \end{DoxyCompactList}\item 
+void \hyperlink{class_thread_handler_addaa3888c5a6a11f0cc38c6f42084679}{Clear\-Files} ()
+\begin{DoxyCompactList}\small\item\em Clear all files from cppcheck. \end{DoxyCompactList}\item 
+void \hyperlink{class_thread_handler_aa298024c0b56f111052829ee839d6691}{Set\-Files} (const Q\-String\-List \&files)
+\begin{DoxyCompactList}\small\item\em Set files to check. \end{DoxyCompactList}\item 
+void \hyperlink{class_thread_handler_a0ffd4b58e3c649decc8320ae062cbc67}{Check} (const \hyperlink{class_settings}{Settings} \&settings, bool recheck)
+\begin{DoxyCompactList}\small\item\em Start the threads to check the files. \end{DoxyCompactList}\item 
+bool \hyperlink{class_thread_handler_a301638dcb288e0aebdaa4706407271f3}{Is\-Checking} () const 
+\begin{DoxyCompactList}\small\item\em Is checking running? \end{DoxyCompactList}\item 
+bool \hyperlink{class_thread_handler_a27a367ae33c7d4c9b224078314bf27d3}{Has\-Previous\-Files} () const 
+\begin{DoxyCompactList}\small\item\em Have we checked files already? \end{DoxyCompactList}\item 
+int \hyperlink{class_thread_handler_ae1127ae99c36be91f145af805e05c695}{Get\-Previous\-Files\-Count} () const 
+\begin{DoxyCompactList}\small\item\em Return count of files we checked last time. \end{DoxyCompactList}\item 
+int \hyperlink{class_thread_handler_afd10d2874ef8fe5b4df6b2d9f38fbebd}{Get\-Previous\-Scan\-Duration} () const 
+\begin{DoxyCompactList}\small\item\em Return the time elapsed while scanning the previous time. \end{DoxyCompactList}\item 
+Q\-String\-List \hyperlink{class_thread_handler_a37936b66bbdfecaf1b9fa3ae995e17cb}{Get\-Re\-Check\-Files} () const 
+\begin{DoxyCompactList}\small\item\em Get files that should be rechecked because they have been changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_thread_handler_a10113089f9367cbbd6fd17705f15a09e}{Thread\-Done} ()
+\begin{DoxyCompactList}\small\item\em Slot that a single thread is done. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_thread_handler_ad4d317f59cbf8fb69cb22efb3199928a}{Remove\-Threads} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_function}{Function} to delete all threads. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\-String\-List \hyperlink{class_thread_handler_a54dffd1608f635d8d02066d7960e0fbe}{m\-Last\-Files}
+\begin{DoxyCompactList}\small\item\em List of files checked last time (used when rechecking) \end{DoxyCompactList}\item 
+Q\-Date\-Time \hyperlink{class_thread_handler_a7a45b4a20d7951ce48f53df68cca5e39}{m\-Check\-Start\-Time}
+\begin{DoxyCompactList}\small\item\em date and time when current checking started \end{DoxyCompactList}\item 
+Q\-Date\-Time \hyperlink{class_thread_handler_a8e77afe57fcae1e5158a8c84dbe930c4}{m\-Last\-Check\-Time}
+\begin{DoxyCompactList}\small\item\em when was the files checked the last time (used when rechecking) \end{DoxyCompactList}\item 
+Q\-Time \hyperlink{class_thread_handler_a85fdecdb5c52732ef77a9b03a7201643}{m\-Time}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_timer}{Timer} used for measuring scan duration. \end{DoxyCompactList}\item 
+int \hyperlink{class_thread_handler_a4a815d770eadf0ba47669af57fb8d8b0}{m\-Scan\-Duration}
+\begin{DoxyCompactList}\small\item\em The previous scan duration in milliseconds. \end{DoxyCompactList}\item 
+\hyperlink{class_thread_result}{Thread\-Result} \hyperlink{class_thread_handler_a7becea262a4b51e1eca239917b644f2b}{m\-Results}
+\begin{DoxyCompactList}\small\item\em Thread results are stored here. \end{DoxyCompactList}\item 
+Q\-List$<$ \hyperlink{class_check_thread}{Check\-Thread} $\ast$ $>$ \hyperlink{class_thread_handler_af4d3e7352cb349e673b334a565964e2a}{m\-Threads}
+\begin{DoxyCompactList}\small\item\em List of threads currently in use. \end{DoxyCompactList}\item 
+int \hyperlink{class_thread_handler_ab624bd264640ef116ea802e9c41fbcc2}{m\-Running\-Thread\-Count}
+\begin{DoxyCompactList}\small\item\em The amount of threads currently running. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class handles creating threadresult and starting threads. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_thread_handler_a91f8b72791c029d7cd5e2c0e4dab4b36}{\index{Thread\-Handler@{Thread\-Handler}!Thread\-Handler@{Thread\-Handler}}
+\index{Thread\-Handler@{Thread\-Handler}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{Thread\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}Thread\-Handler\-::\-Thread\-Handler (
+\begin{DoxyParamCaption}
+\item[{Q\-Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_thread_handler_a91f8b72791c029d7cd5e2c0e4dab4b36}
+\hypertarget{class_thread_handler_aa8c0bc9cc64189e5dfd7524a903ec176}{\index{Thread\-Handler@{Thread\-Handler}!$\sim$\-Thread\-Handler@{$\sim$\-Thread\-Handler}}
+\index{$\sim$\-Thread\-Handler@{$\sim$\-Thread\-Handler}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{$\sim$\-Thread\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}Thread\-Handler\-::$\sim$\-Thread\-Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_thread_handler_aa8c0bc9cc64189e5dfd7524a903ec176}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_thread_handler_a0ffd4b58e3c649decc8320ae062cbc67}{\index{Thread\-Handler@{Thread\-Handler}!Check@{Check}}
+\index{Check@{Check}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{Check}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Handler\-::\-Check (
+\begin{DoxyParamCaption}
+\item[{const {\bf Settings} \&}]{settings, }
+\item[{bool}]{recheck}
+\end{DoxyParamCaption}
+)}}\label{class_thread_handler_a0ffd4b58e3c649decc8320ae062cbc67}
+
+
+Start the threads to check the files. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & \hyperlink{class_settings}{Settings} for checking \\
+\hline
+{\em recheck} & Should we reuse the files we checked earlier \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_thread_handler_addaa3888c5a6a11f0cc38c6f42084679}{\index{Thread\-Handler@{Thread\-Handler}!Clear\-Files@{Clear\-Files}}
+\index{Clear\-Files@{Clear\-Files}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{Clear\-Files}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Handler\-::\-Clear\-Files (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_thread_handler_addaa3888c5a6a11f0cc38c6f42084679}
+
+
+Clear all files from cppcheck. 
+
+\hypertarget{class_thread_handler_a12c6ff2d09143f2d0b72bd76a900a77f}{\index{Thread\-Handler@{Thread\-Handler}!Done@{Done}}
+\index{Done@{Done}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{Done}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Handler\-::\-Done (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_thread_handler_a12c6ff2d09143f2d0b72bd76a900a77f}
+
+
+Signal that all threads are done. 
+
+\hypertarget{class_thread_handler_ae1127ae99c36be91f145af805e05c695}{\index{Thread\-Handler@{Thread\-Handler}!Get\-Previous\-Files\-Count@{Get\-Previous\-Files\-Count}}
+\index{Get\-Previous\-Files\-Count@{Get\-Previous\-Files\-Count}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{Get\-Previous\-Files\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int Thread\-Handler\-::\-Get\-Previous\-Files\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_thread_handler_ae1127ae99c36be91f145af805e05c695}
+
+
+Return count of files we checked last time. 
+
+\begin{DoxyReturn}{Returns}
+count of files that were checked last time. 
+\end{DoxyReturn}
+\hypertarget{class_thread_handler_afd10d2874ef8fe5b4df6b2d9f38fbebd}{\index{Thread\-Handler@{Thread\-Handler}!Get\-Previous\-Scan\-Duration@{Get\-Previous\-Scan\-Duration}}
+\index{Get\-Previous\-Scan\-Duration@{Get\-Previous\-Scan\-Duration}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{Get\-Previous\-Scan\-Duration}]{\setlength{\rightskip}{0pt plus 5cm}int Thread\-Handler\-::\-Get\-Previous\-Scan\-Duration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_thread_handler_afd10d2874ef8fe5b4df6b2d9f38fbebd}
+
+
+Return the time elapsed while scanning the previous time. 
+
+\begin{DoxyReturn}{Returns}
+the time elapsed in milliseconds. 
+\end{DoxyReturn}
+\hypertarget{class_thread_handler_a37936b66bbdfecaf1b9fa3ae995e17cb}{\index{Thread\-Handler@{Thread\-Handler}!Get\-Re\-Check\-Files@{Get\-Re\-Check\-Files}}
+\index{Get\-Re\-Check\-Files@{Get\-Re\-Check\-Files}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{Get\-Re\-Check\-Files}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String\-List Thread\-Handler\-::\-Get\-Re\-Check\-Files (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_thread_handler_a37936b66bbdfecaf1b9fa3ae995e17cb}
+
+
+Get files that should be rechecked because they have been changed. 
+
+\hypertarget{class_thread_handler_a27a367ae33c7d4c9b224078314bf27d3}{\index{Thread\-Handler@{Thread\-Handler}!Has\-Previous\-Files@{Has\-Previous\-Files}}
+\index{Has\-Previous\-Files@{Has\-Previous\-Files}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{Has\-Previous\-Files}]{\setlength{\rightskip}{0pt plus 5cm}bool Thread\-Handler\-::\-Has\-Previous\-Files (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_thread_handler_a27a367ae33c7d4c9b224078314bf27d3}
+
+
+Have we checked files already? 
+
+\begin{DoxyReturn}{Returns}
+true check has been previously run and recheck can be done 
+\end{DoxyReturn}
+\hypertarget{class_thread_handler_a646cf240ab9545ac0681ce107c8cc35f}{\index{Thread\-Handler@{Thread\-Handler}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Handler\-::\-Initialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Results\-View} $\ast$}]{view}
+\end{DoxyParamCaption}
+)}}\label{class_thread_handler_a646cf240ab9545ac0681ce107c8cc35f}
+
+
+Initialize the threads (connect all signals to resultsview's slots) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view} & View to show error results \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_thread_handler_a301638dcb288e0aebdaa4706407271f3}{\index{Thread\-Handler@{Thread\-Handler}!Is\-Checking@{Is\-Checking}}
+\index{Is\-Checking@{Is\-Checking}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{Is\-Checking}]{\setlength{\rightskip}{0pt plus 5cm}bool Thread\-Handler\-::\-Is\-Checking (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_thread_handler_a301638dcb288e0aebdaa4706407271f3}
+
+
+Is checking running? 
+
+\begin{DoxyReturn}{Returns}
+true if check is running, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_thread_handler_ae7914463cf34caf6792f12a6b14677b3}{\index{Thread\-Handler@{Thread\-Handler}!Load\-Settings@{Load\-Settings}}
+\index{Load\-Settings@{Load\-Settings}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{Load\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Handler\-::\-Load\-Settings (
+\begin{DoxyParamCaption}
+\item[{Q\-Settings \&}]{settings}
+\end{DoxyParamCaption}
+)}}\label{class_thread_handler_ae7914463cf34caf6792f12a6b14677b3}
+
+
+Load settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & Q\-Settings to load settings from \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_thread_handler_ad4d317f59cbf8fb69cb22efb3199928a}{\index{Thread\-Handler@{Thread\-Handler}!Remove\-Threads@{Remove\-Threads}}
+\index{Remove\-Threads@{Remove\-Threads}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{Remove\-Threads}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Handler\-::\-Remove\-Threads (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_thread_handler_ad4d317f59cbf8fb69cb22efb3199928a}
+
+
+\hyperlink{class_function}{Function} to delete all threads. 
+
+\hypertarget{class_thread_handler_a5bff11d85c1f450bc7183b3ffbae4d3e}{\index{Thread\-Handler@{Thread\-Handler}!Save\-Settings@{Save\-Settings}}
+\index{Save\-Settings@{Save\-Settings}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{Save\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Handler\-::\-Save\-Settings (
+\begin{DoxyParamCaption}
+\item[{Q\-Settings \&}]{settings}
+\end{DoxyParamCaption}
+)}}\label{class_thread_handler_a5bff11d85c1f450bc7183b3ffbae4d3e}
+
+
+Save settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & Q\-Settings to save settings to \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_thread_handler_aa298024c0b56f111052829ee839d6691}{\index{Thread\-Handler@{Thread\-Handler}!Set\-Files@{Set\-Files}}
+\index{Set\-Files@{Set\-Files}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{Set\-Files}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Handler\-::\-Set\-Files (
+\begin{DoxyParamCaption}
+\item[{const Q\-String\-List \&}]{files}
+\end{DoxyParamCaption}
+)}}\label{class_thread_handler_aa298024c0b56f111052829ee839d6691}
+
+
+Set files to check. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em files} & files to check \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_thread_handler_a1f4af444c9410cd7101e783d10b57fac}{\index{Thread\-Handler@{Thread\-Handler}!Set\-Thread\-Count@{Set\-Thread\-Count}}
+\index{Set\-Thread\-Count@{Set\-Thread\-Count}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{Set\-Thread\-Count}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Handler\-::\-Set\-Thread\-Count (
+\begin{DoxyParamCaption}
+\item[{const int}]{count}
+\end{DoxyParamCaption}
+)}}\label{class_thread_handler_a1f4af444c9410cd7101e783d10b57fac}
+
+
+Set the number of threads to use. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & The number of threads to use \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_thread_handler_af38507b6aa74ecbf6b13a7a3ea164be9}{\index{Thread\-Handler@{Thread\-Handler}!Stop@{Stop}}
+\index{Stop@{Stop}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{Stop}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Handler\-::\-Stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_thread_handler_af38507b6aa74ecbf6b13a7a3ea164be9}
+
+
+Slot to stop all threads. 
+
+\hypertarget{class_thread_handler_a10113089f9367cbbd6fd17705f15a09e}{\index{Thread\-Handler@{Thread\-Handler}!Thread\-Done@{Thread\-Done}}
+\index{Thread\-Done@{Thread\-Done}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{Thread\-Done}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Handler\-::\-Thread\-Done (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_thread_handler_a10113089f9367cbbd6fd17705f15a09e}
+
+
+Slot that a single thread is done. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_thread_handler_a7a45b4a20d7951ce48f53df68cca5e39}{\index{Thread\-Handler@{Thread\-Handler}!m\-Check\-Start\-Time@{m\-Check\-Start\-Time}}
+\index{m\-Check\-Start\-Time@{m\-Check\-Start\-Time}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{m\-Check\-Start\-Time}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Date\-Time Thread\-Handler\-::m\-Check\-Start\-Time\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_thread_handler_a7a45b4a20d7951ce48f53df68cca5e39}
+
+
+date and time when current checking started 
+
+\hypertarget{class_thread_handler_a8e77afe57fcae1e5158a8c84dbe930c4}{\index{Thread\-Handler@{Thread\-Handler}!m\-Last\-Check\-Time@{m\-Last\-Check\-Time}}
+\index{m\-Last\-Check\-Time@{m\-Last\-Check\-Time}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{m\-Last\-Check\-Time}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Date\-Time Thread\-Handler\-::m\-Last\-Check\-Time\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_thread_handler_a8e77afe57fcae1e5158a8c84dbe930c4}
+
+
+when was the files checked the last time (used when rechecking) 
+
+\hypertarget{class_thread_handler_a54dffd1608f635d8d02066d7960e0fbe}{\index{Thread\-Handler@{Thread\-Handler}!m\-Last\-Files@{m\-Last\-Files}}
+\index{m\-Last\-Files@{m\-Last\-Files}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{m\-Last\-Files}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String\-List Thread\-Handler\-::m\-Last\-Files\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_thread_handler_a54dffd1608f635d8d02066d7960e0fbe}
+
+
+List of files checked last time (used when rechecking) 
+
+\hypertarget{class_thread_handler_a7becea262a4b51e1eca239917b644f2b}{\index{Thread\-Handler@{Thread\-Handler}!m\-Results@{m\-Results}}
+\index{m\-Results@{m\-Results}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{m\-Results}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Thread\-Result} Thread\-Handler\-::m\-Results\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_thread_handler_a7becea262a4b51e1eca239917b644f2b}
+
+
+Thread results are stored here. 
+
+\hypertarget{class_thread_handler_ab624bd264640ef116ea802e9c41fbcc2}{\index{Thread\-Handler@{Thread\-Handler}!m\-Running\-Thread\-Count@{m\-Running\-Thread\-Count}}
+\index{m\-Running\-Thread\-Count@{m\-Running\-Thread\-Count}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{m\-Running\-Thread\-Count}]{\setlength{\rightskip}{0pt plus 5cm}int Thread\-Handler\-::m\-Running\-Thread\-Count\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_thread_handler_ab624bd264640ef116ea802e9c41fbcc2}
+
+
+The amount of threads currently running. 
+
+\hypertarget{class_thread_handler_a4a815d770eadf0ba47669af57fb8d8b0}{\index{Thread\-Handler@{Thread\-Handler}!m\-Scan\-Duration@{m\-Scan\-Duration}}
+\index{m\-Scan\-Duration@{m\-Scan\-Duration}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{m\-Scan\-Duration}]{\setlength{\rightskip}{0pt plus 5cm}int Thread\-Handler\-::m\-Scan\-Duration\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_thread_handler_a4a815d770eadf0ba47669af57fb8d8b0}
+
+
+The previous scan duration in milliseconds. 
+
+\hypertarget{class_thread_handler_af4d3e7352cb349e673b334a565964e2a}{\index{Thread\-Handler@{Thread\-Handler}!m\-Threads@{m\-Threads}}
+\index{m\-Threads@{m\-Threads}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{m\-Threads}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<${\bf Check\-Thread} $\ast$$>$ Thread\-Handler\-::m\-Threads\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_thread_handler_af4d3e7352cb349e673b334a565964e2a}
+
+
+List of threads currently in use. 
+
+\hypertarget{class_thread_handler_a85fdecdb5c52732ef77a9b03a7201643}{\index{Thread\-Handler@{Thread\-Handler}!m\-Time@{m\-Time}}
+\index{m\-Time@{m\-Time}!ThreadHandler@{Thread\-Handler}}
+\subsubsection[{m\-Time}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Time Thread\-Handler\-::m\-Time\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_thread_handler_a85fdecdb5c52732ef77a9b03a7201643}
+
+
+\hyperlink{class_timer}{Timer} used for measuring scan duration. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{threadhandler_8h}{threadhandler.\-h}\item 
+gui/\hyperlink{threadhandler_8cpp}{threadhandler.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,134 @@
+\hypertarget{class_cmd_line_parser}{\section{Cmd\-Line\-Parser Class Reference}
+\label{class_cmd_line_parser}\index{Cmd\-Line\-Parser@{Cmd\-Line\-Parser}}
+}
+
+
+The command line parser. The command line parser parses options and parameters user gives to cppcheck command line.  
+
+
+
+
+{\ttfamily \#include $<$cmdlineparser.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cmd_line_parser_a35cf2b4e9957d7efa5f632cdbe296eb8}{Cmd\-Line\-Parser} (\hyperlink{class_settings}{Settings} $\ast$settings)
+\item 
+bool \hyperlink{class_cmd_line_parser_a21b1b71d5467c65ff080d6f749e3e8a0}{Parse\-From\-Args} (int argc, const char $\ast$const argv\mbox{[}$\,$\mbox{]})
+\item 
+bool \hyperlink{class_cmd_line_parser_adad5fd9ca2d5aa03e1ac5ef0278c1c3d}{Get\-Show\-Version} () const 
+\item 
+bool \hyperlink{class_cmd_line_parser_a741187e71509d8006dd7fc7475d904d0}{Get\-Show\-Error\-Messages} () const 
+\item 
+const std\-::vector$<$ std\-::string $>$ \& \hyperlink{class_cmd_line_parser_acd4074503fbc468deb4f69b81849886f}{Get\-Path\-Names} () const 
+\item 
+bool \hyperlink{class_cmd_line_parser_a0e6fb7e1e655e8c4ceafaa0b931cac25}{Get\-Show\-Help} () const 
+\item 
+bool \hyperlink{class_cmd_line_parser_a1068e1c89220e5db58239630a2f3a7e0}{Exit\-After\-Printing} () const 
+\item 
+const std\-::vector$<$ std\-::string $>$ \& \hyperlink{class_cmd_line_parser_a59f33c753d665b72c6ba98cddad15550}{Get\-Ignored\-Paths} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_cmd_line_parser_a70917c357d33a443d5b2cd597b0d753b}{Print\-Help} () const 
+\item 
+void \hyperlink{class_cmd_line_parser_a147bcc41328323824d375dc0a3b9d7b3}{Print\-Message} (const std\-::string \&message) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The command line parser. The command line parser parses options and parameters user gives to cppcheck command line. 
+
+The parser takes a pointer to \hyperlink{class_settings}{Settings} instance which it will update based on options user has given. Couple of options are handled as class internal options. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_cmd_line_parser_a35cf2b4e9957d7efa5f632cdbe296eb8}{\index{Cmd\-Line\-Parser@{Cmd\-Line\-Parser}!Cmd\-Line\-Parser@{Cmd\-Line\-Parser}}
+\index{Cmd\-Line\-Parser@{Cmd\-Line\-Parser}!CmdLineParser@{Cmd\-Line\-Parser}}
+\subsubsection[{Cmd\-Line\-Parser}]{\setlength{\rightskip}{0pt plus 5cm}Cmd\-Line\-Parser\-::\-Cmd\-Line\-Parser (
+\begin{DoxyParamCaption}
+\item[{{\bf Settings} $\ast$}]{settings}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{class_cmd_line_parser_a35cf2b4e9957d7efa5f632cdbe296eb8}
+The constructor. 
+\begin{DoxyParams}{Parameters}
+{\em settings} & \hyperlink{class_settings}{Settings} instance that will be modified according to options user has given. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_cmd_line_parser_a1068e1c89220e5db58239630a2f3a7e0}{\index{Cmd\-Line\-Parser@{Cmd\-Line\-Parser}!Exit\-After\-Printing@{Exit\-After\-Printing}}
+\index{Exit\-After\-Printing@{Exit\-After\-Printing}!CmdLineParser@{Cmd\-Line\-Parser}}
+\subsubsection[{Exit\-After\-Printing}]{\setlength{\rightskip}{0pt plus 5cm}bool Cmd\-Line\-Parser\-::\-Exit\-After\-Printing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_cmd_line_parser_a1068e1c89220e5db58239630a2f3a7e0}
+Return if we should exit after printing version, help etc. \hypertarget{class_cmd_line_parser_a59f33c753d665b72c6ba98cddad15550}{\index{Cmd\-Line\-Parser@{Cmd\-Line\-Parser}!Get\-Ignored\-Paths@{Get\-Ignored\-Paths}}
+\index{Get\-Ignored\-Paths@{Get\-Ignored\-Paths}!CmdLineParser@{Cmd\-Line\-Parser}}
+\subsubsection[{Get\-Ignored\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<$std\-::string$>$\& Cmd\-Line\-Parser\-::\-Get\-Ignored\-Paths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_cmd_line_parser_a59f33c753d665b72c6ba98cddad15550}
+Return a list of paths user wants to ignore. \hypertarget{class_cmd_line_parser_acd4074503fbc468deb4f69b81849886f}{\index{Cmd\-Line\-Parser@{Cmd\-Line\-Parser}!Get\-Path\-Names@{Get\-Path\-Names}}
+\index{Get\-Path\-Names@{Get\-Path\-Names}!CmdLineParser@{Cmd\-Line\-Parser}}
+\subsubsection[{Get\-Path\-Names}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<$std\-::string$>$\& Cmd\-Line\-Parser\-::\-Get\-Path\-Names (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_cmd_line_parser_acd4074503fbc468deb4f69b81849886f}
+Return the path names user gave to command line. \hypertarget{class_cmd_line_parser_a741187e71509d8006dd7fc7475d904d0}{\index{Cmd\-Line\-Parser@{Cmd\-Line\-Parser}!Get\-Show\-Error\-Messages@{Get\-Show\-Error\-Messages}}
+\index{Get\-Show\-Error\-Messages@{Get\-Show\-Error\-Messages}!CmdLineParser@{Cmd\-Line\-Parser}}
+\subsubsection[{Get\-Show\-Error\-Messages}]{\setlength{\rightskip}{0pt plus 5cm}bool Cmd\-Line\-Parser\-::\-Get\-Show\-Error\-Messages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_cmd_line_parser_a741187e71509d8006dd7fc7475d904d0}
+Return if user wanted to see list of error messages. \hypertarget{class_cmd_line_parser_a0e6fb7e1e655e8c4ceafaa0b931cac25}{\index{Cmd\-Line\-Parser@{Cmd\-Line\-Parser}!Get\-Show\-Help@{Get\-Show\-Help}}
+\index{Get\-Show\-Help@{Get\-Show\-Help}!CmdLineParser@{Cmd\-Line\-Parser}}
+\subsubsection[{Get\-Show\-Help}]{\setlength{\rightskip}{0pt plus 5cm}bool Cmd\-Line\-Parser\-::\-Get\-Show\-Help (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_cmd_line_parser_a0e6fb7e1e655e8c4ceafaa0b931cac25}
+Return if help is shown to user. \hypertarget{class_cmd_line_parser_adad5fd9ca2d5aa03e1ac5ef0278c1c3d}{\index{Cmd\-Line\-Parser@{Cmd\-Line\-Parser}!Get\-Show\-Version@{Get\-Show\-Version}}
+\index{Get\-Show\-Version@{Get\-Show\-Version}!CmdLineParser@{Cmd\-Line\-Parser}}
+\subsubsection[{Get\-Show\-Version}]{\setlength{\rightskip}{0pt plus 5cm}bool Cmd\-Line\-Parser\-::\-Get\-Show\-Version (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_cmd_line_parser_adad5fd9ca2d5aa03e1ac5ef0278c1c3d}
+Return if user wanted to see program version. \hypertarget{class_cmd_line_parser_a21b1b71d5467c65ff080d6f749e3e8a0}{\index{Cmd\-Line\-Parser@{Cmd\-Line\-Parser}!Parse\-From\-Args@{Parse\-From\-Args}}
+\index{Parse\-From\-Args@{Parse\-From\-Args}!CmdLineParser@{Cmd\-Line\-Parser}}
+\subsubsection[{Parse\-From\-Args}]{\setlength{\rightskip}{0pt plus 5cm}bool Cmd\-Line\-Parser\-::\-Parse\-From\-Args (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{const char $\ast$const}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{class_cmd_line_parser_a21b1b71d5467c65ff080d6f749e3e8a0}
+Parse given command line. \begin{DoxyReturn}{Returns}
+true if command line was ok, false if there was an error. 
+\end{DoxyReturn}
+\hypertarget{class_cmd_line_parser_a70917c357d33a443d5b2cd597b0d753b}{\index{Cmd\-Line\-Parser@{Cmd\-Line\-Parser}!Print\-Help@{Print\-Help}}
+\index{Print\-Help@{Print\-Help}!CmdLineParser@{Cmd\-Line\-Parser}}
+\subsubsection[{Print\-Help}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\-Line\-Parser\-::\-Print\-Help (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_cmd_line_parser_a70917c357d33a443d5b2cd597b0d753b}
+Print help text to the console. \hypertarget{class_cmd_line_parser_a147bcc41328323824d375dc0a3b9d7b3}{\index{Cmd\-Line\-Parser@{Cmd\-Line\-Parser}!Print\-Message@{Print\-Message}}
+\index{Print\-Message@{Print\-Message}!CmdLineParser@{Cmd\-Line\-Parser}}
+\subsubsection[{Print\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\-Line\-Parser\-::\-Print\-Message (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_cmd_line_parser_a147bcc41328323824d375dc0a3b9d7b3}
+Print message (to console?). 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+cli/\hyperlink{cmdlineparser_8h}{cmdlineparser.\-h}\item 
+cli/\hyperlink{cmdlineparser_8cpp}{cmdlineparser.\-cpp}\end{DoxyCompactItemize}

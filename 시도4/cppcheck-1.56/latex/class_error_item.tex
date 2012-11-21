@@ -1,0 +1,135 @@
+\hypertarget{class_error_item}{\section{Error\-Item Class Reference}
+\label{class_error_item}\index{Error\-Item@{Error\-Item}}
+}
+
+
+A class containing error data for one error.  
+
+
+
+
+{\ttfamily \#include $<$erroritem.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_error_item_a8a9b03357b90010b769ce778e689824d}{Error\-Item} ()
+\item 
+\hyperlink{class_error_item_a9f09ec996614d73fe4bcb73c5fd4e4d5}{Error\-Item} (const \hyperlink{class_error_item}{Error\-Item} \&item)
+\item 
+\hyperlink{class_error_item_a34c6457b5511583a21e7a72584595023}{Error\-Item} (const \hyperlink{class_error_line}{Error\-Line} \&line)
+\item 
+\hyperlink{class_error_item_acc07ce32b1ead2bad7a600e6c277754d}{$\sim$\-Error\-Item} ()
+\item 
+Q\-String \hyperlink{class_error_item_a3c71112d7592bb0c6a414269c8fd7c97}{To\-String} () const 
+\begin{DoxyCompactList}\small\item\em Convert error item to string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\-String \hyperlink{class_error_item_a7ef5bfcb23db4b9ee239cb23a51dbe3c}{file}
+\item 
+Q\-String\-List \hyperlink{class_error_item_a6ceb9b47326884878a038c1bc1df710d}{files}
+\item 
+Q\-String \hyperlink{class_error_item_a37601c0b1e90e2837ef6600180640868}{file0}
+\item 
+Q\-List$<$ unsigned int $>$ \hyperlink{class_error_item_aabd883de1cdd1cd394077ecdc67d171e}{lines}
+\item 
+Q\-String \hyperlink{class_error_item_aff1725eaf4ca3d7ce627a451b38b712a}{error\-Id}
+\item 
+\hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6}{Severity\-::\-Severity\-Type} \hyperlink{class_error_item_aa5956cbcf0447d41e5d7db2ba1954e6f}{severity}
+\item 
+bool \hyperlink{class_error_item_a24f122bf960197ac9ed5c1106f08f6f4}{inconclusive}
+\item 
+Q\-String \hyperlink{class_error_item_a662817b060de330c8a038538ac25d946}{summary}
+\item 
+Q\-String \hyperlink{class_error_item_ab549a8c75af7766413648798f0ae0383}{message}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class containing error data for one error. 
+
+The paths are stored with internal (\char`\"{}/\char`\"{}) separators. Only when we show the path or copy if for user (to clipboard) we convert to native separators. Full path is stored instead of relative path for flexibility. It is easy to get the relative path from full path when needed. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_error_item_a8a9b03357b90010b769ce778e689824d}{\index{Error\-Item@{Error\-Item}!Error\-Item@{Error\-Item}}
+\index{Error\-Item@{Error\-Item}!ErrorItem@{Error\-Item}}
+\subsubsection[{Error\-Item}]{\setlength{\rightskip}{0pt plus 5cm}Error\-Item\-::\-Error\-Item (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_error_item_a8a9b03357b90010b769ce778e689824d}
+\hypertarget{class_error_item_a9f09ec996614d73fe4bcb73c5fd4e4d5}{\index{Error\-Item@{Error\-Item}!Error\-Item@{Error\-Item}}
+\index{Error\-Item@{Error\-Item}!ErrorItem@{Error\-Item}}
+\subsubsection[{Error\-Item}]{\setlength{\rightskip}{0pt plus 5cm}Error\-Item\-::\-Error\-Item (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\-Item} \&}]{item}
+\end{DoxyParamCaption}
+)}}\label{class_error_item_a9f09ec996614d73fe4bcb73c5fd4e4d5}
+\hypertarget{class_error_item_a34c6457b5511583a21e7a72584595023}{\index{Error\-Item@{Error\-Item}!Error\-Item@{Error\-Item}}
+\index{Error\-Item@{Error\-Item}!ErrorItem@{Error\-Item}}
+\subsubsection[{Error\-Item}]{\setlength{\rightskip}{0pt plus 5cm}Error\-Item\-::\-Error\-Item (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\-Line} \&}]{line}
+\end{DoxyParamCaption}
+)}}\label{class_error_item_a34c6457b5511583a21e7a72584595023}
+\hypertarget{class_error_item_acc07ce32b1ead2bad7a600e6c277754d}{\index{Error\-Item@{Error\-Item}!$\sim$\-Error\-Item@{$\sim$\-Error\-Item}}
+\index{$\sim$\-Error\-Item@{$\sim$\-Error\-Item}!ErrorItem@{Error\-Item}}
+\subsubsection[{$\sim$\-Error\-Item}]{\setlength{\rightskip}{0pt plus 5cm}Error\-Item\-::$\sim$\-Error\-Item (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_error_item_acc07ce32b1ead2bad7a600e6c277754d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_error_item_a3c71112d7592bb0c6a414269c8fd7c97}{\index{Error\-Item@{Error\-Item}!To\-String@{To\-String}}
+\index{To\-String@{To\-String}!ErrorItem@{Error\-Item}}
+\subsubsection[{To\-String}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Error\-Item\-::\-To\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_error_item_a3c71112d7592bb0c6a414269c8fd7c97}
+
+
+Convert error item to string. 
+
+\begin{DoxyReturn}{Returns}
+Error item as string. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_error_item_aff1725eaf4ca3d7ce627a451b38b712a}{\index{Error\-Item@{Error\-Item}!error\-Id@{error\-Id}}
+\index{error\-Id@{error\-Id}!ErrorItem@{Error\-Item}}
+\subsubsection[{error\-Id}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Error\-Item\-::error\-Id}}\label{class_error_item_aff1725eaf4ca3d7ce627a451b38b712a}
+\hypertarget{class_error_item_a7ef5bfcb23db4b9ee239cb23a51dbe3c}{\index{Error\-Item@{Error\-Item}!file@{file}}
+\index{file@{file}!ErrorItem@{Error\-Item}}
+\subsubsection[{file}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Error\-Item\-::file}}\label{class_error_item_a7ef5bfcb23db4b9ee239cb23a51dbe3c}
+\hypertarget{class_error_item_a37601c0b1e90e2837ef6600180640868}{\index{Error\-Item@{Error\-Item}!file0@{file0}}
+\index{file0@{file0}!ErrorItem@{Error\-Item}}
+\subsubsection[{file0}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Error\-Item\-::file0}}\label{class_error_item_a37601c0b1e90e2837ef6600180640868}
+\hypertarget{class_error_item_a6ceb9b47326884878a038c1bc1df710d}{\index{Error\-Item@{Error\-Item}!files@{files}}
+\index{files@{files}!ErrorItem@{Error\-Item}}
+\subsubsection[{files}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String\-List Error\-Item\-::files}}\label{class_error_item_a6ceb9b47326884878a038c1bc1df710d}
+\hypertarget{class_error_item_a24f122bf960197ac9ed5c1106f08f6f4}{\index{Error\-Item@{Error\-Item}!inconclusive@{inconclusive}}
+\index{inconclusive@{inconclusive}!ErrorItem@{Error\-Item}}
+\subsubsection[{inconclusive}]{\setlength{\rightskip}{0pt plus 5cm}bool Error\-Item\-::inconclusive}}\label{class_error_item_a24f122bf960197ac9ed5c1106f08f6f4}
+\hypertarget{class_error_item_aabd883de1cdd1cd394077ecdc67d171e}{\index{Error\-Item@{Error\-Item}!lines@{lines}}
+\index{lines@{lines}!ErrorItem@{Error\-Item}}
+\subsubsection[{lines}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<$unsigned int$>$ Error\-Item\-::lines}}\label{class_error_item_aabd883de1cdd1cd394077ecdc67d171e}
+\hypertarget{class_error_item_ab549a8c75af7766413648798f0ae0383}{\index{Error\-Item@{Error\-Item}!message@{message}}
+\index{message@{message}!ErrorItem@{Error\-Item}}
+\subsubsection[{message}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Error\-Item\-::message}}\label{class_error_item_ab549a8c75af7766413648798f0ae0383}
+\hypertarget{class_error_item_aa5956cbcf0447d41e5d7db2ba1954e6f}{\index{Error\-Item@{Error\-Item}!severity@{severity}}
+\index{severity@{severity}!ErrorItem@{Error\-Item}}
+\subsubsection[{severity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Severity\-::\-Severity\-Type} Error\-Item\-::severity}}\label{class_error_item_aa5956cbcf0447d41e5d7db2ba1954e6f}
+\hypertarget{class_error_item_a662817b060de330c8a038538ac25d946}{\index{Error\-Item@{Error\-Item}!summary@{summary}}
+\index{summary@{summary}!ErrorItem@{Error\-Item}}
+\subsubsection[{summary}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Error\-Item\-::summary}}\label{class_error_item_a662817b060de330c8a038538ac25d946}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{erroritem_8h}{erroritem.\-h}\item 
+gui/\hyperlink{erroritem_8cpp}{erroritem.\-cpp}\end{DoxyCompactItemize}

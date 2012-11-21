@@ -1,0 +1,154 @@
+\hypertarget{class_thread_executor}{\section{Thread\-Executor Class Reference}
+\label{class_thread_executor}\index{Thread\-Executor@{Thread\-Executor}}
+}
+
+
+{\ttfamily \#include $<$threadexecutor.\-h$>$}
+
+Inheritance diagram for Thread\-Executor\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_thread_executor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_thread_executor_ae0303363aba4b3c1bb4a86ae4b850f4b}{Thread\-Executor} (const std\-::map$<$ std\-::string, std\-::size\-\_\-t $>$ \&files, \hyperlink{class_settings}{Settings} \&settings, \hyperlink{class_error_logger}{Error\-Logger} \&\-\_\-error\-Logger)
+\item 
+virtual \hyperlink{class_thread_executor_ae71aa43e461efdd4bc877c5342453ff1}{$\sim$\-Thread\-Executor} ()
+\item 
+unsigned int \hyperlink{class_thread_executor_a5a4e3d3301981130a55ba2c070dfe482}{check} ()
+\item 
+virtual void \hyperlink{class_thread_executor_a629882d9c86e2b558ac9ac91b39256ae}{report\-Out} (const std\-::string \&outmsg)
+\item 
+virtual void \hyperlink{class_thread_executor_a70dfa647ea76e88885b9062d7c4c8b05}{report\-Err} (const \hyperlink{class_error_logger_1_1_error_message}{Error\-Logger\-::\-Error\-Message} \&msg)
+\item 
+virtual void \hyperlink{class_thread_executor_a7bee346d573c9cc0fb0e63341a5ed6b4}{report\-Info} (const \hyperlink{class_error_logger_1_1_error_message}{Error\-Logger\-::\-Error\-Message} \&msg)
+\item 
+void \hyperlink{class_thread_executor_a2ed5e6dec3edc7ccbf8edfe42d92a3db}{add\-File\-Content} (const std\-::string \&path, const std\-::string \&content)
+\begin{DoxyCompactList}\small\item\em Add content to a file, to be used in unit testing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_thread_executor_a8fab9a84b98a1c9b78d8009e9b27c465}{is\-Enabled} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class will take a list of filenames and settings and check then all files using threads. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_thread_executor_ae0303363aba4b3c1bb4a86ae4b850f4b}{\index{Thread\-Executor@{Thread\-Executor}!Thread\-Executor@{Thread\-Executor}}
+\index{Thread\-Executor@{Thread\-Executor}!ThreadExecutor@{Thread\-Executor}}
+\subsubsection[{Thread\-Executor}]{\setlength{\rightskip}{0pt plus 5cm}Thread\-Executor\-::\-Thread\-Executor (
+\begin{DoxyParamCaption}
+\item[{const std\-::map$<$ std\-::string, std\-::size\-\_\-t $>$ \&}]{files, }
+\item[{{\bf Settings} \&}]{settings, }
+\item[{{\bf Error\-Logger} \&}]{\-\_\-error\-Logger}
+\end{DoxyParamCaption}
+)}}\label{class_thread_executor_ae0303363aba4b3c1bb4a86ae4b850f4b}
+\hypertarget{class_thread_executor_ae71aa43e461efdd4bc877c5342453ff1}{\index{Thread\-Executor@{Thread\-Executor}!$\sim$\-Thread\-Executor@{$\sim$\-Thread\-Executor}}
+\index{$\sim$\-Thread\-Executor@{$\sim$\-Thread\-Executor}!ThreadExecutor@{Thread\-Executor}}
+\subsubsection[{$\sim$\-Thread\-Executor}]{\setlength{\rightskip}{0pt plus 5cm}Thread\-Executor\-::$\sim$\-Thread\-Executor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_thread_executor_ae71aa43e461efdd4bc877c5342453ff1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_thread_executor_a2ed5e6dec3edc7ccbf8edfe42d92a3db}{\index{Thread\-Executor@{Thread\-Executor}!add\-File\-Content@{add\-File\-Content}}
+\index{add\-File\-Content@{add\-File\-Content}!ThreadExecutor@{Thread\-Executor}}
+\subsubsection[{add\-File\-Content}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Executor\-::add\-File\-Content (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{path, }
+\item[{const std\-::string \&}]{content}
+\end{DoxyParamCaption}
+)}}\label{class_thread_executor_a2ed5e6dec3edc7ccbf8edfe42d92a3db}
+
+
+Add content to a file, to be used in unit testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & File name (used as a key to link with real file). \\
+\hline
+{\em content} & If the file would be a real file, this should be the content of the file. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_thread_executor_a5a4e3d3301981130a55ba2c070dfe482}{\index{Thread\-Executor@{Thread\-Executor}!check@{check}}
+\index{check@{check}!ThreadExecutor@{Thread\-Executor}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Thread\-Executor\-::check (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_thread_executor_a5a4e3d3301981130a55ba2c070dfe482}
+\hypertarget{class_thread_executor_a8fab9a84b98a1c9b78d8009e9b27c465}{\index{Thread\-Executor@{Thread\-Executor}!is\-Enabled@{is\-Enabled}}
+\index{is\-Enabled@{is\-Enabled}!ThreadExecutor@{Thread\-Executor}}
+\subsubsection[{is\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}static bool Thread\-Executor\-::is\-Enabled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_thread_executor_a8fab9a84b98a1c9b78d8009e9b27c465}
+\begin{DoxyReturn}{Returns}
+true if support for threads exist. 
+\end{DoxyReturn}
+\hypertarget{class_thread_executor_a70dfa647ea76e88885b9062d7c4c8b05}{\index{Thread\-Executor@{Thread\-Executor}!report\-Err@{report\-Err}}
+\index{report\-Err@{report\-Err}!ThreadExecutor@{Thread\-Executor}}
+\subsubsection[{report\-Err}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Executor\-::report\-Err (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\-Logger\-::\-Error\-Message} \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_thread_executor_a70dfa647ea76e88885b9062d7c4c8b05}
+Information about found errors and warnings is directed here. Override this to receive the errormessages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Location and other information about the found error. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_error_logger_aea56e01f24c0d8ecaa5498ae4eba1739}{Error\-Logger}.
+
+\hypertarget{class_thread_executor_a7bee346d573c9cc0fb0e63341a5ed6b4}{\index{Thread\-Executor@{Thread\-Executor}!report\-Info@{report\-Info}}
+\index{report\-Info@{report\-Info}!ThreadExecutor@{Thread\-Executor}}
+\subsubsection[{report\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Executor\-::report\-Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\-Logger\-::\-Error\-Message} \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_thread_executor_a7bee346d573c9cc0fb0e63341a5ed6b4}
+Output information messages. 
+\begin{DoxyParams}{Parameters}
+{\em msg} & Location and other information about the found error. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_error_logger_ab192b3c92cc4e0b785b09c435d5762c4}{Error\-Logger}.
+
+\hypertarget{class_thread_executor_a629882d9c86e2b558ac9ac91b39256ae}{\index{Thread\-Executor@{Thread\-Executor}!report\-Out@{report\-Out}}
+\index{report\-Out@{report\-Out}!ThreadExecutor@{Thread\-Executor}}
+\subsubsection[{report\-Out}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Executor\-::report\-Out (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{outmsg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_thread_executor_a629882d9c86e2b558ac9ac91b39256ae}
+Information about progress is directed here. Override this to receive the progress messages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em outmsg} & Message to show e.\-g. \char`\"{}\-Checking main.\-cpp...\char`\"{} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_error_logger_aeb9c56add35e46cd83e9b7e92e5e110c}{Error\-Logger}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+cli/\hyperlink{threadexecutor_8h}{threadexecutor.\-h}\item 
+cli/\hyperlink{threadexecutor_8cpp}{threadexecutor.\-cpp}\end{DoxyCompactItemize}

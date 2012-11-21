@@ -1,0 +1,528 @@
+=====VariableFunctionTable=====
+t	C:/Users/HeeSung/Desktop/시도1/cppcheck-1.56/cli/cmdlineparser.cpp
+=====VariableFunctionTableEnd=====
+=====VariableFunctionTable=====
+t	C:/Users/HeeSung/Desktop/시도1/cppcheck-1.56/cli/cmdlineparser.cpp
+=====VariableFunctionTableEnd=====
+=====VariableFunctionTable=====
+t	C:/Users/HeeSung/Desktop/시도1/cppcheck-1.56/cli/cmdlineparser.cpp
+=====VariableFunctionTableEnd=====
+=====VariableFunctionTable=====
+t	C:/Users/HeeSung/Desktop/시도1/cppcheck-1.56/cli/cppcheckexecutor.cpp
+=====VariableFunctionTableEnd=====
+=====VariableFunctionTable=====
+t	C:/Users/HeeSung/Desktop/시도1/cppcheck-1.56/cli/cppcheckexecutor.cpp
+=====VariableFunctionTableEnd=====
+=====VariableFunctionTable=====
+t	C:/Users/HeeSung/Desktop/시도1/cppcheck-1.56/cli/filelister.cpp
+=====VariableFunctionTableEnd=====
+=====VariableFunctionTable=====
+t	C:/Users/HeeSung/Desktop/시도1/cppcheck-1.56/cli/filelister.cpp
+=====VariableFunctionTableEnd=====
+=====VariableFunctionTable=====
+t	C:/Users/HeeSung/Desktop/시도1/cppcheck-1.56/cli/filelister.cpp
+=====VariableFunctionTableEnd=====
+=====VariableFunctionTable=====
+t	C:/Users/HeeSung/Desktop/시도1/cppcheck-1.56/cli/filelister.cpp
+=====VariableFunctionTableEnd=====
+=====VariableFunctionTable=====
+t	C:/Users/HeeSung/Desktop/시도1/cppcheck-1.56/cli/filelister.cpp
+=====VariableFunctionTableEnd=====
+=====VariableFunctionTable=====
+t	C:/Users/HeeSung/Desktop/시도1/cppcheck-1.56/cli/main.cpp
+=====VariableFunctionTableEnd=====
+=====VariableFunctionTable=====
+t	C:/Users/HeeSung/Desktop/시도1/cppcheck-1.56/cli/pathmatch.cpp
+=====VariableFunctionTableEnd=====
+=====VariableFunctionTable=====
+t	C:/Users/HeeSung/Desktop/시도1/cppcheck-1.56/cli/threadexecutor.cpp
+=====VariableFunctionTableEnd=====
+=====FunctionFunctionTable=====
+t	project
+r	AddFilesToList
+c	ParseFromArgs
+
+r	AddInclPathsToList
+c	ParseFromArgs
+
+r	Files
+c	AddInclPathsToList
+
+r	FindClose
+c	recursiveAddFiles
+
+r	FindFirstFileA
+c	MyFindFirstFile
+
+r	FindNextFileA
+c	recursiveAddFiles
+
+r	FirstChildElement
+c	ParseFromArgs
+
+r	GetFileAttributes
+c	MyFileExists
+c	MyIsDirectory
+
+r	GetIgnoredPaths
+c	parseFromArgs
+
+r	GetPathNames
+c	parseFromArgs
+
+r	GetText
+c	ParseFromArgs
+
+r	LoadFile
+c	ParseFromArgs
+
+r	MyFileExists
+c	fileExists
+
+r	MyFindFirstFile
+c	recursiveAddFiles
+
+r	MyIsDirectory
+c	isDirectory
+c	recursiveAddFiles
+
+r	NextSiblingElement
+c	ParseFromArgs
+
+r	PathFileExistsA
+c	MyFileExists
+
+r	PathIsDirectoryA
+c	MyIsDirectory
+
+r	ValueStr
+c	ParseFromArgs
+
+r	_errorLogger
+c	ThreadExecutor
+
+r	_files
+c	ThreadExecutor
+
+r	_masks
+c	PathMatch
+
+r	_settings
+c	CmdLineParser
+c	CppCheckExecutor
+c	ThreadExecutor
+
+r	_showErrorMessages
+c	CmdLineParser
+
+r	_showHelp
+c	CmdLineParser
+
+r	_showVersion
+c	CmdLineParser
+
+r	acceptFile
+c	recursiveAddFiles
+c	recursiveAddFiles2
+
+r	addEnabled
+c	ParseFromArgs
+
+r	addSuppressionLine
+c	ParseFromArgs
+
+r	append
+c	ParseFromArgs
+
+r	begin
+c	Match
+c	ParseFromArgs
+c	PathMatch
+c	check
+c	parseFromArgs
+
+r	c_str
+c	AddFilesToList
+c	AddInclPathsToList
+c	MyFileExists
+c	MyFindFirstFile
+c	MyIsDirectory
+c	ParseFromArgs
+c	fileExists
+c	getAbsolutePath
+c	isDirectory
+c	recursiveAddFiles2
+
+r	checkFunctionUsage
+c	check
+
+r	classInfo
+c	ParseFromArgs
+
+r	clear
+c	ParseFromArgs
+
+r	compare
+c	AddFilesToList
+c	Match
+
+r	count
+c	ParseFromArgs
+
+r	cppCheck
+c	check
+
+r	ctime
+c	reportProgress
+
+r	empty
+c	AddFilesToList
+c	AddInclPathsToList
+c	Match
+c	ParseFromArgs
+c	isDirectory
+c	parseFromArgs
+c	recursiveAddFiles2
+
+r	end
+c	Match
+c	ParseFromArgs
+c	PathMatch
+c	check
+c	parseFromArgs
+c	recursiveAddFiles2
+c	reportErr
+
+r	erase
+c	ParseFromArgs
+c	parseFromArgs
+
+r	errmsg
+c	ParseFromArgs
+
+r	executor
+c	check
+
+r	exit
+c	parseFromArgs
+
+r	extraVersion
+c	parseFromArgs
+
+r	f
+c	ParseFromArgs
+
+r	find
+c	Match
+c	ParseFromArgs
+c	recursiveAddFiles2
+c	reportErr
+
+r	find_last_of
+c	RemoveFilename
+c	recursiveAddFiles
+
+r	findpath
+c	Match
+
+r	free
+c	getAbsolutePath
+
+r	fromNativeSeparators
+c	AddInclPathsToList
+c	ParseFromArgs
+c	recursiveAddFiles
+
+r	getErrorMessages
+c	parseFromArgs
+
+r	getFilenameExtension
+c	parseFromArgs
+
+r	getUnmatchedGlobalSuppressions
+c	check
+
+r	getXMLFooter
+c	check
+c	parseFromArgs
+
+r	getXMLHeader
+c	check
+c	parseFromArgs
+
+r	getline
+c	AddFilesToList
+c	AddInclPathsToList
+
+r	glob
+c	isDirectory
+c	recursiveAddFiles2
+
+r	globfree
+c	isDirectory
+c	recursiveAddFiles2
+
+r	info
+c	ParseFromArgs
+
+r	insert
+c	ParseFromArgs
+c	recursiveAddFiles2
+c	reportErr
+
+r	instances
+c	ParseFromArgs
+
+r	isEnabled
+c	ParseFromArgs
+
+r	is_open
+c	ParseFromArgs
+
+r	iss
+c	ParseFromArgs
+
+r	length
+c	AddInclPathsToList
+c	Match
+c	ParseFromArgs
+c	recursiveAddFiles
+c	recursiveAddFiles2
+
+r	mask
+c	Match
+
+r	matcher
+c	parseFromArgs
+
+r	message
+c	ParseFromArgs
+
+r	msg
+c	check
+
+r	name
+c	ParseFromArgs
+
+r	numberString
+c	ParseFromArgs
+
+r	open
+c	AddFilesToList
+
+r	parseFile
+c	ParseFromArgs
+
+r	parser
+c	parseFromArgs
+
+r	path
+c	parseFromArgs
+
+r	platform
+c	ParseFromArgs
+
+r	push_back
+c	AddFilesToList
+c	AddInclPathsToList
+c	ParseFromArgs
+
+r	realpath
+c	getAbsolutePath
+
+r	removeQuotationMarks
+c	AddInclPathsToList
+c	ParseFromArgs
+
+r	reportUnmatchedSuppressions
+c	check
+
+r	return
+c	MyIsDirectory
+c	fileExists
+c	isDirectory
+
+r	sameFileName
+c	recursiveAddFiles
+c	recursiveAddFiles2
+
+r	settings
+c	check
+c	parseFromArgs
+
+r	simplifyPath
+c	ParseFromArgs
+
+r	size
+c	Match
+c	check
+c	isDirectory
+c	recursiveAddFiles
+
+r	stat
+c	fileExists
+c	recursiveAddFiles2
+
+r	str
+c	ParseFromArgs
+c	recursiveAddFiles
+c	recursiveAddFiles2
+c	reportProgress
+c	reportStatus
+
+r	strchr
+c	recursiveAddFiles
+
+r	strcmp
+c	ParseFromArgs
+
+r	string
+c	ParseFromArgs
+
+r	strncmp
+c	ParseFromArgs
+
+r	substr
+c	ParseFromArgs
+c	RemoveFilename
+c	recursiveAddFiles
+c	reportProgress
+
+r	time
+c	check
+c	reportProgress
+
+r	time1
+c	CppCheckExecutor
+
+r	toNativeSeparators
+c	parseFromArgs
+c	recursiveAddFiles
+
+r	toString
+c	reportErr
+
+r	toXML
+c	reportErr
+
+r	transform
+c	Match
+c	PathMatch
+
+r	version
+c	parseFromArgs
+
+r	while
+c	ParseFromArgs
+c	recursiveAddFiles
+
+=====FunctionFunctionTableEnd=====
+=====ClassFunctionFunctionsTable=====
+t	CmdLineParser
+r	ExitAfterPrinting
+c	parseFromArgs
+r	GetShowErrorMessages
+c	parseFromArgs
+r	GetShowVersion
+c	parseFromArgs
+r	ParseFromArgs
+c	parseFromArgs
+r	PrintHelp
+c	ParseFromArgs
+r	PrintMessage
+c	ParseFromArgs
+t	CppCheckExecutor
+r	check
+c	check
+r	parseFromArgs
+c	check
+r	reportErr
+c	check
+c	reportErr
+c	reportInfo
+r	reportInfo
+c	check
+r	reportOut
+c	reportErr
+c	reportProgress
+r	reportProgress
+c	check
+r	reportStatus
+c	check
+t	FileLister
+r	getAbsolutePath
+c	recursiveAddFiles2
+r	isDirectory
+c	ParseFromArgs
+c	parseFromArgs
+r	recursiveAddFiles
+c	parseFromArgs
+c	recursiveAddFiles
+r	recursiveAddFiles2
+c	recursiveAddFiles
+c	recursiveAddFiles2
+t	PathMatch
+r	Match
+c	parseFromArgs
+r	RemoveFilename
+c	Match
+t	ThreadExecutor
+r	isEnabled
+c	check
+=====ClassFunctionFunctionsTableEnd=====
+=====ClassVarialbeFunctionsTable=====
+t	CmdLineParser
+r	_exitAfterPrint
+c	CmdLineParser
+c	ParseFromArgs
+r	_pathnames
+c	ParseFromArgs
+r	_settings
+c	CmdLineParser
+r	_showErrorMessages
+c	CmdLineParser
+c	ParseFromArgs
+r	_showHelp
+c	CmdLineParser
+c	ParseFromArgs
+r	_showVersion
+c	CmdLineParser
+c	ParseFromArgs
+t	CppCheckExecutor
+r	_errorList
+c	parseFromArgs
+c	reportErr
+r	_files
+c	check
+c	parseFromArgs
+r	_settings
+c	CppCheckExecutor
+c	check
+c	parseFromArgs
+c	reportErr
+c	reportProgress
+r	errorlist
+c	CppCheckExecutor
+c	parseFromArgs
+c	reportErr
+r	time1
+c	CppCheckExecutor
+c	check
+c	parseFromArgs
+c	reportProgress
+t	PathMatch
+r	_caseSensitive
+c	PathMatch
+r	_masks
+c	Match
+c	PathMatch
+t	ThreadExecutor
+r	_errorLogger
+c	ThreadExecutor
+r	_fileCount
+c	ThreadExecutor
+r	_files
+c	ThreadExecutor
+r	_settings
+c	ThreadExecutor
+=====ClassVariableFunctionsTableEnd=====

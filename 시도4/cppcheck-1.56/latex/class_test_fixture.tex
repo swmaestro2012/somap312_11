@@ -1,0 +1,258 @@
+\hypertarget{class_test_fixture}{\section{Test\-Fixture Class Reference}
+\label{class_test_fixture}\index{Test\-Fixture@{Test\-Fixture}}
+}
+
+
+{\ttfamily \#include $<$testsuite.\-h$>$}
+
+Inheritance diagram for Test\-Fixture\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_test_fixture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_test_fixture_a43619b0701cef097c0a1804dff84c9fa}{report\-Out} (const std\-::string \&outmsg)
+\item 
+virtual void \hyperlink{class_test_fixture_a254cc49644165b09c40daa042f603def}{report\-Err} (const \hyperlink{class_error_logger_1_1_error_message}{Error\-Logger\-::\-Error\-Message} \&msg)
+\item 
+void \hyperlink{class_test_fixture_ab80c59ba18ecf97a852b601715b014b7}{run} (const std\-::string \&str)
+\item 
+\hyperlink{class_test_fixture_a515ce975e2c6ca8567f0c1bb5455cae9}{Test\-Fixture} (const std\-::string \&\-\_\-name)
+\item 
+virtual \hyperlink{class_test_fixture_a3ac71cd5a494f2ed4c5b15fdbb426c8b}{$\sim$\-Test\-Fixture} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_test_fixture_a565fb2deaf56d065bd6c7b696fea678b}{print\-Tests} ()
+\item 
+static std\-::size\-\_\-t \hyperlink{class_test_fixture_a753bccbb52392df45eb8195e4552fb73}{run\-Tests} (const \hyperlink{classoptions}{options} \&args)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_test_fixture_a41cfa790a452f03d4fb8d849fc47e686}{run} ()=0
+\item 
+bool \hyperlink{class_test_fixture_ad90383f58a2a4f0cfec62fe308918394}{run\-Test} (const char testname\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{class_test_fixture_a7ecdedb84aed49cffc0c36aa1fb22719}{assert\-\_\-} (const char $\ast$filename, unsigned int linenr, bool condition) const 
+\item 
+void \hyperlink{class_test_fixture_a73430ba861d494553667db6f27e045f6}{assert\-Equals} (const char $\ast$filename, unsigned int linenr, const std\-::string \&expected, const std\-::string \&actual, const std\-::string \&msg=\char`\"{}\char`\"{}) const 
+\item 
+void \hyperlink{class_test_fixture_a7756e6a7bf785a2b340df7ae44e96bc7}{assert\-Equals} (const char $\ast$filename, unsigned int linenr, long long expected, long long actual, const std\-::string \&msg=\char`\"{}\char`\"{}) const 
+\item 
+void \hyperlink{class_test_fixture_ac9eeb9162db2ed08a188ccd8ef9e2ffb}{assert\-Equals\-Double} (const char $\ast$filename, unsigned int linenr, double expected, double actual, const std\-::string \&msg=\char`\"{}\char`\"{}) const 
+\item 
+void \hyperlink{class_test_fixture_a599ae05e660867eff2de2bf37d9201cc}{todo\-Assert\-Equals} (const char $\ast$filename, unsigned int linenr, const std\-::string \&wanted, const std\-::string \&current, const std\-::string \&actual) const 
+\item 
+void \hyperlink{class_test_fixture_afea92302ef3b7d604f01709e8fc79aa6}{todo\-Assert\-Equals} (const char $\ast$filename, unsigned int linenr, long long wanted, long long current, long long actual) const 
+\item 
+void \hyperlink{class_test_fixture_aed1572869c4a6d3713df09c674503ef1}{assert\-Throw\-Fail} (const char $\ast$filename, unsigned int linenr) const 
+\item 
+void \hyperlink{class_test_fixture_aa4887d40b17d3cedece05aeeec3fdd71}{process\-Options} (const \hyperlink{classoptions}{options} \&args)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{class_test_fixture_a5cf001c633b94ff880c53a0af927522c}{classname}
+\item 
+std\-::string \hyperlink{class_test_fixture_acae3d378c5798a5d38236b922524b69a}{test\-To\-Run}
+\item 
+bool \hyperlink{class_test_fixture_aa349ce738d2399d64bed7e37f2ad2f69}{gcc\-\_\-style\-\_\-errors}
+\item 
+bool \hyperlink{class_test_fixture_a3904ba3d7a930a3a61018fbfac5dbc97}{quiet\-\_\-tests}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_test_fixture_a515ce975e2c6ca8567f0c1bb5455cae9}{\index{Test\-Fixture@{Test\-Fixture}!Test\-Fixture@{Test\-Fixture}}
+\index{Test\-Fixture@{Test\-Fixture}!TestFixture@{Test\-Fixture}}
+\subsubsection[{Test\-Fixture}]{\setlength{\rightskip}{0pt plus 5cm}Test\-Fixture\-::\-Test\-Fixture (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{class_test_fixture_a515ce975e2c6ca8567f0c1bb5455cae9}
+\hypertarget{class_test_fixture_a3ac71cd5a494f2ed4c5b15fdbb426c8b}{\index{Test\-Fixture@{Test\-Fixture}!$\sim$\-Test\-Fixture@{$\sim$\-Test\-Fixture}}
+\index{$\sim$\-Test\-Fixture@{$\sim$\-Test\-Fixture}!TestFixture@{Test\-Fixture}}
+\subsubsection[{$\sim$\-Test\-Fixture}]{\setlength{\rightskip}{0pt plus 5cm}virtual Test\-Fixture\-::$\sim$\-Test\-Fixture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_test_fixture_a3ac71cd5a494f2ed4c5b15fdbb426c8b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_test_fixture_a7ecdedb84aed49cffc0c36aa1fb22719}{\index{Test\-Fixture@{Test\-Fixture}!assert\-\_\-@{assert\-\_\-}}
+\index{assert\-\_\-@{assert\-\_\-}!TestFixture@{Test\-Fixture}}
+\subsubsection[{assert\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}void Test\-Fixture\-::assert\-\_\- (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{unsigned int}]{linenr, }
+\item[{bool}]{condition}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_test_fixture_a7ecdedb84aed49cffc0c36aa1fb22719}
+\hypertarget{class_test_fixture_a73430ba861d494553667db6f27e045f6}{\index{Test\-Fixture@{Test\-Fixture}!assert\-Equals@{assert\-Equals}}
+\index{assert\-Equals@{assert\-Equals}!TestFixture@{Test\-Fixture}}
+\subsubsection[{assert\-Equals}]{\setlength{\rightskip}{0pt plus 5cm}void Test\-Fixture\-::assert\-Equals (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{unsigned int}]{linenr, }
+\item[{const std\-::string \&}]{expected, }
+\item[{const std\-::string \&}]{actual, }
+\item[{const std\-::string \&}]{msg = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_test_fixture_a73430ba861d494553667db6f27e045f6}
+\hypertarget{class_test_fixture_a7756e6a7bf785a2b340df7ae44e96bc7}{\index{Test\-Fixture@{Test\-Fixture}!assert\-Equals@{assert\-Equals}}
+\index{assert\-Equals@{assert\-Equals}!TestFixture@{Test\-Fixture}}
+\subsubsection[{assert\-Equals}]{\setlength{\rightskip}{0pt plus 5cm}void Test\-Fixture\-::assert\-Equals (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{unsigned int}]{linenr, }
+\item[{long long}]{expected, }
+\item[{long long}]{actual, }
+\item[{const std\-::string \&}]{msg = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_test_fixture_a7756e6a7bf785a2b340df7ae44e96bc7}
+\hypertarget{class_test_fixture_ac9eeb9162db2ed08a188ccd8ef9e2ffb}{\index{Test\-Fixture@{Test\-Fixture}!assert\-Equals\-Double@{assert\-Equals\-Double}}
+\index{assert\-Equals\-Double@{assert\-Equals\-Double}!TestFixture@{Test\-Fixture}}
+\subsubsection[{assert\-Equals\-Double}]{\setlength{\rightskip}{0pt plus 5cm}void Test\-Fixture\-::assert\-Equals\-Double (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{unsigned int}]{linenr, }
+\item[{double}]{expected, }
+\item[{double}]{actual, }
+\item[{const std\-::string \&}]{msg = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_test_fixture_ac9eeb9162db2ed08a188ccd8ef9e2ffb}
+\hypertarget{class_test_fixture_aed1572869c4a6d3713df09c674503ef1}{\index{Test\-Fixture@{Test\-Fixture}!assert\-Throw\-Fail@{assert\-Throw\-Fail}}
+\index{assert\-Throw\-Fail@{assert\-Throw\-Fail}!TestFixture@{Test\-Fixture}}
+\subsubsection[{assert\-Throw\-Fail}]{\setlength{\rightskip}{0pt plus 5cm}void Test\-Fixture\-::assert\-Throw\-Fail (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{unsigned int}]{linenr}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_test_fixture_aed1572869c4a6d3713df09c674503ef1}
+\hypertarget{class_test_fixture_a565fb2deaf56d065bd6c7b696fea678b}{\index{Test\-Fixture@{Test\-Fixture}!print\-Tests@{print\-Tests}}
+\index{print\-Tests@{print\-Tests}!TestFixture@{Test\-Fixture}}
+\subsubsection[{print\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}void Test\-Fixture\-::print\-Tests (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_test_fixture_a565fb2deaf56d065bd6c7b696fea678b}
+\hypertarget{class_test_fixture_aa4887d40b17d3cedece05aeeec3fdd71}{\index{Test\-Fixture@{Test\-Fixture}!process\-Options@{process\-Options}}
+\index{process\-Options@{process\-Options}!TestFixture@{Test\-Fixture}}
+\subsubsection[{process\-Options}]{\setlength{\rightskip}{0pt plus 5cm}void Test\-Fixture\-::process\-Options (
+\begin{DoxyParamCaption}
+\item[{const {\bf options} \&}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_test_fixture_aa4887d40b17d3cedece05aeeec3fdd71}
+\hypertarget{class_test_fixture_a254cc49644165b09c40daa042f603def}{\index{Test\-Fixture@{Test\-Fixture}!report\-Err@{report\-Err}}
+\index{report\-Err@{report\-Err}!TestFixture@{Test\-Fixture}}
+\subsubsection[{report\-Err}]{\setlength{\rightskip}{0pt plus 5cm}void Test\-Fixture\-::report\-Err (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\-Logger\-::\-Error\-Message} \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_test_fixture_a254cc49644165b09c40daa042f603def}
+Information about found errors and warnings is directed here. Override this to receive the errormessages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Location and other information about the found error. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_error_logger_aea56e01f24c0d8ecaa5498ae4eba1739}{Error\-Logger}.
+
+\hypertarget{class_test_fixture_a43619b0701cef097c0a1804dff84c9fa}{\index{Test\-Fixture@{Test\-Fixture}!report\-Out@{report\-Out}}
+\index{report\-Out@{report\-Out}!TestFixture@{Test\-Fixture}}
+\subsubsection[{report\-Out}]{\setlength{\rightskip}{0pt plus 5cm}void Test\-Fixture\-::report\-Out (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{outmsg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_test_fixture_a43619b0701cef097c0a1804dff84c9fa}
+Information about progress is directed here. Override this to receive the progress messages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em outmsg} & Message to show e.\-g. \char`\"{}\-Checking main.\-cpp...\char`\"{} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_error_logger_aeb9c56add35e46cd83e9b7e92e5e110c}{Error\-Logger}.
+
+\hypertarget{class_test_fixture_a41cfa790a452f03d4fb8d849fc47e686}{\index{Test\-Fixture@{Test\-Fixture}!run@{run}}
+\index{run@{run}!TestFixture@{Test\-Fixture}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Test\-Fixture\-::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{class_test_fixture_a41cfa790a452f03d4fb8d849fc47e686}
+\hypertarget{class_test_fixture_ab80c59ba18ecf97a852b601715b014b7}{\index{Test\-Fixture@{Test\-Fixture}!run@{run}}
+\index{run@{run}!TestFixture@{Test\-Fixture}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Test\-Fixture\-::run (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)}}\label{class_test_fixture_ab80c59ba18ecf97a852b601715b014b7}
+\hypertarget{class_test_fixture_ad90383f58a2a4f0cfec62fe308918394}{\index{Test\-Fixture@{Test\-Fixture}!run\-Test@{run\-Test}}
+\index{run\-Test@{run\-Test}!TestFixture@{Test\-Fixture}}
+\subsubsection[{run\-Test}]{\setlength{\rightskip}{0pt plus 5cm}bool Test\-Fixture\-::run\-Test (
+\begin{DoxyParamCaption}
+\item[{const char}]{testname\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_test_fixture_ad90383f58a2a4f0cfec62fe308918394}
+\hypertarget{class_test_fixture_a753bccbb52392df45eb8195e4552fb73}{\index{Test\-Fixture@{Test\-Fixture}!run\-Tests@{run\-Tests}}
+\index{run\-Tests@{run\-Tests}!TestFixture@{Test\-Fixture}}
+\subsubsection[{run\-Tests}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t Test\-Fixture\-::run\-Tests (
+\begin{DoxyParamCaption}
+\item[{const {\bf options} \&}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_test_fixture_a753bccbb52392df45eb8195e4552fb73}
+\hypertarget{class_test_fixture_a599ae05e660867eff2de2bf37d9201cc}{\index{Test\-Fixture@{Test\-Fixture}!todo\-Assert\-Equals@{todo\-Assert\-Equals}}
+\index{todo\-Assert\-Equals@{todo\-Assert\-Equals}!TestFixture@{Test\-Fixture}}
+\subsubsection[{todo\-Assert\-Equals}]{\setlength{\rightskip}{0pt plus 5cm}void Test\-Fixture\-::todo\-Assert\-Equals (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{unsigned int}]{linenr, }
+\item[{const std\-::string \&}]{wanted, }
+\item[{const std\-::string \&}]{current, }
+\item[{const std\-::string \&}]{actual}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_test_fixture_a599ae05e660867eff2de2bf37d9201cc}
+\hypertarget{class_test_fixture_afea92302ef3b7d604f01709e8fc79aa6}{\index{Test\-Fixture@{Test\-Fixture}!todo\-Assert\-Equals@{todo\-Assert\-Equals}}
+\index{todo\-Assert\-Equals@{todo\-Assert\-Equals}!TestFixture@{Test\-Fixture}}
+\subsubsection[{todo\-Assert\-Equals}]{\setlength{\rightskip}{0pt plus 5cm}void Test\-Fixture\-::todo\-Assert\-Equals (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{unsigned int}]{linenr, }
+\item[{long long}]{wanted, }
+\item[{long long}]{current, }
+\item[{long long}]{actual}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_test_fixture_afea92302ef3b7d604f01709e8fc79aa6}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_test_fixture_a5cf001c633b94ff880c53a0af927522c}{\index{Test\-Fixture@{Test\-Fixture}!classname@{classname}}
+\index{classname@{classname}!TestFixture@{Test\-Fixture}}
+\subsubsection[{classname}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Test\-Fixture\-::classname\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_test_fixture_a5cf001c633b94ff880c53a0af927522c}
+\hypertarget{class_test_fixture_aa349ce738d2399d64bed7e37f2ad2f69}{\index{Test\-Fixture@{Test\-Fixture}!gcc\-\_\-style\-\_\-errors@{gcc\-\_\-style\-\_\-errors}}
+\index{gcc\-\_\-style\-\_\-errors@{gcc\-\_\-style\-\_\-errors}!TestFixture@{Test\-Fixture}}
+\subsubsection[{gcc\-\_\-style\-\_\-errors}]{\setlength{\rightskip}{0pt plus 5cm}bool Test\-Fixture\-::gcc\-\_\-style\-\_\-errors\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_test_fixture_aa349ce738d2399d64bed7e37f2ad2f69}
+\hypertarget{class_test_fixture_a3904ba3d7a930a3a61018fbfac5dbc97}{\index{Test\-Fixture@{Test\-Fixture}!quiet\-\_\-tests@{quiet\-\_\-tests}}
+\index{quiet\-\_\-tests@{quiet\-\_\-tests}!TestFixture@{Test\-Fixture}}
+\subsubsection[{quiet\-\_\-tests}]{\setlength{\rightskip}{0pt plus 5cm}bool Test\-Fixture\-::quiet\-\_\-tests\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_test_fixture_a3904ba3d7a930a3a61018fbfac5dbc97}
+\hypertarget{class_test_fixture_acae3d378c5798a5d38236b922524b69a}{\index{Test\-Fixture@{Test\-Fixture}!test\-To\-Run@{test\-To\-Run}}
+\index{test\-To\-Run@{test\-To\-Run}!TestFixture@{Test\-Fixture}}
+\subsubsection[{test\-To\-Run}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Test\-Fixture\-::test\-To\-Run\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_test_fixture_acae3d378c5798a5d38236b922524b69a}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+test/\hyperlink{testsuite_8h}{testsuite.\-h}\item 
+test/\hyperlink{testsuite_8cpp}{testsuite.\-cpp}\end{DoxyCompactItemize}

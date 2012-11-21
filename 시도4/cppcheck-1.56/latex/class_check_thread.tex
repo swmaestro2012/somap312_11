@@ -1,0 +1,181 @@
+\hypertarget{class_check_thread}{\section{Check\-Thread Class Reference}
+\label{class_check_thread}\index{Check\-Thread@{Check\-Thread}}
+}
+
+
+Thread to run cppcheck.  
+
+
+
+
+{\ttfamily \#include $<$checkthread.\-h$>$}
+
+Inheritance diagram for Check\-Thread\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_check_thread}
+\end{center}
+\end{figure}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_check_thread_ae97f628205a64aca5ebb0054b502b0c5}{Done} ()
+\begin{DoxyCompactList}\small\item\em cpp checking is done \end{DoxyCompactList}\item 
+void \hyperlink{class_check_thread_a71f38e4be443cc220b298e6c230a8e50}{File\-Checked} (const Q\-String \&file)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_check_thread_a7dc705303cd3d11f83b836b830d34fbe}{Check\-Thread} (\hyperlink{class_thread_result}{Thread\-Result} \&result)
+\item 
+virtual \hyperlink{class_check_thread_a3f34686541032d4cd069e665cee1253d}{$\sim$\-Check\-Thread} ()
+\item 
+void \hyperlink{class_check_thread_a50b9ae05253c45f9a5486adaf449a8ce}{Check} (const \hyperlink{class_settings}{Settings} \&settings)
+\begin{DoxyCompactList}\small\item\em Set settings for cppcheck. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_thread_a47710a9936666414e4e4229b68dab739}{run} ()
+\begin{DoxyCompactList}\small\item\em method that is run in a thread \end{DoxyCompactList}\item 
+void \hyperlink{class_check_thread_aa8a93c58196419750d00fe1c90fe9d84}{stop} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_check_thread_a39bfc27bb753492ce57fc6d5aa17e664}{State} \{ \hyperlink{class_check_thread_a39bfc27bb753492ce57fc6d5aa17e664a314bd1a73a4907b999389dbdb7973c9a}{Running}, 
+\hyperlink{class_check_thread_a39bfc27bb753492ce57fc6d5aa17e664a593fbf32cdcf1880beac5bd9e537e31c}{Stopping}, 
+\hyperlink{class_check_thread_a39bfc27bb753492ce57fc6d5aa17e664a9e9c87579d7d1c147e883887ce529dac}{Stopped}, 
+\hyperlink{class_check_thread_a39bfc27bb753492ce57fc6d5aa17e664ac26915ebfa55133ec9dba55af7eeac24}{Ready}
+ \}
+\begin{DoxyCompactList}\small\item\em States for the check thread. Whole purpose of these states is to allow stopping of the checking. When stopping we say for the thread (Stopping) that stop when current check has been completed. Thread must be stopped cleanly, just terminating thread likely causes unpredictable side-\/effects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_check_thread_a39bfc27bb753492ce57fc6d5aa17e664}{State} \hyperlink{class_check_thread_ade4d64e9a4d78d3793c121e71939cfde}{m\-State}
+\begin{DoxyCompactList}\small\item\em Thread's current execution state. \end{DoxyCompactList}\item 
+\hyperlink{class_thread_result}{Thread\-Result} \& \hyperlink{class_check_thread_afceff6de6b5d0c2806256f30aad4722e}{m\-Result}
+\item 
+\hyperlink{class_cpp_check}{Cpp\-Check} \hyperlink{class_check_thread_a9043a9eb7e1fbd4c65fc49457e2109b7}{m\-Cppcheck}
+\begin{DoxyCompactList}\small\item\em Cppcheck itself. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Thread to run cppcheck. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_check_thread_a39bfc27bb753492ce57fc6d5aa17e664}{\index{Check\-Thread@{Check\-Thread}!State@{State}}
+\index{State@{State}!CheckThread@{Check\-Thread}}
+\subsubsection[{State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Check\-Thread\-::\-State}\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_check_thread_a39bfc27bb753492ce57fc6d5aa17e664}
+
+
+States for the check thread. Whole purpose of these states is to allow stopping of the checking. When stopping we say for the thread (Stopping) that stop when current check has been completed. Thread must be stopped cleanly, just terminating thread likely causes unpredictable side-\/effects. 
+
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{Running@{Running}!Check\-Thread@{Check\-Thread}}\index{Check\-Thread@{Check\-Thread}!Running@{Running}}\item[{\em 
+\hypertarget{class_check_thread_a39bfc27bb753492ce57fc6d5aa17e664a314bd1a73a4907b999389dbdb7973c9a}{Running}\label{class_check_thread_a39bfc27bb753492ce57fc6d5aa17e664a314bd1a73a4907b999389dbdb7973c9a}
+}]The thread is checking. \index{Stopping@{Stopping}!Check\-Thread@{Check\-Thread}}\index{Check\-Thread@{Check\-Thread}!Stopping@{Stopping}}\item[{\em 
+\hypertarget{class_check_thread_a39bfc27bb753492ce57fc6d5aa17e664a593fbf32cdcf1880beac5bd9e537e31c}{Stopping}\label{class_check_thread_a39bfc27bb753492ce57fc6d5aa17e664a593fbf32cdcf1880beac5bd9e537e31c}
+}]The thread will stop after current work. \index{Stopped@{Stopped}!Check\-Thread@{Check\-Thread}}\index{Check\-Thread@{Check\-Thread}!Stopped@{Stopped}}\item[{\em 
+\hypertarget{class_check_thread_a39bfc27bb753492ce57fc6d5aa17e664a9e9c87579d7d1c147e883887ce529dac}{Stopped}\label{class_check_thread_a39bfc27bb753492ce57fc6d5aa17e664a9e9c87579d7d1c147e883887ce529dac}
+}]The thread has been stopped. \index{Ready@{Ready}!Check\-Thread@{Check\-Thread}}\index{Check\-Thread@{Check\-Thread}!Ready@{Ready}}\item[{\em 
+\hypertarget{class_check_thread_a39bfc27bb753492ce57fc6d5aa17e664ac26915ebfa55133ec9dba55af7eeac24}{Ready}\label{class_check_thread_a39bfc27bb753492ce57fc6d5aa17e664ac26915ebfa55133ec9dba55af7eeac24}
+}]The thread is ready. \end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_check_thread_a7dc705303cd3d11f83b836b830d34fbe}{\index{Check\-Thread@{Check\-Thread}!Check\-Thread@{Check\-Thread}}
+\index{Check\-Thread@{Check\-Thread}!CheckThread@{Check\-Thread}}
+\subsubsection[{Check\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Thread\-::\-Check\-Thread (
+\begin{DoxyParamCaption}
+\item[{{\bf Thread\-Result} \&}]{result}
+\end{DoxyParamCaption}
+)}}\label{class_check_thread_a7dc705303cd3d11f83b836b830d34fbe}
+\hypertarget{class_check_thread_a3f34686541032d4cd069e665cee1253d}{\index{Check\-Thread@{Check\-Thread}!$\sim$\-Check\-Thread@{$\sim$\-Check\-Thread}}
+\index{$\sim$\-Check\-Thread@{$\sim$\-Check\-Thread}!CheckThread@{Check\-Thread}}
+\subsubsection[{$\sim$\-Check\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Thread\-::$\sim$\-Check\-Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_check_thread_a3f34686541032d4cd069e665cee1253d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_check_thread_a50b9ae05253c45f9a5486adaf449a8ce}{\index{Check\-Thread@{Check\-Thread}!Check@{Check}}
+\index{Check@{Check}!CheckThread@{Check\-Thread}}
+\subsubsection[{Check}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Thread\-::\-Check (
+\begin{DoxyParamCaption}
+\item[{const {\bf Settings} \&}]{settings}
+\end{DoxyParamCaption}
+)}}\label{class_check_thread_a50b9ae05253c45f9a5486adaf449a8ce}
+
+
+Set settings for cppcheck. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & settings for cppcheck \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_check_thread_ae97f628205a64aca5ebb0054b502b0c5}{\index{Check\-Thread@{Check\-Thread}!Done@{Done}}
+\index{Done@{Done}!CheckThread@{Check\-Thread}}
+\subsubsection[{Done}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Thread\-::\-Done (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_check_thread_ae97f628205a64aca5ebb0054b502b0c5}
+
+
+cpp checking is done 
+
+\hypertarget{class_check_thread_a71f38e4be443cc220b298e6c230a8e50}{\index{Check\-Thread@{Check\-Thread}!File\-Checked@{File\-Checked}}
+\index{File\-Checked@{File\-Checked}!CheckThread@{Check\-Thread}}
+\subsubsection[{File\-Checked}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Thread\-::\-File\-Checked (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_check_thread_a71f38e4be443cc220b298e6c230a8e50}
+\hypertarget{class_check_thread_a47710a9936666414e4e4229b68dab739}{\index{Check\-Thread@{Check\-Thread}!run@{run}}
+\index{run@{run}!CheckThread@{Check\-Thread}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Thread\-::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_thread_a47710a9936666414e4e4229b68dab739}
+
+
+method that is run in a thread 
+
+\hypertarget{class_check_thread_aa8a93c58196419750d00fe1c90fe9d84}{\index{Check\-Thread@{Check\-Thread}!stop@{stop}}
+\index{stop@{stop}!CheckThread@{Check\-Thread}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Thread\-::stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_thread_aa8a93c58196419750d00fe1c90fe9d84}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_check_thread_a9043a9eb7e1fbd4c65fc49457e2109b7}{\index{Check\-Thread@{Check\-Thread}!m\-Cppcheck@{m\-Cppcheck}}
+\index{m\-Cppcheck@{m\-Cppcheck}!CheckThread@{Check\-Thread}}
+\subsubsection[{m\-Cppcheck}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cpp\-Check} Check\-Thread\-::m\-Cppcheck\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_check_thread_a9043a9eb7e1fbd4c65fc49457e2109b7}
+
+
+Cppcheck itself. 
+
+\hypertarget{class_check_thread_afceff6de6b5d0c2806256f30aad4722e}{\index{Check\-Thread@{Check\-Thread}!m\-Result@{m\-Result}}
+\index{m\-Result@{m\-Result}!CheckThread@{Check\-Thread}}
+\subsubsection[{m\-Result}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Thread\-Result}\& Check\-Thread\-::m\-Result\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_check_thread_afceff6de6b5d0c2806256f30aad4722e}
+\hypertarget{class_check_thread_ade4d64e9a4d78d3793c121e71939cfde}{\index{Check\-Thread@{Check\-Thread}!m\-State@{m\-State}}
+\index{m\-State@{m\-State}!CheckThread@{Check\-Thread}}
+\subsubsection[{m\-State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State} Check\-Thread\-::m\-State\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_check_thread_ade4d64e9a4d78d3793c121e71939cfde}
+
+
+Thread's current execution state. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{checkthread_8h}{checkthread.\-h}\item 
+gui/\hyperlink{checkthread_8cpp}{checkthread.\-cpp}\end{DoxyCompactItemize}

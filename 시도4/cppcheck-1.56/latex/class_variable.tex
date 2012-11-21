@@ -1,0 +1,369 @@
+\hypertarget{class_variable}{\section{Variable Class Reference}
+\label{class_variable}\index{Variable@{Variable}}
+}
+
+
+Information about a member variable.  
+
+
+
+
+{\ttfamily \#include $<$symboldatabase.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_variable_ae4795a1f81f05111d94fc635ba7ebb0c}{Variable} (const \hyperlink{class_token}{Token} $\ast$name\-\_\-, const \hyperlink{class_token}{Token} $\ast$start\-\_\-, const \hyperlink{class_token}{Token} $\ast$end\-\_\-, std\-::size\-\_\-t index\-\_\-, \hyperlink{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9fa}{Access\-Control} access\-\_\-, const \hyperlink{class_scope}{Scope} $\ast$type\-\_\-, const \hyperlink{class_scope}{Scope} $\ast$scope\-\_\-)
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_variable_a264a3543a0571a76c50cfd6248fedbab}{name\-Token} () const 
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_variable_a839b1e26a5230f2fdbcfd5dbd2693767}{type\-Start\-Token} () const 
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_variable_a81bb936479ba785c91477fb9f8ddb8b8}{type\-End\-Token} () const 
+\item 
+const std\-::string \& \hyperlink{class_variable_a2c6138677660d7dee1c32def7b543087}{name} () const 
+\item 
+unsigned int \hyperlink{class_variable_a6fdefda77025b86ece23818547806911}{var\-Id} () const 
+\item 
+std\-::size\-\_\-t \hyperlink{class_variable_abfc7e1eb5994a3dbd72ca3aee5499f54}{index} () const 
+\item 
+bool \hyperlink{class_variable_a3d6e935e2bd18e3cd0a351d8fe5c1ac7}{is\-Public} () const 
+\item 
+bool \hyperlink{class_variable_a8ccbfc209fe6a4522c4ff7396bb45f1e}{is\-Protected} () const 
+\item 
+bool \hyperlink{class_variable_a7e4749e7ac6bc4a8d835860960943544}{is\-Private} () const 
+\item 
+bool \hyperlink{class_variable_a9166b90658fafb12bfbf404b9c3349ed}{is\-Global} () const 
+\item 
+bool \hyperlink{class_variable_af08ebce6ff6615419a82bf5d7161fbe0}{is\-Namespace} () const 
+\item 
+bool \hyperlink{class_variable_a139c1b51d59cec2781deddf8dd1f38be}{is\-Argument} () const 
+\item 
+bool \hyperlink{class_variable_ac64624cf9b34652025162b259b4ad82e}{is\-Local} () const 
+\item 
+bool \hyperlink{class_variable_a28baec65d363f65110dc82e468a56918}{is\-Mutable} () const 
+\item 
+bool \hyperlink{class_variable_ab349f6cd4976dbc8e849fa3177358ac5}{is\-Static} () const 
+\item 
+bool \hyperlink{class_variable_a73ce52d39b9ee4f63ccc4621b3948894}{is\-Extern} () const 
+\item 
+bool \hyperlink{class_variable_afb92c40fbfd8f70be1ef9d14c8169f27}{is\-Const} () const 
+\item 
+bool \hyperlink{class_variable_a231d07c4f82ecc127e55f569e66103f8}{is\-Throw} () const 
+\item 
+bool \hyperlink{class_variable_a9dbbb07e2cdb5098f1668b9ec7249787}{is\-Class} () const 
+\item 
+bool \hyperlink{class_variable_aebf6609f4b1cd477b7bdc6fc7cce4061}{is\-Array} () const 
+\item 
+bool \hyperlink{class_variable_ad9b045a040f21fbdbc1c2334ff480bed}{is\-Pointer} () const 
+\item 
+bool \hyperlink{class_variable_a5191a1b0dac4e4dbe17a2c574400e590}{is\-Reference} () const 
+\item 
+bool \hyperlink{class_variable_a2aef70af4b20e5a006c3ed84c7b9c7da}{has\-Default} () const 
+\item 
+const \hyperlink{class_scope}{Scope} $\ast$ \hyperlink{class_variable_a90bc01a5698d628a32d37faed36faa34}{type} () const 
+\item 
+const \hyperlink{class_scope}{Scope} $\ast$ \hyperlink{class_variable_a59036fe67804a365a33444fbe3e0566a}{scope} () const 
+\item 
+const std\-::vector$<$ \hyperlink{struct_dimension}{Dimension} $>$ \& \hyperlink{class_variable_ad0b805182957510d71786c2f1b4fe80d}{dimensions} () const 
+\item 
+\hyperlink{class_math_lib_aea370b3be964c5704b6244d757fcac99}{Math\-Lib\-::bigint} \hyperlink{class_variable_a7099e8f2ba4a320d661d9dbc05a88c2a}{dimension} (std\-::size\-\_\-t index\-\_\-) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Information about a member variable. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_variable_ae4795a1f81f05111d94fc635ba7ebb0c}{\index{Variable@{Variable}!Variable@{Variable}}
+\index{Variable@{Variable}!Variable@{Variable}}
+\subsubsection[{Variable}]{\setlength{\rightskip}{0pt plus 5cm}Variable\-::\-Variable (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{name\-\_\-, }
+\item[{const {\bf Token} $\ast$}]{start\-\_\-, }
+\item[{const {\bf Token} $\ast$}]{end\-\_\-, }
+\item[{std\-::size\-\_\-t}]{index\-\_\-, }
+\item[{{\bf Access\-Control}}]{access\-\_\-, }
+\item[{const {\bf Scope} $\ast$}]{type\-\_\-, }
+\item[{const {\bf Scope} $\ast$}]{scope\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_ae4795a1f81f05111d94fc635ba7ebb0c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_variable_a7099e8f2ba4a320d661d9dbc05a88c2a}{\index{Variable@{Variable}!dimension@{dimension}}
+\index{dimension@{dimension}!Variable@{Variable}}
+\subsubsection[{dimension}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Math\-Lib\-::bigint} Variable\-::dimension (
+\begin{DoxyParamCaption}
+\item[{std\-::size\-\_\-t}]{index\-\_\-}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a7099e8f2ba4a320d661d9dbc05a88c2a}
+Get array dimension length. \begin{DoxyReturn}{Returns}
+length of dimension 
+\end{DoxyReturn}
+\hypertarget{class_variable_ad0b805182957510d71786c2f1b4fe80d}{\index{Variable@{Variable}!dimensions@{dimensions}}
+\index{dimensions@{dimensions}!Variable@{Variable}}
+\subsubsection[{dimensions}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<${\bf Dimension}$>$\& Variable\-::dimensions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_ad0b805182957510d71786c2f1b4fe80d}
+Get array dimensions. \begin{DoxyReturn}{Returns}
+array dimensions vector 
+\end{DoxyReturn}
+\hypertarget{class_variable_a2aef70af4b20e5a006c3ed84c7b9c7da}{\index{Variable@{Variable}!has\-Default@{has\-Default}}
+\index{has\-Default@{has\-Default}!Variable@{Variable}}
+\subsubsection[{has\-Default}]{\setlength{\rightskip}{0pt plus 5cm}bool Variable\-::has\-Default (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a2aef70af4b20e5a006c3ed84c7b9c7da}
+Does variable have a default value. \begin{DoxyReturn}{Returns}
+true if has a default falue, false if not 
+\end{DoxyReturn}
+\hypertarget{class_variable_abfc7e1eb5994a3dbd72ca3aee5499f54}{\index{Variable@{Variable}!index@{index}}
+\index{index@{index}!Variable@{Variable}}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t Variable\-::index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_abfc7e1eb5994a3dbd72ca3aee5499f54}
+Get index of variable in declared order. \begin{DoxyReturn}{Returns}
+varaible index 
+\end{DoxyReturn}
+\hypertarget{class_variable_a139c1b51d59cec2781deddf8dd1f38be}{\index{Variable@{Variable}!is\-Argument@{is\-Argument}}
+\index{is\-Argument@{is\-Argument}!Variable@{Variable}}
+\subsubsection[{is\-Argument}]{\setlength{\rightskip}{0pt plus 5cm}bool Variable\-::is\-Argument (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a139c1b51d59cec2781deddf8dd1f38be}
+Is variable a function argument. \begin{DoxyReturn}{Returns}
+true if a function argument, false if not 
+\end{DoxyReturn}
+\hypertarget{class_variable_aebf6609f4b1cd477b7bdc6fc7cce4061}{\index{Variable@{Variable}!is\-Array@{is\-Array}}
+\index{is\-Array@{is\-Array}!Variable@{Variable}}
+\subsubsection[{is\-Array}]{\setlength{\rightskip}{0pt plus 5cm}bool Variable\-::is\-Array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_aebf6609f4b1cd477b7bdc6fc7cce4061}
+Is variable an array. \begin{DoxyReturn}{Returns}
+true if array, false if not 
+\end{DoxyReturn}
+\hypertarget{class_variable_a9dbbb07e2cdb5098f1668b9ec7249787}{\index{Variable@{Variable}!is\-Class@{is\-Class}}
+\index{is\-Class@{is\-Class}!Variable@{Variable}}
+\subsubsection[{is\-Class}]{\setlength{\rightskip}{0pt plus 5cm}bool Variable\-::is\-Class (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a9dbbb07e2cdb5098f1668b9ec7249787}
+Is variable a user defined (or unknown) type. \begin{DoxyReturn}{Returns}
+true if user defined type, false if not 
+\end{DoxyReturn}
+\hypertarget{class_variable_afb92c40fbfd8f70be1ef9d14c8169f27}{\index{Variable@{Variable}!is\-Const@{is\-Const}}
+\index{is\-Const@{is\-Const}!Variable@{Variable}}
+\subsubsection[{is\-Const}]{\setlength{\rightskip}{0pt plus 5cm}bool Variable\-::is\-Const (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_afb92c40fbfd8f70be1ef9d14c8169f27}
+Is variable const. \begin{DoxyReturn}{Returns}
+true if const, false if not 
+\end{DoxyReturn}
+\hypertarget{class_variable_a73ce52d39b9ee4f63ccc4621b3948894}{\index{Variable@{Variable}!is\-Extern@{is\-Extern}}
+\index{is\-Extern@{is\-Extern}!Variable@{Variable}}
+\subsubsection[{is\-Extern}]{\setlength{\rightskip}{0pt plus 5cm}bool Variable\-::is\-Extern (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a73ce52d39b9ee4f63ccc4621b3948894}
+Is variable extern. \begin{DoxyReturn}{Returns}
+true if extern, false if not 
+\end{DoxyReturn}
+\hypertarget{class_variable_a9166b90658fafb12bfbf404b9c3349ed}{\index{Variable@{Variable}!is\-Global@{is\-Global}}
+\index{is\-Global@{is\-Global}!Variable@{Variable}}
+\subsubsection[{is\-Global}]{\setlength{\rightskip}{0pt plus 5cm}bool Variable\-::is\-Global (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a9166b90658fafb12bfbf404b9c3349ed}
+Is variable global. \begin{DoxyReturn}{Returns}
+true if global, false if not 
+\end{DoxyReturn}
+\hypertarget{class_variable_ac64624cf9b34652025162b259b4ad82e}{\index{Variable@{Variable}!is\-Local@{is\-Local}}
+\index{is\-Local@{is\-Local}!Variable@{Variable}}
+\subsubsection[{is\-Local}]{\setlength{\rightskip}{0pt plus 5cm}bool Variable\-::is\-Local (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_ac64624cf9b34652025162b259b4ad82e}
+Is variable local. \begin{DoxyReturn}{Returns}
+true if local, false if not 
+\end{DoxyReturn}
+\hypertarget{class_variable_a28baec65d363f65110dc82e468a56918}{\index{Variable@{Variable}!is\-Mutable@{is\-Mutable}}
+\index{is\-Mutable@{is\-Mutable}!Variable@{Variable}}
+\subsubsection[{is\-Mutable}]{\setlength{\rightskip}{0pt plus 5cm}bool Variable\-::is\-Mutable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a28baec65d363f65110dc82e468a56918}
+Is variable mutable. \begin{DoxyReturn}{Returns}
+true if mutable, false if not 
+\end{DoxyReturn}
+\hypertarget{class_variable_af08ebce6ff6615419a82bf5d7161fbe0}{\index{Variable@{Variable}!is\-Namespace@{is\-Namespace}}
+\index{is\-Namespace@{is\-Namespace}!Variable@{Variable}}
+\subsubsection[{is\-Namespace}]{\setlength{\rightskip}{0pt plus 5cm}bool Variable\-::is\-Namespace (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_af08ebce6ff6615419a82bf5d7161fbe0}
+Is variable in a namespace. \begin{DoxyReturn}{Returns}
+true if in a namespace, false if not 
+\end{DoxyReturn}
+\hypertarget{class_variable_ad9b045a040f21fbdbc1c2334ff480bed}{\index{Variable@{Variable}!is\-Pointer@{is\-Pointer}}
+\index{is\-Pointer@{is\-Pointer}!Variable@{Variable}}
+\subsubsection[{is\-Pointer}]{\setlength{\rightskip}{0pt plus 5cm}bool Variable\-::is\-Pointer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_ad9b045a040f21fbdbc1c2334ff480bed}
+Is pointer variable. \begin{DoxyReturn}{Returns}
+true if pointer, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_variable_a7e4749e7ac6bc4a8d835860960943544}{\index{Variable@{Variable}!is\-Private@{is\-Private}}
+\index{is\-Private@{is\-Private}!Variable@{Variable}}
+\subsubsection[{is\-Private}]{\setlength{\rightskip}{0pt plus 5cm}bool Variable\-::is\-Private (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a7e4749e7ac6bc4a8d835860960943544}
+Is variable private. \begin{DoxyReturn}{Returns}
+true if private, false if not 
+\end{DoxyReturn}
+\hypertarget{class_variable_a8ccbfc209fe6a4522c4ff7396bb45f1e}{\index{Variable@{Variable}!is\-Protected@{is\-Protected}}
+\index{is\-Protected@{is\-Protected}!Variable@{Variable}}
+\subsubsection[{is\-Protected}]{\setlength{\rightskip}{0pt plus 5cm}bool Variable\-::is\-Protected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a8ccbfc209fe6a4522c4ff7396bb45f1e}
+Is variable protected. \begin{DoxyReturn}{Returns}
+true if protected, false if not 
+\end{DoxyReturn}
+\hypertarget{class_variable_a3d6e935e2bd18e3cd0a351d8fe5c1ac7}{\index{Variable@{Variable}!is\-Public@{is\-Public}}
+\index{is\-Public@{is\-Public}!Variable@{Variable}}
+\subsubsection[{is\-Public}]{\setlength{\rightskip}{0pt plus 5cm}bool Variable\-::is\-Public (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a3d6e935e2bd18e3cd0a351d8fe5c1ac7}
+Is variable public. \begin{DoxyReturn}{Returns}
+true if public, false if not 
+\end{DoxyReturn}
+\hypertarget{class_variable_a5191a1b0dac4e4dbe17a2c574400e590}{\index{Variable@{Variable}!is\-Reference@{is\-Reference}}
+\index{is\-Reference@{is\-Reference}!Variable@{Variable}}
+\subsubsection[{is\-Reference}]{\setlength{\rightskip}{0pt plus 5cm}bool Variable\-::is\-Reference (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a5191a1b0dac4e4dbe17a2c574400e590}
+Is reference variable. \begin{DoxyReturn}{Returns}
+true if reference, false otherwise 
+\end{DoxyReturn}
+\hypertarget{class_variable_ab349f6cd4976dbc8e849fa3177358ac5}{\index{Variable@{Variable}!is\-Static@{is\-Static}}
+\index{is\-Static@{is\-Static}!Variable@{Variable}}
+\subsubsection[{is\-Static}]{\setlength{\rightskip}{0pt plus 5cm}bool Variable\-::is\-Static (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_ab349f6cd4976dbc8e849fa3177358ac5}
+Is variable static. \begin{DoxyReturn}{Returns}
+true if static, false if not 
+\end{DoxyReturn}
+\hypertarget{class_variable_a231d07c4f82ecc127e55f569e66103f8}{\index{Variable@{Variable}!is\-Throw@{is\-Throw}}
+\index{is\-Throw@{is\-Throw}!Variable@{Variable}}
+\subsubsection[{is\-Throw}]{\setlength{\rightskip}{0pt plus 5cm}bool Variable\-::is\-Throw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a231d07c4f82ecc127e55f569e66103f8}
+Is variable a throw type. \begin{DoxyReturn}{Returns}
+true if throw type, false if not 
+\end{DoxyReturn}
+\hypertarget{class_variable_a2c6138677660d7dee1c32def7b543087}{\index{Variable@{Variable}!name@{name}}
+\index{name@{name}!Variable@{Variable}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& Variable\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a2c6138677660d7dee1c32def7b543087}
+Get name string. \begin{DoxyReturn}{Returns}
+name string 
+\end{DoxyReturn}
+\hypertarget{class_variable_a264a3543a0571a76c50cfd6248fedbab}{\index{Variable@{Variable}!name\-Token@{name\-Token}}
+\index{name\-Token@{name\-Token}!Variable@{Variable}}
+\subsubsection[{name\-Token}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token}$\ast$ Variable\-::name\-Token (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a264a3543a0571a76c50cfd6248fedbab}
+Get name token. \begin{DoxyReturn}{Returns}
+name token 
+\end{DoxyReturn}
+\hypertarget{class_variable_a59036fe67804a365a33444fbe3e0566a}{\index{Variable@{Variable}!scope@{scope}}
+\index{scope@{scope}!Variable@{Variable}}
+\subsubsection[{scope}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Scope}$\ast$ Variable\-::scope (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a59036fe67804a365a33444fbe3e0566a}
+Get \hyperlink{class_scope}{Scope} pointer of enclosing scope. \begin{DoxyReturn}{Returns}
+pointer to enclosing scope 
+\end{DoxyReturn}
+\hypertarget{class_variable_a90bc01a5698d628a32d37faed36faa34}{\index{Variable@{Variable}!type@{type}}
+\index{type@{type}!Variable@{Variable}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Scope}$\ast$ Variable\-::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a90bc01a5698d628a32d37faed36faa34}
+Get \hyperlink{class_scope}{Scope} pointer of known type. \begin{DoxyReturn}{Returns}
+pointer to type if known, N\-U\-L\-L if not known 
+\end{DoxyReturn}
+\hypertarget{class_variable_a81bb936479ba785c91477fb9f8ddb8b8}{\index{Variable@{Variable}!type\-End\-Token@{type\-End\-Token}}
+\index{type\-End\-Token@{type\-End\-Token}!Variable@{Variable}}
+\subsubsection[{type\-End\-Token}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token}$\ast$ Variable\-::type\-End\-Token (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a81bb936479ba785c91477fb9f8ddb8b8}
+Get type end token. \begin{DoxyReturn}{Returns}
+type end token 
+\end{DoxyReturn}
+\hypertarget{class_variable_a839b1e26a5230f2fdbcfd5dbd2693767}{\index{Variable@{Variable}!type\-Start\-Token@{type\-Start\-Token}}
+\index{type\-Start\-Token@{type\-Start\-Token}!Variable@{Variable}}
+\subsubsection[{type\-Start\-Token}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token}$\ast$ Variable\-::type\-Start\-Token (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a839b1e26a5230f2fdbcfd5dbd2693767}
+Get type start token. \begin{DoxyReturn}{Returns}
+type start token 
+\end{DoxyReturn}
+\hypertarget{class_variable_a6fdefda77025b86ece23818547806911}{\index{Variable@{Variable}!var\-Id@{var\-Id}}
+\index{var\-Id@{var\-Id}!Variable@{Variable}}
+\subsubsection[{var\-Id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Variable\-::var\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_variable_a6fdefda77025b86ece23818547806911}
+Get variable I\-D. \begin{DoxyReturn}{Returns}
+variable I\-D 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{symboldatabase_8h}{symboldatabase.\-h}\item 
+lib/\hyperlink{symboldatabase_8cpp}{symboldatabase.\-cpp}\end{DoxyCompactItemize}

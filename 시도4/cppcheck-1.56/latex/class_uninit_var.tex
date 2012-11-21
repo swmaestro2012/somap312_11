@@ -1,0 +1,60 @@
+\hypertarget{class_uninit_var}{\section{Uninit\-Var Class Reference}
+\label{class_uninit_var}\index{Uninit\-Var@{Uninit\-Var}}
+}
+
+
+Check that uninitialized variables aren't used (using \hyperlink{class_execution_path}{Execution\-Path})  
+
+
+Inheritance diagram for Uninit\-Var\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_uninit_var}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_uninit_var_a75943845dd83ca57f36b45b736788bf9}{Uninit\-Var} (\hyperlink{class_check}{Check} $\ast$c, const \hyperlink{class_symbol_database}{Symbol\-Database} $\ast$db, bool isc)
+\item 
+static void \hyperlink{class_uninit_var_a68e9676afb263cf84d9edfcfdbb5fa2a}{analyse\-Functions} (const \hyperlink{class_token}{Token} $\ast$const tokens, std\-::set$<$ std\-::string $>$ \&func)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::set$<$ std\-::string $>$ \hyperlink{group___checks_ga253dcf06ccb9bd907ea83454d47a8e8c}{uvar\-Functions}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Check that uninitialized variables aren't used (using \hyperlink{class_execution_path}{Execution\-Path}) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_uninit_var_a75943845dd83ca57f36b45b736788bf9}{\index{Uninit\-Var@{Uninit\-Var}!Uninit\-Var@{Uninit\-Var}}
+\index{Uninit\-Var@{Uninit\-Var}!UninitVar@{Uninit\-Var}}
+\subsubsection[{Uninit\-Var}]{\setlength{\rightskip}{0pt plus 5cm}Uninit\-Var\-::\-Uninit\-Var (
+\begin{DoxyParamCaption}
+\item[{{\bf Check} $\ast$}]{c, }
+\item[{const {\bf Symbol\-Database} $\ast$}]{db, }
+\item[{bool}]{isc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [static]}}}\label{class_uninit_var_a75943845dd83ca57f36b45b736788bf9}
+Startup constructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_uninit_var_a68e9676afb263cf84d9edfcfdbb5fa2a}{\index{Uninit\-Var@{Uninit\-Var}!analyse\-Functions@{analyse\-Functions}}
+\index{analyse\-Functions@{analyse\-Functions}!UninitVar@{Uninit\-Var}}
+\subsubsection[{analyse\-Functions}]{\setlength{\rightskip}{0pt plus 5cm}static void Uninit\-Var\-::analyse\-Functions (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$const}]{tokens, }
+\item[{std\-::set$<$ std\-::string $>$ \&}]{func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_uninit_var_a68e9676afb263cf84d9edfcfdbb5fa2a}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000048}{Todo}]enable this code. if pointer is written in function then dead pointer is invalid but valid pointer is ok. \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{checkuninitvar_8cpp}{checkuninitvar.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,244 @@
+\hypertarget{class_check}{\section{Check Class Reference}
+\label{class_check}\index{Check@{Check}}
+}
+
+
+Interface class that cppcheck uses to communicate with the checks. All checking classes must inherit from this class.  
+
+
+
+
+{\ttfamily \#include $<$check.\-h$>$}
+
+Inheritance diagram for Check\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_check}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___core_ga0cb366bed825a49e45cce28335f75efb}{Check} (const std\-::string \&aname)
+\item 
+\hyperlink{class_check_acdd75b85b01a196d9ecce3c709551e01}{Check} (const std\-::string \&aname, const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\item 
+virtual \hyperlink{class_check_a3aa6a6acc0a9748e29dd59d78be72d0e}{$\sim$\-Check} ()
+\item 
+virtual void \hyperlink{class_check_a484897552dd5f9db7ce94fffa413baa4}{analyse} (const \hyperlink{class_token}{Token} $\ast$tokens, std\-::set$<$ std\-::string $>$ \&result) const 
+\item 
+virtual void \hyperlink{class_check_a9cd93e99992b89620ce2eadb54dd09f2}{save\-Analysis\-Data} (const std\-::set$<$ std\-::string $>$ \&data) const 
+\item 
+virtual void \hyperlink{class_check_a939af1c75d133393021036e73ca57cc4}{run\-Checks} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$, const \hyperlink{class_settings}{Settings} $\ast$, \hyperlink{class_error_logger}{Error\-Logger} $\ast$)
+\item 
+virtual void \hyperlink{class_check_a112445eed1625599b93c69aab4701e5e}{run\-Simplified\-Checks} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)=0
+\item 
+virtual void \hyperlink{class_check_a2618762a5ca467c9aecc52071fb0a00b}{get\-Error\-Messages} (\hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger, const \hyperlink{class_settings}{Settings} $\ast$settings) const =0
+\item 
+const std\-::string \& \hyperlink{class_check_ad9b7ad147b5b4cc9b1a7911162432f1c}{name} () const 
+\item 
+virtual std\-::string \hyperlink{class_check_ab906c7c22915b78e931b71014e7cb327}{class\-Info} () const =0
+\item 
+bool \hyperlink{class_check_a8e33c7597bb283040f3d9826488a2346}{inconclusive\-Flag} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::list$<$ \hyperlink{class_check}{Check} $\ast$ $>$ \& \hyperlink{class_check_aff3c8a2cd1ce8c6b6bd5c8170224ce09}{instances} ()
+\item 
+static void \hyperlink{class_check_a209cad3fc1f9889b3edc72ae027846af}{report\-Error} (const \hyperlink{class_error_logger_1_1_error_message}{Error\-Logger\-::\-Error\-Message} \&errmsg)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_check_aebef1ee2b6c5f0235caad5d4aaf5f553}{report\-Error} (const \hyperlink{class_token}{Token} $\ast$tok, const \hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6}{Severity\-::\-Severity\-Type} severity, const std\-::string \&id, const std\-::string \&msg, bool inconclusive=false)
+\item 
+void \hyperlink{class_check_ab0b7ba5cec454eb381308e46176ae9c0}{report\-Error} (const std\-::list$<$ const \hyperlink{class_token}{Token} $\ast$ $>$ \&callstack, \hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6}{Severity\-::\-Severity\-Type} severity, const std\-::string \&id, const std\-::string \&msg, bool inconclusive=false)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{class_tokenizer}{Tokenizer} $\ast$const \hyperlink{class_check_af177003f600a2f1a22c48b9fd2c4d579}{\-\_\-tokenizer}
+\item 
+const \hyperlink{class_settings}{Settings} $\ast$const \hyperlink{class_check_a3c1811565f8eff303d84fb797baf9bf9}{\-\_\-settings}
+\item 
+\hyperlink{class_error_logger}{Error\-Logger} $\ast$const \hyperlink{class_check_a450670ccdb74fcb182d06c82cf3a6359}{\-\_\-error\-Logger}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface class that cppcheck uses to communicate with the checks. All checking classes must inherit from this class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_check_acdd75b85b01a196d9ecce3c709551e01}{\index{Check@{Check}!Check@{Check}}
+\index{Check@{Check}!Check@{Check}}
+\subsubsection[{Check}]{\setlength{\rightskip}{0pt plus 5cm}Check\-::\-Check (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{aname, }
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_acdd75b85b01a196d9ecce3c709551e01}
+This constructor is used when running checks. \hypertarget{class_check_a3aa6a6acc0a9748e29dd59d78be72d0e}{\index{Check@{Check}!$\sim$\-Check@{$\sim$\-Check}}
+\index{$\sim$\-Check@{$\sim$\-Check}!Check@{Check}}
+\subsubsection[{$\sim$\-Check}]{\setlength{\rightskip}{0pt plus 5cm}virtual Check\-::$\sim$\-Check (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_a3aa6a6acc0a9748e29dd59d78be72d0e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_check_a484897552dd5f9db7ce94fffa413baa4}{\index{Check@{Check}!analyse@{analyse}}
+\index{analyse@{analyse}!Check@{Check}}
+\subsubsection[{analyse}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Check\-::analyse (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tokens, }
+\item[{std\-::set$<$ std\-::string $>$ \&}]{result}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_a484897552dd5f9db7ce94fffa413baa4}
+analyse code -\/ must be thread safe 
+\begin{DoxyParams}{Parameters}
+{\em tokens} & The tokens to analyse \\
+\hline
+{\em result} & container where results are stored \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_check_uninit_var_a57e30f23713e232a5439af4c5935c50d}{Check\-Uninit\-Var}.
+
+\hypertarget{class_check_ab906c7c22915b78e931b71014e7cb327}{\index{Check@{Check}!class\-Info@{class\-Info}}
+\index{class\-Info@{class\-Info}!Check@{Check}}
+\subsubsection[{class\-Info}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::string Check\-::class\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_check_ab906c7c22915b78e931b71014e7cb327}
+get information about this class, used to generate documentation \hypertarget{class_check_a2618762a5ca467c9aecc52071fb0a00b}{\index{Check@{Check}!get\-Error\-Messages@{get\-Error\-Messages}}
+\index{get\-Error\-Messages@{get\-Error\-Messages}!Check@{Check}}
+\subsubsection[{get\-Error\-Messages}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Check\-::get\-Error\-Messages (
+\begin{DoxyParamCaption}
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger, }
+\item[{const {\bf Settings} $\ast$}]{settings}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_check_a2618762a5ca467c9aecc52071fb0a00b}
+get error messages 
+
+Implemented in \hyperlink{class_check_buffer_overrun_a21d46e65e2b2e030bc5b049c8f61d277}{Check\-Buffer\-Overrun}.
+
+\hypertarget{class_check_a8e33c7597bb283040f3d9826488a2346}{\index{Check@{Check}!inconclusive\-Flag@{inconclusive\-Flag}}
+\index{inconclusive\-Flag@{inconclusive\-Flag}!Check@{Check}}
+\subsubsection[{inconclusive\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}bool Check\-::inconclusive\-Flag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_a8e33c7597bb283040f3d9826488a2346}
+\hypertarget{class_check_aff3c8a2cd1ce8c6b6bd5c8170224ce09}{\index{Check@{Check}!instances@{instances}}
+\index{instances@{instances}!Check@{Check}}
+\subsubsection[{instances}]{\setlength{\rightskip}{0pt plus 5cm}static std\-::list$<${\bf Check} $\ast$$>$\& Check\-::instances (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_check_aff3c8a2cd1ce8c6b6bd5c8170224ce09}
+List of registered check classes. This is used by Cppcheck to run checks and generate documentation \hypertarget{class_check_ad9b7ad147b5b4cc9b1a7911162432f1c}{\index{Check@{Check}!name@{name}}
+\index{name@{name}!Check@{Check}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& Check\-::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_ad9b7ad147b5b4cc9b1a7911162432f1c}
+class name, used to generate documentation \hypertarget{class_check_a209cad3fc1f9889b3edc72ae027846af}{\index{Check@{Check}!report\-Error@{report\-Error}}
+\index{report\-Error@{report\-Error}!Check@{Check}}
+\subsubsection[{report\-Error}]{\setlength{\rightskip}{0pt plus 5cm}static void Check\-::report\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\-Logger\-::\-Error\-Message} \&}]{errmsg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_check_a209cad3fc1f9889b3edc72ae027846af}
+Write given error to errorlogger or to out stream in xml format. This is for for printout out the error list with --errorlist 
+\begin{DoxyParams}{Parameters}
+{\em errmsg} & Error message to write \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_check_aebef1ee2b6c5f0235caad5d4aaf5f553}{\index{Check@{Check}!report\-Error@{report\-Error}}
+\index{report\-Error@{report\-Error}!Check@{Check}}
+\subsubsection[{report\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-::report\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const {\bf Severity\-::\-Severity\-Type}}]{severity, }
+\item[{const std\-::string \&}]{id, }
+\item[{const std\-::string \&}]{msg, }
+\item[{bool}]{inconclusive = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_check_aebef1ee2b6c5f0235caad5d4aaf5f553}
+report an error \hypertarget{class_check_ab0b7ba5cec454eb381308e46176ae9c0}{\index{Check@{Check}!report\-Error@{report\-Error}}
+\index{report\-Error@{report\-Error}!Check@{Check}}
+\subsubsection[{report\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-::report\-Error (
+\begin{DoxyParamCaption}
+\item[{const std\-::list$<$ const {\bf Token} $\ast$ $>$ \&}]{callstack, }
+\item[{{\bf Severity\-::\-Severity\-Type}}]{severity, }
+\item[{const std\-::string \&}]{id, }
+\item[{const std\-::string \&}]{msg, }
+\item[{bool}]{inconclusive = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_check_ab0b7ba5cec454eb381308e46176ae9c0}
+report an error \hypertarget{class_check_a939af1c75d133393021036e73ca57cc4}{\index{Check@{Check}!run\-Checks@{run\-Checks}}
+\index{run\-Checks@{run\-Checks}!Check@{Check}}
+\subsubsection[{run\-Checks}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Check\-::run\-Checks (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{, }
+\item[{const {\bf Settings} $\ast$}]{, }
+\item[{{\bf Error\-Logger} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_a939af1c75d133393021036e73ca57cc4}
+run checks, the token list is not simplified 
+
+Reimplemented in \hyperlink{class_check_other_a15ba42e338f836e56693f9f9ffedd573}{Check\-Other}, \hyperlink{class_check_uninit_var_afc2d2c146e3c2048acb0fba3427e4dc1}{Check\-Uninit\-Var}, \hyperlink{class_check_unused_var_ae2a9e52d785e4303f9e6daa9c3e3cb58}{Check\-Unused\-Var}, \hyperlink{class_check_null_pointer_a390bc306808a3c9bcf06b166a46e8f5d}{Check\-Null\-Pointer}, \hyperlink{class_check64_bit_portability_afeba8f09831fe12519e4d28b1dac4033}{Check64\-Bit\-Portability}, \hyperlink{class_check_class_a4b859971ef62ebe705f7561fa3e97726}{Check\-Class}, \hyperlink{class_check_auto_variables_a667c0b75e6b3304da5f0970f4f283e6d}{Check\-Auto\-Variables}, and \hyperlink{class_check_i_o_a91b83320d40c7e698174d1a92ba9b2c6}{Check\-I\-O}.
+
+\hypertarget{class_check_a112445eed1625599b93c69aab4701e5e}{\index{Check@{Check}!run\-Simplified\-Checks@{run\-Simplified\-Checks}}
+\index{run\-Simplified\-Checks@{run\-Simplified\-Checks}!Check@{Check}}
+\subsubsection[{run\-Simplified\-Checks}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Check\-::run\-Simplified\-Checks (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_check_a112445eed1625599b93c69aab4701e5e}
+run checks, the token list is simplified 
+
+Implemented in \hyperlink{class_check_memory_leak_no_var_a1150c5130fee258d665b6ab9382c56ed}{Check\-Memory\-Leak\-No\-Var}, \hyperlink{class_check_memory_leak_struct_member_ab2f20c63ba525a50875971f7df03d8fd}{Check\-Memory\-Leak\-Struct\-Member}, \hyperlink{class_check_memory_leak_in_class_a9dcb180e28838c7182be3008b7332423}{Check\-Memory\-Leak\-In\-Class}, \hyperlink{class_check_memory_leak_in_function_a3796e71d1d94ba6e8440561f30c9116c}{Check\-Memory\-Leak\-In\-Function}, \hyperlink{class_check_other_ab228c1811e7cdacca4a561aa36d00bd5}{Check\-Other}, \hyperlink{class_check_leak_auto_var_a7dc47439661a63d0033b616162d9dd88}{Check\-Leak\-Auto\-Var}, \hyperlink{class_check_buffer_overrun_af0b26b559bda17a0403231d73756bd81}{Check\-Buffer\-Overrun}, \hyperlink{class_check_unused_var_a69fd727c2bb04622a48024ad6c7b2a0e}{Check\-Unused\-Var}, \hyperlink{class_check_uninit_var_a4497e740ca408945fb0ef3f711cd5f43}{Check\-Uninit\-Var}, \hyperlink{class_check_null_pointer_a7797df706f04ca03cb638f6db8081c73}{Check\-Null\-Pointer}, \hyperlink{class_check_exception_safety_a1fc4523e8be40da08ed5ad1cfba7382b}{Check\-Exception\-Safety}, \hyperlink{class_check64_bit_portability_ad2be16d27d188adbad671c6f27307e63}{Check64\-Bit\-Portability}, \hyperlink{class_check_class_a2e24ebc1b57dc616cbccb1edda79cb27}{Check\-Class}, \hyperlink{class_check_i_o_a22132ff11d70dd6d4c86323340c8dd46}{Check\-I\-O}, \hyperlink{class_check_non_reentrant_functions_ad91d354ea4c40f49e57f6c6b2f255f17}{Check\-Non\-Reentrant\-Functions}, \hyperlink{class_check_obsolete_functions_ac79cfbdd5bf7e0b95941f2df07150ad0}{Check\-Obsolete\-Functions}, \hyperlink{class_check_auto_variables_a68a13cebf21059199ad4c9008ecc37a7}{Check\-Auto\-Variables}, \hyperlink{class_check_assign_if_a9f01cfc5b830fd7439e0b83b0590f53c}{Check\-Assign\-If}, \hyperlink{class_check_boost_ad078f45db77a2929504ba36ef5fdb96a}{Check\-Boost}, \hyperlink{class_check_internal_aa54976ec7aa482f66fa8582f6b06f60d}{Check\-Internal}, \hyperlink{class_check_stl_a8a27e1c983d1615d224819c87bc1fadb}{Check\-Stl}, and \hyperlink{class_check_postfix_operator_a1cb89c193dd601bbc0e5c976295b16a1}{Check\-Postfix\-Operator}.
+
+\hypertarget{class_check_a9cd93e99992b89620ce2eadb54dd09f2}{\index{Check@{Check}!save\-Analysis\-Data@{save\-Analysis\-Data}}
+\index{save\-Analysis\-Data@{save\-Analysis\-Data}!Check@{Check}}
+\subsubsection[{save\-Analysis\-Data}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Check\-::save\-Analysis\-Data (
+\begin{DoxyParamCaption}
+\item[{const std\-::set$<$ std\-::string $>$ \&}]{data}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_a9cd93e99992b89620ce2eadb54dd09f2}
+Save analysis data -\/ the caller ensures thread safety 
+\begin{DoxyParams}{Parameters}
+{\em data} & The data where the results are saved \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_check_uninit_var_af8b793f3e2fec75185e7b5be9ada3a8b}{Check\-Uninit\-Var}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_check_a450670ccdb74fcb182d06c82cf3a6359}{\index{Check@{Check}!\-\_\-error\-Logger@{\-\_\-error\-Logger}}
+\index{\-\_\-error\-Logger@{\-\_\-error\-Logger}!Check@{Check}}
+\subsubsection[{\-\_\-error\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Error\-Logger}$\ast$ const Check\-::\-\_\-error\-Logger\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_check_a450670ccdb74fcb182d06c82cf3a6359}
+\hypertarget{class_check_a3c1811565f8eff303d84fb797baf9bf9}{\index{Check@{Check}!\-\_\-settings@{\-\_\-settings}}
+\index{\-\_\-settings@{\-\_\-settings}!Check@{Check}}
+\subsubsection[{\-\_\-settings}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Settings}$\ast$ const Check\-::\-\_\-settings\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_check_a3c1811565f8eff303d84fb797baf9bf9}
+\hypertarget{class_check_af177003f600a2f1a22c48b9fd2c4d579}{\index{Check@{Check}!\-\_\-tokenizer@{\-\_\-tokenizer}}
+\index{\-\_\-tokenizer@{\-\_\-tokenizer}!Check@{Check}}
+\subsubsection[{\-\_\-tokenizer}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Tokenizer}$\ast$ const Check\-::\-\_\-tokenizer\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_check_af177003f600a2f1a22c48b9fd2c4d579}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{check_8h}{check.\-h}\end{DoxyCompactItemize}

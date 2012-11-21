@@ -1,0 +1,158 @@
+\hypertarget{class_application}{\section{Application Class Reference}
+\label{class_application}\index{Application@{Application}}
+}
+
+
+A class containing information of the application to execute.  
+
+
+
+
+{\ttfamily \#include $<$application.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_application_afa8cc05ce6b6092be5ecdfdae44e05f8}{Application} ()
+\item 
+\hyperlink{class_application_aeade5684af804439775edea7da862d2b}{Application} (const Q\-String \&name, const Q\-String \&path, const Q\-String \&params)
+\item 
+Q\-String \hyperlink{class_application_ab0003683f6e2d33336e61b94c8441056}{get\-Name} () const 
+\begin{DoxyCompactList}\small\item\em Get application name. \end{DoxyCompactList}\item 
+Q\-String \hyperlink{class_application_a93e54a12df6ff9ad94375beee018b9f3}{get\-Path} () const 
+\begin{DoxyCompactList}\small\item\em Get application path. \end{DoxyCompactList}\item 
+Q\-String \hyperlink{class_application_a19f7bf1539bfc1c333c24aea196af3c2}{get\-Parameters} () const 
+\begin{DoxyCompactList}\small\item\em Get application command line parameters. \end{DoxyCompactList}\item 
+void \hyperlink{class_application_a50960dfd796beb96df99807b8785b0d2}{set\-Name} (const Q\-String \&name)
+\begin{DoxyCompactList}\small\item\em Set application name. \end{DoxyCompactList}\item 
+void \hyperlink{class_application_a34c7e5c0c18a0e8f352d9c385c0b6de0}{set\-Path} (const Q\-String \&path)
+\begin{DoxyCompactList}\small\item\em Set application path. \end{DoxyCompactList}\item 
+void \hyperlink{class_application_a6cc41f74016e828b20ecb1cc889f1968}{set\-Parameters} (const Q\-String \&parameters)
+\begin{DoxyCompactList}\small\item\em Set application command line parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class containing information of the application to execute. 
+
+Each application has a name and a path. Name is displayed to the user and has no other meaning. It isn't used to start the application. \hyperlink{class_path}{Path} contains the full path to the application containing the executable name. Parameters contains the command line arguments for the executable.
+
+User can also specify certain predefined strings to parameters. These strings will be replaced with appropriate values concerning the error. Strings are\-: (file) -\/ Filename containing the error (line) -\/ Line number containing the error (message) -\/ Error message (severity) -\/ Error severity
+
+Example opening a file with Kate and make Kate scroll to the correct line. Executable\-: kate Parameters\-: -\/l(line) (file) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_application_afa8cc05ce6b6092be5ecdfdae44e05f8}{\index{Application@{Application}!Application@{Application}}
+\index{Application@{Application}!Application@{Application}}
+\subsubsection[{Application}]{\setlength{\rightskip}{0pt plus 5cm}Application\-::\-Application (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_application_afa8cc05ce6b6092be5ecdfdae44e05f8}
+\hypertarget{class_application_aeade5684af804439775edea7da862d2b}{\index{Application@{Application}!Application@{Application}}
+\index{Application@{Application}!Application@{Application}}
+\subsubsection[{Application}]{\setlength{\rightskip}{0pt plus 5cm}Application\-::\-Application (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{name, }
+\item[{const Q\-String \&}]{path, }
+\item[{const Q\-String \&}]{params}
+\end{DoxyParamCaption}
+)}}\label{class_application_aeade5684af804439775edea7da862d2b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_application_ab0003683f6e2d33336e61b94c8441056}{\index{Application@{Application}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!Application@{Application}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Application\-::get\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_application_ab0003683f6e2d33336e61b94c8441056}
+
+
+Get application name. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_application}{Application} name. 
+\end{DoxyReturn}
+\hypertarget{class_application_a19f7bf1539bfc1c333c24aea196af3c2}{\index{Application@{Application}!get\-Parameters@{get\-Parameters}}
+\index{get\-Parameters@{get\-Parameters}!Application@{Application}}
+\subsubsection[{get\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Application\-::get\-Parameters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_application_a19f7bf1539bfc1c333c24aea196af3c2}
+
+
+Get application command line parameters. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_application}{Application} command line parameters. 
+\end{DoxyReturn}
+\hypertarget{class_application_a93e54a12df6ff9ad94375beee018b9f3}{\index{Application@{Application}!get\-Path@{get\-Path}}
+\index{get\-Path@{get\-Path}!Application@{Application}}
+\subsubsection[{get\-Path}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Application\-::get\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_application_a93e54a12df6ff9ad94375beee018b9f3}
+
+
+Get application path. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_application}{Application} path. 
+\end{DoxyReturn}
+\hypertarget{class_application_a50960dfd796beb96df99807b8785b0d2}{\index{Application@{Application}!set\-Name@{set\-Name}}
+\index{set\-Name@{set\-Name}!Application@{Application}}
+\subsubsection[{set\-Name}]{\setlength{\rightskip}{0pt plus 5cm}void Application\-::set\-Name (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_application_a50960dfd796beb96df99807b8785b0d2}
+
+
+Set application name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \hyperlink{class_application}{Application} name. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_application_a6cc41f74016e828b20ecb1cc889f1968}{\index{Application@{Application}!set\-Parameters@{set\-Parameters}}
+\index{set\-Parameters@{set\-Parameters}!Application@{Application}}
+\subsubsection[{set\-Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void Application\-::set\-Parameters (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{parameters}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_application_a6cc41f74016e828b20ecb1cc889f1968}
+
+
+Set application command line parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & \hyperlink{class_application}{Application} command line parameters. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_application_a34c7e5c0c18a0e8f352d9c385c0b6de0}{\index{Application@{Application}!set\-Path@{set\-Path}}
+\index{set\-Path@{set\-Path}!Application@{Application}}
+\subsubsection[{set\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Application\-::set\-Path (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_application_a34c7e5c0c18a0e8f352d9c385c0b6de0}
+
+
+Set application path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \hyperlink{class_application}{Application} path. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{application_8h}{application.\-h}\item 
+gui/\hyperlink{application_8cpp}{application.\-cpp}\end{DoxyCompactItemize}

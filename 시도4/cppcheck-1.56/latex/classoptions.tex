@@ -1,0 +1,67 @@
+\hypertarget{classoptions}{\section{options Class Reference}
+\label{classoptions}\index{options@{options}}
+}
+
+
+Class to parse command-\/line parameters for ./testrunner . Has getters for available switches and parameters. See \hyperlink{testoptions_8cpp}{test/testoptions.\-cpp} for sample usage.  
+
+
+
+
+{\ttfamily \#include $<$options.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classoptions_adca4bc21ed957b3e865c916582cf8a0c}{options} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+bool \hyperlink{classoptions_a8686a1de46ad4772f06b9024d7517002}{quiet} () const 
+\item 
+bool \hyperlink{classoptions_acc0b6ca7f3e8643fd7bba6f8924d1c3c}{gcc\-\_\-style\-\_\-errors} () const 
+\item 
+const std\-::string \& \hyperlink{classoptions_a559a3210ffc929eab3af21724c40536d}{which\-\_\-test} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to parse command-\/line parameters for ./testrunner . Has getters for available switches and parameters. See \hyperlink{testoptions_8cpp}{test/testoptions.\-cpp} for sample usage. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classoptions_adca4bc21ed957b3e865c916582cf8a0c}{\index{options@{options}!options@{options}}
+\index{options@{options}!options@{options}}
+\subsubsection[{options}]{\setlength{\rightskip}{0pt plus 5cm}options\-::options (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{classoptions_adca4bc21ed957b3e865c916582cf8a0c}
+Call from \hyperlink{cli_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main()} to populate object 
+
+\subsection{Member Function Documentation}
+\hypertarget{classoptions_acc0b6ca7f3e8643fd7bba6f8924d1c3c}{\index{options@{options}!gcc\-\_\-style\-\_\-errors@{gcc\-\_\-style\-\_\-errors}}
+\index{gcc\-\_\-style\-\_\-errors@{gcc\-\_\-style\-\_\-errors}!options@{options}}
+\subsubsection[{gcc\-\_\-style\-\_\-errors}]{\setlength{\rightskip}{0pt plus 5cm}bool options\-::gcc\-\_\-style\-\_\-errors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classoptions_acc0b6ca7f3e8643fd7bba6f8924d1c3c}
+{\bfseries F\-I\-L\-E}\-:{\bfseries L\-I\-N\-E}\-: Error message. Makes it easier for editors to find failing tests/ \hypertarget{classoptions_a8686a1de46ad4772f06b9024d7517002}{\index{options@{options}!quiet@{quiet}}
+\index{quiet@{quiet}!options@{options}}
+\subsubsection[{quiet}]{\setlength{\rightskip}{0pt plus 5cm}bool options\-::quiet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classoptions_a8686a1de46ad4772f06b9024d7517002}
+Don't print the name of each method being tested. \hypertarget{classoptions_a559a3210ffc929eab3af21724c40536d}{\index{options@{options}!which\-\_\-test@{which\-\_\-test}}
+\index{which\-\_\-test@{which\-\_\-test}!options@{options}}
+\subsubsection[{which\-\_\-test}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string \& options\-::which\-\_\-test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classoptions_a559a3210ffc929eab3af21724c40536d}
+Which test should be run. Empty string means 'all tests' 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+test/\hyperlink{options_8h}{options.\-h}\item 
+test/\hyperlink{options_8cpp}{options.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,31 @@
+\hypertarget{checkmemoryleak_8h}{\section{lib/checkmemoryleak.h File Reference}
+\label{checkmemoryleak_8h}\index{lib/checkmemoryleak.\-h@{lib/checkmemoryleak.\-h}}
+}
+{\ttfamily \#include \char`\"{}config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}check.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_check_memory_leak}{Check\-Memory\-Leak}
+\begin{DoxyCompactList}\small\item\em Base class for memory leaks checking. \end{DoxyCompactList}\item 
+class \hyperlink{class_check_memory_leak_in_function}{Check\-Memory\-Leak\-In\-Function}
+\begin{DoxyCompactList}\small\item\em Check\-Memory\-Leak\-In\-Function detects when a function variable is allocated but not deallocated properly. \end{DoxyCompactList}\item 
+class \hyperlink{class_check_memory_leak_in_class}{Check\-Memory\-Leak\-In\-Class}
+\begin{DoxyCompactList}\small\item\em Check class variables, variables that are allocated in the constructor should be deallocated in the destructor \end{DoxyCompactList}\item 
+class \hyperlink{class_check_memory_leak_struct_member}{Check\-Memory\-Leak\-Struct\-Member}
+\begin{DoxyCompactList}\small\item\em detect simple memory leaks for struct members \end{DoxyCompactList}\item 
+class \hyperlink{class_check_memory_leak_no_var}{Check\-Memory\-Leak\-No\-Var}
+\begin{DoxyCompactList}\small\item\em detect simple memory leaks (address not taken) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Check for memory leaks
+
+The checking is split up into three specialized classes.
+\begin{DoxyItemize}
+\item \hyperlink{class_check_memory_leak_in_function}{Check\-Memory\-Leak\-In\-Function} can detect when a function variable is allocated but not deallocated properly.
+\item \hyperlink{class_check_memory_leak_in_class}{Check\-Memory\-Leak\-In\-Class} can detect when a class variable is allocated but not deallocated properly.
+\item \hyperlink{class_check_memory_leak_struct_member}{Check\-Memory\-Leak\-Struct\-Member} checks allocation/deallocation of structs and struct members 
+\end{DoxyItemize}

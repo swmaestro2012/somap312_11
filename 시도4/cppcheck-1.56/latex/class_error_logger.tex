@@ -1,0 +1,167 @@
+\hypertarget{class_error_logger}{\section{Error\-Logger Class Reference}
+\label{class_error_logger}\index{Error\-Logger@{Error\-Logger}}
+}
+
+
+This is an interface, which the class responsible of error logging should implement.  
+
+
+
+
+{\ttfamily \#include $<$errorlogger.\-h$>$}
+
+Inheritance diagram for Error\-Logger\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_error_logger}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_error_logger_1_1_error_message}{Error\-Message}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_error_logger_a08f4b631947bbaef31ece976bf5e28ae}{Error\-Logger} ()
+\item 
+virtual \hyperlink{class_error_logger_afb11bcbb1a52695e91f8d87653f18f02}{$\sim$\-Error\-Logger} ()
+\item 
+virtual void \hyperlink{class_error_logger_aeb9c56add35e46cd83e9b7e92e5e110c}{report\-Out} (const std\-::string \&outmsg)=0
+\item 
+virtual void \hyperlink{class_error_logger_aea56e01f24c0d8ecaa5498ae4eba1739}{report\-Err} (const \hyperlink{class_error_logger_1_1_error_message}{Error\-Logger\-::\-Error\-Message} \&msg)=0
+\item 
+virtual void \hyperlink{class_error_logger_ad8cb6cf6c75bc6c2cb850c37fa3609df}{report\-Progress} (const std\-::string \&filename, const char stage\mbox{[}$\,$\mbox{]}, const std\-::size\-\_\-t value)
+\item 
+virtual void \hyperlink{class_error_logger_ab192b3c92cc4e0b785b09c435d5762c4}{report\-Info} (const \hyperlink{class_error_logger_1_1_error_message}{Error\-Logger\-::\-Error\-Message} \&msg)
+\item 
+void \hyperlink{class_error_logger_a897a97284123c2501d719307aad5bccb}{report\-Unmatched\-Suppressions} (const std\-::list$<$ \hyperlink{struct_suppressions_1_1_suppression_entry}{Suppressions\-::\-Suppression\-Entry} $>$ \&unmatched)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{class_error_logger_ad88029b1e8954bf5907cd62fe422c57f}{call\-Stack\-To\-String} (const std\-::list$<$ \hyperlink{class_error_logger_1_1_error_message_1_1_file_location}{Error\-Logger\-::\-Error\-Message\-::\-File\-Location} $>$ \&call\-Stack)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is an interface, which the class responsible of error logging should implement. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_error_logger_a08f4b631947bbaef31ece976bf5e28ae}{\index{Error\-Logger@{Error\-Logger}!Error\-Logger@{Error\-Logger}}
+\index{Error\-Logger@{Error\-Logger}!ErrorLogger@{Error\-Logger}}
+\subsubsection[{Error\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}Error\-Logger\-::\-Error\-Logger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_error_logger_a08f4b631947bbaef31ece976bf5e28ae}
+\hypertarget{class_error_logger_afb11bcbb1a52695e91f8d87653f18f02}{\index{Error\-Logger@{Error\-Logger}!$\sim$\-Error\-Logger@{$\sim$\-Error\-Logger}}
+\index{$\sim$\-Error\-Logger@{$\sim$\-Error\-Logger}!ErrorLogger@{Error\-Logger}}
+\subsubsection[{$\sim$\-Error\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}virtual Error\-Logger\-::$\sim$\-Error\-Logger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_error_logger_afb11bcbb1a52695e91f8d87653f18f02}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_error_logger_ad88029b1e8954bf5907cd62fe422c57f}{\index{Error\-Logger@{Error\-Logger}!call\-Stack\-To\-String@{call\-Stack\-To\-String}}
+\index{call\-Stack\-To\-String@{call\-Stack\-To\-String}!ErrorLogger@{Error\-Logger}}
+\subsubsection[{call\-Stack\-To\-String}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Error\-Logger\-::call\-Stack\-To\-String (
+\begin{DoxyParamCaption}
+\item[{const std\-::list$<$ {\bf Error\-Logger\-::\-Error\-Message\-::\-File\-Location} $>$ \&}]{call\-Stack}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_error_logger_ad88029b1e8954bf5907cd62fe422c57f}
+\hypertarget{class_error_logger_aea56e01f24c0d8ecaa5498ae4eba1739}{\index{Error\-Logger@{Error\-Logger}!report\-Err@{report\-Err}}
+\index{report\-Err@{report\-Err}!ErrorLogger@{Error\-Logger}}
+\subsubsection[{report\-Err}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Error\-Logger\-::report\-Err (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\-Logger\-::\-Error\-Message} \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_error_logger_aea56e01f24c0d8ecaa5498ae4eba1739}
+Information about found errors and warnings is directed here. Override this to receive the errormessages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Location and other information about the found error. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_thread_result_ac894491441813236e0baf284ee8d3621}{Thread\-Result}, \hyperlink{class_cpp_check_executor_ab26c1747073a7b61d0ce7142b6c550af}{Cpp\-Check\-Executor}, \hyperlink{class_test_fixture_a254cc49644165b09c40daa042f603def}{Test\-Fixture}, \hyperlink{class_cppcheck_executor_a0328176cbfc486c9371525ad744492a3}{Cppcheck\-Executor}, and \hyperlink{class_thread_executor_a70dfa647ea76e88885b9062d7c4c8b05}{Thread\-Executor}.
+
+\hypertarget{class_error_logger_ab192b3c92cc4e0b785b09c435d5762c4}{\index{Error\-Logger@{Error\-Logger}!report\-Info@{report\-Info}}
+\index{report\-Info@{report\-Info}!ErrorLogger@{Error\-Logger}}
+\subsubsection[{report\-Info}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Error\-Logger\-::report\-Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\-Logger\-::\-Error\-Message} \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_error_logger_ab192b3c92cc4e0b785b09c435d5762c4}
+Output information messages. 
+\begin{DoxyParams}{Parameters}
+{\em msg} & Location and other information about the found error. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_cpp_check_executor_ac22d5437dca278e53c60ea2a43d0a21b}{Cpp\-Check\-Executor}, and \hyperlink{class_thread_executor_a7bee346d573c9cc0fb0e63341a5ed6b4}{Thread\-Executor}.
+
+\hypertarget{class_error_logger_aeb9c56add35e46cd83e9b7e92e5e110c}{\index{Error\-Logger@{Error\-Logger}!report\-Out@{report\-Out}}
+\index{report\-Out@{report\-Out}!ErrorLogger@{Error\-Logger}}
+\subsubsection[{report\-Out}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Error\-Logger\-::report\-Out (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{outmsg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_error_logger_aeb9c56add35e46cd83e9b7e92e5e110c}
+Information about progress is directed here. Override this to receive the progress messages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em outmsg} & Message to show e.\-g. \char`\"{}\-Checking main.\-cpp...\char`\"{} \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_thread_result_a92e60f6281e6f107f62252954b061f89}{Thread\-Result}, \hyperlink{class_cpp_check_executor_a9b88a15cc0bff59ba3a15cf1d776ad44}{Cpp\-Check\-Executor}, \hyperlink{class_test_fixture_a43619b0701cef097c0a1804dff84c9fa}{Test\-Fixture}, \hyperlink{class_cppcheck_executor_a6d3d218c53b1224d9380d4297bb17899}{Cppcheck\-Executor}, and \hyperlink{class_thread_executor_a629882d9c86e2b558ac9ac91b39256ae}{Thread\-Executor}.
+
+\hypertarget{class_error_logger_ad8cb6cf6c75bc6c2cb850c37fa3609df}{\index{Error\-Logger@{Error\-Logger}!report\-Progress@{report\-Progress}}
+\index{report\-Progress@{report\-Progress}!ErrorLogger@{Error\-Logger}}
+\subsubsection[{report\-Progress}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Error\-Logger\-::report\-Progress (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename, }
+\item[{const char}]{stage\mbox{[}$\,$\mbox{]}, }
+\item[{const std\-::size\-\_\-t}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_error_logger_ad8cb6cf6c75bc6c2cb850c37fa3609df}
+\hyperlink{class_report}{Report} progress to client 
+\begin{DoxyParams}{Parameters}
+{\em filename} & main file that is checked \\
+\hline
+{\em stage} & for example preprocess / tokenize / simplify / check \\
+\hline
+{\em value} & progress value (0-\/100) \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_cpp_check_executor_ad71f89d16696b672b2d76e419d154766}{Cpp\-Check\-Executor}.
+
+\hypertarget{class_error_logger_a897a97284123c2501d719307aad5bccb}{\index{Error\-Logger@{Error\-Logger}!report\-Unmatched\-Suppressions@{report\-Unmatched\-Suppressions}}
+\index{report\-Unmatched\-Suppressions@{report\-Unmatched\-Suppressions}!ErrorLogger@{Error\-Logger}}
+\subsubsection[{report\-Unmatched\-Suppressions}]{\setlength{\rightskip}{0pt plus 5cm}void Error\-Logger\-::report\-Unmatched\-Suppressions (
+\begin{DoxyParamCaption}
+\item[{const std\-::list$<$ {\bf Suppressions\-::\-Suppression\-Entry} $>$ \&}]{unmatched}
+\end{DoxyParamCaption}
+)}}\label{class_error_logger_a897a97284123c2501d719307aad5bccb}
+\hyperlink{class_report}{Report} list of unmatched suppressions 
+\begin{DoxyParams}{Parameters}
+{\em unmatched} & list of unmatched suppressions (from Settings\-::\-Suppressions\-::get\-Unmatched(Local$|$\-Global)\hyperlink{class_suppressions}{Suppressions}) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{errorlogger_8h}{errorlogger.\-h}\item 
+lib/\hyperlink{errorlogger_8cpp}{errorlogger.\-cpp}\end{DoxyCompactItemize}

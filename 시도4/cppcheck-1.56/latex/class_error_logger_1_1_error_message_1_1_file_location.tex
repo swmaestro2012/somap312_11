@@ -1,0 +1,105 @@
+\hypertarget{class_error_logger_1_1_error_message_1_1_file_location}{\section{Error\-Logger\-:\-:Error\-Message\-:\-:File\-Location Class Reference}
+\label{class_error_logger_1_1_error_message_1_1_file_location}\index{Error\-Logger\-::\-Error\-Message\-::\-File\-Location@{Error\-Logger\-::\-Error\-Message\-::\-File\-Location}}
+}
+
+
+{\ttfamily \#include $<$errorlogger.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_error_logger_1_1_error_message_1_1_file_location_a7651ee046c9b929591f84e082d8520a8}{File\-Location} ()
+\item 
+\hyperlink{class_error_logger_1_1_error_message_1_1_file_location_adabbdd63c2433376b8ba7e3c5a21785d}{File\-Location} (const std\-::string \&file, unsigned int aline)
+\item 
+\hyperlink{class_error_logger_1_1_error_message_1_1_file_location_a591ac864f84bb686db4de7761a7eb742}{File\-Location} (const \hyperlink{class_token}{Token} $\ast$tok, const \hyperlink{class_token_list}{Token\-List} $\ast$list)
+\item 
+std\-::string \hyperlink{class_error_logger_1_1_error_message_1_1_file_location_aaf3be759614b48dafa721c9bf4ae48a9}{getfile} (bool convert=true) const 
+\item 
+void \hyperlink{class_error_logger_1_1_error_message_1_1_file_location_a9ea74e493f787de10f42c3918bc40057}{setfile} (const std\-::string \&file)
+\item 
+std\-::string \hyperlink{class_error_logger_1_1_error_message_1_1_file_location_aa4c92410f1fd68332dc08ccce884ee34}{stringify} () const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{class_error_logger_1_1_error_message_1_1_file_location_a5cd095659330d178a04f217d410f4a53}{line}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+File name and line number. Internally paths are stored with / separator. When getting the filename it is by default converted to native separators. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_error_logger_1_1_error_message_1_1_file_location_a7651ee046c9b929591f84e082d8520a8}{\index{Error\-Logger\-::\-Error\-Message\-::\-File\-Location@{Error\-Logger\-::\-Error\-Message\-::\-File\-Location}!File\-Location@{File\-Location}}
+\index{File\-Location@{File\-Location}!ErrorLogger::ErrorMessage::FileLocation@{Error\-Logger\-::\-Error\-Message\-::\-File\-Location}}
+\subsubsection[{File\-Location}]{\setlength{\rightskip}{0pt plus 5cm}Error\-Logger\-::\-Error\-Message\-::\-File\-Location\-::\-File\-Location (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_error_logger_1_1_error_message_1_1_file_location_a7651ee046c9b929591f84e082d8520a8}
+\hypertarget{class_error_logger_1_1_error_message_1_1_file_location_adabbdd63c2433376b8ba7e3c5a21785d}{\index{Error\-Logger\-::\-Error\-Message\-::\-File\-Location@{Error\-Logger\-::\-Error\-Message\-::\-File\-Location}!File\-Location@{File\-Location}}
+\index{File\-Location@{File\-Location}!ErrorLogger::ErrorMessage::FileLocation@{Error\-Logger\-::\-Error\-Message\-::\-File\-Location}}
+\subsubsection[{File\-Location}]{\setlength{\rightskip}{0pt plus 5cm}Error\-Logger\-::\-Error\-Message\-::\-File\-Location\-::\-File\-Location (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{file, }
+\item[{unsigned int}]{aline}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_error_logger_1_1_error_message_1_1_file_location_adabbdd63c2433376b8ba7e3c5a21785d}
+\hypertarget{class_error_logger_1_1_error_message_1_1_file_location_a591ac864f84bb686db4de7761a7eb742}{\index{Error\-Logger\-::\-Error\-Message\-::\-File\-Location@{Error\-Logger\-::\-Error\-Message\-::\-File\-Location}!File\-Location@{File\-Location}}
+\index{File\-Location@{File\-Location}!ErrorLogger::ErrorMessage::FileLocation@{Error\-Logger\-::\-Error\-Message\-::\-File\-Location}}
+\subsubsection[{File\-Location}]{\setlength{\rightskip}{0pt plus 5cm}Error\-Logger\-::\-Error\-Message\-::\-File\-Location\-::\-File\-Location (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const {\bf Token\-List} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{class_error_logger_1_1_error_message_1_1_file_location_a591ac864f84bb686db4de7761a7eb742}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_error_logger_1_1_error_message_1_1_file_location_aaf3be759614b48dafa721c9bf4ae48a9}{\index{Error\-Logger\-::\-Error\-Message\-::\-File\-Location@{Error\-Logger\-::\-Error\-Message\-::\-File\-Location}!getfile@{getfile}}
+\index{getfile@{getfile}!ErrorLogger::ErrorMessage::FileLocation@{Error\-Logger\-::\-Error\-Message\-::\-File\-Location}}
+\subsubsection[{getfile}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Error\-Logger\-::\-Error\-Message\-::\-File\-Location\-::getfile (
+\begin{DoxyParamCaption}
+\item[{bool}]{convert = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const}}\label{class_error_logger_1_1_error_message_1_1_file_location_aaf3be759614b48dafa721c9bf4ae48a9}
+Return the filename. 
+\begin{DoxyParams}{Parameters}
+{\em convert} & If true convert path to native separators. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+filename. 
+\end{DoxyReturn}
+\hypertarget{class_error_logger_1_1_error_message_1_1_file_location_a9ea74e493f787de10f42c3918bc40057}{\index{Error\-Logger\-::\-Error\-Message\-::\-File\-Location@{Error\-Logger\-::\-Error\-Message\-::\-File\-Location}!setfile@{setfile}}
+\index{setfile@{setfile}!ErrorLogger::ErrorMessage::FileLocation@{Error\-Logger\-::\-Error\-Message\-::\-File\-Location}}
+\subsubsection[{setfile}]{\setlength{\rightskip}{0pt plus 5cm}void Error\-Logger\-::\-Error\-Message\-::\-File\-Location\-::setfile (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{file}
+\end{DoxyParamCaption}
+)}}\label{class_error_logger_1_1_error_message_1_1_file_location_a9ea74e493f787de10f42c3918bc40057}
+Set the filename. 
+\begin{DoxyParams}{Parameters}
+{\em file} & Filename to set. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_error_logger_1_1_error_message_1_1_file_location_aa4c92410f1fd68332dc08ccce884ee34}{\index{Error\-Logger\-::\-Error\-Message\-::\-File\-Location@{Error\-Logger\-::\-Error\-Message\-::\-File\-Location}!stringify@{stringify}}
+\index{stringify@{stringify}!ErrorLogger::ErrorMessage::FileLocation@{Error\-Logger\-::\-Error\-Message\-::\-File\-Location}}
+\subsubsection[{stringify}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Error\-Logger\-::\-Error\-Message\-::\-File\-Location\-::stringify (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_error_logger_1_1_error_message_1_1_file_location_aa4c92410f1fd68332dc08ccce884ee34}
+Returns the location as a string. Format\-: \mbox{[}\href{file:line}{\tt file\-:line}\mbox{]} 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_error_logger_1_1_error_message_1_1_file_location_a5cd095659330d178a04f217d410f4a53}{\index{Error\-Logger\-::\-Error\-Message\-::\-File\-Location@{Error\-Logger\-::\-Error\-Message\-::\-File\-Location}!line@{line}}
+\index{line@{line}!ErrorLogger::ErrorMessage::FileLocation@{Error\-Logger\-::\-Error\-Message\-::\-File\-Location}}
+\subsubsection[{line}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Error\-Logger\-::\-Error\-Message\-::\-File\-Location\-::line}}\label{class_error_logger_1_1_error_message_1_1_file_location_a5cd095659330d178a04f217d410f4a53}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{errorlogger_8h}{errorlogger.\-h}\item 
+lib/\hyperlink{errorlogger_8cpp}{errorlogger.\-cpp}\end{DoxyCompactItemize}

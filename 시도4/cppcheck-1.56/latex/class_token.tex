@@ -1,0 +1,978 @@
+\hypertarget{class_token}{\section{Token Class Reference}
+\label{class_token}\index{Token@{Token}}
+}
+
+
+The token list that the \hyperlink{class_token_list}{Token\-List} generates is a linked-\/list of this class.  
+
+
+
+
+{\ttfamily \#include $<$token.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_token_acf70e9411196c602738c3ed2428c7137}{Type} \{ \\*
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137a72141525c430df12976aa1490aced39a}{e\-Variable}, 
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137aafb437c16479034b48aea437408e5afb}{e\-Type}, 
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137aafdfd76298687d7f4b4ed2cde52f3ba1}{e\-Function}, 
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137a1573e7bc8e749e7adf863a6e90a8892d}{e\-Name}, 
+\\*
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137a0ce211b3a0a0fb8b6f9578030286eb43}{e\-Number}, 
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137a281a3ba392e7fb364b80f291be3e7a0d}{e\-String}, 
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137a5792bbbd8812aebc06a99d8b7ea349ec}{e\-Char}, 
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137a6e803693ab41d096bcb92cc27fdc8946}{e\-Boolean}, 
+\\*
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137a0b59fbc13c9267292652a3d5985127e5}{e\-Literal}, 
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137a486ff206f8d1875c68c041dbe8575a19}{e\-Arithmetical\-Op}, 
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137a044175207c2cc48f30819fa6314fffb1}{e\-Comparison\-Op}, 
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137aa0e55ea46f79e3e9f3f59d2327ac3a75}{e\-Assignment\-Op}, 
+\\*
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137a84e210adc032fff26d2ef9a763a9848a}{e\-Logical\-Op}, 
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137a91f25b327a082820fb484f77a1f9da49}{e\-Bit\-Op}, 
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137afeb57aa2a48d349ea35958733356ae99}{e\-Inc\-Dec\-Op}, 
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137a8262e30f29389cf3f08d845c236ba44d}{e\-Extended\-Op}, 
+\\*
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137aa99b86a4638cae7c0f114daf8b82a6c0}{e\-Bracket}, 
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137a00c4ad28a28824bc60eb36222f25c562}{e\-Other}, 
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137a70c5047567b3fc705ee232256a4c92c0}{e\-None}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_token_a329c533a1d0e5dfb936cd7d953ca3e98}{Token} (\hyperlink{class_token}{Token} $\ast$$\ast$tokens\-Back)
+\item 
+\hyperlink{class_token_a3d7d59eaac1535df1433357d5d372f84}{$\sim$\-Token} ()
+\item 
+void \hyperlink{class_token_a25c9fce751f8059dc0e3b82e4e80576d}{str} (const std\-::string \&s)
+\item 
+void \hyperlink{class_token_a4829bc559541958da62525fd1a461ca7}{concat\-Str} (std\-::string const \&b)
+\item 
+const std\-::string \& \hyperlink{class_token_aa33330e2daeccaa32f3a413ffe668d46}{str} () const 
+\item 
+void \hyperlink{class_token_a1ade919f02c006e4bc0ce7f4f0ff1361}{delete\-Next} (unsigned long index=1)
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_token_ac75b6b92772de46c8979ae4dbf5be8c2}{tok\-At} (int index) const 
+\item 
+\hyperlink{class_token}{Token} $\ast$ \hyperlink{class_token_a5f6ce00265a2e01c9f1fbb8542831918}{tok\-At} (int index)
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_token_ad9138d6509a90f18618c2ace0770f8f0}{link\-At} (int index) const 
+\item 
+\hyperlink{class_token}{Token} $\ast$ \hyperlink{class_token_abfafe70587786bcd15bb631f8a11069f}{link\-At} (int index)
+\item 
+const std\-::string \& \hyperlink{class_token_a6e5d5fef298aadf811bd5089de1813c6}{str\-At} (int index) const 
+\item 
+\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137}{Type} \hyperlink{class_token_aa50a35dc309d8739696d736de59e8746}{type} () const 
+\item 
+void \hyperlink{class_token_a824d6ce5c5d30073dc619318620c6b3d}{type} (\hyperlink{class_token_acf70e9411196c602738c3ed2428c7137}{Type} t)
+\item 
+bool \hyperlink{class_token_a5a21d079041cf32cf96fe5d235b8547d}{is\-Name} () const 
+\item 
+bool \hyperlink{class_token_a36c8c3cd693ca2de2de5a0444ca3f6c7}{is\-Upper\-Case\-Name} () const 
+\item 
+bool \hyperlink{class_token_af8bc2a088a9c47a35e05bd77e8758ab6}{is\-Number} () const 
+\item 
+bool \hyperlink{class_token_a488f3e5d59e885bc6022c824abd9f46b}{is\-Arithmetical\-Op} () const 
+\item 
+bool \hyperlink{class_token_a579c49f0cd5707bc1edc62518ac0b847}{is\-Op} () const 
+\item 
+bool \hyperlink{class_token_a8faf9be47546e775eeec8897d6277f29}{is\-Extended\-Op} () const 
+\item 
+bool \hyperlink{class_token_a74231688e47d64d848bae35b5d304269}{is\-Assignment\-Op} () const 
+\item 
+bool \hyperlink{class_token_a520b2ae089ab3c9b3da7911c4cba4430}{is\-Boolean} () const 
+\item 
+bool \hyperlink{class_token_a68560a16b5a805b23cde07c72444fc2d}{is\-Unsigned} () const 
+\item 
+void \hyperlink{class_token_a6de74ef17a44213bde89de15a2ca3709}{is\-Unsigned} (bool sign)
+\item 
+bool \hyperlink{class_token_a205725e9359e06a1d3ad8dda0f4176dc}{is\-Signed} () const 
+\item 
+void \hyperlink{class_token_a70aa9b1ef301c8d970351e4491223082}{is\-Signed} (bool sign)
+\item 
+bool \hyperlink{class_token_a86549b2319075b91e31d6bb0e976d997}{is\-Pointer\-Compare} () const 
+\item 
+void \hyperlink{class_token_abc4e058e6374780d9a46f4dbef442ae0}{is\-Pointer\-Compare} (bool b)
+\item 
+bool \hyperlink{class_token_abf5480aca950bb5203c0ca63cf3888f1}{is\-Long} () const 
+\item 
+void \hyperlink{class_token_add1b7a064c963cc005916cca3840185a}{is\-Long} (bool size)
+\item 
+bool \hyperlink{class_token_aaef3faac8129a3daf8d00ceae51cb61d}{is\-Unused} () const 
+\item 
+void \hyperlink{class_token_a666279b76aca7755e82e408c14f1d169}{is\-Unused} (bool used)
+\item 
+bool \hyperlink{class_token_a0ae031b055c2b8685f310746edce86e4}{is\-Standard\-Type} () const 
+\item 
+bool \hyperlink{class_token_ac8bb9c0f427d1d6dc2447c1976ee977c}{is\-Expanded\-Macro} () const 
+\item 
+void \hyperlink{class_token_a19d866e6ef148ef60c3687465613af5f}{set\-Expanded\-Macro} (bool m)
+\item 
+unsigned int \hyperlink{class_token_a3331d71600856d73b341c1b8c4ca359c}{linenr} () const 
+\item 
+void \hyperlink{class_token_af37bf6ea4bd856cd80dc8ea4a9f1ec90}{linenr} (unsigned int line\-Number)
+\item 
+unsigned int \hyperlink{class_token_a11338488ea971c161ae15022d86a7cf4}{file\-Index} () const 
+\item 
+void \hyperlink{class_token_a6a9f2f093da1c7bc5fe7e6993434e15f}{file\-Index} (unsigned int index\-Of\-File)
+\item 
+\hyperlink{class_token}{Token} $\ast$ \hyperlink{class_token_a64b1ca2e4b29a1075f8913e037c2d76e}{next} () const 
+\item 
+void \hyperlink{class_token_a51013b95047f42dd1793badc96d4d169}{insert\-Token} (const std\-::string \&token\-Str)
+\item 
+\hyperlink{class_token}{Token} $\ast$ \hyperlink{class_token_a51faf0d9b94f304f71223c0990732297}{previous} () const 
+\item 
+unsigned int \hyperlink{class_token_a42fd6bcafcc8e5a4bd8f45b105211b13}{var\-Id} () const 
+\item 
+void \hyperlink{class_token_a2f9ddc7258f23b67895217ddb49aee60}{var\-Id} (unsigned int id)
+\item 
+void \hyperlink{class_token_a64758fe7f142582c2144b5981bc8a472}{print\-Out} (const char $\ast$title=0) const 
+\item 
+void \hyperlink{class_token_ae6017512a4f2ab1d2b1d24ce38dc469a}{print\-Out} (const char $\ast$title, const std\-::vector$<$ std\-::string $>$ \&file\-Names) const 
+\item 
+void \hyperlink{class_token_a14499031eca21ffb2059b882db35c090}{stringify} (std\-::ostream \&os, bool varid, bool attributes) const 
+\item 
+std\-::string \hyperlink{class_token_a77586f9ea4246c070cb6b00edacf470c}{stringify\-List} (bool varid, bool attributes, bool linenumbers, bool linebreaks, bool files, const std\-::vector$<$ std\-::string $>$ $\ast$file\-Names=0, const \hyperlink{class_token}{Token} $\ast$end=0) const 
+\item 
+std\-::string \hyperlink{class_token_a3a58be0a20e5f935ba23adeaa227f000}{stringify\-List} (const \hyperlink{class_token}{Token} $\ast$end, bool attributes=true) const 
+\item 
+std\-::string \hyperlink{class_token_a6e7553ba6bb9e788b0ebbed7ec41ecff}{stringify\-List} (bool varid=false) const 
+\item 
+void \hyperlink{class_token_a101d2135b4846d3eff0eb5afe6ed120c}{delete\-This} ()
+\item 
+void \hyperlink{class_token_accbffd8560e96f4fd7e9e9e33e04b773}{link} (\hyperlink{class_token}{Token} $\ast$link\-To\-Token)
+\item 
+\hyperlink{class_token}{Token} $\ast$ \hyperlink{class_token_a5508a2a47963075de2eb6e2aeb18e643}{link} () const 
+\item 
+void \hyperlink{class_token_a0be6f9cb337ba79fa497eed4a47e9ea5}{scope} (\hyperlink{class_scope}{Scope} $\ast$s)
+\item 
+\hyperlink{class_scope}{Scope} $\ast$ \hyperlink{class_token_a5b1a0fb67cf31f6e1b4ac1b10a658268}{scope} () const 
+\item 
+std\-::string \hyperlink{class_token_a321ee189f27a99a7c1cd527e93d29025}{str\-Value} () const 
+\item 
+unsigned int \hyperlink{class_token_af554f9ac75213ee66d5e9fd99c7f0ff5}{progress\-Value} () const 
+\item 
+void \hyperlink{class_token_ae9d2b9592939d2697acbbd3ef02d15d8}{assign\-Progress\-Values} ()
+\item 
+\hyperlink{class_token}{Token} $\ast$ \hyperlink{class_token_ad302eee56408d5f3e63c27286c51403c}{next\-Argument} () const 
+\item 
+bool \hyperlink{class_token_a03993958b572a6fd19b5eb5075e68c17}{find\-Closing\-Bracket} (const \hyperlink{class_token}{Token} $\ast$\&closing) const 
+\item 
+bool \hyperlink{class_token_a36b9cdfbf8da9542ae8d0ef3a9569e15}{find\-Closing\-Bracket} (\hyperlink{class_token}{Token} $\ast$\&closing) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_token_a0f73cc13be77ebc806962972a8ae8092}{simple\-Match} (const \hyperlink{class_token}{Token} $\ast$tok, const char pattern\mbox{[}$\,$\mbox{]})
+\item 
+static bool \hyperlink{class_token_a519623098bde6496825e49364575dadf}{Match} (const \hyperlink{class_token}{Token} $\ast$tok, const char pattern\mbox{[}$\,$\mbox{]}, unsigned int varid=0)
+\item 
+static std\-::size\-\_\-t \hyperlink{class_token_a3fe50caa3292df9132ab5894c322634c}{get\-Str\-Length} (const \hyperlink{class_token}{Token} $\ast$tok)
+\item 
+static const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_token_a0b7c3cba682eb1ec914935468d13f909}{findsimplematch} (const \hyperlink{class_token}{Token} $\ast$tok, const char pattern\mbox{[}$\,$\mbox{]})
+\item 
+static const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_token_a770b45407b4fe8fa45b32352aca45183}{findsimplematch} (const \hyperlink{class_token}{Token} $\ast$tok, const char pattern\mbox{[}$\,$\mbox{]}, const \hyperlink{class_token}{Token} $\ast$end)
+\item 
+static const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_token_a129738123e5ddc405eae3245a1c7d487}{findmatch} (const \hyperlink{class_token}{Token} $\ast$tok, const char pattern\mbox{[}$\,$\mbox{]}, unsigned int \hyperlink{class_token_a42fd6bcafcc8e5a4bd8f45b105211b13}{var\-Id}=0)
+\item 
+static const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_token_a8121965cfa2cec3ce0c074299a0219e0}{findmatch} (const \hyperlink{class_token}{Token} $\ast$tok, const char pattern\mbox{[}$\,$\mbox{]}, const \hyperlink{class_token}{Token} $\ast$end, unsigned int \hyperlink{class_token_a42fd6bcafcc8e5a4bd8f45b105211b13}{var\-Id}=0)
+\item 
+static int \hyperlink{class_token_af62e580087bc1c60f7e07d279716b508}{multi\-Compare} (const char $\ast$haystack, const char $\ast$needle)
+\item 
+static void \hyperlink{class_token_ade1a6122a5d9a10c24f8d30ac3216491}{erase\-Tokens} (\hyperlink{class_token}{Token} $\ast$begin, const \hyperlink{class_token}{Token} $\ast$end)
+\item 
+static void \hyperlink{class_token_a3c6eec9d87b323d937b06724e74be76c}{replace} (\hyperlink{class_token}{Token} $\ast$replace\-This, \hyperlink{class_token}{Token} $\ast$start, \hyperlink{class_token}{Token} $\ast$end)
+\item 
+static void \hyperlink{class_token_a63497f942fdbcc45100f07e94626cddf}{create\-Mutual\-Links} (\hyperlink{class_token}{Token} $\ast$begin, \hyperlink{class_token}{Token} $\ast$end)
+\item 
+static void \hyperlink{class_token_a969fe5b670d233692b05d03f8d8237c1}{move} (\hyperlink{class_token}{Token} $\ast$src\-Start, \hyperlink{class_token}{Token} $\ast$src\-End, \hyperlink{class_token}{Token} $\ast$new\-Location)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The token list that the \hyperlink{class_token_list}{Token\-List} generates is a linked-\/list of this class. 
+
+Tokens are stored as strings. The \char`\"{}if\char`\"{}, \char`\"{}while\char`\"{}, etc are stored in plain text. The reason the \hyperlink{class_token}{Token} class is needed (instead of using the string class) is that some extra functionality is also needed for tokens\-:
+\begin{DoxyItemize}
+\item location of the token is stored (linenr, file\-Index)
+\item functions for classifying the token (is\-Name, is\-Number, is\-Boolean, is\-Standard\-Type)
+\end{DoxyItemize}
+
+The \hyperlink{class_token}{Token} class also has other functions for management of token list, matching tokens, etc. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137}{\index{Token@{Token}!Type@{Type}}
+\index{Type@{Type}!Token@{Token}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Token\-::\-Type}}}\label{class_token_acf70e9411196c602738c3ed2428c7137}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{e\-Variable@{e\-Variable}!Token@{Token}}\index{Token@{Token}!e\-Variable@{e\-Variable}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137a72141525c430df12976aa1490aced39a}{e\-Variable}\label{class_token_acf70e9411196c602738c3ed2428c7137a72141525c430df12976aa1490aced39a}
+}]\index{e\-Type@{e\-Type}!Token@{Token}}\index{Token@{Token}!e\-Type@{e\-Type}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137aafb437c16479034b48aea437408e5afb}{e\-Type}\label{class_token_acf70e9411196c602738c3ed2428c7137aafb437c16479034b48aea437408e5afb}
+}]\index{e\-Function@{e\-Function}!Token@{Token}}\index{Token@{Token}!e\-Function@{e\-Function}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137aafdfd76298687d7f4b4ed2cde52f3ba1}{e\-Function}\label{class_token_acf70e9411196c602738c3ed2428c7137aafdfd76298687d7f4b4ed2cde52f3ba1}
+}]\index{e\-Name@{e\-Name}!Token@{Token}}\index{Token@{Token}!e\-Name@{e\-Name}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137a1573e7bc8e749e7adf863a6e90a8892d}{e\-Name}\label{class_token_acf70e9411196c602738c3ed2428c7137a1573e7bc8e749e7adf863a6e90a8892d}
+}]\index{e\-Number@{e\-Number}!Token@{Token}}\index{Token@{Token}!e\-Number@{e\-Number}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137a0ce211b3a0a0fb8b6f9578030286eb43}{e\-Number}\label{class_token_acf70e9411196c602738c3ed2428c7137a0ce211b3a0a0fb8b6f9578030286eb43}
+}]\index{e\-String@{e\-String}!Token@{Token}}\index{Token@{Token}!e\-String@{e\-String}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137a281a3ba392e7fb364b80f291be3e7a0d}{e\-String}\label{class_token_acf70e9411196c602738c3ed2428c7137a281a3ba392e7fb364b80f291be3e7a0d}
+}]\index{e\-Char@{e\-Char}!Token@{Token}}\index{Token@{Token}!e\-Char@{e\-Char}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137a5792bbbd8812aebc06a99d8b7ea349ec}{e\-Char}\label{class_token_acf70e9411196c602738c3ed2428c7137a5792bbbd8812aebc06a99d8b7ea349ec}
+}]\index{e\-Boolean@{e\-Boolean}!Token@{Token}}\index{Token@{Token}!e\-Boolean@{e\-Boolean}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137a6e803693ab41d096bcb92cc27fdc8946}{e\-Boolean}\label{class_token_acf70e9411196c602738c3ed2428c7137a6e803693ab41d096bcb92cc27fdc8946}
+}]\index{e\-Literal@{e\-Literal}!Token@{Token}}\index{Token@{Token}!e\-Literal@{e\-Literal}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137a0b59fbc13c9267292652a3d5985127e5}{e\-Literal}\label{class_token_acf70e9411196c602738c3ed2428c7137a0b59fbc13c9267292652a3d5985127e5}
+}]\index{e\-Arithmetical\-Op@{e\-Arithmetical\-Op}!Token@{Token}}\index{Token@{Token}!e\-Arithmetical\-Op@{e\-Arithmetical\-Op}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137a486ff206f8d1875c68c041dbe8575a19}{e\-Arithmetical\-Op}\label{class_token_acf70e9411196c602738c3ed2428c7137a486ff206f8d1875c68c041dbe8575a19}
+}]\index{e\-Comparison\-Op@{e\-Comparison\-Op}!Token@{Token}}\index{Token@{Token}!e\-Comparison\-Op@{e\-Comparison\-Op}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137a044175207c2cc48f30819fa6314fffb1}{e\-Comparison\-Op}\label{class_token_acf70e9411196c602738c3ed2428c7137a044175207c2cc48f30819fa6314fffb1}
+}]\index{e\-Assignment\-Op@{e\-Assignment\-Op}!Token@{Token}}\index{Token@{Token}!e\-Assignment\-Op@{e\-Assignment\-Op}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137aa0e55ea46f79e3e9f3f59d2327ac3a75}{e\-Assignment\-Op}\label{class_token_acf70e9411196c602738c3ed2428c7137aa0e55ea46f79e3e9f3f59d2327ac3a75}
+}]\index{e\-Logical\-Op@{e\-Logical\-Op}!Token@{Token}}\index{Token@{Token}!e\-Logical\-Op@{e\-Logical\-Op}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137a84e210adc032fff26d2ef9a763a9848a}{e\-Logical\-Op}\label{class_token_acf70e9411196c602738c3ed2428c7137a84e210adc032fff26d2ef9a763a9848a}
+}]\index{e\-Bit\-Op@{e\-Bit\-Op}!Token@{Token}}\index{Token@{Token}!e\-Bit\-Op@{e\-Bit\-Op}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137a91f25b327a082820fb484f77a1f9da49}{e\-Bit\-Op}\label{class_token_acf70e9411196c602738c3ed2428c7137a91f25b327a082820fb484f77a1f9da49}
+}]\index{e\-Inc\-Dec\-Op@{e\-Inc\-Dec\-Op}!Token@{Token}}\index{Token@{Token}!e\-Inc\-Dec\-Op@{e\-Inc\-Dec\-Op}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137afeb57aa2a48d349ea35958733356ae99}{e\-Inc\-Dec\-Op}\label{class_token_acf70e9411196c602738c3ed2428c7137afeb57aa2a48d349ea35958733356ae99}
+}]\index{e\-Extended\-Op@{e\-Extended\-Op}!Token@{Token}}\index{Token@{Token}!e\-Extended\-Op@{e\-Extended\-Op}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137a8262e30f29389cf3f08d845c236ba44d}{e\-Extended\-Op}\label{class_token_acf70e9411196c602738c3ed2428c7137a8262e30f29389cf3f08d845c236ba44d}
+}]\index{e\-Bracket@{e\-Bracket}!Token@{Token}}\index{Token@{Token}!e\-Bracket@{e\-Bracket}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137aa99b86a4638cae7c0f114daf8b82a6c0}{e\-Bracket}\label{class_token_acf70e9411196c602738c3ed2428c7137aa99b86a4638cae7c0f114daf8b82a6c0}
+}]\index{e\-Other@{e\-Other}!Token@{Token}}\index{Token@{Token}!e\-Other@{e\-Other}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137a00c4ad28a28824bc60eb36222f25c562}{e\-Other}\label{class_token_acf70e9411196c602738c3ed2428c7137a00c4ad28a28824bc60eb36222f25c562}
+}]\index{e\-None@{e\-None}!Token@{Token}}\index{Token@{Token}!e\-None@{e\-None}}\item[{\em 
+\hypertarget{class_token_acf70e9411196c602738c3ed2428c7137a70c5047567b3fc705ee232256a4c92c0}{e\-None}\label{class_token_acf70e9411196c602738c3ed2428c7137a70c5047567b3fc705ee232256a4c92c0}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_token_a329c533a1d0e5dfb936cd7d953ca3e98}{\index{Token@{Token}!Token@{Token}}
+\index{Token@{Token}!Token@{Token}}
+\subsubsection[{Token}]{\setlength{\rightskip}{0pt plus 5cm}Token\-::\-Token (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$$\ast$}]{tokens\-Back}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{class_token_a329c533a1d0e5dfb936cd7d953ca3e98}
+\hypertarget{class_token_a3d7d59eaac1535df1433357d5d372f84}{\index{Token@{Token}!$\sim$\-Token@{$\sim$\-Token}}
+\index{$\sim$\-Token@{$\sim$\-Token}!Token@{Token}}
+\subsubsection[{$\sim$\-Token}]{\setlength{\rightskip}{0pt plus 5cm}Token\-::$\sim$\-Token (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_token_a3d7d59eaac1535df1433357d5d372f84}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_token_ae9d2b9592939d2697acbbd3ef02d15d8}{\index{Token@{Token}!assign\-Progress\-Values@{assign\-Progress\-Values}}
+\index{assign\-Progress\-Values@{assign\-Progress\-Values}!Token@{Token}}
+\subsubsection[{assign\-Progress\-Values}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::assign\-Progress\-Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_ae9d2b9592939d2697acbbd3ef02d15d8}
+Calculate progress values for all tokens \hypertarget{class_token_a4829bc559541958da62525fd1a461ca7}{\index{Token@{Token}!concat\-Str@{concat\-Str}}
+\index{concat\-Str@{concat\-Str}!Token@{Token}}
+\subsubsection[{concat\-Str}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::concat\-Str (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{b}
+\end{DoxyParamCaption}
+)}}\label{class_token_a4829bc559541958da62525fd1a461ca7}
+Concatenate two (quoted) strings. Automatically cuts of the last/first character. Example\-: \char`\"{}hello \char`\"{}\char`\"{}world\char`\"{} -\/$>$ \char`\"{}hello world\char`\"{}. Used by the token simplifier. \hypertarget{class_token_a63497f942fdbcc45100f07e94626cddf}{\index{Token@{Token}!create\-Mutual\-Links@{create\-Mutual\-Links}}
+\index{create\-Mutual\-Links@{create\-Mutual\-Links}!Token@{Token}}
+\subsubsection[{create\-Mutual\-Links}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::create\-Mutual\-Links (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$}]{begin, }
+\item[{{\bf Token} $\ast$}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_token_a63497f942fdbcc45100f07e94626cddf}
+Links two elements against each other. \hypertarget{class_token_a1ade919f02c006e4bc0ce7f4f0ff1361}{\index{Token@{Token}!delete\-Next@{delete\-Next}}
+\index{delete\-Next@{delete\-Next}!Token@{Token}}
+\subsubsection[{delete\-Next}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::delete\-Next (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{index = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}}\label{class_token_a1ade919f02c006e4bc0ce7f4f0ff1361}
+Unlink and delete the next 'index' tokens. \hypertarget{class_token_a101d2135b4846d3eff0eb5afe6ed120c}{\index{Token@{Token}!delete\-This@{delete\-This}}
+\index{delete\-This@{delete\-This}!Token@{Token}}
+\subsubsection[{delete\-This}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::delete\-This (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_token_a101d2135b4846d3eff0eb5afe6ed120c}
+Remove the contents for this token from the token list.
+
+The contents are replaced with the contents of the next token and the next token is unlinked and deleted from the token list.
+
+So this token will still be valid after the '\hyperlink{class_token_a101d2135b4846d3eff0eb5afe6ed120c}{delete\-This()}'. \hypertarget{class_token_ade1a6122a5d9a10c24f8d30ac3216491}{\index{Token@{Token}!erase\-Tokens@{erase\-Tokens}}
+\index{erase\-Tokens@{erase\-Tokens}!Token@{Token}}
+\subsubsection[{erase\-Tokens}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::erase\-Tokens (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$}]{begin, }
+\item[{const {\bf Token} $\ast$}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_token_ade1a6122a5d9a10c24f8d30ac3216491}
+Delete tokens between begin and end. E.\-g. if begin = 1 and end = 5, tokens 2,3 and 4 would be erased.
+
+
+\begin{DoxyParams}{Parameters}
+{\em begin} & Tokens after this will be erased. \\
+\hline
+{\em end} & Tokens before this will be erased. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_token_a11338488ea971c161ae15022d86a7cf4}{\index{Token@{Token}!file\-Index@{file\-Index}}
+\index{file\-Index@{file\-Index}!Token@{Token}}
+\subsubsection[{file\-Index}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Token\-::file\-Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a11338488ea971c161ae15022d86a7cf4}
+\hypertarget{class_token_a6a9f2f093da1c7bc5fe7e6993434e15f}{\index{Token@{Token}!file\-Index@{file\-Index}}
+\index{file\-Index@{file\-Index}!Token@{Token}}
+\subsubsection[{file\-Index}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::file\-Index (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{index\-Of\-File}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a6a9f2f093da1c7bc5fe7e6993434e15f}
+\hypertarget{class_token_a03993958b572a6fd19b5eb5075e68c17}{\index{Token@{Token}!find\-Closing\-Bracket@{find\-Closing\-Bracket}}
+\index{find\-Closing\-Bracket@{find\-Closing\-Bracket}!Token@{Token}}
+\subsubsection[{find\-Closing\-Bracket}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::find\-Closing\-Bracket (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$\&}]{closing}
+\end{DoxyParamCaption}
+) const}}\label{class_token_a03993958b572a6fd19b5eb5075e68c17}
+Returns the closing bracket of opening '$<$'. Should only be used if \hyperlink{class_token_accbffd8560e96f4fd7e9e9e33e04b773}{link()} is unavailable. 
+\begin{DoxyParams}{Parameters}
+{\em closing} & The closing token is stored in that parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+success 
+\end{DoxyReturn}
+\hypertarget{class_token_a36b9cdfbf8da9542ae8d0ef3a9569e15}{\index{Token@{Token}!find\-Closing\-Bracket@{find\-Closing\-Bracket}}
+\index{find\-Closing\-Bracket@{find\-Closing\-Bracket}!Token@{Token}}
+\subsubsection[{find\-Closing\-Bracket}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::find\-Closing\-Bracket (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$\&}]{closing}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a36b9cdfbf8da9542ae8d0ef3a9569e15}
+\hypertarget{class_token_a129738123e5ddc405eae3245a1c7d487}{\index{Token@{Token}!findmatch@{findmatch}}
+\index{findmatch@{findmatch}!Token@{Token}}
+\subsubsection[{findmatch}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token} $\ast$ Token\-::findmatch (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const char}]{pattern\mbox{[}$\,$\mbox{]}, }
+\item[{unsigned int}]{var\-Id = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_token_a129738123e5ddc405eae3245a1c7d487}
+\hypertarget{class_token_a8121965cfa2cec3ce0c074299a0219e0}{\index{Token@{Token}!findmatch@{findmatch}}
+\index{findmatch@{findmatch}!Token@{Token}}
+\subsubsection[{findmatch}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token} $\ast$ Token\-::findmatch (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const char}]{pattern\mbox{[}$\,$\mbox{]}, }
+\item[{const {\bf Token} $\ast$}]{end, }
+\item[{unsigned int}]{var\-Id = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_token_a8121965cfa2cec3ce0c074299a0219e0}
+\hypertarget{class_token_a0b7c3cba682eb1ec914935468d13f909}{\index{Token@{Token}!findsimplematch@{findsimplematch}}
+\index{findsimplematch@{findsimplematch}!Token@{Token}}
+\subsubsection[{findsimplematch}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token} $\ast$ Token\-::findsimplematch (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const char}]{pattern\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_token_a0b7c3cba682eb1ec914935468d13f909}
+\hypertarget{class_token_a770b45407b4fe8fa45b32352aca45183}{\index{Token@{Token}!findsimplematch@{findsimplematch}}
+\index{findsimplematch@{findsimplematch}!Token@{Token}}
+\subsubsection[{findsimplematch}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token} $\ast$ Token\-::findsimplematch (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const char}]{pattern\mbox{[}$\,$\mbox{]}, }
+\item[{const {\bf Token} $\ast$}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_token_a770b45407b4fe8fa45b32352aca45183}
+\hypertarget{class_token_a3fe50caa3292df9132ab5894c322634c}{\index{Token@{Token}!get\-Str\-Length@{get\-Str\-Length}}
+\index{get\-Str\-Length@{get\-Str\-Length}!Token@{Token}}
+\subsubsection[{get\-Str\-Length}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t Token\-::get\-Str\-Length (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_token_a3fe50caa3292df9132ab5894c322634c}
+Return length of C-\/string.
+
+Should be called for str\% tokens only.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tok} & token with C-\/string \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_token_a51013b95047f42dd1793badc96d4d169}{\index{Token@{Token}!insert\-Token@{insert\-Token}}
+\index{insert\-Token@{insert\-Token}!Token@{Token}}
+\subsubsection[{insert\-Token}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::insert\-Token (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{token\-Str}
+\end{DoxyParamCaption}
+)}}\label{class_token_a51013b95047f42dd1793badc96d4d169}
+Insert new token after this token. This function will handle relations between next and previous token also. 
+\begin{DoxyParams}{Parameters}
+{\em token\-Str} & String for the new token. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_token_a488f3e5d59e885bc6022c824abd9f46b}{\index{Token@{Token}!is\-Arithmetical\-Op@{is\-Arithmetical\-Op}}
+\index{is\-Arithmetical\-Op@{is\-Arithmetical\-Op}!Token@{Token}}
+\subsubsection[{is\-Arithmetical\-Op}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::is\-Arithmetical\-Op (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a488f3e5d59e885bc6022c824abd9f46b}
+\hypertarget{class_token_a74231688e47d64d848bae35b5d304269}{\index{Token@{Token}!is\-Assignment\-Op@{is\-Assignment\-Op}}
+\index{is\-Assignment\-Op@{is\-Assignment\-Op}!Token@{Token}}
+\subsubsection[{is\-Assignment\-Op}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::is\-Assignment\-Op (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a74231688e47d64d848bae35b5d304269}
+\hypertarget{class_token_a520b2ae089ab3c9b3da7911c4cba4430}{\index{Token@{Token}!is\-Boolean@{is\-Boolean}}
+\index{is\-Boolean@{is\-Boolean}!Token@{Token}}
+\subsubsection[{is\-Boolean}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::is\-Boolean (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a520b2ae089ab3c9b3da7911c4cba4430}
+\hypertarget{class_token_ac8bb9c0f427d1d6dc2447c1976ee977c}{\index{Token@{Token}!is\-Expanded\-Macro@{is\-Expanded\-Macro}}
+\index{is\-Expanded\-Macro@{is\-Expanded\-Macro}!Token@{Token}}
+\subsubsection[{is\-Expanded\-Macro}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::is\-Expanded\-Macro (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_ac8bb9c0f427d1d6dc2447c1976ee977c}
+\hypertarget{class_token_a8faf9be47546e775eeec8897d6277f29}{\index{Token@{Token}!is\-Extended\-Op@{is\-Extended\-Op}}
+\index{is\-Extended\-Op@{is\-Extended\-Op}!Token@{Token}}
+\subsubsection[{is\-Extended\-Op}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::is\-Extended\-Op (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a8faf9be47546e775eeec8897d6277f29}
+\hypertarget{class_token_abf5480aca950bb5203c0ca63cf3888f1}{\index{Token@{Token}!is\-Long@{is\-Long}}
+\index{is\-Long@{is\-Long}!Token@{Token}}
+\subsubsection[{is\-Long}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::is\-Long (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_abf5480aca950bb5203c0ca63cf3888f1}
+\hypertarget{class_token_add1b7a064c963cc005916cca3840185a}{\index{Token@{Token}!is\-Long@{is\-Long}}
+\index{is\-Long@{is\-Long}!Token@{Token}}
+\subsubsection[{is\-Long}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::is\-Long (
+\begin{DoxyParamCaption}
+\item[{bool}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_add1b7a064c963cc005916cca3840185a}
+\hypertarget{class_token_a5a21d079041cf32cf96fe5d235b8547d}{\index{Token@{Token}!is\-Name@{is\-Name}}
+\index{is\-Name@{is\-Name}!Token@{Token}}
+\subsubsection[{is\-Name}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::is\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a5a21d079041cf32cf96fe5d235b8547d}
+\hypertarget{class_token_af8bc2a088a9c47a35e05bd77e8758ab6}{\index{Token@{Token}!is\-Number@{is\-Number}}
+\index{is\-Number@{is\-Number}!Token@{Token}}
+\subsubsection[{is\-Number}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::is\-Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_af8bc2a088a9c47a35e05bd77e8758ab6}
+\hypertarget{class_token_a579c49f0cd5707bc1edc62518ac0b847}{\index{Token@{Token}!is\-Op@{is\-Op}}
+\index{is\-Op@{is\-Op}!Token@{Token}}
+\subsubsection[{is\-Op}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::is\-Op (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a579c49f0cd5707bc1edc62518ac0b847}
+\hypertarget{class_token_a86549b2319075b91e31d6bb0e976d997}{\index{Token@{Token}!is\-Pointer\-Compare@{is\-Pointer\-Compare}}
+\index{is\-Pointer\-Compare@{is\-Pointer\-Compare}!Token@{Token}}
+\subsubsection[{is\-Pointer\-Compare}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::is\-Pointer\-Compare (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a86549b2319075b91e31d6bb0e976d997}
+\hypertarget{class_token_abc4e058e6374780d9a46f4dbef442ae0}{\index{Token@{Token}!is\-Pointer\-Compare@{is\-Pointer\-Compare}}
+\index{is\-Pointer\-Compare@{is\-Pointer\-Compare}!Token@{Token}}
+\subsubsection[{is\-Pointer\-Compare}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::is\-Pointer\-Compare (
+\begin{DoxyParamCaption}
+\item[{bool}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_abc4e058e6374780d9a46f4dbef442ae0}
+\hypertarget{class_token_a205725e9359e06a1d3ad8dda0f4176dc}{\index{Token@{Token}!is\-Signed@{is\-Signed}}
+\index{is\-Signed@{is\-Signed}!Token@{Token}}
+\subsubsection[{is\-Signed}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::is\-Signed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a205725e9359e06a1d3ad8dda0f4176dc}
+\hypertarget{class_token_a70aa9b1ef301c8d970351e4491223082}{\index{Token@{Token}!is\-Signed@{is\-Signed}}
+\index{is\-Signed@{is\-Signed}!Token@{Token}}
+\subsubsection[{is\-Signed}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::is\-Signed (
+\begin{DoxyParamCaption}
+\item[{bool}]{sign}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a70aa9b1ef301c8d970351e4491223082}
+\hypertarget{class_token_a0ae031b055c2b8685f310746edce86e4}{\index{Token@{Token}!is\-Standard\-Type@{is\-Standard\-Type}}
+\index{is\-Standard\-Type@{is\-Standard\-Type}!Token@{Token}}
+\subsubsection[{is\-Standard\-Type}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::is\-Standard\-Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a0ae031b055c2b8685f310746edce86e4}
+\hypertarget{class_token_a68560a16b5a805b23cde07c72444fc2d}{\index{Token@{Token}!is\-Unsigned@{is\-Unsigned}}
+\index{is\-Unsigned@{is\-Unsigned}!Token@{Token}}
+\subsubsection[{is\-Unsigned}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::is\-Unsigned (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a68560a16b5a805b23cde07c72444fc2d}
+\hypertarget{class_token_a6de74ef17a44213bde89de15a2ca3709}{\index{Token@{Token}!is\-Unsigned@{is\-Unsigned}}
+\index{is\-Unsigned@{is\-Unsigned}!Token@{Token}}
+\subsubsection[{is\-Unsigned}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::is\-Unsigned (
+\begin{DoxyParamCaption}
+\item[{bool}]{sign}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a6de74ef17a44213bde89de15a2ca3709}
+\hypertarget{class_token_aaef3faac8129a3daf8d00ceae51cb61d}{\index{Token@{Token}!is\-Unused@{is\-Unused}}
+\index{is\-Unused@{is\-Unused}!Token@{Token}}
+\subsubsection[{is\-Unused}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::is\-Unused (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_aaef3faac8129a3daf8d00ceae51cb61d}
+\hypertarget{class_token_a666279b76aca7755e82e408c14f1d169}{\index{Token@{Token}!is\-Unused@{is\-Unused}}
+\index{is\-Unused@{is\-Unused}!Token@{Token}}
+\subsubsection[{is\-Unused}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::is\-Unused (
+\begin{DoxyParamCaption}
+\item[{bool}]{used}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a666279b76aca7755e82e408c14f1d169}
+\hypertarget{class_token_a36c8c3cd693ca2de2de5a0444ca3f6c7}{\index{Token@{Token}!is\-Upper\-Case\-Name@{is\-Upper\-Case\-Name}}
+\index{is\-Upper\-Case\-Name@{is\-Upper\-Case\-Name}!Token@{Token}}
+\subsubsection[{is\-Upper\-Case\-Name}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::is\-Upper\-Case\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_token_a36c8c3cd693ca2de2de5a0444ca3f6c7}
+\hypertarget{class_token_a3331d71600856d73b341c1b8c4ca359c}{\index{Token@{Token}!linenr@{linenr}}
+\index{linenr@{linenr}!Token@{Token}}
+\subsubsection[{linenr}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Token\-::linenr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a3331d71600856d73b341c1b8c4ca359c}
+\hypertarget{class_token_af37bf6ea4bd856cd80dc8ea4a9f1ec90}{\index{Token@{Token}!linenr@{linenr}}
+\index{linenr@{linenr}!Token@{Token}}
+\subsubsection[{linenr}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::linenr (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{line\-Number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_af37bf6ea4bd856cd80dc8ea4a9f1ec90}
+\hypertarget{class_token_accbffd8560e96f4fd7e9e9e33e04b773}{\index{Token@{Token}!link@{link}}
+\index{link@{link}!Token@{Token}}
+\subsubsection[{link}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::link (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$}]{link\-To\-Token}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_accbffd8560e96f4fd7e9e9e33e04b773}
+Create link to given token 
+\begin{DoxyParams}{Parameters}
+{\em link\-To\-Token} & The token where this token should link to. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_token_a5508a2a47963075de2eb6e2aeb18e643}{\index{Token@{Token}!link@{link}}
+\index{link@{link}!Token@{Token}}
+\subsubsection[{link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Token}$\ast$ Token\-::link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a5508a2a47963075de2eb6e2aeb18e643}
+Return token where this token links to. Supported links are\-: \char`\"{}\{\char`\"{} $<$-\/$>$ \char`\"{}\}\char`\"{} \char`\"{}(\char`\"{} $<$-\/$>$ \char`\"{})\char`\"{} \char`\"{}\mbox{[}\char`\"{} $<$-\/$>$ \char`\"{}\mbox{]}\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+The token where this token links to. 
+\end{DoxyReturn}
+\hypertarget{class_token_ad9138d6509a90f18618c2ace0770f8f0}{\index{Token@{Token}!link\-At@{link\-At}}
+\index{link\-At@{link\-At}!Token@{Token}}
+\subsubsection[{link\-At}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token} $\ast$ Token\-::link\-At (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}}\label{class_token_ad9138d6509a90f18618c2ace0770f8f0}
+Returns the link to the token in given index, related to this token. For example index 1 would return the link to next token. \hypertarget{class_token_abfafe70587786bcd15bb631f8a11069f}{\index{Token@{Token}!link\-At@{link\-At}}
+\index{link\-At@{link\-At}!Token@{Token}}
+\subsubsection[{link\-At}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Token} $\ast$ Token\-::link\-At (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{class_token_abfafe70587786bcd15bb631f8a11069f}
+\hypertarget{class_token_a519623098bde6496825e49364575dadf}{\index{Token@{Token}!Match@{Match}}
+\index{Match@{Match}!Token@{Token}}
+\subsubsection[{Match}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::\-Match (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const char}]{pattern\mbox{[}$\,$\mbox{]}, }
+\item[{unsigned int}]{varid = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_token_a519623098bde6496825e49364575dadf}
+Match given token (or list of tokens) to a pattern list.
+
+Possible patterns
+\begin{DoxyItemize}
+\item \char`\"{}\%any\%\char`\"{} any token
+\item \char`\"{}\%var\%\char`\"{} any token which is a name or type e.\-g. \char`\"{}hello\char`\"{} or \char`\"{}int\char`\"{}
+\item \char`\"{}\%type\%\char`\"{} Anything that can be a variable type, e.\-g. \char`\"{}int\char`\"{}, but not \char`\"{}delete\char`\"{}.
+\item \char`\"{}\%num\%\char`\"{} Any numeric token, e.\-g. \char`\"{}23\char`\"{}
+\item \char`\"{}\%bool\%\char`\"{} true or false
+\item \char`\"{}\%str\%\char`\"{} Any token starting with "-\/character (C-\/string).
+\item \char`\"{}\%varid\%\char`\"{} Match with parameter varid
+\item \char`\"{}\%or\%\char`\"{} A bitwise-\/or operator '$|$'
+\item \char`\"{}\%oror\%\char`\"{} A logical-\/or operator '$|$$|$'
+\item \char`\"{}\mbox{[}abc\mbox{]}\char`\"{} Any of the characters 'a' or 'b' or 'c'
+\item \char`\"{}int$|$void$|$char\char`\"{} Any of the strings, int, void or char
+\item \char`\"{}int$|$void$|$char$|$\char`\"{} Any of the strings, int, void or char or empty string
+\item \char`\"{}!!else\char`\"{} No tokens or any token that is not \char`\"{}else\char`\"{}.
+\item \char`\"{}some\-Random\-Text\char`\"{} If token contains \char`\"{}some\-Random\-Text\char`\"{}.
+\end{DoxyItemize}
+
+multi-\/compare patterns such as \char`\"{}int$|$void$|$char\char`\"{} can contain or\%, oror\% and op\% but it is not recommended to put such an cmd\% as the first pattern.
+
+The patterns can be also combined to compare to multiple tokens at once by separating tokens with a space, e.\-g. \char`\"{}) const$|$void \{\char`\"{} will return true if first token is ')' next token is either \char`\"{}const\char`\"{} or \char`\"{}void\char`\"{} and token after that is '\{'. If even one of the tokens does not match its pattern, false is returned.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000058}{Todo}]pattern \char`\"{}\%type\%$|$\%num\%\char`\"{} should mean either a type or a num.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em tok} & List of tokens to be compared to the pattern \\
+\hline
+{\em pattern} & The pattern against which the tokens are compared, e.\-g. \char`\"{}const\char`\"{} or \char`\"{}) const$|$volatile$|$ \{\char`\"{}. \\
+\hline
+{\em varid} & if varid\% is given in the pattern the \hyperlink{class_token_a42fd6bcafcc8e5a4bd8f45b105211b13}{Token\-::var\-Id} will be matched against this argument \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if given token matches with given pattern false if given token does not match with given pattern 
+\end{DoxyReturn}
+\hypertarget{class_token_a969fe5b670d233692b05d03f8d8237c1}{\index{Token@{Token}!move@{move}}
+\index{move@{move}!Token@{Token}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::move (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$}]{src\-Start, }
+\item[{{\bf Token} $\ast$}]{src\-End, }
+\item[{{\bf Token} $\ast$}]{new\-Location}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_token_a969fe5b670d233692b05d03f8d8237c1}
+Move src\-Start and src\-End tokens and all tokens between them into new a location. Only links between tokens are changed. 
+\begin{DoxyParams}{Parameters}
+{\em src\-Start} & This is the first token to be moved \\
+\hline
+{\em src\-End} & The last token to be moved \\
+\hline
+{\em new\-Location} & src\-Start will be placed after this token. \\
+\hline
+\end{DoxyParams}
+\mbox{[}new\-Location\mbox{]} -\/$>$ b -\/$>$ c -\/$>$ \mbox{[}src\-Start\mbox{]} -\/$>$ \mbox{[}src\-End\mbox{]} -\/$>$ f \hypertarget{class_token_af62e580087bc1c60f7e07d279716b508}{\index{Token@{Token}!multi\-Compare@{multi\-Compare}}
+\index{multi\-Compare@{multi\-Compare}!Token@{Token}}
+\subsubsection[{multi\-Compare}]{\setlength{\rightskip}{0pt plus 5cm}int Token\-::multi\-Compare (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{haystack, }
+\item[{const char $\ast$}]{needle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_token_af62e580087bc1c60f7e07d279716b508}
+Needle is build from multiple alternatives. If one of them is equal to haystack, return value is 1. If there are no matches, but one alternative to needle is empty string, return value is 0. If needle was not found, return value is -\/1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em haystack} & e.\-g. \char`\"{}one$|$two\char`\"{} or \char`\"{}$|$one$|$two\char`\"{} \\
+\hline
+{\em needle} & e.\-g. \char`\"{}one\char`\"{}, \char`\"{}two\char`\"{} or \char`\"{}invalid\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if needle is found from the haystack 0 if needle was empty string -\/1 if needle was not found 
+\end{DoxyReturn}
+\hypertarget{class_token_a64b1ca2e4b29a1075f8913e037c2d76e}{\index{Token@{Token}!next@{next}}
+\index{next@{next}!Token@{Token}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Token}$\ast$ Token\-::next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a64b1ca2e4b29a1075f8913e037c2d76e}
+\hypertarget{class_token_ad302eee56408d5f3e63c27286c51403c}{\index{Token@{Token}!next\-Argument@{next\-Argument}}
+\index{next\-Argument@{next\-Argument}!Token@{Token}}
+\subsubsection[{next\-Argument}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Token} $\ast$ Token\-::next\-Argument (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_token_ad302eee56408d5f3e63c27286c51403c}
+Returns the first token of the next argument. Does only work on argument lists. Returns 0, if there is no next argument \hypertarget{class_token_a51faf0d9b94f304f71223c0990732297}{\index{Token@{Token}!previous@{previous}}
+\index{previous@{previous}!Token@{Token}}
+\subsubsection[{previous}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Token}$\ast$ Token\-::previous (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a51faf0d9b94f304f71223c0990732297}
+\hypertarget{class_token_a64758fe7f142582c2144b5981bc8a472}{\index{Token@{Token}!print\-Out@{print\-Out}}
+\index{print\-Out@{print\-Out}!Token@{Token}}
+\subsubsection[{print\-Out}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::print\-Out (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{title = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}}\label{class_token_a64758fe7f142582c2144b5981bc8a472}
+For debugging purposes, prints token and all tokens followed by it. 
+\begin{DoxyParams}{Parameters}
+{\em title} & Title for the printout or use default parameter or 0 for no title. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_token_ae6017512a4f2ab1d2b1d24ce38dc469a}{\index{Token@{Token}!print\-Out@{print\-Out}}
+\index{print\-Out@{print\-Out}!Token@{Token}}
+\subsubsection[{print\-Out}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::print\-Out (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{title, }
+\item[{const std\-::vector$<$ std\-::string $>$ \&}]{file\-Names}
+\end{DoxyParamCaption}
+) const}}\label{class_token_ae6017512a4f2ab1d2b1d24ce38dc469a}
+For debugging purposes, prints token and all tokens followed by it. 
+\begin{DoxyParams}{Parameters}
+{\em title} & Title for the printout or use default parameter or 0 for no title. \\
+\hline
+{\em file\-Names} & Prints out file name instead of file index. File index should match the index of the string in this vector. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_token_af554f9ac75213ee66d5e9fd99c7f0ff5}{\index{Token@{Token}!progress\-Value@{progress\-Value}}
+\index{progress\-Value@{progress\-Value}!Token@{Token}}
+\subsubsection[{progress\-Value}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Token\-::progress\-Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_af554f9ac75213ee66d5e9fd99c7f0ff5}
+Get progress\-Value \hypertarget{class_token_a3c6eec9d87b323d937b06724e74be76c}{\index{Token@{Token}!replace@{replace}}
+\index{replace@{replace}!Token@{Token}}
+\subsubsection[{replace}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::replace (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$}]{replace\-This, }
+\item[{{\bf Token} $\ast$}]{start, }
+\item[{{\bf Token} $\ast$}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_token_a3c6eec9d87b323d937b06724e74be76c}
+Replace token replace\-This with tokens between start and end, including start and end. The replace\-This token is deleted. 
+\begin{DoxyParams}{Parameters}
+{\em replace\-This} & This token will be deleted. \\
+\hline
+{\em start} & This will be in the place of replace\-This \\
+\hline
+{\em end} & This is also in the place of replace\-This \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_token_a0be6f9cb337ba79fa497eed4a47e9ea5}{\index{Token@{Token}!scope@{scope}}
+\index{scope@{scope}!Token@{Token}}
+\subsubsection[{scope}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::scope (
+\begin{DoxyParamCaption}
+\item[{{\bf Scope} $\ast$}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a0be6f9cb337ba79fa497eed4a47e9ea5}
+Associate this token with given scope 
+\begin{DoxyParams}{Parameters}
+{\em scope} & \hyperlink{class_scope}{Scope} to be associated \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_token_a5b1a0fb67cf31f6e1b4ac1b10a658268}{\index{Token@{Token}!scope@{scope}}
+\index{scope@{scope}!Token@{Token}}
+\subsubsection[{scope}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scope}$\ast$ Token\-::scope (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a5b1a0fb67cf31f6e1b4ac1b10a658268}
+Returns a pointer to the scope containing this token. \hypertarget{class_token_a19d866e6ef148ef60c3687465613af5f}{\index{Token@{Token}!set\-Expanded\-Macro@{set\-Expanded\-Macro}}
+\index{set\-Expanded\-Macro@{set\-Expanded\-Macro}!Token@{Token}}
+\subsubsection[{set\-Expanded\-Macro}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::set\-Expanded\-Macro (
+\begin{DoxyParamCaption}
+\item[{bool}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a19d866e6ef148ef60c3687465613af5f}
+\hypertarget{class_token_a0f73cc13be77ebc806962972a8ae8092}{\index{Token@{Token}!simple\-Match@{simple\-Match}}
+\index{simple\-Match@{simple\-Match}!Token@{Token}}
+\subsubsection[{simple\-Match}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-::simple\-Match (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const char}]{pattern\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_token_a0f73cc13be77ebc806962972a8ae8092}
+Match given token (or list of tokens) to a pattern list.
+
+Possible patterns \char`\"{}some\-Random\-Text\char`\"{} If token contains \char`\"{}some\-Random\-Text\char`\"{}. \begin{DoxyNote}{Note}
+Use \hyperlink{class_token_a519623098bde6496825e49364575dadf}{Match()} if you want to use flags in patterns
+\end{DoxyNote}
+The patterns can be also combined to compare to multiple tokens at once by separating tokens with a space, e.\-g. \char`\"{}) void \{\char`\"{} will return true if first token is ')' next token is \char`\"{}void\char`\"{} and token after that is '\{'. If even one of the tokens does not match its pattern, false is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tok} & List of tokens to be compared to the pattern \\
+\hline
+{\em pattern} & The pattern against which the tokens are compared, e.\-g. \char`\"{}const\char`\"{} or \char`\"{}) void \{\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if given token matches with given pattern false if given token does not match with given pattern 
+\end{DoxyReturn}
+\hypertarget{class_token_a25c9fce751f8059dc0e3b82e4e80576d}{\index{Token@{Token}!str@{str}}
+\index{str@{str}!Token@{Token}}
+\subsubsection[{str}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::str (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{class_token_a25c9fce751f8059dc0e3b82e4e80576d}
+\hypertarget{class_token_aa33330e2daeccaa32f3a413ffe668d46}{\index{Token@{Token}!str@{str}}
+\index{str@{str}!Token@{Token}}
+\subsubsection[{str}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& Token\-::str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_aa33330e2daeccaa32f3a413ffe668d46}
+\hypertarget{class_token_a6e5d5fef298aadf811bd5089de1813c6}{\index{Token@{Token}!str\-At@{str\-At}}
+\index{str\-At@{str\-At}!Token@{Token}}
+\subsubsection[{str\-At}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string \& Token\-::str\-At (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}}\label{class_token_a6e5d5fef298aadf811bd5089de1813c6}
+\hypertarget{class_token_a14499031eca21ffb2059b882db35c090}{\index{Token@{Token}!stringify@{stringify}}
+\index{stringify@{stringify}!Token@{Token}}
+\subsubsection[{stringify}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::stringify (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{os, }
+\item[{bool}]{varid, }
+\item[{bool}]{attributes}
+\end{DoxyParamCaption}
+) const}}\label{class_token_a14499031eca21ffb2059b882db35c090}
+Stringify a token 
+\begin{DoxyParams}{Parameters}
+{\em os} & The result is shifted into that output stream \\
+\hline
+{\em varid} & Print varids. (Style\-: \char`\"{}varname@id\char`\"{}) \\
+\hline
+{\em attributes} & Print attributes of tokens like \char`\"{}unsigned\char`\"{} in front of it. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_token_a77586f9ea4246c070cb6b00edacf470c}{\index{Token@{Token}!stringify\-List@{stringify\-List}}
+\index{stringify\-List@{stringify\-List}!Token@{Token}}
+\subsubsection[{stringify\-List}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Token\-::stringify\-List (
+\begin{DoxyParamCaption}
+\item[{bool}]{varid, }
+\item[{bool}]{attributes, }
+\item[{bool}]{linenumbers, }
+\item[{bool}]{linebreaks, }
+\item[{bool}]{files, }
+\item[{const std\-::vector$<$ std\-::string $>$ $\ast$}]{file\-Names = {\ttfamily 0}, }
+\item[{const {\bf Token} $\ast$}]{end = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}}\label{class_token_a77586f9ea4246c070cb6b00edacf470c}
+Stringify a list of token, from current instance on. 
+\begin{DoxyParams}{Parameters}
+{\em varid} & Print varids. (Style\-: \char`\"{}varname@id\char`\"{}) \\
+\hline
+{\em attributes} & Print attributes of tokens like \char`\"{}unsigned\char`\"{} in front of it. \\
+\hline
+{\em linenumbers} & Print line number in front of each line \\
+\hline
+{\em linebreaks} & Insert \par
+ into string when line number changes \\
+\hline
+{\em files} & print Files as numbers or as names (if file\-Names is given) \\
+\hline
+{\em file\-Names} & Vector of filenames. Used (if given) to print filenames as strings instead of numbers. \\
+\hline
+{\em end} & Stringification ends before this token is reached. 0 to stringify until end of list. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Stringified token list as a string 
+\end{DoxyReturn}
+\hypertarget{class_token_a3a58be0a20e5f935ba23adeaa227f000}{\index{Token@{Token}!stringify\-List@{stringify\-List}}
+\index{stringify\-List@{stringify\-List}!Token@{Token}}
+\subsubsection[{stringify\-List}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Token\-::stringify\-List (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{end, }
+\item[{bool}]{attributes = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const}}\label{class_token_a3a58be0a20e5f935ba23adeaa227f000}
+\hypertarget{class_token_a6e7553ba6bb9e788b0ebbed7ec41ecff}{\index{Token@{Token}!stringify\-List@{stringify\-List}}
+\index{stringify\-List@{stringify\-List}!Token@{Token}}
+\subsubsection[{stringify\-List}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Token\-::stringify\-List (
+\begin{DoxyParamCaption}
+\item[{bool}]{varid = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}}\label{class_token_a6e7553ba6bb9e788b0ebbed7ec41ecff}
+\hypertarget{class_token_a321ee189f27a99a7c1cd527e93d29025}{\index{Token@{Token}!str\-Value@{str\-Value}}
+\index{str\-Value@{str\-Value}!Token@{Token}}
+\subsubsection[{str\-Value}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Token\-::str\-Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_token_a321ee189f27a99a7c1cd527e93d29025}
+This can be called only for tokens that are strings, else the assert() is called. If \hyperlink{class_token}{Token} is e.\-g. '\char`\"{}hello\char`\"{}', this will return 'hello' (removing the double quotes). \begin{DoxyReturn}{Returns}
+String value 
+\end{DoxyReturn}
+\hypertarget{class_token_ac75b6b92772de46c8979ae4dbf5be8c2}{\index{Token@{Token}!tok\-At@{tok\-At}}
+\index{tok\-At@{tok\-At}!Token@{Token}}
+\subsubsection[{tok\-At}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token} $\ast$ Token\-::tok\-At (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+) const}}\label{class_token_ac75b6b92772de46c8979ae4dbf5be8c2}
+Returns token in given index, related to this token. For example index 1 would return next token, and 2 would return next from that one. \hypertarget{class_token_a5f6ce00265a2e01c9f1fbb8542831918}{\index{Token@{Token}!tok\-At@{tok\-At}}
+\index{tok\-At@{tok\-At}!Token@{Token}}
+\subsubsection[{tok\-At}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Token} $\ast$ Token\-::tok\-At (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}}\label{class_token_a5f6ce00265a2e01c9f1fbb8542831918}
+\hypertarget{class_token_aa50a35dc309d8739696d736de59e8746}{\index{Token@{Token}!type@{type}}
+\index{type@{type}!Token@{Token}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Type} Token\-::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_aa50a35dc309d8739696d736de59e8746}
+\hypertarget{class_token_a824d6ce5c5d30073dc619318620c6b3d}{\index{Token@{Token}!type@{type}}
+\index{type@{type}!Token@{Token}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::type (
+\begin{DoxyParamCaption}
+\item[{{\bf Type}}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a824d6ce5c5d30073dc619318620c6b3d}
+\hypertarget{class_token_a42fd6bcafcc8e5a4bd8f45b105211b13}{\index{Token@{Token}!var\-Id@{var\-Id}}
+\index{var\-Id@{var\-Id}!Token@{Token}}
+\subsubsection[{var\-Id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Token\-::var\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a42fd6bcafcc8e5a4bd8f45b105211b13}
+\hypertarget{class_token_a2f9ddc7258f23b67895217ddb49aee60}{\index{Token@{Token}!var\-Id@{var\-Id}}
+\index{var\-Id@{var\-Id}!Token@{Token}}
+\subsubsection[{var\-Id}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-::var\-Id (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_a2f9ddc7258f23b67895217ddb49aee60}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{token_8h}{token.\-h}\item 
+lib/\hyperlink{token_8cpp}{token.\-cpp}\end{DoxyCompactItemize}

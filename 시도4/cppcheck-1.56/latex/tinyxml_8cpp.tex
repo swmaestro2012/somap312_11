@@ -1,0 +1,57 @@
+\hypertarget{tinyxml_8cpp}{\section{externals/tinyxml/tinyxml.cpp File Reference}
+\label{tinyxml_8cpp}\index{externals/tinyxml/tinyxml.\-cpp@{externals/tinyxml/tinyxml.\-cpp}}
+}
+{\ttfamily \#include $<$ctype.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}tinyxml.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+F\-I\-L\-E $\ast$ \hyperlink{tinyxml_8cpp_aae316d26cdf72c45de918553b2c61e20}{Ti\-Xml\-F\-Open} (const char $\ast$filename, const char $\ast$mode)
+\item 
+std\-::istream \& \hyperlink{tinyxml_8cpp_ab57bd426563c926844f65a78412e18b9}{operator$>$$>$} (std\-::istream \&in, \hyperlink{class_ti_xml_node}{Ti\-Xml\-Node} \&base)
+\item 
+std\-::ostream \& \hyperlink{tinyxml_8cpp_a86cd49cfb17a844c0010b3136ac966c7}{operator$<$$<$} (std\-::ostream \&out, const \hyperlink{class_ti_xml_node}{Ti\-Xml\-Node} \&base)
+\item 
+std\-::string \& \hyperlink{tinyxml_8cpp_a52ef17e7080df2490cf87bde380685ab}{operator$<$$<$} (std\-::string \&out, const \hyperlink{class_ti_xml_node}{Ti\-Xml\-Node} \&base)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{tinyxml_8cpp_a86cd49cfb17a844c0010b3136ac966c7}{\index{tinyxml.\-cpp@{tinyxml.\-cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!tinyxml.cpp@{tinyxml.\-cpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{out, }
+\item[{const {\bf Ti\-Xml\-Node} \&}]{base}
+\end{DoxyParamCaption}
+)}}\label{tinyxml_8cpp_a86cd49cfb17a844c0010b3136ac966c7}
+An output stream operator, for every class. Note that this outputs without any newlines or formatting, as opposed to Print(), which includes tabs and new lines.
+
+The operator$<$$<$ and operator$>$$>$ are not completely symmetric. Writing a node to a stream is very well defined. You'll get a nice stream of output, without any extra whitespace or newlines.
+
+But reading is not as well defined. (As it always is.) If you create a \hyperlink{class_ti_xml_element}{Ti\-Xml\-Element} (for example) and read that from an input stream, the text needs to define an element or junk will result. This is true of all input streams, but it's worth keeping in mind.
+
+A \hyperlink{class_ti_xml_document}{Ti\-Xml\-Document} will read nodes until it reads a root element, and all the children of that root element. \hypertarget{tinyxml_8cpp_a52ef17e7080df2490cf87bde380685ab}{\index{tinyxml.\-cpp@{tinyxml.\-cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!tinyxml.cpp@{tinyxml.\-cpp}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&}]{out, }
+\item[{const {\bf Ti\-Xml\-Node} \&}]{base}
+\end{DoxyParamCaption}
+)}}\label{tinyxml_8cpp_a52ef17e7080df2490cf87bde380685ab}
+\hypertarget{tinyxml_8cpp_ab57bd426563c926844f65a78412e18b9}{\index{tinyxml.\-cpp@{tinyxml.\-cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!tinyxml.cpp@{tinyxml.\-cpp}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\-::istream \&}]{in, }
+\item[{{\bf Ti\-Xml\-Node} \&}]{base}
+\end{DoxyParamCaption}
+)}}\label{tinyxml_8cpp_ab57bd426563c926844f65a78412e18b9}
+An input stream operator, for every class. Tolerant of newlines and formatting, but doesn't expect them. \hypertarget{tinyxml_8cpp_aae316d26cdf72c45de918553b2c61e20}{\index{tinyxml.\-cpp@{tinyxml.\-cpp}!Ti\-Xml\-F\-Open@{Ti\-Xml\-F\-Open}}
+\index{Ti\-Xml\-F\-Open@{Ti\-Xml\-F\-Open}!tinyxml.cpp@{tinyxml.\-cpp}}
+\subsubsection[{Ti\-Xml\-F\-Open}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E $\ast$ Ti\-Xml\-F\-Open (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{const char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{tinyxml_8cpp_aae316d26cdf72c45de918553b2c61e20}

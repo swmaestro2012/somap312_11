@@ -1,0 +1,187 @@
+\hypertarget{class_suppressions}{\section{Suppressions Class Reference}
+\label{class_suppressions}\index{Suppressions@{Suppressions}}
+}
+
+
+class for handling suppressions  
+
+
+
+
+{\ttfamily \#include $<$suppressions.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_suppressions_1_1_suppression_entry}{Suppression\-Entry}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{class_suppressions_aee3277fc25f8f187db345edd55e7ac15}{parse\-File} (std\-::istream \&istr)
+\begin{DoxyCompactList}\small\item\em Don't show errors listed in the file. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_suppressions_a551c8827307e49a4ba1c49e9263de88a}{add\-Suppression\-Line} (const std\-::string \&line)
+\begin{DoxyCompactList}\small\item\em Don't show the given error. \end{DoxyCompactList}\item 
+std\-::string \hyperlink{class_suppressions_a164a7e9132d606fab7db13a32f85a56d}{add\-Suppression} (const std\-::string \&error\-Id, const std\-::string \&file=\char`\"{}\char`\"{}, unsigned int line=0)
+\begin{DoxyCompactList}\small\item\em Don't show this error. If file and/or line are optional. In which case the error\-Id alone is used for filtering. \end{DoxyCompactList}\item 
+bool \hyperlink{class_suppressions_a864800f37da0ddd1747b85b76d1ac179}{is\-Suppressed} (const std\-::string \&error\-Id, const std\-::string \&file, unsigned int line)
+\begin{DoxyCompactList}\small\item\em Returns true if this message should not be shown to the user. \end{DoxyCompactList}\item 
+bool \hyperlink{class_suppressions_adb8b4041703c9fd79e4506a1166e0afa}{is\-Suppressed\-Local} (const std\-::string \&error\-Id, const std\-::string \&file, unsigned int line)
+\begin{DoxyCompactList}\small\item\em Returns true if this message should not be shown to the user (explicit files only, not glob patterns). \end{DoxyCompactList}\item 
+std\-::list$<$ \hyperlink{struct_suppressions_1_1_suppression_entry}{Suppression\-Entry} $>$ \hyperlink{class_suppressions_a1afed88b3119b9d65e0caf70c6e9c23a}{get\-Unmatched\-Local\-Suppressions} (const std\-::string \&file) const 
+\begin{DoxyCompactList}\small\item\em Returns list of unmatched local (per-\/file) suppressions. \end{DoxyCompactList}\item 
+std\-::list$<$ \hyperlink{struct_suppressions_1_1_suppression_entry}{Suppression\-Entry} $>$ \hyperlink{class_suppressions_a617f10685fdae57505e05caf19e6da5c}{get\-Unmatched\-Global\-Suppressions} () const 
+\begin{DoxyCompactList}\small\item\em Returns list of unmatched global (glob pattern) suppressions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class for handling suppressions 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_suppressions_a164a7e9132d606fab7db13a32f85a56d}{\index{Suppressions@{Suppressions}!add\-Suppression@{add\-Suppression}}
+\index{add\-Suppression@{add\-Suppression}!Suppressions@{Suppressions}}
+\subsubsection[{add\-Suppression}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Suppressions\-::add\-Suppression (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{error\-Id, }
+\item[{const std\-::string \&}]{file = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{unsigned int}]{line = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_suppressions_a164a7e9132d606fab7db13a32f85a56d}
+
+
+Don't show this error. If file and/or line are optional. In which case the error\-Id alone is used for filtering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\-Id} & the id for the error, e.\-g. \char`\"{}array\-Index\-Out\-Of\-Bounds\char`\"{} \\
+\hline
+{\em file} & File name with the path, e.\-g. \char`\"{}src/main.\-cpp\char`\"{} \\
+\hline
+{\em line} & number, e.\-g. \char`\"{}123\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error message. empty upon success 
+\end{DoxyReturn}
+\hypertarget{class_suppressions_a551c8827307e49a4ba1c49e9263de88a}{\index{Suppressions@{Suppressions}!add\-Suppression\-Line@{add\-Suppression\-Line}}
+\index{add\-Suppression\-Line@{add\-Suppression\-Line}!Suppressions@{Suppressions}}
+\subsubsection[{add\-Suppression\-Line}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Suppressions\-::add\-Suppression\-Line (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{line}
+\end{DoxyParamCaption}
+)}}\label{class_suppressions_a551c8827307e49a4ba1c49e9263de88a}
+
+
+Don't show the given error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & Description of error to suppress (in id\-:file\-:line format). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error message. empty upon success 
+\end{DoxyReturn}
+\hypertarget{class_suppressions_a617f10685fdae57505e05caf19e6da5c}{\index{Suppressions@{Suppressions}!get\-Unmatched\-Global\-Suppressions@{get\-Unmatched\-Global\-Suppressions}}
+\index{get\-Unmatched\-Global\-Suppressions@{get\-Unmatched\-Global\-Suppressions}!Suppressions@{Suppressions}}
+\subsubsection[{get\-Unmatched\-Global\-Suppressions}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<$ {\bf Suppressions\-::\-Suppression\-Entry} $>$ Suppressions\-::get\-Unmatched\-Global\-Suppressions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_suppressions_a617f10685fdae57505e05caf19e6da5c}
+
+
+Returns list of unmatched global (glob pattern) suppressions. 
+
+\begin{DoxyReturn}{Returns}
+list of unmatched suppressions 
+\end{DoxyReturn}
+\hypertarget{class_suppressions_a1afed88b3119b9d65e0caf70c6e9c23a}{\index{Suppressions@{Suppressions}!get\-Unmatched\-Local\-Suppressions@{get\-Unmatched\-Local\-Suppressions}}
+\index{get\-Unmatched\-Local\-Suppressions@{get\-Unmatched\-Local\-Suppressions}!Suppressions@{Suppressions}}
+\subsubsection[{get\-Unmatched\-Local\-Suppressions}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<$ {\bf Suppressions\-::\-Suppression\-Entry} $>$ Suppressions\-::get\-Unmatched\-Local\-Suppressions (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{file}
+\end{DoxyParamCaption}
+) const}}\label{class_suppressions_a1afed88b3119b9d65e0caf70c6e9c23a}
+
+
+Returns list of unmatched local (per-\/file) suppressions. 
+
+\begin{DoxyReturn}{Returns}
+list of unmatched suppressions 
+\end{DoxyReturn}
+\hypertarget{class_suppressions_a864800f37da0ddd1747b85b76d1ac179}{\index{Suppressions@{Suppressions}!is\-Suppressed@{is\-Suppressed}}
+\index{is\-Suppressed@{is\-Suppressed}!Suppressions@{Suppressions}}
+\subsubsection[{is\-Suppressed}]{\setlength{\rightskip}{0pt plus 5cm}bool Suppressions\-::is\-Suppressed (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{error\-Id, }
+\item[{const std\-::string \&}]{file, }
+\item[{unsigned int}]{line}
+\end{DoxyParamCaption}
+)}}\label{class_suppressions_a864800f37da0ddd1747b85b76d1ac179}
+
+
+Returns true if this message should not be shown to the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\-Id} & the id for the error, e.\-g. \char`\"{}array\-Index\-Out\-Of\-Bounds\char`\"{} \\
+\hline
+{\em file} & File name with the path, e.\-g. \char`\"{}src/main.\-cpp\char`\"{} \\
+\hline
+{\em line} & number, e.\-g. \char`\"{}123\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if this error is suppressed. 
+\end{DoxyReturn}
+\hypertarget{class_suppressions_adb8b4041703c9fd79e4506a1166e0afa}{\index{Suppressions@{Suppressions}!is\-Suppressed\-Local@{is\-Suppressed\-Local}}
+\index{is\-Suppressed\-Local@{is\-Suppressed\-Local}!Suppressions@{Suppressions}}
+\subsubsection[{is\-Suppressed\-Local}]{\setlength{\rightskip}{0pt plus 5cm}bool Suppressions\-::is\-Suppressed\-Local (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{error\-Id, }
+\item[{const std\-::string \&}]{file, }
+\item[{unsigned int}]{line}
+\end{DoxyParamCaption}
+)}}\label{class_suppressions_adb8b4041703c9fd79e4506a1166e0afa}
+
+
+Returns true if this message should not be shown to the user (explicit files only, not glob patterns). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\-Id} & the id for the error, e.\-g. \char`\"{}array\-Index\-Out\-Of\-Bounds\char`\"{} \\
+\hline
+{\em file} & File name with the path, e.\-g. \char`\"{}src/main.\-cpp\char`\"{} \\
+\hline
+{\em line} & number, e.\-g. \char`\"{}123\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if this error is suppressed. 
+\end{DoxyReturn}
+\hypertarget{class_suppressions_aee3277fc25f8f187db345edd55e7ac15}{\index{Suppressions@{Suppressions}!parse\-File@{parse\-File}}
+\index{parse\-File@{parse\-File}!Suppressions@{Suppressions}}
+\subsubsection[{parse\-File}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Suppressions\-::parse\-File (
+\begin{DoxyParamCaption}
+\item[{std\-::istream \&}]{istr}
+\end{DoxyParamCaption}
+)}}\label{class_suppressions_aee3277fc25f8f187db345edd55e7ac15}
+
+
+Don't show errors listed in the file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em istr} & Open file stream where errors can be read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+error message. empty upon success 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{suppressions_8h}{suppressions.\-h}\item 
+lib/\hyperlink{suppressions_8cpp}{suppressions.\-cpp}\end{DoxyCompactItemize}

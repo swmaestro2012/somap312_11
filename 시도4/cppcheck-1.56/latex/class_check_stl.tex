@@ -1,0 +1,214 @@
+\hypertarget{class_check_stl}{\section{Check\-Stl Class Reference}
+\label{class_check_stl}\index{Check\-Stl@{Check\-Stl}}
+}
+
+
+Check S\-T\-L usage (invalidation of iterators, mismatching containers, etc)  
+
+
+
+
+{\ttfamily \#include $<$checkstl.\-h$>$}
+
+Inheritance diagram for Check\-Stl\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_check_stl}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_check_stl_a065b77e2f5c0336f6bc784378782551d}{Check\-Stl} ()
+\item 
+\hyperlink{class_check_stl_a6dbba462c05bf5de06db94ba6408c2ee}{Check\-Stl} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\item 
+void \hyperlink{class_check_stl_a8a27e1c983d1615d224819c87bc1fadb}{run\-Simplified\-Checks} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\item 
+void \hyperlink{class_check_stl_a545ad4f0a38dba2bf8b1a6c48361f200}{stl\-Out\-Of\-Bounds} ()
+\item 
+void \hyperlink{class_check_stl_a8fb8b983714fee24ff14ac85ae5413c0}{iterators} ()
+\item 
+void \hyperlink{class_check_stl_a9edc5084d5d02131f9e0cc207e967f90}{mismatching\-Containers} ()
+\item 
+void \hyperlink{class_check_stl_a0950780cbd021c061e1c4bf45714edd4}{erase} ()
+\item 
+void \hyperlink{class_check_stl_ad5eaf234908520b84716512ea06ce13c}{erase\-Error} (const \hyperlink{class_token}{Token} $\ast$tok)
+\item 
+void \hyperlink{class_check_stl_a2abe071c77f90bb2c4de804480fae3a2}{pushback} ()
+\item 
+void \hyperlink{class_check_stl_a99214e13d8b25c2422d94e680c029639}{stl\-Boundries} ()
+\item 
+void \hyperlink{class_check_stl_a7f9b0180409369f45eaf701c64e7474e}{if\-\_\-find} ()
+\item 
+void \hyperlink{class_check_stl_a2fec71741636970fc79b997a0a1a4c83}{size} ()
+\item 
+void \hyperlink{class_check_stl_abe03476dc6368ba6c20ad90d7eb967a8}{redundant\-Condition} ()
+\item 
+void \hyperlink{class_check_stl_a0715e9b1395c5a8d6591ed238805eb7a}{missing\-Comparison} ()
+\begin{DoxyCompactList}\small\item\em Missing inner comparison, when incrementing iterator inside loop Dangers\-: \end{DoxyCompactList}\item 
+void \hyperlink{class_check_stl_a9ca51b7cf48aa43cfe9fea0afd704b06}{string\-\_\-c\-\_\-str} ()
+\item 
+void \hyperlink{class_check_stl_a659a0c88cde0e96a90df8e89b2cb8072}{check\-Auto\-Pointer} ()
+\begin{DoxyCompactList}\small\item\em Check for use and copy auto pointer \end{DoxyCompactList}\item 
+void \hyperlink{class_check_stl_a0c466bb5dc69db3dedb6f0f3e34e8269}{useless\-Calls} ()
+\begin{DoxyCompactList}\small\item\em Check calls that using them is useless \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Check S\-T\-L usage (invalidation of iterators, mismatching containers, etc) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_check_stl_a065b77e2f5c0336f6bc784378782551d}{\index{Check\-Stl@{Check\-Stl}!Check\-Stl@{Check\-Stl}}
+\index{Check\-Stl@{Check\-Stl}!CheckStl@{Check\-Stl}}
+\subsubsection[{Check\-Stl}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Stl\-::\-Check\-Stl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_stl_a065b77e2f5c0336f6bc784378782551d}
+This constructor is used when registering the \hyperlink{class_check_class}{Check\-Class} \hypertarget{class_check_stl_a6dbba462c05bf5de06db94ba6408c2ee}{\index{Check\-Stl@{Check\-Stl}!Check\-Stl@{Check\-Stl}}
+\index{Check\-Stl@{Check\-Stl}!CheckStl@{Check\-Stl}}
+\subsubsection[{Check\-Stl}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Stl\-::\-Check\-Stl (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_stl_a6dbba462c05bf5de06db94ba6408c2ee}
+This constructor is used when running checks. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_check_stl_a659a0c88cde0e96a90df8e89b2cb8072}{\index{Check\-Stl@{Check\-Stl}!check\-Auto\-Pointer@{check\-Auto\-Pointer}}
+\index{check\-Auto\-Pointer@{check\-Auto\-Pointer}!CheckStl@{Check\-Stl}}
+\subsubsection[{check\-Auto\-Pointer}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Stl\-::check\-Auto\-Pointer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_stl_a659a0c88cde0e96a90df8e89b2cb8072}
+
+
+Check for use and copy auto pointer 
+
+\hypertarget{class_check_stl_a0950780cbd021c061e1c4bf45714edd4}{\index{Check\-Stl@{Check\-Stl}!erase@{erase}}
+\index{erase@{erase}!CheckStl@{Check\-Stl}}
+\subsubsection[{erase}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Stl\-::erase (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_stl_a0950780cbd021c061e1c4bf45714edd4}
+Dangerous usage of erase. The iterator is invalidated by erase so it is bad to dereference it after the erase. \hypertarget{class_check_stl_ad5eaf234908520b84716512ea06ce13c}{\index{Check\-Stl@{Check\-Stl}!erase\-Error@{erase\-Error}}
+\index{erase\-Error@{erase\-Error}!CheckStl@{Check\-Stl}}
+\subsubsection[{erase\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Stl\-::erase\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok}
+\end{DoxyParamCaption}
+)}}\label{class_check_stl_ad5eaf234908520b84716512ea06ce13c}
+\hypertarget{class_check_stl_a7f9b0180409369f45eaf701c64e7474e}{\index{Check\-Stl@{Check\-Stl}!if\-\_\-find@{if\-\_\-find}}
+\index{if\-\_\-find@{if\-\_\-find}!CheckStl@{Check\-Stl}}
+\subsubsection[{if\-\_\-find}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Stl\-::if\-\_\-find (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_stl_a7f9b0180409369f45eaf701c64e7474e}
+if (a.\-find(x)) -\/ possibly incorrect condition \hypertarget{class_check_stl_a8fb8b983714fee24ff14ac85ae5413c0}{\index{Check\-Stl@{Check\-Stl}!iterators@{iterators}}
+\index{iterators@{iterators}!CheckStl@{Check\-Stl}}
+\subsubsection[{iterators}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Stl\-::iterators (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_stl_a8fb8b983714fee24ff14ac85ae5413c0}
+Finds errors like this\-: for (it = foo.\-begin(); it != bar.\-end(); ++it) \hypertarget{class_check_stl_a9edc5084d5d02131f9e0cc207e967f90}{\index{Check\-Stl@{Check\-Stl}!mismatching\-Containers@{mismatching\-Containers}}
+\index{mismatching\-Containers@{mismatching\-Containers}!CheckStl@{Check\-Stl}}
+\subsubsection[{mismatching\-Containers}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Stl\-::mismatching\-Containers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_stl_a9edc5084d5d02131f9e0cc207e967f90}
+Mismatching containers\-: std\-::find(foo.\-begin(), bar.\-end(), x) \hypertarget{class_check_stl_a0715e9b1395c5a8d6591ed238805eb7a}{\index{Check\-Stl@{Check\-Stl}!missing\-Comparison@{missing\-Comparison}}
+\index{missing\-Comparison@{missing\-Comparison}!CheckStl@{Check\-Stl}}
+\subsubsection[{missing\-Comparison}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Stl\-::missing\-Comparison (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_stl_a0715e9b1395c5a8d6591ed238805eb7a}
+
+
+Missing inner comparison, when incrementing iterator inside loop Dangers\-: 
+
+
+\begin{DoxyItemize}
+\item may increment iterator beyond end
+\item may unintentionally skip elements in list/set etc 
+\end{DoxyItemize}\hypertarget{class_check_stl_a2abe071c77f90bb2c4de804480fae3a2}{\index{Check\-Stl@{Check\-Stl}!pushback@{pushback}}
+\index{pushback@{pushback}!CheckStl@{Check\-Stl}}
+\subsubsection[{pushback}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Stl\-::pushback (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_stl_a2abe071c77f90bb2c4de804480fae3a2}
+Dangerous usage of push\-\_\-back and insert \hypertarget{class_check_stl_abe03476dc6368ba6c20ad90d7eb967a8}{\index{Check\-Stl@{Check\-Stl}!redundant\-Condition@{redundant\-Condition}}
+\index{redundant\-Condition@{redundant\-Condition}!CheckStl@{Check\-Stl}}
+\subsubsection[{redundant\-Condition}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Stl\-::redundant\-Condition (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_stl_abe03476dc6368ba6c20ad90d7eb967a8}
+\hyperlink{class_check}{Check} for redundant condition 'if (ints.\-find(1) != ints.\-end()) ints.\-remove(123);' \hypertarget{class_check_stl_a8a27e1c983d1615d224819c87bc1fadb}{\index{Check\-Stl@{Check\-Stl}!run\-Simplified\-Checks@{run\-Simplified\-Checks}}
+\index{run\-Simplified\-Checks@{run\-Simplified\-Checks}!CheckStl@{Check\-Stl}}
+\subsubsection[{run\-Simplified\-Checks}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Stl\-::run\-Simplified\-Checks (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_stl_a8a27e1c983d1615d224819c87bc1fadb}
+Simplified checks. The token list is simplified. 
+
+Implements \hyperlink{class_check_a112445eed1625599b93c69aab4701e5e}{Check}.
+
+\hypertarget{class_check_stl_a2fec71741636970fc79b997a0a1a4c83}{\index{Check\-Stl@{Check\-Stl}!size@{size}}
+\index{size@{size}!CheckStl@{Check\-Stl}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Stl\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_stl_a2fec71741636970fc79b997a0a1a4c83}
+Suggest using empty() instead of checking \hyperlink{class_check_stl_a2fec71741636970fc79b997a0a1a4c83}{size()} against zero for containers. Item 4 from Scott Meyers book \char`\"{}\-Effective S\-T\-L\char`\"{}. \hypertarget{class_check_stl_a99214e13d8b25c2422d94e680c029639}{\index{Check\-Stl@{Check\-Stl}!stl\-Boundries@{stl\-Boundries}}
+\index{stl\-Boundries@{stl\-Boundries}!CheckStl@{Check\-Stl}}
+\subsubsection[{stl\-Boundries}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Stl\-::stl\-Boundries (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_stl_a99214e13d8b25c2422d94e680c029639}
+bad condition.. \char`\"{}it $<$ alist.\-end()\char`\"{} \hypertarget{class_check_stl_a545ad4f0a38dba2bf8b1a6c48361f200}{\index{Check\-Stl@{Check\-Stl}!stl\-Out\-Of\-Bounds@{stl\-Out\-Of\-Bounds}}
+\index{stl\-Out\-Of\-Bounds@{stl\-Out\-Of\-Bounds}!CheckStl@{Check\-Stl}}
+\subsubsection[{stl\-Out\-Of\-Bounds}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Stl\-::stl\-Out\-Of\-Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_stl_a545ad4f0a38dba2bf8b1a6c48361f200}
+Finds errors like this\-: for (unsigned ii = 0; ii $<$= foo.\-size(); ++ii) \hypertarget{class_check_stl_a9ca51b7cf48aa43cfe9fea0afd704b06}{\index{Check\-Stl@{Check\-Stl}!string\-\_\-c\-\_\-str@{string\-\_\-c\-\_\-str}}
+\index{string\-\_\-c\-\_\-str@{string\-\_\-c\-\_\-str}!CheckStl@{Check\-Stl}}
+\subsubsection[{string\-\_\-c\-\_\-str}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Stl\-::string\-\_\-c\-\_\-str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_stl_a9ca51b7cf48aa43cfe9fea0afd704b06}
+\hyperlink{class_check}{Check} for common mistakes when using the function string\-::c\-\_\-str() \hypertarget{class_check_stl_a0c466bb5dc69db3dedb6f0f3e34e8269}{\index{Check\-Stl@{Check\-Stl}!useless\-Calls@{useless\-Calls}}
+\index{useless\-Calls@{useless\-Calls}!CheckStl@{Check\-Stl}}
+\subsubsection[{useless\-Calls}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Stl\-::useless\-Calls (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_stl_a0c466bb5dc69db3dedb6f0f3e34e8269}
+
+
+Check calls that using them is useless 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{checkstl_8h}{checkstl.\-h}\item 
+lib/\hyperlink{checkstl_8cpp}{checkstl.\-cpp}\end{DoxyCompactItemize}

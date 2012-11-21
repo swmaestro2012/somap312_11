@@ -1,0 +1,125 @@
+\hypertarget{class_application_dialog}{\section{Application\-Dialog Class Reference}
+\label{class_application_dialog}\index{Application\-Dialog@{Application\-Dialog}}
+}
+
+
+Dialog to edit a startable application. User can open errors with user specified applications. This is a dialog to modify/add an application to open errors with.  
+
+
+
+
+{\ttfamily \#include $<$applicationdialog.\-h$>$}
+
+Inheritance diagram for Application\-Dialog\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_application_dialog}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_application_dialog_acf0a98d735a5b0f9b6bf5785b55d882c}{Application\-Dialog} (const Q\-String \&title, const \hyperlink{class_application}{Application} \&app, Q\-Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_application_dialog_a75452cc73cc860904d7669e8bbab521c}{$\sim$\-Application\-Dialog} ()
+\item 
+\hyperlink{class_application}{Application} \hyperlink{class_application_dialog_aafb8f8e5f4b4c8489e7eb3633757270f}{Get\-Application} () const 
+\begin{DoxyCompactList}\small\item\em Get modified application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_application_dialog_a00891d99c762c8e636f07eac97f1a263}{Ok} ()
+\item 
+void \hyperlink{class_application_dialog_a5348d194cf2587d0a60eedc9c1440612}{Browse} ()
+\begin{DoxyCompactList}\small\item\em Slot to browse for an application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\-::\-Application\-Dialog \hyperlink{class_application_dialog_aee2bc1ccf2d6287e369abb9c538998a3}{m\-U\-I}
+\begin{DoxyCompactList}\small\item\em U\-I from the Qt designer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dialog to edit a startable application. User can open errors with user specified applications. This is a dialog to modify/add an application to open errors with. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_application_dialog_acf0a98d735a5b0f9b6bf5785b55d882c}{\index{Application\-Dialog@{Application\-Dialog}!Application\-Dialog@{Application\-Dialog}}
+\index{Application\-Dialog@{Application\-Dialog}!ApplicationDialog@{Application\-Dialog}}
+\subsubsection[{Application\-Dialog}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Dialog\-::\-Application\-Dialog (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{title, }
+\item[{const {\bf Application} \&}]{app, }
+\item[{Q\-Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_application_dialog_acf0a98d735a5b0f9b6bf5785b55d882c}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & Title for the dialog. \\
+\hline
+{\em app} & \hyperlink{class_application}{Application} definition. \\
+\hline
+{\em parent} & Parent widget. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_application_dialog_a75452cc73cc860904d7669e8bbab521c}{\index{Application\-Dialog@{Application\-Dialog}!$\sim$\-Application\-Dialog@{$\sim$\-Application\-Dialog}}
+\index{$\sim$\-Application\-Dialog@{$\sim$\-Application\-Dialog}!ApplicationDialog@{Application\-Dialog}}
+\subsubsection[{$\sim$\-Application\-Dialog}]{\setlength{\rightskip}{0pt plus 5cm}Application\-Dialog\-::$\sim$\-Application\-Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_application_dialog_a75452cc73cc860904d7669e8bbab521c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_application_dialog_a5348d194cf2587d0a60eedc9c1440612}{\index{Application\-Dialog@{Application\-Dialog}!Browse@{Browse}}
+\index{Browse@{Browse}!ApplicationDialog@{Application\-Dialog}}
+\subsubsection[{Browse}]{\setlength{\rightskip}{0pt plus 5cm}void Application\-Dialog\-::\-Browse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_application_dialog_a5348d194cf2587d0a60eedc9c1440612}
+
+
+Slot to browse for an application. 
+
+\hypertarget{class_application_dialog_aafb8f8e5f4b4c8489e7eb3633757270f}{\index{Application\-Dialog@{Application\-Dialog}!Get\-Application@{Get\-Application}}
+\index{Get\-Application@{Get\-Application}!ApplicationDialog@{Application\-Dialog}}
+\subsubsection[{Get\-Application}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Application} Application\-Dialog\-::\-Get\-Application (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_application_dialog_aafb8f8e5f4b4c8489e7eb3633757270f}
+
+
+Get modified application. 
+
+\begin{DoxyReturn}{Returns}
+Modified name 
+\end{DoxyReturn}
+\hypertarget{class_application_dialog_a00891d99c762c8e636f07eac97f1a263}{\index{Application\-Dialog@{Application\-Dialog}!Ok@{Ok}}
+\index{Ok@{Ok}!ApplicationDialog@{Application\-Dialog}}
+\subsubsection[{Ok}]{\setlength{\rightskip}{0pt plus 5cm}void Application\-Dialog\-::\-Ok (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_application_dialog_a00891d99c762c8e636f07eac97f1a263}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_application_dialog_aee2bc1ccf2d6287e369abb9c538998a3}{\index{Application\-Dialog@{Application\-Dialog}!m\-U\-I@{m\-U\-I}}
+\index{m\-U\-I@{m\-U\-I}!ApplicationDialog@{Application\-Dialog}}
+\subsubsection[{m\-U\-I}]{\setlength{\rightskip}{0pt plus 5cm}Ui\-::\-Application\-Dialog Application\-Dialog\-::m\-U\-I\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_application_dialog_aee2bc1ccf2d6287e369abb9c538998a3}
+
+
+U\-I from the Qt designer. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{applicationdialog_8h}{applicationdialog.\-h}\item 
+gui/\hyperlink{applicationdialog_8cpp}{applicationdialog.\-cpp}\end{DoxyCompactItemize}

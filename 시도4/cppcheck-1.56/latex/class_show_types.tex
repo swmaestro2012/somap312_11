@@ -1,0 +1,275 @@
+\hypertarget{class_show_types}{\section{Show\-Types Class Reference}
+\label{class_show_types}\index{Show\-Types@{Show\-Types}}
+}
+
+
+A class for different show types we have. This class contains enum type for the different show types we have. Each show type presents one severity selectable in the G\-U\-I. In addition there are several supporting functions.  
+
+
+
+
+{\ttfamily \#include $<$showtypes.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_show_types_a92c368f2a33741268265ac2d931eae3f}{Show\-Type} \{ \\*
+\hyperlink{class_show_types_a92c368f2a33741268265ac2d931eae3fad7fa690ee98fab103ce8b4fea380ea03}{Show\-Style} = 0, 
+\hyperlink{class_show_types_a92c368f2a33741268265ac2d931eae3fad27ca846664eaae981e662f825fdafb7}{Show\-Warnings}, 
+\hyperlink{class_show_types_a92c368f2a33741268265ac2d931eae3fa429281b2318ac36f7071c14536c60dba}{Show\-Performance}, 
+\hyperlink{class_show_types_a92c368f2a33741268265ac2d931eae3fa557739620d1c99e23f38e2911a33858c}{Show\-Portability}, 
+\\*
+\hyperlink{class_show_types_a92c368f2a33741268265ac2d931eae3fa49cdfa7cba033bcb3fa091c3fbc63197}{Show\-Information}, 
+\hyperlink{class_show_types_a92c368f2a33741268265ac2d931eae3fabc0c6d7d1314b7d92188a1d66fc4f1ca}{Show\-Errors}, 
+\hyperlink{class_show_types_a92c368f2a33741268265ac2d931eae3fade7d9bfa7206900801f2cf24376451a2}{Show\-None}
+ \}
+\begin{DoxyCompactList}\small\item\em Show types we have (i.\-e. severities in the G\-U\-I). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_show_types_a5293ad54d51a491953f7a62584716e20}{Show\-Types} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_show_types_ad3cc3530f5d6e85768d52b5c3902c707}{$\sim$\-Show\-Types} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_show_types_ab73a2b29080ec35a9dfdc783f8bc77af}{load} ()
+\begin{DoxyCompactList}\small\item\em Load visibility settings from the platform's settings storage. \end{DoxyCompactList}\item 
+void \hyperlink{class_show_types_a9368edd3025bca834ff46aa15e366ae7}{save} ()
+\begin{DoxyCompactList}\small\item\em Save visibility settings to the platform's settings storage. \end{DoxyCompactList}\item 
+bool \hyperlink{class_show_types_aa627d1764dd2153ddb5f652b23cc24e0}{is\-Shown} (\hyperlink{class_show_types_a92c368f2a33741268265ac2d931eae3f}{Show\-Types\-::\-Show\-Type} category) const 
+\begin{DoxyCompactList}\small\item\em Is the showtype visible in the G\-U\-I? \end{DoxyCompactList}\item 
+bool \hyperlink{class_show_types_a7c91199008b7d2e339ec9ef91b99da48}{is\-Shown} (\hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6}{Severity\-::\-Severity\-Type} severity) const 
+\begin{DoxyCompactList}\small\item\em Is the severity visible in the G\-U\-I? \end{DoxyCompactList}\item 
+void \hyperlink{class_show_types_a64893d9e73af5f859648d2f424667b20}{show} (\hyperlink{class_show_types_a92c368f2a33741268265ac2d931eae3f}{Show\-Types\-::\-Show\-Type} category, bool show)
+\begin{DoxyCompactList}\small\item\em Show/hide the showtype. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_show_types_a92c368f2a33741268265ac2d931eae3f}{Show\-Types\-::\-Show\-Type} \hyperlink{class_show_types_a1a610cc3356a13ba6a61615877387fc1}{Severity\-To\-Show\-Type} (\hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6}{Severity\-::\-Severity\-Type} severity)
+\begin{DoxyCompactList}\small\item\em Convert severity string to \hyperlink{class_show_types}{Show\-Types} value. \end{DoxyCompactList}\item 
+static \hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6}{Severity\-::\-Severity\-Type} \hyperlink{class_show_types_ad4a54c1b7f85d098d1e3a244b5dafc0c}{Show\-Type\-To\-Severity} (\hyperlink{class_show_types_a92c368f2a33741268265ac2d931eae3f}{Show\-Types\-::\-Show\-Type} type)
+\begin{DoxyCompactList}\small\item\em Convert Show\-Type to severity string. \end{DoxyCompactList}\item 
+static \hyperlink{class_show_types_a92c368f2a33741268265ac2d931eae3f}{Show\-Types\-::\-Show\-Type} \hyperlink{class_show_types_a7d18f6bffb30d8ee3df53dbd5cfbeccf}{Variant\-To\-Show\-Type} (const Q\-Variant \&data)
+\begin{DoxyCompactList}\small\item\em Convert Q\-Variant (that contains an int) to Showtypes value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_show_types_a3e2bef2e4f0394d451ec638070fb73cd}{m\-Visible} \mbox{[}\hyperlink{class_show_types_a92c368f2a33741268265ac2d931eae3fade7d9bfa7206900801f2cf24376451a2}{Show\-None}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class for different show types we have. This class contains enum type for the different show types we have. Each show type presents one severity selectable in the G\-U\-I. In addition there are several supporting functions. 
+
+Notice that the \char`\"{}visibility\char`\"{} settings are automatically loaded when the class is constructed and saved when the class is destroyed. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_show_types_a92c368f2a33741268265ac2d931eae3f}{\index{Show\-Types@{Show\-Types}!Show\-Type@{Show\-Type}}
+\index{Show\-Type@{Show\-Type}!ShowTypes@{Show\-Types}}
+\subsubsection[{Show\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Show\-Types\-::\-Show\-Type}}}\label{class_show_types_a92c368f2a33741268265ac2d931eae3f}
+
+
+Show types we have (i.\-e. severities in the G\-U\-I). 
+
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{Show\-Style@{Show\-Style}!Show\-Types@{Show\-Types}}\index{Show\-Types@{Show\-Types}!Show\-Style@{Show\-Style}}\item[{\em 
+\hypertarget{class_show_types_a92c368f2a33741268265ac2d931eae3fad7fa690ee98fab103ce8b4fea380ea03}{Show\-Style}\label{class_show_types_a92c368f2a33741268265ac2d931eae3fad7fa690ee98fab103ce8b4fea380ea03}
+}]\index{Show\-Warnings@{Show\-Warnings}!Show\-Types@{Show\-Types}}\index{Show\-Types@{Show\-Types}!Show\-Warnings@{Show\-Warnings}}\item[{\em 
+\hypertarget{class_show_types_a92c368f2a33741268265ac2d931eae3fad27ca846664eaae981e662f825fdafb7}{Show\-Warnings}\label{class_show_types_a92c368f2a33741268265ac2d931eae3fad27ca846664eaae981e662f825fdafb7}
+}]\index{Show\-Performance@{Show\-Performance}!Show\-Types@{Show\-Types}}\index{Show\-Types@{Show\-Types}!Show\-Performance@{Show\-Performance}}\item[{\em 
+\hypertarget{class_show_types_a92c368f2a33741268265ac2d931eae3fa429281b2318ac36f7071c14536c60dba}{Show\-Performance}\label{class_show_types_a92c368f2a33741268265ac2d931eae3fa429281b2318ac36f7071c14536c60dba}
+}]\index{Show\-Portability@{Show\-Portability}!Show\-Types@{Show\-Types}}\index{Show\-Types@{Show\-Types}!Show\-Portability@{Show\-Portability}}\item[{\em 
+\hypertarget{class_show_types_a92c368f2a33741268265ac2d931eae3fa557739620d1c99e23f38e2911a33858c}{Show\-Portability}\label{class_show_types_a92c368f2a33741268265ac2d931eae3fa557739620d1c99e23f38e2911a33858c}
+}]\index{Show\-Information@{Show\-Information}!Show\-Types@{Show\-Types}}\index{Show\-Types@{Show\-Types}!Show\-Information@{Show\-Information}}\item[{\em 
+\hypertarget{class_show_types_a92c368f2a33741268265ac2d931eae3fa49cdfa7cba033bcb3fa091c3fbc63197}{Show\-Information}\label{class_show_types_a92c368f2a33741268265ac2d931eae3fa49cdfa7cba033bcb3fa091c3fbc63197}
+}]\index{Show\-Errors@{Show\-Errors}!Show\-Types@{Show\-Types}}\index{Show\-Types@{Show\-Types}!Show\-Errors@{Show\-Errors}}\item[{\em 
+\hypertarget{class_show_types_a92c368f2a33741268265ac2d931eae3fabc0c6d7d1314b7d92188a1d66fc4f1ca}{Show\-Errors}\label{class_show_types_a92c368f2a33741268265ac2d931eae3fabc0c6d7d1314b7d92188a1d66fc4f1ca}
+}]\index{Show\-None@{Show\-None}!Show\-Types@{Show\-Types}}\index{Show\-Types@{Show\-Types}!Show\-None@{Show\-None}}\item[{\em 
+\hypertarget{class_show_types_a92c368f2a33741268265ac2d931eae3fade7d9bfa7206900801f2cf24376451a2}{Show\-None}\label{class_show_types_a92c368f2a33741268265ac2d931eae3fade7d9bfa7206900801f2cf24376451a2}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_show_types_a5293ad54d51a491953f7a62584716e20}{\index{Show\-Types@{Show\-Types}!Show\-Types@{Show\-Types}}
+\index{Show\-Types@{Show\-Types}!ShowTypes@{Show\-Types}}
+\subsubsection[{Show\-Types}]{\setlength{\rightskip}{0pt plus 5cm}Show\-Types\-::\-Show\-Types (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_show_types_a5293ad54d51a491953f7a62584716e20}
+
+
+Constructor. 
+
+\begin{DoxyNote}{Note}
+Loads visibility settings. 
+\end{DoxyNote}
+\hypertarget{class_show_types_ad3cc3530f5d6e85768d52b5c3902c707}{\index{Show\-Types@{Show\-Types}!$\sim$\-Show\-Types@{$\sim$\-Show\-Types}}
+\index{$\sim$\-Show\-Types@{$\sim$\-Show\-Types}!ShowTypes@{Show\-Types}}
+\subsubsection[{$\sim$\-Show\-Types}]{\setlength{\rightskip}{0pt plus 5cm}Show\-Types\-::$\sim$\-Show\-Types (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_show_types_ad3cc3530f5d6e85768d52b5c3902c707}
+
+
+Destructor. 
+
+\begin{DoxyNote}{Note}
+Saves visibility settings. 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_show_types_aa627d1764dd2153ddb5f652b23cc24e0}{\index{Show\-Types@{Show\-Types}!is\-Shown@{is\-Shown}}
+\index{is\-Shown@{is\-Shown}!ShowTypes@{Show\-Types}}
+\subsubsection[{is\-Shown}]{\setlength{\rightskip}{0pt plus 5cm}bool Show\-Types\-::is\-Shown (
+\begin{DoxyParamCaption}
+\item[{{\bf Show\-Types\-::\-Show\-Type}}]{category}
+\end{DoxyParamCaption}
+) const}}\label{class_show_types_aa627d1764dd2153ddb5f652b23cc24e0}
+
+
+Is the showtype visible in the G\-U\-I? 
+
+
+\begin{DoxyParams}{Parameters}
+{\em category} & Showtype to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the showtype is visible. 
+\end{DoxyReturn}
+\hypertarget{class_show_types_a7c91199008b7d2e339ec9ef91b99da48}{\index{Show\-Types@{Show\-Types}!is\-Shown@{is\-Shown}}
+\index{is\-Shown@{is\-Shown}!ShowTypes@{Show\-Types}}
+\subsubsection[{is\-Shown}]{\setlength{\rightskip}{0pt plus 5cm}bool Show\-Types\-::is\-Shown (
+\begin{DoxyParamCaption}
+\item[{{\bf Severity\-::\-Severity\-Type}}]{severity}
+\end{DoxyParamCaption}
+) const}}\label{class_show_types_a7c91199008b7d2e339ec9ef91b99da48}
+
+
+Is the severity visible in the G\-U\-I? 
+
+
+\begin{DoxyParams}{Parameters}
+{\em severity} & severity to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the severity is visible. 
+\end{DoxyReturn}
+\hypertarget{class_show_types_ab73a2b29080ec35a9dfdc783f8bc77af}{\index{Show\-Types@{Show\-Types}!load@{load}}
+\index{load@{load}!ShowTypes@{Show\-Types}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Show\-Types\-::load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_show_types_ab73a2b29080ec35a9dfdc783f8bc77af}
+
+
+Load visibility settings from the platform's settings storage. 
+
+\hypertarget{class_show_types_a9368edd3025bca834ff46aa15e366ae7}{\index{Show\-Types@{Show\-Types}!save@{save}}
+\index{save@{save}!ShowTypes@{Show\-Types}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}void Show\-Types\-::save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_show_types_a9368edd3025bca834ff46aa15e366ae7}
+
+
+Save visibility settings to the platform's settings storage. 
+
+\hypertarget{class_show_types_a1a610cc3356a13ba6a61615877387fc1}{\index{Show\-Types@{Show\-Types}!Severity\-To\-Show\-Type@{Severity\-To\-Show\-Type}}
+\index{Severity\-To\-Show\-Type@{Severity\-To\-Show\-Type}!ShowTypes@{Show\-Types}}
+\subsubsection[{Severity\-To\-Show\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Show\-Types\-::\-Show\-Type} Show\-Types\-::\-Severity\-To\-Show\-Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Severity\-::\-Severity\-Type}}]{severity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_show_types_a1a610cc3356a13ba6a61615877387fc1}
+
+
+Convert severity string to \hyperlink{class_show_types}{Show\-Types} value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em severity} & Error severity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_severity}{Severity} converted to \hyperlink{class_show_types}{Show\-Types} value 
+\end{DoxyReturn}
+\hypertarget{class_show_types_a64893d9e73af5f859648d2f424667b20}{\index{Show\-Types@{Show\-Types}!show@{show}}
+\index{show@{show}!ShowTypes@{Show\-Types}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}void Show\-Types\-::show (
+\begin{DoxyParamCaption}
+\item[{{\bf Show\-Types\-::\-Show\-Type}}]{category, }
+\item[{bool}]{show}
+\end{DoxyParamCaption}
+)}}\label{class_show_types_a64893d9e73af5f859648d2f424667b20}
+
+
+Show/hide the showtype. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em category} & Showtype whose visibility to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the severity is set visible. 
+\end{DoxyReturn}
+\hypertarget{class_show_types_ad4a54c1b7f85d098d1e3a244b5dafc0c}{\index{Show\-Types@{Show\-Types}!Show\-Type\-To\-Severity@{Show\-Type\-To\-Severity}}
+\index{Show\-Type\-To\-Severity@{Show\-Type\-To\-Severity}!ShowTypes@{Show\-Types}}
+\subsubsection[{Show\-Type\-To\-Severity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Severity\-::\-Severity\-Type} Show\-Types\-::\-Show\-Type\-To\-Severity (
+\begin{DoxyParamCaption}
+\item[{{\bf Show\-Types\-::\-Show\-Type}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_show_types_ad4a54c1b7f85d098d1e3a244b5dafc0c}
+
+
+Convert Show\-Type to severity string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Show\-Type to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Show\-Type converted to severity 
+\end{DoxyReturn}
+\hypertarget{class_show_types_a7d18f6bffb30d8ee3df53dbd5cfbeccf}{\index{Show\-Types@{Show\-Types}!Variant\-To\-Show\-Type@{Variant\-To\-Show\-Type}}
+\index{Variant\-To\-Show\-Type@{Variant\-To\-Show\-Type}!ShowTypes@{Show\-Types}}
+\subsubsection[{Variant\-To\-Show\-Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Show\-Types\-::\-Show\-Type} Show\-Types\-::\-Variant\-To\-Show\-Type (
+\begin{DoxyParamCaption}
+\item[{const Q\-Variant \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_show_types_a7d18f6bffb30d8ee3df53dbd5cfbeccf}
+
+
+Convert Q\-Variant (that contains an int) to Showtypes value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Q\-Variant (that contains an int) to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data converted to \hyperlink{class_show_types}{Show\-Types} 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_show_types_a3e2bef2e4f0394d451ec638070fb73cd}{\index{Show\-Types@{Show\-Types}!m\-Visible@{m\-Visible}}
+\index{m\-Visible@{m\-Visible}!ShowTypes@{Show\-Types}}
+\subsubsection[{m\-Visible}]{\setlength{\rightskip}{0pt plus 5cm}bool Show\-Types\-::m\-Visible\mbox{[}{\bf Show\-None}\mbox{]}}}\label{class_show_types_a3e2bef2e4f0394d451ec638070fb73cd}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{showtypes_8h}{showtypes.\-h}\item 
+gui/\hyperlink{showtypes_8cpp}{showtypes.\-cpp}\end{DoxyCompactItemize}

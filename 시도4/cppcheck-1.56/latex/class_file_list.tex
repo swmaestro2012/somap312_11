@@ -1,0 +1,195 @@
+\hypertarget{class_file_list}{\section{File\-List Class Reference}
+\label{class_file_list}\index{File\-List@{File\-List}}
+}
+
+
+A class for listing files and directories to check. This class creates a list of files to check. If directory name is given then all files in the directory matching the filter will be added. The directory can be also added recursively when all files in subdirectories are added too. The filenames are matched against the filter and only those files whose filename extension is included in the filter list are added.  
+
+
+
+
+{\ttfamily \#include $<$filelist.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_file_list_a7e30db56b6cc6a68d56056df0e913b80}{Add\-File} (const Q\-String \&filepath)
+\begin{DoxyCompactList}\small\item\em Add filename to the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_file_list_ad10d27166ae697f6d5fa424fc86bb6bd}{Add\-Directory} (const Q\-String \&directory, bool recursive=false)
+\begin{DoxyCompactList}\small\item\em Add files in the directory to the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_file_list_a42c392558cccd7a574848f83ef844474}{Add\-Path\-List} (const Q\-String\-List \&paths)
+\begin{DoxyCompactList}\small\item\em Add list of filenames and directories to the list. \end{DoxyCompactList}\item 
+Q\-String\-List \hyperlink{class_file_list_ab9938c1da4df4745465e4d51fce79007}{Get\-File\-List} () const 
+\begin{DoxyCompactList}\small\item\em Return list of filenames (to check). \end{DoxyCompactList}\item 
+void \hyperlink{class_file_list_ae73a44a151db7c010a51e3b14384094e}{Add\-Exclude\-List} (const Q\-String\-List \&paths)
+\begin{DoxyCompactList}\small\item\em Add list of paths to exclusion list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_file_list_aa6de1569578fa3d9cfcbb51443680eb4}{Filter\-Matches} (const Q\-File\-Info \&inf)
+\begin{DoxyCompactList}\small\item\em Test if filename matches the filename extensions filtering. \end{DoxyCompactList}\item 
+Q\-String\-List \hyperlink{class_file_list_a3e55ac6cd21ebc3a06b556b649faa73a}{Apply\-Exclude\-List} () const 
+\begin{DoxyCompactList}\small\item\em Get filtered list of paths. This method takes the list of paths and applies the exclude lists to it. And then returns the list of paths that did not match the exclude filters. \end{DoxyCompactList}\item 
+bool \hyperlink{class_file_list_ad6769459107e55bd4c33761aab4cf6d7}{Match} (const Q\-String \&path) const 
+\begin{DoxyCompactList}\small\item\em Test if path matches any of the exclude filters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Q\-String\-List \hyperlink{class_file_list_a2862f25abf1f3036edc6e4504bbfb87f}{Get\-Default\-Filters} ()
+\begin{DoxyCompactList}\small\item\em Return list of default filename extensions included. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class for listing files and directories to check. This class creates a list of files to check. If directory name is given then all files in the directory matching the filter will be added. The directory can be also added recursively when all files in subdirectories are added too. The filenames are matched against the filter and only those files whose filename extension is included in the filter list are added. 
+
+This class also handles filtering of paths against ignore filters given. If there is ignore filters then only paths not matching those filters are returned. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_file_list_ad10d27166ae697f6d5fa424fc86bb6bd}{\index{File\-List@{File\-List}!Add\-Directory@{Add\-Directory}}
+\index{Add\-Directory@{Add\-Directory}!FileList@{File\-List}}
+\subsubsection[{Add\-Directory}]{\setlength{\rightskip}{0pt plus 5cm}void File\-List\-::\-Add\-Directory (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{directory, }
+\item[{bool}]{recursive = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{class_file_list_ad10d27166ae697f6d5fa424fc86bb6bd}
+
+
+Add files in the directory to the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em directory} & Full pathname to directory to add. \\
+\hline
+{\em recursive} & If true also files in subdirectories are added. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_file_list_ae73a44a151db7c010a51e3b14384094e}{\index{File\-List@{File\-List}!Add\-Exclude\-List@{Add\-Exclude\-List}}
+\index{Add\-Exclude\-List@{Add\-Exclude\-List}!FileList@{File\-List}}
+\subsubsection[{Add\-Exclude\-List}]{\setlength{\rightskip}{0pt plus 5cm}void File\-List\-::\-Add\-Exclude\-List (
+\begin{DoxyParamCaption}
+\item[{const Q\-String\-List \&}]{paths}
+\end{DoxyParamCaption}
+)}}\label{class_file_list_ae73a44a151db7c010a51e3b14384094e}
+
+
+Add list of paths to exclusion list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em paths} & Paths to exclude. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_file_list_a7e30db56b6cc6a68d56056df0e913b80}{\index{File\-List@{File\-List}!Add\-File@{Add\-File}}
+\index{Add\-File@{Add\-File}!FileList@{File\-List}}
+\subsubsection[{Add\-File}]{\setlength{\rightskip}{0pt plus 5cm}void File\-List\-::\-Add\-File (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{filepath}
+\end{DoxyParamCaption}
+)}}\label{class_file_list_a7e30db56b6cc6a68d56056df0e913b80}
+
+
+Add filename to the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & Full path to the file. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_file_list_a42c392558cccd7a574848f83ef844474}{\index{File\-List@{File\-List}!Add\-Path\-List@{Add\-Path\-List}}
+\index{Add\-Path\-List@{Add\-Path\-List}!FileList@{File\-List}}
+\subsubsection[{Add\-Path\-List}]{\setlength{\rightskip}{0pt plus 5cm}void File\-List\-::\-Add\-Path\-List (
+\begin{DoxyParamCaption}
+\item[{const Q\-String\-List \&}]{paths}
+\end{DoxyParamCaption}
+)}}\label{class_file_list_a42c392558cccd7a574848f83ef844474}
+
+
+Add list of filenames and directories to the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em paths} & List of paths to add. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_file_list_a3e55ac6cd21ebc3a06b556b649faa73a}{\index{File\-List@{File\-List}!Apply\-Exclude\-List@{Apply\-Exclude\-List}}
+\index{Apply\-Exclude\-List@{Apply\-Exclude\-List}!FileList@{File\-List}}
+\subsubsection[{Apply\-Exclude\-List}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String\-List File\-List\-::\-Apply\-Exclude\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_file_list_a3e55ac6cd21ebc3a06b556b649faa73a}
+
+
+Get filtered list of paths. This method takes the list of paths and applies the exclude lists to it. And then returns the list of paths that did not match the exclude filters. 
+
+\begin{DoxyReturn}{Returns}
+Filtered list of paths. 
+\end{DoxyReturn}
+\hypertarget{class_file_list_aa6de1569578fa3d9cfcbb51443680eb4}{\index{File\-List@{File\-List}!Filter\-Matches@{Filter\-Matches}}
+\index{Filter\-Matches@{Filter\-Matches}!FileList@{File\-List}}
+\subsubsection[{Filter\-Matches}]{\setlength{\rightskip}{0pt plus 5cm}bool File\-List\-::\-Filter\-Matches (
+\begin{DoxyParamCaption}
+\item[{const Q\-File\-Info \&}]{inf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_file_list_aa6de1569578fa3d9cfcbb51443680eb4}
+
+
+Test if filename matches the filename extensions filtering. 
+
+\begin{DoxyReturn}{Returns}
+true if filename matches filtering. 
+\end{DoxyReturn}
+\hypertarget{class_file_list_a2862f25abf1f3036edc6e4504bbfb87f}{\index{File\-List@{File\-List}!Get\-Default\-Filters@{Get\-Default\-Filters}}
+\index{Get\-Default\-Filters@{Get\-Default\-Filters}!FileList@{File\-List}}
+\subsubsection[{Get\-Default\-Filters}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String\-List File\-List\-::\-Get\-Default\-Filters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{class_file_list_a2862f25abf1f3036edc6e4504bbfb87f}
+
+
+Return list of default filename extensions included. 
+
+\begin{DoxyReturn}{Returns}
+list of default filename extensions included. 
+\end{DoxyReturn}
+\hypertarget{class_file_list_ab9938c1da4df4745465e4d51fce79007}{\index{File\-List@{File\-List}!Get\-File\-List@{Get\-File\-List}}
+\index{Get\-File\-List@{Get\-File\-List}!FileList@{File\-List}}
+\subsubsection[{Get\-File\-List}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String\-List File\-List\-::\-Get\-File\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_file_list_ab9938c1da4df4745465e4d51fce79007}
+
+
+Return list of filenames (to check). 
+
+\begin{DoxyReturn}{Returns}
+list of filenames to check. 
+\end{DoxyReturn}
+\hypertarget{class_file_list_ad6769459107e55bd4c33761aab4cf6d7}{\index{File\-List@{File\-List}!Match@{Match}}
+\index{Match@{Match}!FileList@{File\-List}}
+\subsubsection[{Match}]{\setlength{\rightskip}{0pt plus 5cm}bool File\-List\-::\-Match (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{path}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_file_list_ad6769459107e55bd4c33761aab4cf6d7}
+
+
+Test if path matches any of the exclude filters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \hyperlink{class_path}{Path} to test against exclude filters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if any of the filters matches, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{filelist_8h}{filelist.\-h}\item 
+gui/\hyperlink{filelist_8cpp}{filelist.\-cpp}\end{DoxyCompactItemize}

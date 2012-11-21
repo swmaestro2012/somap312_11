@@ -1,0 +1,56 @@
+\begin{DoxyVersion}{Version}
+1.\-56
+\end{DoxyVersion}
+\hypertarget{index_overview_sec}{}\section{Overview}\label{index_overview_sec}
+Cppcheck is a simple tool for static analysis of C/\-C++ code.
+
+The method used is to first tokenize the source code and then analyse the token list. In the token list, the tokens are stored in plain text.
+
+The checks are written in C++. The checks are addons that can be easily added/removed.\hypertarget{index_writing_checks_sec}{}\section{Writing a check}\label{index_writing_checks_sec}
+Below is a simple example of a check that detect division with zero\-: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} \hyperlink{class_check_other_a9e3e6d91a89fb71585872113b0ccece5}{CheckOther::checkZeroDivision}()
+\{
+    \textcolor{comment}{// Iterate through all tokens in the token list}
+    \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \hyperlink{class_token}{Token} *tok = \hyperlink{class_check_af177003f600a2f1a22c48b9fd2c4d579}{\_tokenizer}->\hyperlink{class_tokenizer_a5f932706a5d3bb6ddc0b68634005300d}{tokens}(); tok; tok
+       = tok->\hyperlink{class_token_a64b1ca2e4b29a1075f8913e037c2d76e}{next}())
+    \{
+        \textcolor{keywordflow}{if} (\hyperlink{class_token_a519623098bde6496825e49364575dadf}{Token::Match}(tok, \textcolor{stringliteral}{"/ 0"}))
+            \hyperlink{class_check_a209cad3fc1f9889b3edc72ae027846af}{reportError}(tok, \hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6ae24df992f36773de88bd9d04501e2a22}{Severity::error}, \textcolor{stringliteral}{"
+      zerodiv"}, \textcolor{stringliteral}{"Division by zero"});
+    \}
+\}
+\end{DoxyCode}
+
+
+The function \hyperlink{class_token_a519623098bde6496825e49364575dadf}{Token\-::\-Match} is often used in the checks. Through it you can match tokens against patterns.\hypertarget{index_checkclass_sec}{}\section{Creating a new check class from scratch}\label{index_checkclass_sec}
+Check classes inherit from the \hyperlink{class_check}{Check} class. The \hyperlink{class_check}{Check} class specifies the interface that you must use. To integrate a check class into cppcheck all you need to do is\-:
+\begin{DoxyItemize}
+\item Add your source file(s) so they are compiled into the executable.
+\item Create an instance of the class (the \hyperlink{group___core_ga0cb366bed825a49e45cce28335f75efb}{Check\-::\-Check()} constructor registers the class as an addon that Cppcheck then can use).
+\end{DoxyItemize}\hypertarget{index_embedding_sec}{}\section{Embedding Cppcheck}\label{index_embedding_sec}
+Cppcheck is designed to be easily embeddable into other programs.
+
+The \char`\"{}src/main.\-cpp\char`\"{} and \char`\"{}src/cppcheckexecutor.$\ast$\char`\"{} files illustrate how cppcheck can be embedded into an application.\hypertarget{index_detailed_overview_sec}{}\section{Detailed overview}\label{index_detailed_overview_sec}
+This happens when you execute cppcheck from the command line\-:
+\begin{DoxyEnumerate}
+\item \hyperlink{class_cpp_check_executor_a9006ccb8322dc7c2f87591788e31f4fe}{Cpp\-Check\-Executor\-::check} this function executes the Cppcheck
+\item Cpp\-Check\-::parse\-From\-Args parse command line arguments
+\begin{DoxyItemize}
+\item The \hyperlink{class_settings}{Settings} class is used to maintain settings
+\item Use \hyperlink{class_file_lister}{File\-Lister} and command line arguments to get files to check
+\end{DoxyItemize}
+\item \hyperlink{class_thread_executor}{Thread\-Executor} create more instances of \hyperlink{class_cpp_check}{Cpp\-Check} if needed
+\item \hyperlink{class_cpp_check_abc81dee40c7f0c5f5ef353c2e4e46729}{Cpp\-Check\-::check} is called for each file. It checks a single file
+\item Preprocess the file (through \hyperlink{class_preprocessor}{Preprocessor})
+\begin{DoxyItemize}
+\item Comments are removed
+\item Macros are expanded
+\end{DoxyItemize}
+\item Tokenize the file (see \hyperlink{class_tokenizer}{Tokenizer})
+\item Run the run\-Checks of all check classes.
+\item Simplify the tokenlist (\hyperlink{class_tokenizer_a831fde8399875de9890ee2dc03e6b5fb}{Tokenizer\-::simplify\-Token\-List})
+\item Run the run\-Simplified\-Checks of all check classes
+\end{DoxyEnumerate}
+
+When errors are found, they are reported back to the \hyperlink{class_cpp_check_executor}{Cpp\-Check\-Executor} through the \hyperlink{class_error_logger}{Error\-Logger} interface 

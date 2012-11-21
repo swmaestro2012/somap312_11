@@ -1,0 +1,206 @@
+\hypertarget{class_simple_pie___parse___date}{\section{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date Class Reference}
+\label{class_simple_pie___parse___date}\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simple_pie___parse___date_a36b5662b5a7f29fe8c9b05f5754e9bf1}{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date} ()
+\item 
+\hyperlink{class_simple_pie___parse___date_a091747b2048b1e39fbebe83e4f88baf3}{get} ()
+\item 
+\hyperlink{class_simple_pie___parse___date_a0fb011be0e4ba926df32b0d012180e46}{parse} (\$date)
+\item 
+\hyperlink{class_simple_pie___parse___date_a8f82a90605e4e49e35299c0207991bb2}{add\-\_\-callback} (\$callback)
+\item 
+\hyperlink{class_simple_pie___parse___date_a4dcfd8c357675d90cddf7ece9ce23967}{date\-\_\-w3cdtf} (\$date)
+\item 
+\hyperlink{class_simple_pie___parse___date_a8c81c6d8f88980f6ad55f960995d2a7d}{remove\-\_\-rfc2822\-\_\-comments} (\$string)
+\item 
+\hyperlink{class_simple_pie___parse___date_a75890a7edfcb5555cd5b275f635ae5fa}{date\-\_\-rfc2822} (\$date)
+\item 
+\hyperlink{class_simple_pie___parse___date_aaa458b861088fc3f0f8b25ea611126dc}{date\-\_\-rfc850} (\$date)
+\item 
+\hyperlink{class_simple_pie___parse___date_a623391b500ff0967d3d9b6532c864074}{date\-\_\-asctime} (\$date)
+\item 
+\hyperlink{class_simple_pie___parse___date_a794d8e4b06512f9bab7186174058e154}{date\-\_\-strtotime} (\$date)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simple_pie___parse___date_a99b02dcc8d5238e69cfd2eec820f36b6}{\$date}
+\item 
+\hyperlink{class_simple_pie___parse___date_a8ae759664647069794309d7fb0882448}{\$day}
+\item 
+\hyperlink{class_simple_pie___parse___date_a6399077cd9df43efc4d235c1f2cb538d}{\$month}
+\item 
+\hyperlink{class_simple_pie___parse___date_a940617fb20faaf072f48c40f0c613234}{\$timezone}
+\item 
+\hyperlink{class_simple_pie___parse___date_a5a3779d94b807f380a55ce3ab096fe50}{\$day\-\_\-pcre}
+\item 
+\hyperlink{class_simple_pie___parse___date_a693fb5ee721728d4a66e8f0abc316e98}{\$month\-\_\-pcre}
+\item 
+\hyperlink{class_simple_pie___parse___date_aa9fe682db7921d8dd6d2cbb4c1ff36b5}{\$built\-\_\-in} = array()
+\item 
+\hyperlink{class_simple_pie___parse___date_aa4720251ef9ce6d1ec79437512a1791c}{\$user} = array()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simple_pie___parse___date_a8f82a90605e4e49e35299c0207991bb2}{\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!add\-\_\-callback@{add\-\_\-callback}}
+\index{add\-\_\-callback@{add\-\_\-callback}!SimplePie_Parse_Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\subsubsection[{add\-\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Parse\-\_\-\-Date\-::add\-\_\-callback (
+\begin{DoxyParamCaption}
+\item[{}]{\$callback}
+\end{DoxyParamCaption}
+)}}\label{class_simple_pie___parse___date_a8f82a90605e4e49e35299c0207991bb2}
+Add a callback method to parse a date
+
+public 
+\begin{DoxyParams}[1]{Parameters}
+callback & {\em \$callback} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_simple_pie___parse___date_a623391b500ff0967d3d9b6532c864074}{\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!date\-\_\-asctime@{date\-\_\-asctime}}
+\index{date\-\_\-asctime@{date\-\_\-asctime}!SimplePie_Parse_Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\subsubsection[{date\-\_\-asctime}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Parse\-\_\-\-Date\-::date\-\_\-asctime (
+\begin{DoxyParamCaption}
+\item[{}]{\$date}
+\end{DoxyParamCaption}
+)}}\label{class_simple_pie___parse___date_a623391b500ff0967d3d9b6532c864074}
+Parse C99's asctime()'s date format
+
+protected \begin{DoxyReturn}{Returns}
+int Timestamp 
+\end{DoxyReturn}
+\hypertarget{class_simple_pie___parse___date_a75890a7edfcb5555cd5b275f635ae5fa}{\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!date\-\_\-rfc2822@{date\-\_\-rfc2822}}
+\index{date\-\_\-rfc2822@{date\-\_\-rfc2822}!SimplePie_Parse_Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\subsubsection[{date\-\_\-rfc2822}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Parse\-\_\-\-Date\-::date\-\_\-rfc2822 (
+\begin{DoxyParamCaption}
+\item[{}]{\$date}
+\end{DoxyParamCaption}
+)}}\label{class_simple_pie___parse___date_a75890a7edfcb5555cd5b275f635ae5fa}
+Parse R\-F\-C2822's date format
+
+protected \begin{DoxyReturn}{Returns}
+int Timestamp 
+\end{DoxyReturn}
+\hypertarget{class_simple_pie___parse___date_aaa458b861088fc3f0f8b25ea611126dc}{\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!date\-\_\-rfc850@{date\-\_\-rfc850}}
+\index{date\-\_\-rfc850@{date\-\_\-rfc850}!SimplePie_Parse_Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\subsubsection[{date\-\_\-rfc850}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Parse\-\_\-\-Date\-::date\-\_\-rfc850 (
+\begin{DoxyParamCaption}
+\item[{}]{\$date}
+\end{DoxyParamCaption}
+)}}\label{class_simple_pie___parse___date_aaa458b861088fc3f0f8b25ea611126dc}
+Parse R\-F\-C850's date format
+
+protected \begin{DoxyReturn}{Returns}
+int Timestamp 
+\end{DoxyReturn}
+\hypertarget{class_simple_pie___parse___date_a794d8e4b06512f9bab7186174058e154}{\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!date\-\_\-strtotime@{date\-\_\-strtotime}}
+\index{date\-\_\-strtotime@{date\-\_\-strtotime}!SimplePie_Parse_Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\subsubsection[{date\-\_\-strtotime}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Parse\-\_\-\-Date\-::date\-\_\-strtotime (
+\begin{DoxyParamCaption}
+\item[{}]{\$date}
+\end{DoxyParamCaption}
+)}}\label{class_simple_pie___parse___date_a794d8e4b06512f9bab7186174058e154}
+Parse dates using strtotime()
+
+protected \begin{DoxyReturn}{Returns}
+int Timestamp 
+\end{DoxyReturn}
+\hypertarget{class_simple_pie___parse___date_a4dcfd8c357675d90cddf7ece9ce23967}{\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!date\-\_\-w3cdtf@{date\-\_\-w3cdtf}}
+\index{date\-\_\-w3cdtf@{date\-\_\-w3cdtf}!SimplePie_Parse_Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\subsubsection[{date\-\_\-w3cdtf}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Parse\-\_\-\-Date\-::date\-\_\-w3cdtf (
+\begin{DoxyParamCaption}
+\item[{}]{\$date}
+\end{DoxyParamCaption}
+)}}\label{class_simple_pie___parse___date_a4dcfd8c357675d90cddf7ece9ce23967}
+Parse a superset of W3\-C-\/\-D\-T\-F (allows hyphens and colons to be omitted, as well as allowing any of upper or lower case \char`\"{}\-T\char`\"{}, horizontal tabs, or spaces to be used as the time seperator (including more than one))
+
+protected \begin{DoxyReturn}{Returns}
+int Timestamp 
+\end{DoxyReturn}
+\hypertarget{class_simple_pie___parse___date_a091747b2048b1e39fbebe83e4f88baf3}{\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!get@{get}}
+\index{get@{get}!SimplePie_Parse_Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Parse\-\_\-\-Date\-::get (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simple_pie___parse___date_a091747b2048b1e39fbebe83e4f88baf3}
+Get the object
+
+public \hypertarget{class_simple_pie___parse___date_a0fb011be0e4ba926df32b0d012180e46}{\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!parse@{parse}}
+\index{parse@{parse}!SimplePie_Parse_Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Parse\-\_\-\-Date\-::parse (
+\begin{DoxyParamCaption}
+\item[{}]{\$date}
+\end{DoxyParamCaption}
+)}}\label{class_simple_pie___parse___date_a0fb011be0e4ba926df32b0d012180e46}
+Parse a date
+
+public 
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$date} & Date to parse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Timestamp corresponding to date string, or false on failure 
+\end{DoxyReturn}
+\hypertarget{class_simple_pie___parse___date_a8c81c6d8f88980f6ad55f960995d2a7d}{\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!remove\-\_\-rfc2822\-\_\-comments@{remove\-\_\-rfc2822\-\_\-comments}}
+\index{remove\-\_\-rfc2822\-\_\-comments@{remove\-\_\-rfc2822\-\_\-comments}!SimplePie_Parse_Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\subsubsection[{remove\-\_\-rfc2822\-\_\-comments}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Parse\-\_\-\-Date\-::remove\-\_\-rfc2822\-\_\-comments (
+\begin{DoxyParamCaption}
+\item[{}]{\$string}
+\end{DoxyParamCaption}
+)}}\label{class_simple_pie___parse___date_a8c81c6d8f88980f6ad55f960995d2a7d}
+Remove R\-F\-C822 comments
+
+protected 
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$data} & Data to strip comments from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Comment stripped string 
+\end{DoxyReturn}
+\hypertarget{class_simple_pie___parse___date_a36b5662b5a7f29fe8c9b05f5754e9bf1}{\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!SimplePie_Parse_Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\subsubsection[{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Parse\-\_\-\-Date\-::\-Simple\-Pie\-\_\-\-Parse\-\_\-\-Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simple_pie___parse___date_a36b5662b5a7f29fe8c9b05f5754e9bf1}
+Create new \hyperlink{class_simple_pie___parse___date}{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date} object, and set self\-::day\-\_\-pcre, self\-::month\-\_\-pcre, and self\-::built\-\_\-in
+
+private 
+
+\subsection{Member Data Documentation}
+\hypertarget{class_simple_pie___parse___date_aa9fe682db7921d8dd6d2cbb4c1ff36b5}{\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!\$built\-\_\-in@{\$built\-\_\-in}}
+\index{\$built\-\_\-in@{\$built\-\_\-in}!SimplePie_Parse_Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\subsubsection[{\$built\-\_\-in}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Parse\-\_\-\-Date\-::\$built\-\_\-in = array()}}\label{class_simple_pie___parse___date_aa9fe682db7921d8dd6d2cbb4c1ff36b5}
+\hypertarget{class_simple_pie___parse___date_a99b02dcc8d5238e69cfd2eec820f36b6}{\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!\$date@{\$date}}
+\index{\$date@{\$date}!SimplePie_Parse_Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\subsubsection[{\$date}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Parse\-\_\-\-Date\-::\$date}}\label{class_simple_pie___parse___date_a99b02dcc8d5238e69cfd2eec820f36b6}
+\hypertarget{class_simple_pie___parse___date_a8ae759664647069794309d7fb0882448}{\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!\$day@{\$day}}
+\index{\$day@{\$day}!SimplePie_Parse_Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\subsubsection[{\$day}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Parse\-\_\-\-Date\-::\$day}}\label{class_simple_pie___parse___date_a8ae759664647069794309d7fb0882448}
+\hypertarget{class_simple_pie___parse___date_a5a3779d94b807f380a55ce3ab096fe50}{\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!\$day\-\_\-pcre@{\$day\-\_\-pcre}}
+\index{\$day\-\_\-pcre@{\$day\-\_\-pcre}!SimplePie_Parse_Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\subsubsection[{\$day\-\_\-pcre}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Parse\-\_\-\-Date\-::\$day\-\_\-pcre}}\label{class_simple_pie___parse___date_a5a3779d94b807f380a55ce3ab096fe50}
+\hypertarget{class_simple_pie___parse___date_a6399077cd9df43efc4d235c1f2cb538d}{\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!\$month@{\$month}}
+\index{\$month@{\$month}!SimplePie_Parse_Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\subsubsection[{\$month}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Parse\-\_\-\-Date\-::\$month}}\label{class_simple_pie___parse___date_a6399077cd9df43efc4d235c1f2cb538d}
+\hypertarget{class_simple_pie___parse___date_a693fb5ee721728d4a66e8f0abc316e98}{\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!\$month\-\_\-pcre@{\$month\-\_\-pcre}}
+\index{\$month\-\_\-pcre@{\$month\-\_\-pcre}!SimplePie_Parse_Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\subsubsection[{\$month\-\_\-pcre}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Parse\-\_\-\-Date\-::\$month\-\_\-pcre}}\label{class_simple_pie___parse___date_a693fb5ee721728d4a66e8f0abc316e98}
+\hypertarget{class_simple_pie___parse___date_a940617fb20faaf072f48c40f0c613234}{\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!\$timezone@{\$timezone}}
+\index{\$timezone@{\$timezone}!SimplePie_Parse_Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\subsubsection[{\$timezone}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Parse\-\_\-\-Date\-::\$timezone}}\label{class_simple_pie___parse___date_a940617fb20faaf072f48c40f0c613234}
+\hypertarget{class_simple_pie___parse___date_aa4720251ef9ce6d1ec79437512a1791c}{\index{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}!\$user@{\$user}}
+\index{\$user@{\$user}!SimplePie_Parse_Date@{Simple\-Pie\-\_\-\-Parse\-\_\-\-Date}}
+\subsubsection[{\$user}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Pie\-\_\-\-Parse\-\_\-\-Date\-::\$user = array()}}\label{class_simple_pie___parse___date_aa4720251ef9ce6d1ec79437512a1791c}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+htdocs/site/simplepie/\hyperlink{simplepie_8inc}{simplepie.\-inc}\end{DoxyCompactItemize}

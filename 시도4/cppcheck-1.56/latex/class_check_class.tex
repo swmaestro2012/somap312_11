@@ -1,0 +1,255 @@
+\hypertarget{class_check_class}{\section{Check\-Class Class Reference}
+\label{class_check_class}\index{Check\-Class@{Check\-Class}}
+}
+
+
+Check classes. Uninitialized member variables, non-\/conforming operators, missing virtual destructor, etc  
+
+
+
+
+{\ttfamily \#include $<$checkclass.\-h$>$}
+
+Inheritance diagram for Check\-Class\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_check_class}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_check_class_a5697469cc2dacac5c59a51f7f778350a}{Check\-Class} ()
+\begin{DoxyCompactList}\small\item\em This constructor is used when registering the \hyperlink{class_check_class}{Check\-Class}. \end{DoxyCompactList}\item 
+\hyperlink{class_check_class_a226c3e395779861ddfff8fdd7e718a01}{Check\-Class} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\begin{DoxyCompactList}\small\item\em This constructor is used when running checks. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_class_a4b859971ef62ebe705f7561fa3e97726}{run\-Checks} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\begin{DoxyCompactList}\small\item\em Run checks on the normal token list. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_class_a2e24ebc1b57dc616cbccb1edda79cb27}{run\-Simplified\-Checks} (const \hyperlink{class_tokenizer}{Tokenizer} $\ast$tokenizer, const \hyperlink{class_settings}{Settings} $\ast$settings, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\begin{DoxyCompactList}\small\item\em Run checks on the simplified token list. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_class_ab1c5f13f64c9876aec84207899d7fc89}{constructors} ()
+\begin{DoxyCompactList}\small\item\em Check that all class constructors are ok \end{DoxyCompactList}\item 
+void \hyperlink{class_check_class_a78c7f5909941ff780990df74023043a2}{private\-Functions} ()
+\begin{DoxyCompactList}\small\item\em Check that all private functions are called \end{DoxyCompactList}\item 
+void \hyperlink{class_check_class_ae4884fcd027e1156b0fd371fc7d45af3}{no\-Memset} ()
+\begin{DoxyCompactList}\small\item\em Check that the memsets are valid. The 'memset' function can do dangerous things if used wrong. If it is used on S\-T\-L containers for instance it will clear all its data and then the S\-T\-L container may leak memory or worse have an invalid state. It can also overwrite the virtual table. Important\-: The checking doesn't work on simplified tokens list. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_class_a10e3db032aae1d74b59d8997b1245e2e}{check\-Memset\-Type} (const \hyperlink{class_scope}{Scope} $\ast$start, const \hyperlink{class_token}{Token} $\ast$tok, const \hyperlink{class_scope}{Scope} $\ast$type)
+\item 
+void \hyperlink{class_check_class_af51a4a8c640f1e47abc1b045d9f9d80f}{operator\-Eq} ()
+\begin{DoxyCompactList}\small\item\em 'operator=' should return something and it should not be const. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_class_a315210271a3d40f4f66430fcd75c5c3e}{operator\-Eq\-Ret\-Ref\-This} ()
+\begin{DoxyCompactList}\small\item\em 'operator=' should return reference to $\ast$this \end{DoxyCompactList}\item 
+void \hyperlink{class_check_class_a68dc55866ec785bbb096fe2bb29c9577}{operator\-Eq\-To\-Self} ()
+\begin{DoxyCompactList}\small\item\em 'operator=' should check for assignment to self \end{DoxyCompactList}\item 
+void \hyperlink{class_check_class_ad454609fecb5df60ae0cfebe4f035480}{virtual\-Destructor} ()
+\begin{DoxyCompactList}\small\item\em The destructor in a base class should be virtual. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_class_a20fef50f2fdbe1a5039dcef401b237e4}{this\-Subtraction} ()
+\begin{DoxyCompactList}\small\item\em warn for \char`\"{}this-\/x\char`\"{}. The indented code may be \char`\"{}this-\/$>$x\char`\"{} \end{DoxyCompactList}\item 
+void \hyperlink{class_check_class_aeb402ebea439dd48bba7872483250dab}{check\-Const} ()
+\begin{DoxyCompactList}\small\item\em can member function be const? \end{DoxyCompactList}\item 
+void \hyperlink{class_check_class_a86c5c051253e39fc21846ebf8bc80558}{initializer\-List\-Order} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_check}{Check} initializer list order. \end{DoxyCompactList}\item 
+void \hyperlink{class_check_class_a890e1f28fc382bd70895b220650491f6}{initialization\-List\-Usage} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Check classes. Uninitialized member variables, non-\/conforming operators, missing virtual destructor, etc 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_check_class_a5697469cc2dacac5c59a51f7f778350a}{\index{Check\-Class@{Check\-Class}!Check\-Class@{Check\-Class}}
+\index{Check\-Class@{Check\-Class}!CheckClass@{Check\-Class}}
+\subsubsection[{Check\-Class}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Class\-::\-Check\-Class (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_check_class_a5697469cc2dacac5c59a51f7f778350a}
+
+
+This constructor is used when registering the \hyperlink{class_check_class}{Check\-Class}. 
+
+\hypertarget{class_check_class_a226c3e395779861ddfff8fdd7e718a01}{\index{Check\-Class@{Check\-Class}!Check\-Class@{Check\-Class}}
+\index{Check\-Class@{Check\-Class}!CheckClass@{Check\-Class}}
+\subsubsection[{Check\-Class}]{\setlength{\rightskip}{0pt plus 5cm}Check\-Class\-::\-Check\-Class (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)}}\label{class_check_class_a226c3e395779861ddfff8fdd7e718a01}
+
+
+This constructor is used when running checks. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_check_class_aeb402ebea439dd48bba7872483250dab}{\index{Check\-Class@{Check\-Class}!check\-Const@{check\-Const}}
+\index{check\-Const@{check\-Const}!CheckClass@{Check\-Class}}
+\subsubsection[{check\-Const}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Class\-::check\-Const (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_class_aeb402ebea439dd48bba7872483250dab}
+
+
+can member function be const? 
+
+\hypertarget{class_check_class_a10e3db032aae1d74b59d8997b1245e2e}{\index{Check\-Class@{Check\-Class}!check\-Memset\-Type@{check\-Memset\-Type}}
+\index{check\-Memset\-Type@{check\-Memset\-Type}!CheckClass@{Check\-Class}}
+\subsubsection[{check\-Memset\-Type}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Class\-::check\-Memset\-Type (
+\begin{DoxyParamCaption}
+\item[{const {\bf Scope} $\ast$}]{start, }
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const {\bf Scope} $\ast$}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_check_class_a10e3db032aae1d74b59d8997b1245e2e}
+\hypertarget{class_check_class_ab1c5f13f64c9876aec84207899d7fc89}{\index{Check\-Class@{Check\-Class}!constructors@{constructors}}
+\index{constructors@{constructors}!CheckClass@{Check\-Class}}
+\subsubsection[{constructors}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Class\-::constructors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_class_ab1c5f13f64c9876aec84207899d7fc89}
+
+
+Check that all class constructors are ok 
+
+\hypertarget{class_check_class_a890e1f28fc382bd70895b220650491f6}{\index{Check\-Class@{Check\-Class}!initialization\-List\-Usage@{initialization\-List\-Usage}}
+\index{initialization\-List\-Usage@{initialization\-List\-Usage}!CheckClass@{Check\-Class}}
+\subsubsection[{initialization\-List\-Usage}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Class\-::initialization\-List\-Usage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_class_a890e1f28fc382bd70895b220650491f6}
+\hypertarget{class_check_class_a86c5c051253e39fc21846ebf8bc80558}{\index{Check\-Class@{Check\-Class}!initializer\-List\-Order@{initializer\-List\-Order}}
+\index{initializer\-List\-Order@{initializer\-List\-Order}!CheckClass@{Check\-Class}}
+\subsubsection[{initializer\-List\-Order}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Class\-::initializer\-List\-Order (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_class_a86c5c051253e39fc21846ebf8bc80558}
+
+
+\hyperlink{class_check}{Check} initializer list order. 
+
+\hypertarget{class_check_class_ae4884fcd027e1156b0fd371fc7d45af3}{\index{Check\-Class@{Check\-Class}!no\-Memset@{no\-Memset}}
+\index{no\-Memset@{no\-Memset}!CheckClass@{Check\-Class}}
+\subsubsection[{no\-Memset}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Class\-::no\-Memset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_class_ae4884fcd027e1156b0fd371fc7d45af3}
+
+
+Check that the memsets are valid. The 'memset' function can do dangerous things if used wrong. If it is used on S\-T\-L containers for instance it will clear all its data and then the S\-T\-L container may leak memory or worse have an invalid state. It can also overwrite the virtual table. Important\-: The checking doesn't work on simplified tokens list. 
+
+\hypertarget{class_check_class_af51a4a8c640f1e47abc1b045d9f9d80f}{\index{Check\-Class@{Check\-Class}!operator\-Eq@{operator\-Eq}}
+\index{operator\-Eq@{operator\-Eq}!CheckClass@{Check\-Class}}
+\subsubsection[{operator\-Eq}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Class\-::operator\-Eq (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_class_af51a4a8c640f1e47abc1b045d9f9d80f}
+
+
+'operator=' should return something and it should not be const. 
+
+\hypertarget{class_check_class_a315210271a3d40f4f66430fcd75c5c3e}{\index{Check\-Class@{Check\-Class}!operator\-Eq\-Ret\-Ref\-This@{operator\-Eq\-Ret\-Ref\-This}}
+\index{operator\-Eq\-Ret\-Ref\-This@{operator\-Eq\-Ret\-Ref\-This}!CheckClass@{Check\-Class}}
+\subsubsection[{operator\-Eq\-Ret\-Ref\-This}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Class\-::operator\-Eq\-Ret\-Ref\-This (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_class_a315210271a3d40f4f66430fcd75c5c3e}
+
+
+'operator=' should return reference to $\ast$this 
+
+\hypertarget{class_check_class_a68dc55866ec785bbb096fe2bb29c9577}{\index{Check\-Class@{Check\-Class}!operator\-Eq\-To\-Self@{operator\-Eq\-To\-Self}}
+\index{operator\-Eq\-To\-Self@{operator\-Eq\-To\-Self}!CheckClass@{Check\-Class}}
+\subsubsection[{operator\-Eq\-To\-Self}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Class\-::operator\-Eq\-To\-Self (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_class_a68dc55866ec785bbb096fe2bb29c9577}
+
+
+'operator=' should check for assignment to self 
+
+\hypertarget{class_check_class_a78c7f5909941ff780990df74023043a2}{\index{Check\-Class@{Check\-Class}!private\-Functions@{private\-Functions}}
+\index{private\-Functions@{private\-Functions}!CheckClass@{Check\-Class}}
+\subsubsection[{private\-Functions}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Class\-::private\-Functions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_class_a78c7f5909941ff780990df74023043a2}
+
+
+Check that all private functions are called 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000034}{Todo}]embedded class have access to private functions \end{DoxyRefDesc}
+\hypertarget{class_check_class_a4b859971ef62ebe705f7561fa3e97726}{\index{Check\-Class@{Check\-Class}!run\-Checks@{run\-Checks}}
+\index{run\-Checks@{run\-Checks}!CheckClass@{Check\-Class}}
+\subsubsection[{run\-Checks}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Class\-::run\-Checks (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_class_a4b859971ef62ebe705f7561fa3e97726}
+
+
+Run checks on the normal token list. 
+
+
+
+Reimplemented from \hyperlink{class_check_a939af1c75d133393021036e73ca57cc4}{Check}.
+
+\hypertarget{class_check_class_a2e24ebc1b57dc616cbccb1edda79cb27}{\index{Check\-Class@{Check\-Class}!run\-Simplified\-Checks@{run\-Simplified\-Checks}}
+\index{run\-Simplified\-Checks@{run\-Simplified\-Checks}!CheckClass@{Check\-Class}}
+\subsubsection[{run\-Simplified\-Checks}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Class\-::run\-Simplified\-Checks (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tokenizer} $\ast$}]{tokenizer, }
+\item[{const {\bf Settings} $\ast$}]{settings, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_check_class_a2e24ebc1b57dc616cbccb1edda79cb27}
+
+
+Run checks on the simplified token list. 
+
+
+
+Implements \hyperlink{class_check_a112445eed1625599b93c69aab4701e5e}{Check}.
+
+\hypertarget{class_check_class_a20fef50f2fdbe1a5039dcef401b237e4}{\index{Check\-Class@{Check\-Class}!this\-Subtraction@{this\-Subtraction}}
+\index{this\-Subtraction@{this\-Subtraction}!CheckClass@{Check\-Class}}
+\subsubsection[{this\-Subtraction}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Class\-::this\-Subtraction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_class_a20fef50f2fdbe1a5039dcef401b237e4}
+
+
+warn for \char`\"{}this-\/x\char`\"{}. The indented code may be \char`\"{}this-\/$>$x\char`\"{} 
+
+\hypertarget{class_check_class_ad454609fecb5df60ae0cfebe4f035480}{\index{Check\-Class@{Check\-Class}!virtual\-Destructor@{virtual\-Destructor}}
+\index{virtual\-Destructor@{virtual\-Destructor}!CheckClass@{Check\-Class}}
+\subsubsection[{virtual\-Destructor}]{\setlength{\rightskip}{0pt plus 5cm}void Check\-Class\-::virtual\-Destructor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_check_class_ad454609fecb5df60ae0cfebe4f035480}
+
+
+The destructor in a base class should be virtual. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{checkclass_8h}{checkclass.\-h}\item 
+lib/\hyperlink{checkclass_8cpp}{checkclass.\-cpp}\end{DoxyCompactItemize}

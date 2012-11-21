@@ -1,0 +1,490 @@
+\hypertarget{class_preprocessor}{\section{Preprocessor Class Reference}
+\label{class_preprocessor}\index{Preprocessor@{Preprocessor}}
+}
+
+
+The cppcheck preprocessor. The preprocessor has special functionality for extracting the various ifdef configurations that exist in a source file.  
+
+
+
+
+{\ttfamily \#include $<$preprocessor.\-h$>$}
+
+Inheritance diagram for Preprocessor\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_preprocessor}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_preprocessor_a520e91d9d06d928a7377385fe9414d11}{Header\-Types} \{ \hyperlink{class_preprocessor_a520e91d9d06d928a7377385fe9414d11af2a2f2c7dbbeb10e551d2d1e25703d8f}{No\-Header} = 0, 
+\hyperlink{class_preprocessor_a520e91d9d06d928a7377385fe9414d11a0850c8e9679edca7e73394145eb2d385}{User\-Header}, 
+\hyperlink{class_preprocessor_a520e91d9d06d928a7377385fe9414d11a58fcecd44de65f644c7e9399b5461471}{System\-Header}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_preprocessor_af3677b58c4424b602cb706c62d832924}{Preprocessor} (\hyperlink{class_settings}{Settings} $\ast$settings=0, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger=0)
+\item 
+void \hyperlink{class_preprocessor_a90bef0b0532bec9f260b6dc7ac0cf815}{preprocess} (std\-::istream \&istr, std\-::map$<$ std\-::string, std\-::string $>$ \&result, const std\-::string \&filename, const std\-::list$<$ std\-::string $>$ \&include\-Paths=std\-::list$<$ std\-::string $>$())
+\item 
+void \hyperlink{class_preprocessor_a897596b1fc45bb6e0723dd71db7fc115}{preprocess} (std\-::istream \&src\-Code\-Stream, std\-::string \&processed\-File, std\-::list$<$ std\-::string $>$ \&result\-Configurations, const std\-::string \&filename, const std\-::list$<$ std\-::string $>$ \&include\-Paths)
+\item 
+std\-::string \hyperlink{class_preprocessor_a90807d3b28a015d64483e4868a82f681}{read} (std\-::istream \&istr, const std\-::string \&filename)
+\item 
+std\-::string \hyperlink{class_preprocessor_a3e7df26cd29f3686c1f17bb1fdb360b9}{getcode} (const std\-::string \&filedata, const std\-::string \&cfg, const std\-::string \&filename, const bool validate=false)
+\item 
+void \hyperlink{class_preprocessor_aa5be09306356080332803e3af101b2cf}{simplify\-Condition} (const std\-::map$<$ std\-::string, std\-::string $>$ \&variables, std\-::string \&condition, bool match)
+\item 
+bool \hyperlink{class_preprocessor_afa35c697e0534604c9de5ef0427828d9}{validate\-Cfg} (const std\-::string \&code, const std\-::string \&cfg)
+\item 
+void \hyperlink{class_preprocessor_ad9a3c04f3bd936643a1f94c647d8fa69}{validate\-Cfg\-Error} (const std\-::string \&cfg)
+\item 
+void \hyperlink{class_preprocessor_a79491dc06c5124eca1c4196c38dc6b22}{handle\-Undef} (std\-::list$<$ std\-::string $>$ \&configurations) const 
+\item 
+bool \hyperlink{class_preprocessor_a0fe9b410c441c84857573c39b017aa6b}{match\-\_\-cfg\-\_\-def} (std\-::map$<$ std\-::string, std\-::string $>$ cfg, std\-::string def)
+\item 
+std\-::string \hyperlink{class_preprocessor_a144622a7bd17a53996cd294614cc448c}{handle\-Includes} (const std\-::string \&code, const std\-::string \&file\-Path, const std\-::list$<$ std\-::string $>$ \&include\-Paths, std\-::map$<$ std\-::string, std\-::string $>$ \&defs, std\-::list$<$ std\-::string $>$ includes=std\-::list$<$ std\-::string $>$())
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_preprocessor_a84e557dd17c15b81cbc4b35b0d6352d8}{preprocess\-Whitespaces} (std\-::string \&processed\-File)
+\item 
+static void \hyperlink{class_preprocessor_af456efe9fec8069057e34c09b612e755}{remove\-Asm} (std\-::string \&str)
+\item 
+static void \hyperlink{class_preprocessor_ad160c0188eac20a04a151908f473025e}{get\-Error\-Messages} (\hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger, const \hyperlink{class_settings}{Settings} $\ast$settings)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static char \hyperlink{class_preprocessor_ae3ff55f4bd43ba3ef47d4d673f5c50fe}{macro\-Char} = char(1)
+\item 
+static bool \hyperlink{class_preprocessor_a3460bda4d7e3346862b19a45619a3fb4}{missing\-Include\-Flag}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{class_preprocessor_acfd2e29441f281c151964d3bf946f8de}{remove\-Comments} (const std\-::string \&str, const std\-::string \&filename)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_preprocessor_a777ed29389812da697989db64d659a66}{write\-Error} (const std\-::string \&file\-Name, const unsigned int linenr, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger, const std\-::string \&error\-Type, const std\-::string \&error\-Text)
+\item 
+static std\-::string \hyperlink{class_preprocessor_abdc95c14f17851503c3124671abb9f24}{replace\-If\-Defined} (const std\-::string \&str)
+\item 
+static std\-::string \hyperlink{class_preprocessor_acc39c1fc0b6243e66d6a4e8612225130}{expand\-Macros} (const std\-::string \&code, std\-::string filename, const std\-::string \&cfg, \hyperlink{class_error_logger}{Error\-Logger} $\ast$error\-Logger)
+\item 
+static std\-::string \hyperlink{class_preprocessor_adff1ceebe9b262fabef85f73350b1508}{remove\-If0} (const std\-::string \&code)
+\item 
+static std\-::string \hyperlink{class_preprocessor_a1f185becfb19d2cec8de58569f71d78f}{remove\-Parentheses} (const std\-::string \&str)
+\item 
+static std\-::string \hyperlink{class_preprocessor_a0c67a74e8c8baa0a9fcb6523f1200e02}{preprocess\-Cleanup\-Directives} (const std\-::string \&processed\-File)
+\item 
+static \hyperlink{class_preprocessor_a520e91d9d06d928a7377385fe9414d11}{Preprocessor\-::\-Header\-Types} \hyperlink{class_preprocessor_aa04edc3c2763c9b0a0104eba0a9ac3f2}{get\-Header\-File\-Name} (std\-::string \&str)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The cppcheck preprocessor. The preprocessor has special functionality for extracting the various ifdef configurations that exist in a source file. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_preprocessor_a520e91d9d06d928a7377385fe9414d11}{\index{Preprocessor@{Preprocessor}!Header\-Types@{Header\-Types}}
+\index{Header\-Types@{Header\-Types}!Preprocessor@{Preprocessor}}
+\subsubsection[{Header\-Types}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Preprocessor\-::\-Header\-Types}}}\label{class_preprocessor_a520e91d9d06d928a7377385fe9414d11}
+Include file types. \begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{No\-Header@{No\-Header}!Preprocessor@{Preprocessor}}\index{Preprocessor@{Preprocessor}!No\-Header@{No\-Header}}\item[{\em 
+\hypertarget{class_preprocessor_a520e91d9d06d928a7377385fe9414d11af2a2f2c7dbbeb10e551d2d1e25703d8f}{No\-Header}\label{class_preprocessor_a520e91d9d06d928a7377385fe9414d11af2a2f2c7dbbeb10e551d2d1e25703d8f}
+}]\index{User\-Header@{User\-Header}!Preprocessor@{Preprocessor}}\index{Preprocessor@{Preprocessor}!User\-Header@{User\-Header}}\item[{\em 
+\hypertarget{class_preprocessor_a520e91d9d06d928a7377385fe9414d11a0850c8e9679edca7e73394145eb2d385}{User\-Header}\label{class_preprocessor_a520e91d9d06d928a7377385fe9414d11a0850c8e9679edca7e73394145eb2d385}
+}]\index{System\-Header@{System\-Header}!Preprocessor@{Preprocessor}}\index{Preprocessor@{Preprocessor}!System\-Header@{System\-Header}}\item[{\em 
+\hypertarget{class_preprocessor_a520e91d9d06d928a7377385fe9414d11a58fcecd44de65f644c7e9399b5461471}{System\-Header}\label{class_preprocessor_a520e91d9d06d928a7377385fe9414d11a58fcecd44de65f644c7e9399b5461471}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_preprocessor_af3677b58c4424b602cb706c62d832924}{\index{Preprocessor@{Preprocessor}!Preprocessor@{Preprocessor}}
+\index{Preprocessor@{Preprocessor}!Preprocessor@{Preprocessor}}
+\subsubsection[{Preprocessor}]{\setlength{\rightskip}{0pt plus 5cm}Preprocessor\-::\-Preprocessor (
+\begin{DoxyParamCaption}
+\item[{{\bf Settings} $\ast$}]{settings = {\ttfamily 0}, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_preprocessor_af3677b58c4424b602cb706c62d832924}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_preprocessor_acc39c1fc0b6243e66d6a4e8612225130}{\index{Preprocessor@{Preprocessor}!expand\-Macros@{expand\-Macros}}
+\index{expand\-Macros@{expand\-Macros}!Preprocessor@{Preprocessor}}
+\subsubsection[{expand\-Macros}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Preprocessor\-::expand\-Macros (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{code, }
+\item[{std\-::string}]{filename, }
+\item[{const std\-::string \&}]{cfg, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{class_preprocessor_acc39c1fc0b6243e66d6a4e8612225130}
+expand macros in code. ifdefs etc are ignored so the code must be a single configuration 
+\begin{DoxyParams}{Parameters}
+{\em code} & The input code \\
+\hline
+{\em filename} & filename of source file \\
+\hline
+{\em cfg} & user given -\/\-D configuration \\
+\hline
+{\em error\-Logger} & Error logger to write errors to (if any) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the expanded string 
+\end{DoxyReturn}
+\hypertarget{class_preprocessor_a3e7df26cd29f3686c1f17bb1fdb360b9}{\index{Preprocessor@{Preprocessor}!getcode@{getcode}}
+\index{getcode@{getcode}!Preprocessor@{Preprocessor}}
+\subsubsection[{getcode}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Preprocessor\-::getcode (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filedata, }
+\item[{const std\-::string \&}]{cfg, }
+\item[{const std\-::string \&}]{filename, }
+\item[{const bool}]{validate = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{class_preprocessor_a3e7df26cd29f3686c1f17bb1fdb360b9}
+Get preprocessed code for a given configuration 
+\begin{DoxyParams}{Parameters}
+{\em filedata} & file data including \#if, \#define, etc \\
+\hline
+{\em cfg} & configuration to read out \\
+\hline
+{\em filename} & name of source file \\
+\hline
+{\em validate} & true =$>$ perform validation that empty configuration macros are not used in the code \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_preprocessor_ad160c0188eac20a04a151908f473025e}{\index{Preprocessor@{Preprocessor}!get\-Error\-Messages@{get\-Error\-Messages}}
+\index{get\-Error\-Messages@{get\-Error\-Messages}!Preprocessor@{Preprocessor}}
+\subsubsection[{get\-Error\-Messages}]{\setlength{\rightskip}{0pt plus 5cm}void Preprocessor\-::get\-Error\-Messages (
+\begin{DoxyParamCaption}
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger, }
+\item[{const {\bf Settings} $\ast$}]{settings}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_preprocessor_ad160c0188eac20a04a151908f473025e}
+\hypertarget{class_preprocessor_aa04edc3c2763c9b0a0104eba0a9ac3f2}{\index{Preprocessor@{Preprocessor}!get\-Header\-File\-Name@{get\-Header\-File\-Name}}
+\index{get\-Header\-File\-Name@{get\-Header\-File\-Name}!Preprocessor@{Preprocessor}}
+\subsubsection[{get\-Header\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Preprocessor\-::\-Header\-Types} Preprocessor\-::get\-Header\-File\-Name (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{class_preprocessor_aa04edc3c2763c9b0a0104eba0a9ac3f2}
+Returns the string between double quote characters or $<$ $>$ characters. 
+\begin{DoxyParams}{Parameters}
+{\em str} & e.\-g. 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include "menu.h"}
+\end{DoxyCode}
+ or 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include <menu.h>}
+\end{DoxyCode}
+ After function call it will contain e.\-g. \char`\"{}menu.\-h\char`\"{} without double quotes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+No\-Header empty string if double quotes or $<$ $>$ were not found. User\-Header if file surrounded with \char`\"{}\char`\"{} was found System\-Header if file surrounded with $<$$>$ was found 
+\end{DoxyReturn}
+\hypertarget{class_preprocessor_a144622a7bd17a53996cd294614cc448c}{\index{Preprocessor@{Preprocessor}!handle\-Includes@{handle\-Includes}}
+\index{handle\-Includes@{handle\-Includes}!Preprocessor@{Preprocessor}}
+\subsubsection[{handle\-Includes}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Preprocessor\-::handle\-Includes (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{code, }
+\item[{const std\-::string \&}]{file\-Path, }
+\item[{const std\-::list$<$ std\-::string $>$ \&}]{include\-Paths, }
+\item[{std\-::map$<$ std\-::string, std\-::string $>$ \&}]{defs, }
+\item[{std\-::list$<$ std\-::string $>$}]{includes = {\ttfamily std\-:\-:list$<$std\-:\-:string$>$()}}
+\end{DoxyParamCaption}
+)}}\label{class_preprocessor_a144622a7bd17a53996cd294614cc448c}
+handle includes for a specific configuration 
+\begin{DoxyParams}{Parameters}
+{\em code} & code in string \\
+\hline
+{\em file\-Path} & filename of code \\
+\hline
+{\em include\-Paths} & Paths where headers might be \\
+\hline
+{\em defs} & defines (only values) \\
+\hline
+{\em includes} & provide a empty list. this is just used to prevent recursive inclusions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resulting string 
+\end{DoxyReturn}
+\hypertarget{class_preprocessor_a79491dc06c5124eca1c4196c38dc6b22}{\index{Preprocessor@{Preprocessor}!handle\-Undef@{handle\-Undef}}
+\index{handle\-Undef@{handle\-Undef}!Preprocessor@{Preprocessor}}
+\subsubsection[{handle\-Undef}]{\setlength{\rightskip}{0pt plus 5cm}void Preprocessor\-::handle\-Undef (
+\begin{DoxyParamCaption}
+\item[{std\-::list$<$ std\-::string $>$ \&}]{configurations}
+\end{DoxyParamCaption}
+) const}}\label{class_preprocessor_a79491dc06c5124eca1c4196c38dc6b22}
+\hypertarget{class_preprocessor_a0fe9b410c441c84857573c39b017aa6b}{\index{Preprocessor@{Preprocessor}!match\-\_\-cfg\-\_\-def@{match\-\_\-cfg\-\_\-def}}
+\index{match\-\_\-cfg\-\_\-def@{match\-\_\-cfg\-\_\-def}!Preprocessor@{Preprocessor}}
+\subsubsection[{match\-\_\-cfg\-\_\-def}]{\setlength{\rightskip}{0pt plus 5cm}bool Preprocessor\-::match\-\_\-cfg\-\_\-def (
+\begin{DoxyParamCaption}
+\item[{std\-::map$<$ std\-::string, std\-::string $>$}]{cfg, }
+\item[{std\-::string}]{def}
+\end{DoxyParamCaption}
+)}}\label{class_preprocessor_a0fe9b410c441c84857573c39b017aa6b}
+Evaluate condition 'numerically' 
+\begin{DoxyParams}{Parameters}
+{\em cfg} & configuration \\
+\hline
+{\em def} & condition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result when evaluating the condition 
+\end{DoxyReturn}
+\hypertarget{class_preprocessor_a90bef0b0532bec9f260b6dc7ac0cf815}{\index{Preprocessor@{Preprocessor}!preprocess@{preprocess}}
+\index{preprocess@{preprocess}!Preprocessor@{Preprocessor}}
+\subsubsection[{preprocess}]{\setlength{\rightskip}{0pt plus 5cm}void Preprocessor\-::preprocess (
+\begin{DoxyParamCaption}
+\item[{std\-::istream \&}]{istr, }
+\item[{std\-::map$<$ std\-::string, std\-::string $>$ \&}]{result, }
+\item[{const std\-::string \&}]{filename, }
+\item[{const std\-::list$<$ std\-::string $>$ \&}]{include\-Paths = {\ttfamily std\-:\-:list$<$std\-:\-:string$>$()}}
+\end{DoxyParamCaption}
+)}}\label{class_preprocessor_a90bef0b0532bec9f260b6dc7ac0cf815}
+Extract the code for each configuration 
+\begin{DoxyParams}{Parameters}
+{\em istr} & The (file/string) stream to read from. \\
+\hline
+{\em result} & The map that will get the results \\
+\hline
+{\em filename} & The name of the file to check e.\-g. \char`\"{}src/main.\-cpp\char`\"{} \\
+\hline
+{\em include\-Paths} & List of paths where incude files should be searched from, single path can be e.\-g. in format \char`\"{}include/\char`\"{}. There must be a path separator at the end. Default parameter is empty list. Note that if path from given filename is also extracted and that is used as a last include path if include file was not found from earlier paths. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_preprocessor_a897596b1fc45bb6e0723dd71db7fc115}{\index{Preprocessor@{Preprocessor}!preprocess@{preprocess}}
+\index{preprocess@{preprocess}!Preprocessor@{Preprocessor}}
+\subsubsection[{preprocess}]{\setlength{\rightskip}{0pt plus 5cm}void Preprocessor\-::preprocess (
+\begin{DoxyParamCaption}
+\item[{std\-::istream \&}]{src\-Code\-Stream, }
+\item[{std\-::string \&}]{processed\-File, }
+\item[{std\-::list$<$ std\-::string $>$ \&}]{result\-Configurations, }
+\item[{const std\-::string \&}]{filename, }
+\item[{const std\-::list$<$ std\-::string $>$ \&}]{include\-Paths}
+\end{DoxyParamCaption}
+)}}\label{class_preprocessor_a897596b1fc45bb6e0723dd71db7fc115}
+Extract the code for each configuration. Use this with \hyperlink{class_preprocessor_a3e7df26cd29f3686c1f17bb1fdb360b9}{getcode()} to get the file data for each individual configuration.
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\-Code\-Stream} & The (file/string) stream to read from. \\
+\hline
+{\em processed\-File} & Give reference to empty string as a parameter, function will fill processed file here. Use this also as a filedata parameter to \hyperlink{class_preprocessor_a3e7df26cd29f3686c1f17bb1fdb360b9}{getcode()} if you received more than once configurations. \\
+\hline
+{\em result\-Configurations} & List of configurations. Pass these one by one to \hyperlink{class_preprocessor_a3e7df26cd29f3686c1f17bb1fdb360b9}{getcode()} with processed\-File. \\
+\hline
+{\em filename} & The name of the file to check e.\-g. \char`\"{}src/main.\-cpp\char`\"{} \\
+\hline
+{\em include\-Paths} & List of paths where incude files should be searched from, single path can be e.\-g. in format \char`\"{}include/\char`\"{}. There must be a path separator at the end. Default parameter is empty list. Note that if path from given filename is also extracted and that is used as a last include path if include file was not found from earlier paths. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_preprocessor_a0c67a74e8c8baa0a9fcb6523f1200e02}{\index{Preprocessor@{Preprocessor}!preprocess\-Cleanup\-Directives@{preprocess\-Cleanup\-Directives}}
+\index{preprocess\-Cleanup\-Directives@{preprocess\-Cleanup\-Directives}!Preprocessor@{Preprocessor}}
+\subsubsection[{preprocess\-Cleanup\-Directives}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Preprocessor\-::preprocess\-Cleanup\-Directives (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{processed\-File}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{class_preprocessor_a0c67a74e8c8baa0a9fcb6523f1200e02}
+clean up \#-\/preprocessor lines (only) 
+\begin{DoxyParams}{Parameters}
+{\em processed\-File} & The data to be processed \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_preprocessor_a84e557dd17c15b81cbc4b35b0d6352d8}{\index{Preprocessor@{Preprocessor}!preprocess\-Whitespaces@{preprocess\-Whitespaces}}
+\index{preprocess\-Whitespaces@{preprocess\-Whitespaces}!Preprocessor@{Preprocessor}}
+\subsubsection[{preprocess\-Whitespaces}]{\setlength{\rightskip}{0pt plus 5cm}void Preprocessor\-::preprocess\-Whitespaces (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&}]{processed\-File}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_preprocessor_a84e557dd17c15b81cbc4b35b0d6352d8}
+preprocess all whitespaces 
+\begin{DoxyParams}{Parameters}
+{\em processed\-File} & The data to be processed \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_preprocessor_a90807d3b28a015d64483e4868a82f681}{\index{Preprocessor@{Preprocessor}!read@{read}}
+\index{read@{read}!Preprocessor@{Preprocessor}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Preprocessor\-::read (
+\begin{DoxyParamCaption}
+\item[{std\-::istream \&}]{istr, }
+\item[{const std\-::string \&}]{filename}
+\end{DoxyParamCaption}
+)}}\label{class_preprocessor_a90807d3b28a015d64483e4868a82f681}
+Just read the code into a string. Perform simple cleanup of the code \hypertarget{class_preprocessor_af456efe9fec8069057e34c09b612e755}{\index{Preprocessor@{Preprocessor}!remove\-Asm@{remove\-Asm}}
+\index{remove\-Asm@{remove\-Asm}!Preprocessor@{Preprocessor}}
+\subsubsection[{remove\-Asm}]{\setlength{\rightskip}{0pt plus 5cm}void Preprocessor\-::remove\-Asm (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_preprocessor_af456efe9fec8069057e34c09b612e755}
+Remove asm(...) from a string 
+\begin{DoxyParams}{Parameters}
+{\em str} & Code \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_preprocessor_acfd2e29441f281c151964d3bf946f8de}{\index{Preprocessor@{Preprocessor}!remove\-Comments@{remove\-Comments}}
+\index{remove\-Comments@{remove\-Comments}!Preprocessor@{Preprocessor}}
+\subsubsection[{remove\-Comments}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Preprocessor\-::remove\-Comments (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str, }
+\item[{const std\-::string \&}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_preprocessor_acfd2e29441f281c151964d3bf946f8de}
+Remove comments from code. This should only be called from \hyperlink{class_preprocessor_a90807d3b28a015d64483e4868a82f681}{read()}. If there are inline suppressions, the \-\_\-settings member is modified 
+\begin{DoxyParams}{Parameters}
+{\em str} & Code processed by \hyperlink{class_preprocessor_a90807d3b28a015d64483e4868a82f681}{read()}. \\
+\hline
+{\em filename} & filename \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+code without comments 
+\end{DoxyReturn}
+\hypertarget{class_preprocessor_adff1ceebe9b262fabef85f73350b1508}{\index{Preprocessor@{Preprocessor}!remove\-If0@{remove\-If0}}
+\index{remove\-If0@{remove\-If0}!Preprocessor@{Preprocessor}}
+\subsubsection[{remove\-If0}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Preprocessor\-::remove\-If0 (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{class_preprocessor_adff1ceebe9b262fabef85f73350b1508}
+Cleanup 'if 0' from the code 
+\begin{DoxyParams}{Parameters}
+{\em code} & Code processed by \hyperlink{class_preprocessor_a90807d3b28a015d64483e4868a82f681}{read()}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+code without 'if 0' 
+\end{DoxyReturn}
+\hypertarget{class_preprocessor_a1f185becfb19d2cec8de58569f71d78f}{\index{Preprocessor@{Preprocessor}!remove\-Parentheses@{remove\-Parentheses}}
+\index{remove\-Parentheses@{remove\-Parentheses}!Preprocessor@{Preprocessor}}
+\subsubsection[{remove\-Parentheses}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Preprocessor\-::remove\-Parentheses (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{class_preprocessor_a1f185becfb19d2cec8de58569f71d78f}
+Remove redundant parentheses from preprocessor commands. This should only be called from \hyperlink{class_preprocessor_a90807d3b28a015d64483e4868a82f681}{read()}. 
+\begin{DoxyParams}{Parameters}
+{\em str} & Code processed by \hyperlink{class_preprocessor_a90807d3b28a015d64483e4868a82f681}{read()}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+code with reduced parentheses 
+\end{DoxyReturn}
+\hypertarget{class_preprocessor_abdc95c14f17851503c3124671abb9f24}{\index{Preprocessor@{Preprocessor}!replace\-If\-Defined@{replace\-If\-Defined}}
+\index{replace\-If\-Defined@{replace\-If\-Defined}!Preprocessor@{Preprocessor}}
+\subsubsection[{replace\-If\-Defined}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Preprocessor\-::replace\-If\-Defined (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{class_preprocessor_abdc95c14f17851503c3124671abb9f24}
+Replace \char`\"{}\#if defined\char`\"{} with \char`\"{}\#ifdef\char`\"{} where possible
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The replaced string 
+\end{DoxyReturn}
+\hypertarget{class_preprocessor_aa5be09306356080332803e3af101b2cf}{\index{Preprocessor@{Preprocessor}!simplify\-Condition@{simplify\-Condition}}
+\index{simplify\-Condition@{simplify\-Condition}!Preprocessor@{Preprocessor}}
+\subsubsection[{simplify\-Condition}]{\setlength{\rightskip}{0pt plus 5cm}void Preprocessor\-::simplify\-Condition (
+\begin{DoxyParamCaption}
+\item[{const std\-::map$<$ std\-::string, std\-::string $>$ \&}]{variables, }
+\item[{std\-::string \&}]{condition, }
+\item[{bool}]{match}
+\end{DoxyParamCaption}
+)}}\label{class_preprocessor_aa5be09306356080332803e3af101b2cf}
+simplify condition 
+\begin{DoxyParams}{Parameters}
+{\em variables} & \hyperlink{class_variable}{Variable} values \\
+\hline
+{\em condition} & The condition to simplify \\
+\hline
+{\em match} & if true, 'defined(\-A)' is replaced with 0 if A is not defined \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_preprocessor_afa35c697e0534604c9de5ef0427828d9}{\index{Preprocessor@{Preprocessor}!validate\-Cfg@{validate\-Cfg}}
+\index{validate\-Cfg@{validate\-Cfg}!Preprocessor@{Preprocessor}}
+\subsubsection[{validate\-Cfg}]{\setlength{\rightskip}{0pt plus 5cm}bool Preprocessor\-::validate\-Cfg (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{code, }
+\item[{const std\-::string \&}]{cfg}
+\end{DoxyParamCaption}
+)}}\label{class_preprocessor_afa35c697e0534604c9de5ef0427828d9}
+make sure empty configuration macros are not used in code. the given code must be a single configuration 
+\begin{DoxyParams}{Parameters}
+{\em code} & The input code \\
+\hline
+{\em cfg} & configuration \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true =$>$ configuration is valid 
+\end{DoxyReturn}
+\hypertarget{class_preprocessor_ad9a3c04f3bd936643a1f94c647d8fa69}{\index{Preprocessor@{Preprocessor}!validate\-Cfg\-Error@{validate\-Cfg\-Error}}
+\index{validate\-Cfg\-Error@{validate\-Cfg\-Error}!Preprocessor@{Preprocessor}}
+\subsubsection[{validate\-Cfg\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Preprocessor\-::validate\-Cfg\-Error (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{cfg}
+\end{DoxyParamCaption}
+)}}\label{class_preprocessor_ad9a3c04f3bd936643a1f94c647d8fa69}
+\hypertarget{class_preprocessor_a777ed29389812da697989db64d659a66}{\index{Preprocessor@{Preprocessor}!write\-Error@{write\-Error}}
+\index{write\-Error@{write\-Error}!Preprocessor@{Preprocessor}}
+\subsubsection[{write\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Preprocessor\-::write\-Error (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{file\-Name, }
+\item[{const unsigned int}]{linenr, }
+\item[{{\bf Error\-Logger} $\ast$}]{error\-Logger, }
+\item[{const std\-::string \&}]{error\-Type, }
+\item[{const std\-::string \&}]{error\-Text}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{class_preprocessor_a777ed29389812da697989db64d659a66}
+report error 
+\begin{DoxyParams}{Parameters}
+{\em file\-Name} & name of file that the error was found in \\
+\hline
+{\em linenr} & linenr in file \\
+\hline
+{\em error\-Logger} & Error logger to write error to \\
+\hline
+{\em error\-Type} & id string for error \\
+\hline
+{\em error\-Text} & Plain text \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_preprocessor_ae3ff55f4bd43ba3ef47d4d673f5c50fe}{\index{Preprocessor@{Preprocessor}!macro\-Char@{macro\-Char}}
+\index{macro\-Char@{macro\-Char}!Preprocessor@{Preprocessor}}
+\subsubsection[{macro\-Char}]{\setlength{\rightskip}{0pt plus 5cm}char Preprocessor\-::macro\-Char = char(1)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_preprocessor_ae3ff55f4bd43ba3ef47d4d673f5c50fe}
+character that is inserted in expanded macros \hypertarget{class_preprocessor_a3460bda4d7e3346862b19a45619a3fb4}{\index{Preprocessor@{Preprocessor}!missing\-Include\-Flag@{missing\-Include\-Flag}}
+\index{missing\-Include\-Flag@{missing\-Include\-Flag}!Preprocessor@{Preprocessor}}
+\subsubsection[{missing\-Include\-Flag}]{\setlength{\rightskip}{0pt plus 5cm}bool Preprocessor\-::missing\-Include\-Flag\hspace{0.3cm}{\ttfamily [static]}}}\label{class_preprocessor_a3460bda4d7e3346862b19a45619a3fb4}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{preprocessor_8h}{preprocessor.\-h}\item 
+lib/\hyperlink{preprocessor_8cpp}{preprocessor.\-cpp}\end{DoxyCompactItemize}

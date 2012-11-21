@@ -1,0 +1,428 @@
+\hypertarget{class_scope}{\section{Scope Class Reference}
+\label{class_scope}\index{Scope@{Scope}}
+}
+
+
+{\ttfamily \#include $<$symboldatabase.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_scope_1_1_base_info}{Base\-Info}
+\item 
+struct \hyperlink{struct_scope_1_1_friend_info}{Friend\-Info}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517}{Scope\-Type} \{ \\*
+\hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517a755a21b885b04c2d87915b630309dddd}{e\-Global}, 
+\hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517ae0dd4987a4e49b50b82b338a8a6b228d}{e\-Class}, 
+\hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517ad4fcbb1b0915296bbfe063cc6cb3330d}{e\-Struct}, 
+\hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517ade32fa2333b260ffdaddfa3e650ee638}{e\-Union}, 
+\\*
+\hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517afb3c12678bbef2678f179e16293d3380}{e\-Namespace}, 
+\hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517aa0d96170ae796030c0f25d2077dca889}{e\-Function}, 
+\hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517a7e6b518081e1c83364536efa1a623077}{e\-If}, 
+\hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517a41e44853015ec765598fac1c9dc3fa57}{e\-Else}, 
+\\*
+\hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517a685c0722348670eacf61091930d34017}{e\-Else\-If}, 
+\hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517aec406ecf89f7ba184d439e65cb93bdb4}{e\-For}, 
+\hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517ac365f200f98dd6ed969ed6f8ad389bc4}{e\-While}, 
+\hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517a6fbe32e1176fb40a10bf5a125037d358}{e\-Do}, 
+\\*
+\hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517a9aba35d0d8dc9e3ed6114b5f8e8ace5d}{e\-Switch}, 
+\hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517abfbae739823e4a7109436ce99d80bc1e}{e\-Unconditional}, 
+\hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517a06ca63da7ce06ce6af785c9433200b27}{e\-Try}, 
+\hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517af202c15dc656ae60fff02ce252a28aad}{e\-Catch}
+ \}
+\item 
+enum \hyperlink{class_scope_a30cfddde990eaaa51f6e983dd6d4638e}{Need\-Initialization} \{ \hyperlink{class_scope_a30cfddde990eaaa51f6e983dd6d4638eac76b20fb6149b618b84d721da7b528bf}{Unknown}, 
+\hyperlink{class_scope_a30cfddde990eaaa51f6e983dd6d4638ead2f83dc4f67ae6d93be53f445311665c}{True}, 
+\hyperlink{class_scope_a30cfddde990eaaa51f6e983dd6d4638eae10ff320b925a5ca8fd9786ddd6b4613}{False}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scope_a9858814f634a20dd1ad2340492a52400}{Scope} (\hyperlink{class_symbol_database}{Symbol\-Database} $\ast$check\-\_\-, const \hyperlink{class_token}{Token} $\ast$class\-Def\-\_\-, \hyperlink{class_scope}{Scope} $\ast$nested\-In\-\_\-)
+\item 
+\hyperlink{class_scope_a121786433d243aa940e3d94f9229e5dc}{Scope} (\hyperlink{class_symbol_database}{Symbol\-Database} $\ast$check\-\_\-, const \hyperlink{class_token}{Token} $\ast$class\-Def\-\_\-, \hyperlink{class_scope}{Scope} $\ast$nested\-In\-\_\-, \hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517}{Scope\-Type} type\-\_\-, const \hyperlink{class_token}{Token} $\ast$start\-\_\-)
+\item 
+bool \hyperlink{class_scope_a0c235a0f3579be99761c43c32b5de777}{is\-Class\-Or\-Struct} () const 
+\item 
+bool \hyperlink{class_scope_ab4543f3501109f910079effdf18cf7b2}{is\-Local} () const 
+\item 
+\hyperlink{class_scope}{Scope} $\ast$ \hyperlink{class_scope_ac8bd897a104180803d084f82026db3d0}{find\-In\-Nested\-List} (const std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em find if name is in nested list \end{DoxyCompactList}\item 
+\hyperlink{class_scope}{Scope} $\ast$ \hyperlink{class_scope_aaace1015bfd032a468d64427cf24a137}{find\-In\-Nested\-List\-Recursive} (const std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em find if name is in nested list \end{DoxyCompactList}\item 
+const \hyperlink{class_scope}{Scope} $\ast$ \hyperlink{class_scope_abbbdb84168abfca33dfa33432516e295}{find\-Qualified\-Scope} (const std\-::string \&name) const 
+\item 
+void \hyperlink{class_scope_a6e0e61380b86bcd12591fe62bc163685}{add\-Variable} (const \hyperlink{class_token}{Token} $\ast$token\-\_\-, const \hyperlink{class_token}{Token} $\ast$start\-\_\-, const \hyperlink{class_token}{Token} $\ast$end\-\_\-, \hyperlink{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9fa}{Access\-Control} access\-\_\-, const \hyperlink{class_scope}{Scope} $\ast$type\-\_\-, const \hyperlink{class_scope}{Scope} $\ast$scope\-\_\-)
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_scope_a7ca6ed1ecc6f4ce819beee4b3af1a80a}{init\-Base\-Info} (const \hyperlink{class_token}{Token} $\ast$tok)
+\item 
+void \hyperlink{class_scope_aa65fc117c4fd480af4ae187c6e4a3cd3}{get\-Variable\-List} ()
+\begin{DoxyCompactList}\small\item\em initialize varlist \end{DoxyCompactList}\item 
+const \hyperlink{class_function}{Function} $\ast$ \hyperlink{class_scope_af09e1ac8b6097bf10901f9bd81ea31e1}{get\-Destructor} () const 
+\item 
+unsigned int \hyperlink{class_scope_a96f4386d4413d5aa2ce3970f428eb740}{get\-Nested\-Non\-Functions} () const 
+\begin{DoxyCompactList}\small\item\em get the number of nested scopes that are not functions \end{DoxyCompactList}\item 
+bool \hyperlink{class_scope_a034540f521543a6d143a4f8f5d8a3fcd}{has\-Default\-Constructor} () const 
+\item 
+\hyperlink{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9fa}{Access\-Control} \hyperlink{class_scope_a21a6fd0997f58b9f682232e42e3b26d2}{default\-Access} () const 
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_scope_a2f5a07246428e87331d6a4c5c0cc0c06}{check\-Variable} (const \hyperlink{class_token}{Token} $\ast$tok, \hyperlink{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9fa}{Access\-Control} varaccess)
+\begin{DoxyCompactList}\small\item\em check if statement is variable declaration and add it if it is \end{DoxyCompactList}\item 
+const \hyperlink{class_variable}{Variable} $\ast$ \hyperlink{class_scope_a0f7fca478aa761359a611296216cbbd4}{get\-Variable} (const std\-::string \&varname) const 
+\begin{DoxyCompactList}\small\item\em get variable from name \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_symbol_database}{Symbol\-Database} $\ast$ \hyperlink{class_scope_aebd359f14708f074b4e009897c98d448}{check}
+\item 
+std\-::string \hyperlink{class_scope_ac10ee77e8bb514bbd256e8c4e471ad48}{class\-Name}
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_scope_a98cdb9948344dd6df192d5225cac8530}{class\-Def}
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_scope_af62c8893f9e0303a35b4416695103533}{class\-Start}
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_scope_a5718de82469734086ea4910a9e97626b}{class\-End}
+\item 
+std\-::list$<$ \hyperlink{class_function}{Function} $>$ \hyperlink{class_scope_a04f5eece3b03314f760e59b7177aacbc}{function\-List}
+\item 
+std\-::list$<$ \hyperlink{class_variable}{Variable} $>$ \hyperlink{class_scope_a2254a4b1978050716ba23435b38f9af2}{varlist}
+\item 
+std\-::vector$<$ \hyperlink{struct_scope_1_1_base_info}{Base\-Info} $>$ \hyperlink{class_scope_a78a329cc4cc47ae0a896b8ca39aaf1d0}{derived\-From}
+\item 
+std\-::list$<$ \hyperlink{struct_scope_1_1_friend_info}{Friend\-Info} $>$ \hyperlink{class_scope_ac13625400b8f8419b44ad7f3f110d45a}{friend\-List}
+\item 
+\hyperlink{class_scope}{Scope} $\ast$ \hyperlink{class_scope_ab891d859d281e559cf0548fad12a91e6}{nested\-In}
+\item 
+std\-::list$<$ \hyperlink{class_scope}{Scope} $\ast$ $>$ \hyperlink{class_scope_aab597d177f8fc399c3f2714d86967845}{nested\-List}
+\item 
+unsigned int \hyperlink{class_scope_a61571028d8578220ad47a33d56c162ca}{num\-Constructors}
+\item 
+std\-::list$<$ const \hyperlink{class_token}{Token} $\ast$ $>$ \hyperlink{class_scope_a5f172bf299a4a5c7ccb431a4e1bffdb1}{using\-List}
+\item 
+\hyperlink{class_scope_a30cfddde990eaaa51f6e983dd6d4638e}{Need\-Initialization} \hyperlink{class_scope_a5eb13a7dc642f7b9adcd51ef17639443}{need\-Initialization}
+\item 
+\hyperlink{class_scope_a62d1e21d98f1a7c1203684eb155e2517}{Scope\-Type} \hyperlink{class_scope_a497c6539e9aca0fde06064ad578c3215}{type}
+\item 
+\hyperlink{class_scope}{Scope} $\ast$ \hyperlink{class_scope_afb99c30d1bb23560b6dfa89a6422bc87}{function\-Of}
+\item 
+\hyperlink{class_function}{Function} $\ast$ \hyperlink{class_scope_a566ff59e033eb9a39293b99f81976994}{function}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_scope_afbc7132e3aa10bdc3945e17caa6d6879}{Test\-Symbol\-Database}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_scope_a30cfddde990eaaa51f6e983dd6d4638e}{\index{Scope@{Scope}!Need\-Initialization@{Need\-Initialization}}
+\index{Need\-Initialization@{Need\-Initialization}!Scope@{Scope}}
+\subsubsection[{Need\-Initialization}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Scope\-::\-Need\-Initialization}}}\label{class_scope_a30cfddde990eaaa51f6e983dd6d4638e}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{Unknown@{Unknown}!Scope@{Scope}}\index{Scope@{Scope}!Unknown@{Unknown}}\item[{\em 
+\hypertarget{class_scope_a30cfddde990eaaa51f6e983dd6d4638eac76b20fb6149b618b84d721da7b528bf}{Unknown}\label{class_scope_a30cfddde990eaaa51f6e983dd6d4638eac76b20fb6149b618b84d721da7b528bf}
+}]\index{True@{True}!Scope@{Scope}}\index{Scope@{Scope}!True@{True}}\item[{\em 
+\hypertarget{class_scope_a30cfddde990eaaa51f6e983dd6d4638ead2f83dc4f67ae6d93be53f445311665c}{True}\label{class_scope_a30cfddde990eaaa51f6e983dd6d4638ead2f83dc4f67ae6d93be53f445311665c}
+}]\index{False@{False}!Scope@{Scope}}\index{Scope@{Scope}!False@{False}}\item[{\em 
+\hypertarget{class_scope_a30cfddde990eaaa51f6e983dd6d4638eae10ff320b925a5ca8fd9786ddd6b4613}{False}\label{class_scope_a30cfddde990eaaa51f6e983dd6d4638eae10ff320b925a5ca8fd9786ddd6b4613}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{class_scope_a62d1e21d98f1a7c1203684eb155e2517}{\index{Scope@{Scope}!Scope\-Type@{Scope\-Type}}
+\index{Scope\-Type@{Scope\-Type}!Scope@{Scope}}
+\subsubsection[{Scope\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Scope\-::\-Scope\-Type}}}\label{class_scope_a62d1e21d98f1a7c1203684eb155e2517}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{e\-Global@{e\-Global}!Scope@{Scope}}\index{Scope@{Scope}!e\-Global@{e\-Global}}\item[{\em 
+\hypertarget{class_scope_a62d1e21d98f1a7c1203684eb155e2517a755a21b885b04c2d87915b630309dddd}{e\-Global}\label{class_scope_a62d1e21d98f1a7c1203684eb155e2517a755a21b885b04c2d87915b630309dddd}
+}]\index{e\-Class@{e\-Class}!Scope@{Scope}}\index{Scope@{Scope}!e\-Class@{e\-Class}}\item[{\em 
+\hypertarget{class_scope_a62d1e21d98f1a7c1203684eb155e2517ae0dd4987a4e49b50b82b338a8a6b228d}{e\-Class}\label{class_scope_a62d1e21d98f1a7c1203684eb155e2517ae0dd4987a4e49b50b82b338a8a6b228d}
+}]\index{e\-Struct@{e\-Struct}!Scope@{Scope}}\index{Scope@{Scope}!e\-Struct@{e\-Struct}}\item[{\em 
+\hypertarget{class_scope_a62d1e21d98f1a7c1203684eb155e2517ad4fcbb1b0915296bbfe063cc6cb3330d}{e\-Struct}\label{class_scope_a62d1e21d98f1a7c1203684eb155e2517ad4fcbb1b0915296bbfe063cc6cb3330d}
+}]\index{e\-Union@{e\-Union}!Scope@{Scope}}\index{Scope@{Scope}!e\-Union@{e\-Union}}\item[{\em 
+\hypertarget{class_scope_a62d1e21d98f1a7c1203684eb155e2517ade32fa2333b260ffdaddfa3e650ee638}{e\-Union}\label{class_scope_a62d1e21d98f1a7c1203684eb155e2517ade32fa2333b260ffdaddfa3e650ee638}
+}]\index{e\-Namespace@{e\-Namespace}!Scope@{Scope}}\index{Scope@{Scope}!e\-Namespace@{e\-Namespace}}\item[{\em 
+\hypertarget{class_scope_a62d1e21d98f1a7c1203684eb155e2517afb3c12678bbef2678f179e16293d3380}{e\-Namespace}\label{class_scope_a62d1e21d98f1a7c1203684eb155e2517afb3c12678bbef2678f179e16293d3380}
+}]\index{e\-Function@{e\-Function}!Scope@{Scope}}\index{Scope@{Scope}!e\-Function@{e\-Function}}\item[{\em 
+\hypertarget{class_scope_a62d1e21d98f1a7c1203684eb155e2517aa0d96170ae796030c0f25d2077dca889}{e\-Function}\label{class_scope_a62d1e21d98f1a7c1203684eb155e2517aa0d96170ae796030c0f25d2077dca889}
+}]\index{e\-If@{e\-If}!Scope@{Scope}}\index{Scope@{Scope}!e\-If@{e\-If}}\item[{\em 
+\hypertarget{class_scope_a62d1e21d98f1a7c1203684eb155e2517a7e6b518081e1c83364536efa1a623077}{e\-If}\label{class_scope_a62d1e21d98f1a7c1203684eb155e2517a7e6b518081e1c83364536efa1a623077}
+}]\index{e\-Else@{e\-Else}!Scope@{Scope}}\index{Scope@{Scope}!e\-Else@{e\-Else}}\item[{\em 
+\hypertarget{class_scope_a62d1e21d98f1a7c1203684eb155e2517a41e44853015ec765598fac1c9dc3fa57}{e\-Else}\label{class_scope_a62d1e21d98f1a7c1203684eb155e2517a41e44853015ec765598fac1c9dc3fa57}
+}]\index{e\-Else\-If@{e\-Else\-If}!Scope@{Scope}}\index{Scope@{Scope}!e\-Else\-If@{e\-Else\-If}}\item[{\em 
+\hypertarget{class_scope_a62d1e21d98f1a7c1203684eb155e2517a685c0722348670eacf61091930d34017}{e\-Else\-If}\label{class_scope_a62d1e21d98f1a7c1203684eb155e2517a685c0722348670eacf61091930d34017}
+}]\index{e\-For@{e\-For}!Scope@{Scope}}\index{Scope@{Scope}!e\-For@{e\-For}}\item[{\em 
+\hypertarget{class_scope_a62d1e21d98f1a7c1203684eb155e2517aec406ecf89f7ba184d439e65cb93bdb4}{e\-For}\label{class_scope_a62d1e21d98f1a7c1203684eb155e2517aec406ecf89f7ba184d439e65cb93bdb4}
+}]\index{e\-While@{e\-While}!Scope@{Scope}}\index{Scope@{Scope}!e\-While@{e\-While}}\item[{\em 
+\hypertarget{class_scope_a62d1e21d98f1a7c1203684eb155e2517ac365f200f98dd6ed969ed6f8ad389bc4}{e\-While}\label{class_scope_a62d1e21d98f1a7c1203684eb155e2517ac365f200f98dd6ed969ed6f8ad389bc4}
+}]\index{e\-Do@{e\-Do}!Scope@{Scope}}\index{Scope@{Scope}!e\-Do@{e\-Do}}\item[{\em 
+\hypertarget{class_scope_a62d1e21d98f1a7c1203684eb155e2517a6fbe32e1176fb40a10bf5a125037d358}{e\-Do}\label{class_scope_a62d1e21d98f1a7c1203684eb155e2517a6fbe32e1176fb40a10bf5a125037d358}
+}]\index{e\-Switch@{e\-Switch}!Scope@{Scope}}\index{Scope@{Scope}!e\-Switch@{e\-Switch}}\item[{\em 
+\hypertarget{class_scope_a62d1e21d98f1a7c1203684eb155e2517a9aba35d0d8dc9e3ed6114b5f8e8ace5d}{e\-Switch}\label{class_scope_a62d1e21d98f1a7c1203684eb155e2517a9aba35d0d8dc9e3ed6114b5f8e8ace5d}
+}]\index{e\-Unconditional@{e\-Unconditional}!Scope@{Scope}}\index{Scope@{Scope}!e\-Unconditional@{e\-Unconditional}}\item[{\em 
+\hypertarget{class_scope_a62d1e21d98f1a7c1203684eb155e2517abfbae739823e4a7109436ce99d80bc1e}{e\-Unconditional}\label{class_scope_a62d1e21d98f1a7c1203684eb155e2517abfbae739823e4a7109436ce99d80bc1e}
+}]\index{e\-Try@{e\-Try}!Scope@{Scope}}\index{Scope@{Scope}!e\-Try@{e\-Try}}\item[{\em 
+\hypertarget{class_scope_a62d1e21d98f1a7c1203684eb155e2517a06ca63da7ce06ce6af785c9433200b27}{e\-Try}\label{class_scope_a62d1e21d98f1a7c1203684eb155e2517a06ca63da7ce06ce6af785c9433200b27}
+}]\index{e\-Catch@{e\-Catch}!Scope@{Scope}}\index{Scope@{Scope}!e\-Catch@{e\-Catch}}\item[{\em 
+\hypertarget{class_scope_a62d1e21d98f1a7c1203684eb155e2517af202c15dc656ae60fff02ce252a28aad}{e\-Catch}\label{class_scope_a62d1e21d98f1a7c1203684eb155e2517af202c15dc656ae60fff02ce252a28aad}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_scope_a9858814f634a20dd1ad2340492a52400}{\index{Scope@{Scope}!Scope@{Scope}}
+\index{Scope@{Scope}!Scope@{Scope}}
+\subsubsection[{Scope}]{\setlength{\rightskip}{0pt plus 5cm}Scope\-::\-Scope (
+\begin{DoxyParamCaption}
+\item[{{\bf Symbol\-Database} $\ast$}]{check\-\_\-, }
+\item[{const {\bf Token} $\ast$}]{class\-Def\-\_\-, }
+\item[{{\bf Scope} $\ast$}]{nested\-In\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_scope_a9858814f634a20dd1ad2340492a52400}
+\hypertarget{class_scope_a121786433d243aa940e3d94f9229e5dc}{\index{Scope@{Scope}!Scope@{Scope}}
+\index{Scope@{Scope}!Scope@{Scope}}
+\subsubsection[{Scope}]{\setlength{\rightskip}{0pt plus 5cm}Scope\-::\-Scope (
+\begin{DoxyParamCaption}
+\item[{{\bf Symbol\-Database} $\ast$}]{check\-\_\-, }
+\item[{const {\bf Token} $\ast$}]{class\-Def\-\_\-, }
+\item[{{\bf Scope} $\ast$}]{nested\-In\-\_\-, }
+\item[{{\bf Scope\-Type}}]{type\-\_\-, }
+\item[{const {\bf Token} $\ast$}]{start\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{class_scope_a121786433d243aa940e3d94f9229e5dc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_scope_a6e0e61380b86bcd12591fe62bc163685}{\index{Scope@{Scope}!add\-Variable@{add\-Variable}}
+\index{add\-Variable@{add\-Variable}!Scope@{Scope}}
+\subsubsection[{add\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}void Scope\-::add\-Variable (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{token\-\_\-, }
+\item[{const {\bf Token} $\ast$}]{start\-\_\-, }
+\item[{const {\bf Token} $\ast$}]{end\-\_\-, }
+\item[{{\bf Access\-Control}}]{access\-\_\-, }
+\item[{const {\bf Scope} $\ast$}]{type\-\_\-, }
+\item[{const {\bf Scope} $\ast$}]{scope\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_scope_a6e0e61380b86bcd12591fe62bc163685}
+\hypertarget{class_scope_a2f5a07246428e87331d6a4c5c0cc0c06}{\index{Scope@{Scope}!check\-Variable@{check\-Variable}}
+\index{check\-Variable@{check\-Variable}!Scope@{Scope}}
+\subsubsection[{check\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token} $\ast$ Scope\-::check\-Variable (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{{\bf Access\-Control}}]{varaccess}
+\end{DoxyParamCaption}
+)}}\label{class_scope_a2f5a07246428e87331d6a4c5c0cc0c06}
+
+
+check if statement is variable declaration and add it if it is 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tok} & pointer to start of statement \\
+\hline
+{\em varaccess} & access control of statement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to last token 
+\end{DoxyReturn}
+\hypertarget{class_scope_a21a6fd0997f58b9f682232e42e3b26d2}{\index{Scope@{Scope}!default\-Access@{default\-Access}}
+\index{default\-Access@{default\-Access}!Scope@{Scope}}
+\subsubsection[{default\-Access}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Access\-Control} Scope\-::default\-Access (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_scope_a21a6fd0997f58b9f682232e42e3b26d2}
+\hypertarget{class_scope_ac8bd897a104180803d084f82026db3d0}{\index{Scope@{Scope}!find\-In\-Nested\-List@{find\-In\-Nested\-List}}
+\index{find\-In\-Nested\-List@{find\-In\-Nested\-List}!Scope@{Scope}}
+\subsubsection[{find\-In\-Nested\-List}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scope} $\ast$ Scope\-::find\-In\-Nested\-List (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_scope_ac8bd897a104180803d084f82026db3d0}
+
+
+find if name is in nested list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of nested scope \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_scope_aaace1015bfd032a468d64427cf24a137}{\index{Scope@{Scope}!find\-In\-Nested\-List\-Recursive@{find\-In\-Nested\-List\-Recursive}}
+\index{find\-In\-Nested\-List\-Recursive@{find\-In\-Nested\-List\-Recursive}!Scope@{Scope}}
+\subsubsection[{find\-In\-Nested\-List\-Recursive}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scope} $\ast$ Scope\-::find\-In\-Nested\-List\-Recursive (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_scope_aaace1015bfd032a468d64427cf24a137}
+
+
+find if name is in nested list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of nested scope \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_scope_abbbdb84168abfca33dfa33432516e295}{\index{Scope@{Scope}!find\-Qualified\-Scope@{find\-Qualified\-Scope}}
+\index{find\-Qualified\-Scope@{find\-Qualified\-Scope}!Scope@{Scope}}
+\subsubsection[{find\-Qualified\-Scope}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Scope} $\ast$ Scope\-::find\-Qualified\-Scope (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+) const}}\label{class_scope_abbbdb84168abfca33dfa33432516e295}
+\hypertarget{class_scope_af09e1ac8b6097bf10901f9bd81ea31e1}{\index{Scope@{Scope}!get\-Destructor@{get\-Destructor}}
+\index{get\-Destructor@{get\-Destructor}!Scope@{Scope}}
+\subsubsection[{get\-Destructor}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Function} $\ast$ Scope\-::get\-Destructor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_scope_af09e1ac8b6097bf10901f9bd81ea31e1}
+\hypertarget{class_scope_a96f4386d4413d5aa2ce3970f428eb740}{\index{Scope@{Scope}!get\-Nested\-Non\-Functions@{get\-Nested\-Non\-Functions}}
+\index{get\-Nested\-Non\-Functions@{get\-Nested\-Non\-Functions}!Scope@{Scope}}
+\subsubsection[{get\-Nested\-Non\-Functions}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Scope\-::get\-Nested\-Non\-Functions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_scope_a96f4386d4413d5aa2ce3970f428eb740}
+
+
+get the number of nested scopes that are not functions 
+
+This returns the number of user defined types (class, struct, union) that are defined in this user defined type or namespace. \hypertarget{class_scope_a0f7fca478aa761359a611296216cbbd4}{\index{Scope@{Scope}!get\-Variable@{get\-Variable}}
+\index{get\-Variable@{get\-Variable}!Scope@{Scope}}
+\subsubsection[{get\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Variable} $\ast$ Scope\-::get\-Variable (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{varname}
+\end{DoxyParamCaption}
+) const}}\label{class_scope_a0f7fca478aa761359a611296216cbbd4}
+
+
+get variable from name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em varname} & name of variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to variable 
+\end{DoxyReturn}
+\hypertarget{class_scope_aa65fc117c4fd480af4ae187c6e4a3cd3}{\index{Scope@{Scope}!get\-Variable\-List@{get\-Variable\-List}}
+\index{get\-Variable\-List@{get\-Variable\-List}!Scope@{Scope}}
+\subsubsection[{get\-Variable\-List}]{\setlength{\rightskip}{0pt plus 5cm}void Scope\-::get\-Variable\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_scope_aa65fc117c4fd480af4ae187c6e4a3cd3}
+
+
+initialize varlist 
+
+\hypertarget{class_scope_a034540f521543a6d143a4f8f5d8a3fcd}{\index{Scope@{Scope}!has\-Default\-Constructor@{has\-Default\-Constructor}}
+\index{has\-Default\-Constructor@{has\-Default\-Constructor}!Scope@{Scope}}
+\subsubsection[{has\-Default\-Constructor}]{\setlength{\rightskip}{0pt plus 5cm}bool Scope\-::has\-Default\-Constructor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_scope_a034540f521543a6d143a4f8f5d8a3fcd}
+\hypertarget{class_scope_a7ca6ed1ecc6f4ce819beee4b3af1a80a}{\index{Scope@{Scope}!init\-Base\-Info@{init\-Base\-Info}}
+\index{init\-Base\-Info@{init\-Base\-Info}!Scope@{Scope}}
+\subsubsection[{init\-Base\-Info}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token} $\ast$ Scope\-::init\-Base\-Info (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok}
+\end{DoxyParamCaption}
+)}}\label{class_scope_a7ca6ed1ecc6f4ce819beee4b3af1a80a}
+\hypertarget{class_scope_a0c235a0f3579be99761c43c32b5de777}{\index{Scope@{Scope}!is\-Class\-Or\-Struct@{is\-Class\-Or\-Struct}}
+\index{is\-Class\-Or\-Struct@{is\-Class\-Or\-Struct}!Scope@{Scope}}
+\subsubsection[{is\-Class\-Or\-Struct}]{\setlength{\rightskip}{0pt plus 5cm}bool Scope\-::is\-Class\-Or\-Struct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_scope_a0c235a0f3579be99761c43c32b5de777}
+\hypertarget{class_scope_ab4543f3501109f910079effdf18cf7b2}{\index{Scope@{Scope}!is\-Local@{is\-Local}}
+\index{is\-Local@{is\-Local}!Scope@{Scope}}
+\subsubsection[{is\-Local}]{\setlength{\rightskip}{0pt plus 5cm}bool Scope\-::is\-Local (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_scope_ab4543f3501109f910079effdf18cf7b2}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_scope_afbc7132e3aa10bdc3945e17caa6d6879}{\index{Scope@{Scope}!Test\-Symbol\-Database@{Test\-Symbol\-Database}}
+\index{Test\-Symbol\-Database@{Test\-Symbol\-Database}!Scope@{Scope}}
+\subsubsection[{Test\-Symbol\-Database}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Test\-Symbol\-Database}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_scope_afbc7132e3aa10bdc3945e17caa6d6879}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_scope_aebd359f14708f074b4e009897c98d448}{\index{Scope@{Scope}!check@{check}}
+\index{check@{check}!Scope@{Scope}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Symbol\-Database}$\ast$ Scope\-::check}}\label{class_scope_aebd359f14708f074b4e009897c98d448}
+\hypertarget{class_scope_a98cdb9948344dd6df192d5225cac8530}{\index{Scope@{Scope}!class\-Def@{class\-Def}}
+\index{class\-Def@{class\-Def}!Scope@{Scope}}
+\subsubsection[{class\-Def}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token}$\ast$ Scope\-::class\-Def}}\label{class_scope_a98cdb9948344dd6df192d5225cac8530}
+\hypertarget{class_scope_a5718de82469734086ea4910a9e97626b}{\index{Scope@{Scope}!class\-End@{class\-End}}
+\index{class\-End@{class\-End}!Scope@{Scope}}
+\subsubsection[{class\-End}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token}$\ast$ Scope\-::class\-End}}\label{class_scope_a5718de82469734086ea4910a9e97626b}
+\hypertarget{class_scope_ac10ee77e8bb514bbd256e8c4e471ad48}{\index{Scope@{Scope}!class\-Name@{class\-Name}}
+\index{class\-Name@{class\-Name}!Scope@{Scope}}
+\subsubsection[{class\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Scope\-::class\-Name}}\label{class_scope_ac10ee77e8bb514bbd256e8c4e471ad48}
+\hypertarget{class_scope_af62c8893f9e0303a35b4416695103533}{\index{Scope@{Scope}!class\-Start@{class\-Start}}
+\index{class\-Start@{class\-Start}!Scope@{Scope}}
+\subsubsection[{class\-Start}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token}$\ast$ Scope\-::class\-Start}}\label{class_scope_af62c8893f9e0303a35b4416695103533}
+\hypertarget{class_scope_a78a329cc4cc47ae0a896b8ca39aaf1d0}{\index{Scope@{Scope}!derived\-From@{derived\-From}}
+\index{derived\-From@{derived\-From}!Scope@{Scope}}
+\subsubsection[{derived\-From}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf Base\-Info}$>$ Scope\-::derived\-From}}\label{class_scope_a78a329cc4cc47ae0a896b8ca39aaf1d0}
+\hypertarget{class_scope_ac13625400b8f8419b44ad7f3f110d45a}{\index{Scope@{Scope}!friend\-List@{friend\-List}}
+\index{friend\-List@{friend\-List}!Scope@{Scope}}
+\subsubsection[{friend\-List}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<${\bf Friend\-Info}$>$ Scope\-::friend\-List}}\label{class_scope_ac13625400b8f8419b44ad7f3f110d45a}
+\hypertarget{class_scope_a566ff59e033eb9a39293b99f81976994}{\index{Scope@{Scope}!function@{function}}
+\index{function@{function}!Scope@{Scope}}
+\subsubsection[{function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Function}$\ast$ Scope\-::function}}\label{class_scope_a566ff59e033eb9a39293b99f81976994}
+\hypertarget{class_scope_a04f5eece3b03314f760e59b7177aacbc}{\index{Scope@{Scope}!function\-List@{function\-List}}
+\index{function\-List@{function\-List}!Scope@{Scope}}
+\subsubsection[{function\-List}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<${\bf Function}$>$ Scope\-::function\-List}}\label{class_scope_a04f5eece3b03314f760e59b7177aacbc}
+\hypertarget{class_scope_afb99c30d1bb23560b6dfa89a6422bc87}{\index{Scope@{Scope}!function\-Of@{function\-Of}}
+\index{function\-Of@{function\-Of}!Scope@{Scope}}
+\subsubsection[{function\-Of}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scope}$\ast$ Scope\-::function\-Of}}\label{class_scope_afb99c30d1bb23560b6dfa89a6422bc87}
+\hypertarget{class_scope_a5eb13a7dc642f7b9adcd51ef17639443}{\index{Scope@{Scope}!need\-Initialization@{need\-Initialization}}
+\index{need\-Initialization@{need\-Initialization}!Scope@{Scope}}
+\subsubsection[{need\-Initialization}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Need\-Initialization} Scope\-::need\-Initialization}}\label{class_scope_a5eb13a7dc642f7b9adcd51ef17639443}
+\hypertarget{class_scope_ab891d859d281e559cf0548fad12a91e6}{\index{Scope@{Scope}!nested\-In@{nested\-In}}
+\index{nested\-In@{nested\-In}!Scope@{Scope}}
+\subsubsection[{nested\-In}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scope}$\ast$ Scope\-::nested\-In}}\label{class_scope_ab891d859d281e559cf0548fad12a91e6}
+\hypertarget{class_scope_aab597d177f8fc399c3f2714d86967845}{\index{Scope@{Scope}!nested\-List@{nested\-List}}
+\index{nested\-List@{nested\-List}!Scope@{Scope}}
+\subsubsection[{nested\-List}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<${\bf Scope} $\ast$$>$ Scope\-::nested\-List}}\label{class_scope_aab597d177f8fc399c3f2714d86967845}
+\hypertarget{class_scope_a61571028d8578220ad47a33d56c162ca}{\index{Scope@{Scope}!num\-Constructors@{num\-Constructors}}
+\index{num\-Constructors@{num\-Constructors}!Scope@{Scope}}
+\subsubsection[{num\-Constructors}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Scope\-::num\-Constructors}}\label{class_scope_a61571028d8578220ad47a33d56c162ca}
+\hypertarget{class_scope_a497c6539e9aca0fde06064ad578c3215}{\index{Scope@{Scope}!type@{type}}
+\index{type@{type}!Scope@{Scope}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scope\-Type} Scope\-::type}}\label{class_scope_a497c6539e9aca0fde06064ad578c3215}
+\hypertarget{class_scope_a5f172bf299a4a5c7ccb431a4e1bffdb1}{\index{Scope@{Scope}!using\-List@{using\-List}}
+\index{using\-List@{using\-List}!Scope@{Scope}}
+\subsubsection[{using\-List}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<$const {\bf Token} $\ast$$>$ Scope\-::using\-List}}\label{class_scope_a5f172bf299a4a5c7ccb431a4e1bffdb1}
+\hypertarget{class_scope_a2254a4b1978050716ba23435b38f9af2}{\index{Scope@{Scope}!varlist@{varlist}}
+\index{varlist@{varlist}!Scope@{Scope}}
+\subsubsection[{varlist}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<${\bf Variable}$>$ Scope\-::varlist}}\label{class_scope_a2254a4b1978050716ba23435b38f9af2}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{symboldatabase_8h}{symboldatabase.\-h}\item 
+lib/\hyperlink{symboldatabase_8cpp}{symboldatabase.\-cpp}\end{DoxyCompactItemize}

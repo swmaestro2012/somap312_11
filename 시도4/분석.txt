@@ -1,0 +1,96 @@
+Class
+
+CmdLineParser
+	:	cmd로부터 받은 argument를 파싱하는 클래스
+
+//================================================================================//
+
+
+Severity
+	:	에러 종류
+errorloger
+	:	에러 목록 관리를 담당하는 추상 클래스
+		*cppcheck는 에러 검출에 초점이 맞춰져 있음.
+Cppcheck
+	:	errorloger를 상속 받음.
+
+		Function List
+			check
+				:	processFile 실행, 분리 이유?
+			processFile
+				:	패치 검사, 프리프로세서 실행, checkFile 실행
+			checkFile
+				:	Tokenizer 선언, tokenize 실행
+					컨테이너를 이용하여 각 클래스의 runcheck 실행
+Tokenizer
+	:	표기법 통일
+				:	C/C++ source 파일 검사
+Path
+	:	경로 검사 클래스, 확장자 검사 및 파일 존재 확인
+
+PreProcesser
+	:	프리프로세서
+
+Check
+	:	수행할 프로세스를 정의하는 추상 클래스
+
+		Function List
+			runSimplifiedChecks
+				:	버츄얼 함수
+
+Token
+	:	문자를 특정 단위로 끊어서 저장
+		_str라는 변수에 저장
+
+TokenList
+	:	파일 단위의 토큰 목록을 저장
+
+Tokenizer
+	:	코드를 Token화 하여 TokenList를 작성
+		자료형
+
+Variable
+	:	information about a member variable
+
+Function
+	:	information about a member function
+
+Scope
+	:	하나의 scope 내의 모든 자료에 대한 정보를 포함
+		변수
+			functionList
+			varlist
+			nestedList
+
+SymbolDatabase
+	:	Scope를 정리하여 관리
+		constructer
+			:	tokenizer의 token들을 이용하여 Scope List를 정리
+		
+CheckUnusedFunctions
+	:	사용되지 않은 함수를 찾음.
+		자료형
+			FunctionUsage
+				:	파일명, 라인, 사용 여부를 저장
+		변수
+			_functions
+				:	함수 목록을 저장한 map,key=함수명, value는 FunctionUsage
+		함수
+			parseToken
+				:	함수 목록을 수집하고 사용 여부를 확인하여 _functions를 완성함.
+					funcname
+					:	함수 이름인 token의 포인터를 저장하는 변수		
+
+CheckUnusedVar
+	:	사용되지 않는 변수를 찾음.
+		함수
+			checkFunctionVariableUsage
+				:	checkFunctionVariableUsage_iterateScopes를 실행하고 결과를 받아 에러 배출
+
+			checkFunctionVariableUsage_iterateScopes
+				:	루틴1 : 실행 가능한 scope에서 정의된 변수 목록을 만듬.
+					루틴2 : 하위 scope를 모두 검사하며, 변수의 사용 여부를 조사함.
+					* 이것을 개량하여 구현할 것!!
+
+
+

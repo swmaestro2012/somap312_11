@@ -1,0 +1,232 @@
+\hypertarget{class_function}{\section{Function Class Reference}
+\label{class_function}\index{Function@{Function}}
+}
+
+
+{\ttfamily \#include $<$symboldatabase.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_function_ae5299683e0645400588dfad5df29c52e}{Type} \{ \\*
+\hyperlink{class_function_ae5299683e0645400588dfad5df29c52ea03a17f56eb7a37a8af8835a981753352}{e\-Constructor}, 
+\hyperlink{class_function_ae5299683e0645400588dfad5df29c52ea39a4af998cecc830568bc4535e6bcae9}{e\-Copy\-Constructor}, 
+\hyperlink{class_function_ae5299683e0645400588dfad5df29c52eab53252bcb9343577446be70327b76cd8}{e\-Operator\-Equal}, 
+\hyperlink{class_function_ae5299683e0645400588dfad5df29c52eaa9d43d8d7ec25260d79c08044ab19ded}{e\-Destructor}, 
+\\*
+\hyperlink{class_function_ae5299683e0645400588dfad5df29c52eae3e7637565bc826c945365cd31d1c540}{e\-Function}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_function_ae206568fd4fd4c885e3ccff76345c4e6}{Function} ()
+\item 
+std\-::size\-\_\-t \hyperlink{class_function_a9715633b90233b36c8d46f82f3cc5cd8}{arg\-Count} () const 
+\item 
+const \hyperlink{class_variable}{Variable} $\ast$ \hyperlink{class_function_a770b2ec56a21d57636970ccd4d65a836}{get\-Argument\-Var} (unsigned int num) const 
+\item 
+unsigned int \hyperlink{class_function_a14594f5b4495fef07b2a9e95b9b8b44f}{initialized\-Arg\-Count} () const 
+\item 
+void \hyperlink{class_function_a2685150739e3dccd1d0684cd8f727b4b}{add\-Arguments} (const \hyperlink{class_symbol_database}{Symbol\-Database} $\ast$symbol\-Database, const \hyperlink{class_scope}{Scope} $\ast$scope)
+\item 
+bool \hyperlink{class_function_ac4aa20ff6426e5d197c6abbf059efb6d}{is\-Implicitly\-Virtual} (bool default\-Val=false) const 
+\begin{DoxyCompactList}\small\item\em check if this function is virtual in the base classes \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_function_ac091d20230fb8812eee68a6e528e4749}{args\-Match} (const \hyperlink{class_scope}{Scope} $\ast$info, const \hyperlink{class_token}{Token} $\ast$first, const \hyperlink{class_token}{Token} $\ast$second, const std\-::string \&path, unsigned int depth)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_function_ad3b10c81ba3539978da1a77a3ac12f12}{token\-Def}
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_function_a31b432f7594922741cf4235e21ffd56e}{arg\-Def}
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_function_ab3eb51a75e972604e5971dbe60ffee49}{token}
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_function_abdee3005ea57c01a14996eac8b6be915}{arg}
+\item 
+\hyperlink{class_scope}{Scope} $\ast$ \hyperlink{class_function_a6673ca3db09fd6aa422400f3400a9ba5}{function\-Scope}
+\item 
+\hyperlink{class_scope}{Scope} $\ast$ \hyperlink{class_function_af903e951dc2920b6c0a19da1027cd6f9}{nested\-In}
+\item 
+std\-::list$<$ \hyperlink{class_variable}{Variable} $>$ \hyperlink{class_function_ae0dd1fb41d8a7591aeadc3367909a414}{argument\-List}
+\item 
+\hyperlink{class_function_ae5299683e0645400588dfad5df29c52e}{Type} \hyperlink{class_function_a4f098039aa353ddb8c0544945a248dbf}{type}
+\item 
+\hyperlink{symboldatabase_8h_a2e9a0288e6c2df2ecebc50944c3ff9fa}{Access\-Control} \hyperlink{class_function_a14053d43d3bc832afaf4ed1ba1994102}{access}
+\item 
+bool \hyperlink{class_function_a700e6bf0d7029918037c7dace89a94b0}{has\-Body}
+\item 
+bool \hyperlink{class_function_ab3281188eb378ea8b6ff125827ccb426}{is\-Inline}
+\item 
+bool \hyperlink{class_function_acfa73f2052a12f1ba0b4439b7cf7d1f4}{is\-Const}
+\item 
+bool \hyperlink{class_function_ad925ee5cc76194c25c8567a619332fd4}{is\-Virtual}
+\item 
+bool \hyperlink{class_function_a6089dbde9a2b8237bc6c783a14b7389e}{is\-Pure}
+\item 
+bool \hyperlink{class_function_a8134347cead4a7ee50cb044853a0089e}{is\-Static}
+\item 
+bool \hyperlink{class_function_a8975605bea34fea666e3b1b8fd77e946}{is\-Friend}
+\item 
+bool \hyperlink{class_function_a769225dfe1d97388345cb7c21ef7fa4b}{is\-Explicit}
+\item 
+bool \hyperlink{class_function_ac1ffa0a350815d24433addbb98680f64}{is\-Operator}
+\item 
+bool \hyperlink{class_function_acb8a584e7447e2b9feb51783637d6a43}{ret\-Func\-Ptr}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_function_ae5299683e0645400588dfad5df29c52e}{\index{Function@{Function}!Type@{Type}}
+\index{Type@{Type}!Function@{Function}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Function\-::\-Type}}}\label{class_function_ae5299683e0645400588dfad5df29c52e}
+\begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{e\-Constructor@{e\-Constructor}!Function@{Function}}\index{Function@{Function}!e\-Constructor@{e\-Constructor}}\item[{\em 
+\hypertarget{class_function_ae5299683e0645400588dfad5df29c52ea03a17f56eb7a37a8af8835a981753352}{e\-Constructor}\label{class_function_ae5299683e0645400588dfad5df29c52ea03a17f56eb7a37a8af8835a981753352}
+}]\index{e\-Copy\-Constructor@{e\-Copy\-Constructor}!Function@{Function}}\index{Function@{Function}!e\-Copy\-Constructor@{e\-Copy\-Constructor}}\item[{\em 
+\hypertarget{class_function_ae5299683e0645400588dfad5df29c52ea39a4af998cecc830568bc4535e6bcae9}{e\-Copy\-Constructor}\label{class_function_ae5299683e0645400588dfad5df29c52ea39a4af998cecc830568bc4535e6bcae9}
+}]\index{e\-Operator\-Equal@{e\-Operator\-Equal}!Function@{Function}}\index{Function@{Function}!e\-Operator\-Equal@{e\-Operator\-Equal}}\item[{\em 
+\hypertarget{class_function_ae5299683e0645400588dfad5df29c52eab53252bcb9343577446be70327b76cd8}{e\-Operator\-Equal}\label{class_function_ae5299683e0645400588dfad5df29c52eab53252bcb9343577446be70327b76cd8}
+}]\index{e\-Destructor@{e\-Destructor}!Function@{Function}}\index{Function@{Function}!e\-Destructor@{e\-Destructor}}\item[{\em 
+\hypertarget{class_function_ae5299683e0645400588dfad5df29c52eaa9d43d8d7ec25260d79c08044ab19ded}{e\-Destructor}\label{class_function_ae5299683e0645400588dfad5df29c52eaa9d43d8d7ec25260d79c08044ab19ded}
+}]\index{e\-Function@{e\-Function}!Function@{Function}}\index{Function@{Function}!e\-Function@{e\-Function}}\item[{\em 
+\hypertarget{class_function_ae5299683e0645400588dfad5df29c52eae3e7637565bc826c945365cd31d1c540}{e\-Function}\label{class_function_ae5299683e0645400588dfad5df29c52eae3e7637565bc826c945365cd31d1c540}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_function_ae206568fd4fd4c885e3ccff76345c4e6}{\index{Function@{Function}!Function@{Function}}
+\index{Function@{Function}!Function@{Function}}
+\subsubsection[{Function}]{\setlength{\rightskip}{0pt plus 5cm}Function\-::\-Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_function_ae206568fd4fd4c885e3ccff76345c4e6}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_function_a2685150739e3dccd1d0684cd8f727b4b}{\index{Function@{Function}!add\-Arguments@{add\-Arguments}}
+\index{add\-Arguments@{add\-Arguments}!Function@{Function}}
+\subsubsection[{add\-Arguments}]{\setlength{\rightskip}{0pt plus 5cm}void Function\-::add\-Arguments (
+\begin{DoxyParamCaption}
+\item[{const {\bf Symbol\-Database} $\ast$}]{symbol\-Database, }
+\item[{const {\bf Scope} $\ast$}]{scope}
+\end{DoxyParamCaption}
+)}}\label{class_function_a2685150739e3dccd1d0684cd8f727b4b}
+\hypertarget{class_function_a9715633b90233b36c8d46f82f3cc5cd8}{\index{Function@{Function}!arg\-Count@{arg\-Count}}
+\index{arg\-Count@{arg\-Count}!Function@{Function}}
+\subsubsection[{arg\-Count}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t Function\-::arg\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_function_a9715633b90233b36c8d46f82f3cc5cd8}
+\hypertarget{class_function_ac091d20230fb8812eee68a6e528e4749}{\index{Function@{Function}!args\-Match@{args\-Match}}
+\index{args\-Match@{args\-Match}!Function@{Function}}
+\subsubsection[{args\-Match}]{\setlength{\rightskip}{0pt plus 5cm}bool Function\-::args\-Match (
+\begin{DoxyParamCaption}
+\item[{const {\bf Scope} $\ast$}]{info, }
+\item[{const {\bf Token} $\ast$}]{first, }
+\item[{const {\bf Token} $\ast$}]{second, }
+\item[{const std\-::string \&}]{path, }
+\item[{unsigned int}]{depth}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_function_ac091d20230fb8812eee68a6e528e4749}
+\hypertarget{class_function_a770b2ec56a21d57636970ccd4d65a836}{\index{Function@{Function}!get\-Argument\-Var@{get\-Argument\-Var}}
+\index{get\-Argument\-Var@{get\-Argument\-Var}!Function@{Function}}
+\subsubsection[{get\-Argument\-Var}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Variable} $\ast$ Function\-::get\-Argument\-Var (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{num}
+\end{DoxyParamCaption}
+) const}}\label{class_function_a770b2ec56a21d57636970ccd4d65a836}
+\hypertarget{class_function_a14594f5b4495fef07b2a9e95b9b8b44f}{\index{Function@{Function}!initialized\-Arg\-Count@{initialized\-Arg\-Count}}
+\index{initialized\-Arg\-Count@{initialized\-Arg\-Count}!Function@{Function}}
+\subsubsection[{initialized\-Arg\-Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Function\-::initialized\-Arg\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_function_a14594f5b4495fef07b2a9e95b9b8b44f}
+\hypertarget{class_function_ac4aa20ff6426e5d197c6abbf059efb6d}{\index{Function@{Function}!is\-Implicitly\-Virtual@{is\-Implicitly\-Virtual}}
+\index{is\-Implicitly\-Virtual@{is\-Implicitly\-Virtual}!Function@{Function}}
+\subsubsection[{is\-Implicitly\-Virtual}]{\setlength{\rightskip}{0pt plus 5cm}bool Function\-::is\-Implicitly\-Virtual (
+\begin{DoxyParamCaption}
+\item[{bool}]{default\-Val = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}}\label{class_function_ac4aa20ff6426e5d197c6abbf059efb6d}
+
+
+check if this function is virtual in the base classes 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_function_a14053d43d3bc832afaf4ed1ba1994102}{\index{Function@{Function}!access@{access}}
+\index{access@{access}!Function@{Function}}
+\subsubsection[{access}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Access\-Control} Function\-::access}}\label{class_function_a14053d43d3bc832afaf4ed1ba1994102}
+\hypertarget{class_function_abdee3005ea57c01a14996eac8b6be915}{\index{Function@{Function}!arg@{arg}}
+\index{arg@{arg}!Function@{Function}}
+\subsubsection[{arg}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token}$\ast$ Function\-::arg}}\label{class_function_abdee3005ea57c01a14996eac8b6be915}
+\hypertarget{class_function_a31b432f7594922741cf4235e21ffd56e}{\index{Function@{Function}!arg\-Def@{arg\-Def}}
+\index{arg\-Def@{arg\-Def}!Function@{Function}}
+\subsubsection[{arg\-Def}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token}$\ast$ Function\-::arg\-Def}}\label{class_function_a31b432f7594922741cf4235e21ffd56e}
+\hypertarget{class_function_ae0dd1fb41d8a7591aeadc3367909a414}{\index{Function@{Function}!argument\-List@{argument\-List}}
+\index{argument\-List@{argument\-List}!Function@{Function}}
+\subsubsection[{argument\-List}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<${\bf Variable}$>$ Function\-::argument\-List}}\label{class_function_ae0dd1fb41d8a7591aeadc3367909a414}
+\hypertarget{class_function_a6673ca3db09fd6aa422400f3400a9ba5}{\index{Function@{Function}!function\-Scope@{function\-Scope}}
+\index{function\-Scope@{function\-Scope}!Function@{Function}}
+\subsubsection[{function\-Scope}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scope}$\ast$ Function\-::function\-Scope}}\label{class_function_a6673ca3db09fd6aa422400f3400a9ba5}
+\hypertarget{class_function_a700e6bf0d7029918037c7dace89a94b0}{\index{Function@{Function}!has\-Body@{has\-Body}}
+\index{has\-Body@{has\-Body}!Function@{Function}}
+\subsubsection[{has\-Body}]{\setlength{\rightskip}{0pt plus 5cm}bool Function\-::has\-Body}}\label{class_function_a700e6bf0d7029918037c7dace89a94b0}
+\hypertarget{class_function_acfa73f2052a12f1ba0b4439b7cf7d1f4}{\index{Function@{Function}!is\-Const@{is\-Const}}
+\index{is\-Const@{is\-Const}!Function@{Function}}
+\subsubsection[{is\-Const}]{\setlength{\rightskip}{0pt plus 5cm}bool Function\-::is\-Const}}\label{class_function_acfa73f2052a12f1ba0b4439b7cf7d1f4}
+\hypertarget{class_function_a769225dfe1d97388345cb7c21ef7fa4b}{\index{Function@{Function}!is\-Explicit@{is\-Explicit}}
+\index{is\-Explicit@{is\-Explicit}!Function@{Function}}
+\subsubsection[{is\-Explicit}]{\setlength{\rightskip}{0pt plus 5cm}bool Function\-::is\-Explicit}}\label{class_function_a769225dfe1d97388345cb7c21ef7fa4b}
+\hypertarget{class_function_a8975605bea34fea666e3b1b8fd77e946}{\index{Function@{Function}!is\-Friend@{is\-Friend}}
+\index{is\-Friend@{is\-Friend}!Function@{Function}}
+\subsubsection[{is\-Friend}]{\setlength{\rightskip}{0pt plus 5cm}bool Function\-::is\-Friend}}\label{class_function_a8975605bea34fea666e3b1b8fd77e946}
+\hypertarget{class_function_ab3281188eb378ea8b6ff125827ccb426}{\index{Function@{Function}!is\-Inline@{is\-Inline}}
+\index{is\-Inline@{is\-Inline}!Function@{Function}}
+\subsubsection[{is\-Inline}]{\setlength{\rightskip}{0pt plus 5cm}bool Function\-::is\-Inline}}\label{class_function_ab3281188eb378ea8b6ff125827ccb426}
+\hypertarget{class_function_ac1ffa0a350815d24433addbb98680f64}{\index{Function@{Function}!is\-Operator@{is\-Operator}}
+\index{is\-Operator@{is\-Operator}!Function@{Function}}
+\subsubsection[{is\-Operator}]{\setlength{\rightskip}{0pt plus 5cm}bool Function\-::is\-Operator}}\label{class_function_ac1ffa0a350815d24433addbb98680f64}
+\hypertarget{class_function_a6089dbde9a2b8237bc6c783a14b7389e}{\index{Function@{Function}!is\-Pure@{is\-Pure}}
+\index{is\-Pure@{is\-Pure}!Function@{Function}}
+\subsubsection[{is\-Pure}]{\setlength{\rightskip}{0pt plus 5cm}bool Function\-::is\-Pure}}\label{class_function_a6089dbde9a2b8237bc6c783a14b7389e}
+\hypertarget{class_function_a8134347cead4a7ee50cb044853a0089e}{\index{Function@{Function}!is\-Static@{is\-Static}}
+\index{is\-Static@{is\-Static}!Function@{Function}}
+\subsubsection[{is\-Static}]{\setlength{\rightskip}{0pt plus 5cm}bool Function\-::is\-Static}}\label{class_function_a8134347cead4a7ee50cb044853a0089e}
+\hypertarget{class_function_ad925ee5cc76194c25c8567a619332fd4}{\index{Function@{Function}!is\-Virtual@{is\-Virtual}}
+\index{is\-Virtual@{is\-Virtual}!Function@{Function}}
+\subsubsection[{is\-Virtual}]{\setlength{\rightskip}{0pt plus 5cm}bool Function\-::is\-Virtual}}\label{class_function_ad925ee5cc76194c25c8567a619332fd4}
+\hypertarget{class_function_af903e951dc2920b6c0a19da1027cd6f9}{\index{Function@{Function}!nested\-In@{nested\-In}}
+\index{nested\-In@{nested\-In}!Function@{Function}}
+\subsubsection[{nested\-In}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scope}$\ast$ Function\-::nested\-In}}\label{class_function_af903e951dc2920b6c0a19da1027cd6f9}
+\hypertarget{class_function_acb8a584e7447e2b9feb51783637d6a43}{\index{Function@{Function}!ret\-Func\-Ptr@{ret\-Func\-Ptr}}
+\index{ret\-Func\-Ptr@{ret\-Func\-Ptr}!Function@{Function}}
+\subsubsection[{ret\-Func\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}bool Function\-::ret\-Func\-Ptr}}\label{class_function_acb8a584e7447e2b9feb51783637d6a43}
+\hypertarget{class_function_ab3eb51a75e972604e5971dbe60ffee49}{\index{Function@{Function}!token@{token}}
+\index{token@{token}!Function@{Function}}
+\subsubsection[{token}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token}$\ast$ Function\-::token}}\label{class_function_ab3eb51a75e972604e5971dbe60ffee49}
+\hypertarget{class_function_ad3b10c81ba3539978da1a77a3ac12f12}{\index{Function@{Function}!token\-Def@{token\-Def}}
+\index{token\-Def@{token\-Def}!Function@{Function}}
+\subsubsection[{token\-Def}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token}$\ast$ Function\-::token\-Def}}\label{class_function_ad3b10c81ba3539978da1a77a3ac12f12}
+\hypertarget{class_function_a4f098039aa353ddb8c0544945a248dbf}{\index{Function@{Function}!type@{type}}
+\index{type@{type}!Function@{Function}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Type} Function\-::type}}\label{class_function_a4f098039aa353ddb8c0544945a248dbf}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{symboldatabase_8h}{symboldatabase.\-h}\item 
+lib/\hyperlink{symboldatabase_8cpp}{symboldatabase.\-cpp}\end{DoxyCompactItemize}

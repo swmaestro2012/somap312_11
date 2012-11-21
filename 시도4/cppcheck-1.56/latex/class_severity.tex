@@ -1,0 +1,93 @@
+\hypertarget{class_severity}{\section{Severity Class Reference}
+\label{class_severity}\index{Severity@{Severity}}
+}
+
+
+enum class for severity. Used when reporting errors.  
+
+
+
+
+{\ttfamily \#include $<$errorlogger.\-h$>$}
+
+Inheritance diagram for Severity\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_severity}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6}{Severity\-Type} \{ \\*
+\hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6ad4f4cb9fe0113d7830e57fe3bc1cadf6}{none}, 
+\hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6ae24df992f36773de88bd9d04501e2a22}{error}, 
+\hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6a09546b0bdebb1927e354943d76d1ece3}{warning}, 
+\hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6af063007296e71e4676ed95c8c8688464}{style}, 
+\\*
+\hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6a1e26a833c74f1b8573c51f19339671d2}{performance}, 
+\hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6a427317a70b865d896d74e8138c44c155}{portability}, 
+\hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6a06fc099ae2ca799fe56959a600d511cc}{information}, 
+\hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6a3a8aba6160588f90edf01c2131df491e}{debug}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{class_severity_a02d12b54985fbd8c792e12683befc9ef}{to\-String} (\hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6}{Severity\-Type} severity)
+\item 
+static \hyperlink{class_severity_ac185938ae084355bbf1790cf1a70caa6}{Severity\-Type} \hyperlink{class_severity_a0f9675c1429baf02e321a6d1c918269b}{from\-String} (const std\-::string \&severity)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+enum class for severity. Used when reporting errors. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_severity_ac185938ae084355bbf1790cf1a70caa6}{\index{Severity@{Severity}!Severity\-Type@{Severity\-Type}}
+\index{Severity\-Type@{Severity\-Type}!Severity@{Severity}}
+\subsubsection[{Severity\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Severity\-::\-Severity\-Type}}}\label{class_severity_ac185938ae084355bbf1790cf1a70caa6}
+Message severities. \begin{Desc}
+\item[Enumerator\-: ]\par
+\begin{description}
+\index{none@{none}!Severity@{Severity}}\index{Severity@{Severity}!none@{none}}\item[{\em 
+\hypertarget{class_severity_ac185938ae084355bbf1790cf1a70caa6ad4f4cb9fe0113d7830e57fe3bc1cadf6}{none}\label{class_severity_ac185938ae084355bbf1790cf1a70caa6ad4f4cb9fe0113d7830e57fe3bc1cadf6}
+}]No severity (default value). \index{error@{error}!Severity@{Severity}}\index{Severity@{Severity}!error@{error}}\item[{\em 
+\hypertarget{class_severity_ac185938ae084355bbf1790cf1a70caa6ae24df992f36773de88bd9d04501e2a22}{error}\label{class_severity_ac185938ae084355bbf1790cf1a70caa6ae24df992f36773de88bd9d04501e2a22}
+}]Programming error. This indicates severe error like memory leak etc. The error is certain. \index{warning@{warning}!Severity@{Severity}}\index{Severity@{Severity}!warning@{warning}}\item[{\em 
+\hypertarget{class_severity_ac185938ae084355bbf1790cf1a70caa6a09546b0bdebb1927e354943d76d1ece3}{warning}\label{class_severity_ac185938ae084355bbf1790cf1a70caa6a09546b0bdebb1927e354943d76d1ece3}
+}]Warning. Used for dangerous coding style that can cause severe runtime errors. For example\-: forgetting to initialize a member variable in a constructor. \index{style@{style}!Severity@{Severity}}\index{Severity@{Severity}!style@{style}}\item[{\em 
+\hypertarget{class_severity_ac185938ae084355bbf1790cf1a70caa6af063007296e71e4676ed95c8c8688464}{style}\label{class_severity_ac185938ae084355bbf1790cf1a70caa6af063007296e71e4676ed95c8c8688464}
+}]Style warning. Used for general code cleanup recommendations. Fixing these will not fix any bugs but will make the code easier to maintain. For example\-: redundant code, unreachable code, etc. \index{performance@{performance}!Severity@{Severity}}\index{Severity@{Severity}!performance@{performance}}\item[{\em 
+\hypertarget{class_severity_ac185938ae084355bbf1790cf1a70caa6a1e26a833c74f1b8573c51f19339671d2}{performance}\label{class_severity_ac185938ae084355bbf1790cf1a70caa6a1e26a833c74f1b8573c51f19339671d2}
+}]Performance warning. Not an error as is but suboptimal code and fixing it probably leads to faster performance of the compiled code. \index{portability@{portability}!Severity@{Severity}}\index{Severity@{Severity}!portability@{portability}}\item[{\em 
+\hypertarget{class_severity_ac185938ae084355bbf1790cf1a70caa6a427317a70b865d896d74e8138c44c155}{portability}\label{class_severity_ac185938ae084355bbf1790cf1a70caa6a427317a70b865d896d74e8138c44c155}
+}]Portability warning. This warning indicates the code is not properly portable for different platforms and bitnesses (32/64 bit). If the code is meant to compile in different platforms and bitnesses these warnings should be fixed. \index{information@{information}!Severity@{Severity}}\index{Severity@{Severity}!information@{information}}\item[{\em 
+\hypertarget{class_severity_ac185938ae084355bbf1790cf1a70caa6a06fc099ae2ca799fe56959a600d511cc}{information}\label{class_severity_ac185938ae084355bbf1790cf1a70caa6a06fc099ae2ca799fe56959a600d511cc}
+}]Checking information. Information message about the checking (process) itself. These messages inform about header files not found etc issues that are not errors in the code but something user needs to know. \index{debug@{debug}!Severity@{Severity}}\index{Severity@{Severity}!debug@{debug}}\item[{\em 
+\hypertarget{class_severity_ac185938ae084355bbf1790cf1a70caa6a3a8aba6160588f90edf01c2131df491e}{debug}\label{class_severity_ac185938ae084355bbf1790cf1a70caa6a3a8aba6160588f90edf01c2131df491e}
+}]Debug message. Debug-\/mode message useful for the developers. \end{description}
+\end{Desc}
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_severity_a0f9675c1429baf02e321a6d1c918269b}{\index{Severity@{Severity}!from\-String@{from\-String}}
+\index{from\-String@{from\-String}!Severity@{Severity}}
+\subsubsection[{from\-String}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Severity\-Type} Severity\-::from\-String (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{severity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_severity_a0f9675c1429baf02e321a6d1c918269b}
+\hypertarget{class_severity_a02d12b54985fbd8c792e12683befc9ef}{\index{Severity@{Severity}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!Severity@{Severity}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}static std\-::string Severity\-::to\-String (
+\begin{DoxyParamCaption}
+\item[{{\bf Severity\-Type}}]{severity}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_severity_a02d12b54985fbd8c792e12683befc9ef}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{errorlogger_8h}{errorlogger.\-h}\end{DoxyCompactItemize}

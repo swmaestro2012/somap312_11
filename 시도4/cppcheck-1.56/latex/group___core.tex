@@ -1,0 +1,68 @@
+\hypertarget{group___core}{\section{Core}
+\label{group___core}\index{Core@{Core}}
+}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacestd}{std}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_check}{Check}
+\begin{DoxyCompactList}\small\item\em Interface class that cppcheck uses to communicate with the checks. All checking classes must inherit from this class. \end{DoxyCompactList}\item 
+class \hyperlink{class_check_memory_leak}{Check\-Memory\-Leak}
+\begin{DoxyCompactList}\small\item\em Base class for memory leaks checking. \end{DoxyCompactList}\item 
+class \hyperlink{class_cpp_check}{Cpp\-Check}
+\begin{DoxyCompactList}\small\item\em This is the base class which will use other classes to do static code analysis for C and C++ code to find possible errors or places that could be improved. Usage\-: See \hyperlink{class_cpp_check_abc81dee40c7f0c5f5ef353c2e4e46729}{check()} for more info. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_internal_error}{Internal\-Error}
+\begin{DoxyCompactList}\small\item\em Simple container to be thrown when internal error is detected. \end{DoxyCompactList}\item 
+class \hyperlink{class_severity}{Severity}
+\begin{DoxyCompactList}\small\item\em enum class for severity. Used when reporting errors. \end{DoxyCompactList}\item 
+class \hyperlink{class_error_logger}{Error\-Logger}
+\begin{DoxyCompactList}\small\item\em This is an interface, which the class responsible of error logging should implement. \end{DoxyCompactList}\item 
+class \hyperlink{class_error_logger_1_1_error_message}{Error\-Logger\-::\-Error\-Message}
+\item 
+class \hyperlink{class_error_logger_1_1_error_message_1_1_file_location}{Error\-Logger\-::\-Error\-Message\-::\-File\-Location}
+\item 
+class \hyperlink{class_math_lib}{Math\-Lib}
+\begin{DoxyCompactList}\small\item\em simple math functions that uses operands stored in std\-::string. useful when performing math on tokens. \end{DoxyCompactList}\item 
+class \hyperlink{class_path}{Path}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_path}{Path} handling routines. Internally cppcheck wants to store paths with / separator which is also native separator for Unix-\/derived systems. When giving path to user or for other functions we convert path separators back to native type. \end{DoxyCompactList}\item 
+class \hyperlink{class_preprocessor}{Preprocessor}
+\begin{DoxyCompactList}\small\item\em The cppcheck preprocessor. The preprocessor has special functionality for extracting the various ifdef configurations that exist in a source file. \end{DoxyCompactList}\item 
+class \hyperlink{class_settings}{Settings}
+\begin{DoxyCompactList}\small\item\em This is just a container for general settings so that we don't need to pass individual values to functions or constructors now or in the future when we might have even more detailed settings. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_standards}{Standards}
+\begin{DoxyCompactList}\small\item\em This is just a container for standards settings. This struct contains all possible standards that cppcheck recognize. \end{DoxyCompactList}\item 
+class \hyperlink{class_suppressions}{Suppressions}
+\begin{DoxyCompactList}\small\item\em class for handling suppressions \end{DoxyCompactList}\item 
+struct \hyperlink{struct_suppressions_1_1_suppression_entry}{Suppressions\-::\-Suppression\-Entry}
+\item 
+class \hyperlink{class_template_simplifier}{Template\-Simplifier}
+\begin{DoxyCompactList}\small\item\em Simplify templates from the preprocessed and partially simplified code. \end{DoxyCompactList}\item 
+class \hyperlink{class_token}{Token}
+\begin{DoxyCompactList}\small\item\em The token list that the \hyperlink{class_token_list}{Token\-List} generates is a linked-\/list of this class. \end{DoxyCompactList}\item 
+class \hyperlink{class_tokenizer}{Tokenizer}
+\begin{DoxyCompactList}\small\item\em The main purpose is to tokenize the source code. It also has functions that simplify the token list. \end{DoxyCompactList}\item 
+class \hyperlink{class_token_list}{Token\-List}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___core_ga0cb366bed825a49e45cce28335f75efb}{Check\-::\-Check} (const std\-::string \&aname)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{group___core_ga0cb366bed825a49e45cce28335f75efb}{\index{Core@{Core}!Check@{Check}}
+\index{Check@{Check}!Core@{Core}}
+\subsubsection[{Check}]{\setlength{\rightskip}{0pt plus 5cm}Check\-::\-Check (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{aname}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{group___core_ga0cb366bed825a49e45cce28335f75efb}
+This constructor is used when registering the \hyperlink{class_check_class}{Check\-Class} 

@@ -1,0 +1,136 @@
+\hypertarget{class_csv_report}{\section{Csv\-Report Class Reference}
+\label{class_csv_report}\index{Csv\-Report@{Csv\-Report}}
+}
+
+
+C\-S\-V text file report. This report exports results as C\-S\-V (comma separated values). C\-S\-V files are easy to import to many other programs.  
+
+
+
+
+{\ttfamily \#include $<$csvreport.\-h$>$}
+
+Inheritance diagram for Csv\-Report\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_csv_report}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_csv_report_a53aa8d3df2bee1168302061e3a10cb35}{Csv\-Report} (const Q\-String \&filename, Q\-Object $\ast$parent=0)
+\item 
+virtual \hyperlink{class_csv_report_a2d4a7c3d0a934d2587c44476c3fb4b8d}{$\sim$\-Csv\-Report} ()
+\item 
+virtual bool \hyperlink{class_csv_report_a94819b4d4d2154acd19c96fd8c0cf3fc}{Create} ()
+\begin{DoxyCompactList}\small\item\em Create the report (file). \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_csv_report_ade0f5d08ec9ea3ad5c4554d72f2a1bc3}{Write\-Header} ()
+\begin{DoxyCompactList}\small\item\em Write report header. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_csv_report_a8eef40efbd7ec1e26b86c709554117d2}{Write\-Footer} ()
+\begin{DoxyCompactList}\small\item\em Write report footer. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_csv_report_a4d65a8195f903a4a9b87dc2678d98a31}{Write\-Error} (const \hyperlink{class_error_item}{Error\-Item} \&error)
+\begin{DoxyCompactList}\small\item\em Write error to report. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+C\-S\-V text file report. This report exports results as C\-S\-V (comma separated values). C\-S\-V files are easy to import to many other programs. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]This class should be inherited from \hyperlink{class_txt_report}{Txt\-Report}? \end{DoxyRefDesc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_csv_report_a53aa8d3df2bee1168302061e3a10cb35}{\index{Csv\-Report@{Csv\-Report}!Csv\-Report@{Csv\-Report}}
+\index{Csv\-Report@{Csv\-Report}!CsvReport@{Csv\-Report}}
+\subsubsection[{Csv\-Report}]{\setlength{\rightskip}{0pt plus 5cm}Csv\-Report\-::\-Csv\-Report (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{filename, }
+\item[{Q\-Object $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_csv_report_a53aa8d3df2bee1168302061e3a10cb35}
+\hypertarget{class_csv_report_a2d4a7c3d0a934d2587c44476c3fb4b8d}{\index{Csv\-Report@{Csv\-Report}!$\sim$\-Csv\-Report@{$\sim$\-Csv\-Report}}
+\index{$\sim$\-Csv\-Report@{$\sim$\-Csv\-Report}!CsvReport@{Csv\-Report}}
+\subsubsection[{$\sim$\-Csv\-Report}]{\setlength{\rightskip}{0pt plus 5cm}Csv\-Report\-::$\sim$\-Csv\-Report (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_csv_report_a2d4a7c3d0a934d2587c44476c3fb4b8d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_csv_report_a94819b4d4d2154acd19c96fd8c0cf3fc}{\index{Csv\-Report@{Csv\-Report}!Create@{Create}}
+\index{Create@{Create}!CsvReport@{Csv\-Report}}
+\subsubsection[{Create}]{\setlength{\rightskip}{0pt plus 5cm}bool Csv\-Report\-::\-Create (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_csv_report_a94819b4d4d2154acd19c96fd8c0cf3fc}
+
+
+Create the report (file). 
+
+\begin{DoxyReturn}{Returns}
+true if succeeded, false if file could not be created. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_report_a88760dc5f1c98b8c32ffc41c3591bb46}{Report}.
+
+\hypertarget{class_csv_report_a4d65a8195f903a4a9b87dc2678d98a31}{\index{Csv\-Report@{Csv\-Report}!Write\-Error@{Write\-Error}}
+\index{Write\-Error@{Write\-Error}!CsvReport@{Csv\-Report}}
+\subsubsection[{Write\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void Csv\-Report\-::\-Write\-Error (
+\begin{DoxyParamCaption}
+\item[{const {\bf Error\-Item} \&}]{error}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_csv_report_a4d65a8195f903a4a9b87dc2678d98a31}
+
+
+Write error to report. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & Error data. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_report_adcef6595b7f9c402ba9f23b9c1a1559f}{Report}.
+
+\hypertarget{class_csv_report_a8eef40efbd7ec1e26b86c709554117d2}{\index{Csv\-Report@{Csv\-Report}!Write\-Footer@{Write\-Footer}}
+\index{Write\-Footer@{Write\-Footer}!CsvReport@{Csv\-Report}}
+\subsubsection[{Write\-Footer}]{\setlength{\rightskip}{0pt plus 5cm}void Csv\-Report\-::\-Write\-Footer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_csv_report_a8eef40efbd7ec1e26b86c709554117d2}
+
+
+Write report footer. 
+
+
+
+Implements \hyperlink{class_report_a9c0d8bf828c36444c2b464f2227005c6}{Report}.
+
+\hypertarget{class_csv_report_ade0f5d08ec9ea3ad5c4554d72f2a1bc3}{\index{Csv\-Report@{Csv\-Report}!Write\-Header@{Write\-Header}}
+\index{Write\-Header@{Write\-Header}!CsvReport@{Csv\-Report}}
+\subsubsection[{Write\-Header}]{\setlength{\rightskip}{0pt plus 5cm}void Csv\-Report\-::\-Write\-Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_csv_report_ade0f5d08ec9ea3ad5c4554d72f2a1bc3}
+
+
+Write report header. 
+
+
+
+Implements \hyperlink{class_report_abff44ec133e16b06ee1d4232f1142d0a}{Report}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{csvreport_8h}{csvreport.\-h}\item 
+gui/\hyperlink{csvreport_8cpp}{csvreport.\-cpp}\end{DoxyCompactItemize}

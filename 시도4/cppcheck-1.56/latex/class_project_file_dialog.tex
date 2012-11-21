@@ -1,0 +1,454 @@
+\hypertarget{class_project_file_dialog}{\section{Project\-File\-Dialog Class Reference}
+\label{class_project_file_dialog}\index{Project\-File\-Dialog@{Project\-File\-Dialog}}
+}
+
+
+A dialog for editing project file data.  
+
+
+
+
+{\ttfamily \#include $<$projectfiledialog.\-h$>$}
+
+Inheritance diagram for Project\-File\-Dialog\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_project_file_dialog}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_project_file_dialog_a9347f7c17d7c79219a596ef8c11f76ad}{Project\-File\-Dialog} (const Q\-String \&path, Q\-Widget $\ast$parent=0)
+\item 
+virtual \hyperlink{class_project_file_dialog_a71a5262ed94599e62a15c11167f0e532}{$\sim$\-Project\-File\-Dialog} ()
+\item 
+Q\-String \hyperlink{class_project_file_dialog_a125dff1d8e9f1a1fa8ec9fd943cce4c4}{Get\-Root\-Path} () const 
+\begin{DoxyCompactList}\small\item\em Return project root path from the dialog control. \end{DoxyCompactList}\item 
+Q\-String\-List \hyperlink{class_project_file_dialog_a404c4401634da08824d4feab2bece2f9}{Get\-Include\-Paths} () const 
+\begin{DoxyCompactList}\small\item\em Return include paths from the dialog control. \end{DoxyCompactList}\item 
+Q\-String\-List \hyperlink{class_project_file_dialog_a6ade921e61b1c7a90afa5adc8f9eb53c}{Get\-Defines} () const 
+\begin{DoxyCompactList}\small\item\em Return define names from the dialog control. \end{DoxyCompactList}\item 
+Q\-String\-List \hyperlink{class_project_file_dialog_aca0df76d9242e65d6b41f4aff5c45165}{Get\-Paths} () const 
+\begin{DoxyCompactList}\small\item\em Return check paths from the dialog control. \end{DoxyCompactList}\item 
+Q\-String\-List \hyperlink{class_project_file_dialog_acd0d190acbbed426fcfcdba8d549f72f}{Get\-Excluded\-Paths} () const 
+\begin{DoxyCompactList}\small\item\em Return excluded paths from the dialog control. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_a6c20077aabf4f2d86308d598f4a22b6a}{Set\-Root\-Path} (const Q\-String \&root)
+\begin{DoxyCompactList}\small\item\em Set project root path to dialog control. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_a3b1c183cc53421071005958e52f9ddca}{Set\-Includepaths} (const Q\-String\-List \&includes)
+\begin{DoxyCompactList}\small\item\em Set include paths to dialog control. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_ab0c66dff95a0bff37b7b52103c38537c}{Set\-Defines} (const Q\-String\-List \&defines)
+\begin{DoxyCompactList}\small\item\em Set define names to dialog control. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_a73f3280302e3546deff07297a2e6d76a}{Set\-Paths} (const Q\-String\-List \&paths)
+\begin{DoxyCompactList}\small\item\em Set check paths to dialog control. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_a2d426f92304118f4b4d16f8dce6b49e8}{Set\-Excluded\-Paths} (const Q\-String\-List \&paths)
+\begin{DoxyCompactList}\small\item\em Set excluded paths to dialog control. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_project_file_dialog_aef8ccf50be530f78b4e1799fd14d1026}{Add\-Include\-Dir} ()
+\begin{DoxyCompactList}\small\item\em Browse for include directory. Allow user to add new include directory to the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_ad2648ec1723d3faf94c7a7e9779f6396}{Add\-Path} ()
+\begin{DoxyCompactList}\small\item\em Add new path to check. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_ad7db4aeaa34b91c48970af15101c363c}{Remove\-Include\-Dir} ()
+\begin{DoxyCompactList}\small\item\em Remove include directory from the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_a37305852e940706edc685ebc4a4b588b}{Edit\-Include\-Dir} ()
+\begin{DoxyCompactList}\small\item\em Edit include directory in the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_a917a055a8da9b2843bf0138fbf3722a7}{Edit\-Path} ()
+\begin{DoxyCompactList}\small\item\em Edit path in the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_a69988c747baee692fc07fa63a7464a17}{Remove\-Path} ()
+\begin{DoxyCompactList}\small\item\em Remove path from the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_af23fd6fbd0b34d89fef674c2a929790c}{Add\-Exclude\-Path} ()
+\begin{DoxyCompactList}\small\item\em Add new path to exclude. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_ac0a1845defc93112d8ad4d531c7f5c91}{Edit\-Exclude\-Path} ()
+\begin{DoxyCompactList}\small\item\em Edit excluded path in the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_a028910a437db90a74e50c3123bd97a0c}{Remove\-Exclude\-Path} ()
+\begin{DoxyCompactList}\small\item\em Remove excluded path from the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_af617ae3655a406e6d0df08cb1e6e9e5c}{Move\-Include\-Path\-Up} ()
+\begin{DoxyCompactList}\small\item\em Move include path up in the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_a022fe5ffecf011683d59bc7475ecc100}{Move\-Include\-Path\-Down} ()
+\begin{DoxyCompactList}\small\item\em Move include path down in the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_project_file_dialog_ab7560f75cac9e4d651c26100b1983262}{Load\-Settings} ()
+\begin{DoxyCompactList}\small\item\em Save dialog settings. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_abd51edee2acc7013f25ed079e578340e}{Save\-Settings} ()
+\begin{DoxyCompactList}\small\item\em Load dialog settings. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_af7ab1dd4457b080d4881bcb616fc747a}{Add\-Include\-Dir} (const Q\-String \&dir)
+\begin{DoxyCompactList}\small\item\em Add new indlude directory. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_a86a61015f37a31cf843e084fefcf722c}{Add\-Path} (const Q\-String \&path)
+\begin{DoxyCompactList}\small\item\em Add new path to check. \end{DoxyCompactList}\item 
+void \hyperlink{class_project_file_dialog_aa1d3469afe762e381cc08d316ff79bd6}{Add\-Exclude\-Path} (const Q\-String \&path)
+\begin{DoxyCompactList}\small\item\em Add new path to ignore list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A dialog for editing project file data. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_project_file_dialog_a9347f7c17d7c79219a596ef8c11f76ad}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Project\-File\-Dialog@{Project\-File\-Dialog}}
+\index{Project\-File\-Dialog@{Project\-File\-Dialog}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Project\-File\-Dialog}]{\setlength{\rightskip}{0pt plus 5cm}Project\-File\-Dialog\-::\-Project\-File\-Dialog (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{path, }
+\item[{Q\-Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_project_file_dialog_a9347f7c17d7c79219a596ef8c11f76ad}
+\hypertarget{class_project_file_dialog_a71a5262ed94599e62a15c11167f0e532}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!$\sim$\-Project\-File\-Dialog@{$\sim$\-Project\-File\-Dialog}}
+\index{$\sim$\-Project\-File\-Dialog@{$\sim$\-Project\-File\-Dialog}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{$\sim$\-Project\-File\-Dialog}]{\setlength{\rightskip}{0pt plus 5cm}Project\-File\-Dialog\-::$\sim$\-Project\-File\-Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_project_file_dialog_a71a5262ed94599e62a15c11167f0e532}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_project_file_dialog_af23fd6fbd0b34d89fef674c2a929790c}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Add\-Exclude\-Path@{Add\-Exclude\-Path}}
+\index{Add\-Exclude\-Path@{Add\-Exclude\-Path}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Add\-Exclude\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Add\-Exclude\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_project_file_dialog_af23fd6fbd0b34d89fef674c2a929790c}
+
+
+Add new path to exclude. 
+
+\hypertarget{class_project_file_dialog_aa1d3469afe762e381cc08d316ff79bd6}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Add\-Exclude\-Path@{Add\-Exclude\-Path}}
+\index{Add\-Exclude\-Path@{Add\-Exclude\-Path}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Add\-Exclude\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Add\-Exclude\-Path (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_project_file_dialog_aa1d3469afe762e381cc08d316ff79bd6}
+
+
+Add new path to ignore list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \hyperlink{class_path}{Path} to add. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_dialog_aef8ccf50be530f78b4e1799fd14d1026}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Add\-Include\-Dir@{Add\-Include\-Dir}}
+\index{Add\-Include\-Dir@{Add\-Include\-Dir}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Add\-Include\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Add\-Include\-Dir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_project_file_dialog_aef8ccf50be530f78b4e1799fd14d1026}
+
+
+Browse for include directory. Allow user to add new include directory to the list. 
+
+\hypertarget{class_project_file_dialog_af7ab1dd4457b080d4881bcb616fc747a}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Add\-Include\-Dir@{Add\-Include\-Dir}}
+\index{Add\-Include\-Dir@{Add\-Include\-Dir}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Add\-Include\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Add\-Include\-Dir (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{dir}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_project_file_dialog_af7ab1dd4457b080d4881bcb616fc747a}
+
+
+Add new indlude directory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & Directory to add. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_dialog_ad2648ec1723d3faf94c7a7e9779f6396}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Add\-Path@{Add\-Path}}
+\index{Add\-Path@{Add\-Path}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Add\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Add\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_project_file_dialog_ad2648ec1723d3faf94c7a7e9779f6396}
+
+
+Add new path to check. 
+
+\hypertarget{class_project_file_dialog_a86a61015f37a31cf843e084fefcf722c}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Add\-Path@{Add\-Path}}
+\index{Add\-Path@{Add\-Path}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Add\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Add\-Path (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_project_file_dialog_a86a61015f37a31cf843e084fefcf722c}
+
+
+Add new path to check. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \hyperlink{class_path}{Path} to add. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_dialog_ac0a1845defc93112d8ad4d531c7f5c91}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Edit\-Exclude\-Path@{Edit\-Exclude\-Path}}
+\index{Edit\-Exclude\-Path@{Edit\-Exclude\-Path}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Edit\-Exclude\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Edit\-Exclude\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_project_file_dialog_ac0a1845defc93112d8ad4d531c7f5c91}
+
+
+Edit excluded path in the list. 
+
+\hypertarget{class_project_file_dialog_a37305852e940706edc685ebc4a4b588b}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Edit\-Include\-Dir@{Edit\-Include\-Dir}}
+\index{Edit\-Include\-Dir@{Edit\-Include\-Dir}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Edit\-Include\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Edit\-Include\-Dir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_project_file_dialog_a37305852e940706edc685ebc4a4b588b}
+
+
+Edit include directory in the list. 
+
+\hypertarget{class_project_file_dialog_a917a055a8da9b2843bf0138fbf3722a7}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Edit\-Path@{Edit\-Path}}
+\index{Edit\-Path@{Edit\-Path}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Edit\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Edit\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_project_file_dialog_a917a055a8da9b2843bf0138fbf3722a7}
+
+
+Edit path in the list. 
+
+\hypertarget{class_project_file_dialog_a6ade921e61b1c7a90afa5adc8f9eb53c}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Get\-Defines@{Get\-Defines}}
+\index{Get\-Defines@{Get\-Defines}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Get\-Defines}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String\-List Project\-File\-Dialog\-::\-Get\-Defines (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_project_file_dialog_a6ade921e61b1c7a90afa5adc8f9eb53c}
+
+
+Return define names from the dialog control. 
+
+\begin{DoxyReturn}{Returns}
+List of define names. 
+\end{DoxyReturn}
+\hypertarget{class_project_file_dialog_acd0d190acbbed426fcfcdba8d549f72f}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Get\-Excluded\-Paths@{Get\-Excluded\-Paths}}
+\index{Get\-Excluded\-Paths@{Get\-Excluded\-Paths}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Get\-Excluded\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String\-List Project\-File\-Dialog\-::\-Get\-Excluded\-Paths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_project_file_dialog_acd0d190acbbed426fcfcdba8d549f72f}
+
+
+Return excluded paths from the dialog control. 
+
+\begin{DoxyReturn}{Returns}
+List of excluded paths. 
+\end{DoxyReturn}
+\hypertarget{class_project_file_dialog_a404c4401634da08824d4feab2bece2f9}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Get\-Include\-Paths@{Get\-Include\-Paths}}
+\index{Get\-Include\-Paths@{Get\-Include\-Paths}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Get\-Include\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String\-List Project\-File\-Dialog\-::\-Get\-Include\-Paths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_project_file_dialog_a404c4401634da08824d4feab2bece2f9}
+
+
+Return include paths from the dialog control. 
+
+\begin{DoxyReturn}{Returns}
+List of include paths. 
+\end{DoxyReturn}
+\hypertarget{class_project_file_dialog_aca0df76d9242e65d6b41f4aff5c45165}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Get\-Paths@{Get\-Paths}}
+\index{Get\-Paths@{Get\-Paths}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Get\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String\-List Project\-File\-Dialog\-::\-Get\-Paths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_project_file_dialog_aca0df76d9242e65d6b41f4aff5c45165}
+
+
+Return check paths from the dialog control. 
+
+\begin{DoxyReturn}{Returns}
+List of check paths. 
+\end{DoxyReturn}
+\hypertarget{class_project_file_dialog_a125dff1d8e9f1a1fa8ec9fd943cce4c4}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Get\-Root\-Path@{Get\-Root\-Path}}
+\index{Get\-Root\-Path@{Get\-Root\-Path}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Get\-Root\-Path}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Project\-File\-Dialog\-::\-Get\-Root\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_project_file_dialog_a125dff1d8e9f1a1fa8ec9fd943cce4c4}
+
+
+Return project root path from the dialog control. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_project}{Project} root path. 
+\end{DoxyReturn}
+\hypertarget{class_project_file_dialog_ab7560f75cac9e4d651c26100b1983262}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Load\-Settings@{Load\-Settings}}
+\index{Load\-Settings@{Load\-Settings}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Load\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Load\-Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_project_file_dialog_ab7560f75cac9e4d651c26100b1983262}
+
+
+Save dialog settings. 
+
+\hypertarget{class_project_file_dialog_a022fe5ffecf011683d59bc7475ecc100}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Move\-Include\-Path\-Down@{Move\-Include\-Path\-Down}}
+\index{Move\-Include\-Path\-Down@{Move\-Include\-Path\-Down}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Move\-Include\-Path\-Down}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Move\-Include\-Path\-Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_project_file_dialog_a022fe5ffecf011683d59bc7475ecc100}
+
+
+Move include path down in the list. 
+
+\hypertarget{class_project_file_dialog_af617ae3655a406e6d0df08cb1e6e9e5c}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Move\-Include\-Path\-Up@{Move\-Include\-Path\-Up}}
+\index{Move\-Include\-Path\-Up@{Move\-Include\-Path\-Up}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Move\-Include\-Path\-Up}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Move\-Include\-Path\-Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_project_file_dialog_af617ae3655a406e6d0df08cb1e6e9e5c}
+
+
+Move include path up in the list. 
+
+\hypertarget{class_project_file_dialog_a028910a437db90a74e50c3123bd97a0c}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Remove\-Exclude\-Path@{Remove\-Exclude\-Path}}
+\index{Remove\-Exclude\-Path@{Remove\-Exclude\-Path}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Remove\-Exclude\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Remove\-Exclude\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_project_file_dialog_a028910a437db90a74e50c3123bd97a0c}
+
+
+Remove excluded path from the list. 
+
+\hypertarget{class_project_file_dialog_ad7db4aeaa34b91c48970af15101c363c}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Remove\-Include\-Dir@{Remove\-Include\-Dir}}
+\index{Remove\-Include\-Dir@{Remove\-Include\-Dir}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Remove\-Include\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Remove\-Include\-Dir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_project_file_dialog_ad7db4aeaa34b91c48970af15101c363c}
+
+
+Remove include directory from the list. 
+
+\hypertarget{class_project_file_dialog_a69988c747baee692fc07fa63a7464a17}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Remove\-Path@{Remove\-Path}}
+\index{Remove\-Path@{Remove\-Path}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Remove\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Remove\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}}\label{class_project_file_dialog_a69988c747baee692fc07fa63a7464a17}
+
+
+Remove path from the list. 
+
+\hypertarget{class_project_file_dialog_abd51edee2acc7013f25ed079e578340e}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Save\-Settings@{Save\-Settings}}
+\index{Save\-Settings@{Save\-Settings}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Save\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Save\-Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_project_file_dialog_abd51edee2acc7013f25ed079e578340e}
+
+
+Load dialog settings. 
+
+\hypertarget{class_project_file_dialog_ab0c66dff95a0bff37b7b52103c38537c}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Set\-Defines@{Set\-Defines}}
+\index{Set\-Defines@{Set\-Defines}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Set\-Defines}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Set\-Defines (
+\begin{DoxyParamCaption}
+\item[{const Q\-String\-List \&}]{defines}
+\end{DoxyParamCaption}
+)}}\label{class_project_file_dialog_ab0c66dff95a0bff37b7b52103c38537c}
+
+
+Set define names to dialog control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em defines} & List of define names to set to dialog control. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_dialog_a2d426f92304118f4b4d16f8dce6b49e8}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Set\-Excluded\-Paths@{Set\-Excluded\-Paths}}
+\index{Set\-Excluded\-Paths@{Set\-Excluded\-Paths}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Set\-Excluded\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Set\-Excluded\-Paths (
+\begin{DoxyParamCaption}
+\item[{const Q\-String\-List \&}]{paths}
+\end{DoxyParamCaption}
+)}}\label{class_project_file_dialog_a2d426f92304118f4b4d16f8dce6b49e8}
+
+
+Set excluded paths to dialog control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em paths} & List of path names to set to dialog control. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_dialog_a3b1c183cc53421071005958e52f9ddca}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Set\-Includepaths@{Set\-Includepaths}}
+\index{Set\-Includepaths@{Set\-Includepaths}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Set\-Includepaths}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Set\-Includepaths (
+\begin{DoxyParamCaption}
+\item[{const Q\-String\-List \&}]{includes}
+\end{DoxyParamCaption}
+)}}\label{class_project_file_dialog_a3b1c183cc53421071005958e52f9ddca}
+
+
+Set include paths to dialog control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em includes} & List of include paths to set to dialog control. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_dialog_a73f3280302e3546deff07297a2e6d76a}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Set\-Paths@{Set\-Paths}}
+\index{Set\-Paths@{Set\-Paths}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Set\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Set\-Paths (
+\begin{DoxyParamCaption}
+\item[{const Q\-String\-List \&}]{paths}
+\end{DoxyParamCaption}
+)}}\label{class_project_file_dialog_a73f3280302e3546deff07297a2e6d76a}
+
+
+Set check paths to dialog control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em paths} & List of path names to set to dialog control. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_project_file_dialog_a6c20077aabf4f2d86308d598f4a22b6a}{\index{Project\-File\-Dialog@{Project\-File\-Dialog}!Set\-Root\-Path@{Set\-Root\-Path}}
+\index{Set\-Root\-Path@{Set\-Root\-Path}!ProjectFileDialog@{Project\-File\-Dialog}}
+\subsubsection[{Set\-Root\-Path}]{\setlength{\rightskip}{0pt plus 5cm}void Project\-File\-Dialog\-::\-Set\-Root\-Path (
+\begin{DoxyParamCaption}
+\item[{const Q\-String \&}]{root}
+\end{DoxyParamCaption}
+)}}\label{class_project_file_dialog_a6c20077aabf4f2d86308d598f4a22b6a}
+
+
+Set project root path to dialog control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & \hyperlink{class_project}{Project} root path to set to dialog control. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+gui/\hyperlink{projectfiledialog_8h}{projectfiledialog.\-h}\item 
+gui/\hyperlink{projectfiledialog_8cpp}{projectfiledialog.\-cpp}\end{DoxyCompactItemize}

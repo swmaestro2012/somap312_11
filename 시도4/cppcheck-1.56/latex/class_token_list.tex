@@ -1,0 +1,213 @@
+\hypertarget{class_token_list}{\section{Token\-List Class Reference}
+\label{class_token_list}\index{Token\-List@{Token\-List}}
+}
+
+
+{\ttfamily \#include $<$tokenlist.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_token_list_a489dbce709e3620b14c82a82a62de0c7}{Token\-List} (const \hyperlink{class_settings}{Settings} $\ast$settings)
+\item 
+\hyperlink{class_token_list_a3866ab9d013e6687504768f7ea7334ca}{$\sim$\-Token\-List} ()
+\item 
+void \hyperlink{class_token_list_a0ccb5c05ef25aec2a0c1b81d1c97cca3}{set\-Settings} (const \hyperlink{class_settings}{Settings} $\ast$settings)
+\item 
+void \hyperlink{class_token_list_a330fbd871d6a0b353673cd708f16ba29}{addtoken} (const char str\mbox{[}$\,$\mbox{]}, const unsigned int lineno, const unsigned int fileno, bool split=false)
+\item 
+void \hyperlink{class_token_list_a86fabdd096b2053b6632457248cbe8bd}{addtoken} (const \hyperlink{class_token}{Token} $\ast$tok, const unsigned int lineno, const unsigned int fileno)
+\item 
+void \hyperlink{class_token_list_ae8ef4705d7af6460bc0cc9468986f5b4}{insert\-Tokens} (\hyperlink{class_token}{Token} $\ast$dest, const \hyperlink{class_token}{Token} $\ast$src, unsigned int n)
+\item 
+bool \hyperlink{class_token_list_a4a35a3412536b0af435ffc4d7a137438}{create\-Tokens} (std\-::istream \&code, const std\-::string \&file0=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{class_token_list_a2c449ef37b082f80b75730151abb06f8}{deallocate\-Tokens} ()
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_token_list_ade4cfb70fb5089902dff29ed33a3d40c}{front} () const 
+\item 
+\hyperlink{class_token}{Token} $\ast$ \hyperlink{class_token_list_a5a9621834b57206164d731c7e64b8018}{front} ()
+\item 
+const \hyperlink{class_token}{Token} $\ast$ \hyperlink{class_token_list_a1fe5c7be2b82ac5ba9d05c83feec12fb}{back} () const 
+\item 
+\hyperlink{class_token}{Token} $\ast$ \hyperlink{class_token_list_a79451b66fc0d6f34a8ceaecaf8dfcd80}{back} ()
+\item 
+const std\-::vector$<$ std\-::string $>$ \& \hyperlink{class_token_list_afab3f5014e1a90fdb036a9f1b93b392b}{get\-Files} () const 
+\item 
+const std\-::string \& \hyperlink{class_token_list_a11cb821ef100af91be18e3fb5e0116f1}{file} (const \hyperlink{class_token}{Token} $\ast$tok) const 
+\item 
+std\-::string \hyperlink{class_token_list_ad28808c2d0e7aeb808777517ac5388d2}{file\-Line} (const \hyperlink{class_token}{Token} $\ast$tok) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_token_list_a3e3cbfc4926f05cf8c8f459a5ac7fe98}{delete\-Tokens} (\hyperlink{class_token}{Token} $\ast$tok)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_token_list_a489dbce709e3620b14c82a82a62de0c7}{\index{Token\-List@{Token\-List}!Token\-List@{Token\-List}}
+\index{Token\-List@{Token\-List}!TokenList@{Token\-List}}
+\subsubsection[{Token\-List}]{\setlength{\rightskip}{0pt plus 5cm}Token\-List\-::\-Token\-List (
+\begin{DoxyParamCaption}
+\item[{const {\bf Settings} $\ast$}]{settings}
+\end{DoxyParamCaption}
+)}}\label{class_token_list_a489dbce709e3620b14c82a82a62de0c7}
+\hypertarget{class_token_list_a3866ab9d013e6687504768f7ea7334ca}{\index{Token\-List@{Token\-List}!$\sim$\-Token\-List@{$\sim$\-Token\-List}}
+\index{$\sim$\-Token\-List@{$\sim$\-Token\-List}!TokenList@{Token\-List}}
+\subsubsection[{$\sim$\-Token\-List}]{\setlength{\rightskip}{0pt plus 5cm}Token\-List\-::$\sim$\-Token\-List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_token_list_a3866ab9d013e6687504768f7ea7334ca}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_token_list_a330fbd871d6a0b353673cd708f16ba29}{\index{Token\-List@{Token\-List}!addtoken@{addtoken}}
+\index{addtoken@{addtoken}!TokenList@{Token\-List}}
+\subsubsection[{addtoken}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-List\-::addtoken (
+\begin{DoxyParamCaption}
+\item[{const char}]{str\mbox{[}$\,$\mbox{]}, }
+\item[{const unsigned int}]{lineno, }
+\item[{const unsigned int}]{fileno, }
+\item[{bool}]{split = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{class_token_list_a330fbd871d6a0b353673cd708f16ba29}
+\hypertarget{class_token_list_a86fabdd096b2053b6632457248cbe8bd}{\index{Token\-List@{Token\-List}!addtoken@{addtoken}}
+\index{addtoken@{addtoken}!TokenList@{Token\-List}}
+\subsubsection[{addtoken}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-List\-::addtoken (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok, }
+\item[{const unsigned int}]{lineno, }
+\item[{const unsigned int}]{fileno}
+\end{DoxyParamCaption}
+)}}\label{class_token_list_a86fabdd096b2053b6632457248cbe8bd}
+\hypertarget{class_token_list_a1fe5c7be2b82ac5ba9d05c83feec12fb}{\index{Token\-List@{Token\-List}!back@{back}}
+\index{back@{back}!TokenList@{Token\-List}}
+\subsubsection[{back}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token}$\ast$ Token\-List\-::back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_list_a1fe5c7be2b82ac5ba9d05c83feec12fb}
+get last token of list \hypertarget{class_token_list_a79451b66fc0d6f34a8ceaecaf8dfcd80}{\index{Token\-List@{Token\-List}!back@{back}}
+\index{back@{back}!TokenList@{Token\-List}}
+\subsubsection[{back}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Token}$\ast$ Token\-List\-::back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_list_a79451b66fc0d6f34a8ceaecaf8dfcd80}
+\hypertarget{class_token_list_a4a35a3412536b0af435ffc4d7a137438}{\index{Token\-List@{Token\-List}!create\-Tokens@{create\-Tokens}}
+\index{create\-Tokens@{create\-Tokens}!TokenList@{Token\-List}}
+\subsubsection[{create\-Tokens}]{\setlength{\rightskip}{0pt plus 5cm}bool Token\-List\-::create\-Tokens (
+\begin{DoxyParamCaption}
+\item[{std\-::istream \&}]{code, }
+\item[{const std\-::string \&}]{file0 = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{class_token_list_a4a35a3412536b0af435ffc4d7a137438}
+Create tokens from code. The code must be preprocessed first\-:
+\begin{DoxyItemize}
+\item multiline strings are not handled.
+\item U\-T\-F in the code are not handled.
+\item comments are not handled. 
+\begin{DoxyParams}{Parameters}
+{\em code} & input stream for code \\
+\hline
+{\em file0} & source file name \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\hypertarget{class_token_list_a2c449ef37b082f80b75730151abb06f8}{\index{Token\-List@{Token\-List}!deallocate\-Tokens@{deallocate\-Tokens}}
+\index{deallocate\-Tokens@{deallocate\-Tokens}!TokenList@{Token\-List}}
+\subsubsection[{deallocate\-Tokens}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-List\-::deallocate\-Tokens (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_token_list_a2c449ef37b082f80b75730151abb06f8}
+Deallocate list \hypertarget{class_token_list_a3e3cbfc4926f05cf8c8f459a5ac7fe98}{\index{Token\-List@{Token\-List}!delete\-Tokens@{delete\-Tokens}}
+\index{delete\-Tokens@{delete\-Tokens}!TokenList@{Token\-List}}
+\subsubsection[{delete\-Tokens}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-List\-::delete\-Tokens (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$}]{tok}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_token_list_a3e3cbfc4926f05cf8c8f459a5ac7fe98}
+Delete all tokens in given token list 
+\begin{DoxyParams}{Parameters}
+{\em tok} & token list to delete \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_token_list_a11cb821ef100af91be18e3fb5e0116f1}{\index{Token\-List@{Token\-List}!file@{file}}
+\index{file@{file}!TokenList@{Token\-List}}
+\subsubsection[{file}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string \& Token\-List\-::file (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok}
+\end{DoxyParamCaption}
+) const}}\label{class_token_list_a11cb821ef100af91be18e3fb5e0116f1}
+get filename for given token 
+\begin{DoxyParams}{Parameters}
+{\em tok} & The given token \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+filename for the given token 
+\end{DoxyReturn}
+\hypertarget{class_token_list_ad28808c2d0e7aeb808777517ac5388d2}{\index{Token\-List@{Token\-List}!file\-Line@{file\-Line}}
+\index{file\-Line@{file\-Line}!TokenList@{Token\-List}}
+\subsubsection[{file\-Line}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Token\-List\-::file\-Line (
+\begin{DoxyParamCaption}
+\item[{const {\bf Token} $\ast$}]{tok}
+\end{DoxyParamCaption}
+) const}}\label{class_token_list_ad28808c2d0e7aeb808777517ac5388d2}
+Get \href{file:line}{\tt file\-:line} for a given token 
+\begin{DoxyParams}{Parameters}
+{\em tok} & given token \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+location for given token 
+\end{DoxyReturn}
+\hypertarget{class_token_list_ade4cfb70fb5089902dff29ed33a3d40c}{\index{Token\-List@{Token\-List}!front@{front}}
+\index{front@{front}!TokenList@{Token\-List}}
+\subsubsection[{front}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Token}$\ast$ Token\-List\-::front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_list_ade4cfb70fb5089902dff29ed33a3d40c}
+get first token of list \hypertarget{class_token_list_a5a9621834b57206164d731c7e64b8018}{\index{Token\-List@{Token\-List}!front@{front}}
+\index{front@{front}!TokenList@{Token\-List}}
+\subsubsection[{front}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Token}$\ast$ Token\-List\-::front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_list_a5a9621834b57206164d731c7e64b8018}
+\hypertarget{class_token_list_afab3f5014e1a90fdb036a9f1b93b392b}{\index{Token\-List@{Token\-List}!get\-Files@{get\-Files}}
+\index{get\-Files@{get\-Files}!TokenList@{Token\-List}}
+\subsubsection[{get\-Files}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::vector$<$std\-::string$>$\& Token\-List\-::get\-Files (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_list_afab3f5014e1a90fdb036a9f1b93b392b}
+Get filenames (the sourcefile + the files it include). The first filename is the filename for the sourcefile \begin{DoxyReturn}{Returns}
+vector with filenames 
+\end{DoxyReturn}
+\hypertarget{class_token_list_ae8ef4705d7af6460bc0cc9468986f5b4}{\index{Token\-List@{Token\-List}!insert\-Tokens@{insert\-Tokens}}
+\index{insert\-Tokens@{insert\-Tokens}!TokenList@{Token\-List}}
+\subsubsection[{insert\-Tokens}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-List\-::insert\-Tokens (
+\begin{DoxyParamCaption}
+\item[{{\bf Token} $\ast$}]{dest, }
+\item[{const {\bf Token} $\ast$}]{src, }
+\item[{unsigned int}]{n}
+\end{DoxyParamCaption}
+)}}\label{class_token_list_ae8ef4705d7af6460bc0cc9468986f5b4}
+\hypertarget{class_token_list_a0ccb5c05ef25aec2a0c1b81d1c97cca3}{\index{Token\-List@{Token\-List}!set\-Settings@{set\-Settings}}
+\index{set\-Settings@{set\-Settings}!TokenList@{Token\-List}}
+\subsubsection[{set\-Settings}]{\setlength{\rightskip}{0pt plus 5cm}void Token\-List\-::set\-Settings (
+\begin{DoxyParamCaption}
+\item[{const {\bf Settings} $\ast$}]{settings}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_token_list_a0ccb5c05ef25aec2a0c1b81d1c97cca3}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{tokenlist_8h}{tokenlist.\-h}\item 
+lib/\hyperlink{tokenlist_8cpp}{tokenlist.\-cpp}\end{DoxyCompactItemize}

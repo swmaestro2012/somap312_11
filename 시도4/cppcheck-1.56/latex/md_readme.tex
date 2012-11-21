@@ -1,0 +1,99 @@
+\subsection*{Donations}
+
+\subsubsection*{Donations}
+
+If you find Cppcheck useful for you, feel free to make a donation.
+
+\href{http://pledgie.com/campaigns/4127}{\tt !\mbox{[}Donate\mbox{]}(http\-://pledgie.\-com/campaigns/4127.\-png)}
+
+\subsection*{About the name}
+
+The original name of this program is \char`\"{}\-C++check\char`\"{} but it was later changed to \char`\"{}cppcheck\char`\"{}.
+
+Despite the name, Cppcheck is designed for both C and C++.
+
+\subsection*{Manual}
+
+A manual is available online\-: \href{http://cppcheck.sf.net/manual.pdf}{\tt http\-://cppcheck.\-sf.\-net/manual.\-pdf}
+
+\subsection*{Compiling}
+
+Any C++ compiler should work.
+
+To build the G\-U\-I, you need Qt.
+
+When building the command line tool, P\-C\-R\-E is normally used. P\-C\-R\-E is optional.
+
+There are multiple compilation choices\-:
+\begin{DoxyItemize}
+\item qmake -\/ cross platform build tool
+\item Windows\-: Visual Studio
+\item Windows\-: Qt Creator + mingw
+\item gnu make
+\item g++
+\end{DoxyItemize}
+
+\subsubsection*{qmake}
+
+You can use the gui/gui.\-pro file to build the G\-U\-I. \begin{DoxyVerb}cd gui
+qmake
+make
+\end{DoxyVerb}
+
+
+\subsubsection*{Visual Studio}
+
+Use the cppcheck.\-sln file. The rules are normally enabled.
+
+To compile with rules (pcre dependency)\-:
+\begin{DoxyItemize}
+\item the pcre dll is needed. it can be downloaded from\-: \href{http://cppcheck.sf.net/pcre-8.10-vs.zip}{\tt http\-://cppcheck.\-sf.\-net/pcre-\/8.\-10-\/vs.\-zip}
+\end{DoxyItemize}
+
+To compile without rules (no dependencies)\-:
+\begin{DoxyItemize}
+\item remove the preprocessor define H\-A\-V\-E\-\_\-\-R\-U\-L\-E\-S from the project
+\item remove the pcre.\-lib from the project
+\end{DoxyItemize}
+
+\subsubsection*{Qt Creator + mingw}
+
+The P\-C\-R\-E dll is needed to build the C\-L\-I. It can be downloaded here\-: \href{http://software-download.name/pcre-library-windows/}{\tt http\-://software-\/download.\-name/pcre-\/library-\/windows/}
+
+\subsubsection*{gnu make}
+
+To build Cppcheck with rules (pcre dependency)\-: \begin{DoxyVerb}make HAVE_RULES=yes
+\end{DoxyVerb}
+
+
+To build Cppcheck without rules (no dependencies)\-: \begin{DoxyVerb}make
+\end{DoxyVerb}
+
+
+\subsubsection*{g++ (for experts)}
+
+If you just want to build Cppcheck without dependencies then you can use this command\-: \begin{DoxyVerb}g++ -o cppcheck -Ilib cli/*.cpp lib/*.cpp
+\end{DoxyVerb}
+
+
+If you want to use --rule and --rule-\/file then dependencies are needed\-: \begin{DoxyVerb}g++ -o cppcheck -lpcre -DHAVE_RULES -Ilib -Iexternals cli/*.cpp lib/*.cpp externals/tinyxml/*.cpp
+\end{DoxyVerb}
+
+
+\subsubsection*{mingw}
+
+\begin{DoxyVerb}make LDFLAGS=-lshlwapi
+\end{DoxyVerb}
+
+
+\subsubsection*{Cross compiling Win32 (C\-L\-I) version of Cppcheck in Linux}
+
+\begin{DoxyVerb}sudo apt-get install mingw32
+make CXX=i586-mingw32msvc-g++ LDFLAGS="-lshlwapi"
+mv cppcheck cppcheck.exe
+\end{DoxyVerb}
+
+
+\subsection*{Webpage}
+
+\href{http://cppcheck.sourceforge.net/}{\tt http\-://cppcheck.\-sourceforge.\-net/} 

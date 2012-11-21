@@ -1,0 +1,67 @@
+\hypertarget{class_redirect_output_error}{\section{Redirect\-Output\-Error Class Reference}
+\label{class_redirect_output_error}\index{Redirect\-Output\-Error@{Redirect\-Output\-Error}}
+}
+
+
+Utility class for capturing cout and cerr to ostringstream buffers for later use. Uses R\-A\-I\-I to stop redirection when the object goes out of scope.  
+
+
+
+
+{\ttfamily \#include $<$redirect.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_redirect_output_error_acc4b1edc3289f5b53521e18c930203a7}{Redirect\-Output\-Error} ()
+\item 
+\hyperlink{class_redirect_output_error_a8193500eba4d0483bd1a49fa15657b8a}{$\sim$\-Redirect\-Output\-Error} ()
+\item 
+std\-::string \hyperlink{class_redirect_output_error_af6f408593395409a0c0f294bd6bbc989}{get\-Output} () const 
+\item 
+void \hyperlink{class_redirect_output_error_aa2caef00995361e09e96c72cdb429cb3}{clear\-Output} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Utility class for capturing cout and cerr to ostringstream buffers for later use. Uses R\-A\-I\-I to stop redirection when the object goes out of scope. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_redirect_output_error_acc4b1edc3289f5b53521e18c930203a7}{\index{Redirect\-Output\-Error@{Redirect\-Output\-Error}!Redirect\-Output\-Error@{Redirect\-Output\-Error}}
+\index{Redirect\-Output\-Error@{Redirect\-Output\-Error}!RedirectOutputError@{Redirect\-Output\-Error}}
+\subsubsection[{Redirect\-Output\-Error}]{\setlength{\rightskip}{0pt plus 5cm}Redirect\-Output\-Error\-::\-Redirect\-Output\-Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_redirect_output_error_acc4b1edc3289f5b53521e18c930203a7}
+Set up redirection, flushing anything in the pipes. \hypertarget{class_redirect_output_error_a8193500eba4d0483bd1a49fa15657b8a}{\index{Redirect\-Output\-Error@{Redirect\-Output\-Error}!$\sim$\-Redirect\-Output\-Error@{$\sim$\-Redirect\-Output\-Error}}
+\index{$\sim$\-Redirect\-Output\-Error@{$\sim$\-Redirect\-Output\-Error}!RedirectOutputError@{Redirect\-Output\-Error}}
+\subsubsection[{$\sim$\-Redirect\-Output\-Error}]{\setlength{\rightskip}{0pt plus 5cm}Redirect\-Output\-Error\-::$\sim$\-Redirect\-Output\-Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_redirect_output_error_a8193500eba4d0483bd1a49fa15657b8a}
+Revert cout and cerr behaviour 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_redirect_output_error_aa2caef00995361e09e96c72cdb429cb3}{\index{Redirect\-Output\-Error@{Redirect\-Output\-Error}!clear\-Output@{clear\-Output}}
+\index{clear\-Output@{clear\-Output}!RedirectOutputError@{Redirect\-Output\-Error}}
+\subsubsection[{clear\-Output}]{\setlength{\rightskip}{0pt plus 5cm}void Redirect\-Output\-Error\-::clear\-Output (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_redirect_output_error_aa2caef00995361e09e96c72cdb429cb3}
+\begin{DoxyVerb}Normally called after getOutput() to prevent same text to be returned
+\end{DoxyVerb}
+ twice. \hypertarget{class_redirect_output_error_af6f408593395409a0c0f294bd6bbc989}{\index{Redirect\-Output\-Error@{Redirect\-Output\-Error}!get\-Output@{get\-Output}}
+\index{get\-Output@{get\-Output}!RedirectOutputError@{Redirect\-Output\-Error}}
+\subsubsection[{get\-Output}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Redirect\-Output\-Error\-::get\-Output (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_redirect_output_error_af6f408593395409a0c0f294bd6bbc989}
+Return what would be printed to cout. See also \hyperlink{class_redirect_output_error_aa2caef00995361e09e96c72cdb429cb3}{clear\-Output()} 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+test/\hyperlink{redirect_8h}{redirect.\-h}\end{DoxyCompactItemize}
